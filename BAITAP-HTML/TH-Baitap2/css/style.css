@@ -21,7 +21,7 @@ body{
 .clear{
 	clear: both;
 }
-h3{
+h1{
 	margin: 0;
 	text-align: left;
 }
@@ -35,8 +35,9 @@ h3{
 	float: left;
 }
 .title{
+	font-family: Georgia, 'Times New Roman', Times, serif;
 	color: #fefe01;
-	font-size: 16px;
+	font-size: 18px;
 	letter-spacing: 4px;
 }
 /* Phan Banner */
@@ -62,22 +63,22 @@ h3{
 }
 /* Menu-List */
 .menu-list{
-	width: 1160px;
+	width: 1130px;
 	height: 110px;
-	padding: 25px 0 0 60px;
+	padding: 25px 0 0 70px;
 	margin: 0 auto;
 	border-bottom: 1px solid #474a51;
 }
 .menu-list a{
 	float: left;
 	display: block;
-	padding: 0 10px;
+	padding: 0 8px;
 }
 .item{
 	position: relative;
 }
 .item-img{
-	width: 200px;
+	width: 210px;
 	height: 100px;
 }
 .icon{
@@ -91,6 +92,7 @@ h3{
 	margin: 0 auto;
 }
 .info{
+	margin-top: 4px;
 	text-align: justify;
 }
 .info-left{
@@ -100,12 +102,15 @@ h3{
 	background: url(../images/home_services_bg_design.gif) no-repeat right bottom;
 }
 .info .title{
-	font-size: 13px;
+	font-size: 15px;
 }
 .info-right{
 	float: right;
 	width: 40%;
 	background: url(../images/home_services_bg_marketing.gif) no-repeat left top;
+}
+.info-left p{
+	margin-top: 0;
 }
 .info-right p{
 	padding-top: 30px;
