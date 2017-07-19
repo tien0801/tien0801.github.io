@@ -119,13 +119,11 @@ p.post-info {
 	width: 110px;
 	padding-right: 5px;
 	text-align: left;
-	vertical-align: middle;
 }
 .form-label-area{
 	float: left;
 	width: 110px;
 	line-height: 80px;
-	vertical-align: middle;
 }
 .area-comment{
 	float: left;
