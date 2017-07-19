@@ -49,7 +49,7 @@ h3{
 }
 .our-product{
 	width: 960px;
-	padding: 0 100px;
+	margin: 0 auto;
 }
 .our-product p{
 	width: 40%;
@@ -62,10 +62,11 @@ h3{
 }
 /* Menu-List */
 .menu-list{
-	width: 960px;
-	height: 100px;
-	padding: 20px 0 10px;
+	width: 1160px;
+	height: 110px;
+	padding: 25px 0 0 60px;
 	margin: 0 auto;
+	border-bottom: 1px solid #474a51;
 }
 .menu-list a{
 	float: left;
@@ -74,6 +75,10 @@ h3{
 }
 .item{
 	position: relative;
+}
+.item-img{
+	width: 200px;
+	height: 100px;
 }
 .icon{
 	position: absolute;
@@ -92,6 +97,7 @@ h3{
 	float: left;
 	width: 40%;
 	margin-bottom: 40px;
+	background: url(../images/home_services_bg_design.gif) no-repeat right bottom;
 }
 .info .title{
 	font-size: 13px;
@@ -99,6 +105,7 @@ h3{
 .info-right{
 	float: right;
 	width: 40%;
+	background: url(../images/home_services_bg_marketing.gif) no-repeat left top;
 }
 .info-right p{
 	padding-top: 30px;
