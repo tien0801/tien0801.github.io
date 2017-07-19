@@ -48,6 +48,7 @@ p{
 	height: 95px;
 	overflow: scroll;
 }
+/* Facts */
 .facts{
 	width: 100%;
 	margin-bottom: 50px;
@@ -59,28 +60,38 @@ p{
 .facts-list{
 	list-style:none;
 }
+.facts ul li:before {
+  content: url('../img/star.gif');
+  margin-right: 4px;
+}
 /* Comment */
-.comment{
-	margin-bottom: 50px;
+.post {
+    margin-top: 40px;
+    padding: 0 4px;
+    font-size: 15px;
 }
-.comment-content{
-	width: 480px;
-	padding: 5px;
-	margin: 0 5px;
-	font-size: 14px;
-	background-color: #ececec ;
+p.post-info {
+  margin-left: 90px;
+  padding: 1px 0;
+  font-size: 14px;
 }
-.img-comment{
-	float: left;
-	margin: -7px 7px 0 10px;
+.post-contain {
+	position: relative;
+	background: #ECECEC;
+	padding: 4px 6px;
 }
-.author-detail{
-	float: left;
-	font-size: 12px;
+.post-contain:after{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #ECECEC;
+  top: 100%;
+  left: 10%;
 }
-.author-detail a{
-  	color: #0d22ff;
-}
+
 /* Your Comment */
 .your-comment{
 	min-height:80px;
