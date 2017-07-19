@@ -105,8 +105,9 @@ p.post-info {
 .form-group{
 	display: block;
 	width: 490px;
-	height: 32px;
+	height: 28px;
 	margin: 5px 0;
+	clear: both;
 }
 .form-group-area{
 	width: 490px;
@@ -117,7 +118,6 @@ p.post-info {
 .form-label{
 	float: left;
 	width: 110px;
-	padding-right: 5px;
 	text-align: left;
 }
 .form-label-area{
@@ -127,7 +127,7 @@ p.post-info {
 }
 .area-comment{
 	float: left;
-	width: 360px;
+	width: 370px;
 	height: 70px;
 	font-size: 12px;
 	text-align: left;
