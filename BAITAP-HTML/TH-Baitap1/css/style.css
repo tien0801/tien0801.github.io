@@ -1,68 +1,71 @@
 @charset "utf-8";
 /* CSS Document */
 
-body{
+body {
 	font-family: Georgia, 'Times New Roman', arial, serif;
 	font-size: 15px; 
 	margin: 0;
 	padding: 0;
 }
-p{
+p {
 	margin: 0;
 	padding: 0;
 }
-.clear{
-	clear: both;
-}
-.wrapper
-{
+.wrapper {
 	width: 500px;
 	min-height: 700px;
 	margin: 0 auto;
 	border: 1px solid #0033ff;
 }
-.row{
-	display: black;
-	width: 100%;
-	clear: both;
-}
 /* Player-profile */
-.title{
+.title {
+	font-size: 17px;
 	font-weight: bold;
 }
-.profile .title{
+.title-center {
+	text-align: center;
+}
+.profile .title {
 	line-height: 25px;
 	background: url('../img/title_bg.gif');
 }
-.profile-content{
+.profile-content {
 	height: 100px;
 }
-.avatar{
+.profile-content:after {
+	clear: both;
+	content: "";
+	width: 0;
+	height: 0;
+}
+.avatar {
 	float: left;
 	width: 100px;
 	height: 90px;
+	margin-right: 5px;
 }
-.info{
+.info {
 	float: left;
-	width: 400px;
+	width: 395px;
 	height: 95px;
 	overflow: scroll;
 }
 /* Facts */
-.facts{
+.facts {
 	width: 100%;
 	margin-bottom: 50px;
 }
-.facts .title{
+.facts .title {
 	line-height: 25px;
 	padding: 5px;
 }
-.facts-list{
-	list-style:none;
+.facts-list {
+	list-style: none;
+	margin: 0 10px;
 }
 .facts ul li:before {
   content: url('../img/star.gif');
-  margin-right: 4px;
+  margin-right: 12px;
 }
 /* Comment */
 .post {
@@ -70,65 +73,30 @@ p{
     padding: 0 4px;
     font-size: 15px;
 }
-p.post-info {
-  margin-left: 90px;
+.post-info {
+  margin-left: 65px;
   padding: 1px 0;
-  font-size: 14px;
+  font-size: 13px;
 }
 .post-contain {
 	position: relative;
 	background: #ECECEC;
 	padding: 4px 6px;
 }
-.post-contain:after{
+.post-contain:after {
   position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 15px solid #ECECEC;
-  top: 100%;
-  left: 10%;
+  content: url('../img/comment_bg.gif');
+  top: 85%;
+  left: 3%;
 }
 
 /* Your Comment */
-.your-comment{
-	min-height:80px;
-	padding: 5px;
-	margin-top: 20px;
-	font-size: 14px;
-}
-.your-comment .title{
-	text-align: center;
-}
-.form-group{
-	width: 490px;
-	height: 28px;
-	margin: 5px 0;
-	clear: both;
-}
-.form-group-area{
-	width: 490px;
-	height:80px;
-	margin: 5px 0;
-	clear: both;
-}
-.form-label{
-	float: left;
-	width: 110px;
-	text-align: left;
-}
-.form-label-area{
-	float: left;
-	width: 110px;
-	line-height: 80px;
-}
-.area-comment{
-	float: left;
-	width: 370px;
-	height: 70px;
-	font-size: 12px;
-	text-align: left;
+.comment {
+  padding: 20px 6px;
+  font-size: 14px;
 }
 
+.comment table input[type="text"] {
+    width: 132px;
+    height: 16px;
+}
