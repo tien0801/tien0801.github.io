@@ -99,3 +99,7 @@ p {
     width: 132px;
     height: 16px;
 }
+.comment table textarea {
+    height: 85px;
+}
+
