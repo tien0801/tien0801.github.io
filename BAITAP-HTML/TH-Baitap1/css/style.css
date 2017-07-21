@@ -17,7 +17,6 @@ p {
 	margin: 0 auto;
 	border: 1px solid #0033ff;
 }
-/* Player-profile */
 .title {
 	font-size: 17px;
 	font-weight: bold;
@@ -25,6 +24,7 @@ p {
 .title-center {
 	text-align: center;
 }
+/* Player-profile */
 .profile .title {
 	line-height: 25px;
 	background: url('../img/title_bg.gif');
@@ -35,8 +35,6 @@ p {
 .profile-content:after {
 	clear: both;
 	content: "";
-	width: 0;
-	height: 0;
 }
 .avatar {
 	float: left;
