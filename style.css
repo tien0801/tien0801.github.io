@@ -2,7 +2,7 @@
 	padding: 0;
 	margin: 0;
 }
-body {
+.wrapper {
 	width: 960px;
 	margin: 0 auto;
 }
