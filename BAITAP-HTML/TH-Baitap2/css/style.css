@@ -1,6 +1,9 @@
 @charset "utf-8";
 /* CSS Document */
-
+* {
+	padding: 0;
+	margin: 0;
+}
 body{
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	font-size: 11px; 
@@ -14,13 +17,6 @@ body{
 	margin: 0 auto;
 	background-color: #2D2F35;
 }
-.container{
-	width: 960px;
-	margin: 0 auto;
-}
-.clear{
-	clear: both;
-}
 h1{
 	margin: 0;
 	text-align: left;
@@ -31,8 +27,16 @@ h1{
 	height: 120px;
 	border-bottom: 1px solid #474a51;
 }
+.header:after, .container:after, .main:after {
+	content: "";
+	clear: both;
+	display: block;
+    height: 0;
+	visibility: hidden;
+}
 .logo{
 	float: left;
+	margin: 
 }
 .title{
 	font-family: Georgia, 'Times New Roman', Times, serif;
@@ -58,10 +62,19 @@ h1{
 }
 .img-intro{
 	position: absolute;
+	height: 300px;
 	right: 10%;
-	bottom: 0;
+	top: 0;
+}
+.img-intro img{
+	height: 100%;
+	width: 100%;
 }
 /* Menu-List */
+.container{
+	width: 960px;
+	margin: 0 auto;
+}
 .menu-list{
 	width: 1130px;
 	height: 110px;
@@ -90,6 +103,7 @@ h1{
 .main{
 	width: 960px;
 	margin: 0 auto;
+	padding: 5px 0;
 }
 .info{
 	margin-top: 4px;
@@ -102,7 +116,7 @@ h1{
 	background: url(../images/home_services_bg_design.gif) no-repeat right bottom;
 }
 .info .title{
-	font-size: 15px;
+	font-size: 14px;
 }
 .info-right{
 	float: right;
