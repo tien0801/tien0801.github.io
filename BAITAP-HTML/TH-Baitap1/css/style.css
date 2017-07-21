@@ -35,6 +35,7 @@ p {
 .profile-content:after {
 	clear: both;
 	content: "";
+	visibility: hidden;
 }
 .avatar {
 	float: left;
@@ -61,7 +62,7 @@ p {
 	list-style: none;
 	margin: 0 10px;
 }
-.facts ul li:before {
+.facts-list li:before {
   content: url('../img/star.gif');
   margin-right: 12px;
 }
