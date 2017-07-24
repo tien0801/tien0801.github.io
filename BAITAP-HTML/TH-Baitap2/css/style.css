@@ -41,8 +41,8 @@ h1{
 .title{
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	color: #fefe01;
-	font-size: 18px;
-	letter-spacing: 4px;
+	font-size: 20px;
+	word-spacing: 20px;
 }
 /* Phan Banner */
 .banner{
@@ -57,7 +57,7 @@ h1{
 	margin: 0 auto;
 }
 .our-product p{
-	width: 40%;
+	width: 360px;
 	margin-top: 30px;
 }
 .img-intro{
@@ -111,12 +111,12 @@ h1{
 }
 .info-left{
 	float: left;
-	width: 40%;
+	width: 379px;
 	margin-bottom: 40px;
 	background: url(../images/home_services_bg_design.gif) no-repeat right bottom;
 }
 .info .title{
-	font-size: 14px;
+	font-size: 16px;
 }
 .info-right{
 	float: right;
@@ -133,8 +133,9 @@ h1{
 .footer{
 	position: relative;
 	width: 1200px;
-	height: 90px;
-	background: url('../images/bg_footer.gif') repeat-x;
+	height: 100px;
+	margin: 0 auto;
+	background: url('../images/bg_footer2.gif');
 	border-top: 1px solid #474a51;
 }
 .footer .content{
