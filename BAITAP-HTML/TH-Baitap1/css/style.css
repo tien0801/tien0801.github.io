@@ -12,7 +12,7 @@ p {
 	padding: 0;
 }
 .wrapper {
-	width: 500px;
+	width: 496px;
 	min-height: 700px;
 	margin: 0 auto;
 	border: 1px solid #0033ff;
@@ -45,7 +45,7 @@ p {
 }
 .info {
 	float: left;
-	width: 395px;
+	width: 386px;
 	height: 95px;
 	overflow: scroll;
 }
@@ -77,6 +77,10 @@ p {
   padding: 1px 0;
   font-size: 13px;
 }
+.post-info a {
+  text-decoration: none;
+}
+
 .post-contain {
 	position: relative;
 	background: #ECECEC;
@@ -96,7 +100,7 @@ p {
 }
 
 .comment table input[type="text"] {
-    width: 132px;
+    width: 135px;
     height: 16px;
 }
 .comment table textarea {
