@@ -49,8 +49,8 @@ body {
 }
 .menu {
 	position: absolute;
-	left: 5%;
-	bottom: 14.95%;
+	left: 66px;
+	bottom: 52px;
 	list-style: none;
 }
 .menu:after, .main:after, .left:after {
@@ -62,7 +62,7 @@ body {
 }
 .menu li {
 	float: left;
-	margin: 0 4px;
+	margin: 0 3px;
 }
 .menu li a {
 	display: block;
@@ -80,7 +80,7 @@ body {
 .main {
 	width: 700px;
 	min-height: 675px;
-	margin-left: 69px;
+	margin-left: 73px;
 }
 .left {
 	float: left;
@@ -94,12 +94,12 @@ body {
 	float: left;
 	width: 400px;
 	min-height: 400px;
-	margin: 48px 0 38px 40px;
+	margin: 48px 0 38px 38px;
 }
 /* Main-left*/
 .box-1 {
 	margin-top: 45px;
-	border-top: 2px solid #727272;
+	border-top: 1px solid #727272;
 }
 .box-1 p {
 	margin: 25px 0 60px 10px;
@@ -109,7 +109,7 @@ body {
 .box-2 {
 	font-size: 12px;
 	padding: 30px 10px;
-	border-top: 1px solid #2a2a2a;
+	border-top: 1px solid #323232;
 	list-style: none;
 }
 .box-2 li {
@@ -162,10 +162,11 @@ body {
 	content: url('../images/arr_1.gif');
 	padding: 5px;
 }
+/* Footer */
 .footer {
 	width: 662px;
 	padding: 26px 0 64px;
-	margin-left: 68px ;
+	margin-left: 73px ;
 	border-top: 1px dotted #323232;
 }
 .footer a {
