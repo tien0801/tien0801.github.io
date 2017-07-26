@@ -16,8 +16,7 @@ function click1(id) {
 		if (check) {
 				div1.style.display = "none"; // hidden content
 				icon1.style.background = "url(images/top-movie-trailers-arrows.gif) 0 -20px no-repeat";// change icon on title
-		}
-		else {
+		} else {
 				div1.style.display = "block";// show content
 				icon1.style.background = "url(images/top-movie-trailers-arrows.gif) 0 4px no-repeat";// change icon on title
 		}
@@ -27,8 +26,7 @@ function click1(id) {
 		if (check) {
 				div2.style.display = "none";
 				icon2.style.background = "url(images/top-movie-trailers-arrows.gif) 0 -20px no-repeat";
-		}
-		else {
+		} else {
 				div2.style.display = "block";
 				icon2.style.background = "url(images/top-movie-trailers-arrows.gif) 0 4px no-repeat";
 		}
@@ -38,8 +36,7 @@ function click1(id) {
 		if (check) {
 				div3.style.display = "none";
 				icon3.style.background = "url(images/top-movie-trailers-arrows.gif) 0 -20px no-repeat";
-		}
-		else {
+		} else {
 				div3.style.display = "block";
 				icon3.style.background = "url(images/top-movie-trailers-arrows.gif) 0 4px no-repeat";
 		}

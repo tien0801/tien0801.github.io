@@ -124,12 +124,16 @@ img {
 	border: none;
 	line-height: 1.8;
 	padding-left: 10px;
+	cursor: pointer;
 }
 .box-news-1 {
 	border-bottom: 1px solid #8e8e8e;
 }
 .box-news-1 .block-news {
 	margin-top: 0;
+}
+.box-news-2 .block-news {
+	display: none;
 }
 .box-1 {
 	margin-top: 10px;
@@ -141,13 +145,19 @@ img {
 	float: left;
 	width: 326px;
 }
-#icon-control, #icon-control-2, #icon-control-3 {
+#icon-control {
 	float: right;
     width: 10px;
     height: 10px;
 	margin: 6px 8px 0 0;
-	cursor: pointer;
 	background: url('../images/top-movie-trailers-arrows.gif') no-repeat 0 4px;
+}
+#icon-control-2, #icon-control-3 {
+	float: right;
+    width: 10px;
+    height: 10px;
+	margin: 6px 8px 0 0;
+	background: url('../images/top-movie-trailers-arrows.gif') no-repeat 0 -20px;
 }
 .title-3 {
 	text-align: left;
@@ -276,7 +286,7 @@ img {
 }
 .social li {
     display: inline-block;
-    margin: 0 40px;
+    margin: 0 45px;
 }
 .social li a {
     display: block;
@@ -294,7 +304,7 @@ img {
 .footer-link {
     background: white;
     color: #2196F3;
-    padding: 10px;
+    padding: 10px 12px 10px 71px;
 }
 .back-to-top {
 	float: right;
