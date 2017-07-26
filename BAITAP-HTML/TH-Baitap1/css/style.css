@@ -24,6 +24,7 @@ p {
 .title-center {
 	text-align: center;
 }
+
 /* Player-profile */
 .profile .title {
 	line-height: 25px;
@@ -41,14 +42,16 @@ p {
 	float: left;
 	width: 100px;
 	height: 90px;
-	margin-right: 5px;
+	margin: 2px 2px 0 8px;
 }
 .info {
 	float: left;
 	width: 386px;
 	height: 95px;
+	margin-top: 3px;
 	overflow: scroll;
 }
+
 /* Facts */
 .facts {
 	width: 100%;

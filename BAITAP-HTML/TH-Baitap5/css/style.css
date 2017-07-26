@@ -85,6 +85,11 @@ img {
 .news-2 .link {
 	text-decoration: underline;
 }
+.day {
+	display: block;
+	color: #808080;
+	margin-bottom: -9px;
+}
 .box-3 {
 	position: relative;
 	min-height: 30px;
