@@ -141,7 +141,7 @@ img {
 	float: left;
 	width: 326px;
 }
-#icon-control {
+#icon-control, #icon-control-2, #icon-control-3 {
 	float: right;
     width: 10px;
     height: 10px;
