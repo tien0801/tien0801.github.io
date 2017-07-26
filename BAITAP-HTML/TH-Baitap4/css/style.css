@@ -50,7 +50,7 @@ body {
 .menu {
 	position: absolute;
 	left: 66px;
-	bottom: 52px;
+	bottom: 53px;
 	list-style: none;
 }
 .menu:after, .main:after, .left:after {
@@ -94,7 +94,7 @@ body {
 	float: left;
 	width: 400px;
 	min-height: 400px;
-	margin: 48px 0 38px 38px;
+	margin: 46px 0 38px 38px;
 }
 /* Main-left*/
 .box-1 {
@@ -104,7 +104,7 @@ body {
 .box-1 p {
 	margin: 25px 0 60px 10px;
 	font-size: 12.8px;
-	line-height: 1.8;
+	line-height: 1.6;
 }
 .box-2 {
 	font-size: 12px;
