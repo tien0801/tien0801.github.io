@@ -63,7 +63,7 @@ h1 {
 .img-intro {
 	position: absolute;
 	height: 300px;
-	right: 10%;
+	right: 12%;
 	top: 0;
 }
 .img-intro img {
@@ -74,12 +74,21 @@ h1 {
 .container {
 	width: 950px;
 	margin: 0 auto;
+	padding-left: 50px;
+}
+.container li{
+	float: left;
+	width: 212px;
+	list-style: none;
+	margin-right: 12px;
+}
+.container li a {
+	text-decoration: none;
 }
 .menu-list {
-	width: 950px;
+	width: 1200px;
 	height: 110px;
-	padding: 25px 0 0 70px;
-	margin: 0 auto;
+	margin: 25px 0 0 0px;
 	border-bottom: 1px solid #474a51;
 }
 .menu-list a {
@@ -111,7 +120,7 @@ h1 {
 }
 .info-left {
 	float: left;
-	width: 364px;
+	width: 356px;
 	margin-bottom: 40px;
 	background: url(../images/home_services_bg_design.gif) no-repeat right bottom;
 }
@@ -120,7 +129,7 @@ h1 {
 }
 .info-right {
 	float: right;
-	width: 40%;
+	width: 356px;
 	background: url(../images/home_services_bg_marketing.gif) no-repeat left top;
 }
 .info-left p {
@@ -140,5 +149,4 @@ h1 {
 }
 .footer .content {
 	text-align: center;
-	font-size: 10px;
 }
