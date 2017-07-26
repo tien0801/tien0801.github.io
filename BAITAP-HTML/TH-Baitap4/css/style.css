@@ -50,7 +50,7 @@ body {
 .menu {
 	position: absolute;
 	left: 66px;
-	bottom: 53px;
+	bottom: 52px;
 	list-style: none;
 }
 .menu:after, .main:after, .left:after {
@@ -68,7 +68,6 @@ body {
 	display: block;
 	text-align: center;
 	text-decoration: none;
-	
 }
 .menu li a span {
 	display: block;
@@ -103,11 +102,10 @@ body {
 }
 .box-1 p {
 	margin: 25px 0 60px 10px;
-	font-size: 12.8px;
+	font-size: 12px;
 	line-height: 1.6;
 }
 .box-2 {
-	font-size: 12px;
 	padding: 30px 10px;
 	border-top: 1px solid #323232;
 	list-style: none;
@@ -115,7 +113,7 @@ body {
 .box-2 li {
 	display: block;
 	position: relative;
-	line-height: 2.1;
+	line-height: 2.3;
 	margin-left: 20px;
 }
 .box-2 li a {
@@ -144,7 +142,7 @@ body {
 .content input[type="text"] {
 	width: 115px;
 	height: 23px;
-	margin: 15px 0;
+	margin: 12px 0;
 	background: #2c2c2c;
 	border: none;
 }
