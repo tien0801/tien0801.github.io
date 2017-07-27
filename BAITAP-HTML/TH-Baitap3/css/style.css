@@ -56,20 +56,30 @@ body {
 .content {
 	margin-left: 10px;
 }
+.content-1 {
+	height: 166px;
+}
 .content-1 .thumb {
 	float: left;
-	width: 180px;
+    width: 157px;
     height: 108px;
-	padding: 0 5px 33px 0;
+    margin: 0 28px 33px 0;
 }
 .thumb img{
 	max-width: 180px;
     max-height: 107px;
 	border-radius: 12px;
 }
+.news {
+	height: 166px;
+}
 .news p {
 	line-height: 1.5;
 	margin-top: 22px;
+}
+.news-lead {
+	width: 474px;
+	height: 128px;
 }
 .content-2 {
 	margin-left: 20px;

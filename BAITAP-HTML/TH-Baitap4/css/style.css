@@ -65,9 +65,15 @@ body {
 	margin: 0 3px;
 }
 .menu li a {
+	width: 144px;
+	height: 106px;
 	display: block;
 	text-align: center;
 	text-decoration: none;
+}
+.menu li a img {
+	min-width: 144px;
+	max-height: 88px;
 }
 .menu li a span {
 	display: block;
