@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: Georgia, 'Times New Roman', arial, serif;
+	font-size: 15px; 
+	margin: 0;
+	padding: 0;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+.clear{
+	clear: both;
+}
+.wrapper
+{
+	width: 500px;
+	min-height: 700px;
+	margin: 0 auto;
+	border: 1px solid #0033ff;
+}
+.row{
+	display: black;
+	width: 100%;
+	clear: both;
+}
+/* Player-profile */
+.title{
+	font-weight: bold;
+}
+.profile .title{
+	line-height: 25px;
+	background: url('../img/title_bg.gif');
+}
+.profile-content{
+	height: 100px;
+}
+.avatar{
+	float: left;
+	width: 100px;
+	height: 90px;
+}
+.info{
+	float: left;
+	width: 400px;
+	height: 95px;
+	overflow: scroll;
+}
+/* Facts */
+.facts{
+	width: 100%;
+	margin-bottom: 50px;
+}
+.facts .title{
+	line-height: 25px;
+	padding: 5px;
+}
+.facts-list{
+	list-style:none;
+}
+.facts ul li:before {
+  content: url('../img/star.gif');
+  margin-right: 4px;
+}
+/* Comment */
+.post {
+    margin-top: 40px;
+    padding: 0 4px;
+    font-size: 15px;
+}
+p.post-info {
+  margin-left: 90px;
+  padding: 1px 0;
+  font-size: 14px;
+}
+.post-contain {
+	position: relative;
+	background: #ECECEC;
+	padding: 4px 6px;
+}
+.post-contain:after{
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid #ECECEC;
+  top: 100%;
+  left: 10%;
+}
+
+/* Your Comment */
+.your-comment{
+	min-height:80px;
+	padding: 5px;
+	margin-top: 20px;
+	font-size: 14px;
+}
+.your-comment .title{
+	text-align: center;
+}
+.form-group{
+	width: 490px;
+	margin: 5px 0;
+	clear: both;
+}
+.form-group-area{
+	width: 490px;
+	min-height:80px;
+	margin: 5px 0;
+	clear: both;
+}
+.form-label{
+	float: left;
+	width: 110px;
+	height: 100%;
+	padding-right: 5px;
+    vertical-align: center; 
+	text-align: left;
+}
+.area-comment{
+	float: left;
+	width: 360px;
+	height: 70px;
+	font-size: 12px;
+	text-align: left;
+}
+
