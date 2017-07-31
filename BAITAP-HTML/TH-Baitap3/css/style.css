@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.6875em; 
+	color: #63636e;
+	background-color: #121214;
+	margin: 0;
+	padding: 0;
+}
+.wrapper {
+	width: 800px;
+	min-height: 600px;
+	margin-left: 8%;
+}
+.wrapper:after, .box-list:after, .content-1:after {
+	content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}
+.container {
+	width: 100%;
+	padding-right: 20px;
+	margin: 0 auto;
+}
+.title-white {
+	text-align: left;
+	color: white;
+	font-size: 1em; 
+	line-height: 1.9;
+}
+.left {
+	float: left;
+	width: 474px;
+	margin-top: 30px;
+	margin-right: 5%; 
+}
+.right {
+	float: left;
+	width: 29%;
+	min-height: 400px;
+	padding: 0 22px;
+	margin-top: 20px;
+	background-color: #232227;
+}
+/* Left */
+.title{
+	margin-bottom: 30px;
+}
+.content {
+	margin-left: 10px;
+}
+.content-1 {
+	height: 166px;
+}
+.content-1 .thumb {
+	float: left;
+    width: 157px;
+    height: 108px;
+    margin: 0 28px 33px 0;
+}
+.thumb img{
+	max-width: 180px;
+    max-height: 107px;
+	border-radius: 12px;
+}
+.news {
+	height: 166px;
+}
+.news p {
+	line-height: 1.5;
+	margin-top: 22px;
+}
+.news-lead {
+	width: 474px;
+	height: 128px;
+}
+.content-2 {
+	margin-left: 20px;
+}
+.hr {
+	border-top: 1px dotted #3f3f41;
+	margin: 15px 0;
+}
+.moreinfo {
+	display: block;
+    color: white;
+    text-decoration: none;
+	margin-bottom: 80px;
+} 
+.moreinfo:before {
+    content: url(../images/arr_1.gif);
+    padding-right: 8px;
+}
+.list {
+    float: left;
+    width: 50%;
+    list-style: none;
+}
+.list li {
+	position: relative;
+}
+.list li:before {
+	position: absolute;
+    content: url(../images/arr.gif);
+    top: 2px;
+	left: 0;
+}
+.list li a {
+    color: #9494a0;
+    text-decoration: underline;
+    padding-left: 10px;
+	line-height: 2;
+}
+.box-list {
+	margin: 20px 0 10px;
+}
+
+/* Right */
+.thumb2 {
+	text-align: center;
+	width: 210px;
+	height: 111px;
+	margin-top: 34px;
+}
+.thumb2 img {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+}
+.box {
+    border-top: 1px solid #353439;
+    padding-left: 14px;
+    margin-top: 62px;
+}
+.box .moreinfo {
+   margin-bottom: 45px;
+}
+.box-text {
+    margin: 18px 0 46px;
+	line-height: 1.1;
+}
+.box-text .title-white {
+	margin-bottom: 2px;
+}
+.title-white2 {
+	color: white;
+	line-height: 1.2;
+}
+.box-text p {
+	white-space: pre-line;
+}
+.p2 {
+	font-size: 1.1em;
+	margin-bottom: 4px;
+}
+
+
+
