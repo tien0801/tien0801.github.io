@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -9,24 +9,25 @@
 		<div class="wrapper">
 			<!-- Player Profile -->
 			<div class="profile">
-				<div class="title">Player Profile</div>
+				<p class="title">Player Profile</p>
 				<div class="profile-content">
-					<img class="avatar" src="img/avatar.gif" alt="anh dai dien">
+					<p class="avatar">
+						<img src="img/avatar.gif" alt="anh dai dien">
+					</p>
 					<div class="info">
+						Tên: Nguyen Xuan Nam<br />
 						Noi sinh: Ha Noi<br />
 						Ngay sinh: 28/11/1990<br />
 						vi tri: Teamlear<br />
 						Cao: 170cm<br />
 						Nang: 65kg<br />
 					</div>
-					
 				</div>
-				<div class="clear"></div>
 			</div>
 			
 			<!-- Facts -->
 			<div class="facts">
-				<div class="title">Facts</div>
+				<p class="title">Facts:</p>
 				<ul class="facts-list">
 					<li>Nam gia nhap The Cong nam 1999</li>
 					<li>Trong suot thoi trai tre gia nhap The cong Nam da ghi duoc 160 ban thang trong vong 7 nam</li>
@@ -48,26 +49,27 @@
 					Nam la cau thu choi hay nhat The cong. <br>
 					Va anh ta da chuyen toi Hoa Phat &lt;&gt;:)
 				</div>
-				<p class="post-info">Posted by <a href="#">Hoa phat's Fan</a> 20/12/2007.</p>
-			</div>
+				<p class="post-info">Posted by <a href="#">Hoa phat'sFan</a> 20/12/2007.</p>
+			</div> 
 			
 			<!-- Your Comment -->
-			<div class="your-comment">
-				<div class="title">Your Comment</div>
+			<div class="comment">
+				<p class="title title-center">Your Comment</p>
 				<form>
-					<div class="form-group">
-						<label class="form-label">Your name</label>
-						<input class="form-control" type="text" name="firstname">
-					</div>
-					<div class="form-group">
-						<label class="form-label">Your email(will not public)</label>
-						<input type="text" name="lastname">
-					</div>
-					<div class="form-group-area">
-						<label class="form-label">Comment</label>
-						<textarea class="area-comment" placeholder="Your  comment  here "></textarea>
-					</div>
-					
+					<table class="table-comment">
+						<tr>
+							<td>Your name</td>
+							<td><input type="text" name="name"></td>
+						</tr>
+						<tr>
+							<td>Your email (will not public)</td>
+							<td><input type="text" name="email"></td>
+						</tr>    			
+						<tr>
+							<td>Comment</td>
+							<td><textarea name="comment" cols="50" rows="5">Your comment here &lt;/textarea&gt;</textarea></td>
+						</tr>
+					</table>
 				</form>
 			</div>
 		</div>
