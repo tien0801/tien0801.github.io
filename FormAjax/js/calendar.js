@@ -50,6 +50,7 @@ var inputCalendar = function() {
         var td = document.createElement('td');
         var prevYear = document.createElement('button');
         prevYear.innerHTML = "<<";
+        prevYear.type = "button";
         prevYear.onclick = function() {
             if (year > 1900) {
                 year--;
@@ -64,6 +65,7 @@ var inputCalendar = function() {
         td = document.createElement('td');
         var prevM = document.createElement('button');
         prevM.innerHTML = "<";
+        prevM.type = "button";
         prevM.onclick = function() {
             if (month > 0) {
                 month--;
@@ -102,7 +104,7 @@ var inputCalendar = function() {
             }
             listMonth.appendChild(option);
         }
-        for (var j = 1950; j <= (date.getFullYear() + 50); j++) {
+        for (var j = 1900; j <= (date.getFullYear() + 50); j++) {
             var option = document.createElement('option');
             option.value = j;
             option.text = j;
@@ -121,6 +123,7 @@ var inputCalendar = function() {
         td = document.createElement('td');
         var nextM = document.createElement('button');
         nextM.innerHTML = ">";
+        nextM.type = "button";
         nextM.onclick = function() {
             if (month < 11) {
                 month++;
@@ -136,6 +139,7 @@ var inputCalendar = function() {
         td = document.createElement('td');
         var nextYear = document.createElement('button');
         nextYear.innerHTML = ">>";
+        nextYear.type = "button";
         nextYear.onclick = function() {
             if (year < date.getFullYear() + 50) {
                 year++;
