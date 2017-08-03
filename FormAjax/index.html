@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>JavaScript - Calendar</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/calendar.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<h1>FORM AJAX</h1>
+			<form id="myForm">
+				<div class="form-group">
+					<label class="sr-only">Username</label>
+					<input type="text" class="input-text" id="username" placeholder="username">
+					<span id="user-error"></span>
+				</div>
+				<div class="form-group">
+					<label class="sr-only">Password</label>
+					<input type="password" class="input-text" id="password" placeholder="password">
+					<span id="pass-error"></span>
+				</div>
+				<div class="form-group">
+					<label class="sr-only">Email</label>
+					<input type="text" class="input-text" id="email" placeholder="e.g. example@email.com">
+					<span id="email-error"></span>
+				</div>
+				<div class="form-group">
+					<label class="sr-only">Birthday</label>
+					<input type="text" class="input-text" id="date" name="date" placeholder="dd/mm/yyyy">
+					<span id="birth-error"></span>
+				</div>
+				<div class="form-group">
+					<button type="button" class="btn-submit btn-primary" onclick="checkForm()">Submit</button>
+					<button type="button" class="btn-primary" onclick="resetForm()">Refresh</button>
+					<div class="clear"></div>
+				</div>
+			</form>
+		</div>
+		<script src="js/form-ajax.js"></script>
+		<script src="js/calendar.js"></script>
+	</body>
+</html>
