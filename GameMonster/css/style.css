@@ -17,3 +17,6 @@ img {
 	display: block;
 	margin: auto;
 }
+#canvas {
+	cursor: all-scroll;
+}
