@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	padding: 0;
+	margin: 0;
+}
+.wrapper {
+	width: 600px;
+	min-height: 700px;
+	margin: 10px auto;
+}
+img {
+	width: 100%;
+	height: 100%;
+}
+#menuGame {
+	display: block;
+	margin: auto;
+}
