@@ -17,6 +17,7 @@ var boomNum = 3;
 var random = (Math.floor(Math.random()*2)+1) * 100;
 var useBoom = false;
 var bloodList = [];
+var setPause;
 
 //Menu game canvas
 var menuGame = document.getElementById("menuGame");
@@ -171,7 +172,10 @@ function randomEnemy() {
 	enemies[num].eShow = true;
 	console.log("enemy: " + parseInt(num + 1));
 }
-
+/**
+ * Function Position Blood
+ *
+ */
 function blood(x, y) {
 	this.x = x;
 	this.y = y;
@@ -261,18 +265,11 @@ menuGame.addEventListener("click", function(e){
 	console.log("toa do x,y : " + mouseX , mouseY);
 	//Sound
 	if(mouseX > 160 && mouseX < 205 && mouseY > 12 && mouseY < 57) {
-		sound = !sound;
-		if(!sound) {
-			sGame.pause();
-			mute = true;
-			console.log("off sound");
-		} else {
-			mute = false;
-		}
+		soundGame();
 	}
 	//boom
 	if(mouseX > 431 && mouseX < 473 && mouseY > 15 && mouseY < 57) {
-		killAll();
+		killEnemyAll();
 	}
 	//pause
 	if(mouseX > 536 && mouseX < 584 && mouseY > 11 && mouseY < 58) {
@@ -330,30 +327,41 @@ function setDefaultEnemy() {
 	}
 }
 
+function soundGame() {
+	sound = !sound;
+		if(!sound) {
+			sGame.pause();
+			mute = true;
+			console.log("off sound");
+		} else {
+			mute = false;
+		}
+}
+
 /**
  * Kill all Enemy current
  */
-function killAll() {
+function killEnemyAll() {
 	sBoom.play();
 	if (boomNum > 0 && pause == false && endGame == false) {
 		boomNum--;
 		useBoom = true;
-		for(var i = 0; i < 9; i++){
+		for(var i = 0; i < 8; i++){
 			if (enemies[i].eShow == true) {
 				enemies[i].eShow = false;
 				score += 10;
 			}
 		}
-		setTimeout(function() {
+		setboom = setTimeout(function() {
 			randomEnemy();
 			useBoom = false;
-		}, 1000);
+		}, 500);
 	}
 }
 
 /**
- * Function Reset Game
- * set all to begin game
+ * Function Restart Game
+ *
  */
 function restartGame() {
 	pause = false
@@ -370,23 +378,28 @@ function restartGame() {
 	enemy1.eShow = true;
 }
 
+/**
+ * Function Pause Game
+ *
+ */
 function pauseGame() {
 	pause = !pause;
-	if(pause) {
+	if(pause == true) {
 		sGame.pause();
 		context.fillStyle = "white";
 		context.font = "100px Arial bold";
 		context.fillText("PAUSE",150,300);
-		var setPause = setTimeout(function() {
+		setPause = setTimeout(function() {
 			pause = false;
 		}, 3000);
-	} else {
+	}
+	else {
 		clearTimeout(setPause);
 	}
 }
 
 /**
- * Function gameover
+ * Function Game Over
  */
 function gameOver() {
 	sGame.pause();
