@@ -2,13 +2,13 @@ window.onload = function(){
 	startGame();
 }
 
-var score = 50;
+var score = 30;
 var heart = 5;
 var arraySpeed = [2, 4, 10];// save array speed
 var speed = arraySpeed[0];
-var enemiesize = 60;
+var enemiesize = 70;
 var level = 0;
-var countEnemy = 0;
+var countEnemyKilled = 0;
 var sound = true;
 var mute = false;
 var endGame = false;
@@ -134,7 +134,7 @@ function startGame() {
 		drawBlood();
 		drawEnemy();
 	}
-	if (score < 10 || heart < 0) {
+	if (score < 5 || heart < 0) {
 		gameOver();
 	}
 	reqAnimation(startGame);
@@ -290,7 +290,7 @@ menuGame.addEventListener("click", function(e){
 function clickEnemy(mouseX, mouseY, enemy) {
 	if (mouseX > enemy.x && mouseX <= enemy.x + enemiesize && mouseY > enemy.y &&
 		 mouseY <= enemy.y + enemiesize && enemy.eShow == true) {
-		countEnemy ++;
+		countEnemyKilled ++;
 		heart++;
 		score += 10;
 		enemy.eShow = false;
@@ -316,6 +316,7 @@ function clickEnemy(mouseX, mouseY, enemy) {
 
  /**
  * Function set default position enemy
+ *
  */
 function setDefaultEnemy() {
  	for (var i = 0; i < 9; i++) {
@@ -327,6 +328,10 @@ function setDefaultEnemy() {
 	}
 }
 
+/**
+ * Function Sound Game
+ *
+ */
 function soundGame() {
 	sound = !sound;
 		if(!sound) {
@@ -340,22 +345,24 @@ function soundGame() {
 
 /**
  * Kill all Enemy current
+ *
  */
 function killEnemyAll() {
 	sBoom.play();
 	if (boomNum > 0 && pause == false && endGame == false) {
 		boomNum--;
 		useBoom = true;
-		for(var i = 0; i < 8; i++){
+		for(var i = 0; i < 9; i++){
 			if (enemies[i].eShow == true) {
 				enemies[i].eShow = false;
 				score += 10;
 			}
 		}
-		setboom = setTimeout(function() {
+		setTimeout(function() {
+			setDefaultEnemy();
 			randomEnemy();
 			useBoom = false;
-		}, 500);
+		}, 1000);
 	}
 }
 
@@ -366,10 +373,10 @@ function killEnemyAll() {
 function restartGame() {
 	pause = false
 	endGame = false;
-	countEnemy = 0;
+	countEnemyKilled = 0;
 	level = 0;
 	speed = arraySpeed[0];
-	score = 50;
+	score = 30;
 	heart = 5;
 	highScore = sessionStorage.getItem("highscore");
 	boomNum = 3;
@@ -400,6 +407,7 @@ function pauseGame() {
 
 /**
  * Function Game Over
+ *
  */
 function gameOver() {
 	sGame.pause();
@@ -420,5 +428,5 @@ function gameOver() {
     context.font = "27px Arial bold";
     context.fillText("SCORE: " + score, 240, 250);
 	context.fillText("HIGH SCORE: " + sessionStorage.getItem("highScore"), 200, 280);
-	context.fillText("Enemy Killed: " + countEnemy, 220, 310);
+	context.fillText("Enemy Killed: " + countEnemyKilled, 220, 310);
 }
