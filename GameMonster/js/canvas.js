@@ -79,21 +79,27 @@ enemy8.src = "images/e8_opt.png";
 var enemy9 = new Image();
 enemy9.src = "images/e9_opt.png";
 
-// Create Enemies
-var enemy1 = new Enemy(0, 0, 0,  0,  100, 440, 100, 440, true, false, imgEnemy1);// monter 1 left-top
-var enemy2 = new Enemy(240, 0, 240, 0, 240, 300, 240, 300, false, false, imgEnemy2);// monter 2 center-top
-var enemy3 = new Enemy(600, 0, 600,  0,  200, 440, 200, 440, false, false, enemy3);// monter 3 right-top
-var enemy4 = new Enemy(0, 520, 0, 520,  200, 200, 200, 200, false, false, enemy4);// monter 3 right-top
-var enemy5 = new Enemy(600, 520, 600, 520, 200, 200, 200, 200, false, false, enemy5);// monter 5 center-right
-var enemy6 = new Enemy(60,  400, 60,  400, 240, 240, 240, 240, false, false, enemy6);// monter 6 left-bottom
-var enemy7 = new Enemy(280, 400, 280, 400, 280, 280, 280, 280, false, false, enemy7);// monter 7 center-bottom
-var enemy8 = new Enemy(520, 400, 520, 400, 280, 280, 280, 280, false, false, enemy8);// monter 1 right-bottom
-var enemy9 = new Enemy(random ,random + 120, random, random + 120, 600, 480, 600, 480, false, false, enemy9);//monter 9 run random
+// Create Enemies 1-8
+var enemy1 = new Enemy(0, 0, 0, 0, 100, 440, 100, 440, true, false, imgEnemy1);
+var enemy2 = new Enemy(240, 0, 240, 0, 240, 300, 240, 300, false, false, imgEnemy2);
+var enemy3 = new Enemy(600, 0, 600, 0, 200, 440, 200, 440, false, false, enemy3);
+var enemy4 = new Enemy(0, 520, 0, 520, 200, 200, 200, 200, false, false, enemy4);
+var enemy5 = new Enemy(600, 520, 600, 520, 200, 200, 200, 200, false, false, enemy5);
+var enemy6 = new Enemy(60,  400, 60, 400, 240, 240, 240, 240, false, false, enemy6);
+var enemy7 = new Enemy(280, 400, 280, 400, 280, 280, 280, 280, false, false, enemy7);
+var enemy8 = new Enemy(520, 400, 520, 400, 280, 280, 280, 280, false, false, enemy8);
+//Create Enemy 9 run random
+var enemy9 = new Enemy(random ,random + 120, random, random + 120, 600, 480, 600, 480, false, false, enemy9);
 
 // Create array save 9 enemy
-var enemies = [enemy1, enemy2, enemy3, enemy4 , enemy5, enemy6, enemy7, enemy8, enemy9];
-var reqAnimation = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
+var enemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy7, enemy8, enemy9];
+var reqAnimation = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+		window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.oRequestAnimationFrame;
 
+/**
+ * Function start: Draw objects
+ *
+ */
 function start() {
 	context.drawImage(bg, 0 ,0 ,600, 500);
 	context.drawImage(logo2, 140 ,100 ,350, 150);
@@ -168,7 +174,7 @@ function drawBlood() {
  *
  */
 function randomEnemy() {
-	var num = Math.floor((Math.random()*7)+1);
+	var num = Math.floor((Math.random()*7) + 1);
 	enemies[num].eShow = true;
 	console.log("enemy: " + parseInt(num + 1));
 }
@@ -241,13 +247,12 @@ Enemy.prototype.move = function () {
 /**
  * Function Event mouse click in canvas
  */
-canvas.addEventListener("click",function(e) {
+canvas.addEventListener("click", function(e) {
 	var mouseX = e.pageX - canvas.offsetLeft;
 	var mouseY = e.pageY - canvas.offsetTop;
 	console.log("toa do x,y : " + mouseX , mouseY);
 	if (pause == false) {
 		heart--;
-		//score -= 10;
 		for (var i = 0; i < 9; i++) {
 			clickEnemy(mouseX, mouseY, enemies[i]);
 		}
@@ -262,7 +267,7 @@ menuGame.addEventListener("click", function(e){
 	//Position mouse
 	var mouseX = e.pageX - this.offsetLeft;
 	var mouseY = e.pageY - this.offsetTop;
-	console.log("toa do x,y : " + mouseX , mouseY);
+	console.log("toa do x,y : " + mouseX, mouseY);
 	//Sound
 	if(mouseX > 160 && mouseX < 205 && mouseY > 12 && mouseY < 57) {
 		soundGame();
@@ -395,7 +400,7 @@ function pauseGame() {
 		sGame.pause();
 		context.fillStyle = "white";
 		context.font = "100px Arial bold";
-		context.fillText("PAUSE",150,300);
+		context.fillText("PAUSE", 150, 300);
 		setPause = setTimeout(function() {
 			pause = false;
 		}, 3000);
