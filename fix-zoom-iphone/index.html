@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="">
+	<style>
+		html,body{ 
+			-webkit-overflow-scrolling : touch !important;
+			overflow: auto !important; 
+		}
+		@media (max-width: 767px) {
+			body.modal-open {
+			    position: fixed;
+			    left: 0;
+			    right: 0;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<p>
+			<pre>
+				html,body{ 
+					-webkit-overflow-scrolling : touch !important;
+					overflow: auto !important; 
+				}
+				<!-- fix cursor input -->
+				@media (max-width: 767px) {
+					body.modal-open {
+					    position: fixed;
+					    left: 0;
+					    right: 0;
+					}
+				}
+			</pre>
+		</p>
+		
+	</div>
+	<div class="container">
+		<br>
+		<br>
+		<form id="formCusInformation">
+			<div class="form-group">
+			    <input type="text" name="name1" class="form-control error" id="" placeholder="Họ tên 1" required="required">
+			</div>
+				<div class="form-group">
+			    <input type="text" name="phone1" class="form-control" id="" placeholder="Số điện thoại 1" required="required">
+			</div>
+			<div class="form-group">
+			    <input type="text" name="name" class="form-control error" id="" placeholder="Họ tên" required="required">
+			</div>
+				<div class="form-group">
+			    <input type="text" name="phone" class="form-control" id="" placeholder="Số điện thoại" required="required">
+			</div>
+				<div class="form-group">
+			    <input type="text" name="identity" class="form-control" id="" placeholder="CMND" required="required">
+			</div>
+				<div class="form-group">
+			    <input type="text" name="address" class="form-control" id="" placeholder="Địa chỉ nhận quà" required="required">
+			</div>
+
+			<div class="checkbox">
+			    <label><input type="checkbox"> Xác nhận thông tin bên trên là chính xác</label>
+			</div>
+			<button type="submit" class="btn btn-main" id="submit-info">Xác nhận</button>
+
+			<p class="text-noti noti-red">Bạn vui lòng xác nhận thông tin. Grabfood không chịu trách nhiệm nếu bạn không nhận được quà do thông tin sai</p>
+		</form>
+
+		<!-- Trigger the modal with a button -->
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+		<!-- Modal -->
+		<div id="myModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Modal Header</h4>
+		      </div>
+		      <div class="modal-body">
+		        <form id="formCusInformation">
+					<div class="form-group">
+					    <input type="text" name="name1" class="form-control error" id="" placeholder="Họ tên 1" required="required">
+					</div>
+						<div class="form-group">
+					    <input type="text" name="phone1" class="form-control" id="" placeholder="Số điện thoại 1" required="required">
+					</div>
+					<div class="form-group">
+					    <input type="text" name="name" class="form-control error" id="" placeholder="Họ tên" required="required">
+					</div>
+						<div class="form-group">
+					    <input type="text" name="phone" class="form-control" id="" placeholder="Số điện thoại" required="required">
+					</div>
+						<div class="form-group">
+					    <input type="text" name="identity" class="form-control" id="" placeholder="CMND" required="required">
+					</div>
+						<div class="form-group">
+					    <input type="text" name="address" class="form-control" id="" placeholder="Địa chỉ nhận quà" required="required">
+					</div>
+
+					<div class="checkbox">
+					    <label><input type="checkbox"> Xác nhận thông tin bên trên là chính xác</label>
+					</div>
+					<button type="submit" class="btn btn-main" id="submit-info">Xác nhận</button>
+
+					<p class="text-noti noti-red">Bạn vui lòng xác nhận thông tin. Grabfood không chịu trách nhiệm nếu bạn không nhận được quà do thông tin sai</p>
+				</form>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		      </div>
+		    </div>
+
+		  </div>
+		</div>
+	</div>
+
+	<script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- JS fix zoom in Iphone -->
+	<script>
+	// Fix Zoom hover input,select in Iphone
+		/*
+		NOTE: This code overrides the viewport settings, an improvement would be
+		      to take the original value and only add or change the user-scalable value
+		*/
+
+		// optionally only activate for iOS (done because I havn't tested the effect under other OS/devices combinations such as Android)
+		var iOS = navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)
+		if (iOS)
+		  preventZoomOnFocus();
+
+		function preventZoomOnFocus()
+		{
+		  document.documentElement.addEventListener("touchstart", onTouchStart);
+		  document.documentElement.addEventListener("focusin", onFocusIn);
+		}
+
+		let dont_disable_for = ["checkbox", "radio", "file", "button", "image", "submit", "reset", "hidden"];
+		//let disable_for = ["text", "search", "password", "email", "tel", "url", "number", "date", "datetime-local", "month", "year", "color"];
+
+		function onTouchStart(evt)
+		{
+		  let tn = evt.target.tagName;
+
+		  // No need to do anything if the initial target isn't a known element
+		  // which will cause a zoom upon receiving focus
+		  if (    tn != "SELECT"
+		      &&  tn != "TEXTAREA"
+		      && (tn != "INPUT" || dont_disable_for.indexOf(evt.target.getAttribute("type")) > -1)
+		     )
+		    return;
+
+		  // disable zoom
+		  setViewport("width=device-width, initial-scale=1.0, user-scalable=0");
+		}
+
+		// NOTE: for now assuming this focusIn is caused by user interaction
+		function onFocusIn(evt)
+		{
+		  // reenable zoom
+		  setViewport("width=device-width, initial-scale=1.0, user-scalable=1");
+		}
+
+		// add or update the <meta name="viewport"> element
+		function setViewport(newvalue)
+		{
+		  let vpnode = document.documentElement.querySelector('head meta[name="viewport"]');
+		  if (vpnode)
+		    vpnode.setAttribute("content",newvalue);
+		  else
+		  {
+		    vpnode = document.createElement("meta");
+		    vpnode.setAttribute("name", "viewport");
+		    vpnode.setAttribute("content", newvalue);
+		  }
+		}
+
+	</script>
+</body>
+</html>

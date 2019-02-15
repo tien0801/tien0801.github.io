@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="">
+	<style>
+		/* radio button, checkbox */
+		.lz-radio input[type="radio"] {
+		    display:none;
+		}
+		.lz-radio input[type="radio"] + label .icon-radio {
+		    display:inline-block;
+		    width: 12px;
+		    height: 12px;
+		    margin:-2px 5px 0 0;
+		    vertical-align:middle;
+		    background: #fff;
+		    cursor:pointer;
+		    border: 1px solid #000;
+		    border-radius: 50%;
+		    background: #fff;
+		}
+		.lz-radio input[type="radio"]:checked + label .icon-radio {
+		    background: #21a655;
+		}
+		
+		.method-checkout .title-method {
+		    background: #000;
+		    color: #fff;
+		    margin: 0;
+		    font-size: 14px;
+		    padding: 10px 20px;
+		}
+		.method-checkout .form-method {
+		    border: 1px solid #ddd;
+		}
+		.method-checkout .info-payment {
+		    padding: 10px 15px;
+		}
+		.method-checkout .info-payment label {
+			cursor: pointer;
+		}
+		.method-checkout .info-payment .method-cod {
+		    margin-bottom: 12px;
+		}
+		.method-checkout .lz-radio .img-method {
+		    width: 30px;
+		    display: inline-block;
+		}
+		.method-checkout .box-credit-cart {
+		    /* display: none; */
+			display: block;
+		    font-size: 14px;
+		}
+		/* .method-checkout .box-credit-cart.active {
+			display: block;
+		} */
+		.method-checkout .box-credit-cart .title-credit {
+		    margin-bottom: 5px;
+		    font-size: 16px;
+		}
+		.method-checkout .box-credit-cart .lz-radio {
+		    position: relative;
+		    padding-left: 15px;
+		}
+		.method-checkout .box-credit-cart .lz-radio label span {
+		    position: absolute;
+		    top: 6px;
+		}
+		.method-checkout .box-credit-cart .info-account {
+		    padding-left: 20px;
+		}
+		.method-checkout .box-credit-cart .info-account p {
+		    margin-bottom: 5px;
+		    line-height: 1.3;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2 class="step-title">Hình thức thanh toán</h2>
+            <div class="method-checkout">
+                    <!-- <h5 class="title-method">Hình thức thanh toán</h5> -->
+                    <form class="form-method" action="">
+                        <div class="info-payment">
+                            <div class="lz-radio method-cod">
+                                <input type="radio" id="r1" name="rr" checked>
+                                <label for="r1"><span class="icon-radio"></span> 
+                                    <span class="img-method"><img src="method-1.png" alt=""></span> Giao hàng thu tiền tại nhà(COD)
+                                </label>
+                            </div>
+                            <div class="lz-radio method-credit">
+                                <input type="radio" id="r2" name="rr">
+                                <label for="r2"><span class="icon-radio"></span> 
+                                    <span class="img-method"><img src="method-2.png" alt=""></span> Thanh toán qua thẻ tín dụng
+                                </label>
+                            </div>
+                            <div class="box-credit-cart">
+                                <p class="title-credit">Thông tin chuyển khoản:</p>
+                                <div class="lz-radio">
+                                    <input type="radio" id="r11" name="rr-2">
+                                    <label for="r11"><span class="icon-radio"></span>
+                                        <div class="info-account">
+                                            <p><b>Tên tài khoản:</b> Công ty TNHH Mỹ Phẩm Nature Story </p>
+                                            <p><b>Ngân hàng:</b> Vietcombank - Chi nhánh SDG1-HCM </p>
+                                            <p><b>Số tài khoản:</b> 200014851191635</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="lz-radio">
+                                    <input type="radio" id="r22" name="rr-2">
+                                    <label for="r22"><span class="icon-radio"></span> 
+                                        <div class="info-account">
+                                            <p><b>Tên tài khoản:</b> Công ty TNHH Mỹ Phẩm Nature Story </p>
+                                            <p><b>Ngân hàng:</b> Vietcombank - Chi nhánh SDG1-HCM </p>
+                                            <p><b>Số tài khoản:</b> 200014851191635</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </form>
+                </div>
+	</div>
+
+	<script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- JS main -->
+	<script>
+		$(document).ready(function() {
+			$('.method-checkout .info-payment .method-cod > label').click(function() {
+				$('.method-checkout .info-payment .box-credit-cart .lz-radio > input').prop("checked", false);
+			})
+			$('.method-checkout .info-payment .method-credit > label').click(function() {
+				$(this).find('input').prop("checked", true);
+				$(this).closest('.info-payment').find('.box-credit-cart .lz-radio input#r11').prop("checked", true);
+				// $(this).closest('.info-payment').find(".box-credit-cart").addClass('active');
+			})
+			$('.box-credit-cart .lz-radio label').click(function() {
+				$('.method-checkout .info-payment .method-credit > input').prop("checked", true);
+			})
+		});
+	</script>
+</body>
+</html>

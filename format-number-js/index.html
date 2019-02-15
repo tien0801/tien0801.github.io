@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Title of the document</title>
+</head>
+
+<body>
+	<pre>
+		<code>
+			<!-- <script
+			  src="https://code.jquery.com/jquery-3.3.1.js"
+			  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			  crossorigin="anonymous"></script>
+			<script> -->
+			Number.prototype.formatMoney = function(c, d, t){
+			var n = this, 
+			  c = isNaN(c = Math.abs(c)) ? 2 : c, 
+			  d = d == undefined ? "." : d, 
+			  t = t == undefined ? "," : t, 
+			  s = n < 0 ? "-" : "", 
+			  i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))), 
+			  j = (j = i.length) > 3 ? j % 3 : 0;
+			 return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+			};
+			
+			// (123456789.12345).formatMoney(2, '.', ',');
+			alert((123456789.12345).formatMoney(2, '.', ','));
+			<!-- </script> -->
+		</code>
+	</pre>
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.js"
+	  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	  crossorigin="anonymous"></script>
+	<script>
+		Number.prototype.formatMoney = function(c, d, t){
+		var n = this, 
+		  c = isNaN(c = Math.abs(c)) ? 2 : c, 
+		  d = d == undefined ? "." : d, 
+		  t = t == undefined ? "," : t, 
+		  s = n < 0 ? "-" : "", 
+		  i = String(parseInt(n = Math.abs(Number(n) || 0).toFixed(c))), 
+		  j = (j = i.length) > 3 ? j % 3 : 0;
+		 return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+		};
+		// (number.text()).formatMoney(2, '.', ',');
+		alert((123456789.12345).formatMoney(2, '.', ',')); 
+	</script>
+</body>
+
+</html>

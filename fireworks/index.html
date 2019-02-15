@@ -1,0 +1,97 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>Firemaks - example!</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/ui-darkness/jquery-ui.css" /> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script> -->
+	<script src="js/firemaks.js" type="text/javascript"></script>
+
+	<style type="text/css">
+
+		.box-fireworks {
+			width: 800px; 
+			height: 500px;
+			background: #000;
+			position: relative;
+		}
+		.box-fireworks canvas {
+			position: absolute !important;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 800px; 
+			height: 500px;
+		}
+
+			
+		.prettyprint {
+			padding: 5px ! important;
+			background-color: rgb(40,40,40);
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+			}
+			
+		span.cpt {
+			margin: 0; 
+			padding: 0;
+
+			text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.3);
+			text-decoration: underline
+			}
+	</style>
+
+	<script type="text/javascript">
+		var cx = 0,cy = 0;
+			
+		var color1 = new Array( new Array({
+			r:241,g:0,b:0},
+		    {r:255,g:72,b:72},  
+		    {r:239,g:107,b:107},  
+		    {r:255,g:191,b:191},  
+		    {r:255,g:255,b:255}),
+		new Array({r:12,g:152,b:228},  {r:81,g:188,b:246},  {r:100,g:195,b:247},  {r:195,g:232,b:252},  {r:255,g:255,b:255}),
+		new Array({r:202,g:228,b:12},  {r:226,g:246,b:81},  {r:229,g:247,b:100},  {r:245,g:252,b:195},  {r:255,g:255,b:255}) );
+		var color2 = new Array( new Array({r:255,g:0,b:0}, {r:228,g:225,b:0}, {r:169,g:0,b:231}, {r:255,g:0,b:148}, {r:255,g:255,b:255}),
+		new Array({r:0,g:153,b:231}, {r:194,g:0,b:231}, {r:255,g:118,b:0}, {r:141,g:227,b:0}, {r:255,g:255,b:255}), 
+		new Array({r:255,g:251,b:125}, {r:0,g:206,b:223}, {r:247,g:154,b:255}, {r:255,g:165,b:106}, {r:255,g:255,b:255}) );
+		var color3 = new Array( new Array({r:0,g:94,b:226}, {r:255,g:255,b:255}),
+		new Array({r:231,g:234,b:0}, {r:255,g:255,b:255}), 
+		new Array({r:255,g:109,b:0}, {r:255,g:255,b:255}) );
+		var color4 = new Array(
+			new Array({r:232,g:255,b:0}),
+			new Array({r:232,g:255,b:0}),
+			new Array({r:232,g:255,b:0}),
+			new Array({r:232,g:255,b:0}),
+			new Array({r:232,g:255,b:0}),
+			new Array({r:232,g:255,b:0}),
+			new Array({r:232,g:255,b:0}),
+			new Array({r:232,g:255,b:0}),
+			new Array({r:232,g:255,b:0})	
+			);
+		
+
+		jQuery(document).ready(function(){
+
+			$('.box-fireworks').firemaks({
+				color: color4,
+				type: 2,
+				color_child: 'inherit',
+				type_child: 'inherit',
+				boom_count: 50,
+				boom_time_from: 0.2,
+			});
+		
+		});
+	</script>
+
+</head>
+
+<body>
+	<div class="box-fireworks" style=""></div>
+
+</body>
+</html>

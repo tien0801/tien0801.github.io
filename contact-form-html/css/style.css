@@ -1,0 +1,137 @@
+body {
+	/*background: #008cdf;*/
+}
+
+/* Ganeral */
+.btn-main {
+	background: #313131;
+    color: #fff;
+    border-radius: 0;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    box-shadow: none;
+}
+.btn-main:hover,
+.btn-main:focus {
+	background: #008cdf;
+	color: #fff;
+}
+.p-t20 { padding-top: 20px; }
+.p-t30 { padding-top: 30px; }
+.p-t40 { padding-top: 40px; }
+.p-t50 { padding-top: 50px; }
+.p-t60 { padding-top: 60px; }
+
+.p-b20 { padding-bottom: 20px; }
+.p-b30 { padding-bottom: 30px; }
+.p-b40 { padding-bottom: 40px; }
+.p-b50 { padding-bottom: 50px; }
+.p-b60 { padding-bottom: 60px; }
+
+.p-tb20 { padding-top: 20px; padding-bottom: 20px; }
+.p-tb30 { padding-top: 30px; padding-bottom: 30px; }
+.p-tb40 { padding-top: 40px; padding-bottom: 40px; }
+.p-tb50 { padding-top: 50px; padding-bottom: 50px; }
+.p-a20 { padding: 20px; }
+.p-a30 { padding: 30px; }
+.p-a40 { padding: 40px; }
+.p-a50 { padding: 50px; }
+
+.bg-gray {
+    background-color: #f5f6f6;
+}
+.munia-banner {
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+.navbar-default {
+    border-bottom: 1px solid #d3d3d3;
+}
+
+
+			/* Contact section */
+	/*------------------------------------*/
+/*-----------------------------------------------*/
+.section-contact .icon-lg {
+    float: left;
+    margin-right: 10px;
+    width: 70px;
+    padding-top: 8px;
+}
+.section-contact .icon-lg img {
+    height: 60px;
+}
+.section-contact a {
+    color: #fff;
+}
+.section-contact .bg-primary {
+    background-color: #008cdf;
+}
+.section-contact .wt-icon-box-wraper {
+    display: block;
+    min-height: 80px;
+    overflow: hidden;
+}
+.section-contact .title-s6 {
+    font-size: 26px;
+    line-height: 32px;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    color: #008cdf;
+}
+.section-contact .cons-contact-form input {
+	height: 45px;
+	border-radius: 0;
+}
+.section-contact .cons-contact-form input, .section-contact .cons-contact-form textarea {
+    border: 1px solid #ccc;
+    border-radius: 0;
+}
+.section-contact .cons-contact-form .input-group-addon {
+    padding: 10px 20px;
+    background: #fff;
+}
+.section-contact .icon-content{
+    float: left;
+    width: calc(100% - 80px);
+}
+.contact-home-right textarea{
+    resize: none;
+}
+.contact-home-right .submit-btn-group{
+    margin-bottom: 0;
+    margin-top: 27px;
+}
+
+@media only screen and (max-width : 991px){
+    .contact-home-right{
+        padding: 15px;
+    }
+}
+@media (max-width: 480px) {
+	.section-contact .icon-lg {
+	    display: block;
+	    width: 100%;
+	    text-align: center;
+        padding-bottom: 10px;
+        float: none;
+	}
+	.section-contact .icon-content {
+	    text-align: center;
+        margin-top: 20px;
+        float: none;
+        width: 100%;
+    }
+    .contact-home-right .submit-btn-group{
+        text-align: center;
+    }
+    .contact-home-right .title-s6{
+        text-align: center;
+    }
+}

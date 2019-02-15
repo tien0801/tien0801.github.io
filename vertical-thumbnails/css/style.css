@@ -1,0 +1,23 @@
+.roland-garros-babolat>div {
+    /*display: table-cell;
+    vertical-align: top;*/
+}
+
+.roland-garros-babolat .selectors {
+    width: 70px;
+    padding-right: 1px;
+    float: left;
+}
+a[data-zoom-id], .mz-thumb, .mz-thumb:focus {
+    display: inline-block;
+    line-height: 0;
+    outline: none;
+}
+.roland-garros-babolat .selectors>a {
+    margin-bottom: 10px;
+}
+a[data-zoom-id] img, .mz-thumb img {
+    border: 0;
+    box-shadow: 0 0 1px 0px rgba(0,0,0,0.3);
+    box-sizing: border-box;
+}

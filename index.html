@@ -1,47 +1,267 @@
-﻿<!DOCTYPE html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>tien0801-github</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>	
-	<div class="wrapper">
-	<div class="title">tien0801.github.io</div>
-	<div>
-		<a class="github" href="https://github.com/tien0801/tien0801.github.io" target="_blank">
-			View On Github
-		</a>	
-	</div>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Html Component</title>
+	<link rel="shortcut icon" type="image/png" href="http://laziweb.com/public/uploads/images/hinh-he-thong/favicon.PNG"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<h1>HTML CSS</h1>
-	<ul>
-		<li><a href="/BAITAP-HTML/TH-Baitap1" target="_blank">Bài tập 1 HTML-CSS</a></li>
-		<li><a href="/BAITAP-HTML/TH-Baitap2" target="_blank">Bài tập 2 HTML-CSS</a></li>
-		<li><a href="/BAITAP-HTML/TH-Baitap3" target="_blank">Bài tập 3 HTML-CSS</a></li>
-		<li><a href="/BAITAP-HTML/TH-Baitap4" target="_blank">Bài tập 4 HTML-CSS</a></li>
-		<li><a href="/BAITAP-HTML/TH-Baitap5" target="_blank">Bài tập 5 HTML-CSS</a></li>
-		<li><a href="/BAITAP-HTML/TH-Baitap6" target="_blank">Bài tập 6 HTML-CSS</a></li>
-	</ul>
-	<h1>JAVASCRIPT</h1>
-	<ul>
-		<li><a href="/Slider2/" target="_blank">Slider</a></li>
-		<li><a href="/Calendar/" target="_blank">Calendar</a></li>
-		<li><a href="/FormAjax/" target="_blank">FormAjax</a></li>
-		<li><a href="/GameMonster/" target="_blank">Game Monster</a></li>
-	</ul>
-	<h1>JQUERY</h1>
-	<ul>
-		<li><a href="/JQUERY/Slider/" target="_blank">Slider</a></li>
-		<li><a href="/JQUERY/Calendar/" target="_blank">Calendar</a></li>
-		<li><a href="/JQUERY/FormAjax/" target="_blank">FormAjax</a></li>
-		<li><a href="/JQUERY/GameMonster/" target="_blank">Game Monster</a></li>
-	</ul>
+	<style>
+		body {
+			background-color: #00B140;
+		}
+		.wrapper {
+			background-color: #fff;
+			margin: 0 auto;
+			max-width: 1700px;
+			position: relative;
+			width: 100%;
+		}
+		.content {
+
+		}
+		.page-section {
+		  height: 100%;
+		  width: calc(100% - 350px);
+		  margin-left: 350px;
+		  margin-top: 5%;
+		  padding: 3em;
+		  /* background: linear-gradient(45deg, #43cea2 10%, #185a9d 90%); */
+		  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+		}
+
+		.navigation {
+		  position: fixed;
+		  width: 320px;
+		  margin-left: 0;
+		  background-color: #999;
+		  color: #fff;
+		}
+		.navigation__link {
+		  display: block;
+		  color: #ddd;
+		  text-decoration: none;
+		  padding: 1em;
+		  font-weight: 400;
+		}
+		.navigation__link:hover {
+		  background-color: #aaa;
+		}
+		.navigation__link.active {
+		  color: white;
+		  background-color: rgba(0, 0, 0, 0.1);
+		}
+	</style>
 	
-	<h1>Tổng hợp Link</h1>
-	<ul>
-		<li><a href="https://drive.google.com/open?id=1T8UUL8U42f9hzxbt-z1ABe2JibFJN_p_lRFYF8i4JBc" target="_blank">Link Tổng Hợp</a></li>
-	</ul>
+</head>
+<body>
+	<!-- <div class="container">
+		<ul class="">
+			
+			
+			
+			
+
+			
+
+			
+			<li>
+				<a href="jQuery-Mouse-Parallax-hover/">Parallax on Hover</a>
+			</li>
+			<li>
+				<a href="upload-images-preview/upload-imgs-2-cus-2-Sortable.html">Upload Multi Images Preview Sortable</a>
+			</li>
+
+			
+			
+
+			<li>
+				<a href="click-to-chat-facebook">Btn Chat facebook</a>
+			</li>
+			<li>
+				<a href="format-number-js">Format Number Js</a>
+			</li>
+			<li>
+				<a href="contact-form-html">Contact Form Html</a>
+			</li>
+			<li>
+				<a href="fix-img-flex">Fix Box Image- Flex</a>
+			</li>
+			<li>
+				<a href="ScrollToFixed-master">Scroll to Fixed box</a>
+			</li>
+			
+			<li>
+				<a href="Scroll-to-top.html">Scroll to top</a>
+			</li>
+			<li>
+				<a href="test-checklist-v2">Test checklist v2</a>
+			</li>
+			
+			
+			<li>
+				<a href="checkbox-selectbox-custom-image">Checkbox Selectbox Custom Image</a>
+			</li>
+			
+			<li>
+				<a href="blog-page">Blog page</a>
+			</li>
+			<li>
+				<a href="selectbox-autowidth-option">Selectbox-autowidth-option</a>
+			</li>
+			<li>
+				<a href="faq/index.html">FAQ</a>
+			</li>
+			
+			<li>
+				<a href="loadmore-scroll/index.html">Loadmore scroll</a>
+			</li>
+			
+		</ul>
+	</div> -->
+	<div class="wrapper">
+		<div class="container-fluid">
+			<nav class="navigation" id="mainNav">
+				<a class="navigation__link" href="#css">CSS</a>
+				<a class="navigation__link" href="#snippet">Snippet</a>
+				<a class="navigation__link" href="#page">Page</a>
+				<a class="navigation__link" href="#slider">Slider</a>
+				<a class="navigation__link" href="#doc">Doc</a>
+				<a class="navigation__link" href="#api">API</a>
+				<a class="navigation__link" href="#7">Section 7</a>
+			</nav>
+	
+			<div class="content">
+				<div class="page-section hero" id="css">
+					<h1>Css</h1>
+					<ul>
+						<li>
+							<a href="test-checklist/">Test chi tiết bài viết</a>
+						</li>
+					</ul>
+				</div>
+				<div class="page-section" id="snippet">
+					<h1>Snippet</h1>
+					<ul>
+						<li>
+							<a href="cta-ver-2/">CTA form</a>
+						</li>
+						<li>
+							<a href="orders-html">Danh sách đặt hàng</a>
+						</li>
+						<li>
+							<a href="btn-toa/index.html">Button Animate</a>
+						</li>
+						<li>
+							<a href="rating-start-all-option">Rating Start All Option</a>
+						</li>
+					</ul>
+				</div>
+				<div class="page-section" id="page">
+					<h1>Page</h1>
+					<ul>
+						<li>
+							<a href="cart-html/">Giỏ hàng</a>
+						</li>
+						<li>
+							<a href="thanks-html/">Trang cảm ơn</a>
+						</li>
+						<li>
+							<a href="404-html/">Trang 404</a>
+						</li>
+						<li>
+							<a href="contact-page">Contact page</a>
+						</li>
+					</ul>
+				</div>
+				<div class="page-section" id="slider">
+					<h1>Slider</h1>
+					<ul>
+						<li>
+							<a href="vertical-thumbnails/">Slider chi tiết sản phẩm kèm zoom khi hover</a>
+						</li>
+						<li>
+							<a href="swiper-slider">Swiper Slider Customer Saigonpixel</a>
+						</li>
+						<li>
+							<a href="Slider-OwlCarousel-2-simple/index.html">Slider-OwlCarousel-2-simple</a>
+						</li>
+						<li>
+							<a href="Slider-Flex-Modal-Product_detail">Slider-Flex-Modal-Product_detail</a>
+						</li>
+					</ul>
+				</div>
+				<div class="page-section" id="doc">
+					<h1>Doc</h1>
+					<ul>
+						<li>
+							<a href="html-seo">Html theo chuẩn SEO</a>
+						</li>
+					</ul>
+				</div>
+				<div class="page-section" id="api">
+					<h1>API</h1>
+					<ul>
+						<li>
+							<a href="map-black-white/index.html">Map black and White</a>
+						</li>
+						<li>
+							<a href="map-html">Map API</a>
+						</li>
+						<li>
+							<a href="like-share-popup-fb">Like share popup Facebook</a>
+						</li>
+					</ul>
+				</div>
+				<div class="page-section" id="7">
+					<h1>Section Seven</h1>
+				</div>
+			</div>
+		</div>
 	</div>
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<!-- JS Main -->
+	<script>
+		$(document).ready(function() {
+			$('#mainNav a').bind('click', function(e) {
+				e.preventDefault(); // prevent hard jump, the default behavior
+
+				var target = $(this).attr("href"); // Set the target as variable
+
+				// perform animated scrolling by getting top-position of target-element and set it as scroll target
+				$('html, body').stop().animate({
+						scrollTop: $(target).offset().top
+				}, 600, function() {
+						location.hash = target; //attach the hash (#jumptarget) to the pageurl
+				});
+
+				return false;
+			});
+		});
+
+		$(window).scroll(function() {
+			var scrollDistance = $(window).scrollTop();
+
+			// Show/hide menu on scroll
+			//if (scrollDistance >= 850) {
+			//		$('nav').fadeIn("fast");
+			//} else {
+			//		$('nav').fadeOut("fast");
+			//}
+		
+			// Assign active class to nav links while scolling
+			$('.page-section').each(function(i) {
+				if ($(this).position().top <= scrollDistance) {
+					$('.navigation a.active').removeClass('active');
+					$('.navigation a').eq(i).addClass('active');
+				}
+			});
+		}).scroll();
+	</script>
+
 </body>
 </html>

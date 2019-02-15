@@ -1,0 +1,29 @@
+.blog-content-area .blog-img a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.blog-content-area .blog-img a img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+@media (min-width: 1200px) {
+	.blog-content-area .blog-img a {
+		height: 360px;
+	}
+}
+@media (max-width: 1199px) {
+	.blog-content-area .blog-img a {
+		height: 293px;
+	}
+}
+@media (max-width: 1199px) {
+	.blog-content-area .blog-img a {
+		height: 460px;
+	}
+}

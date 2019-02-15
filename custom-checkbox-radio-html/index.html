@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Custom checkbox</title>
+    <style>
+        .center{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        /* Radio */
+        .cs-radio {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .cs-radio input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+        .cs-radio input:checked ~ .checkmark:after {
+            display: flex;
+        }
+        .cs-radio .checkmark:after {
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+             top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 25px;
+            height: 25px;
+            content: '✓';
+            font-size: 30px;
+            color: #000;
+            display: none;
+        }
+
+        /* Checkbox */
+        .cs-checkbox {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .cs-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #eee;
+        }
+        .cs-checkbox input:checked ~ .checkmark:after {
+            display: flex;
+        }
+        .cs-checkbox .checkmark:after {
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+             top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 25px;
+            height: 25px;
+            content: '✓';
+            font-size: 30px;
+            color: #000;
+            display: none;
+        }
+        </style>
+</head>
+
+<body>
+    <div class="center">
+        <h1>Custom Radio Buttons</h1>
+        <label class="cs-radio">One
+            <input type="radio" checked="checked" name="radio">
+            <span class="checkmark"></span>
+        </label>
+        <label class="cs-radio">Two
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+        </label>
+        <label class="cs-radio">Three
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+        </label>
+        <label class="cs-radio">Four
+            <input type="radio" name="radio">
+            <span class="checkmark"></span>
+        </label>
+
+        <h2>Custom Checkbox Buttons</h2>
+        <label class="cs-checkbox">One
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+        </label>
+        <label class="cs-checkbox">Two
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="cs-checkbox">Three
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="cs-checkbox">Four
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+    </div>
+</body>
+
+</html>

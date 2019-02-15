@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Danh sách đặt hàng</title>
+	<link rel="stylesheet" href="css/order-list.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<div class="container order-list-container">
+		<h1 class="title">Danh sách đơn hàng của bạn</h1>
+		<div class="customer-order-list">
+		    <div class="row top-icon">
+		        <div class="block col-md-3 col-sm-4 col-xs-12">
+		            <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>Chưa xác nhận
+		        </div>
+		        <div class="block col-md-3 col-sm-4 col-xs-12">
+		            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>Đã xác nhận
+		        </div>
+		        <div class="block col-md-3 col-sm-4 col-xs-12">
+		            <span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>Chưa thanh toán
+		        </div>
+		        <div class="block col-md-3 col-sm-4 col-xs-12">
+		            <span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>Đã thanh toán
+		        </div>
+		        <div class="block col-md-3 col-sm-4 col-xs-12">
+		            <span class="glyphicon glyphicon-road" aria-hidden="true"></span>Đã giao hàng
+		        </div>
+		        <div class="block col-md-3 col-sm-4 col-xs-12">
+		            <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span>Đơn hàng bị hoàn trả
+		        </div>
+		        <div class="block col-md-3 col-sm-4 col-xs-12">
+		            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>Đơn hàng bị hủy
+		        </div>
+		        <div class="clearfix"></div>
+		    </div>
+		    <div id="order_list" class="table-responsive">
+		        <table class="table table-order table-striped table-bordered">
+		            <tbody>
+		                <tr>
+		                    <th>stt</th>
+		                    <th>mã đơn hàng</th>
+		                    <th>ngày</th>
+		                    <th>tổng số tiền</th>
+		                    <th>trạng thái</th>
+		                </tr>
+		                <tr>
+		                    <td>1</td>
+		                    <td>
+		                        25 <button class="detailod-btn">Chi tiết</button>
+		                    </td>
+		                    <td>27/07/2017</td>
+		                    <td>4,000,000đ</td>
+		                    <td><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span></td>
+		                </tr>
+		            </tbody>
+		        </table>
+		    </div>
+		    <div class="sub-table">
+			    <h2 class="sub-title">Chi tiết đơn hàng</h2>
+			    <div id="order_detail" class="table-responsive">
+			        <table class="table table-order table-striped table-bordered">
+			            <tbody>
+			                <tr>
+			                    <th>stt</th>
+			                    <th>Hình ảnh</th>
+			                    <th>Tên sản phẩm</th>
+			                    <th>Đơn giá</th>
+			                    <th>Số lượng</th>
+			                    <th>Tổng cộng</th>
+			                </tr>
+			                <tr>
+			                    <td>1</td>
+			                    <td>
+			                        <a href="prod-san-pham-an-toan">
+									<img src="images/mp8.jpg">
+								</a>
+
+			                    </td>
+			                    <td>
+			                        <a href="prod-san-pham-an-toan">
+									Sản phẩm An Toàn					</a>
+			                    </td>
+			                    <td>
+			                        <div class="content_price" style="text-align: left;">
+			                            <p class="pro-price">4,000,000₫</p>
+			                            <p class="pro-price-del"><del class="compare-price">5,000,000₫</del></p>
+			                        </div>
+			                    </td>
+			                    <td>1</td>
+			                    <td>4,000,000₫</td>
+			                </tr>
+			                <tr>
+			                    <td>2</td>
+			                    <td>
+			                        <a href="prod-3-concept-eyes">
+									<img src="images/mp9.jpg">
+								</a>
+
+			                    </td>
+			                    <td>
+			                        <a href="prod-3-concept-eyes">
+									3 Concept Eyes					</a>
+			                    </td>
+			                    <td>
+			                        <div class="content_price" style="text-align: left;">
+			                            <p class="pro-price">Liên hệ</p>
+			                        </div>
+			                    </td>
+			                    <td>1</td>
+			                    <td>Liên hệ</td>
+			                </tr>
+			            </tbody>
+			        </table>
+			    </div>
+		    </div>
+		</div>
+	</div>
+</body>
+</html>

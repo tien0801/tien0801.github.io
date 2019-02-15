@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload images with Jquery</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+      
+  <style>
+    .field-upload-imgs {
+      width: 100%;
+    }
+    .field-upload-imgs .box-sortable {
+      display: inline-block;
+    }
+
+    .field-upload-imgs #files {
+      display: inline-block;
+      height: 100px;
+      width: 100px;
+      background: #fff;
+      border: 2px solid #004977;
+      border-radius: 10px;
+    }
+    .field-upload-imgs .btn-add-img {
+      display: inline-block;
+      position: relative;
+    }
+    .field-upload-imgs .btn-add-img input{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      padding: 14px 0;
+      cursor: pointer;
+      z-index: 2;
+    }
+    .field-upload-imgs .btn-add-img .icon-add {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+    .field-upload-imgs .btn-add-img .icon-add i {
+      font-size: 40px;
+      color: #004977;
+    }
+    .field-upload-imgs .btn-add-img .thumb-temp {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .field-upload-imgs .btn-add-img .thumb-temp i {
+      font-size: 50px;
+      color: #004977;
+    }
+
+    .field-upload-imgs .pip {
+      position: relative;
+      display: inline-block;
+      width: 177px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #004977;
+    }
+    .field-upload-imgs .pip .box-thumb {
+      cursor: pointer;
+    }
+    .field-upload-imgs .pip .box-thumb .imageThumb {
+      width: 175px;
+      height: 100px;
+    }
+    .field-upload-imgs .pip .remove {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      display: block;
+      height: 20px;
+      background: #fff;
+      text-align: center;
+      cursor: pointer;
+    }
+    .field-upload-imgs .pip .remove i {
+      font-size: 20px;
+      color: #004977;
+      background: #fff;
+      padding: 0 2px;
+    }
+    .field-upload-imgs .pip .remove:hover i {
+      background: #004977;
+      color: #fff;
+    }
+    .field-upload-imgs .pip .box-desc input {
+      width: 100%;
+      padding: 5px 3px;
+      border: 0;
+      border-top: 1px solid #004977;
+    }
+  </style>
+    
+</head>
+
+<body>
+    <div class="field-upload-imgs" align="left">
+      <div class="box-sortable" id="sortable">
+        <div id="temp-pip"></div>
+      </div>
+      <div class="btn-add-img" id="files">
+        <input type="file" name="files[]" multiple />
+        <span class="icon-add"><i class="fa fa-plus"></i></span>
+        <span class="thumb-temp"><i class="fa fa-picture-o"></i></span>
+      </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $(document).ready(function() {
+        var countItem = 0;
+        if (window.File && window.FileList && window.FileReader) {
+            $(".field-upload-imgs").on("change", function(e) {
+              var files = e.target.files,
+                filesLength = files.length;
+              for (var i = 0; i < filesLength; i++) {
+                var f = files[i]
+                var fileReader = new FileReader();
+                fileReader.onload = (function(e) {
+                  var file = e.target;
+                  $("<div class=\"pip\">" +
+                    "<div class=\"box-thumb\">" +
+                    "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
+                    "</div>" +
+                    "<span class=\"remove\"><i class=\"fa fa fa-times\"></i></span>"  +
+                    "<div class=\"box-desc\"><input type=\"text\" value=\"\" placeholder=\"Enter description\"></div>"
+                    + "</div>"
+                    ).insertBefore("#temp-pip");
+
+                  countItem += 1;
+                  console.log("item = " + countItem);
+
+                  $(".remove").click(function(){
+                    $(this).parent(".pip").remove();
+                  });
+                  
+                  // Old code here
+                  /*$("<img></img>", {
+                    class: "imageThumb",
+                    src: e.target.result,
+                    title: file.name + " | Click to remove"
+                  }).insertAfter("#files").click(function(){$(this).remove();});*/
+                  
+                });
+                fileReader.readAsDataURL(f);
+              }
+            });
+          } else {
+            alert("Your browser doesn't support to File API")
+          }
+      });
+
+      $(function() {
+        $( "#sortable" ).sortable();
+        $( "#sortable" ).disableSelection();
+      });
+    </script>
+</body>
+</html>

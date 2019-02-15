@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="">
+	<style>
+		.select-style {
+		    padding: 0;
+		    margin: 0;
+		    border: 1px solid #ccc;
+		    width: 120px;
+		    border-radius: 3px;
+		    overflow: hidden;
+		    background-color: #fff;
+
+		    background: #fff url("https://image.flaticon.com/icons/svg/118/118738.svg") no-repeat 90% 50%;
+		  background-size: 10px
+		}
+
+		.select-style select {
+		    padding: 5px 8px;
+		    width: 130%;
+		    border: none;
+		    box-shadow: none;
+		    background-color: transparent;
+		    background-image: none;
+		    -webkit-appearance: none;
+		       -moz-appearance: none;
+		            appearance: none;
+		}
+
+		.select-style select:focus {
+		    outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!-- <p id='result'></p> -->
+		<form id="form1" runat="server">
+		<div>
+		<p>UserName: <span id="spn_UserName"></span></p>
+		<p>UserId: <span id="spn_UserId"></span></p>
+		</div>
+		</form>
+	</div>
+
+	<script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		// var pathname = window.location.pathname; // Returns path only (/path/example.html)
+		// var url      = window.location.href;     // Returns full URL (https://example.com/path/example.html)
+		// var origin   = window.location.origin;   // Returns base URL (https://example.com)
+
+		// var url = url, result = {}, expr = RegExp(/[#&]([a-zA-z]+)(\d+)/g);
+		// var parts = expr.exec(url);
+		// while(parts != null && parts.length == 3) {
+		//   result[parts[1]] = parts[2];
+		//   parts = expr.exec(url);
+		// }
+		// var look = result['look']
+		// ,   product = result['product'];
+		// document.getElementById('result').innerHTML = 'look = ' + look + '<br>' + 'product = ' + product;
+	</script>
+	
+	<script type="text/javascript">
+		$(function () {
+		var name = GetParameterValues('username');
+		var id = GetParameterValues('userid');
+		$('#spn_UserName').html('<strong>' + name + '</strong>');
+		$('#spn_UserId').html('<strong>' + id + '</strong>');
+		});
+		function GetParameterValues(param) {
+		var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+		for (var i = 0; i < url.length; i++) {
+		var urlparam = url[i].split('=');
+		if (urlparam[0] == param) {
+		return urlparam[1];
+		}
+		}
+		}
+	</script>
+
+</body>
+</html>

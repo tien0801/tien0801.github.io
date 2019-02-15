@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Slider-OwlCarousel-2-simple</title>
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+	<div class="home-slider owl-carousel owl-theme">
+        <div class="item">
+            <a class="item-slider" href="#">
+               <iframe id="ytplayer" type="text/html" width="720" height="405"
+src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1"
+frameborder="0" allowfullscreen>
+               <!-- <a class="owl-video" href="https://vimeo.com/23924346"></a> -->
+            </a>
+        </div>
+        <div class="item">
+            <a class="item-slider" href="#">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/AmvA-XJF0j8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </a>
+        </div>
+        <div class="item">
+            <a class="item-slider" href="#">
+               <img src="https://dummyimage.com/1920x400/0d00ff/ff0000" alt="">
+            </a>
+        </div>
+        <div class="item">
+            <a class="item-slider" href="#">
+               <img src="https://dummyimage.com/1920x400/0d00ff/fff" alt="">
+            </a>
+        </div>
+        <div class="item">
+            <a class="item-slider" href="#">
+               <img src="https://dummyimage.com/1920x400/0d00ff/ff0000" alt="">
+            </a>
+        </div>
+        <div class="item">
+            <a class="item-slider" href="#">
+               <img src="https://dummyimage.com/1920x400/0d00ff/fff" alt="">
+            </a>
+        </div>
+    </div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script src="js/owl.carousel.min.js"></script>
+    <!-- Home Slider -->
+    <script>
+        $('.home-slider').owlCarousel({
+            loop: true,
+            // autoplay: true,
+            // autoplayTimeout: 4000,
+            margin: 0,
+            responsiveClass:true,
+            items: 1,
+            dots: true,
+            navText : ["",""],
+            rewindNav : true,
+            nav: true,
+            responsive : {
+			    // breakpoint from 0 up
+			    0 : {
+			       items: 1,
+			    },
+			    480 : {
+			        items: 1,
+			    },
+			    768 : {
+			        items: 2,
+			    },
+			    1200 : {
+			        items: 1,
+			    }
+			}
+        })
+
+        // setTimeout(function(){
+        //    $('.item-slider iframe').
+
+        // }, 3000);
+        /*var frame = jQuery('.item-slider iframe');
+        var src = frame.attr('src');
+        console.log(src);
+        console.log(frame);
+
+        setTimeout(function(){ 
+            frame.attr('src', src+'?autoplay=1');
+            // $('#ifrm').attr('src', "http://www.google.com")
+        }, 500);*/
+        
+    </script>
+</body>
+</html>

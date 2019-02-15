@@ -1,0 +1,187 @@
+body{
+    font-family: 'Muli', sans-serif;
+}
+.callback-popup .modal-header .close {
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    opacity: 1;
+    line-height: 15px;
+    outline: none;
+    box-shadow: none;
+}
+.callback-popup .modal-header .close img {
+    width: 20px;
+}
+.callback-popup .modal-content {
+    background-color: #252525;
+    color: #fff;
+    border-radius: 0;
+}
+.callback-popup .modal-body {
+    position: relative;
+    padding: 30px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 50px;
+}
+.callback-popup .modal-header {
+    border-bottom: none;
+}
+.callback-popup h3 {
+    font-size: 30px;
+    margin: 0 0 15px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+.callback-popup .modal-body .title {
+    margin-bottom: 20px;
+}
+.callback-popup .modal-body .title p {
+    font-size: 25px;
+}
+.callback-popup .modal-body strong {
+    font-weight: 600;
+}
+.callback-popup .modal-body .first-section {
+    margin-bottom: 20px;
+}
+.callback-popup .modal-body p {
+    font-weight: 300;
+    margin-bottom: 2px;
+}
+.callback-popup .modal-body .title .c-blue {
+    color: #137cc0;
+}
+.callback-popup .modal-body .seconds-section {
+    margin-bottom: 25px;
+}
+.callback-popup .modal-body .button-section input {
+    height: 50px;
+    text-align: center;
+    padding: 3px 5px;
+    color: #333;
+    border: 1px solid #137cc0;
+    width: 270px;
+    max-width: 100%;
+    margin-top: 5px;
+}
+.callback-popup .modal-body .button-section button {
+    background-color: #137cc0;
+    color: #fff;
+    border: 1px solid #137cc0;
+    padding: 10px 15px;
+    height: 50px;
+    margin-top: 15px;
+}
+.callback-popup .modal-body {
+    font-size: 20px;
+    line-height: 28.6px;
+}
+.callback-popup .modal-body a{
+  color: #fff;
+  text-decoration: none;
+  outline: none;
+}
+.section-cta{
+    background-color: #137cc0;
+    color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.section-cta p:last-child{
+    margin-bottom: 0;
+}
+.section-cta-title{
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-top: 0;
+    line-height: 1.4;
+}
+.section-cta .main-btn{
+    border-radius: 0;
+    background-color: #fff;
+    padding: 8px 16px;
+    transition: .3s;
+    display: inline-block;
+}
+.section-cta .main-btn:hover,
+.section-cta .main-btn:focus{
+    text-decoration: none;
+    background-color: 
+}
+.section-cta .main-btn .fa{
+    font-size: 16px;
+    margin-right: 5px;
+}
+.section-cta .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section-cta .content .left{
+    flex: 0 0 70%;
+}
+.section-cta .content .right{
+    flex: 0 0 30%;
+}
+@media only screen and (min-width : 768px){
+    .section-cta .right{
+        text-align: right;
+        margin-top: 0;
+    }
+    .callback-popup{
+        text-align: center;
+        padding: 0!important;
+    }
+    .callback-popup:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+    .callback-popup .modal-dialog {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+@media only screen and (max-width : 767px){
+    .callback-popup .modal-header .close{
+        top: -6px;
+        right: -6px;
+    }
+    .callback-popup .modal-body {
+        position: relative;
+        padding: 30px;
+        padding-left: 75px;
+        padding-right: 75px;
+        padding-bottom: 50px;
+    }
+    .section-cta .content{
+        display: block;
+    }
+    .section-cta .content .left{
+        flex: unset;
+        margin-bottom: 20px;
+    }
+    .section-cta .content .right{
+        flex: unset;
+    }
+}
+@media only screen and (max-width : 480px){
+    .callback-popup .modal-body {
+      font-size: 16px;
+    }
+    .callback-popup .modal-body {
+        position: relative;
+        padding: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 50px;
+    }
+}

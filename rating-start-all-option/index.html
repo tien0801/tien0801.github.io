@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/star-rating.min.css">
+	<style>
+		.rating.without-caption .clear-rating, .rating.without-caption .caption {
+		    display: none;
+		}
+		.rating.without-caption .empty-stars, .rating.without-caption .filled-stars {
+		    color: #e80c70;
+		    text-shadow: none;
+		    -webkit-text-stroke: inherit;
+		}
+		.rating.without-caption .rating-stars, .rating.without-caption .rating-container {
+		    cursor: auto;
+		    font-size: 10px;
+		}
+		.rating-container .star {
+		    display: inline-block;
+		    margin: 0 3px;
+		    text-align: center;
+		}
+		.rating-container .star i {
+		    font-size: 20px;
+		}
+
+	</style>
+	
+</head>
+<body>
+	<br>
+	<div class="container">
+		<h3>Rating Start </h3>
+		<div class="rating without-caption">
+			<!-- <div class="kv-fa"></div> -->
+			<input type="text" class="kv-fa rating-loading" value="4" title="" readonly="readonly">
+		</div>
+
+		<div class="rating without-caption">
+			<input type="text" class="kv-fa rating-loading" value="2" title="" readonly="readonly">
+		</div>
+		
+		<h3>Drag and slide across for changing ratings for better effects on touch input devices.</h3>
+		<p>>> View console</p>
+		<div class="rating without-caption">
+			<input id="input-2" name="input-2" class="kv-fa rating rating-loading" data-min="0" data-max="5" data-step="0.5">
+		</div>
+
+	</div>
+
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+	<script src="js/star-rating.min.js"></script>
+	<script>
+		// rating star
+		$('.kv-fa').on('change', function () {
+	        console.log('Rating selected: ' + $(this).val());
+	    });
+
+	    if ($('.kv-fa').length > 0) {
+	    	$('.kv-fa').rating({
+		        theme: 'krajee-fa',
+		        filledStar: '<i class="fa fa-star"></i>',
+		        emptyStar: '<i class="fa fa-star-o"></i>',
+		        // clearCaption: '<b>0</b> Trên 5',
+			    // starCaptions:{
+			    //     0.5: '<b>0.5</b> Trên 5',
+			    //     1: '<b>1</b> Trên 5',
+			    //     1.5: '<b>1.5</b> Trên 5',
+			    //     2: '<b>2</b> Trên 5',
+			    //     2.5: '<b>2.5</b> Trên 5',
+			    //     3: '<b>3</b> Trên 5',
+			    //     3.5: '<b>3.5</b> Trên 5',
+			    //     4: '<b>4</b> Trên 5',
+			    //     4.5: '<b>4.5</b> Trên 5',
+			    //     5: '<b>5</b> Trên 5'
+			    // }
+		    });
+	    }
+	</script>
+</body>
+</html>

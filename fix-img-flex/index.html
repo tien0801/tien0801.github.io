@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/fix-img.css">
+	<style>
+		.box-img {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			background: #f9f9f9;
+		}
+		.box-img img {
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+		.blog-temp .box-img {
+			height: 400px;
+		}
+	</style>
+</head>
+<body>
+	   
+	<div class="container"">
+ 		<div class="col-md-6">
+			<pre>
+			.blog-temp .blog-img a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+			}
+
+			.blog-temp .blog-img a img {
+				width: auto;
+				height: auto;
+				max-width: 100%;
+				max-height: 100%;
+			}
+			</pre>
+		</div>
+		<div class="col-md-6">
+			<pre>
+			@media (min-width: 1200px) {
+				.blog-temp .blog-img a {
+					height: 360px;
+				}
+			}
+			@media (max-width: 1199px) {
+				.blog-temp .blog-img a {
+					height: 293px;
+				}
+			}
+			@media (max-width: 1199px) {
+				.blog-temp .blog-img a {
+					height: 460px;
+				}
+			}
+			</pre>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="col-md-4 blog-temp">
+			<a href="#" class="box-img">
+				<img src="https://www.visitcalifornia.com/sites/default/files/styles/welcome_image/public/VCW_D_Bigsur_T2_CC_BigSurBeach_Miller-1280x642.jpg" alt="">
+			</a>
+		</div>
+		<div class="col-md-4 blog-temp">
+			<a href="#" class="box-img">
+				<img src="https://peach.blender.org/wp-content/uploads/poster_bunny_big.jpg?x11217" alt="">
+			</a>
+		</div>
+		<div class="col-md-4 blog-temp">
+			<a href="#" class="box-img">
+				<img src="https://www.visitcalifornia.com/sites/default/files/styles/welcome_image/public/VCW_D_Bigsur_T2_CC_BigSurBeach_Miller-1280x642.jpg" alt="">
+			</a>
+		</div>
+	</div>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

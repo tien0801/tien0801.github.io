@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  	<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="cta/css/style.css">
+</head>
+<body>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  	<a href="tel:0901.461.407" class="visible-xs phone-ring">
+        <div class="laziweb-alo-phone">
+          <div class="animated infinite zoomIn laziweb-alo-ph-circle"></div>
+          <div class="animated infinite pulse laziweb-alo-ph-circle-fill"></div>
+          <div class="animated infinite tada laziweb-alo-ph-img-circle"></div>
+        </div>
+    </a>
+    <div class="hidden-xs quickcontact phone-ring">
+        <a onclick="jQuery('#callback_form input[name=title]').val('Yêu cầu liên hệ lại');jQuery('#callback_form input[name=form]').val('request_consulting');" data-toggle="modal" href='#callback_popup'>
+            <div class="laziweb-alo-phone">
+                <div class="animated infinite zoomIn laziweb-alo-ph-circle"></div>
+                <div class="animated infinite pulse laziweb-alo-ph-circle-fill"></div>
+                <div class="animated infinite tada laziweb-alo-ph-img-circle"></div>
+            </div>
+        </a>
+    </div>
+    <div class="modal fade callback-popup" id="callback_popup">
+        <div class="modal-dialog modal-lg text-center">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><img src="cta/images/p-close.png"></button>
+                </div>
+                <form method="post" id="callback_form" autocomplete="off" action-submit="contact/actionCallback">
+                    <input type="hidden" name="form" value="callback">
+                    <input type="hidden" name="title" value="Yêu cầu liên hệ lại">
+                    <input type="hidden" name="content" value="Yêu cầu liên hệ lại trong 5 phút">
+                    <div class="modal-body">
+                        <div class="title">
+                            <p class="sesion"><strong><span class="c-blue">Trò chuyện</span> cùng Laziweb</strong></p>
+                        </div>
+                        <div class="first-section">
+                            <p><strong>Email:</strong> <a href="mailto:laziweb@gmail.com">laziweb@gmail.com</a></p>
+                            <p><strong>Phone:</strong> <a href="tel:0903.915.877">0903.915.877</a></p>
+                        </div>
+                        <div class="seconds-section">
+                            <p>Hoặc để lại số điện thoại!</p>
+                            <p>
+                                <strong>Laziweb</strong> sẽ liên lạc với bạn
+                                <strong>SAU 5 PHÚT</strong>
+                            </p>
+                        </div>
+                        <div class="button-section">
+                            <input type="text" name="phone" placeholder="Nhập số điện thoại">
+                            <button type="submit">Click để được gọi lại</button>
+                        </div>
+                    </div>
+                    <div id="callback_success" class="alert alert-success hidden"></div>
+                    <div id="callback_fail" class="alert alert-danger hidden"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- //ver2 -->
+    <div class="hot-line-wrap">
+        <p class="hidden-xs">
+            <span class="icon_phone animated infinite tada"></span> 
+            <strong>098 765 4321</strong>
+        </p>
+        <p class="visible-xs">
+            <span class="icon_phone animated infinite tada"></span> 
+            <a href="tel:098 765 4321">
+                <strong>098 765 4321</strong>
+            </a>
+        </p>
+    </div>
+</body>
+</html>

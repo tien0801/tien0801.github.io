@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Language" content="en">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="">
+	<style>
+		#navbar.nav-bluebeacon #nav-search .nav-search-scope {
+    background-color: #f3f3f3;
+    background-image: none;
+    border-left: 1px solid #f3f3f3;
+    border-top: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
+}
+#nav-search .nav-search-scope {
+    position: relative;
+    float: left;
+    height: 35px;
+    margin: 0;
+    padding-left: 5px;
+    overflow: hidden;
+    border: 1px solid #cdcdcd;
+    border-top-color: #bdbdbd;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    border-radius: 0\9;
+    background-position: 0 -532px;
+}
+#navbar.nav-bluebeacon #nav-search .nav-search-facade {
+    top: 1px;
+}
+#nav-search .nav-search-facade {
+    position: relative;
+    float: left;
+    cursor: default;
+    overflow: hidden;
+}
+#nav-search .nav-search-facade .nav-search-label {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #666;
+    font-size: 12px;
+    line-height: 33px;
+    margin-right: 21px;
+    margin-left: 5px;
+}
+#nav-search .nav-search-facade .nav-icon {
+    position: absolute;
+    top: 14px;
+    right: 8px;
+    border-style: solid;
+    _border-style: dashed;
+    border-width: 4px;
+    border-color: transparent;
+    border-top: 4px solid #666;
+    border-bottom-width: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+#nav-search .nav-search-dropdown {
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: 0;
+    height: 35px;
+    width: auto;
+    font-family: arial,sans-serif;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    visibility: visible;
+    border: 0;
+    line-height: 35px;
+}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="" id="nav-search">
+			<div class='nav-search-scope nav-sprite'>
+			    <div class="nav-search-facade" data-value="search-alias=aps">
+			        <span class="nav-search-label">All</span>
+			        <i class="nav-icon"></i>
+			    </div>
+
+			    <span id='searchDropdownDescription' style='display:none'>Select the department you want to search in</span>
+
+			    <select aria-describedby='searchDropdownDescription' class='nav-search-dropdown searchSelect' data-nav-digest='kMbNLE0R7aqVrpllQXRf8Hb8e+Y' data-nav-selected='0' id='searchDropdownBox' name='url' style='display:block' tabindex='18' title='Search in'>
+			        <option selected='selected' value='A' >All Departments</option>
+			        <option value='All '>All Departments</option>
+			        <option value='Amazon '>Amazon Devices</option>
+			        <option value='Amazon  '>Amazon Warehouse dfsgfsg</option>
+			       
+			    </select>
+
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script>
+		$( ".searchSelect" ).change(function() {
+			// var singleValues = $( ".searchSelect" ).val();
+			var singleValues = $( ".searchSelect option:selected" ).text();
+			console.log(singleValues);
+			console.log("change");
+			$( ".nav-search-label" ).html( singleValues );
+		});
+
+	</script>
+
+</body>
+</html>

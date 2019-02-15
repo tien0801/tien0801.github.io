@@ -1,0 +1,274 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Firemaks - example!</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/ui-darkness/jquery-ui.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script src="js/firemaks.js" type="text/javascript"></script>
+
+<style type="text/css">
+body, html { height: 100%; width: 100%; margin: 0; padding: 0; font-family: Verdana; font-size: 90%; 
+	color: #f5f5f5;
+	background-image: url(images/debut_dark.png);
+	}
+	
+.prettyprint {
+	padding: 5px ! important;
+	background-color: rgb(40,40,40);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	}
+	
+span.cpt {
+	margin: 0; 
+	padding: 0;
+
+	text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.3);
+	text-decoration: underline
+	}
+</style>
+<script type="text/javascript">
+var cx = 0,cy = 0;
+	
+var color1 = new Array( new Array({r:241,g:0,b:0},  {r:255,g:72,b:72},  {r:239,g:107,b:107},  {r:255,g:191,b:191},  {r:255,g:255,b:255}),
+new Array({r:12,g:152,b:228},  {r:81,g:188,b:246},  {r:100,g:195,b:247},  {r:195,g:232,b:252},  {r:255,g:255,b:255}),
+new Array({r:202,g:228,b:12},  {r:226,g:246,b:81},  {r:229,g:247,b:100},  {r:245,g:252,b:195},  {r:255,g:255,b:255}) );
+var color2 = new Array( new Array({r:255,g:0,b:0}, {r:228,g:225,b:0}, {r:169,g:0,b:231}, {r:255,g:0,b:148}, {r:255,g:255,b:255}),
+new Array({r:0,g:153,b:231}, {r:194,g:0,b:231}, {r:255,g:118,b:0}, {r:141,g:227,b:0}, {r:255,g:255,b:255}), 
+new Array({r:255,g:251,b:125}, {r:0,g:206,b:223}, {r:247,g:154,b:255}, {r:255,g:165,b:106}, {r:255,g:255,b:255}) );
+var color3 = new Array( new Array({r:0,g:94,b:226}, {r:255,g:255,b:255}),
+new Array({r:231,g:234,b:0}, {r:255,g:255,b:255}), 
+new Array({r:255,g:109,b:0}, {r:255,g:255,b:255}) );
+var color4 = new Array(
+	new Array({r:255,g:0,b:0}),
+	new Array({r:0,g:94,b:226}),
+	new Array({r:214,g:214,b:214}),
+	new Array({r:0,g:168,b:0}),
+	new Array({r:231,g:234,b:0}),
+	new Array({r:255,g:118,b:0}),
+	new Array({r:0,g:205,b:255}),
+	new Array({r:182,g:255,b:125}),
+	new Array({r:255,g:0,b:123})	
+	);
+	
+
+jQuery(document).ready(function(){
+    //	
+	// $('.box-fireworks').firemaks({
+	// 	color: 'random',
+	// 	type: 'random',
+	// 	color_child: 'inherit',
+	// 	type_child: 'random',
+	// 	boom_count: 3
+	// 	});
+
+	$('.box-fireworks').firemaks({
+		color: 1,
+		type: 3,
+		color_child: 'inherit',
+		type_child: 'inherit',
+		boom_count: 8
+	});
+	
+	
+	$(document).mousemove(function(e){ cx = e.pageX; cy = e.pageY; });	
+	$('.box-fireworks').on('click',function(){ $('.box-fireworks').firemaks('fire',cx,cy,40,color1/*'full_random'*/,2,1.5); });
+	
+	$('#colorset').buttonset();
+	$('#colorset input').on('click', function(){ setcolors ($(this).val());  });
+	function setcolors(val) {
+        switch (val){
+            case '0': 
+				$('.box-fireworks').firemaks('setcolors', color1);
+				$('#colorsetdesc').html('<img src="images/fw_colorset_1.png"> <br/> * each row - one firework.');
+				$('#descclrset').show();
+				break;
+            case '1': 
+				$('.box-fireworks').firemaks('setcolors', color2);
+				$('#colorsetdesc').html('<img src="images/fw_colorset_2.png"> <br/> * each row - one firework.');
+				$('#descclrset').show();
+				break;
+            case '2': 
+				$('.box-fireworks').firemaks('setcolors', color3); 
+				$('#colorsetdesc').html('<img src="images/fw_colorset_3.png"> <br/> * each row - one firework.');
+				$('#descclrset').show();				
+				break;
+            case '3': 
+				$('.box-fireworks').firemaks('setcolors', color4);
+				$('#colorsetdesc').html('<img src="images/fw_colorset_4.png"> <br/> * each <b>color</b> - <b>one firework</b>.');
+				$('#descclrset').show();
+				break;
+			case '4': 
+				$('.box-fireworks').firemaks('setcolors', 'random');
+				$('#descclrset').hide();
+				break;
+			case '5': 
+				$('.box-fireworks').firemaks('setcolors', 'full_random');
+				$('#descclrset').hide();
+				break;
+            default: 
+				$('.box-fireworks').firemaks('setcolors', color1); 
+				$('#colorsetdesc').html('<img src="images/fw_colorset_1.png"> <br/> * each row - one firework.');
+				$('#descclrset').show(); 
+				break;
+			}
+        }
+	setcolors($(':radio[name=colorset]').filter(':checked').val());
+	
+	
+	//	
+	$('#typeset').buttonset();
+	$('#typeset input').on('click', function(){ settype ($(this).val(), $(':radio[name=typeset_child]').filter(':checked').val()); });
+	$('#typeset_child').buttonset();
+	$('#typeset_child input').on('click', function(){ settype ($(':radio[name=typeset]').filter(':checked').val(), $(this).val()); });
+	
+	function settype(val, val2) {
+        var vl1 = null, vl2 = null;
+		switch (val){
+            case '0': vl1 = 'random'; break;
+            case '1': vl1 = 1; break;
+            case '2': vl1 = 2; break;
+            case '3': vl1 = 3; break;
+            default: vl1 = 'random'; break;
+			}		
+		switch (val2){
+            case '0': vl2 = 'random'; break;
+            case '1': vl2 = 1; break;
+            case '2': vl2 = 2; break;
+            case '3': vl2 = 3; break;
+			case '4': vl2 = 'inherit'; break;
+            default: vl2 = 'random'; break;
+			}
+		$('.box-fireworks').firemaks('settypes', vl1, vl2);			
+        }
+		
+	settype($(':radio[name=typeset]').filter(':checked').val(), $(':radio[name=typeset_child]').filter(':checked').val());
+	
+	$('#sound').buttonset();
+	$('#sound input').on('click', function(){ setsound ($(this).val(), $(':radio[name=sound]').filter(':checked').val()); });	
+	function setsound(val) {
+		switch (val){
+            case '0': $('.box-fireworks').firemaks('setsounds'); break;
+            case '1': $('.box-fireworks').firemaks('setsounds', 'sfx/boom.wav', 'sfx/crackles.wav'); break;
+            default: 
+				$('.box-fireworks').firemaks('setsounds');				
+				break;
+			}
+		}
+	setsound($(':radio[name=sound]').filter(':checked').val());
+});
+</script>
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+<tr align="center"><td valign="middle" height="100%">
+
+<table cellpadding="10" cellspacing="0">
+<tr align="left" valign="top" ><td>
+<span style="font-size: 16pt">
+<b>
+<span class="cpt" style="color: #FF4B4B">F</span><span class="cpt" style="color: #CEFF45">i</span><span class="cpt" style="color: #86D3FF">r</span><span class="cpt" style="color: #0FFF5B">e</span><span class="cpt" style="color: #F0A400">m</span><span class="cpt" style="color: #48D1CC">a</span><span class="cpt" style="color: #FFCC00">k</span><span class="cpt" style="color: #CC3399">s</span>
+</b>
+</span><br /><br />
+Wonderful effect fireworks on your site. <br/>
+Easy to install. Small. Works great in all modern browsers (IE 11+).<br/>
+Festive mood for your website with this plugin easy to make!
+</td></tr>
+<tr><td>
+
+	<div>
+	<b>Set colors:</b>:<br/>
+	<div id="colorset" style="margin-top: 10px">
+		<input type="radio" id="colorset5" name="colorset" value="4"/> <label for="colorset5">Random</label>
+		<input type="radio" id="colorset6" name="colorset" value="5"/> <label for="colorset6">Full random</label>
+		<input type="radio" id="colorset1" name="colorset" value="0"/> <label for="colorset1">Color Set 1</label>
+		<input type="radio" id="colorset2" name="colorset" value="1"/> <label for="colorset2">Color Set 2</label>
+		<input type="radio" id="colorset3" name="colorset" value="2" checked="checked"/> <label for="colorset3">Color Set 3</label>
+		<input type="radio" id="colorset4" name="colorset" value="3"/> <label for="colorset4">Color Set 4</label>		
+	</div>
+	</div>
+	
+	<div id="descclrset" style="margin-top: 10px">
+	<b>Description for colorset</b>:<br/>
+	<div id="colorsetdesc" style="margin-top: 10px">		
+	</div>
+	</div>
+
+</td></tr>
+
+<tr><td>
+
+	<div>
+	<b>Set type</b>:<br/>
+	<div id="typeset" style="margin-top: 10px;">
+		<input type="radio" id="typeset1" name="typeset" value="0" checked="checked" /> <label for="typeset1">Random</label>
+		<input type="radio" id="typeset2" name="typeset" value="1" /> <label for="typeset2">Dot</label>
+		<input type="radio" id="typeset3" name="typeset" value="2" /> <label for="typeset3">Trace</label>
+		<input type="radio" id="typeset4" name="typeset" value="3" /> <label for="typeset4">Flashing</label>
+	</div>
+	</div>
+	
+	<div style="margin-top: 10px;">
+	<b>Set type child</b>:<br/>
+	<div id="typeset_child" style="margin-top: 10px;">
+		<input type="radio" id="typeset_child1" name="typeset_child" value="0" /> <label for="typeset_child1">Random</label>
+		<input type="radio" id="typeset_child2" name="typeset_child" value="1" /> <label for="typeset_child2">Dot</label>
+		<input type="radio" id="typeset_child3" name="typeset_child" value="2" /> <label for="typeset_child3">Trace</label>
+		<input type="radio" id="typeset_child4" name="typeset_child" value="3" /> <label for="typeset_child4">Flashing</label>
+		<input type="radio" id="typeset_child5" name="typeset_child" value="4" checked="checked" /> <label for="typeset_child5">Inherit</label>
+	</div>
+	</div>
+
+</td></tr>
+
+<tr><td>
+
+	<div>
+	<b>Sound</b>:<br/>
+	<div id="sound" style="margin-top: 10px;">
+		<input type="radio" id="sound1" name="sound" value="0" checked="checked" /> <label for="sound1">Off</label>
+		<input type="radio" id="sound2" name="sound" value="1" /> <label for="sound2">On</label>
+	</div>
+	<span style="color: red; font-size: 70%;">* sound files are not included.</span>
+	</div>
+
+</td></tr>
+
+<tr><td>
+Copyright &copy; by Yury Vasilyev (aka iamMakep) 2014
+</td>
+</tr>
+</table>
+
+</td></tr>
+</table>
+
+
+
+<div class="box-fireworks" style=""></div>
+
+<style>
+	.box-fireworks {
+		width: 800px; 
+		height: 500px;
+		background: #000;
+		position: relative;
+	}
+	.box-fireworks canvas {
+		position: absolute !important;
+		top: 0;
+		left: 0;
+		right: 0;
+		/* width: 800px;  */
+		height: 500px;
+	}
+</style>
+
+
+</body>
+</html>

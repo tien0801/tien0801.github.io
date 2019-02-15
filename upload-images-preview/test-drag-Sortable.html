@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+ 
+<style>
+#div1 {width:350px;height:70px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+ 
+
+</head>
+<body>
+
+<div id="alles">
+<div class="dropzones" id="zone1"><div class="dragzones" id="drag1">Item 1</div></div>
+<div class="dropzones" id="zone2"><div class="dragzones" id="drag2">Item 2</div></div>
+<div class="dropzones" id="zone3"><div class="dragzones" id="drag3">Item 3</div></div>
+<div class="dropzones" id="zone4"><div class="dragzones" id="drag4">Item 4</div></div>
+    <div class="dropzones" id="zone11"></div>
+    <div class="dropzones" id="zone12"></div>
+    <div class="dropzones" id="zone13"></div>
+    <div class="dropzones" id="zone14"></div>   
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$ (init);
+	function init() {
+	    $(".dragzones").draggable({
+	        start: handleDragStart,
+	        cursor: 'move',
+	        revert: "invalid",
+	    });
+	    $(".dropzones").droppable({
+	        drop: handleDropEvent,
+	        tolerance: "touch",              
+	    });
+	}
+	function handleDragStart (event, ui) {}       
+	function handleDropEvent (event, ui) {
+	    $(this).droppable('disable');
+	    ui.draggable.position({of: $(this), my: 'left top', at: 'left top'});
+	    ui.draggable.draggable('option', 'revert', "invalid");
+	}
+</script>
+ 
+</body>
+</html>

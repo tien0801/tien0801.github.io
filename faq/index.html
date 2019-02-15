@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FAQ page</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=vietnamese" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            padding-top: 50px;
+            font-family: 'Roboto', sans-serif;
+            max-width: 800px;
+            margin: auto;
+        }
+        .faq-section{
+            font-family: 
+        }
+        .faq-section .faq-item{
+            border: 1px solid #137cbf;
+            margin-bottom: 20px;
+        }
+        .faq-item .faq-title{
+            padding: 20px 40px 20px 10px;
+            background-color: #137cbf;
+            margin: 0;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            position: relative;
+        }
+        .faq-item .faq-title:after{
+            content: '+';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 20px;
+            font-size: 26px;
+            color: #fff;
+        }
+        .faq-item .faq-title.active:after{
+            content: '-';
+        }
+        .faq-item .faq-content{
+            padding: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="faq-section">
+        <div class="faq-item">
+            <h2 class="faq-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <div class="faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum id repellat labore illo pariatur suscipit provident debitis beatae sapiente quis doloribus ipsa accusamus, atque quidem omnis totam exercitationem cum fuga!</div>
+        </div>
+        <div class="faq-item">
+            <h2 class="faq-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <div class="faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum id repellat labore illo pariatur suscipit provident debitis beatae sapiente quis doloribus ipsa accusamus, atque quidem omnis totam exercitationem cum fuga!</div>
+        </div>
+        <div class="faq-item">
+            <h2 class="faq-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <div class="faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum id repellat labore illo pariatur suscipit provident debitis beatae sapiente quis doloribus ipsa accusamus, atque quidem omnis totam exercitationem cum fuga!</div>
+        </div>
+        <div class="faq-item">
+            <h2 class="faq-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <div class="faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum id repellat labore illo pariatur suscipit provident debitis beatae sapiente quis doloribus ipsa accusamus, atque quidem omnis totam exercitationem cum fuga!</div>
+        </div>
+        <div class="faq-item">
+            <h2 class="faq-title">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            <div class="faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum id repellat labore illo pariatur suscipit provident debitis beatae sapiente quis doloribus ipsa accusamus, atque quidem omnis totam exercitationem cum fuga!</div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $(".faq-item .faq-content").slideUp();
+            $(".faq-item .faq-title").on("click", function(){
+                if($(this).hasClass("active")){
+                    $(this).removeClass("active").next(".faq-content").slideUp();
+                }
+                else{
+                    $(".faq-item .faq-title").removeClass("active")
+                    $(".faq-item .faq-content").slideUp();
+                    $(this).toggleClass("active").next(".faq-content").slideToggle();
+                }
+            })
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Loadmore scroll</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+        #myScroll {
+            border: 1px solid #999;
+        }
+
+        p {
+            border: 1px solid #ccc;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .loading {
+            color: red;
+        }
+        .dynamic {
+            background-color:#ccc;
+            color:#000;
+        }
+        section{
+        	height: 400px; background: #000;
+        }
+        /* ------- CSS --------- */
+        .lz-btn-loadmore {
+        	display: none;
+        }
+    </style>
+    <script>
+    	var total_prod = 20;
+    	var number_show = 5;
+    	var total_page = total_prod/number_show;
+		var counter = 0;
+
+		console.log('total_page'+ total_page);
+        $(window).scroll(function () {
+            // if ($(window).scrollTop() == $(document).height() - $(window).height() && counter < 2) {
+        	if($(window).scrollTop() + $(window).height() - $('#myScroll').offset().top >= $('#myScroll').height() && counter < total_page) {
+                appendData();
+                console.log("Add data");
+            }
+         
+        });
+        function appendData() {
+            var html = '';
+            for (i = 0; i < number_show; i++) {
+                html += '<p class="dynamic">Dynamic Data :  This is test data.<br />Next line.</p>';
+            }
+            $('#myScroll').append(html);
+			counter++;
+			
+			if(counter==2) {
+				// $('#myScroll').append('<button id="uniqueButton" style="margin-left: 50%; background-color: powderblue;">Click</button><br /><br />');
+				console.log("2");
+			}
+
+        }
+    </script>
+</head>
+<body>
+	<div class="container">
+		<section><p style="font-size: 30px; color: #fff">Loadmore scroll</p></section>
+	    <div id="myScroll">
+	        <p >1This is test data.<br />Next line.</p>
+	        <p >2This is test data.<br />Next line.</p>
+	        <p >3This is test data.<br />Next line.</p>
+	        <p >4This is test data.<br />Next line.</p>
+	        <p >5This is test data.<br />Next line.</p>
+<!-- 	        <p >6This is test data.<br />Next line.</p>
+	        <p >7This is test data.<br />Next line.</p>
+	        <p >8This is test data.<br />Next line.</p>
+	        <p >9This is test data.<br />Next line.</p>
+	        <p >10This is test data.<br />Next line.</p>
+	        <p >11This is test data.<br />Next line.</p>
+	        <p >12This is test data.<br />Next line.</p>
+	        <p >13This is test data.<br />Next line.</p>
+	        <p >14This is test data.<br />Next line.</p>
+	        <p >15This is test data.<br />Next line.</p>
+	        <p >16This is test data.<br />Next line.</p>
+	        <p >17This is test data.<br />Next line.</p>
+	        <p >18This is test data.<br />Next line.</p>
+	        <p >19This is test data.<br />Next line.</p>
+	        <p >20This is test data.<br />Next line.</p>
+	        <p >21This is test data.<br />Next line.</p>
+	        <p >22This is test data.<br />Next line.</p> -->
+	    </div>
+        <a href="#" class="lz-btn-loadmore" >abc</a>
+	        
+		<section>
+			<p style="font-size: 30px; color: #fff">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus veniam autem nesciunt commodi illum ratione laudantium excepturi ullam tempora ut magnam earum incidunt, doloribus, et aliquid velit maiores neque porro!</p>
+		</section>
+
+	</div>
+
+	</div>
+</body>
+
+<script>
+	setInterval(function() {
+		// window.onscroll = function() {myFunction()};
+
+		// var navbar = $(".btn-loadmore");
+		// var sticky = navbar.offsetTop;
+
+		// function myFunction() {
+		//   if (window.pageYOffset >= sticky) {
+		//     console.log("true");
+		//   } else {
+		//     console.log("false");
+		//   }
+		// }
+
+		// var limit = $('.btn-loadmore').offset().top - $('#myScroll').outerHeight(true) - $('#myScroll').offset().top ;
+		console.log("counter:" + counter);
+
+		// var win = $(window).height();
+		// var btn=$('.btn-loadmore').offset().top;
+		// var pos=$('#myScroll').outerHeight(true);
+		// console.log("---------------");
+		// console.log("div:" + pos);
+		// console.log("btn: "+ btn);
+		// console.log("win: "+ win);
+	},500);
+	
+</script>
+
+</html>

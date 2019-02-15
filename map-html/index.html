@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h3 class="h1">Simple Map</h3>
+		<blockquote>
+		  	<pre>
+		    	<code>
+		    		API KEY: http://maps.googleapis.com/maps/api/js?key=AIzaSyDWPQYr1V5UeYfk2nMgrQLAgb87mEG7r30
+		    		var map;
+				    var myLatLng = {lat: 10.740987, lng: 106.697121};
+				    function initMap() {
+				        map = new google.maps.Map(document.getElementById('map_canvas'), {
+				        center: myLatLng,
+				        zoom: 16
+				        });
+				        var marker = new google.maps.Marker({
+				          position: myLatLng,
+				          map: map,
+				          animation: google.maps.Animation.BOUNCE,
+				          icon: 'images/map-marker.png'
+				        });
+				    }
+				    
+				    window.onload = function () {
+				        initMap();
+				    }
+
+		    	</code>
+		  	</pre>
+		</blockquote>
+		<script>
+		    // 10.740987, 106.697121
+		    var map;
+		    var myLatLng = {lat: 10.740987, lng: 106.697121};
+		    function initMap() {
+		        map = new google.maps.Map(document.getElementById('map_canvas'), {
+		        center: myLatLng,
+		        zoom: 16
+		        });
+		        var marker = new google.maps.Marker({
+		          position: myLatLng,
+		          map: map,
+		          animation: google.maps.Animation.BOUNCE,
+		          icon: 'images/map-marker.png'
+		        });
+		    }
+		    
+		    window.onload = function () {
+		        initMap();
+		    }
+		</script>
+		<div class="map-canvas" id="map_canvas" style="margin-top: 20px; height: 500px;"></div>
+	</div>
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDWPQYr1V5UeYfk2nMgrQLAgb87mEG7r30"></script>
+	
+</body>
+</html>

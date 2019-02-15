@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/png" href="http://laziweb.com/public/uploads/images/hinh-he-thong/favicon.PNG" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+	<title>Like share popup fb</title>
+	<!-- bootstrap css -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
+	<style>
+		hr{
+			color: #fff;
+			background: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="fb-root"></div>
+	<script>(function (d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.0';
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<!-- like share fb small standard -->
+				<h2>Like share fb small standard</h2>
+				<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like"
+				 data-size="small" data-show-faces="true" data-share="true"></div>
+				<hr>
+
+				<!-- like share fb small box_count -->
+				<h2>Like share fb small box_count</h2>
+				<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="box_count" data-action="like"
+				 data-size="small" data-show-faces="true" data-share="true"></div>
+				<hr>
+
+				<!-- like share fb small button_count -->
+				<h2>Like share fb small button_count</h2>
+				<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like"
+				 data-size="small" data-show-faces="true" data-share="true"></div>
+				<hr>
+
+				<!-- like share fb small button -->
+				<h2>Like share fb small button</h2>
+				<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-size="small"
+				 data-show-faces="true" data-share="true"></div>
+				<hr>
+			</div>
+			<div class="col-md-6">
+				<!-- fanpage fb -->
+				<h2>Fanpage chuẩn</h2>
+				<div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+				 data-hide-cover="false" data-show-facepile="true">
+					<blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
+						<a href="https://www.facebook.com/facebook">Facebook</a>
+					</blockquote>
+				</div>
+				<hr>
+
+				<!-- fanpage fb width small title -->
+				<h2>Fanpage với tiêu đề nhỏ</h2>
+				<div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true"
+				 data-hide-cover="false" data-show-facepile="true">
+					<blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
+						<a href="https://www.facebook.com/facebook">Facebook</a>
+					</blockquote>
+				</div>
+				<hr>
+				
+				<!-- fanpage fb no display friends face -->
+				<h2>Fanpage không hiển thị mặt bạn bè</h2>
+				<div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+				 data-hide-cover="false" data-show-facepile="false">
+					<blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore">
+						<a href="https://www.facebook.com/facebook">Facebook</a>
+					</blockquote>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="">
+	<style>
+		.select-style {
+		    padding: 0;
+		    margin: 0;
+		    border: 1px solid #ccc;
+		    width: 120px;
+		    border-radius: 3px;
+		    overflow: hidden;
+		    background-color: #fff;
+
+		    background: #fff url("https://image.flaticon.com/icons/svg/118/118738.svg") no-repeat 90% 50%;
+		  background-size: 10px
+		}
+
+		.select-style select {
+		    padding: 5px 8px;
+		    width: 130%;
+		    border: none;
+		    box-shadow: none;
+		    background-color: transparent;
+		    background-image: none;
+		    -webkit-appearance: none;
+		       -moz-appearance: none;
+		            appearance: none;
+		}
+
+		.select-style select:focus {
+		    outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<!-- <p id='result'></p> -->
+		<p>Query string :
+			<br>
+			Pages/Service.aspx?id=4&comment=1
+			<br>
+			I am new to jquery ,Kindly help me out with a simple solution to get the Id and COMMENT in "var id & var comment" on client side jquery
+		</p>
+	</div>
+
+	<script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script type="text/javascript">
+		// var pathname = window.location.pathname; // Returns path only (/path/example.html)
+		// var url      = window.location.href;     // Returns full URL (https://example.com/path/example.html)
+		// var origin   = window.location.origin;   // Returns base URL (https://example.com)
+
+		// var url = url, result = {}, expr = RegExp(/[#&]([a-zA-z]+)(\d+)/g);
+		// var parts = expr.exec(url);
+		// while(parts != null && parts.length == 3) {
+		//   result[parts[1]] = parts[2];
+		//   parts = expr.exec(url);
+		// }
+		// var look = result['look']
+		// ,   product = result['product'];
+		// document.getElementById('result').innerHTML = 'look = ' + look + '<br>' + 'product = ' + product;
+	</script>
+	
+	<script language="javascript" type="text/javascript">
+		var href = window.location.href;
+		var qrStr = window.location.search;
+		var spQrStr = qrStr.substring(1);
+		var arrQrStr = new Array();
+		var arr = spQrStr.split('&');
+
+		console.log("href:" + href);
+		console.log("qrStr:" + qrStr);
+		console.log("spQrStr:" + spQrStr);
+		console.log("arrQrStr:" + arrQrStr);
+		console.log("qrStr:" + qrStr);
+
+
+		for (var i=0;i<arr.length;i++){
+			var queryvalue = arr[i].split('=');
+			var  id=queryvalue[0];
+			var comment=queryvalue[1];
+
+			document.write("id: "+id+" comment: "+comment+"<br/>");
+			//document.write("id: "+id+" comment: "+comment+"<br/>");
+			if(comment ==1) {
+				console.log("True");
+			} else {
+				console.log("False");
+			}
+		}
+	</script>
+
+</body>
+</html>
