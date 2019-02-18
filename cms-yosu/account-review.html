@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<title>CMS Yosu</title>
+	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;amp;subset=vietnamese" media="all">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/star-rating.min.css">
+	<link rel="stylesheet" href="css/yosu.css">
+</head>
+<body>
+	<div class="yosu-page yosu-account-page yosu-bg-gray">
+        <div class="container">
+			<div class="row">
+	        	<div class="yosu-col-md-3 yosu-col-sm-12 yosu-col-xs-12">
+	        		<p class="y-title-account">Xin chào, Vũ Bá Tiến</p>
+	        		<div class="y-sildebar-account">
+        				<h5 class="y-title-slidebar">QUẢN LÍ TÀI KHOẢN</h5>
+	        			<ul class="y-list-ul">
+	        				<li><a href="account-dashboard.html" class="hover-color ">Quản lý chung</a></li>
+	        				<li><a href="account.html" class="hover-color active">Thông tin cá nhân</a></li>
+	        				<li><a href="account-address.html" class="hover-color">Quản lý sổ địa chỉ</a></li>
+	        				<li><a href="account-change-password.html" class="hover-color">Đổi mật khẩu</a></li>
+	        			</ul>
+        				<h5 class="y-title-slidebar">ĐƠN HÀNG CỦA TÔI</h5>
+	        			<ul class="y-list-ul">
+	        				<li><a href="account-order-incomplete.html" class="hover-color">Đơn hàng chưa hoàn tất</a></li>
+	        				<li><a href="account-order-complete.html" class="hover-color">Đơn hàng đã hoàn tất</a></li>
+	        				<li><a href="account-order.html" class="hover-color">Tất cả</a></li>
+	        			</ul>
+        				<h5 class="y-title-slidebar">Nhận xét của tôi</h5>
+	        			<ul class="y-list-ul">
+	        				<li><a href="account-review-list-1.html" class="hover-color">Sản phẩm chưa nhận xét</a></li>
+	        				<li><a href="account-review-list-2.html" class="hover-color">Sản phẩm đã nhận xét</a></li>
+	        				<li><a href="account-review-list.html" class="hover-color">Tất cả</a></li>
+	        			</ul>
+	        		</div>
+	        	</div>
+	        	<div class="yosu-col-md-9 yosu-col-sm-12 yosu-col-xs-12">
+		            	<div class="row">
+			                <h5 class="y-title-default yosu-color yosu-col-sm-12 yosu-col-xs-12">Viết đánh giá sản phẩm</h5>
+			            </div>
+		            <div class="y-review-content">
+			            <div class="p-20 m-no-padding y-bg-white">
+			            	<p class="review--content__ring">Đã mua ngày 9 thg 4 2018</p>
+			            	<p class="review--content__title">Nhận xét đánh giá sản phẩm đã mua</p>
+			            	
+			                <div class="row y-review-prod m-t10">
+								<div class="yosu-col-sm-2 yosu-col-xs-12">
+									<div class="y-box-img y-img-review m-b10">
+										<img src="http://cheapee.demo3.laziweb.com/uploads/1540809107_9.jpg" alt="">
+									</div>
+								</div>
+								<div class="yosu-col-lg-7 yosu-col-md-9 yosu-col-sm-10 yosu-col-xs-12 product__name">
+									<p class="y-name-prod-review">Tellus eget condimentum rhoncus tellus eget </p>
+									<div class="y-box-rating y-big-star">
+										<div class="rating without-caption">
+											<input id="input-2" name="input-2" class="kv-fa rating rating-loading" data-min="0" data-max="5" data-step="0.5">
+										</div>
+									</div>
+									<div class="box-review">
+										<div class="box-review__title">
+											<p class="">Đánh giá chi tiết (<a class="yosu-color y-howto-review" href="#">Cách viết một nhận xét tốt</a>)</p>
+										</div>
+										<div class="m-t10">
+											<textarea class="y-text-review y-full-width y-d-block m-b15 " name="" cols="20" rows="5"></textarea>
+										</div>
+										<div class="y-btn-submit-review">
+											<a href="javascript:;" class="y-btn-main y-full-width y-d-block"> <span>Gửi</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="clear-fix"></div>
+							</div>
+			            </div>
+			        </div>
+			    </div>
+	        </div>
+	    </div>
+
+	</div>
+
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	<script src="js/star-rating.min.js"></script>
+	<script>
+		// rating star
+		$('.kv-fa').on('change', function () {
+	        console.log('Rating selected: ' + $(this).val());
+	    });
+
+	    if ($('.kv-fa').length > 0) {
+	    	$('.kv-fa').rating({
+		        theme: 'krajee-fa',
+		        filledStar: '<i class="fa fa-star"></i>',
+		        emptyStar: '<i class="fa fa-star-o"></i>',
+		        // clearCaption: '<b>0</b> Trên 5',
+			    // starCaptions:{
+			    //     0.5: '<b>0.5</b> Trên 5',
+			    //     1: '<b>1</b> Trên 5',
+			    //     1.5: '<b>1.5</b> Trên 5',
+			    //     2: '<b>2</b> Trên 5',
+			    //     2.5: '<b>2.5</b> Trên 5',
+			    //     3: '<b>3</b> Trên 5',
+			    //     3.5: '<b>3.5</b> Trên 5',
+			    //     4: '<b>4</b> Trên 5',
+			    //     4.5: '<b>4.5</b> Trên 5',
+			    //     5: '<b>5</b> Trên 5'
+			    // }
+		    });
+	    }
+	</script>
+</body>
+</html>
