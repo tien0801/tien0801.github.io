@@ -1123,6 +1123,9 @@ a:hover, button:hover {
   font-weight: normal;
   margin-bottom: 10px;
 }
+.yosu-register-page .y-checkbox-subcribe input[type="checkbox"] {
+  height: 13px;
+}
 
 /* 5.Checkout */
 .y-header-checkout {
