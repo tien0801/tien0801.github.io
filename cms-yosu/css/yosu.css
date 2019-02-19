@@ -1627,7 +1627,7 @@ a:hover, button:hover {
       font-size: 18px;
   }
   .yosu-page.yosu-bg-gray {
-    background-color: transparent;
+    background-color: #fff;
   }
 
 }
