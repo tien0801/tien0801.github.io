@@ -834,6 +834,7 @@ table {
   font-size: 15px;
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: #fff;
 }
 .yosu-page a {
   text-decoration: none;
@@ -990,6 +991,17 @@ a:hover, button:hover {
   font-weight: 400;
 }
 
+.yosu-page select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0px;
+  background-image: url("../images/icons/select-arrow.svg");
+  background-position: calc(100% - 7px ) 50%;
+  background-repeat: no-repeat;
+  background-size: 6px;
+  padding-right: 18px !important;
+}
+
 @media (max-width: 767px) {
   .m-no-padding {
     padding: 0;
@@ -1132,6 +1144,7 @@ a:hover, button:hover {
   font-family: 'Open Sans', sans-serif;
   border-bottom: 1px solid #ddd;
   padding: 20px 0px;
+  background-color: #fff;
 }
 .y-header-checkout .y-order-logo .y-box-img {
   height: 80px;
