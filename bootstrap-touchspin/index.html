@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/jquery.bootstrap-touchspin.css">
+
+	<script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<script src="js/jquery.bootstrap-touchspin.min.js"></script>
+
+
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center"><a href="https://www.virtuosoft.eu/code/bootstrap-touchspin/">Bootstrap TouchSpin</a></h1>
+		
+		<h3>Vertical button alignment:</h3>
+		<input id="demo_vertical" type="text" value="1" name="demo_vertical">
+		<script>
+		    $("input[name='demo_vertical']").TouchSpin({
+		      verticalbuttons: true,
+		      min: 1
+		    });
+		</script>	
+
+		<br>
+		<h3>Init with value=1</h3>
+		<input id="demo3" type="text" value="1" name="demo3">
+        <script>
+            $("input[name='demo3']").TouchSpin({
+            	min: 1
+            });
+        </script>
+	</div>
+
+
+	
+</body>
+</html>
