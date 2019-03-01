@@ -4,8 +4,8 @@
 var linkElement = document.createElement('link');
 /* add attributes */
 linkElement.setAttribute('rel', 'stylesheet');
-// linkElement.setAttribute('href', 'css/yosu-snow.css');
-linkElement.setAttribute('href', 'https://demo2.laziweb.com/snow-animate-html/css/yosu-snow.css');
+linkElement.setAttribute('href', 'css/yosu-snow.css');
+// linkElement.setAttribute('href', 'https://demo2.laziweb.com/snow-animate-html/css/yosu-snow.css');
 /* attach to the document head */
 document.getElementsByTagName('head')[0].appendChild(linkElement);
 
