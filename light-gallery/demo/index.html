@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <title>jQuery lightGallery demo</title>
-        <link href="../dist/css/lightgallery.css" rel="stylesheet">
+        <link href="css/lightgallery.css" rel="stylesheet">
         <style type="text/css">
             body{
                 background-color: #152836
@@ -128,22 +128,27 @@
 
         <div class="demo-gallery">
             <ul id="lightgallery" class="list-unstyled row">
-                <li class="col-xs-6 col-sm-4 col-md-3" data-src="images/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
+                <li class="col-xs-6 col-sm-4 col-md-3">
+                    <a class="item-gall" href="https://youtu.be/S5LCkKARVpQ" >
+                        <img src="images/1-1600.jpg" />
+                    </a>
+                </li>
+                <li class="item-gall col-xs-6 col-sm-4 col-md-3" data-src="images/1-1600.jpg" data-sub-html="<h4>Fading Light</h4><p>Classic view from Rigwood Jetty on Coniston Water an old archive shot similar to an old post but a little later on.</p>">
                     <a href="">
                         <img class="img-responsive" src="images/thumb-1.jpg">
                     </a>
                 </li>
-                <li class="col-xs-6 col-sm-4 col-md-3" data-src="images/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
+                <li class="item-gall col-xs-6 col-sm-4 col-md-3" data-src="images/2-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
                     <a href="">
                         <img class="img-responsive" src="images/thumb-2.jpg">
                     </a>
                 </li>
-                <li class="col-xs-6 col-sm-4 col-md-3" data-src="images/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
+                <li class="item-gall col-xs-6 col-sm-4 col-md-3" data-src="images/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
                     <a href="">
                         <img class="img-responsive" src="images/thumb-13.jpg">
                     </a>
                 </li>
-                <li class="col-xs-6 col-sm-4 col-md-3" data-src="images/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
+                <li class="item-gall col-xs-6 col-sm-4 col-md-3" data-src="images/4-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>A beautiful Sunrise this morning taken En-route to Keswick not one as planned but I'm extremely happy I was passing the right place at the right time....</p>">
                     <a href="">
                         <img class="img-responsive" src="images/thumb-4.jpg">
                     </a>
@@ -152,11 +157,13 @@
         </div>
         <script type="text/javascript">
         $(document).ready(function(){
-            $('#lightgallery').lightGallery();
+            $('#lightgallery').lightGallery({
+                selector: '#lightgallery .item-gall'
+            });
         });
         </script>
         <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
-        <script src="../dist/js/lightgallery-all.min.js"></script>
-        <script src="../lib/jquery.mousewheel.min.js"></script>
+        <script src="js/lightgallery-all.min.js"></script>
+        <script src="js/jquery.mousewheel.min.js"></script>
     </body>
 </html>
