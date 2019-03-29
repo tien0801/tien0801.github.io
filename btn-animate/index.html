@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Btn Animate</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="">
 	<style>
 		.btn-wraper {
@@ -79,9 +80,88 @@
 	</style>
 </head>
 <body>
-	<div class="btn-wraper">
-        <a href="javascript:;" class="btn btn-primary btn-gradient4 navSidebar-button btn-animate">
-        <div class="animated infinite zoomIn laziweb-alo-ph-circle"></div>TƯ VẤN NGAY!</a>
+	<div class="container">
+		<br>
+		<div class="btn-wraper">
+	        <a href="javascript:;" class="btn btn-primary btn-animate">
+	        <div class="animated infinite zoomIn laziweb-alo-ph-circle"></div>TƯ VẤN NGAY!</a>
+	    </div>
+	    <br>
+	</div>
+    <div class="container">
+    	<pre>
+    		<code>
+.btn-wraper {
+	display: inline-block; 
+	width: auto;
+}
+.btn.btn-primary {
+    background-color: #ff8f1e;
+    font-family: 'Nunito', sans-serif;
+}
+.btn-animate .laziweb-alo-ph-circle {
+    width: 130%;
+    border-radius: 40px;
+    height: 150%;
+    top: -24%;
+    left: -15%;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.btn-animate {
+	position: relative;
+}
+.btn-animate .laziweb-alo-ph-circle {
+    width: 130%;
+    border-radius: 40px;
+    height: 150%;
+    top: -24%;
+    left: -15%;
+}
+.laziweb-alo-ph-circle {
+    width: 90px;
+    height: 90px;
+  }
+.laziweb-alo-ph-circle {
+    width: 125px;
+    height: 125px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: transparent;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid rgba(30, 30, 30, 0.4);
+    opacity: .1;
+    border-color: #ff8f1e;
+    opacity: .5;
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+@keyframes zoomIn {
+	from {
+	    opacity: 0;
+	    -webkit-transform: scale3d(.3, .3, .3);
+	    transform: scale3d(.3, .3, .3);
+	}
+	50% {
+	    opacity: 1;
+	}
+}
+    		</code>
+    	</pre>
     </div>
 </body>
 </html>
