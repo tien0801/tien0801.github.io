@@ -27,42 +27,36 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2">
 	<style>
-		.thanks-container {
-			width: 700px;
+		.box-img-flex {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+		}
+		.box-img-flex img {
+			width: auto;
+			height: auto;
 			max-width: 100%;
-			margin: auto;
+			max-height: 100%;
+		}
+
+
+		.thanks-container {
+			max-width: 700px;
+			margin: 0 auto;
 			text-align: center;
 			font-family: 'Roboto', sans-serif;
 		}
-		.thanks-container .title {
-			font-family: 'Open Sans', sans-serif;
+		.thanks-container .y-thank-title {
 			font-size: 110px;
 			font-weight: 300;
 			margin-top: 60px;
 			margin-bottom: 30px;
 		}
-		.thanks-container .img-box {
+		.thanks-container .y-thank-img {
 			margin-bottom: 30px;
 		}
-		.thanks-container .img-box img {
-			max-height: 170px;
-			max-width: 100%;
-			width: auto;
-			height: auto;
-			margin: auto;
-			display: block;
-		}
-		.thanks-container .desc {
-			font-size: 16px;
-			line-height: 22px;
-		}
-		.thanks-container .desc p {
-			margin-top: 0;
-			margin-bottom: 10px;
-			font-size: 18px;
-			font-weight: 500;
-		}
-		.thanks-container .btn-back {
+		.thanks-container .y-btn-back-home {
 			display: inline-block;
 			text-decoration: none;
 			font-style: italic;
@@ -75,58 +69,33 @@
 			border-radius: 20px;
 			transition: .3s;
 		}
-		.thanks-container .btn-back:hover {
+		.thanks-container .y-btn-back-home:hover {
 			color: #3bb4c9;
 			background-color: #fff;
 			border-color: #3bb4c9;
 		}
-		.thanks-container .btn-back i {
-			padding-right: 8px;
-		}
-		@media only screen and (max-width : 570px){
-			.thanks-container .title {
-				font-size: 70px;
-			}
-			.thanks-container .desc p {
-				font-size: 16px;
-			}
-			.thanks-container .btn-back {
-				font-size: 14px;
-			}
-			.thanks-container .img-box img{
-				width: 235px;
+		@media only screen and (max-width : 767px) {
+			.thanks-container .y-thank-title {
+				font-size: 50px;
 			}
 		}
-		@media only screen and (max-width : 375px){
-			.thanks-container .title {
-				font-size: 55px;
-			}
-			.thanks-container .desc p {
-				font-size: 14px;
-			}
-			.thanks-container .btn-back {
-				font-size: 12px;
-			}
-			.thanks-container .img-box img{
-				width: 200px;
-			}
-		}
+		
+
 	</style>
 </head>
 
 <body>
 	<div class="container">
 		<div class="thanks-container">
-			<h1 class="title">Thank You!</h1>
-			<div class="img-box">
-				<img src="mail_icon.jpg" alt="thanks">
+			<h1 class="y-thank-title">Thank You!</h1>
+			<div class="y-thank-img box-img-flex">
+				<img src="images/mail_icon.jpg" alt="thanks">
 			</div>
-			<div class="desc">
+			<div class="y-thank-desc y-text-editor">
 				<p>Cảm ơn Quý khách đã đặt hàng.</p>
 				<p>Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất để xác nhận đơn hàng.</p>
 			</div>
-			<a href="index.html" class="btn-back" title="Quay lại trang chủ">
-				<i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+			<a href="index.html" class="y-btn-back-home" title="Quay lại trang chủ">
 				Quay lại trang chủ
 			</a>
 		</div>
