@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="">
+	<style>
+		.select-style {
+		    padding: 0;
+		    margin: 0;
+		    border: 1px solid #ccc;
+		    width: 120px;
+		    border-radius: 3px;
+		    overflow: hidden;
+		    background-color: #fff;
+
+		    background: #fff url("https://image.flaticon.com/icons/svg/118/118738.svg") no-repeat 90% 50%;
+		  background-size: 10px
+		}
+
+		.select-style select {
+		    padding: 5px 8px;
+		    width: 130%;
+		    border: none;
+		    box-shadow: none;
+		    background-color: transparent;
+		    background-image: none;
+		    -webkit-appearance: none;
+		       -moz-appearance: none;
+		            appearance: none;
+		}
+
+		.select-style select:focus {
+		    outline: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+        <div class="col-md-3 ds-element">
+            <div class="ds-element-value ds-days" id="y-days">01</div>
+            <div class="ds-element-title">Days</div>
+        </div>
+        <div class="col-md-3 ds-element">
+            <div class="ds-element-value ds-hours" id="y-hours">02</div>
+            <div class="ds-element-title">Hours</div>
+        </div>
+        <div class="col-md-3 ds-element">
+            <div class="ds-element-value ds-minutes" id="y-minutes">05</div>
+            <div class="ds-element-title">Minutes</div>
+        </div>
+        <div class="col-md-3 ds-element">
+            <div class="ds-element-value ds-seconds" id="y-seconds">30</div>
+            <div class="ds-element-title">Seconds</div>
+        </div>
+	</div>
+
+	<script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+		  
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+		  
+		  // Get todays date and time
+		  var now = new Date().getTime();
+		    
+		  // Find the distance between now and the count down date
+		  var distance = countDownDate - now;
+		    
+		  // Time calculations for days, hours, minutes and seconds
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		    
+		  // Output the result in an element with id="demo"
+		  // document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+		  document.getElementById("y-days").innerHTML = days;
+		  document.getElementById("y-hours").innerHTML = hours;
+		  document.getElementById("y-minutes").innerHTML = minutes;
+		  document.getElementById("y-seconds").innerHTML = seconds;
+		    
+		  // If the count down is over, write some text 
+		  if (distance < 0) {
+		    clearInterval(x);
+		    document.getElementById("demo").innerHTML = "EXPIRED";
+		  }
+		}, 1000);
+	</script>
+</body>
+</html>
