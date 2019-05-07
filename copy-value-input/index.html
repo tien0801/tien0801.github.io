@@ -14,8 +14,8 @@
 <body>
 	<div class="container">
 		<div class="box-input-code">
-			<input type="text" name="code" value="code-vbt34" class="input-code">
-			<a href="javascript:;" onclick="copyToClipboard()" class="btn-copycode">Copy mã</a>
+			<input type="text" name="code" value="code-vbt34" class="input-code" id="input_code50">
+			<a href="javascript:;" onclick="copyToClipboard('.input_code50')" class="btn-copycode">Copy mã</a>
 		</div>
 	</div>
 
@@ -23,21 +23,20 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<script type="text/javascript">
-		function copyToClipboard() {
-			var input_code = $('.box-input-code .input-code');
+		function copyToClipboard(el) {
 		    // resolve the element
-		    input_code = (typeof input_code === 'string') ? document.querySelector(input_code) : input_code;
+		    el = (typeof el === 'string') ? document.querySelector(el) : el;
 
 		    // handle iOS as a special case
 		    if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
 
 		        // save current contentEditable/readOnly status
-		        var editable = input_code.contentEditable;
-		        var readOnly = input_code.readOnly;
+		        var editable = el.contentEditable;
+		        var readOnly = el.readOnly;
 
 		        // convert to editable with readonly to stop iOS keyboard opening
-		        input_code.contentEditable = true;
-		        input_code.readOnly = true;
+		        el.contentEditable = true;
+		        el.readOnly = true;
 
 		        // create a selectable range
 		        var range = document.createRange();
@@ -47,19 +46,25 @@
 		        var selection = window.getSelection();
 		        selection.removeAllRanges();
 		        selection.addRange(range);
-		        input_code.setSelectionRange(0, 999999);
+		        el.setSelectionRange(0, 999999);
 
 		        // restore contentEditable/readOnly to original state
-		        input_code.contentEditable = editable;
-		        input_code.readOnly = readOnly;
+		        el.contentEditable = editable;
+		        el.readOnly = readOnly;
 		    }
 		    else {
-		        input_code.select();
+		        el.select();
 		    }
 
 		    // execute copy command
 		    document.execCommand('copy');
+		    
 		}
+		$('.btn-copycode').click(function() {
+   			$(this).text("Copy thành công");
+		    $(this).css('background-color', '#828282');
+		    $(this).css('color', '#fff');
+		});
 	</script>
 </body>
 </html>
