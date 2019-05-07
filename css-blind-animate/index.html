@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="">
+	<style>
+		.section-blind {
+			position: relative;
+			overflow: hidden;
+			min-height: 500px;
+		}
+
+
+		.blind-left {
+			position: absolute;
+			display: block;
+			right: calc(50% - 1px);
+			top: -30px;
+			z-index: 0;
+		}
+		.blind-left.active {
+			animation: blindleft alternate 2s;
+			animation-iteration-count: 1;
+			transform-origin: 50% 50%;
+			animation-fill-mode:forwards; /*when the spec is finished*/
+			-webkit-animation: blindleft alternate 2s;
+			-webkit-animation-iteration-count: 1;
+			-webkit-transform-origin: 50% 50%;
+			-webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+		}
+		@keyframes blindleft{
+		  0% {
+		    right: calc(50% - 1px);
+		    transform: rotate(0);
+		  }
+		 
+		  50% {
+		    transform: rotate(-10deg);
+		  }
+		  
+		  100% {
+		    right: 100%;
+		    transform: rotate(0);
+		  }
+		}
+		.blind-right {
+			position: absolute;
+			display: block;
+			left: calc(50% - 1px);
+			top: 0;
+			z-index: 0;
+		}
+		.blind-right.active {
+			animation: blindright alternate 2s;
+			animation-iteration-count: 1;
+			transform-origin: 50% 50%;
+			animation-fill-mode:forwards; /*when the spec is finished*/
+			-webkit-animation: blindright alternate 2s;
+			-webkit-animation-iteration-count: 1;
+			-webkit-transform-origin: 50% 50%;
+			-webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/ 
+			
+		}
+		@keyframes blindright{
+		  0% {
+		    left: calc(50% - 1px);
+		    transform: rotate(0);
+		  }
+		 
+		  50% {
+		    transform: rotate(10deg);
+		  }
+		  
+		  100% {
+		    left: 100%;
+		    transform: rotate(0);
+		  }
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<button class="run-blind">Run animate</button>
+	</div>
+	<div class="container">
+		<div class="section-blind">
+			<!-- Blind Desktop -->
+			<img class="blind-left" src="images/blind-left-big.jpg" alt="">
+			<img class="blind-right" src="images/blind-right-big.jpg" alt="">
+		</div>
+
+		<!-- Blind Mobile -->
+		<!-- <img class="blind-left show-ipad" src="images/blind-left.jpg" alt="">
+		<img class="blind-right show-ipad" src="images/blind-right.jpg" alt=""> -->
+
+		
+	</div>
+
+	<script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function() {
+			$('.run-blind').click(function() {
+				$('.blind-left').addClass('active');
+	        	$('.blind-right').addClass('active');
+			})
+		});
+		
+	</script>
+</body>
+</html>
