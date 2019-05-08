@@ -1,0 +1,303 @@
+/* Yosu CSS */
+/* General */
+body {
+	font-family: 'SanomatSansVN', sans-serif;
+	font-size: 1.6rem;
+	font-weight: normal;
+	color: #333;
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f5f5f5; 
+    padding-right: 0 !important;
+}
+html,body{ 
+	-webkit-overflow-scrolling : touch !important;
+	overflow: auto !important; 
+	/* height: 100% !important; */
+}
+/* input {
+	height: 40px;
+} */
+h4 {
+	line-height: 23px;
+}
+p {
+	line-height: 22px;
+}
+a {
+	color: initial;
+}
+a:hover {
+	cursor: pointer;
+	text-decoration: unset;
+	color: #159c40;
+}
+img {
+	width: 100%;
+	height: auto;
+}
+input:focus, textarea:focus {
+    border-color: rgba(21,156,64,.6) !important;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 1px rgba(21,156,64,.6) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 1px rgba(21,156,64,.6) !important;
+}
+ul {
+	padding-left: 0;
+}
+li {
+	list-style: none;
+}
+.box-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.box-img-left {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	overflow: hidden;
+}
+.box-img img, .box-img-left img {
+	width: auto !important;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+.box-h60 {
+	display: block;
+	width: 100%;
+	height: 60px;
+	clear: both;
+}
+.page {
+    background-color: #fff;
+}
+.title-main {
+	color: #00b14f;
+	text-align: center;
+    font-size: 6rem;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    line-height: 7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.title-2 {
+    color: #fff;
+    font-size: 4.5rem;
+    letter-spacing: 4px;
+    padding-top: 10px;
+}
+.btn-main {
+	background: #00b14f;
+    color: #fff;
+    padding: 20px 70px;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    border-radius: 15px;
+}
+.btn-main:focus {
+	background: #00b14f;
+    color: #fff;
+    text-decoration: none;
+}
+.btn-main:hover {
+	background: #00b14f;
+    color: #fff;
+}
+.color-main {
+	color: #00b14f;
+}
+.bg-main {
+	background-color: #00b14f;
+}
+.bg-white {
+	background-color: #fff;
+}
+.section-padding {
+	padding-bottom: 80px;
+}
+.hidden-ipad {
+	display: block;
+}
+.show-ipad {
+	display: none;
+}
+
+
+/* Home page */
+
+/* menu fixed */
+.menu-fixed {
+	position: fixed;
+	top: -41px;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.5s;
+    box-shadow: 4px 3px 10px 0 rgba(0,0,0,.6);
+    opacity: 0;
+    visibility: hidden;
+}
+#menu-center.active {
+	top: 0;
+	opacity: 1;
+	visibility: visible;
+}
+#menu-center ul {
+	margin-bottom: 0;
+}
+#menu-center ul li a {
+	display: inline-block;
+	padding: 10px 40px;
+    font-size: 1.6rem;
+}
+#menu-center ul li {
+    list-style: none;
+    display: inline;
+}
+#menu-center ul li a.active, #menu-center ul li a:hover  {
+    color: #00b14f;
+    text-decoration: none;
+}
+
+/* header */
+.header {
+    position: absolute;
+	padding-top: 25px;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    right: 0;
+}
+.header .logo a {
+	height: 85px;
+}
+.header .menu-header {
+	margin-top: 28px;
+}
+.header .menu-header ul {
+	text-align: right;
+}
+.header .menu-header ul li {
+	vertical-align: middle;
+	text-align: left;
+    padding: 0 35px;
+}
+.header .menu-header ul li:last-child {
+	padding-right: 0;
+}
+.header .menu-header ul li a {
+	color: #fff;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    line-height: 1.6;
+    text-decoration: none;
+}
+.header .menu-header ul li a i {
+    font-size: 2.4rem;
+    line-height: 0.5;
+}
+.header .menu-header ul li.active a {
+	color: #fff;
+	text-decoration: underline
+}
+.header .menu-header ul li.has-child {
+	position: relative;
+}
+.header .menu-header ul li.has-child .menu-child {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	width: max-content;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.4s;
+	padding: 30px 0 10px;
+}
+.header .menu-header ul li.has-child:hover .menu-child {
+	/* display: block; */
+	opacity: 1;
+	visibility: visible;
+}
+.header .menu-header ul li.has-child .menu-child li {
+	background-color: #fff;
+    padding: 8px 20px;
+    border-bottom: 1px solid #d0d0d0;
+}
+.header .menu-header ul li.has-child .menu-child li a {
+	color: #333;
+	font-size: 1.5rem;
+	text-transform: initial;
+}
+.header .menu-header ul li.has-child .menu-child li:hover a {
+	text-decoration: underline;
+}
+
+/* home slider */
+.owl-carousel .owl-dots {
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+    right: 0;
+    z-index: 99;
+    height: 15px;
+    margin: 0 auto;
+    text-align: center;
+}
+.owl-carousel .owl-dots .owl-dot {
+    display: inline-block;
+	margin: 0 auto;
+}
+.owl-carousel .owl-dots .owl-dot.active span {
+	background: #00b14f;
+}
+.owl-carousel .owl-dots .owl-dot span {
+    background: none repeat scroll #fff;
+    border-radius: 20px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 5px 7px;
+}
+.home-slider.owl-carousel .owl-dots {
+    left: 15%;
+    bottom: 15%;
+}
+.home-slider .item {
+	position: relative;
+	padding-top: 60px;
+}
+.home-slider .item .bg-slider {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+
+    display: flex !important;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.home-slider .item .bg-slider img {
+    width: auto;
+    height: 100%;
+    max-width: inherit;
+}
+
+
+.section {
+	position: relative;
+}
