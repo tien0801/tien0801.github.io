@@ -11,6 +11,7 @@
 		    display: block;
 		    width: 100%;
 		    padding-bottom: 80%;
+		    overflow: hidden;
 		    background: #f9f9f9;
 		}
 		.y-box-img .link {
@@ -33,14 +34,24 @@
     		width: auto;
     		height: auto;
 		}
+
+		.y-box-zoom {
+		    transition: all 1s;
+		    width: 100%;
+		    height: 100%;
+		    position: absolute;
+		}
+		.y-box-zoom:hover {
+		    transform: scale(1.2);
+		}
 	</style>
 </head>
 <body>
 	   
 	<div class="container"">
- 		<div class="col-md-12">
+ 		<div class="col-md-6">
 			<pre>
-<code>
+				<code>
 .y-box-img {
     position: relative;
     display: block;
@@ -68,7 +79,22 @@
     width: auto;
     height: auto;
 }
-</code>
+				</code>
+			</pre>
+		</div>
+ 		<div class="col-md-6">
+			<pre>
+				<code>
+.y-box-zoom {
+    transition: all 1s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.y-box-zoom:hover {
+    transform: scale(1.2);
+}
+				</code>
 			</pre>
 		</div>
 		
@@ -76,21 +102,26 @@
 
 	<div class="container">
 		<div class="col-md-4 blog-temp">
+			<h5 class="text-center">box images</h5>
 			<figure class="y-box-img">
                 <img src="https://peach.blender.org/wp-content/uploads/bbb-splash.png?x11217" alt="">
                 <a href="#" class="link" title="Donec Sodales sagittis magna"></a>
             </figure>
 		</div>
 		<div class="col-md-4 blog-temp">
+			<h5 class="text-center">box images</h5>
 			<figure class="y-box-img">
                 <img src="https://peach.blender.org/wp-content/uploads/poster_bunny_big.jpg?x11217" alt="">
                 <a href="#" class="link" title="Donec Sodales sagittis magna"></a>
             </figure>
 		</div>
 		<div class="col-md-4 blog-temp">
+			<h5 class="text-center">hover zoom images</h5>
 			<figure class="y-box-img">
-                <img src="http://endlessbeauty.demo3.laziweb.com/uploads/1536640387_product-1_480.png" alt="">
-                <a href="#" class="link" title="Donec Sodales sagittis magna"></a>
+				<div class="y-box-zoom">
+	                <img src="https://peach.blender.org/wp-content/uploads/bbb-splash.png?x11217" alt="">
+	                <a href="#" class="link" title="Donec Sodales sagittis magna"></a>
+                </div>
             </figure>
 		</div>
 		
