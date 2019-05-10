@@ -28,7 +28,7 @@ p {
 a {
 	color: initial;
 }
-a:hover {
+a:hover, a:focus {
 	cursor: pointer;
 	text-decoration: unset;
 	color: #159c40;
