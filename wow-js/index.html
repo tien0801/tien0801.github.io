@@ -16,9 +16,13 @@
 			color: #fff;
 		}
 
-		.wow:first-child {
+		.wow:first-child, .wow {
 	      visibility: hidden;
 	    }
+
+	   /* 	.wow.active {
+			visibility: visible !important;
+	   	} */
     </style>
 </head>
 
@@ -72,9 +76,46 @@
     </script>
 
     <script>
-    	$(document).scroll(function(){
-			console.log("scroll");
-		});
+    	$(document).ready(function() {
+    		$(document).scroll(function(){
+				console.log("scroll");
+				// wow.init();
+			});
+			
+			$(window).scroll(function() {
+				
+			}).scroll();
+
+			var lastScrollTop = 0;
+			    $(window).on('scroll', function() {
+			        st = $(this).scrollTop();
+			        if(st < lastScrollTop) {
+			            console.log('up 1');
+			            var scrollDistance = $(window).scrollTop();
+
+						// Show/hide menu on scroll
+						if (scrollDistance >= 850) {
+								$('.wow').fadeIn("fast");
+						} else {
+								// $('.wow').fadeOut("fast");
+						}
+					
+						// Assign active class to nav links while scolling
+						$('.wow').each(function(i) {
+							if ($(this).position().top - 100 <= scrollDistance) {
+								$('#main .wow.active').removeClass('active');
+								$('#main .wow').eq(i).addClass('active');
+							}
+						});
+			        }
+			        else {
+			            console.log('down 1');
+			        }
+			        lastScrollTop = st;
+			    });
+		
+    	});
+    	
     </script>
 </body>
 
