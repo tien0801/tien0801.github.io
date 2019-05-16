@@ -3,13 +3,53 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
 	<title>Slider-OwlCarousel-2-simple</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
+    <div class="container">
+        <h1>Slider OWL Carousel Simple </h1>
+<pre>
+    <code>
+if($('.home-slider').length >0) {
+    $('.home-slider').owlCarousel({
+        loop: true,
+        // autoplay: true,
+        // autoplayTimeout: 4000,
+        // nestedItemSelector: 'item-gall',
+        margin: 0,
+        responsiveClass:true,
+        items: 1,
+        dots: true,
+        navText : ["",""],
+        rewindNav : true,
+        nav: true,
+        responsive : {
+            // breakpoint from 0 up
+            0 : {
+               items: 1,
+            },
+            480 : {
+                items: 1,
+            },
+            768 : {
+                items: 2,
+            },
+            1200 : {
+                items: 1,
+            }
+        }
+    })
+}
+    </code>
+</pre>
+    </div>
     
 	<div class="home-slider owl-carousel owl-theme">
         <div class="item">
@@ -51,34 +91,36 @@ frameborder="0" allowfullscreen>
 	<script src="js/owl.carousel.min.js"></script>
     <!-- Home Slider -->
     <script>
-        $('.home-slider').owlCarousel({
-            loop: true,
-            // autoplay: true,
-            // autoplayTimeout: 4000,
-            // nestedItemSelector: 'item-gall',
-            margin: 0,
-            responsiveClass:true,
-            items: 1,
-            dots: true,
-            navText : ["",""],
-            rewindNav : true,
-            nav: true,
-            responsive : {
-			    // breakpoint from 0 up
-			    0 : {
-			       items: 1,
-			    },
-			    480 : {
-			        items: 1,
-			    },
-			    768 : {
-			        items: 2,
-			    },
-			    1200 : {
-			        items: 1,
-			    }
-			}
-        })
+        if($('.home-slider').length >0) {
+            $('.home-slider').owlCarousel({
+                loop: true,
+                // autoplay: true,
+                // autoplayTimeout: 4000,
+                // nestedItemSelector: 'item-gall',
+                margin: 0,
+                responsiveClass:true,
+                items: 1,
+                dots: true,
+                navText : ["",""],
+                rewindNav : true,
+                nav: true,
+                responsive : {
+    			    // breakpoint from 0 up
+    			    0 : {
+    			       items: 1,
+    			    },
+    			    480 : {
+    			        items: 1,
+    			    },
+    			    768 : {
+    			        items: 2,
+    			    },
+    			    1200 : {
+    			        items: 1,
+    			    }
+    			}
+            })
+        }
 
         // setTimeout(function(){
         //    $('.item-slider iframe').
