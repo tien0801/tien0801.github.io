@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,47 +8,44 @@
     <title>FAQ page</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
-
     <style>
-        
-        .faq-section{
-            font-family: 
-        }
-        .faq-section .faq-item{
-            border: 1px solid #137cbf;
-            margin-bottom: 20px;
-        }
-        .faq-item .faq-title{
-            padding: 20px 40px 20px 10px;
-            background-color: #137cbf;
-            margin: 0;
-            color: #fff;
-            font-size: 20px;
-            cursor: pointer;
-            position: relative;
-        }
-        .faq-item .faq-title:after{
-            content: '+';
-            position: absolute;
-            top: calc(50% - 14px);
-            /* transform: translateY(-50%); */
-            right: 20px;
-            font-size: 26px;
-            color: #fff;
-            transition: all 0.3s;
-        }
-        .faq-item .faq-title.active:after{
-            -ms-transform: rotate(45deg); /* IE 9 */
-            -webkit-transform: rotate(45deg); /* Safari 3-8 */
-            transform: rotate(45deg);
-        }
-        .faq-item .faq-content{
-            padding: 10px;
-            display: none;
-        }
+    .faq-section {
+        font-family:
+    }
+    .faq-section .faq-item {
+        border: 1px solid #137cbf;
+        margin-bottom: 20px;
+    }
+    .faq-item .faq-title {
+        padding: 20px 40px 20px 10px;
+        background-color: #137cbf;
+        margin: 0;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        position: relative;
+    }
+    .faq-item .faq-title:after {
+        content: '+';
+        position: absolute;
+        top: calc(50% - 14px);
+        right: 20px;
+        font-size: 26px;
+        color: #fff;
+        transition: all 0.3s;
+    }
+    .faq-item .faq-title.active:after {
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    .faq-item .faq-content {
+        padding: 10px;
+        display: none;
+    }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>FAQ Page</h1>
@@ -74,25 +72,23 @@
             </div>
         </section>
     </div>
-
-    <script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
     <script>
-        $(document).ready(function () {
-            $(".faq-item .faq-title").on("click", function(){
-                if($(this).hasClass("active")){
-                    $(this).removeClass("active").next(".faq-content").slideUp();
-                }
-                else{
-                    $(".faq-item .faq-title").removeClass("active")
-                    $(".faq-item .faq-content").slideUp();
-                    $(this).toggleClass("active").next(".faq-content").slideToggle();
-                }
-            })
-            $(".faq-section .faq-item:first-child .faq-title").trigger('click');
-        });
+    // FAQ JS
+    $(document).ready(function() {
+        $(".faq-item .faq-title").on("click", function() {
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active").next(".faq-content").slideUp();
+            } else {
+                $(".faq-item .faq-title").removeClass("active")
+                $(".faq-item .faq-content").slideUp();
+                $(this).toggleClass("active").next(".faq-content").slideToggle();
+            }
+        })
+        $(".faq-section .faq-item:first-child .faq-title").trigger('click');
+    });
     </script>
-
 </body>
+
 </html>
