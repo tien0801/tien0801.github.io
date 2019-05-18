@@ -51,39 +51,61 @@ if($('.home-slider').length >0) {
 </pre>
     </div>
     
-	<div class="home-slider owl-carousel owl-theme">
-        <div class="item">
-            <a class="item-slider" href="#">
-               <iframe id="ytplayer" type="text/html" width="720" height="405"
-src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1"
-frameborder="0" allowfullscreen>
-               <!-- <a class="owl-video" href="https://vimeo.com/23924346"></a> -->
-            </a>
+    <div class="container">
+    	<div class="home-slider owl-carousel owl-theme">
+            <div class="item">
+                <a class="item-slider" href="#">
+                   <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1" frameborder="0" allowfullscreen>
+                   <!-- <a class="owl-video" href="https://vimeo.com/23924346"></a> -->
+                </a>
+            </div>
+            <div class="item">
+                <a class="item-slider" href="#">
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/AmvA-XJF0j8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </a>
+            </div>
+            <div class="item">
+                <a class="item-slider" href="#">
+                   <img src="https://dummyimage.com/1920x400/0d00ff/ff0000" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a class="item-slider" href="#">
+                   <img src="https://dummyimage.com/1920x400/0d00ff/fff" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a class="item-slider" href="#">
+                   <img src="https://dummyimage.com/1920x400/0d00ff/ff0000" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a class="item-slider" href="#">
+                   <img src="https://dummyimage.com/1920x400/0d00ff/fff" alt="">
+                </a>
+            </div>
         </div>
-        <div class="item">
-            <a class="item-slider" href="#">
-               <iframe width="560" height="315" src="https://www.youtube.com/embed/AmvA-XJF0j8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </a>
-        </div>
-        <div class="item">
-            <a class="item-slider" href="#">
-               <img src="https://dummyimage.com/1920x400/0d00ff/ff0000" alt="">
-            </a>
-        </div>
-        <div class="item">
-            <a class="item-slider" href="#">
-               <img src="https://dummyimage.com/1920x400/0d00ff/fff" alt="">
-            </a>
-        </div>
-        <div class="item">
-            <a class="item-slider" href="#">
-               <img src="https://dummyimage.com/1920x400/0d00ff/ff0000" alt="">
-            </a>
-        </div>
-        <div class="item">
-            <a class="item-slider" href="#">
-               <img src="https://dummyimage.com/1920x400/0d00ff/fff" alt="">
-            </a>
+    </div>
+
+    <!-- Slider 2 -->
+    <div class="container">
+        <div class="home-slider-2 owl-carousel owl-theme">
+            <div class="item">
+                <a class="item-slider" href="#">
+                   <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1" frameborder="0" allowfullscreen>
+                   <!-- <a class="owl-video" href="https://vimeo.com/23924346"></a> -->
+                </a>
+            </div>
+            <div class="item">
+                <a class="item-slider" href="#">
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/AmvA-XJF0j8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </a>
+            </div>
+            <div class="item">
+                <a class="item-slider" href="#">
+                   <img src="https://dummyimage.com/1920x400/0d00ff/ff0000" alt="">
+                </a>
+            </div>
         </div>
     </div>
 
@@ -136,6 +158,37 @@ frameborder="0" allowfullscreen>
             // $('#ifrm').attr('src', "http://www.google.com")
         }, 500);*/
         
+
+        if($('.home-slider-2').length >0) {
+            $('.home-slider-2').owlCarousel({
+                loop: true,
+                // autoplay: true,
+                // autoplayTimeout: 4000,
+                // nestedItemSelector: 'item-gall',
+                margin: 0,
+                responsiveClass:true,
+                items: 1,
+                dots: false,
+                navText : ["",""],
+                rewindNav : true,
+                nav: true,
+                responsive : {
+                    // breakpoint from 0 up
+                    0 : {
+                       items: 1,
+                    },
+                    480 : {
+                        items: 1,
+                    },
+                    768 : {
+                        items: 2,
+                    },
+                    1200 : {
+                        items: 1,
+                    }
+                }
+            })
+        }
     </script>
 </body>
 </html>

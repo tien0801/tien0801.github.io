@@ -1,19 +1,19 @@
  /* Home Slider */
-.home-slider .item-slider {
+.owl-carousel .item-slider {
 	display: block;
 }
 
-.home-slider .owl-nav .owl-prev,
-  .home-slider .owl-nav .owl-next {
+.owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next {
     font-family: 'fontAwesome';
 }
 
-.home-slider .owl-nav .owl-prev, .home-slider .owl-nav .owl-next {
+.owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.home-slider .owl-nav .owl-prev {
+.owl-carousel .owl-nav .owl-prev {
 	position: absolute;
 	height: 40px;
 	width: 40px;
@@ -21,7 +21,7 @@
 	left: 0;
 	margin-top: -40px;
 }
-.home-slider .owl-nav .owl-next {
+.owl-carousel .owl-nav .owl-next {
 	position: absolute;
 	height: 40px;
 	width: 40px;
@@ -29,32 +29,32 @@
 	right: 0;
 	margin-top: -40px;
 }
-.home-slider .owl-nav .owl-prev:before{
+.owl-carousel .owl-nav .owl-prev:before{
     content: "\f053";
     font-size: 25px;
     color: #fff;
 }
-.home-slider .owl-nav .owl-next:after{
+.owl-carousel .owl-nav .owl-next:after{
     content: "\f054";
     font-size: 25px;
     color: #fff;
 }
 
 /* Css - Hover show Nav */
-/*.home-slider .owl-nav {
+/*.owl-carousel .owl-nav {
  	display: none;
 	transition:  opacity 1s ease-out;
 	visibility: hidden;
 	opacity: 0;
  }*/
-/*.home-slider:hover .owl-nav {
+/*.owl-carousel:hover .owl-nav {
  	display: block;
 	visibility: visible;
 	opacity: 1;
  }
 
  /* Css - Show Dots */
-.home-slider .owl-dots {
+.owl-carousel .owl-dots {
     position: absolute;
     left: 0;
     bottom: 10px;
@@ -64,14 +64,14 @@
     margin: 0 auto;
     text-align: center;
 }
-.home-slider .owl-dots .owl-dot {
+.owl-carousel .owl-dots .owl-dot {
     display: inline-block;
 	margin: 0 auto;
 }
-.home-slider .owl-dots .owl-dot.active span {
+.owl-carousel .owl-dots .owl-dot.active span {
 	background: #ff0000;
 }
-.home-slider .owl-dots .owl-dot span {
+.owl-carousel .owl-dots .owl-dot span {
     background: none repeat scroll 0 0 #869791;
     border-radius: 20px;
     display: block;
