@@ -170,19 +170,3 @@ $(document).ready(function(){
 
 })
 
-
-jQuery(document).ready(function(){
-    $(document).on('show.bs.modal', '.modal-fireworks', function () {
-        $('.fireworks').firemaks({
-            color: color4,
-            type: 2,
-            color_child: 'inherit',
-            type_child: 'inherit',
-            boom_count: 500,
-            boom_time_from: 0.2
-        });
-    });
-    
-
-});
-

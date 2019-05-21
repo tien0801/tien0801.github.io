@@ -1,0 +1,221 @@
+/* Yosu CSS */
+/* General */
+body {
+	font-family: 'SanomatSansVN', sans-serif;
+	font-size: 1.6rem;
+	font-weight: normal;
+	color: #333;
+	max-width: 1920px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #f5f5f5; 
+    padding-right: 0 !important;
+}
+html,body{ 
+	-webkit-overflow-scrolling : touch !important;
+	overflow: auto !important; 
+	/* height: 100% !important; */
+}
+/* input {
+	height: 40px;
+} */
+h4 {
+	line-height: 23px;
+}
+p {
+	line-height: 22px;
+}
+a {
+	color: initial;
+}
+a:hover, a:focus {
+	cursor: pointer;
+	text-decoration: unset;
+	color: #159c40;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+input:focus, textarea:focus {
+    border-color: rgba(21,156,64,.6) !important;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 1px rgba(21,156,64,.6) !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 1px rgba(21,156,64,.6) !important;
+}
+ul {
+	padding-left: 0;
+}
+li {
+	list-style: none;
+}
+.y-box-img {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: 80%;
+    background: #f9f9f9;
+}
+.y-box-img .link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.y-box-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.box-img-flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+.box-img-flex img {
+	width: auto !important;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.y-text-editor *{
+	max-width: 100%;
+}
+.y-text-editor p{
+	margin-bottom: 10px;
+}
+.y-text-editor img{
+	max-width: 100%;
+	height: auto !important;
+	display: initial;
+}
+.y-text-editor iframe{
+	max-width: 100%;
+}
+.y-text-editor table{
+	width: 100%;
+}
+.y-text-editor i{
+	font-style: italic;
+}
+.y-text-editor u{
+    text-decoration: underline;
+}
+.y-text-editor a{
+	text-decoration: underline;
+}
+.y-text-editor b,
+.y-text-editor strong{
+	font-weight: bold;
+}
+.y-text-editor ul{
+	padding-left: 0;
+	list-style-type: disc;
+	list-style-position: inside;
+}
+.y-text-editor ul li{
+	list-style-type: disc;
+	list-style-position: inside;
+}
+.y-text-editor ol{
+	padding-left: 0;
+	list-style-type: decimal;
+	list-style-position: inside;
+}
+.y-text-editor ol li{
+	list-style-type: decimal;
+	list-style-position: inside;
+}
+
+/* General CSS */
+.page {
+    background-color: #fff;
+}
+.title-main {
+	color: #00b14f;
+	text-align: center;
+    font-size: 6rem;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    line-height: 7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.title-2 {
+    color: #fff;
+    font-size: 4.5rem;
+    letter-spacing: 4px;
+    padding-top: 10px;
+}
+.btn-main {
+	background: #00b14f;
+    color: #fff;
+    padding: 20px 70px;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    border-radius: 15px;
+}
+.btn-main:focus {
+	background: #00b14f;
+    color: #fff;
+    text-decoration: none;
+}
+.btn-main:hover {
+	background: #00b14f;
+    color: #fff;
+}
+
+
+/* Menu */
+.box-header-mobile {
+	display: none; 
+}
+
+/* menu fixed */
+.menu-fixed {
+	position: fixed;
+	top: -41px;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background-color: #fff;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.5s;
+    box-shadow: 4px 3px 10px 0 rgba(0,0,0,.6);
+    opacity: 0;
+    visibility: hidden;
+}
+#menu-center.active {
+	top: 0;
+	opacity: 1;
+	visibility: visible;
+}
+#menu-center ul {
+	margin-bottom: 0;
+}
+#menu-center ul li a {
+	display: inline-block;
+	padding: 10px 40px;
+    font-size: 1.6rem;
+}
+#menu-center ul li {
+    list-style: none;
+    display: inline;
+}
+#menu-center ul li a.active, #menu-center ul li a:hover  {
+    color: #00b14f;
+    text-decoration: none;
+}
