@@ -974,6 +974,7 @@ a:hover, button:hover {
     font-size: 14px;
     height: 38px;
     line-height: initial;
+    color: #000;
 }
 .y-form-style-1 select {
   padding: 0 12px;
@@ -1131,11 +1132,11 @@ a:hover, button:hover {
 }
 
 /* 4. Register */
-.yosu-register-page .y-checkbox-subcribe {
+.y-checkbox-subcribe {
   font-weight: normal;
   margin-bottom: 10px;
 }
-.yosu-register-page .y-checkbox-subcribe input[type="checkbox"] {
+.y-checkbox-subcribe input[type="checkbox"] {
   height: 13px;
 }
 
