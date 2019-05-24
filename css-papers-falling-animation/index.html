@@ -12,41 +12,78 @@
     <style>
     	.box-content {
     		background-color: #000;
-    		height: 600px;
+    		height: 800px;
+            position: relative;
     	}
     </style>
 </head>
 
 
 <body>
+    
     <div class="container">
-    	<h1>CSS falling leaves <a target="_blank" href="https://codepen.io/nirajpatil/pen/zGogvX">link source</a></h1>
-    	<div class="box-content">
-    		<!-- Box falling -->
-    		<div class="y-falling">
-		        <div id="y-leaves">
-		            <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
-		            <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i><i></i>
-		            <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i><i></i>
-		        </div>
-	        </div>
-        </div>
-    </div>
-    <div class="container">
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
         <a class="btn btn-success" href="javascript:;" id="start-animation">start animation</a>
         <a class="btn btn-success" href="javascript:;" id="stop-animation">stop animation</a>
+    	<h1>CSS falling leaves <a target="_blank" href="https://codepen.io/nirajpatil/pen/zGogvX">link source</a></h1>
     </div>
+    <div class="box-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat reprehenderit architecto error officia nulla? Recusandae, facere quia nihil repellendus dolores odit amet aliquid itaque, libero doloribus sequi odio consectetur soluta?</p>
+
+        <!-- Box falling -->
+        <div class="y-falling">
+            <div class="y-leaves left">
+                <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+            </div>
+            <div class="y-leaves right">
+                <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+                <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i> <i></i>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script>
         $(document).ready(function() {
+            $('.y-leaves').parent().css('possition','relative');
             // Run animation Falling function
             function onFalling() {
-                $('#y-leaves').addClass('active');
+                console.log("on");
+                $('.y-leaves').addClass('active');
             }
             function offFalling() {
-                $('#y-leaves').removeClass('active');
+                $('.y-leaves').removeClass('active');
             }
 
             // Click button run animation
@@ -56,6 +93,10 @@
             $('#stop-animation').click(function() {
                 offFalling();
             })
+
+            $(document).on('show.bs.modal', '#myModal', function () {
+                onFalling();
+            });
         });
     </script>
 </body>
