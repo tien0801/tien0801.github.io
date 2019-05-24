@@ -27,7 +27,7 @@ a:hover {
 
 a:focus { outline: none; }
 
-img {
+img, video {
   max-width: 100%;
   height: auto;
 }
