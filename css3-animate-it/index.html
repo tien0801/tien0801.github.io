@@ -26,6 +26,13 @@
 	<div class="container">
 		<h1><a target="_blank" href="http://jackonthe.net/css3animateit/">css3animateit</a> Scroll trigger animation</h1>
 
+		<!-- Loop animation -->
+		<div class="section-bg animatedParent">
+	        <img class="img-bg" src="https://dummyimage.com/1200x300/bcbcbc/000000" alt="">
+	        <h2 class='repeat animated bounceInRight'>repeat bounceInRight</h2>
+	        <h2 class='repeat animated bounceInRight slowest'>repeat bounceInRight slowest</h2>
+	    </div>
+	    
 		<div class="section-bg animatedParent">
 	        <img class="img-bg" src="https://dummyimage.com/1200x300/bcbcbc/000000" alt="">
 	        <h2 class='animated bounceInRight'>bounceInRight</h2>
@@ -68,6 +75,19 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<script src="js/css3-animate-it.js"></script>
+	<!-- Loop animation -->
+	<script>
+		$(document).ready(function(){
+            $.doTimeout(2500, function(){
+                $('.repeat.go').removeClass('go');
+                return true;
+            });
+            $.doTimeout(2520, function(){
+                $('.repeat').addClass('go');
+                return true;
+            });
+        });
+	</script>
 
 </body>
 </html>
