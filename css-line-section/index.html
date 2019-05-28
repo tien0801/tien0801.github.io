@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+        .section-line {
+            position: relative;
+            z-index: 1;
+            padding-bottom: 50px;
+            background-color: #ddd;
+        }
+        .section-line:before, .section-line:after {
+            position: absolute;
+            content: "";
+            pointer-events: none;
+
+            top: 0;
+            left: -25%;
+            z-index: -1;
+            width: 150%;
+            height: 75%;
+            background: inherit;
+            -webkit-transform: rotate(-2deg);
+            transform: rotate(-2deg);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+        .section-line:before {
+            height: 50%;
+            -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+            -webkit-transform-origin: 3% 0;
+            transform-origin: 3% 0;
+            background-color: #ee8022;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSS Line Section</h1>
+<pre>
+    <code>
+.section-line {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 50px;
+    background-color: #ddd;
+}
+.section-line:before, .section-line:after {
+    position: absolute;
+    content: "";
+    pointer-events: none;
+
+    top: 0;
+    left: -25%;
+    z-index: -1;
+    width: 150%;
+    height: 75%;
+    background: inherit;
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+.section-line:before {
+    height: 50%;
+    -webkit-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+    -webkit-transform-origin: 3% 0;
+    transform-origin: 3% 0;
+    background-color: #ee8022;
+}
+    </code>
+</pre>
+    </div>
+
+    <div class="section-line">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, ullam provident hic eos doloremque suscipit eius vitae, autem id tempore nihil corporis officiis deleniti nesciunt debitis explicabo! Officia, soluta, similique.</p>
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
