@@ -1,71 +1,94 @@
-body, html{
+body,
+html {
     height: 100%;
 }
-body{
+
+body {
     margin: 0;
     padding: 0;
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     transition: .4s;
 }
-.mobile-menu{
+
+/* CSS menu mobile */
+.mobile-menu {
     width: 300px;
     position: fixed;
     top: 0;
     bottom: 0;
     left: -300px;
-    background-color: #3498db;
+    background-color: #f3f3f3;
     box-sizing: border-box;
-    padding: 20px 0;
     z-index: 100;
     transition: .3s;
     overflow-y: auto;
 }
-.mobile-menu.show{
+
+.mobile-menu.show {
     left: 0;
 }
-.mobile-menu ul{
-    margin: 0;
-    padding-left: 0;
-}
-.mobile-menu li{
-    list-style-type: none;
-}
-.mobile-menu__title{
+
+.m-menu__title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 10px 20px;
-    border-bottom: 1px solid #fff;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: #fff;
+    padding: 12px 10px 12px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, .5);
 }
-.mobile-menu__title h4{
-    font-size: 20px;
+
+.m-menu__title h4 {
+    font-size: 15px;
     margin: 0;
 }
-.mobile-menu__title .mobile-menu-close{
+
+.m-menu__title .m-menu-close {
     padding: 0;
-    font-size: 18px;
-    background-color: black;
+    font-size: 25px;
     width: 25px;
     height: 25px;
     text-align: center;
     line-height: 25px;
+    text-decoration: none;
+    color: #111;
+    transform: rotate(45deg);
 }
-.mobile-menu li a{
-    color: #fff;
+
+.mobile-menu ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+.mobile-menu li {
+    position: relative;
+    list-style-type: none;
+}
+
+.mobile-menu li a {
+    color: #000;
     text-decoration: none;
     display: block;
-    padding: 15px 10px;
+    padding: 10px 10px 10px 20px;
     transition: .2s;
 }
-.has-submenu > a{
+
+.mobile-menu li > a:before {
+    content: '';
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: block;
+    position: absolute;
+    left: 20px;
+    right: 0;
+    bottom: 0;
+}
+
+.has-submenu>a {
     position: relative;
 }
-.has-submenu > a:after{
-    content: "\f105";
+
+.has-submenu>a:after {
+    content: "+";
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -76,18 +99,24 @@ body{
     justify-content: center;
     align-items: center;
     transition: .2s;
-    font-family: FontAwesome;
+    /* font-family: FontAwesome; */
 }
-.has-submenu > a.active:after{
-    transform: translateY(-50%) rotate(90deg);
+
+.has-submenu>a.active:after {
+    content: "-";
+    /* transform: translateY(-50%) rotate(90deg); */
 }
-.has-submenu .sub-menu{
-    padding-left: 25px;
+
+.has-submenu .sub-menu {
+    padding-left: 20px;
     display: none;
+}
+.has-submenu .sub-menu li a {
+    font-size: 14px;
 }
 
 /* Navbar */
-.navbar{
+.navbar {
     position: relative;
     width: 100%;
     background-color: grey;
@@ -96,14 +125,17 @@ body{
     box-sizing: border-box;
     margin-bottom: 10px;
 }
+
 .sticky {
     position: fixed;
     top: 0;
 }
-.sticky + .page-content {
+
+.sticky+.page-content {
     padding-top: 49px;
 }
-.mobile-menu-btn{
+
+.mobile-menu-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,15 +143,18 @@ body{
     width: 35px;
     height: 35px;
 }
-.mobile-menu-btn span{
+
+.mobile-menu-btn span {
     width: 80%;
     height: 3px;
     background-color: #fff;
 }
-.mobile-menu-btn span:not(:last-child){
+
+.mobile-menu-btn span:not(:last-child) {
     margin-bottom: 8px;
 }
-.overlay.active{
+
+.overlay-menu.active {
     content: '';
     position: fixed;
     top: 0;
@@ -129,28 +164,33 @@ body{
     background-color: rgba(0, 0, 0, 0.7);
     transition: .5s;
 }
-.mobile-logo{
+
+.mobile-logo {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.mobile-logo img{
+
+.mobile-logo img {
     max-height: 30px;
 }
-@media only screen and (min-width : 769px){
-    .navbar{
+
+@media only screen and (min-width : 769px) {
+    .navbar {
         display: none;
     }
-    .sticky + .page-content {
+
+    .sticky+.page-content {
         padding-top: 0;
     }
 }
-@media only screen and (max-width : 380px){
-    body.show-mobile-menu{
+
+@media only screen and (max-width : 380px) {
+    body.show-mobile-menu {
         transform: translateX(250px);
     }
-    .mobile-menu{
+    .mobile-menu {
         width: 250px;
         left: -250px;
     }

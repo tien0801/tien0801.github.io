@@ -191,11 +191,11 @@
         assumenda fugiat?
     </div>
     <div class="mobile-menu">
+        <div class="m-menu__title">
+            <h4>Menu</h4>
+            <a href="javascript:;" class="m-menu-close">+</a>
+        </div>
         <ul>
-            <li class="mobile-menu__title">
-                <h4>Menu</h4>
-                <a href="javascript:;" class="mobile-menu-close">x</a>
-            </li>
             <li><a href="#">Trang chủ</a></li>
             <li class="has-submenu">
                 <a href="#">Giới thiệu</a>
@@ -270,10 +270,41 @@
             <li><a href="#">Liên hệ</a></li>
         </ul>
     </div>
-    <div class="overlay"></div>
+    <div class="overlay-menu"></div>
+
+
+    <!-- JS Main -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
-    <script src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".has-submenu > a").on("click", function(e){
+                var $parentli = $(this).closest('li');
+                $parentli.siblings('li').find('ul:visible').slideUp().prev('a').removeClass("active");
+                $parentli.find('> ul').slideToggle().prev('a').toggleClass("active");
+            })
+            $('.mobile-menu-btn, .m-menu-close').on("click", function(){
+                $('.overlay-menu').toggleClass("active");
+                $(".mobile-menu").toggleClass("show");
+                return false;
+            })
+            $('.overlay-menu').on("click", function(){
+                $(this).removeClass("active");
+                $(".mobile-menu").removeClass("show");
+            })
+        });
+
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("navbar");
+        function myFunction() {
+          if (window.pageYOffset > 0) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+
 </body>
 
 </html>

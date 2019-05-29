@@ -1,105 +1,87 @@
+var iOS = navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)
+if (iOS)
+  preventZoomOnFocus();
 
-if($('.home-slider').length > 0) {
-    $('.home-slider').owlCarousel({
-        loop: true,
-        // autoplay: true,
-        // autoplayTimeout: 4000,
-        margin: 0,
-        responsiveClass:true,
-        items: 1,
-        dots: true,
-        navText : ["",""],
-        rewindNav : true,
-        nav: true,
-    })
+function preventZoomOnFocus()
+{
+  document.documentElement.addEventListener("touchstart", onTouchStart);
+  document.documentElement.addEventListener("focusin", onFocusIn);
 }
 
-if($('.slider-owl-2').length > 0) {
-    $('.slider-owl-2').owlCarousel({
-        loop: false,
-        margin: 0,
-        responsiveClass:true,
-        items: 4,
-        dots: true,
-        nav: false,
-        responsive : {
-            // breakpoint from 0 up
-            0 : {
-               items: 1,
-            },
-            480 : {
-                items: 1,
-            },
-            768 : {
-                items: 1,
-            },
-            1200 : {
-                items: 4,
-            }
-        }
-    })
-}
-if($('.slider-owl-3').length > 0) {
-    $('.slider-owl-3').owlCarousel({
-        loop: false,
-        margin: 0,
-        responsiveClass:true,
-        items: 4,
-        dots: true,
-        nav: false,
-        responsive : {
-            // breakpoint from 0 up
-            0 : {
-               items: 1,
-            },
-            480 : {
-                items: 1,
-            },
-            768 : {
-                items: 2,
-            },
-            992 : {
-                items: 2,
-            },
-            1200 : {
-                items: 4,
-            }
-        }
-    })
+let dont_disable_for = ["checkbox", "radio", "file", "button", "image", "submit", "reset", "hidden"];
+//let disable_for = ["text", "search", "password", "email", "tel", "url", "number", "date", "datetime-local", "month", "year", "color"];
+
+function onTouchStart(evt)
+{
+  let tn = evt.target.tagName;
+
+  // No need to do anything if the initial target isn't a known element
+  // which will cause a zoom upon receiving focus
+  if (    tn != "SELECT"
+      &&  tn != "TEXTAREA"
+      && (tn != "INPUT" || dont_disable_for.indexOf(evt.target.getAttribute("type")) > -1)
+     )
+    return;
+
+  // disable zoom
+  setViewport("width=device-width, initial-scale=1.0, user-scalable=0");
 }
 
-if($('.m-home-slider').length > 0) {
+// NOTE: for now assuming this focusIn is caused by user interaction
+function onFocusIn(evt)
+{
+  // reenable zoom
+  setViewport("width=device-width, initial-scale=1.0, user-scalable=1");
+}
 
-    $('.m-home-slider').owlCarousel({
-        loop: true,
-        // autoplay: true,
-        // autoplayTimeout: 4000,
-        margin: 0,
-        responsiveClass:true,
-        items: 1,
-        dots: true,
-        navText : ["",""],
-        rewindNav : true,
-        nav: true,
+// add or update the <meta name="viewport"> element
+function setViewport(newvalue)
+{
+  let vpnode = document.documentElement.querySelector('head meta[name="viewport"]');
+  if (vpnode)
+    vpnode.setAttribute("content",newvalue);
+  else
+  {
+    vpnode = document.createElement("meta");
+    vpnode.setAttribute("name", "viewport");
+    vpnode.setAttribute("content", newvalue);
+  }
+}
+
+// Mmenu
+$(window).bind("load resize", function(){
+    if(jQuery(window).width()<992){
+        jQuery(document).ready(function( $ ) {
+          $("#nav-mobile").mmenu({
+             "extensions": [
+                "position-back",
+                "position-right"
+             ]
+          });
+       });
         
-    })
-}
+    }
+});
 
 $(document).ready(function(){
+    // Search button
+    $('.top-search .icon-search').click(function() {
+        $('.box-search').slideToggle(400);
+    })
 
-
-	// Menu fixed
-	$(window).scroll(function() {
-        if ($(document).scrollTop() > 100) {
-            $('#menu-center').addClass('active');
-        }
-        else {
-            $('#menu-center').removeClass('active');
-        }
+    // Scroll to top
+    $(".scroll-top-btn").on("click", function() {
+      $('html,body').animate({ scrollTop: 0 }, 'slow');
+      return false;
+    });
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+          $(".scroll-top-btn").addClass("visible");
+      } else {
+          $(".scroll-top-btn").removeClass("visible");
+      }
     });
 
-    $(document).on("scroll", onScroll);
-    
     //smoothscroll
     $('.menu-scroll a[href^="#"].link-scroll').on('click', function (e) {
         e.preventDefault();
@@ -133,40 +115,22 @@ $(document).ready(function(){
 	}
     onScroll();
 
-    // Click Menu mobile
-    $('#menu li a').click(function(e) {
-        // e.preventDefault();
-        if($(this).hasClass('link-scroll')) {
-            var API = $("#menu").data( "mmenu" );
-            API.close();
-        } else {
-           
-            var self = jQuery(this);
-            var href = self.attr('href');
-            e.preventDefault();
-            window.location = href;
-        }
-    })
 
-    // Readmore section 4
-    $('.btn-readmore').click(function() {
-        $(this).closest('.section-4').toggleClass('show-all');
-        // if($('.section-4').hasClass('show-full')) {
-        //     $(this).text("TÌM HIỂU CHI TIẾT");
-        // } else {
-        //     $(this).text("THU GỌN");
-        // }
-    })
-    
-    // Btn copy code
-    $('.btn-copycode').click(function() {
-        copyText = $('body').find('.box-input-code input');
-        copyText.select();
-        document.execCommand("copy");
-        $(this).text("Copy thành công");
-        $(this).css('background-color', '#828282');
-        $(this).css('color', '#fff');
-    })
+
+    if($('.home-slider').length > 0) {
+        $('.home-slider').owlCarousel({
+            loop: true,
+            // autoplay: true,
+            // autoplayTimeout: 4000,
+            margin: 0,
+            responsiveClass:true,
+            items: 1,
+            dots: true,
+            navText : ["",""],
+            rewindNav : true,
+            nav: true,
+        })
+    }
 
 })
 
