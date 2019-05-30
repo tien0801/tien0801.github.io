@@ -313,7 +313,7 @@ li {
 }
 
 @media (max-width: 991px) {
-	.menu-header {
+	.header {
 		display: none;
 	}
 	.header-mobile {
