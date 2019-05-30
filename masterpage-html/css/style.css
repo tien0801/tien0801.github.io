@@ -28,7 +28,7 @@ a {
 a:hover, a:focus {
 	cursor: pointer;
 	text-decoration: unset;
-	color: #159c40;
+	color: #00b14f;
 }
 img {
 	max-width: 100%;
@@ -48,10 +48,10 @@ li {
 	list-style: none;
 }
 .color-main {
-	color: #159c40;
+	color: #00b14f;
 }
 .bg-main {
-	background-color: #159c40;
+	background-color: #00b14f;
 }
 .y-box-img {
     position: relative;
