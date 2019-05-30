@@ -1,0 +1,113 @@
+/* CTA Phone */
+.cta-phone {
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    transform: scaleY(-50%);
+    border-radius: 5px;
+    padding: 10px 15px 17px;
+    z-index: 9;
+}
+.cta-phone:hover, .cta-phone:focus {
+    color: initial;
+}
+.cta-phone i {
+    font-size: 48px;
+}
+.cta-phone .text-cta {
+    height: 20px;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+}
+@media (min-width: 1200px) {
+    .cta-phone {
+        padding-left: 65px;
+    }
+    .cta-phone i {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+    }
+}
+@media (max-width: 1199px) {
+    .cta-phone .text-cta {
+        display: none;
+    }
+}
+
+/* Fixed tool-right */
+.fixed-right-menu {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 99;
+}
+
+.fixed-right-menu ul li {
+    list-style-type: none;
+    display: block;
+    background-color: #db2d2e;
+    position: relative;
+    width: 40px;
+    height: 45px;
+    transition: .4s;
+    border-bottom: 1px solid #f8f8f8;
+}
+
+.fixed-right-menu ul li:last-child {
+    border: 0;
+}
+
+.fixed-right-menu .icon {
+    width: 100%;
+    height: 45px;
+}
+
+.fixed-right-menu .icon img {
+    max-width: 28px;
+}
+
+.fixed-right-menu ul li:hover {
+    background-color: #000;
+}
+
+.fixed-right-menu ul li.active {
+    background-color: #000;
+}
+
+.fixed-right-menu ul li:hover>span {
+    transition: all 0.5s;
+    width: 200px;
+    left: -180px;
+    color: #fff;
+    border-radius: 3px 0 0 3px;
+}
+
+.fixed-right-menu ul li>span {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #c8102e;
+    line-height: 44px;
+    height: 44px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    opacity: 1;
+    pointer-events: auto;
+    color: #fff;
+    text-align: left;
+    padding-left: 10px;
+    z-index: -1;
+}
+
+.fixed-right-menu ul li>span>a {
+    display: block;
+    color: #fff;
+}
