@@ -1,43 +1,20 @@
  /* Home Slider */
-.owl-carousel .item-slider {
-	display: block;
-}
-
-.owl-carousel .owl-nav .owl-prev,
-  .owl-carousel .owl-nav .owl-next {
-    font-family: 'fontAwesome';
-}
-
 .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+    font-size: 30px;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top: 50%;
+	margin-top: -20px;
 }
 .owl-carousel .owl-nav .owl-prev {
-	position: absolute;
-	height: 40px;
-	width: 40px;
-	top: 50%;
 	left: 0;
-	margin-top: -40px;
 }
 .owl-carousel .owl-nav .owl-next {
-	position: absolute;
-	height: 40px;
-	width: 40px;
-	top: 50%;
 	right: 0;
-	margin-top: -40px;
-}
-.owl-carousel .owl-nav .owl-prev:before{
-    content: "\f053";
-    font-size: 25px;
-    color: #fff;
-}
-.owl-carousel .owl-nav .owl-next:after{
-    content: "\f054";
-    font-size: 25px;
-    color: #fff;
 }
 
 /* Css - Hover show Nav */
@@ -53,7 +30,7 @@
 	opacity: 1;
  }
 
- /* Css - Show Dots */
+/* Css - Show Dots */
 .owl-carousel .owl-dots {
     position: absolute;
     left: 0;
