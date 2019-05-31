@@ -68,11 +68,7 @@
     max-width: 28px;
 }
 
-.fixed-right-menu ul li:hover {
-    background-color: #000;
-}
-
-.fixed-right-menu ul li.active {
+.fixed-right-menu ul li:hover, .fixed-right-menu ul li.active {
     background-color: #000;
 }
 
