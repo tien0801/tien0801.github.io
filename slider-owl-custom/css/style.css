@@ -1,4 +1,4 @@
- /* Home Slider */
+ /* Nav Slider Owl 2 */
 .owl-carousel .owl-nav .owl-prev, .owl-carousel .owl-nav .owl-next {
 	display: flex;
 	align-items: center;
@@ -30,7 +30,7 @@
 	opacity: 1;
  }
 
-/* Css - Show Dots */
+ /* Dots Slider Owl 2 */
 .owl-carousel .owl-dots {
     position: absolute;
     left: 0;
