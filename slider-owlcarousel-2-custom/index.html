@@ -8,246 +8,256 @@
     <title></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-
     <style>
-        .box-slider-4 {
-            padding: 100px 0;
-        }
-        .section-4 .owl-dots {
-          background: linear-gradient(#12884b, #132e1d);
-          max-height: 340px;
-          overflow-y: auto;
-        }
-        .section-4 .owl-dots::-webkit-scrollbar-track
-        {
-          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-          background-color: #F5F5F5;
-        }
-        .section-4 .owl-dots::-webkit-scrollbar
-        {
-          width: 6px;
-          background-color: #F5F5F5;
-        }
-        .section-4 .owl-dots::-webkit-scrollbar-thumb
-        {
-          background-color: #132e1d;
-        }
-        .section-4 .owl-dots .owl-dot {
-          color: #fff;
-          padding: 12px 20px;
-          border-bottom: 1px solid;
-          cursor: pointer;
-        }
-        .section-4 .owl-dots .owl-dot:last-child {
-          border-bottom: 1px solid #132e1d;
-        }
-        .section-4 .owl-dots .owl-dot.active {
-          background: #b2cdbf;
-        }
+    .box-slider-4 {
+        padding: 100px 0;
+    }
 
-        .s4-slider {
-          z-index: 99 !important;
-          box-shadow: 0px 0px 20px -1px;
-        }
-        .s4-slider .item a {
-          height: 340px;
-        }
-        .section-4 .navPrev, .section-4 .navNext {
-          text-align: center;
-        }
-        .section-4 .navPrev {
-          position: absolute;
-          top: -60px;
-          left:  0;
-          right: 0;
-          z-index: 2;
-          background-size: 100px 100px;
-        }
-        .section-4 .navPrev:hover {
-          background-size: 118px 118px;
-        }
-        .section-4 .navPrev span, .section-4 .navNext span {
-          display: block;
-          width: 80%;
-          vertical-align: middle;
-          cursor: pointer;
-          margin:  0 auto;
-        }
-        .section-4 .navPrev .icon-s4 {
-          position: absolute;
-          content: "";
-          top: 0;
-          left: 0;
-          right: 0;
-          width: 20px;
-          height: 20px;
-        }
-        .section-4 .navPrev .icon-s4 img {
-          width: 20px;
-          height: 20px;
-        }
+    .section-4 .owl-dots {
+        background: linear-gradient(#12884b, #132e1d);
+        max-height: 340px;
+        overflow-y: auto;
+    }
 
-        .section-4 .navPrev span img,.section-4 .navNext span img {
-          position: relative;
-          margin: 0 auto;
-          cursor: pointer;
-          width: 100%;
-          height: auto;
-          filter: blur(2px);
-        }
-        .section-4 .navPrev span:hover img,.section-4 .navNext span:hover img {
-          filter: blur(0);
-        }
-        .section-4 .navNext {
-          position: absolute;
-          bottom: -60px;
-          left:  0;
-          right: 0;
-          z-index: 2;
-          background-size: 100px 100px;
-        }
+    .section-4 .owl-dots::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #F5F5F5;
+    }
+
+    .section-4 .owl-dots::-webkit-scrollbar {
+        width: 6px;
+        background-color: #F5F5F5;
+    }
+
+    .section-4 .owl-dots::-webkit-scrollbar-thumb {
+        background-color: #132e1d;
+    }
+
+    .section-4 .owl-dots .owl-dot {
+        color: #fff;
+        padding: 12px 20px;
+        border-bottom: 1px solid;
+        cursor: pointer;
+    }
+
+    .section-4 .owl-dots .owl-dot:last-child {
+        border-bottom: 1px solid #132e1d;
+    }
+
+    .section-4 .owl-dots .owl-dot.active {
+        background: #b2cdbf;
+    }
+
+    .s4-slider {
+        z-index: 99 !important;
+        box-shadow: 0px 0px 20px -1px;
+    }
+
+    .s4-slider .item a {
+        height: 340px;
+    }
+
+    .section-4 .navPrev,
+    .section-4 .navNext {
+        text-align: center;
+    }
+
+    .section-4 .navPrev {
+        position: absolute;
+        top: -60px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-size: 100px 100px;
+    }
+
+    .section-4 .navPrev:hover {
+        background-size: 118px 118px;
+    }
+
+    .section-4 .navPrev span,
+    .section-4 .navNext span {
+        display: block;
+        width: 80%;
+        vertical-align: middle;
+        cursor: pointer;
+        margin: 0 auto;
+    }
+
+    .section-4 .navPrev .icon-s4 {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 20px;
+        height: 20px;
+    }
+
+    .section-4 .navPrev .icon-s4 img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .section-4 .navPrev span img,
+    .section-4 .navNext span img {
+        position: relative;
+        margin: 0 auto;
+        cursor: pointer;
+        width: 100%;
+        height: auto;
+        filter: blur(2px);
+    }
+
+    .section-4 .navPrev span:hover img,
+    .section-4 .navNext span:hover img {
+        filter: blur(0);
+    }
+
+    .section-4 .navNext {
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        background-size: 100px 100px;
+    }
     </style>
 </head>
 
 <body>
-        <section class="section-4">
-            <div class="container">
-                <h1>Slider OwlCarousel 2 Custom</h1>
-
-                <div class="box-slider-4">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="list-title-slider">
-                                <!-- DOTS Container -->
-                                <ul id='carousel-custom-dots' class='owl-dots'>
-                                    <li class="owl-dot active">Công viên nội khu khép kín</li>
-                                    <li class="owl-dot">Phòng Gym</li>
-                                    <li class="owl-dot">Phòng Yoga</li>
-                                    <li class="owl-dot active">Công viên nội khu khép kín</li>
-                                    <li class="owl-dot">Phòng Gym</li>
-                                    <li class="owl-dot">Phòng Yoga</li>
-                                    <li class="owl-dot active">Công viên nội khu khép kín</li>
-                                    <li class="owl-dot">Phòng Gym</li>
-                                    <li class="owl-dot">Phòng Yoga</li>
-                                    <li class="owl-dot active">Công viên nội khu khép kín</li>
-                                    <li class="owl-dot">Phòng Gym</li>
-                                    <li class="owl-dot">Phòng Yoga</li>
-                                    <li class="owl-dot active">Công viên nội khu khép kín</li>
-                                    <li class="owl-dot">Phòng Gym</li>
-                                    <li class="owl-dot">Phòng Yoga</li>
-                                </ul>
+    <section class="section-4">
+        <div class="container">
+            <h1>Slider OwlCarousel 2 Custom</h1>
+            <div class="box-slider-4">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="list-title-slider">
+                            <!-- DOTS Container -->
+                            <ul class='owl-dots carousel-custom-dots'>
+                                <li class="owl-dot active">Công viên nội khu khép kín</li>
+                                <li class="owl-dot">Phòng Gym</li>
+                                <li class="owl-dot">Phòng Yoga</li>
+                                <li class="owl-dot active">Công viên nội khu khép kín</li>
+                                <li class="owl-dot">Phòng Gym</li>
+                                <li class="owl-dot">Phòng Yoga</li>
+                                <li class="owl-dot active">Công viên nội khu khép kín</li>
+                                <li class="owl-dot">Phòng Gym</li>
+                                <li class="owl-dot">Phòng Yoga</li>
+                                <li class="owl-dot active">Công viên nội khu khép kín</li>
+                                <li class="owl-dot">Phòng Gym</li>
+                                <li class="owl-dot">Phòng Yoga</li>
+                                <li class="owl-dot active">Công viên nội khu khép kín</li>
+                                <li class="owl-dot">Phòng Gym</li>
+                                <li class="owl-dot">Phòng Yoga</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="s4-slider slider-owl-custom owl-carousel">
+                            <div class="item">
+                                <a href="#" class="box-img">
+                                    <img src="images/1.png" alt="" data-navpicture="images/1.png">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="box-img">
+                                    <img src="images/2.png" alt="" data-navpicture="images/2.png">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="box-img">
+                                    <img src="images/3.png" alt="" data-navpicture="images/3.png">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="box-img">
+                                    <img src="images/1.png" alt="" data-navpicture="images/1.png">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="box-img">
+                                    <img src="images/2.png" alt="" data-navpicture="images/2.png">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="box-img">
+                                    <img src="images/3.png" alt="" data-navpicture="images/3.png">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="box-img">
+                                    <img src="images/1.png" alt="" data-navpicture="images/1.png">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="box-img">
+                                    <img src="images/2.png" alt="" data-navpicture="images/2.png">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a href="#" class="box-img">
+                                    <img src="images/3.png" alt="" data-navpicture="images/3.png">
+                                </a>
                             </div>
                         </div>
-                        <div class="col-sm-8">
-                            <div class="s4-slider owl-carousel">
-                                <div class="item">
-                                    <a href="#" class="box-img">
-                                        <img src="images/1.png" alt="" data-navipicture="images/1.png">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="#" class="box-img">
-                                        <img src="images/2.png" alt="" data-navipicture="images/2.png">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="#" class="box-img">
-                                        <img src="images/3.png" alt="" data-navipicture="images/3.png">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="#" class="box-img">
-                                        <img src="images/1.png" alt="" data-navipicture="images/1.png">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="#" class="box-img">
-                                        <img src="images/2.png" alt="" data-navipicture="images/2.png">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="#" class="box-img">
-                                        <img src="images/3.png" alt="" data-navipicture="images/3.png">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="#" class="box-img">
-                                        <img src="images/1.png" alt="" data-navipicture="images/1.png">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="#" class="box-img">
-                                        <img src="images/2.png" alt="" data-navipicture="images/2.png">
-                                    </a>
-                                </div>
-                                <div class="item">
-                                    <a href="#" class="box-img">
-                                        <img src="images/3.png" alt="" data-navipicture="images/3.png">
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="navPrev">
-                                <span>
-                                    <img src="https://placeimg.com/640/480/animals" alt="">
-                                </span>
-                            </div>
-                            <div class="navNext">
-                                <span>
-                                    <img src="https://placeimg.com/640/480/arch" alt="">
-                                </span>
-                            </div>
-
-
+                        <div class="navPrev">
+                            <span>
+                                <img src="https://placeimg.com/640/480/animals" alt="">
+                            </span>
+                        </div>
+                        <div class="navNext">
+                            <span>
+                                <img src="https://placeimg.com/640/480/arch" alt="">
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     </div>
-    
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script>
         var mainSlider;
-
         $(document).ready(function() {
 
-          mainSlider = $('.owl-carousel');
+            mainSlider = $('.slider-owl-custom');
 
-          mainSlider.owlCarousel({
-            autoplay: true,
-            autoplayTimeout: 5000,
-            lazyLoad: true,
-            loop: true,
-            items: 1,
-            smartSpeed: 500,
-            dotsContainer: '#carousel-custom-dots',
-            dots:true,
-          });
+            mainSlider.owlCarousel({
+                autoplay: true,
+                autoplayTimeout: 5000,
+                lazyLoad: true,
+                loop: true,
+                items: 1,
+                smartSpeed: 500,
+                dotsContainer: '.carousel-custom-dots',
+                dots: true,
+            });
 
-          mainSlider.on('changed.owl.carousel', function(property) {
-            var current = property.item.index;
-            var prev = $(property.target).find(".owl-item").eq(current).prev().find("img").attr('data-navipicture');
-            var next = $(property.target).find(".owl-item").eq(current).next().find("img").attr('data-navipicture');
+            mainSlider.on('changed.owl.carousel', function(property) {
+                var current = property.item.index;
+                var prev = $(property.target).find(".owl-item").eq(current).prev().find("img").attr('data-navpicture');
+                var next = $(property.target).find(".owl-item").eq(current).next().find("img").attr('data-navpicture');
 
-            $('.navPrev').find('img').attr('src', prev);
-            $('.navNext').find('img').attr('src', next);
-          });
+                $('.navPrev').find('img').attr('src', prev);
+                $('.navNext').find('img').attr('src', next);
+            });
 
         });
 
-        $('.owl-dot').click(function(){mainSlider.trigger('to.owl.carousel', [$(this).index(), 300]);});
-         
+        $('.owl-dot').click(function() { mainSlider.trigger('to.owl.carousel', [$(this).index(), 300]); });
+
         $('.navNext').on('click', function() {
-          mainSlider.trigger('next.owl.carousel', [300]);
-          return false;
+            mainSlider.trigger('next.owl.carousel', [300]);
+            return false;
         });
 
         $('.navPrev').on('click', function() {
-          mainSlider.trigger('prev.owl.carousel', [300]);
-          return false;
+            mainSlider.trigger('prev.owl.carousel', [300]);
+            return false;
         });
     </script>
 </body>
