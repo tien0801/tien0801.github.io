@@ -49,11 +49,11 @@
 	background: #ff0000;
 }
 .owl-carousel .owl-dots .owl-dot span {
-    background: none repeat scroll 0 0 #869791;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     display: block;
     height: 12px;
     margin: 5px 7px;
-    opacity: 0.5;
+    opacity: 1;
     width: 12px;
 }
