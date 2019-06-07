@@ -30,17 +30,20 @@ body {
 }
 
 .m-menu__title {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 10px 12px 20px;
+    padding: 11px 20px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     color: rgba(0, 0, 0, .5);
 }
 
-.m-menu__title h4 {
+.m-menu__title h5 {
     font-size: 15px;
     margin: 0;
+    text-align: center;
+    width: 100%;
 }
 
 .m-menu__title .m-menu-close {
@@ -52,7 +55,10 @@ body {
     line-height: 25px;
     text-decoration: none;
     color: #111;
-    transform: rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+    position: absolute;
+    top: 50%;
+    right: 3px;
 }
 
 .mobile-menu ul {
@@ -69,7 +75,7 @@ body {
     color: #000;
     text-decoration: none;
     display: block;
-    padding: 10px 10px 10px 20px;
+    padding: 11px 10px 11px 20px;
     transition: .2s;
 }
 
