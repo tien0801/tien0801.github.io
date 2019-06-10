@@ -217,7 +217,8 @@
         exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
         assumenda fugiat?
     </div>
-    <div class="mobile-menu">
+
+    <div class="y-mobile-menu">
         <div class="m-menu__title">
             <h5>Menu</h5>
             <a href="javascript:;" class="m-menu-close">+</a>
@@ -308,7 +309,7 @@
     <script>
         $(document).ready(function () {
             function closeMenu() {
-                $('.mobile-menu').removeClass('show');
+                $('.y-mobile-menu').removeClass('show');
                 $('.overlay-menu').removeClass('active');
             }
             $(".has-submenu > a").on("click", function(e){
@@ -318,13 +319,13 @@
             })
             $('.mobile-menu-btn').on("click", function(){
                 $('.overlay-menu').toggleClass("active");
-                $(".mobile-menu").toggleClass("show");
+                $(".y-mobile-menu").toggleClass("show");
                 return false;
             })
             $('.overlay-menu, .m-menu-close').on("click", function(){
                 closeMenu();
                 // $(this).removeClass("active");
-                // $(".mobile-menu").removeClass("show");
+                // $(".y-mobile-menu").removeClass("show");
             })
         });
 
