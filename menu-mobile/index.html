@@ -307,6 +307,10 @@
 
     <script>
         $(document).ready(function () {
+            function closeMenu() {
+                $('.mobile-menu').removeClass('show');
+                $('.overlay-menu').removeClass('active');
+            }
             $(".has-submenu > a").on("click", function(e){
                 var $parentli = $(this).closest('li');
                 $parentli.siblings('li').find('ul:visible').slideUp().prev('a').removeClass("active");
