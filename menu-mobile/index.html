@@ -316,14 +316,15 @@
                 $parentli.siblings('li').find('ul:visible').slideUp().prev('a').removeClass("active");
                 $parentli.find('> ul').slideToggle().prev('a').toggleClass("active");
             })
-            $('.mobile-menu-btn, .m-menu-close').on("click", function(){
+            $('.mobile-menu-btn').on("click", function(){
                 $('.overlay-menu').toggleClass("active");
                 $(".mobile-menu").toggleClass("show");
                 return false;
             })
-            $('.overlay-menu').on("click", function(){
-                $(this).removeClass("active");
-                $(".mobile-menu").removeClass("show");
+            $('.overlay-menu, .m-menu-close').on("click", function(){
+                closeMenu();
+                // $(this).removeClass("active");
+                // $(".mobile-menu").removeClass("show");
             })
         });
 
