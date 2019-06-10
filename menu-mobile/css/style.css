@@ -97,7 +97,6 @@
 
 .has-submenu>a.active:after {
     content: "-";
-    /* transform: translateY(-50%) rotate(90deg); */
 }
 
 .has-submenu .sub-menu {
