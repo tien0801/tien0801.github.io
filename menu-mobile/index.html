@@ -226,20 +226,24 @@
         <ul>
             <li><a href="#">Trang chủ</a></li>
             <li class="has-submenu">
-                <a href="#">Giới thiệu</a>
+                <a href="#sub1">Giới thiệu</a>
+                <span class="btn-toggle-sub"></span>
                 <ul class="sub-menu">
                     <li> <a href="#">Về chúng tôi</a> </li>
                     <li> <a href="#">Về công ty</a> </li>
                 </ul>
             </li>
             <li class="has-submenu">
-                <a href="#">Dịch vụ</a>
+                <a href="#sub1">Dịch vụ</a>
+                <span class="btn-toggle-sub"></span>
                 <ul class="sub-menu">
                     <li class="has-submenu">
-                        <a href="#">Dịch vụ 1</a>
+                        <a href="#sub2">Dịch vụ 1</a>
+                        <span class="btn-toggle-sub"></span>
                         <ul class="sub-menu">
                             <li class="has-submenu">
                                 <a href="#">Dịch vụ a</a>
+                                <span class="btn-toggle-sub"></span>
                                 <ul class="sub-menu">
                                     <li> <a href="#">Dịch vụ a.1</a> </li>
                                     <li> <a href="#">Dịch vụ a.2</a> </li>
@@ -263,7 +267,8 @@
                 </ul>
             </li>
             <li class="has-submenu">
-                <a href="#">Tin tức</a>
+                <a href="#sub1">Tin tức</a>
+                <span class="btn-toggle-sub"></span>
                 <ul class="sub-menu">
                     <li class="has-submenu">
                         <a href="#">Tin tức 1</a>
@@ -278,6 +283,7 @@
                     </li>
                     <li class="has-submenu">
                         <a href="#">Tin tức 2</a>
+                        <span class="btn-toggle-sub"></span>
                         <ul class="sub-menu">
                             <li> <a href="#">Tin tức a</a> </li>
                             <li> <a href="#">Tin tức b</a> </li>
@@ -312,10 +318,18 @@
                 $('.y-mobile-menu').removeClass('show');
                 $('.overlay-menu').removeClass('active');
             }
-            $(".has-submenu > a").on("click", function(e){
-                var $parentli = $(this).closest('li');
-                $parentli.siblings('li').find('ul:visible').slideUp().prev('a').removeClass("active");
-                $parentli.find('> ul').slideToggle().prev('a').toggleClass("active");
+            $(".has-submenu > .btn-toggle-sub").on("click", function(e){
+                var parentli = $(this).closest('li');
+                if(parentli.hasClass('opened')) {
+                    parentli.removeClass('opened');
+                    parentli.find('> ul.sub-menu').slideUp(400);
+                } else {
+                    parentli.addClass('opened');
+                    parentli.find('> ul.sub-menu').slideDown(400);
+                }
+                parentli.siblings('li').removeClass('opened');
+                parentli.siblings('li').find('.has-submenu.opened').removeClass('opened');
+                parentli.siblings('li').find('ul:visible').slideUp();
             })
             $('.mobile-menu-btn').on("click", function(){
                 $('.overlay-menu').toggleClass("active");
@@ -324,8 +338,6 @@
             })
             $('.overlay-menu, .m-menu-close').on("click", function(){
                 closeMenu();
-                // $(this).removeClass("active");
-                // $(".y-mobile-menu").removeClass("show");
             })
         });
 
