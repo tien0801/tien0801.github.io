@@ -10,6 +10,7 @@
     box-sizing: border-box;
     transition: .2s;
     overflow-y: auto;
+    overflow-x: hidden;
     z-index: 999;
 }
 
@@ -36,7 +37,7 @@
 
 .m-menu__title .m-menu-close {
     padding: 0;
-    font-size: 25px;
+    font-size: 26px;
     width: 26px;
     height: 26px;
     text-align: center;
@@ -140,6 +141,7 @@
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
     padding: 7px 15px;
     box-sizing: border-box;
+    z-index: 777;
 }
 
 .mobile-menu-btn {
