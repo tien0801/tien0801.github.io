@@ -140,17 +140,13 @@
     box-sizing: border-box;
 }
 
-.page-content {
-    padding-top: 49px;
-}
-
 .mobile-menu-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 28px;
-    height: 32px;
+    width: 26px;
+    height: 28px;
     position: absolute;
     top: 50%;
     left: 15px;
@@ -168,12 +164,13 @@
 }
 
 .y-logo-mobile {
-    text-align: center;
+    margin: 0 auto;
+    width: max-content;
 }
 .y-logo-mobile .box-img-flex {
     height: 42px;
 }
 
-
-
-
+.page-content {
+    margin-top: 58px;
+}
