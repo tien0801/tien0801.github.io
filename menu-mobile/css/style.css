@@ -8,9 +8,9 @@
     left: -85%;
     background-color: #f3f3f3;
     box-sizing: border-box;
-    z-index: 100;
     transition: .2s;
     overflow-y: auto;
+    z-index: 999;
 }
 
 .y-mobile-menu.show {
