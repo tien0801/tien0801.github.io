@@ -22,12 +22,7 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row box-move-element">
-			<p class="col-md-3 element-1">Col 1</p>
-			<p class="col-md-3 element-2">Col 2</p>
-		</div>
-	</div>
-	<div class="container">
+		<h1>flex-wrap</h1>
 		<pre>
 			<code>
 .box-move-element {
@@ -40,6 +35,29 @@
 }
 			</code>
 		</pre>
+	</div>
+	<div class="container">
+		<div class="row box-move-element">
+			<div class="col-md-3 element-1" style="background-color:lavenderblush;" >Col 1</div>
+			<div class="col-md-3 element-2" style="background-color:orange;" >Col 2</div>
+			<div class="col-md-3 element-3" style="background-color:lavender;" >Col 3</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<h1>Push and Pull</h1>
+		<pre>
+			<code>
+col-sm-4 col-sm-push-8
+<br>
+col-sm-8 col-sm-pull-4
+
+			</code>
+		</pre>
+	<div class="row">
+		<div class="col-sm-4 col-sm-push-8" style="background-color:lavender;">.col-sm-4 .col-sm-push-8 Box-1</div>
+		<div class="col-sm-8 col-sm-pull-4" style="background-color:lavenderblush;">.col-sm-8 .col-sm-pull-4 Box 2</div>
+	</div>
 	</div>
 
 	<script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
