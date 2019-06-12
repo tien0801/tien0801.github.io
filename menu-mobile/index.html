@@ -25,30 +25,41 @@
             transition: .4s;
         }
 
-        .mobile-logo {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .box-img-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .box-img-flex.y-img-left{
+            justify-content: flex-start;
+        }
+        .box-img-flex img {
+            width: auto !important;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .blog-temp .box-img-flex {
+            height: 400px;
         }
 
-        .mobile-logo img {
-            max-height: 30px;
-        }
+        
+
 
     </style>
 </head>
 
 <body>
 
-    <div id="navbar" class="navbar">
+    <div id="navbar" class="navbar y-header-mobile">
         <a class="mobile-menu-btn" href="javascript:;">
             <span></span>
             <span></span>
             <span></span>
         </a>
-        <div class="mobile-logo">
-            <a href="#">
+        <div class="y-logo-mobile">
+            <a class="box-img-flex" href="#">
                 <img src="images/logo.png" class="" alt="">
             </a>
         </div>
@@ -341,15 +352,7 @@
             })
         });
 
-        window.onscroll = function() {myFunction()};
-        var navbar = document.getElementById("navbar");
-        function myFunction() {
-          if (window.pageYOffset > 0) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
+       
     </script>
 
 </body>
