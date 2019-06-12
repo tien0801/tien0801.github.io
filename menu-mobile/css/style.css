@@ -66,6 +66,9 @@
     padding: 11px 20px;
     transition: .2s;
 }
+.y-mobile-menu li.active > a {
+    color: #00B140;
+}
 .y-mobile-menu li.has-submenu a {
     padding-right: 35px;
 }
