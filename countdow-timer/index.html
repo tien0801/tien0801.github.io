@@ -1,70 +1,114 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="">
-	<style>
-		
-	</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1">
+	<meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="vi">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+		.y-box-countdown {
+		    display: block;
+		    width: max-content;
+		    margin: 20px auto;
+		}
+		.y-box-countdown .item-countdown {
+		    display: inline-block;
+		    width: auto;
+		    text-align: center;
+		    margin-right: 15px;
+		}
+		.y-box-countdown .item-countdown:last-child {
+		    margin-right: 0;
+		}
+		.y-box-countdown .value-countdown {
+		    width: 70px;
+		    padding: 5px;
+		    font-size: 25px;
+		    font-weight: bold;
+		    border: 1px solid #166c4d;
+		    color: #166c4d;
+		}
+		.y-box-countdown .title-countdown {
+		    margin-top: 5px;
+		}
+
+
+		@media (max-width: 767px) {
+		    .y-box-countdown .value-countdown {
+		        width: 50px;
+		        padding: 5px;
+		        font-size: 20px;
+		        font-weight: bold;
+		        border: 1px solid #166c4d;
+		    }
+		}
+    </style>
 </head>
+
 <body>
-	<div class="container">
-        <div class="col-md-3 ds-element">
-            <div class="ds-element-value ds-days" id="y-days">00</div>
-            <div class="ds-element-title">Days</div>
+    <div class="container">
+        <h1>Countdown Timer</h1>
+        <div class="row">
+            <div class="y-box-countdown">
+            	<div class="item-countdown">
+				    <div class="value-countdown ds-days" id="y-days">00</div>
+				    <div class="title-countdown">Days</div>
+				</div>
+				<div class="item-countdown">
+				    <div class="value-countdown ds-hours" id="y-hours">00</div>
+				    <div class="title-countdown">Hours</div>
+				</div>
+				<div class="item-countdown">
+				    <div class="value-countdown ds-minutes" id="y-minutes">00</div>
+				    <div class="title-countdown">Minutes</div>
+				</div>
+				<div class="item-countdown">
+				    <div class="value-countdown ds-seconds" id="y-seconds">00</div>
+				    <div class="title-countdown">Seconds</div>
+				</div>
+			</div>
         </div>
-        <div class="col-md-3 ds-element">
-            <div class="ds-element-value ds-hours" id="y-hours">00</div>
-            <div class="ds-element-title">Hours</div>
-        </div>
-        <div class="col-md-3 ds-element">
-            <div class="ds-element-value ds-minutes" id="y-minutes">00</div>
-            <div class="ds-element-title">Minutes</div>
-        </div>
-        <div class="col-md-3 ds-element">
-            <div class="ds-element-value ds-seconds" id="y-seconds">00</div>
-            <div class="ds-element-title">Seconds</div>
-        </div>
-	</div>
-
-	<script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
-		// Set the date we're counting down to
-		var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-		  
-		// Update the count down every 1 second
-		var x = setInterval(function() {
-		  
-		  // Get todays date and time
-		  var now = new Date().getTime();
-		    
-		  // Find the distance between now and the count down date
-		  var distance = countDownDate - now;
-		    
-		  // Time calculations for days, hours, minutes and seconds
-		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-		    
-		  // Output the result in an element with id="demo"
-		  // document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-		  document.getElementById("y-days").innerHTML = days;
-		  document.getElementById("y-hours").innerHTML = hours;
-		  document.getElementById("y-minutes").innerHTML = minutes;
-		  document.getElementById("y-seconds").innerHTML = seconds;
-		    
-		  // If the count down is over, write some text 
-		  if (distance < 0) {
-		    clearInterval(x);
-		    document.getElementById("demo").innerHTML = "EXPIRED";
-		  }
-		}, 100);
-	</script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+        // Get todays date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Output the result in an element with id="demo"
+        // document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+        document.getElementById("y-days").innerHTML = days;
+        document.getElementById("y-hours").innerHTML = hours;
+        document.getElementById("y-minutes").innerHTML = minutes;
+        document.getElementById("y-seconds").innerHTML = seconds;
+
+        // If the count down is over, write some text 
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+        }
+    }, 100);
+    </script>
 </body>
+
 </html>
