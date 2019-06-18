@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css">
     <style>
         #slider-range {
-            border: 1px solid #c5c5c5;
+            margin: 10px 0;
         }
 
     </style>
@@ -26,25 +26,35 @@
             <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
         </p>
 
-        <div id="slider-range"></div>
+        <div id="slider-range" data-min="0" data-max="600" data-vmin="100" data-vmax="300"></div>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
     <script>
-        $( function() {
-            $( "#slider-range" ).slider({
-                range: true,
-                min: 0,
-                max: 500,
-                values: [ 75, 300 ],
-                slide: function( event, ui ) {
-                    $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-                }
-            });
-            $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-                " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-        } );
+        $(document).ready(function($) {
+            if($("#slider-range").length) {
+                var min = $("#slider-range").data('min');
+                var max = $("#slider-range").data('max');
+                var vmin = $("#slider-range").data('vmin');
+                var vmax = $("#slider-range").data('vmax');
+                console.log(min);
+                $("#slider-range").slider({
+                    range: true,
+                    min: min,
+                    max: max,
+                    values: [ vmin, vmax ],
+                    slide: function( event, ui ) {
+                        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                    }
+                });
+                $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+                    " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+
+            }
+         
+        });
     </script>
 </body>
 
