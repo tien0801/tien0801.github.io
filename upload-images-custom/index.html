@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="vi">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+    <link rel="stylesheet" href="">
+    <style>
+    .y-field-img input[type="file"] {
+      display: block;
+    }
+    .y-field-img .imageThumb {
+      width: 175px;
+      max-height: 100px;
+    }
+    #btn-add-img {
+      display: inline-block;
+      height: 100px;
+      width: 100px;
+      background: #fff;
+      border: 2px solid #004977;
+      border-radius: 10px;
+    }
+    .y-field-img {
+      display: inline-flex;
+      width: 100%;
+    }
+    .y-field-img .btn-add-img {
+      display: inline-block;
+      position: relative;
+    }
+    .y-field-img .btn-add-img input{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      padding: 14px 0;
+      cursor: pointer;
+      z-index: 1;
+    }
+    .y-field-img .btn-add-img .icon-add {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .y-field-img .btn-add-img .icon-add i{
+      font-size: 40px;
+      color: #004977;
+    }
+    .y-field-img .pip {
+      position: relative;
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .y-field-img .remove-img {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      display: block;
+      height: 20px;
+      background: #fff;
+      text-align: center;
+      cursor: pointer;
+    }
+    .y-field-img .remove-img i {
+      font-size: 20px;
+      color: #000;
+      background: #fff;
+      padding: 0 2px;
+    }
+    .y-field-img .remove-img:hover i {
+      background: #000;
+      color: #fff;
+    }
+    .y-field-img .pip .box-desc input {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="y-field-img" align="left">
+          <div class="btn-add-img" id="btn-add-img">
+            <input type="file" name="files[]" multiple />
+            <span class="icon-add"><i class="fa fa-plus"></i></span>
+          </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+        if (window.File && window.FileList && window.FileReader) {
+          $(".y-field-img").on("change", function(e) {
+            var files = e.target.files,
+              filesLength = files.length;
+            for (var i = 0; i < filesLength; i++) {
+              var f = files[i]
+              var fileReader = new FileReader();
+              fileReader.onload = (function(e) {
+                var file = e.target;
+                $("<div class=\"pip\">" +
+                  "<div class=\"box-thumb\">" +
+                  "<img class=\"imageThumb\" src=\"" + e.target.result + "\" title=\"" + file.name + "\"/>" +
+                  "</div>" +
+                  "<br/><span class=\"remove-img\"><i class=\"fa fa fa-times\"></i></span>"  +
+                  "<div class=\"box-desc\"><input type=\"text\" value=\"\" placeholder=\"Enter description\"></div>"
+                  + "</div>"
+
+                  ).insertBefore("#btn-add-img");
+                $(".remove-img").click(function(){
+                  $(this).parent(".pip").remove();
+                });
+                
+                // Old code here
+                /*$("<img></img>", {
+                  class: "imageThumb",
+                  src: e.target.result,
+                  title: file.name + " | Click to remove"
+                }).insertAfter("#files").click(function(){$(this).remove();});*/
+                
+              });
+              fileReader.readAsDataURL(f);
+            }
+          });
+        } else {
+          alert("Your browser doesn't support to File API")
+        }
+      })
+  </script>
+</body>
+
+</html>
