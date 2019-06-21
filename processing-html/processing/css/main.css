@@ -546,6 +546,12 @@ transform:none;
    
 
 
+@media (max-width: 767px) {
+  .main {
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 320px) {
 
 ul.countdown li span { font-size: 28.833px; }
