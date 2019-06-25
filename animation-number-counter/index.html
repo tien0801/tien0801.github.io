@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="vi">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+    img {
+        margin-bottom: 30px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <img class="img-bg" src="https://dummyimage.com/1200x500/bcbcbc/000000" alt="">
+            <img class="img-bg" src="https://dummyimage.com/1200x500/bcbcbc/000000" alt="">
+            <img class="img-bg" src="https://dummyimage.com/1200x500/bcbcbc/000000" alt="">
+            <img class="img-bg" src="https://dummyimage.com/1200x500/bcbcbc/000000" alt="">
+        </div>
+        <div class="animation-numbers">
+            <div class="row">
+                <div class="col-md-3 col-xs-6 item-number">
+                    <div class="icon-number box-img-flex">
+                        <img src="images/taxi.png" alt="">
+                    </div>
+                    <hr class="line-number">
+                    <h6 class="title-number">SỐ PHƯƠNG TIỆN</h6>
+                    <p class="value-number">782</p>
+                </div>
+                <div class="col-md-3 col-xs-6 item-number">
+                    <div class="icon-number box-img-flex">
+                        <img src="images/taxi.png" alt="">
+                    </div>
+                    <hr class="line-number">
+                    <h6 class="title-number">TỔNG SỐ KHÁCH HÀNG</h6>
+                    <p class="value-number">1388</p>
+                </div>
+                <div class="col-md-3 col-xs-6 item-number">
+                    <div class="icon-number box-img-flex">
+                        <img src="images/taxi.png" alt="">
+                    </div>
+                    <hr class="line-number">
+                    <h6 class="title-number">TỔNG SỐ ĐƠN HÀNG</h6>
+                    <p class="value-number">517</p>
+                </div>
+                <div class="col-md-3 col-xs-6 item-number">
+                    <div class="icon-number box-img-flex">
+                        <img src="images/taxi.png" alt="">
+                    </div>
+                    <hr class="line-number">
+                    <h6 class="title-number">KHÁCH HÀNG HÀI LÒNG</h6>
+                    <p class="value-number">390</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img class="img-bg" src="https://dummyimage.com/1200x500/bcbcbc/000000" alt="">
+            <img class="img-bg" src="https://dummyimage.com/1200x500/bcbcbc/000000" alt="">
+            <img class="img-bg" src="https://dummyimage.com/1200x500/bcbcbc/000000" alt="">
+            <img class="img-bg" src="https://dummyimage.com/1200x500/bcbcbc/000000" alt="">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        $(window).bind('scroll load', function() {
+            animationNumnber();
+        });
+        var viewed = false;
+
+        function isScrolledIntoView(elem) {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+
+            var elemTop = $(elem).offset().top;
+            var elemBottom = elemTop + $(elem).height();
+
+            return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        }
+
+        function animationNumnber() {
+            if (isScrolledIntoView($(".animation-numbers")) && !viewed) {
+                viewed = true;
+                $('.value-number').each(function() {
+                    $(this).prop('Counter', 0).animate({
+                        Counter: $(this).text()
+                    }, {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function(now) {
+                            $(this).text(Math.ceil(now));
+                        }
+                    });
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>
