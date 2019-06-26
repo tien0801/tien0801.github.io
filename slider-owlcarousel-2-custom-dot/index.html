@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <title>Slider-OwlCarousel-2 - Custom Dot</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .slider-section .box-dot-slider {
+            /* position: absolute; */
+            bottom: 30px;
+            left: 0;
+            right: 0;
+            z-index: 2;
+            width: max-content;
+            margin: 0 auto;
+        }
+        .slider-section .box-dot-slider .i-dot {
+            background: rgba(0, 0, 0, 0.3);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: #fff;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            line-height: 50px;
+            font-size: 15px;
+            margin: 0 10px;
+        }
+        .search-section .form-control {
+            height: 64px;
+        }
+        .product-section .list-product {
+            margin-bottom: 20px;
+        }
+        .service-section .box-item-service {
+            min-height: 270px;
+        }
+        .service-section .item-service {
+            position: relative;
+            padding: 24px 30px 20px;
+            border: 1px solid #000;
+            -webkit-transition: background-color 0.3s linear;
+            transition: background-color 0.3s linear;
+        }
+        .service-section .item-service .title-service {
+            font-size: 22px;
+            text-transform: uppercase;
+        }
+        .service-section .item-service:hover {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Slider OWL Carousel - Custom Dot</h1>
+<pre>
+<code>
+if ($('.home-slider').length > 0) {
+    $('.home-slider').owlCarousel({
+        loop: true,
+        // autoplay: true,
+        // autoplayTimeout: 4000,
+        margin: 0,
+        responsiveClass: true,
+        items: 1,
+        dots: false,
+        navText: ["", ""],
+        rewindNav: true,
+        nav: false,
+        URLhashListener: true,
+        autoplayHoverPause: true,
+        startPosition: 'URLHash'
+    })
+}
+
+============================================
+"item" data-hash="sli1"
+
+"i-dot" href="#sli1" 01
+</code>
+</pre>
+    </div>
+
+    <div class="slider-section">
+        <div class="container">
+            <div class="home-slider owl-carousel owl-theme">
+                <div class="item" data-hash="sli1">
+                    <a class="item-slider" href="#">
+                        <img src="https://dummyimage.com/920x400/888/fff" alt="">
+                    </a>
+                </div>
+                <div class="item" data-hash="sli2">
+                    <a class="item-slider" href="#">
+                        <img src="https://dummyimage.com/920x400/888/fff" alt="">
+                    </a>
+                </div>
+                <div class="item" data-hash="sli3">
+                    <a class="item-slider" href="#">
+                        <img src="https://dummyimage.com/920x400/888/fff" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="box-dot-slider">
+                <a class="i-dot" href="#sli1">01</a>
+                <a class="i-dot" href="#sli2">02</a>
+                <a class="i-dot" href="#sli3">03</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Home Slider -->
+    <script>
+        if ($('.home-slider').length > 0) {
+            $('.home-slider').owlCarousel({
+                loop: true,
+                // autoplay: true,
+                // autoplayTimeout: 4000,
+                margin: 0,
+                responsiveClass: true,
+                items: 1,
+                dots: false,
+                navText: ["", ""],
+                rewindNav: true,
+                nav: false,
+                URLhashListener: true,
+                autoplayHoverPause: true,
+                startPosition: 'URLHash'
+            })
+        }
+    </script>
+</body>
+
+</html>
