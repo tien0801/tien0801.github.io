@@ -1,69 +1,134 @@
 var iOS = navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform)
 if (iOS)
-  preventZoomOnFocus();
+    preventZoomOnFocus();
 
-function preventZoomOnFocus()
-{
-  document.documentElement.addEventListener("touchstart", onTouchStart);
-  document.documentElement.addEventListener("focusin", onFocusIn);
+function preventZoomOnFocus() {
+    document.documentElement.addEventListener("touchstart", onTouchStart);
+    document.documentElement.addEventListener("focusin", onFocusIn);
 }
 
 let dont_disable_for = ["checkbox", "radio", "file", "button", "image", "submit", "reset", "hidden"];
 //let disable_for = ["text", "search", "password", "email", "tel", "url", "number", "date", "datetime-local", "month", "year", "color"];
 
-function onTouchStart(evt)
-{
-  let tn = evt.target.tagName;
+function onTouchStart(evt) {
+    let tn = evt.target.tagName;
 
-  // No need to do anything if the initial target isn't a known element
-  // which will cause a zoom upon receiving focus
-  if (    tn != "SELECT"
-      &&  tn != "TEXTAREA"
-      && (tn != "INPUT" || dont_disable_for.indexOf(evt.target.getAttribute("type")) > -1)
-     )
-    return;
+    // No need to do anything if the initial target isn't a known element
+    // which will cause a zoom upon receiving focus
+    if (tn != "SELECT" &&
+        tn != "TEXTAREA" &&
+        (tn != "INPUT" || dont_disable_for.indexOf(evt.target.getAttribute("type")) > -1)
+    )
+        return;
 
-  // disable zoom
-  setViewport("width=device-width, initial-scale=1.0, user-scalable=0");
+    // disable zoom
+    setViewport("width=device-width, initial-scale=1.0, user-scalable=0");
 }
 
 // NOTE: for now assuming this focusIn is caused by user interaction
-function onFocusIn(evt)
-{
-  // reenable zoom
-  setViewport("width=device-width, initial-scale=1.0, user-scalable=1");
+function onFocusIn(evt) {
+    // reenable zoom
+    setViewport("width=device-width, initial-scale=1.0, user-scalable=1");
 }
 
 // add or update the <meta name="viewport"> element
-function setViewport(newvalue)
-{
-  let vpnode = document.documentElement.querySelector('head meta[name="viewport"]');
-  if (vpnode)
-    vpnode.setAttribute("content",newvalue);
-  else
-  {
-    vpnode = document.createElement("meta");
-    vpnode.setAttribute("name", "viewport");
-    vpnode.setAttribute("content", newvalue);
-  }
+function setViewport(newvalue) {
+    let vpnode = document.documentElement.querySelector('head meta[name="viewport"]');
+    if (vpnode)
+        vpnode.setAttribute("content", newvalue);
+    else {
+        vpnode = document.createElement("meta");
+        vpnode.setAttribute("name", "viewport");
+        vpnode.setAttribute("content", newvalue);
+    }
 }
 
-// Mmenu
-$(window).bind("load resize", function(){
-    if(jQuery(window).width()<992){
-        jQuery(document).ready(function( $ ) {
-          $("#nav-mobile").mmenu({
-             "extensions": [
-                "position-back",
-                "position-right"
-             ]
-          });
-       });
-        
+// Menu desktop
+$(document).ready(function() {
+    $(window).bind("load resize scroll", function() {
+        if ($(document).scrollTop() > 100) {
+            $('.header').addClass('header-fixed');
+        } else {
+            $('.header').removeClass('header-fixed');
+        }
+    });
+
+    $(document).on("load scroll", onScroll);
+    //smoothscroll
+    $('.menu-scroll a[href^="#"].link-scroll').on('click', function(e) {
+        e.preventDefault();
+        $(document).off("scroll");
+
+        $('li').each(function() {
+            $(this).removeClass('active');
+        })
+        $(this).parent().addClass('active');
+
+        var target = this.hash,
+            menu = target;
+        $target = $(target);
+        $("html, body").animate({ scrollTop: $target.offset().top - 50 });
+
+    });
+
+    function onScroll(event) {
+        var scrollPos = $(document).scrollTop();
+        $('.menu-scroll li .link-scroll').each(function() {
+            
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('.menu-scroll li').removeClass("active");
+                currLink.parent().addClass("active");
+            } else {
+                currLink.parent().removeClass("active");
+            }
+        });
     }
+})
+
+// Menu Mobile
+$(document).ready(function () {
+    function closeMenu() {
+        $('.y-mobile-menu').removeClass('show');
+        $('.overlay-menu').removeClass('active');
+    }
+    $(".has-submenu > .btn-toggle-sub").on("click", function(e){
+        var parentli = $(this).closest('li');
+        if(parentli.hasClass('opened')) {
+            parentli.removeClass('opened');
+            parentli.find('> ul.sub-menu').slideUp(400);
+        } else {
+            parentli.addClass('opened');
+            parentli.find('> ul.sub-menu').slideDown(400);
+        }
+        parentli.siblings('li').removeClass('opened');
+        parentli.siblings('li').find('.has-submenu.opened').removeClass('opened');
+        parentli.siblings('li').find('ul:visible').slideUp();
+    })
+    $('.mobile-menu-btn').on("click", function(){
+        $('.overlay-menu').toggleClass("active");
+        $(".y-mobile-menu").toggleClass("show");
+        return false;
+    })
+    $('.overlay-menu, .m-menu-close').on("click", function(){
+        closeMenu();
+    })
 });
 
-$(document).ready(function(){
+// Loop animation
+$(document).ready(function() {
+    $.doTimeout(2500, function() {
+        $('.repeat.go').removeClass('go');
+        return true;
+    });
+    $.doTimeout(2520, function() {
+        $('.repeat').addClass('go');
+        return true;
+    });
+});
+
+$(document).ready(function() {
     // Search button
     $('.top-search .icon-search').click(function() {
         $('.box-search').slideToggle(400);
@@ -71,66 +136,30 @@ $(document).ready(function(){
 
     // Scroll to top
     $(".scroll-top-btn").on("click", function() {
-      $('html,body').animate({ scrollTop: 0 }, 'slow');
-      return false;
+        $('html,body').animate({ scrollTop: 0 }, 'slow');
+        return false;
     });
     window.addEventListener('scroll', function() {
-      if (window.pageYOffset > 300) {
-          $(".scroll-top-btn").addClass("visible");
-      } else {
-          $(".scroll-top-btn").removeClass("visible");
-      }
+        if (window.pageYOffset > 300) {
+            $(".scroll-top-btn").addClass("visible");
+        } else {
+            $(".scroll-top-btn").removeClass("visible");
+        }
     });
 
-    //smoothscroll
-    $('.menu-scroll a[href^="#"].link-scroll').on('click', function (e) {
-        e.preventDefault();
-        $(document).off("scroll");
-        
-        $('a').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
-      
-        var target = this.hash,
-            menu = target;
-        $target = $(target);
-        $("html, body").animate({ scrollTop: $target.offset().top - 50 });
-       
-    });
-
-	function onScroll(event){
-	    var scrollPos = $(document).scrollTop();
-	    $('#menu-center a').each(function () {
-	        var currLink = $(this);
-	        var refElement = $(currLink.attr("href"));
-	        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-	            $('#menu-center ul li a').removeClass("active");
-	            currLink.addClass("active");
-	        }
-	        else{
-	            currLink.removeClass("active");
-	        }
-	    });
-	}
-    onScroll();
-
-
-
-    if($('.home-slider').length > 0) {
+    if ($('.home-slider').length > 0) {
         $('.home-slider').owlCarousel({
             loop: true,
             // autoplay: true,
             // autoplayTimeout: 4000,
             margin: 0,
-            responsiveClass:true,
+            responsiveClass: true,
             items: 1,
             dots: true,
-            navText : ["",""],
-            rewindNav : true,
+            navText: ["", ""],
+            rewindNav: true,
             nav: true,
         })
     }
 
 })
-

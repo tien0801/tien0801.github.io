@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/font-awesome-5.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -46,25 +47,109 @@
                 <img src="https://dummyimage.com/160x62/bcbcbc/000000.jpg&text=logo" alt="">
             </a>
         </div>
-        <a href="#nav-mobile" class="m-menu-bar navbar-left pull-left">
+        <!-- <a href="#nav-mobile" class="m-menu-bar navbar-left pull-left">
             <i class="fas fa-bars"></i>
+        </a> -->
+        <a class="mobile-menu-btn" href="javascript:;">
+            <span></span>
+            <span></span>
+            <span></span>
         </a>
-        <div class="box-header-mobile">
-            <nav id="nav-mobile">
-                <ul class="menu-scroll">
-                    <li><a href="index.html">Trang chủ</a></li>
-                    <li><a href="about.html">Giới thiệu</a></li>
-                    <li><a href="product.html">Sản phẩm</a></li>
-                    <li><a href="service.html">Dịch vụ</a></li>
-                    <li><a href="blog.html">Tin tức</a></li>
-                    <li><a href="contact.html">Liên hệ</a></li>
-                </ul>
-            </nav>
+        <div class="y-mobile-menu">
+            <div class="m-menu__title">
+                <h5>Menu</h5>
+                <a href="javascript:;" class="m-menu-close">+</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li class="has-submenu active">
+                    <a href="#sub1">Giới thiệu</a>
+                    <span class="btn-toggle-sub"></span>
+                    <ul class="sub-menu">
+                        <li class="active"> <a href="#">Về chúng tôi</a> </li>
+                        <li> <a href="#">Về công ty</a> </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#sub1">Dịch vụ</a>
+                    <span class="btn-toggle-sub"></span>
+                    <ul class="sub-menu">
+                        <li class="has-submenu">
+                            <a href="#sub2">Dịch vụ 1</a>
+                            <span class="btn-toggle-sub"></span>
+                            <ul class="sub-menu">
+                                <li class="has-submenu">
+                                    <a href="#">Dịch vụ a</a>
+                                    <span class="btn-toggle-sub"></span>
+                                    <ul class="sub-menu">
+                                        <li> <a href="#">Dịch vụ a.1</a> </li>
+                                        <li> <a href="#">Dịch vụ a.2</a> </li>
+                                        <li> <a href="#">Dịch vụ a.3</a> </li>
+                                        <li> <a href="#">Dịch vụ a.4</a> </li>
+                                        <li> <a href="#">Dịch vụ a.5</a> </li>
+                                    </ul>
+                                </li>
+                                <li> <a href="#">Dịch vụ b</a> </li>
+                                <li> <a href="#">Dịch vụ c</a> </li>
+                                <li> <a href="#">Dịch vụ d</a> </li>
+                                <li> <a href="#">Dịch vụ e</a> </li>
+                                <li> <a href="#">Dịch vụ f</a> </li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">Dịch vụ 3</a> </li>
+                        <li> <a href="#">Dịch vụ 4</a> </li>
+                        <li> <a href="#">Dịch vụ 5</a> </li>
+                        <li> <a href="#">Dịch vụ 6</a> </li>
+                        <li> <a href="#">Dịch vụ 7</a> </li>
+                    </ul>
+                </li>
+                <li class="has-submenu">
+                    <a href="#sub1">Tin tức</a>
+                    <span class="btn-toggle-sub"></span>
+                    <ul class="sub-menu">
+                        <li class="has-submenu">
+                            <a href="#">Tin tức 1</a>
+                            <ul class="sub-menu">
+                                <li> <a href="#">Tin tức a</a> </li>
+                                <li> <a href="#">Tin tức b</a> </li>
+                                <li> <a href="#">Tin tức c</a> </li>
+                                <li> <a href="#">Tin tức d</a> </li>
+                                <li> <a href="#">Tin tức e</a> </li>
+                                <li> <a href="#">Tin tức f</a> </li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu">
+                            <a href="#">Tin tức 2</a>
+                            <span class="btn-toggle-sub"></span>
+                            <ul class="sub-menu">
+                                <li> <a href="#">Tin tức a</a> </li>
+                                <li> <a href="#">Tin tức b</a> </li>
+                                <li> <a href="#">Tin tức c</a> </li>
+                                <li> <a href="#">Tin tức d</a> </li>
+                                <li> <a href="#">Tin tức e</a> </li>
+                                <li> <a href="#">Tin tức f</a> </li>
+                            </ul>
+                        </li>
+                        <li> <a href="#">Tin tức 3</a> </li>
+                        <li> <a href="#">Tin tức 4</a> </li>
+                        <li> <a href="#">Tin tức 5</a> </li>
+                        <li> <a href="#">Tin tức 6</a> </li>
+                        <li> <a href="#">Tin tức 7</a> </li>
+                    </ul>
+                </li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
         </div>
+        <div class="overlay-menu"></div>
+        <!-- ./ Header Mobile -->
     </div>
     <!-- end Menu mobile -->
-    <div class="section-header">
-	    <header class="header" data-spy="affix" data-offset-top="44">
+    <div class="section-header" style="">
+        <div class="box-banner box-img-flex">
+            <img src="https://dummyimage.com/1920x960/bcbcbc/000000.jpg" alt="">
+        </div>
+	    <header class="header">
 	        <div class="container">
 	            <div class="row">
 	                <div class="col-md-3">
@@ -74,12 +159,12 @@
 	                </div>
 	                <div class="col-md-9 menu-header text-right">
 	                    <ul class="list-inline menu-scroll">
-	                        <li class="active"><a href="index.html">Trang chủ</a></li>
-	                        <li><a href="about.html">Giới thiệu</a></li>
-	                        <li><a href="product.html">Sản phẩm</a></li>
-	                        <li><a href="service.html">Dịch vụ</a></li>
-	                        <li><a href="blog.html">Tin tức</a></li>
-	                        <li><a href="contact.html">Liên hệ</a></li>
+	                        <li class="active"><a class="link-scroll" href="#home-section">Trang chủ</a></li>
+	                        <li><a class="link-scroll" href="#about-section">Giới thiệu</a></li>
+	                        <li><a class="link-scroll" href="#product-section">Sản phẩm</a></li>
+	                        <li><a class="link-scroll" href="#service-section">Dịch vụ</a></li>
+	                        <li><a class="link-scroll" href="#blog-section">Tin tức</a></li>
+	                        <li><a class="link-scroll" href="#contact-section">Liên hệ</a></li>
 	                        <li>
 	                            <div class="top-search">
 	                                <a href="javascript:;" class="icon-search">
@@ -87,6 +172,12 @@
 	                                </a>
 	                            </div>
 	                        </li>
+                            <li>
+                                <select class="top-lang">
+                                    <option value="vi">VI</option>
+                                    <option value="en">EN</option>
+                                </select>
+                            </li>
 	                    </ul>
 	                </div>
 	            </div>
@@ -98,31 +189,42 @@
 	            </div>
 	        </div>
 	    </header>
+        
+        <h5 class="title-section-header">WEAR IT YOUR WAY</h4>
+        <div class="btn-scroll ani-shakeUp">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+            
 	</div>
     <!-- Page Content -->
-    <div class="section">
+    <div class="section" id="home-section">
         <div class="container">
             <img src="https://dummyimage.com/1920x500/bcbcbc/000000.jpg&text=section1" alt="">
         </div>
     </div>
-    <div class="section">
+    <div class="section" id="about-section">
         <div class="container">
             <img src="https://dummyimage.com/1920x500/bcbcbc/000000.jpg&text=section2" alt="">
         </div>
     </div>
-    <div class="section">
+    <div class="section" id="product-section">
         <div class="container">
             <img src="https://dummyimage.com/1920x500/bcbcbc/000000.jpg&text=section3" alt="">
         </div>
     </div>
-    <div class="section">
+    <div class="section" id="service-section">
         <div class="container">
             <img src="https://dummyimage.com/1920x500/bcbcbc/000000.jpg&text=section4" alt="">
         </div>
     </div>
-    <div class="section">
+    <div class="section" id="blog-section">
         <div class="container">
             <img src="https://dummyimage.com/1920x500/bcbcbc/000000.jpg&text=section5" alt="">
+        </div>
+    </div>
+    <div class="section" id="contact-section">
+        <div class="container">
+            <img src="https://dummyimage.com/1920x500/bcbcbc/000000.jpg&text=section6" alt="">
         </div>
     </div>
     <!-- Page Content -->
@@ -174,6 +276,7 @@
     <!-- Main JS -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/css3-animate-it.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
 </body>
