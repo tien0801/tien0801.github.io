@@ -114,6 +114,28 @@ $(document).ready(function () {
     $('.overlay-menu, .m-menu-close').on("click", function(){
         closeMenu();
     })
+    $('.y-mobile-menu li a').click(function() {
+        // e.preventDefault();
+        var target = $(this).attr("href");
+        $('html, body').stop().animate({
+            scrollTop: $(target).offset().top
+        }, 800, function() {
+            location.hash = target;
+        });
+        closeMenu();
+        return false;
+    })
+
+    $(window).scroll(function() {
+        var scrollDistance = $(window).scrollTop();
+        // Assign active class to nav links while scolling
+        $('.section-menu').each(function(i) {
+            if ($(this).position().top <= scrollDistance) {
+                $('.y-mobile-menu li.active').removeClass('active');
+                $('.y-mobile-menu li').eq(i).addClass('active');
+            }
+        });
+    }).scroll();
 });
 
 // Loop animation
