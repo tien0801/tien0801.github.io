@@ -59,7 +59,7 @@ $(document).ready(function() {
         e.preventDefault();
         $(document).off("scroll");
 
-        $('li').each(function() {
+        $('.menu-scroll li').each(function() {
             $(this).removeClass('active');
         })
         $(this).parent().addClass('active');
