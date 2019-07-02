@@ -31,9 +31,7 @@
         .item-menu-toggle .title-toggle.active:before {
             transform: rotate(90deg);
         }
-        .item-menu-toggle .content-toggle {
-            display: none;
-        }
+        
     </style>
 </head>
 
@@ -42,7 +40,7 @@
         <h1>Menu Toggle</h1>
         <div class="y-menu-toggle">
             <div class="item-menu-toggle col-md-4">
-                <h3 class="title-toggle">Category 1</h3>
+                <h3 class="title-toggle active">Category 1</h3>
                 <ul class="content-toggle">
                     <li><a href="#" title="Trà xanh">Trà xanh</a></li>
                     <li><a href="#" title="Trà trái cây">Trà trái cây</a></li>
@@ -74,9 +72,10 @@
         $(document).ready(function() {
             // if($('.y-menu-toggle').length > 0 && $(window).width() < 768) {
             if($('.y-menu-toggle').length > 0) {
+                $('.y-menu-toggle .item-menu-toggle .title-toggle:not(.active) + .content-toggle').slideUp('200');
                 $('.y-menu-toggle .item-menu-toggle .title-toggle').click(function() {
                     $(this).toggleClass('active');
-                    $(this).next('.content-toggle').slideToggle(400);
+                    $(this).next('.content-toggle').slideToggle('400');
                 })
             }
         });
