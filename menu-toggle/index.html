@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="vi">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <title>Slide Toggle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+        .item-menu-toggle .title-toggle {
+            position: relative;
+        }
+        .item-menu-toggle .title-toggle:before {
+            position: absolute;
+            content: "\f105";
+            font-family: FontAwesome;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            color: inherit;
+            text-align: center;
+            transition: all 0.4s;
+        }
+        .item-menu-toggle .title-toggle.active:before {
+            transform: rotate(90deg);
+        }
+        .item-menu-toggle .content-toggle {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="y-menu-toggle">
+            <div class="item-menu-toggle col-md-4">
+                <h3 class="title-toggle">Category 1</h3>
+                <ul class="content-toggle">
+                    <li><a href="#" title="Trà xanh">Trà xanh</a></li>
+                    <li><a href="#" title="Trà trái cây">Trà trái cây</a></li>
+                    <li><a href="#" title="Trà Thảo mộc">Trà Thảo mộc</a></li>
+                </ul>
+            </div>
+            <div class="item-menu-toggle col-md-4">
+                <h3 class="title-toggle">Category 1</h3>
+                <ul class="content-toggle">
+                    <li><a href="#" title="Trà xanh">Trà xanh</a></li>
+                    <li><a href="#" title="Trà trái cây">Trà trái cây</a></li>
+                    <li><a href="#" title="Trà Thảo mộc">Trà Thảo mộc</a></li>
+                </ul>
+            </div>
+            <div class="item-menu-toggle col-md-4">
+                <h3 class="title-toggle">Category 1</h3>
+                <ul class="content-toggle">
+                    <li><a href="#" title="Trà xanh">Trà xanh</a></li>
+                    <li><a href="#" title="Trà trái cây">Trà trái cây</a></li>
+                    <li><a href="#" title="Trà Thảo mộc">Trà Thảo mộc</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            // if($('.y-menu-toggle').length > 0 && $(window).width() < 768) {
+            if($('.y-menu-toggle').length > 0) {
+                $('.y-menu-toggle .item-menu-toggle .title-toggle').click(function() {
+                    $(this).toggleClass('active');
+                    $(this).next('.content-toggle').slideToggle(400);
+                })
+            }
+        });
+    </script>
+</body>
+
+</html>
