@@ -15,7 +15,7 @@
         .item-menu-toggle .title-toggle {
             position: relative;
         }
-        .item-menu-toggle .title-toggle:before {
+        .item-menu-toggle.has-child .title-toggle:before {
             position: absolute;
             content: "\f105";
             font-family: FontAwesome;
@@ -28,7 +28,7 @@
             text-align: center;
             transition: all 0.4s;
         }
-        .item-menu-toggle .title-toggle.active:before {
+        .item-menu-toggle.has-child .title-toggle.active:before {
             transform: rotate(90deg);
         }
         
@@ -39,8 +39,16 @@
     <div class="container">
         <h1>Menu Toggle</h1>
         <div class="y-menu-toggle">
-            <div class="item-menu-toggle col-md-4">
-                <h3 class="title-toggle active">Category 1</h3>
+            <div class="item-menu-toggle has-child col-md-4">
+                <h3 class="title-toggle active">Category active</h3>
+                <ul class="content-toggle">
+                    <li><a href="#" title="Trà xanh">Trà xanh</a></li>
+                    <li><a href="#" title="Trà trái cây">Trà trái cây</a></li>
+                    <li><a href="#" title="Trà Thảo mộc">Trà Thảo mộc</a></li>
+                </ul>
+            </div>
+            <div class="item-menu-toggle has-child col-md-4">
+                <h3 class="title-toggle">Category</h3>
                 <ul class="content-toggle">
                     <li><a href="#" title="Trà xanh">Trà xanh</a></li>
                     <li><a href="#" title="Trà trái cây">Trà trái cây</a></li>
@@ -48,20 +56,7 @@
                 </ul>
             </div>
             <div class="item-menu-toggle col-md-4">
-                <h3 class="title-toggle">Category 1</h3>
-                <ul class="content-toggle">
-                    <li><a href="#" title="Trà xanh">Trà xanh</a></li>
-                    <li><a href="#" title="Trà trái cây">Trà trái cây</a></li>
-                    <li><a href="#" title="Trà Thảo mộc">Trà Thảo mộc</a></li>
-                </ul>
-            </div>
-            <div class="item-menu-toggle col-md-4">
-                <h3 class="title-toggle">Category 1</h3>
-                <ul class="content-toggle">
-                    <li><a href="#" title="Trà xanh">Trà xanh</a></li>
-                    <li><a href="#" title="Trà trái cây">Trà trái cây</a></li>
-                    <li><a href="#" title="Trà Thảo mộc">Trà Thảo mộc</a></li>
-                </ul>
+                <h3 class="title-toggle">Category not-child</h3>
             </div>
         </div>
     </div>
