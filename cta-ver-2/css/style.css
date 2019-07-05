@@ -3,153 +3,100 @@
 popup call now
 =================================================
 */
+
 .callback-popup .modal-header .close {
-    background-color: #fff;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    position: absolute;
-    top: -15px;
-    right: -15px;
-    opacity: 1;
-    line-height: 15px;
-    outline: none;
-    box-shadow: none;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  opacity: 1;
+  line-height: 15px;
+  outline: none;
+  box-shadow: none;
 }
+
 .callback-popup .modal-header .close img {
-    width: 20px;
+  width: 20px;
 }
+
 .callback-popup .modal-content {
-    background-color: #252525;
-    color: #fff;
-    border-radius: 0;
+  background-color: #252525;
+  color: #fff;
+  border-radius: 0;
 }
+
 .callback-popup .modal-body {
-    position: relative;
-    padding: 30px;
-    padding-left: 75px;
-    padding-right: 75px;
-    padding-bottom: 50px;
+  position: relative;
+  padding: 30px;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-bottom: 50px;
 }
+
 .callback-popup .modal-header {
-    border-bottom: none;
+  border-bottom: none;
 }
+
 .callback-popup h3 {
-    font-size: 30px;
-    margin: 0 0 15px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    line-height: 1.8;
-}
-.lazi-alo-input-wrapper {
-    margin-top: 40px;
-}
-.lazi-alo-number {
-    background-color: transparent;
-    border: 2px solid #05a656;
-    padding: 10px;
-    font-size: 32px;
-    max-width: 275px;
-    text-align: center;
-}
-.lazi-alo-message {
-    padding: 18px 0 13px 0;
-}
-.lazi-alo-timer {
-    color: #ffffff;
-    border: 1px solid #ffffff;
-    background-color: #252525;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 100;
-}
-.lazi-alo-timer * {
-    font-weight: 100;
-}
-.lazi-alo-submit {
-    background-color: #05a656;
-    border: none;
-    padding: 20px;
-    font-size: 20px;
-}
-.lazi-alo-popup-timer {
-    padding-top: 20px;
-    font-size: 28px;
-    font-weight: 300;
-}
-.lazi-alo-timer:focus, .lazi-alo-number:focus {
-    outline: none;
+  font-size: 30px;
+  margin: 0 0 15px;
+  font-weight: 300;
+  line-height: 1.8;
 }
 
 @media all and (max-width: 480px) {
-    .callback-popup .modal-body {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+  .callback-popup .modal-body {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
+
 @media all and (max-width: 768px) {
-    .callback-popup .modal-header .close {
-        top: 2px;
-        right: 1px;
-        border-radius: 0;
-    }
+  .callback-popup .modal-header .close {
+    top: 2px;
+    right: 1px;
+    border-radius: 0;
+  }
 }
 
 .modal {
   text-align: center;
   padding: 0!important;
 }
+
 .modal:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
-  margin-right: -4px; /* Adjusts for spacing */
+  margin-right: -4px;
 }
+
 .modal-dialog {
   display: inline-block;
   vertical-align: middle;
 }
-.pfl-wrap {
-    padding: 50px 0 100px;
-    padding-bottom: 30px;
-}
-.cta-search-team .btn-order-design {
-    border-color: #fff;
-}
-.callback-popup input.error, .callback-popup textarea.error {
-    border: 2px solid #ff006d !important;
-}
-.callback-popup .alert-success {
-    font-family: "Open Sans", sans-serif;
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 24px;
-}
-.callback-popup .alert-success p {
-    font-weight: 100;
-}
-.pdt-dt-rcl .rbox-hd {
-    font-weight: 400;
-    margin: 0;
-    font-size: 22px;
-}
+
+
 /* Phone Ring */
 .laziweb-alo-phone {
   position: fixed;
-  left: 0px;
-  bottom: 0px;
+  left: 0;
+  bottom: 0;
   visibility: visible;
   background-color: transparent;
-  width: 165px;
-  height: 165px;
+  width: 130px;
+  height: 130px;
   cursor: pointer;
-  z-index: 200000 !important;
+  z-index: 999 !important;
 }
+
 .laziweb-alo-ph-circle {
-  width: 125px;
-  height: 125px;
+  width: 124px;
+  height: 124px;
   top: 0px;
   left: 0px;
   position: absolute;
@@ -162,11 +109,12 @@ popup call now
   border-color: #137cc0;
   opacity: .5;
 }
+
 .laziweb-alo-ph-circle-fill {
   width: 80px;
   height: 80px;
-  top: 23px;
-  left: 23px;
+  top: 22px;
+  left: 22px;
   position: absolute;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -184,6 +132,7 @@ popup call now
   background-color: rgba(19, 124, 192, 0.5);
   opacity: .75 !important;
 }
+
 .laziweb-alo-ph-img-circle {
   width: 40px;
   height: 40px;
@@ -209,27 +158,30 @@ popup call now
   background-color: #137cc0;
   background-size: cover;
 }
+
 @-webkit-keyframes tada {
   from {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
-  10%, 20% {
+  10%,
+  20% {
     -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
   }
-
-  30%, 50%, 70%, 90% {
+  30%,
+  50%,
+  70%,
+  90% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
-
-  40%, 60%, 80% {
+  40%,
+  60%,
+  80% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
-
   to {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -241,22 +193,24 @@ popup call now
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
-  10%, 20% {
+  10%,
+  20% {
     -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
   }
-
-  30%, 50%, 70%, 90% {
+  30%,
+  50%,
+  70%,
+  90% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
   }
-
-  40%, 60%, 80% {
+  40%,
+  60%,
+  80% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
     transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
   }
-
   to {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -267,17 +221,16 @@ popup call now
   -webkit-animation-name: tada;
   animation-name: tada;
 }
+
 @-webkit-keyframes pulse {
   from {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
-
   to {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -289,12 +242,10 @@ popup call now
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
   }
-
   50% {
     -webkit-transform: scale3d(1.05, 1.05, 1.05);
     transform: scale3d(1.05, 1.05, 1.05);
   }
-
   to {
     -webkit-transform: scale3d(1, 1, 1);
     transform: scale3d(1, 1, 1);
@@ -305,86 +256,120 @@ popup call now
   -webkit-animation-name: pulse;
   animation-name: pulse;
 }
+
 @keyframes zoomIn {
   from {
     opacity: 0;
     -webkit-transform: scale3d(.3, .3, .3);
     transform: scale3d(.3, .3, .3);
   }
-
   50% {
     opacity: 1;
   }
 }
+
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
 }
+
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-/*new*/
+
+/* CTA responsive mobile */
+@media (max-width: 767px) {
+  .laziweb-alo-phone {
+    width: 100px;
+    height: 100px;
+  }
+  .laziweb-alo-ph-circle {
+    width: 100px;
+    height: 100px;
+  }
+  .laziweb-alo-ph-circle-fill {
+    top: 10px;
+    left: 10px;
+  }
+  .laziweb-alo-ph-img-circle {
+    top: 30px;
+    left: 30px;
+  }
+}
+
+/*new 2*/
 .callback-popup .modal-body .title {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
+
 .callback-popup .modal-body .title p {
-    font-size: 25px;
+  font-size: 25px;
 }
+
 .callback-popup .modal-body strong {
-    font-weight: 600;
+  font-weight: 600;
 }
+
 .callback-popup .modal-body .first-section {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
+
 .callback-popup .modal-body p {
-    font-weight: 300;
-    margin-bottom: 2px;
+  font-weight: 300;
+  margin-bottom: 2px;
 }
+
 .callback-popup .modal-body .title .c-blue {
-    color: #137cc0;
+  color: #137cc0;
 }
+
 .callback-popup .modal-body .seconds-section {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
 }
+
 .callback-popup .modal-body .button-section input {
-    height: 50px;
-    text-align: center;
-    padding: 3px 5px;
-    color: #333;
-    border: 1px solid #137cc0;
-    width: 270px;
-    max-width: 100%;
-    margin-top: 5px;
+  height: 50px;
+  text-align: center;
+  padding: 3px 5px;
+  color: #333;
+  border: 1px solid #137cc0;
+  width: 270px;
+  max-width: 100%;
+  margin-top: 5px;
 }
+
 .callback-popup .modal-body .button-section button {
-    background-color: #137cc0;
-    color: #fff;
-    border: 1px solid #137cc0;
-    padding: 10px 15px;
-    height: 50px;
-    margin-top: 15px;
+  background-color: #137cc0;
+  color: #fff;
+  border: 1px solid #137cc0;
+  padding: 10px 15px;
+  height: 50px;
+  margin-top: 15px;
 }
+
 .callback-popup .modal-body {
-    font-size: 20px;
-    line-height: 28.6px;
-    font-family: 'Open Sans',sans-serif;
+  font-size: 20px;
+  line-height: 28.6px;
 }
-.callback-popup .modal-body a{
-  /* color: #52b8f9; */
+
+.callback-popup .modal-body a {
   color: #fff;
   text-decoration: none;
   outline: none;
 }
+
 .hot-line-wrap a {
   color: #d32816;
 }
+
 .hot-line-wrap {
   position: fixed;
   top: auto;
@@ -398,16 +383,19 @@ popup call now
   -webkit-border-radius: 0 20px 0 20px;
   -moz-border-radius: 0 20px 0 20px;
   border-radius: 0 20px 0 20px;
-  z-index: 9999999;
+  z-index: 888;
 }
+
 .hot-line-wrap p {
   margin-bottom: 0;
 }
+
 .hot-line-wrap p strong {
   font-size: 25px;
   font-weight: bold;
   line-height: 32px;
 }
+
 .hot-line-wrap p span {
   width: 50px;
   height: 50px;
@@ -427,13 +415,8 @@ popup call now
   background-color: #d32816;
 }
 
-@media only screen and (max-width : 450px){
-    .callback-popup .modal-body {
-      font-size: 16px;
+@media only screen and (max-width: 450px) {
+  .callback-popup .modal-body {
+    font-size: 16px;
   }
 }
-/*
-=================================================
-end popup call now
-=================================================
-*/
