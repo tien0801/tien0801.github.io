@@ -4,21 +4,39 @@ popup call now
 =================================================
 */
 
-.callback-popup .modal-header .close {
-    background-color: #fff;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
+.callback-popup {
+    text-align: center;
+    padding: 0 !important;
+}
+
+.callback-popup:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+}
+
+.callback-popup .modal-dialog {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.callback-popup .close {
     position: absolute;
     top: -15px;
     right: -15px;
+    width: 30px;
+    height: 30px;
     opacity: 1;
     line-height: 15px;
     outline: none;
     box-shadow: none;
+    background-color: #fff;
+    border-radius: 100%;
 }
 
-.callback-popup .modal-header .close img {
+.callback-popup .close img {
     width: 20px;
 }
 
@@ -30,66 +48,31 @@ popup call now
 
 .callback-popup .modal-body {
     position: relative;
-    padding: 30px;
-    padding-left: 75px;
-    padding-right: 75px;
-    padding-bottom: 50px;
+    padding: 50px 70px 50px;
 }
 
-.callback-popup .modal-header {
-    border-bottom: none;
-}
-
-.callback-popup h3 {
-    font-size: 30px;
-    margin: 0 0 15px;
-    font-weight: 300;
-    line-height: 1.8;
-}
-
-@media all and (max-width: 480px) {
-    .callback-popup .modal-body {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
-
-@media all and (max-width: 768px) {
-    .callback-popup .modal-header .close {
-        top: 2px;
-        right: 1px;
+@media (max-width: 767px) {
+    .callback-popup .close {
+        top: 0;
+        right: 0;
         border-radius: 0;
     }
-}
 
-.modal {
-    text-align: center;
-    padding: 0 !important;
+    .callback-popup .modal-body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
-
-.modal:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -4px;
-}
-
-.modal-dialog {
-    display: inline-block;
-    vertical-align: middle;
-}
-
 
 /* Phone Ring */
 .laziweb-alo-phone {
     position: fixed;
-    left: 5px;
-    bottom: 5px;
+    left: 15px;
+    bottom: 15px;
     visibility: visible;
     background-color: transparent;
-    width: 126px;
-    height: 126px;
+    width: 124px;
+    height: 124px;
     cursor: pointer;
     z-index: 999 !important;
 }
@@ -136,8 +119,8 @@ popup call now
 .laziweb-alo-ph-img-circle {
     width: 40px;
     height: 40px;
-    top: 43px;
-    left: 43px;
+    top: 42px;
+    left: 42px;
     position: absolute;
     background: rgba(30, 30, 30, 0.1) url("../images/phone-icon.png") no-repeat center center;
     -webkit-border-radius: 100%;
@@ -301,6 +284,8 @@ popup call now
 /* CTA responsive mobile */
 @media (max-width: 767px) {
     .laziweb-alo-phone {
+        left: 5px;
+        bottom: 5px;
         width: 100px;
         height: 100px;
     }
@@ -320,121 +305,5 @@ popup call now
     .laziweb-alo-ph-img-circle {
         top: 30px;
         left: 30px;
-    }
-}
-
-/*new 2*/
-.callback-popup .modal-body .title {
-    margin-bottom: 20px;
-}
-
-.callback-popup .modal-body .title p {
-    font-size: 26px;
-    text-transform: uppercase;
-}
-
-.callback-popup .modal-body strong {
-    font-weight: 600;
-}
-
-.callback-popup .modal-body .first-section {
-    margin-bottom: 20px;
-}
-
-.callback-popup .modal-body p {
-    margin-bottom: 2px;
-}
-
-.callback-popup .modal-body .title .c-blue {
-    color: #137cc0;
-}
-
-.callback-popup .modal-body .seconds-section {
-    margin-bottom: 25px;
-}
-
-.callback-popup .modal-body .button-section input {
-    height: 50px;
-    text-align: center;
-    padding: 3px 5px;
-    color: #333;
-    border: 1px solid #137cc0;
-    width: 270px;
-    max-width: 100%;
-    margin-top: 5px;
-}
-
-.callback-popup .modal-body .button-section button {
-    background-color: #137cc0;
-    color: #fff;
-    border: 1px solid #137cc0;
-    padding: 10px 15px;
-    height: 50px;
-    margin-top: 15px;
-}
-
-.callback-popup .modal-body {
-    font-size: 20px;
-    line-height: 28.6px;
-}
-
-.callback-popup .modal-body a {
-    color: #fff;
-    text-decoration: none;
-    outline: none;
-}
-
-.hot-line-wrap a {
-    color: #d32816;
-}
-
-.hot-line-wrap {
-    position: fixed;
-    top: auto;
-    right: 30px;
-    bottom: 20px;
-    background-color: #fff;
-    border: 1px solid #d32816;
-    color: #d32816;
-    padding: 5px 10px;
-    padding-left: 45px;
-    -webkit-border-radius: 0 20px 0 20px;
-    -moz-border-radius: 0 20px 0 20px;
-    border-radius: 0 20px 0 20px;
-    z-index: 888;
-}
-
-.hot-line-wrap p {
-    margin-bottom: 0;
-}
-
-.hot-line-wrap p strong {
-    font-size: 25px;
-    font-weight: bold;
-    line-height: 32px;
-}
-
-.hot-line-wrap p span {
-    width: 50px;
-    height: 50px;
-    line-height: 46px;
-    border: 2px solid #d32816;
-    text-align: center;
-    font-size: 30px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
-    position: absolute;
-    top: -20px;
-    left: -15px;
-    color: #fff;
-    background: url(../images/phone-icon.png) no-repeat center center;
-    background-size: 80% 80%;
-    background-color: #d32816;
-}
-
-@media only screen and (max-width: 450px) {
-    .callback-popup .modal-body {
-        font-size: 16px;
     }
 }
