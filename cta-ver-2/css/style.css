@@ -49,6 +49,50 @@ popup call now
 .callback-popup .modal-body {
     position: relative;
     padding: 50px 70px 50px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+.callback-popup .modal-body .title {
+    color: #137cc0;
+    margin-bottom: 20px;
+}
+
+.callback-popup .modal-body .title p {
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.callback-popup .modal-body .first-section {
+    margin-bottom: 20px;
+}
+
+.callback-popup .modal-body a {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+}
+
+.callback-popup .modal-body p {
+    margin-bottom: 2px;
+}
+
+.callback-popup .button-section input {
+    display: inline-block;
+    height: 50px;
+    text-align: center;
+    padding: 3px 5px;
+    color: #333;
+    border: 1px solid #137cc0;
+    width: 270px;
+    max-width: 100%;
+}
+
+.callback-popup .button-section button {
+    background-color: #137cc0;
+    color: #fff;
+    border: 1px solid #137cc0;
+    padding: 10px 15px;
+    height: 50px;
 }
 
 @media (max-width: 767px) {

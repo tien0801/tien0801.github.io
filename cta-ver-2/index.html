@@ -16,22 +16,17 @@
 </head>
 
 <body>
-    <a href="tel:0901.461.407" class="visible-xs phone-ring">
-        <div class="laziweb-alo-phone">
-            <div class="animated infinite zoomIn laziweb-alo-ph-circle"></div>
-            <div class="animated infinite pulse laziweb-alo-ph-circle-fill"></div>
-            <div class="animated infinite tada laziweb-alo-ph-img-circle"></div>
-        </div>
+    <!-- CTA Modal Callback -->
+    <a href="tel:0901.461.407" class="laziweb-alo-phone visible-xs phone-ring">
+        <div class="animated infinite zoomIn laziweb-alo-ph-circle"></div>
+        <div class="animated infinite pulse laziweb-alo-ph-circle-fill"></div>
+        <div class="animated infinite tada laziweb-alo-ph-img-circle"></div>
     </a>
-    <div class="hidden-xs quickcontact phone-ring">
-        <a data-toggle="modal" href='#callback_popup'>
-            <div class="laziweb-alo-phone">
-                <div class="animated infinite zoomIn laziweb-alo-ph-circle"></div>
-                <div class="animated infinite pulse laziweb-alo-ph-circle-fill"></div>
-                <div class="animated infinite tada laziweb-alo-ph-img-circle"></div>
-            </div>
-        </a>
-    </div>
+    <a href="#callback_popup" class="laziweb-alo-phone hidden-xs" data-toggle="modal">
+        <div class="animated infinite zoomIn laziweb-alo-ph-circle"></div>
+        <div class="animated infinite pulse laziweb-alo-ph-circle-fill"></div>
+        <div class="animated infinite tada laziweb-alo-ph-img-circle"></div>
+    </a>
     <div class="modal fade callback-popup" id="callback_popup">
         <div class="modal-dialog modal-lg text-center">
             <div class="modal-content">
@@ -45,11 +40,9 @@
                             <p><strong>Email:</strong> <a href="mailto:laziweb@gmail.com">laziweb@gmail.com</a></p>
                             <p><strong>Phone:</strong> <a href="tel:0903.915.877">0903.915.877</a></p>
                         </div>
-                        <div class="seconds-section">
+                        <div class="first-section">
                             <p>Hoặc để lại số điện thoại!</p>
-                            <p>
-                                <strong>YOSU sẽ liên lạc với bạn SAU 5 PHÚT</strong>
-                            </p>
+                            <p><strong>YOSU sẽ liên lạc với bạn SAU 5 PHÚT</strong></p>
                         </div>
                         <div class="button-section">
                             <input type="text" name="phone" placeholder="Nhập số điện thoại">
@@ -60,6 +53,7 @@
             </div>
         </div>
     </div>
+    <!-- end CTA Modal Callback -->
     <!-- //ver2 -->
     <div class="hot-line-wrap">
         <p class="hidden-xs">
