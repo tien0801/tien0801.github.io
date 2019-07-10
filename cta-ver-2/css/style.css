@@ -60,6 +60,7 @@ popup call now
 .callback-popup .modal-body .title p {
     font-size: 26px;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 .callback-popup .modal-body .first-section {
