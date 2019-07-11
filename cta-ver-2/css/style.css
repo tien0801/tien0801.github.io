@@ -1,6 +1,6 @@
 /*
 =================================================
-popup call now
+CSS popup call now
 =================================================
 */
 
@@ -77,6 +77,10 @@ popup call now
     margin-bottom: 2px;
 }
 
+.callback-popup .button-section {
+    width: max-content;
+    margin: 0 auto;
+}
 .callback-popup .button-section input {
     display: inline-block;
     height: 50px;
@@ -86,6 +90,8 @@ popup call now
     border: 1px solid #137cc0;
     width: 270px;
     max-width: 100%;
+    /* float: left;
+    margin-right: 10px; */
 }
 
 .callback-popup .button-section button {
@@ -94,19 +100,6 @@ popup call now
     border: 1px solid #137cc0;
     padding: 10px 15px;
     height: 50px;
-}
-
-@media (max-width: 767px) {
-    .callback-popup .close {
-        top: 0;
-        right: 0;
-        border-radius: 0;
-    }
-
-    .callback-popup .modal-body {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 }
 
 /* Phone Ring */
@@ -350,5 +343,16 @@ popup call now
     .laziweb-alo-ph-img-circle {
         top: 30px;
         left: 30px;
+    }
+
+    .callback-popup .close {
+        top: 0;
+        right: 0;
+        border-radius: 0;
+    }
+
+    .callback-popup .modal-body {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
