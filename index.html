@@ -43,6 +43,7 @@
     }
 
     .page-section ul li {
+        position: relative;
         padding: 7px 15px;
     }
 
@@ -50,6 +51,14 @@
         background-color: #f9f9f9;
     }
 
+    .page-section ul li .number {
+        position: absolute;
+        width: 20px;
+        top: 9px;
+        left: -40px;
+        font-size: 13px;
+        text-align: right;
+    }
     .page-section ul li a {
         font-size: 16px;
         font-weight: 500;
@@ -531,9 +540,11 @@
 
     <script>
         $(document).ready(function() {
-            var index = $('.page-section li');
-            console.log(index);
-            $('.page-section ul li:nth-child(' + index + ')').css('color', '#ff0');
+            // var index = $('.page-section li').index();
+            $('.page-section ul li').each(function( i ) {
+                console.log(i);
+                $('.page-section ul li:nth-child(' + i + ') a').prepend('<span class="number">' +i + '</span>');
+            })
         });
     </script>
 </body>
