@@ -193,9 +193,11 @@
     <script src="js/jquery.mousewheel.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#lightgallery').lightGallery({
-                selector: '#lightgallery .item-gall'
-            });
+            if($("#lightgallery").length > 0) {
+                $('#lightgallery').lightGallery({
+                    selector: '#lightgallery .item-gall'
+                });
+            }
         });
     </script>
 </body>
