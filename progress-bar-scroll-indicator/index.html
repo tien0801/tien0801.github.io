@@ -54,7 +54,22 @@
             </div>
         </div>
         <div class="container">
-            <h1>Scroll Indicator</h1>
+            <h1>Scroll Indicator</h1> <a href="https://www.w3schools.com/howto/howto_js_scroll_indicator.asp">link source</a>
+            <pre>
+<code>
+    $(document).ready(function() {
+        // When the user scrolls the page, execute myFunction 
+        window.onscroll = function() { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        }
+    });
+</code>
+            </pre>
             <div class="temp"></div>
             <div class="temp"></div>
             <div class="temp"></div>
