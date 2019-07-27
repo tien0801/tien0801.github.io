@@ -97,6 +97,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    color: #000;
     z-index: 2;
 }
 .has-submenu> .btn-toggle-sub:before {
