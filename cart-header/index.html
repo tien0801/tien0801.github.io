@@ -11,56 +11,108 @@
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/style.css">
     <style>
-        .y-cart-header .y-box-cart {
-            -moz-box-shadow: 0px 0px 0px;
-            -webkit-box-shadow: 0px 0px 0px;
-            -o-box-shadow: 0px 0px 0px;
-            box-shadow: 0px 0px 0px;
-            -moz-border-radius: 0px;
-            -webkit-border-radius: 0px;
-            -o-border-radius: 0px;
-            border-radius: 0px;
-            padding: 0;
-            width: 200px;
-            background: #fff;
-            border: solid 1px #e0e0e0;
-            border-top: solid 5px;
+        nav {
+            padding: 20px 0 40px 0;
+            background: #F8F8F8;
+            font-size: 16px;
         }
-        .y-cart-header .item-cart .img-product {
-            padding: 0 !important;
-            margin-right: 15px;
+
+        nav .navbar-left {
             float: left;
-            display: block;
-            width: 50px;
-            height: 50px;
-            left: 15px;
-            top: 15px;
         }
+
+        nav .navbar-right {
+            float: right;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="container">
         <h1>Cart Header</h1>
-        <div class="header" style="float: right">
-            <div class="y-cart-header">
-                <a href="#giohang"><i class="fas fa-shopping-cart"></i></a>
-                <div class="y-box-cart">
-                    <div class="item-cart">
-                        <div class="img-product">
-                            <img src="https://dummyimage.com/35x35/bcbcbc/000000" alt="">
-                        </div>
-                    </div>
+        <nav>
+            <div class="container">
+                <ul class="navbar-left">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                
+                <ul class="navbar-right">
+                    <li class="li-cart-header">
+                        <a href="#" class="icon-cart-header">
+                            <i class="fa fa-shopping-cart"></i> <span class="badge">5</span>
+                        </a>
+                        <div class="shopping-cart">
+                            <ul class="shopping-cart-items">
+                                <li>
+                                    <div class="img-prod">
+                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg" alt="item1" />
+                                    </div>
+                                    <span class="item-name">Sony DSC-RX100M III</span>
+                                    <div>
+                                        <span class="item-quantity">Quantity: 01</span> -
+                                        <span class="item-price">849.990đ</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img-prod">
+                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg" alt="item1" />
+                                    </div>
+                                    <span class="item-name">KS Automatic Mechanic...</span>
+                                    <div>
+                                        <span class="item-quantity">Quantity: 01</span> -
+                                        <span class="item-price">1,249.990đ</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="img-prod">
+                                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item3.jpg" alt="item1" />
+                                    </div>
+                                    <span class="item-name">Kindle, 6" Glare-Free To...</span>
+                                    <div>
+                                        <span class="item-quantity">Quantity: 01</span> -
+                                        <span class="item-price">129.990đ</span>
+                                    </div>
+                                </li>
+                            </ul>
 
-                </div>
+                            <div class="shopping-cart-total">
+                                Total: <span class="total-price">2,229.970đ</span> 
+                            </div>
+                            <a href="#" class="btn-checkout">Checkout</a>
+                        </div>
+                    </li>
+                </ul>
+                
             </div>
-        </div>
+            <!--end container -->
+        </nav>
+
+
     </div>
-    
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        // (function(){
+        //     $(".icon-cart-header").on("click", function() {
+        //         $(".shopping-cart").fadeToggle( "fast");
+        //     });
+        // })();
+
+        $(document).ready(function() {
+            // $('.li-cart-header .icon-cart-header').hover(function() {
+            //     $(this).addClass('active');
+            // })
+            
+            // $('body').hover(function() {
+            //     $('.li-cart-header .icon-cart-header').removeClass('active');
+            // })
+        });
+    </script>
 </body>
 
 </html>
