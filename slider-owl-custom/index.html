@@ -24,34 +24,35 @@
 <pre>
     <code>
 if($('.home-slider').length >0) {
-$('.home-slider').owlCarousel({
-    loop: true,
-    // autoplay: true,
-    // autoplayTimeout: 4000,
-    // nestedItemSelector: 'item-gall',
-    margin: 0,
-    responsiveClass:true,
-    items: 3,
-    dots: true,
-    // navText : ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
-    rewindNav : true,
-    nav: true,
-    responsive : {
-        // breakpoint from 0 up
-        0 : {
-           items: 1,
-        },
-        480 : {
-            items: 1,
-        },
-        768 : {
-            items: 2,
-        },
-        1200 : {
-            items: 3,
+    $('.home-slider').owlCarousel({
+        loop: true,
+        // autoplay: true,
+        // autoplayTimeout: 4000,
+        // nestedItemSelector: 'item-gall',
+        margin: 0,
+        responsiveClass:true,
+        items: 3,
+        dots: true,
+        // navText : ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+        rewindNav : true,
+        nav: true,
+        responsive : {
+            // breakpoint from 0 up
+            0 : {
+               items: 1,
+            },
+            480 : {
+                items: 1,
+            },
+            768 : {
+                items: 2,
+            },
+            1200 : {
+                items: 3,
+            }
         }
-    }
-})
+    })
+}
     </code>
 </pre>
     </div>
