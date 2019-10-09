@@ -263,7 +263,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <!-- Home Slider -->
     <script>
-        // $(document).ready(function() {
+        $(document).ready(function() {
             var sync1 = $(".sync1");
             var sync2 = $(".sync2");
             var slidesPerPage = 3; //globaly define number of elements per page
@@ -295,7 +295,6 @@
 
             function syncPosition(el) {
                 let parent = $(this).data("sync");
-                console.log("slider 1 change: " + parent);
                 sync2 = $('.sync2[data-sync="'+ parent +'"]');
                 //if you set loop to false, you have to restore this next line
                 //var current = el.item.index;
@@ -327,17 +326,15 @@
 
             function syncPosition2(el) {
                 let parent = $(this).data("sync");
-                console.log("slider 2 change: " + parent);
-                sync2 = $('.sync2[data-sync="'+ parent +'"]');
+                sync1 = $('.sync1[data-sync="'+ parent +'"]');
 
                 if (syncedSecondary) {
                     var number = el.item.index;
-                    sync2.data('owl.carousel').to(number, 100, true);
+                    sync1.data('owl.carousel').to(number, 100, true);
                 }
             }
 
             sync2.on("click", ".owl-item", function(e) {
-                console.log("sync2 click");
                 e.preventDefault();
                 let parent = $(this).parents('.owl-carousel').data("sync");
                 var number = $(this).index();
@@ -345,10 +342,10 @@
                 sync1 = $('.sync1[data-sync="'+ parent +'"]');
                 sync1.data('owl.carousel').to(number, 300, true);
             });
-        // });
+        });
 
         $(document).on('show.bs.modal', '.modal', function () {
-            $('#sync2').trigger('refresh.owl.carousel');
+            $('.sync2').trigger('refresh.owl.carousel');
         });
     </script>
 </body>
