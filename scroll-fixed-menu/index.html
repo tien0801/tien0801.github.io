@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="vi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+        .header {
+            height: 100px;
+            background-color: #2D2D2D;
+            top: -150px;
+        }
+        .header.fixed {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            transition: all 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Scroll fixed Menu</h1>
+    </div>
+        <header class="header">
+            <p style="color: #fff; text-align: center">header</p>
+        </header>
+
+        <div class="box-temp" style="background-color: #000; height: 1000px">
+            
+        </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        $(window).bind('scroll', function () {
+            if ($(window).scrollTop() > 152) {
+                $('.header').addClass('fixed');
+            } else {
+                $('.header').removeClass('fixed');
+            }
+        });
+    </script>
+</body>
+
+</html>
