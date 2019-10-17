@@ -919,14 +919,17 @@ a:hover, button:hover {
 .y-text-center {
   text-align: center;
 }
-.y-box-img {
+.box-img-flex {
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-.y-box-img img {
-  width: auto;
+.box-img-flex.y-img-left {
+  justify-content: flex-start;
+}
+.box-img-flex img {
+  width: auto !important;
   height: auto;
   max-width: 100%;
   max-height: 100%;
@@ -1149,7 +1152,7 @@ a:hover, button:hover {
   padding: 20px 0px;
   background-color: #fff;
 }
-.y-header-checkout .y-order-logo .y-box-img {
+.y-header-checkout .y-order-logo .box-img-flex {
   height: 80px;
 }
 .y-header-checkout .y-order-process {
@@ -1445,7 +1448,7 @@ a:hover, button:hover {
   }
 }
 @media (min-width: 992px) {
-  .y-header-checkout .y-order-logo .y-box-img {
+  .y-header-checkout .y-order-logo .box-img-flex {
     justify-content: start;
   }
 }
