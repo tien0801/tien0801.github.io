@@ -1578,10 +1578,10 @@ a:hover, button:hover {
 .yosu-bg-color {
   background-color: #00c4cc;
 }
-.yosu-bg-gray {
+.y-bg-gray {
   background-color: #eef0f4;
 }
-.yosu-bg-gray-2 {
+.y-bg-gray-2 {
   background-color: #f4f4f4;
 }
 
@@ -1649,7 +1649,7 @@ a:hover, button:hover {
   .y-title-default {
       font-size: 18px;
   }
-  .yosu-page.yosu-bg-gray {
+  .yosu-page.y-bg-gray {
     background-color: #fff;
   }
 
