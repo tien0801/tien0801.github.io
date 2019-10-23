@@ -30,6 +30,7 @@
     text-decoration: none;
     color: #000;
     border: 1px solid #e6e6e6;
+    margin-bottom: 8px;
 }
 .prod-detail-property .color-detail li a .icon-product {
     width: 30px;
