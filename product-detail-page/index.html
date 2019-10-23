@@ -11,23 +11,84 @@
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/style.css">
     <style>
+    
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-md-6"></div>
+        <h1>Product detail page</h1>
+        <div class="row prod-detail-page">
             <div class="col-md-6">
-                
+                <div class="box-img-flex">
+                    <img src="https://dummyimage.com/600x600/bcbcbc/000000" alt="">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="prod-detail-property">
+                    <p class="text-property">Chọn màu<span>*</span></p>
+                    <ul class="list-inline color-detail">
+                        <li>
+                            <a class="active color" data-color="Màu Xanh Rách" href="javascript:;">
+                                <img class="icon-product" src="https://dummyimage.com/30x30/bcbcbc/000000" alt="">
+                                <span class="text-color">Màu Xanh</span>
+                                <img class="img-check" src="images/icons/icon-check.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="color" href="javascript:;">
+                                <img class="icon-product" src="https://dummyimage.com/30x30/bcbcbc/000000" alt="">
+                                <span class="text-color">Màu Trắng</span>
+                                <img class="img-check" src="images/icons/icon-check.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="color" href="javascript:;">
+                                <img class="icon-product" src="https://dummyimage.com/30x30/bcbcbc/000000" alt="">
+                                <span class="text-color">Màu Đen</span>
+                                <img class="img-check" src="images/icons/icon-check.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="prod-detail-property">
+                    <p class="text-property">Chọn size<span>*</span></p>
+                    <ul class="list-inline color-detail list-size">
+                        <li>
+                            <a class="active color" data-color="Màu Xanh Rách" href="javascript:;">
+                                <span class="text-color">M</span>
+                                <img class="img-check" src="images/icons/icon-check.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="color" data-color="Màu Xanh Rách" href="javascript:;">
+                                <span class="text-color">XL</span>
+                                <img class="img-check" src="images/icons/icon-check.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="color" href="javascript:;">
+                                <span class="text-color">XXL</span>
+                                <img class="img-check" src="images/icons/icon-check.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+        $('.prod-detail-property ul li a.color').click(function() {
+            if (!$(this).hasClass('active')) {
+                $(this).parents('.prod-detail-property').find('a.color').removeClass('active');
+                $(this).addClass('active');
+            }
+        })
+    </script>
 </body>
 
 </html>
