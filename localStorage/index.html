@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="vi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>LocalStorage</h1>
+        <p>https://farm1995.com </p>
+<pre>
+<code>
+localStorage Methods :
+
+localStorage.getItem('key');
+localStorage.setItem('key','value');
+</code>
+</pre>
+        <div class="subscribe-me">
+            <a href="#close" class="sb-close-btn">x</a>
+            <div id="popup-newsletter" style="background: transparent url({{settings.popup_image|upload_url}}) no-repeat top left;">
+                <div class="block-content">
+                    <div class="form-subscribe-header">
+                        <label>{{settings.popup_title}}</label>
+                    </div>
+                    <div class="clearfix space30"></div>
+                    <span class="promo-panel-sale">{{settings.popup_title1}}</span>
+                    <div class="clearfix space30"></div>
+                    <span class="promo-panel-text"></span>
+                    <div class="clearfix space30"></div>
+                    <div class="input-box">
+                        <input name="email" id="pnewsletter" title="" class="input-text required-entry validate-email" type="text" placeholder="{{Translate('SUBSE')}}...">
+                    </div>
+                    <div class="actions">
+                        <button type="submit" title="JOIN NOW !" class="button" id="popup"><span><span>{{Translate('JOINN')}} !</span></span></button>
+                    </div>
+                    <span class="promo-panel-text1">{{settings.popup_desc}} </span><br>
+                    <label class="subscribe-bottom"><input id="checkshow" type="checkbox" ><span>{{Translate('DSHOW')}}</span></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        // Popup 
+        if (localStorage.getItem('time_check') === null) {
+            showPopupSubscribe();
+        } else {
+            var time_check = localStorage.getItem('time_check');
+            var current_Time = getCurrentTime();
+            if (current_Time - parseInt(time_check) > time_popup) {
+                showPopupSubscribe();
+            }
+        }
+
+
+        $('#checkshow').change(function() {
+            if ($('#checkshow').is(':checked')) {
+                var date = new Date();
+                var current_Time = date.getTime();
+                localStorage.setItem('time_check', current_Time);
+            } else {
+                localStorage.removeItem('time_check')
+            }
+        })
+
+
+        function getCurrentTime() {
+            var date = new Date();
+            return date.getTime();
+        }
+
+        function showPopupSubscribe() {
+            // SUBSCRIBE NEWSLETTER
+            $(".subscribe-me").subscribeBetter({
+                trigger: "onload",
+                delay: 300
+            });
+        }
+    </script>
+
+    <script>
+        var time_popup = parseInt({{settings.time_popup ? settings.time_popup : 8}})  * 3600000;
+    </script>
+</body>
+
+</html>
