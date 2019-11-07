@@ -9,19 +9,6 @@ CSS popup call now
     padding: 0 !important;
 }
 
-.callback-popup:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-    margin-right: -4px;
-}
-
-.callback-popup .modal-dialog {
-    display: inline-block;
-    vertical-align: middle;
-}
-
 .callback-popup .close {
     position: absolute;
     top: -15px;
@@ -160,7 +147,7 @@ CSS popup call now
     top: 42px;
     left: 42px;
     position: absolute;
-    background: rgba(30, 30, 30, 0.1) url("../images/phone-icon.png") no-repeat center center;
+    background: rgba(30, 30, 30, 0.1) url("../images/icons/phone-icon.png") no-repeat center center;
     -webkit-border-radius: 100%;
     -moz-border-radius: 100%;
     border-radius: 100%;
@@ -320,6 +307,20 @@ CSS popup call now
 }
 
 /* CTA responsive mobile */
+@media (min-width: 767px) {
+    .callback-popup:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+    .callback-popup .modal-dialog {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
 @media (max-width: 767px) {
     .laziweb-alo-phone {
         left: 5px;
@@ -354,5 +355,10 @@ CSS popup call now
     .callback-popup .modal-body {
         padding-left: 15px;
         padding-right: 15px;
+    }
+
+    .callback-popup .button-section input {
+        display: block;
+        margin-bottom: 10px;
     }
 }
