@@ -58,6 +58,14 @@
     width: 12px;
 }
 
+.y-owl-style-3 .box-info-slider {
+    max-width: 800px;
+}
+@media (min-width: 992px) {
+	.y-owl-style-3 .box-info-slider {
+		margin: 30px 60px;
+	}
+}
 @media (min-width: 768px) {
 	.y-owl-style-3 .box-info-slider {
 	    position: absolute;
@@ -72,5 +80,7 @@
 	}
 	.y-owl-style-3 .box-info-slider .title-slider {
 	    font-size: 18px;
+	    margin-bottom: 10px;
+	    font-weight: bold;
 	}
 }
