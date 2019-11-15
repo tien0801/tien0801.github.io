@@ -57,3 +57,20 @@
     opacity: 1;
     width: 12px;
 }
+
+@media (min-width: 768px) {
+	.y-owl-style-3 .box-info-slider {
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    font-size: 16px;
+	    padding: 20px;
+		background: transparent;
+	    width: 100%;
+	    color: #fff;
+	    z-index: 3;
+	}
+	.y-owl-style-3 .box-info-slider .title-slider {
+	    font-size: 18px;
+	}
+}

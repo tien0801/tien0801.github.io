@@ -21,6 +21,7 @@
 <body>
     <div class="container">
         <h1>Slider OWL Carousel Simple </h1>
+        <div class="col-md-6">
 <pre>
     <code>
 if($('.home-slider').length >0) {
@@ -55,40 +56,82 @@ if($('.home-slider').length >0) {
 }
     </code>
 </pre>
+        </div>
+        <div class="col-md-6">
+            <div class="home-slider owl-carousel">
+                <div class="item">
+                    <a class="item-slider" href="#">
+                       <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1" frameborder="0" allowfullscreen>
+                       <!-- <a class="owl-video" href="https://vimeo.com/23924346"></a> -->
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="item-slider" href="#">
+                       <iframe width="560" height="315" src="https://www.youtube.com/embed/AmvA-XJF0j8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="item-slider" href="#">
+                       <img src="https://dummyimage.com/920x400/0d00ff/ff0000" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="item-slider" href="#">
+                       <img src="https://dummyimage.com/920x400/0d00ff/fff" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="item-slider" href="#">
+                       <img src="https://dummyimage.com/920x400/0d00ff/ff0000" alt="">
+                    </a>
+                </div>
+                <div class="item">
+                    <a class="item-slider" href="#">
+                       <img src="https://dummyimage.com/920x400/0d00ff/fff" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
     </div>
     
     <div class="container">
-    	<div class="home-slider owl-carousel">
-            <div class="item">
-                <a class="item-slider" href="#">
-                   <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1" frameborder="0" allowfullscreen>
-                   <!-- <a class="owl-video" href="https://vimeo.com/23924346"></a> -->
-                </a>
-            </div>
-            <div class="item">
-                <a class="item-slider" href="#">
-                   <iframe width="560" height="315" src="https://www.youtube.com/embed/AmvA-XJF0j8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </a>
-            </div>
+    	<div class="home-slider-3 y-owl-style-3 owl-carousel">
             <div class="item">
                 <a class="item-slider" href="#">
                    <img src="https://dummyimage.com/920x400/0d00ff/ff0000" alt="">
                 </a>
+                <div class="box-info-slider">
+                    <h5 class="title-slider">Lorem ipsum dolor sit amet</h5>
+                    <p class="desc-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam sit reiciendis, laborum nihil illum vero consequatur quasi fugit quidem totam porro in repellat ab ducimus minus dolore nisi, ratione deserunt.</p>
+                </div>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
                    <img src="https://dummyimage.com/920x400/0d00ff/fff" alt="">
                 </a>
+                <div class="box-info-slider">
+                    <h5 class="title-slider">Lorem ipsum dolor sit amet 2</h5>
+                    <p class="desc-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aliquam sed earum veniam distinctio. Nemo omnis beatae at molestias facilis sequi. Ipsum quaerat, officiis. Odio iure error obcaecati consectetur dicta!</p>
+                </div>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
                    <img src="https://dummyimage.com/920x400/0d00ff/ff0000" alt="">
                 </a>
+                <div class="box-info-slider">
+                    <h5 class="title-slider">Lorem ipsum dolor sit amet 3</h5>
+                    <p class="desc-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis non asperiores quos recusandae quae libero eos cumque culpa! Commodi quia dolore expedita officiis facere, in soluta id laborum dignissimos officia!</p>
+                </div>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
                    <img src="https://dummyimage.com/920x400/0d00ff/fff" alt="">
                 </a>
+                <div class="box-info-slider">
+                    <h5 class="title-slider">Lorem ipsum dolor sit amet 4</h5>
+                    <p class="desc-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius tempore obcaecati veniam eligendi, veritatis consequuntur beatae eum, soluta repudiandae sunt similique animi dolorum consectetur porro, ab quidem. Quidem, vel.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -147,6 +190,22 @@ if($('.home-slider').length >0) {
     			        items: 3,
     			    }
     			}
+            })
+        }
+        if($('.home-slider-3').length >0) {
+            $('.home-slider-3').owlCarousel({
+                loop: true,
+                // autoplay: true,
+                // autoplayTimeout: 4000,
+                // nestedItemSelector: 'item-gall',
+                margin: 0,
+                responsiveClass:true,
+                items: 1,
+                dots: true,
+                navText : ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+                rewindNav : true,
+                nav: true,
+                
             })
         }
 
