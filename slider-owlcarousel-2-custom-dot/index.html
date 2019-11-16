@@ -11,16 +11,13 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .slider-section .box-dot-slider {
-            /* position: absolute; */
-            bottom: 30px;
-            left: 0;
-            right: 0;
-            z-index: 2;
+
+        .owl-custom-dots .box-dot-slider {
             width: max-content;
-            margin: 0 auto;
+            margin: 10px auto;
+            z-index: 2;
         }
-        .slider-section .box-dot-slider .i-dot {
+        .owl-custom-dots .box-dot-slider .i-dot {
             background: rgba(0, 0, 0, 0.3);
             width: 50px;
             height: 50px;
@@ -33,28 +30,15 @@
             font-size: 15px;
             margin: 0 10px;
         }
-        .search-section .form-control {
-            height: 64px;
+        .owl-custom-dots .box-dot-slider .i-dot.active {
+            background: #000;
         }
-        .product-section .list-product {
-            margin-bottom: 20px;
-        }
-        .service-section .box-item-service {
-            min-height: 270px;
-        }
-        .service-section .item-service {
-            position: relative;
-            padding: 24px 30px 20px;
-            border: 1px solid #000;
-            -webkit-transition: background-color 0.3s linear;
-            transition: background-color 0.3s linear;
-        }
-        .service-section .item-service .title-service {
-            font-size: 22px;
-            text-transform: uppercase;
-        }
-        .service-section .item-service:hover {
-            background-color: #fff;
+        
+    </style>
+
+    <style>
+        img {
+            max-width: 100%;
         }
     </style>
 </head>
@@ -62,59 +46,70 @@
 <body>
     <div class="container">
         <h1>Slider OWL Carousel - Custom Dot</h1>
+        <h3>Link source : <a href="https://codepen.io/vbeetlejuice/pen/dRaero">https://codepen.io/vbeetlejuice/pen/dRaero</a></h3>
+        <div class="row">
+            <div class="col-md-6">
 <pre>
 <code>
 if ($('.home-slider').length > 0) {
-    $('.home-slider').owlCarousel({
+    var owl = $('.home-slider');
+    owl.owlCarousel({
         loop: true,
         // autoplay: true,
         // autoplayTimeout: 4000,
         margin: 0,
         responsiveClass: true,
         items: 1,
-        dots: false,
+        dots: true,
         navText: ["", ""],
         rewindNav: true,
         nav: false,
-        URLhashListener: true,
-        autoplayHoverPause: true,
-        startPosition: 'URLHash'
+        dotsContainer: '.box-dot-slider',
+    }).on('changed.owl.carousel', function(event) {
+        console.log("sdfdsf");
+        // $('.box-dot-slider').
     })
+
+    $('.box-dot-slider').on('click', '.i-dot', function(e) {
+        owl.trigger('to.owl.carousel', [$(this).index(), 300]);
+    });
 }
 
 ============================================
-"item" data-hash="sli1"
 
-"i-dot" href="#sli1" 01
 </code>
 </pre>
-    </div>
-
-    <div class="slider-section">
-        <div class="container">
-            <div class="home-slider owl-carousel owl-theme">
-                <div class="item" data-hash="sli1">
-                    <a class="item-slider" href="#">
-                        <img src="https://dummyimage.com/920x400/888/fff" alt="">
-                    </a>
-                </div>
-                <div class="item" data-hash="sli2">
-                    <a class="item-slider" href="#">
-                        <img src="https://dummyimage.com/920x400/888/fff" alt="">
-                    </a>
-                </div>
-                <div class="item" data-hash="sli3">
-                    <a class="item-slider" href="#">
-                        <img src="https://dummyimage.com/920x400/888/fff" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="box-dot-slider">
-                <a class="i-dot" href="#sli1">01</a>
-                <a class="i-dot" href="#sli2">02</a>
-                <a class="i-dot" href="#sli3">03</a>
             </div>
 
+            <div class="col-md-6">
+                <div class="container">
+                    <div class="owl-custom-dots">
+                        <div class="home-slider owl-carousel owl-theme">
+                            <div class="item">
+                                <a class="item-slider" href="#">
+                                    <img src="https://dummyimage.com/920x400/888/fff" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a class="item-slider" href="#">
+                                    <img src="https://dummyimage.com/920x400/888/fff" alt="">
+                                </a>
+                            </div>
+                            <div class="item">
+                                <a class="item-slider" href="#">
+                                    <img src="https://dummyimage.com/920x400/888/fff" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="box-dot-slider">
+                            <a class="i-dot active" href="javascript:;">01</a>
+                            <a class="i-dot" href="javascript:;">02</a>
+                            <a class="i-dot" href="javascript:;">03</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 
@@ -123,21 +118,27 @@ if ($('.home-slider').length > 0) {
     <!-- Home Slider -->
     <script>
         if ($('.home-slider').length > 0) {
-            $('.home-slider').owlCarousel({
+            var owl = $('.home-slider');
+            owl.owlCarousel({
                 loop: true,
                 // autoplay: true,
                 // autoplayTimeout: 4000,
                 margin: 0,
                 responsiveClass: true,
                 items: 1,
-                dots: false,
+                dots: true,
                 navText: ["", ""],
                 rewindNav: true,
                 nav: false,
-                URLhashListener: true,
-                autoplayHoverPause: true,
-                startPosition: 'URLHash'
+                dotsContainer: '.box-dot-slider',
+            }).on('changed.owl.carousel', function(event) {
+                console.log("sdfdsf");
+                // $('.box-dot-slider').
             })
+
+            $('.box-dot-slider').on('click', '.i-dot', function(e) {
+                owl.trigger('to.owl.carousel', [$(this).index(), 300]);
+            });
         }
     </script>
 </body>
