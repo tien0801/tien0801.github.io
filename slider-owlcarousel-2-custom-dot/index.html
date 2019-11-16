@@ -141,6 +141,61 @@ if ($('.home-slider').length > 0) {
             });
         }
     </script>
+
+
+    <!-- Code Old -->
+    <div class="slider-section">
+        <div class="container">
+            <div class="home-slider-2 owl-carousel owl-theme">
+                <div class="item" data-hash="sli1">
+                    <a class="item-slider" href="#">
+                        <img src="https://dummyimage.com/920x400/888/fff" alt="">
+                    </a>
+                </div>
+                <div class="item" data-hash="sli2">
+                    <a class="item-slider" href="#">
+                        <img src="https://dummyimage.com/920x400/888/fff" alt="">
+                    </a>
+                </div>
+                <div class="item" data-hash="sli3">
+                    <a class="item-slider" href="#">
+                        <img src="https://dummyimage.com/920x400/888/fff" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="box-dot-slider">
+                <a class="i-dot" href="#sli1">01</a>
+                <a class="i-dot" href="#sli2">02</a>
+                <a class="i-dot" href="#sli3">03</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        if ($('.home-slider-2').length > 0) {
+            $('.home-slider-2').owlCarousel({
+                loop: true,
+                margin: 0,
+                responsiveClass: true,
+                items: 1,
+                dots: false,
+                navText: ["", ""],
+                rewindNav: true,
+                nav: false,
+                URLhashListener: true,
+                autoplayHoverPause: true,
+                startPosition: 'URLHash'
+            })
+        }
+
+    // ============================================
+    //     "item" data-hash="sli1"
+    //     "i-dot" href="#sli1" 01
+    </script>
+    
 </body>
 
 </html>
+
+
+
