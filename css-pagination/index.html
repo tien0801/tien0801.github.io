@@ -59,18 +59,70 @@
 <body>
     <div class="container">
         <h1>Pagination Css</h1>
-        <div class="text-center">
-            <div class="y-pagination">
-                <ul>
-                    <li><a href="#"><i class="fas fa-chevron-left"></i></a></li>
-                    <li><a href="#">1</a></li>
-                    <li class="active"><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#"><i class="fas fa-chevron-right"></i></a></li>
-                </ul>
+        <div class="row">
+            <div class="col-md-6">
+                <pre>
+<code>
+.y-pagination {
+    padding: 20px 0;
+}
+
+.y-pagination ul {
+    display: inline-block;
+    margin: 0;
+}
+
+.y-pagination li {
+    display: inline;
+    list-style: none;
+}
+
+.y-pagination li>a {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.y-pagination li.active>a,
+.y-pagination li.active>a:focus,
+.y-pagination li.active>a:hover {
+    background-color: #F5DC05;
+    border-color: #F5DC05;
+    color: #fff;
+    z-index: 2;
+}
+
+.y-pagination li>a:focus,
+.y-pagination li>a:hover {
+    background-color: #eee;
+    border-color: #ddd;
+}
+</code>
+                </pre>
+            </div>
+            <div class="col-md-6">
+                <div class="text-center">
+                    <div class="y-pagination">
+                        <ul>
+                            <li><a href="#"><i class="fas fa-chevron-left"></i></a></li>
+                            <li><a href="#">1</a></li>
+                            <li class="active"><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+
+        
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
