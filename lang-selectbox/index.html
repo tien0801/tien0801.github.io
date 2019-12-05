@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="">
+	
 	<style>
 		.y-box-lang {
 			position: relative;
@@ -102,25 +102,127 @@
 </head>
 <body>
 	<div class="container">
-		<div class="y-box-lang">
-			<a role="button" href="javascript:;" class="color_dark" id="lang_button">
-				<span class="lang-item vi active"><img class="d_inline_middle m_right_10" src="images/icons/vi.jpg" alt="vi">Tiếng Việt</span>
-				<span class="lang-item en"><img class="d_inline_middle m_right_10" src="images/icons/en.jpg" alt="en">English</span>
-			</a>
-			<ul class="lang-dropdown type_2 top_arrow">
-	        	<li>
-	                <a href="#vi" class="tr_delay_hover" data-vlang="vi">
-	                	<img class="d_inline_middle" src="images/icons/vi.jpg" alt="vi">Tiếng Việt
-	                </a>
-	            </li>
+		<h1>Lang custom selectbox</h1>
+		<div class="row">
+			<div class="col-md-6">
+				<pre>
+<code>
+.y-box-lang {
+	position: relative;
+	width: max-content;
+}
+#lang_button>.lang-item {
+	display: none;
+}
+#lang_button>.lang-item.active {
+	display: block;
+}
+#lang_button> .lang-item img {
+	margin-right: 10px;
+}
+.lang-dropdown {
+	width: max-content;
+	position: absolute;
+	top: 100%;
+	margin-top: 10px;
+	width: 100%;
+	-webkit-transform-origin: 0 0 0;
+	-moz-transform-origin: 0 0 0;
+	-o-transform-origin: 0 0 0;
+	-ms-transform-origin: 0 0 0;
+	transform-origin: 0 0 0;
+	-webkit-transform: rotate3d(1, 0, 0, 90deg);
+	-moz-transform: rotate3d(1, 0, 0, 90deg);
+	-o-transform: rotate3d(1, 0, 0, 90deg);
+	-ms-transform: rotate3d(1, 0, 0, 90deg);
+	transform: rotate3d(1, 0, 0, 90deg);
+	visibility: hidden;
+	list-style: none;
+	z-index: 2;
+}
+.lang-dropdown.type_2 {
+	width: max-content;
+	min-width: 110px;
+	left: auto;
+	right: 0px;
+	z-index: 5;
+}
+.lang-dropdown.opened {
+	-webkit-animation: wicket .5s ease;
+	-moz-animation: wicket .5s ease;
+	-o-animation: wicket .5s ease;
+	-ms-animation: wicket .5s ease;
+	animation: wicket .5s ease;
+	-webkit-transform: rotate3d(1, 0, 0, 0deg);
+	-moz-transform: rotate3d(1, 0, 0, 0deg);
+	-o-transform: rotate3d(1, 0, 0, 0deg);
+	-ms-transform: rotate3d(1, 0, 0, 0deg);
+	transform: rotate3d(1, 0, 0, 0deg);
+	visibility: visible;
+}
+.lang-dropdown>li a {
+	display: block;
+	padding: 4px 15px;
+	background: #34495e;
+	color: #fff;
+	text-align: left;
+	text-decoration: none;
+}
+.lang-dropdown.top_arrow:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 7px solid transparent;
+	border-bottom-width: 8px;
+	border-bottom-style: solid;
+	border-right: 7px solid transparent;
+	position: absolute;
+	top: -8px;
+	right: 16px;
+	border-bottom-color: #34495e;
+}
+.lang-dropdown>li img {
+	margin-right: 6px;
+}
+.lang-dropdown>li:first-child a {
+	-webkit-border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	border-radius: 4px 4px 0 0;
+}
+.lang-dropdown>li:last-child a {
+	-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+.lang-dropdown>li a:hover {
+	background: #2c3e50;
+}
+</code>
+				</pre>
+			</div>
+			<div class="col-md-6">
+				<div class="y-box-lang">
+					<a role="button" href="javascript:;" class="color_dark" id="lang_button">
+						<span class="lang-item vi active"><img class="d_inline_middle m_right_10" src="images/icons/vi.jpg" alt="vi">Tiếng Việt</span>
+						<span class="lang-item en"><img class="d_inline_middle m_right_10" src="images/icons/en.jpg" alt="en">English</span>
+					</a>
+					<ul class="lang-dropdown type_2 top_arrow">
+			        	<li>
+			                <a href="#vi" class="tr_delay_hover" data-vlang="vi">
+			                	<img class="d_inline_middle" src="images/icons/vi.jpg" alt="vi">Tiếng Việt
+			                </a>
+			            </li>
 
-	            <li>
-	                <a href="#en" class="tr_delay_hover" data-vlang="en">
-	                	<img class="d_inline_middle" src="images/icons/en.jpg" alt="en">English
-	                </a>
-	            </li>
-	        </ul>
-	    </div>
+			            <li>
+			                <a href="#en" class="tr_delay_hover" data-vlang="en">
+			                	<img class="d_inline_middle" src="images/icons/en.jpg" alt="en">English
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
+			</div>
+		</div>
+		
 	</div>
 
 	<script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
