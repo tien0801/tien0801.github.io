@@ -19,19 +19,69 @@
 
 <body>
     <div class="container">
-        <h1>Google Translate Button</h1>
+        <h1>Google Translate Button - Custom</h1>
         <h3><a href="https://www.w3schools.com/howto/howto_google_translate.asp">Source: https://www.w3schools.com/howto/howto_google_translate.asp</a></h3>
+        <h3><a href="https://stackoverflow.com/questions/10486833/implementing-google-translate-with-custom-flag-icons">Custom: https://stackoverflow.com/questions/10486833/implementing-google-translate-with-custom-flag-icons</a></h3>
+
+        <!-- Code provided by Google -->
         <div id="google_translate_element"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia suscipit officia, in culpa natus tempore optio facilis? Soluta obcaecati vel cupiditate! Aliquam adipisci, quisquam necessitatibus laudantium maiores cupiditate dolorum totam.</p>
+
+        <div class="translation-icons" style="display: none">
+            <a href="#" class="nl" data-placement="0">nl</a>
+            <a href="#" class="de" data-placement="1">de</a>
+            <a href="#" class="en" data-placement="2">en</a>
+            <a href="#" class="fr" data-placement="3">fr</a>
+            <a href="#" class="it" data-placement="4">it</a>
+            <a href="#" class="sp" data-placement="5">es</a>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
     <!-- JS Google Translate -->
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script type="text/javascript">
+    <script>
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-        }
+        new google.translate.TranslateElement({
+        //defaultLanguage: 'en', 
+        //pageLanguage: 'en', 
+        includedLanguages: 'de,nl,en,es,it,fr', 
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
+        autoDisplay: false,
+        multilanguagePage: true}, 'google_translate_element')
+        };
+
+        //this one I need because of the first menu with "select the language" item, after the first click on the language it disappears 
+        var clickCount = 0;
+
+        $(window).load(function () {
+            $('.translation-icons a').click(function(e) {
+            e.preventDefault();
+
+            var $frame = $('.goog-te-menu-frame:first');
+
+            if (!$frame.size()) {
+                alert("Error: Could not find Google translate frame.");
+                return false;
+                }
+
+            //find the a links element inside the gtranlate first frame
+            var langs = $('.goog-te-menu-frame:first').contents().find('.goog-te-menu2 a');
+
+             //the number of the language in flag-elements
+            var placement = $(this).data('placement');
+
+            //this again I need to adjust the mapping numbers of the languages in the flag elements        
+            if (clickCount == 0){
+                placement = $(this).data('placement')+1;
+                clickCount++;
+                }
+            //and finaly imitate click on the gtranslate element which is the same as the number of the language in flag link
+            langs.eq(placement).find('span.text').click();
+            return false;
+
+            });
+        });
     </script>
 </body>
 
