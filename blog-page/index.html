@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta name='revisit-after' content='1 days' />
@@ -13,193 +13,125 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .y-box-img {
+            position: relative;
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+            overflow: hidden;
+        }
+        .y-box-img .link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+        .y-box-img img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            max-width: 100%;
+            max-height: 100%;
+            width: auto !important;
+            height: auto !important;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="">
-        <div class="container">
-            <h1>Blog page</h1>
-            <div class="row">
-                <div class="col-md-8 col-xs-12 left-content">
-                    <div class="row">
-                        <div class="col-xs-6 col-sm-4 col-md-6 item">
-                            <div class="news-item">
-                                <figure class="img">
-                                    <img src="images/news1.jpg" alt="">
-                                    <a href="#" class="more"></a>
-                                </figure>
-                                <div class="text">
-                                    <p class="info">
-                                        <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>August 10, 2018</span>
-                                        <span class="author"><i class="fa fa-user" aria-hidden="true"></i>Admin</span>
-                                    </p>
-                                    <a href="#" class="title">Aypi Non Habent Claritatem Insitam Ipsum is that it has a more-or-less normal distribution</a>
-                                    <div class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.</div>
-                                    <a href="#" class="more">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-6 item">
-                            <div class="news-item">
-                                <figure class="img">
-                                    <img src="images/news2.jpg" alt="">
-                                    <a href="#" class="more"></a>
-                                </figure>
-                                <div class="text">
-                                    <p class="info">
-                                        <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>August 10, 2018</span>
-                                        <span class="author"><i class="fa fa-user" aria-hidden="true"></i>Admin</span>
-                                    </p>
-                                    <a href="#" class="title">Aypi Non Habent Claritatem Insitam Ipsum is that it has a more-or-less normal distribution</a>
-                                    <div class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.</div>
-                                    <a href="#" class="more">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-6 item">
-                            <div class="news-item">
-                                <figure class="img">
-                                    <img src="images/news2.jpg" alt="">
-                                    <a href="#" class="more"></a>
-                                </figure>
-                                <div class="text">
-                                    <p class="info">
-                                        <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>August 10, 2018</span>
-                                        <span class="author"><i class="fa fa-user" aria-hidden="true"></i>Admin</span>
-                                    </p>
-                                    <a href="#" class="title">Aypi Non Habent Claritatem Insitam Ipsum is that it has a more-or-less normal distribution</a>
-                                    <div class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.</div>
-                                    <a href="#" class="more">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-6 item">
-                            <div class="news-item">
-                                <figure class="img">
-                                    <img src="images/news1.jpg" alt="">
-                                    <a href="#" class="more"></a>
-                                </figure>
-                                <div class="text">
-                                    <p class="info">
-                                        <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>August 10, 2018</span>
-                                        <span class="author"><i class="fa fa-user" aria-hidden="true"></i>Admin</span>
-                                    </p>
-                                    <a href="#" class="title">Aypi Non Habent Claritatem Insitam Ipsum is that it has a more-or-less normal distribution</a>
-                                    <div class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.</div>
-                                    <a href="#" class="more">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-6 item">
-                            <div class="news-item">
-                                <figure class="img">
-                                    <img src="images/news2.jpg" alt="">
-                                    <a href="#" class="more"></a>
-                                </figure>
-                                <div class="text">
-                                    <p class="info">
-                                        <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>August 10, 2018</span>
-                                        <span class="author"><i class="fa fa-user" aria-hidden="true"></i>Admin</span>
-                                    </p>
-                                    <a href="#" class="title">Aypi Non Habent Claritatem Insitam Ipsum is that it has a more-or-less normal distribution</a>
-                                    <div class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.</div>
-                                    <a href="#" class="more">Read more</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-4 col-md-6 item">
-                            <div class="news-item">
-                                <figure class="img">
-                                    <img src="images/news1.jpg" alt="">
-                                    <a href="#" class="more"></a>
-                                </figure>
-                                <div class="text">
-                                    <p class="info">
-                                        <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>August 10, 2018</span>
-                                        <span class="author"><i class="fa fa-user" aria-hidden="true"></i>Admin</span>
-                                    </p>
-                                    <a href="#" class="title">Aypi Non Habent Claritatem Insitam Ipsum is that it has a more-or-less normal distribution</a>
-                                    <div class="content">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here'.</div>
-                                    <a href="#" class="more">Read more</a>
-                                </div>
-                            </div>
+    <div class="container">
+        <h1>Blog page</h1>
+        <div class="row">
+            <div class="col-md-8 list-item-blog">
+                <div class="item-blog-inline">
+                    <div class="blog-img">
+                        <a href="post.html" class="y-box-img">
+                            <img src="https://dummyimage.com/300x150/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-info">
+                        <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                        <div class="blog-date">Ngày: 18/12/2019</div>
+                        <div class="blog-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim officia ea debitis, totam id atque necessitatibus amet similique 
                         </div>
                     </div>
                 </div>
-                <!-- end .left-content -->
-                <div class="col-md-4 col-xs-12 sidebar-blog">
-                    <div class="row">
-                        <div class="col-sm-12 popular-news">
-                            <h2 class="sidebar-title">Popular news</h2>
-                            <div class="popular-news-item">
-                                <div class="box-img">
-                                    <a href="#"><img src="images/news1.jpg" alt=""></a>
-                                </div>
-                                <div class="box-text">
-                                    <a href="#" class="title">Lorem ipsum dolor sit amet</a>
-                                    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum est, eligendi, voluptates ut blanditiis corporis</p>
-                                    <div class="info">
-                                        <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>August 10, 2018</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popular-news-item">
-                                <div class="box-img">
-                                    <a href="#"><img src="images/news1.jpg" alt=""></a>
-                                </div>
-                                <div class="box-text">
-                                    <a href="#" class="title">Lorem ipsum dolor sit amet</a>
-                                    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum est, eligendi, voluptates ut blanditiis corporis</p>
-                                    <div class="info">
-                                        <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>August 10, 2018</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popular-news-item">
-                                <div class="box-img">
-                                    <a href="#"><img src="images/news1.jpg" alt=""></a>
-                                </div>
-                                <div class="box-text">
-                                    <a href="#" class="title">Lorem ipsum dolor sit amet</a>
-                                    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum est, eligendi, voluptates ut blanditiis corporis</p>
-                                    <div class="info">
-                                        <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>August 10, 2018</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="popular-news-item">
-                                <div class="box-img">
-                                    <a href="#"><img src="images/news1.jpg" alt=""></a>
-                                </div>
-                                <div class="box-text">
-                                    <a href="#" class="title">Lorem ipsum dolor sit amet</a>
-                                    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum est, eligendi, voluptates ut blanditiis corporis</p>
-                                    <div class="info">
-                                        <span class="date"><i class="fa fa-calendar" aria-hidden="true"></i>August 10, 2018</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 tags mt-60">
-                            <h2 class="sidebar-title">tags</h2>
-                            <ul>
-                                <li><a href="#">Football</a></li>
-                                <li><a href="#">Fashion</a></li>
-                                <li><a href="#">Food</a></li>
-                                <li><a href="#">Gaming</a></li>
-                                <li><a href="#">Laptop</a></li>
-                                <li><a href="#">World cup 2018</a></li>
-                                <li><a href="#">Girls</a></li>
-                                <li><a href="#">Design</a></li>
-                                <li><a href="#">School</a></li>
-                                <li><a href="#">Soliders</a></li>
-                                <li><a href="#">Weather</a></li>
-                                <li><a href="#">Healthy</a></li>
-                            </ul>
+                <div class="item-blog-inline">
+                    <div class="blog-img">
+                        <a href="post.html" class="y-box-img">
+                            <img src="https://dummyimage.com/300x150/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-info">
+                        <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                        <div class="blog-date">Ngày: 18/12/2019</div>
+                        <div class="blog-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim officia ea debitis, totam id atque necessitatibus amet similique 
                         </div>
                     </div>
                 </div>
-                <!-- end .right-content -->
+                <div class="item-blog-inline">
+                    <div class="blog-img">
+                        <a href="post.html" class="y-box-img">
+                            <img src="https://dummyimage.com/300x150/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-info">
+                        <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                        <div class="blog-date">Ngày: 18/12/2019</div>
+                        <div class="blog-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim officia ea debitis, totam id atque necessitatibus amet similique 
+                        </div>
+                    </div>
+                </div>
+                <div class="item-blog-inline">
+                    <div class="blog-img">
+                        <a href="post.html" class="y-box-img">
+                            <img src="https://dummyimage.com/300x150/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-info">
+                        <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                        <div class="blog-date">Ngày: 18/12/2019</div>
+                        <div class="blog-desc">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim officia ea debitis, totam id atque necessitatibus amet similique 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <div class="y-pagination">
+                        <ul>
+                            <li><a href="#"><i class="fas fa-chevron-left"></i></a></li>
+                            <li><a href="#">1</a></li>
+                            <li class="active"><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 sidebar-blog">
+                <div class="title-sidebar-blog">Bài viết nổi bật</div>
+                <div class="item-blog-inline">
+                    <div class="blog-img">
+                        <a href="post.html" class="y-box-img">
+                            <img src="https://dummyimage.com/300x150/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-info">
+                        <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                        <div class="blog-date">Ngày: 18/12/2019</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
