@@ -15,7 +15,28 @@
     border-bottom: 1px dotted #d9d9d9;
 }
 .y-box-article .box-content-article {
-	margin-top: 20px
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.list-blog-related .title-blog-related {
+	font-size: 20px;
+    margin-bottom: 10px;
+}
+.list-blog-related ul {
+	list-style: none;
+	padding-left: 0;
+}
+.list-blog-related ul li a {
+	display: block;
+	padding: 5px 0;
+	color: #000;
+	position: relative;
+	padding-left: 22px;
+}
+.list-blog-related ul li a i {
+	position: absolute;
+	top: 8px;
+	left: 0;
 }
 
 @media (max-width: 576px) {
