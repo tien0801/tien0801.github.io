@@ -3,21 +3,32 @@
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
-    <title></title>
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-language" content="vi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>VBT Frontend</title>
+    <link rel="alternate" href="https://padstore.vn/iphone/" hreflang="vi-vn">
+    <link rel="canonical" href="https://padstore.vn/iphone/">
+
+    <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="">
     <style>
+        pre {
+            margin-top: 24px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
+        <h1>SEO HTML</h1>
         <ul>
             <li>
                 <p><strong>Các thẻ tiêu đề: h1 - h6</strong></p>
-                <p>+ Thẻ "h1" chỉ cần một thẻ duy nhất </p>
+                <p>+ Thẻ "h1" chỉ cần một thẻ duy nhất ở 1 page</p>
                 <p>+ Các thẻ h2 đến h6 thì các bạn có thể sử dụng nhiều lần, 
                 nhưng nên sử dụng tối đa là <br>
                 - 3 đối với thẻ h2,<br>
@@ -37,26 +48,58 @@
                 <p>+ Thẻ images luôn chứa thuộc tính alt</p>
                 <p>+ Thẻ a luôn chứa thuộc tính title</p>
             </li>
+            <li>
+                <p><strong>Footer ko để thẻ Heading</strong></p>
+            </li>
         </ul>
         <br>
-            <h4>Tag Meta SEO</h4>
-            <pre>
-                <code>
-link rel="canonical" href="https://thuexengay.com/thu-vien-anh">
-`Đang ở trang nào thì link sẽ là link ở vị trí trên sẽ là link của trang đó, vd đang ở trang thư viện thì sẽ là link: https://thuexengay.com/thu-vien-anh`
-
-`Thêm 3 thẻ này` Nếu bị trùng or website đã có thì không bổ sung
+        <h4>Tag Meta SEO:</h4>
+<pre><code>
 meta name='revisit-after' content='1 days' />
 meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 meta http-equiv="Content-Language" content="vi">
+</code>
+</pre>
+<p>
+`Thêm 3 thẻ này` Nếu bị trùng or website đã có thì không bổ sung
 `Lưu ý` Thẻ  meta http-equiv="Content-Language" content="vi"> đối với website nào mà 2 ngôn ngữ thì khi chuyển qua ngôn ngữ tiếng anh, chổ content sẽ là en
 meta http-equiv="Content-Language" content="en">
-                </code>
-            </pre>
+</p>
+
+
+<pre><code>
+link rel="alternate" href="https://padstore.vn/iphone/" hreflang="vi-vn">
+</code>
+</pre>
+<p>"Thẻ hreflang là một thẻ siêu dữ liệu khai báo trên đầu của website giúp các công cụ tìm kiếm trích xuất dữ liệu theo đúng ngôn ngữ mà website đang viết"</p>
+
+<pre>
+<code>
+link rel="canonical" href="https://thuexengay.com/thu-vien-anh">
+</code>
+</pre>
+<p>`Đang ở trang nào thì link sẽ là link ở vị trí trên sẽ là link của trang đó, vd đang ở trang thư viện thì sẽ là link: https://thuexengay.com/thu-vien-anh`</p>
+
         
         <br>
+        <h4>Tag Meta SEO Facebook:</h4>
+<pre>
+<code>
+meta property="fb:app_id" content="467308673824165">
+
+meta property="og:title" content="iCanfield Group">
+meta property="og:type" content="website">
+meta property="og:url" content="https://www.icanfield.vn/vi/">
+meta property="og:image" content="https://www.icanfield.vn/uploads/icanfield_study_v2_03_1571976035_640.jpg">
+meta property="og:description" content="Tập đoàn iCanfield hoạt động trong lĩnh vực Tư vấn đầu tư bất động sản, Định cư theo diện kinh doanh và Du học nước ngoài với dịch vụ tư vấn toàn diện cùng đội ngũ chuyên gia tư vấn chuyên nghiệp, trung thực và đáng tin cậy nhằm mang đến sự hài lòng cho khách hàng.">
+</code>
+</pre>
+
+
+        <br>
         <h4>Tag a link social: </h4>
-        <a href="#" rel="nofollow" title='facebook' target="_blank"> rel="nofollow"</a>
+        <a href="#" rel="nofollow" title='facebook' target="_blank"> rel="nofollow" target="_blank"</a>
+        <br>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
