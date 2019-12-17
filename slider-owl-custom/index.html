@@ -152,7 +152,12 @@ if($('.home-slider').length >0) {
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/1920x400/0d00ff/ff0000" alt="">
+                   <img src="https://dummyimage.com/570x400/ff0000" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a class="item-slider" href="#">
+                   <img src="https://dummyimage.com/570x400/ff0000" alt="">
                 </a>
             </div>
         </div>
@@ -217,11 +222,13 @@ if($('.home-slider').length >0) {
                 // nestedItemSelector: 'item-gall',
                 margin: 0,
                 responsiveClass:true,
-                items: 1,
+                items: 2,
                 dots: false,
                 navText : ["",""],
                 rewindNav : true,
                 nav: true,
+                center: true,
+                // stagePadding: 200,
                 responsive : {
                     // breakpoint from 0 up
                     0 : {
@@ -234,9 +241,9 @@ if($('.home-slider').length >0) {
                         items: 2,
                     },
                     1200 : {
-                        items: 1,
+                        items: 2,
                     }
-                }
+                },
             })
         }
 
@@ -253,7 +260,6 @@ if($('.home-slider').length >0) {
                 navText : ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
                 rewindNav : true,
                 nav: true,
-                
             })
         }
         
