@@ -31,7 +31,7 @@
         <h3><a href="https://bankervn.com/ten-quoc-gia-tieng-anh/">Tên viết tắt các quốc gia</a></h3>
         <!-- Google translate provided by Google -->
         <div id="google_translate_element"></div>
-        <div class="translation-icons" style="display: none">
+        <div class="translation-icons" style="">
             <a href="#" class="nl" data-placement="0">nl</a>
             <a href="#" class="de" data-placement="1">de</a>
             <a href="#" class="en" data-placement="2">en</a>
@@ -39,6 +39,7 @@
             <a href="#" class="it" data-placement="4">it</a>
             <a href="#" class="sp" data-placement="5">es</a>
             <a href="#" class="ja" data-placement="6">ja</a>
+            <a href="#" class="vi" data-placement="7">vi</a>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -48,9 +49,9 @@
     <script>
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
-                //defaultLanguage: 'en', 
-                //pageLanguage: 'en', 
-                includedLanguages: 'de,nl,en,es,it,fr,ja',
+                defaultLanguage: 'vi', 
+                // pageLanguage: 'en', 
+                includedLanguages: 'de,nl,en,es,it,fr,ja,vi',
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
                 autoDisplay: false,
                 multilanguagePage: true
@@ -60,7 +61,10 @@
         //this one I need because of the first menu with "select the language" item, after the first click on the language it disappears 
         var clickCount = 0;
 
-        $(window).load(function() {
+        $(document).ready(function() {
+            
+        // });
+        // $(window).load(function() {
             $('.translation-icons a').click(function(e) {
                 e.preventDefault();
 
