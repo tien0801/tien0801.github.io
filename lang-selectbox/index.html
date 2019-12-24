@@ -11,13 +11,13 @@
 			position: relative;
 			width: max-content;
 		}
-		#lang_button>.lang-item {
+		.lang_button>.lang-item {
 			display: none;
 		}
-		#lang_button>.lang-item.active {
+		.lang_button>.lang-item.active {
 			display: block;
 		}
-		#lang_button> .lang-item img {
+		.lang_button> .lang-item img {
 			margin-right: 10px;
 		}
 		.lang-dropdown {
@@ -111,13 +111,13 @@
 	position: relative;
 	width: max-content;
 }
-#lang_button>.lang-item {
+.lang_button>.lang-item {
 	display: none;
 }
-#lang_button>.lang-item.active {
+.lang_button>.lang-item.active {
 	display: block;
 }
-#lang_button> .lang-item img {
+.lang_button> .lang-item img {
 	margin-right: 10px;
 }
 .lang-dropdown {
@@ -202,7 +202,29 @@
 			</div>
 			<div class="col-md-6">
 				<div class="y-box-lang">
-					<a href="javascript:;" class="" id="lang_button">
+					<a href="javascript:;" class="lang_button">
+						<span class="lang-item vi active"><img class=" " src="images/icons/vi.jpg" alt="vi">Tiếng Việt</span>
+						<span class="lang-item en"><img class=" " src="images/icons/en.jpg" alt="en">English</span>
+					</a>
+					<ul class="lang-dropdown type_2 top_arrow">
+			        	<li>
+			                <a href="#vi" class="" data-vlang="vi">
+			                	<img class="" src="images/icons/vi.jpg" alt="vi">Tiếng Việt
+			                </a>
+			            </li>
+
+			            <li>
+			                <a href="#en" class="" data-vlang="en">
+			                	<img class="" src="images/icons/en.jpg" alt="en">English
+			                </a>
+			            </li>
+			        </ul>
+			    </div>
+			    
+			    <br>
+
+				<div class="y-box-lang">
+					<a href="javascript:;" class="lang_button">
 						<span class="lang-item vi active"><img class=" " src="images/icons/vi.jpg" alt="vi">Tiếng Việt</span>
 						<span class="lang-item en"><img class=" " src="images/icons/en.jpg" alt="en">English</span>
 					</a>
@@ -229,21 +251,21 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 	<script>
-		$('#lang_button').click(function() {
+		$('.lang_button').click(function() {
 			if($(this).hasClass('active')) {
 				$(this).removeClass('active');
-				$('.lang-dropdown').removeClass('opened');
+				$(this).parent('.y-box-lang').find('.lang-dropdown').removeClass('opened');
 			} else {
 				$(this).addClass('active');
-				$('.lang-dropdown').addClass('opened');
+				$(this).parent('.y-box-lang').find('.lang-dropdown').addClass('opened');
 			}
 		})
 		$('.lang-dropdown a').click(function() {
 			var ilang= $(this).data('vlang');
-			$('#lang_button .lang-item').removeClass('active');
-			$('#lang_button .lang-item.'+ ilang).addClass('active');
-			$('.lang-dropdown').removeClass('opened');
-			$('#lang_button').removeClass('active');
+			$(this).parents('.y-box-lang').find('.lang_button .lang-item').removeClass('active');
+			$(this).parents('.y-box-lang').find('.lang_button .lang-item.'+ ilang).addClass('active');
+			$(this).parents('.y-box-lang').find('.lang-dropdown').removeClass('opened');
+			$(this).parents('.y-box-lang').find('.lang_button').removeClass('active');
 		});
 	</script>
 </body>
