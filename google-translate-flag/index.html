@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="vi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
+    <title>VBT Frontend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+          margin-top: 0;
+        }
+        .translated-ltr body {
+          margin-top: 38px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Google Translate Button - Custom</h1>
+        <h3><a href="https://www.w3schools.com/howto/howto_google_translate.asp">Source: https://www.w3schools.com/howto/howto_google_translate.asp</a></h3>
+        <h3><a href="https://stackoverflow.com/questions/10486833/implementing-google-translate-with-custom-flag-icons">Custom: https://stackoverflow.com/questions/10486833/implementing-google-translate-with-custom-flag-icons</a></h3>
+        <h3><a href="https://bankervn.com/ten-quoc-gia-tieng-anh/">Tên viết tắt các quốc gia</a></h3>
+        <!-- Google translate provided by Google -->
+        <div id="google_translate_element"></div>
+        <ul class="list-unstyled list-inline ct-topbar__list">
+            <li class="ct-language">Language <i class="fa fa-arrow-down"></i>
+                <ul class="list-unstyled ct-language__dropdown">
+                    <li><a href="#googtrans(en|en)" class="lang-en lang-select" data-lang="en"><img src="https://www.solodev.com/assets/google-translate/flag-usa.png" alt="USA"></a></li>
+                    <li><a href="#googtrans(en|es)" class="lang-es lang-select" data-lang="es"><img src="https://www.solodev.com/assets/google-translate/flag-mexico.png" alt="MEXICO"></a></li>
+                    <li><a href="#googtrans(en|fr)" class="lang-es lang-select" data-lang="fr"><img src="https://www.solodev.com/assets/google-translate/flag-france.png" alt="FRANCE"></a></li>
+                    <li><a href="#googtrans(en|zh-CN)" class="lang-es lang-select" data-lang="zh-CN"><img src="https://www.solodev.com/assets/google-translate/flag-china.png" alt="CHINA"></a></li>
+                    <li><a href="#googtrans(en|ja)" class="lang-es lang-select" data-lang="ja"><img src="https://www.solodev.com/assets/google-translate/flag-japan.png" alt="JAPAN"></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- JS Google Translate -->
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            defaultLanguage: 'vi',
+            // pageLanguage: 'en', 
+            includedLanguages: 'de,nl,en,es,it,fr,ja,vi',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+            autoDisplay: false,
+            multilanguagePage: true
+        }, 'google_translate_element')
+    };
+
+    //this one I need because of the first menu with "select the language" item, after the first click on the language it disappears 
+    var clickCount = 0;
+
+    $(document).ready(function() {
+
+        // });
+        // $(window).load(function() {
+        $('.translation-icons a').click(function(e) {
+            e.preventDefault();
+
+            var $frame = $('.goog-te-menu-frame:first');
+
+            if (!$frame.size()) {
+                alert("Error: Could not find Google translate frame.");
+                return false;
+            }
+
+            //find the a links element inside the gtranlate first frame
+            var langs = $('.goog-te-menu-frame:first').contents().find('.goog-te-menu2 a');
+
+            //the number of the language in flag-elements
+            var placement = $(this).data('placement');
+
+            //this again I need to adjust the mapping numbers of the languages in the flag elements        
+            if (clickCount == 0) {
+                placement = $(this).data('placement') + 1;
+                clickCount++;
+            }
+            //and finaly imitate click on the gtranslate element which is the same as the number of the language in flag link
+            langs.eq(placement).find('span.text').click();
+            return false;
+
+        });
+    });
+    </script>
+</body>
+
+</html>
