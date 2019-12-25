@@ -57,10 +57,47 @@
 
 			<div class="row item">
 				<div class="col-md-6">
-					<p>CSS: <span style="text-shadow: 0px 1px 3px #000;">    text-shadow: 0px 1px 3px #000;</span></p>
+					<p>CSS: <span style="text-shadow: 0px 1px 3px #000;">text-shadow: 0px 1px 3px #000;</span></p>
 				</div>
 				<div class="col-md-6">
 					<p>CSS Định dạng shadow text</p>
+				</div>
+			</div>
+
+			<div class="row item">
+				<div class="col-md-6">
+					<p>CSS:</p>
+						<pre>
+<code>
+ol { counter-reset: item }
+li{ display: block }
+li:before { 
+  content: counters(item, ".") " ";
+  counter-increment: item;
+}
+</code>
+						</pre>
+					</p>
+				</div>
+				<div class="col-md-6">
+					<p>CSS Ordered list</p>
+					<style>
+						ol { counter-reset: item }
+						li{ display: block }
+						li:before { content: counters(item, ".") " "; counter-increment: item }
+					</style>
+					
+					<ol>
+						<li><a href="#">Menu 1</a></li>
+						<li><a href="#">Menu 1</a>
+							<ol>
+								<li><a href="#">menu 2</a></li>
+								<li><a href="#">menu 2</a></li>
+								<li><a href="#">menu 2</a></li>
+							</ol>
+						</li>
+						<li><a href="#">Menu 1</a></li>
+					</ol>
 				</div>
 			</div>
 		</div>
