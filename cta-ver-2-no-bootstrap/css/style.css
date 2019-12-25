@@ -1,0 +1,377 @@
+/*
+=================================================
+CSS popup call now
+=================================================
+*/
+
+.callback-popup {
+    text-align: center;
+    padding: 0 !important;
+}
+
+.callback-popup .close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    line-height: 15px;
+    outline: none;
+    box-shadow: none;
+    background-color: #fff;
+    border-radius: 100%;
+    border: 0;
+}
+
+.callback-popup .close img {
+    width: 20px;
+}
+
+.callback-popup .modal-content {
+    background-color: #252525;
+    color: #fff;
+    border-radius: 0;
+}
+
+.callback-popup .modal-body {
+    position: relative;
+    padding: 50px 70px 50px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+.callback-popup .modal-body .title {
+    color: #137cc0;
+    margin-bottom: 20px;
+}
+
+.callback-popup .modal-body .title p {
+    font-size: 26px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.callback-popup .modal-body .first-section {
+    margin-bottom: 20px;
+}
+
+.callback-popup .modal-body a {
+    color: #fff;
+    text-decoration: none;
+    outline: none;
+}
+
+.callback-popup .modal-body p {
+    margin-bottom: 2px;
+}
+
+.callback-popup .button-section {
+    width: max-content;
+    margin: 0 auto;
+}
+.callback-popup .button-section input {
+    display: inline-block;
+    height: 50px;
+    text-align: center;
+    padding: 3px 5px;
+    color: #333;
+    border: 1px solid #137cc0;
+    width: 270px;
+    max-width: 100%;
+    /* float: left;
+    margin-right: 10px; */
+}
+
+.callback-popup .button-section button {
+    background-color: #137cc0;
+    color: #fff;
+    border: 1px solid #137cc0;
+    padding: 10px 15px;
+    height: 50px;
+}
+
+/* Phone Ring */
+.laziweb-alo-phone {
+    position: fixed;
+    left: 15px;
+    bottom: 15px;
+    visibility: visible;
+    background-color: transparent;
+    width: 124px;
+    height: 124px;
+    cursor: pointer;
+    z-index: 999 !important;
+}
+
+.laziweb-alo-ph-circle {
+    width: 124px;
+    height: 124px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    background-color: transparent;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid rgba(30, 30, 30, 0.4);
+    opacity: .1;
+    border-color: #137cc0;
+    opacity: .5;
+}
+
+.laziweb-alo-ph-circle-fill {
+    width: 80px;
+    height: 80px;
+    top: 22px;
+    left: 22px;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    background-color: rgba(19, 124, 192, 0.5);
+    opacity: .75 !important;
+}
+
+.laziweb-alo-ph-img-circle {
+    width: 40px;
+    height: 40px;
+    top: 42px;
+    left: 42px;
+    position: absolute;
+    background: rgba(30, 30, 30, 0.1) url("../images/icons/phone-icon.png") no-repeat center center;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    border: 2px solid transparent;
+    opacity: .7;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    background-color: #137cc0;
+    background-size: cover;
+}
+
+@-webkit-keyframes tada {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    10%,
+    20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes tada {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    10%,
+    20% {
+        -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.tada {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+}
+
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(.3, .3, .3);
+        transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+/* CTA responsive mobile */
+@media (min-width: 768px) {
+    .callback-popup:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+
+    .callback-popup .modal-dialog {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .modal-dialog {
+        width: 600px;
+        margin: 30px auto;
+    }
+}
+@media (min-width: 992px) {
+    .modal-lg {
+        width: 900px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .laziweb-alo-phone {
+        left: 5px;
+        bottom: 5px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .laziweb-alo-ph-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .laziweb-alo-ph-circle-fill {
+        top: 15px;
+        left: 15px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .laziweb-alo-ph-img-circle {
+        top: 30px;
+        left: 30px;
+    }
+
+    .callback-popup .close {
+        top: 0;
+        right: 0;
+        border-radius: 0;
+    }
+
+    .callback-popup .modal-body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .callback-popup .button-section input {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

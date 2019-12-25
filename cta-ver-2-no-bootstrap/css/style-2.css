@@ -1,0 +1,56 @@
+
+/*new 2*/
+.hot-line-wrap a {
+    color: #d32816;
+}
+
+.hot-line-wrap {
+    position: fixed;
+    top: auto;
+    right: 30px;
+    bottom: 20px;
+    background-color: #fff;
+    border: 1px solid #d32816;
+    color: #d32816;
+    padding: 5px 10px;
+    padding-left: 45px;
+    -webkit-border-radius: 0 20px 0 20px;
+    -moz-border-radius: 0 20px 0 20px;
+    border-radius: 0 20px 0 20px;
+    z-index: 888;
+}
+
+.hot-line-wrap p {
+    margin-bottom: 0;
+}
+
+.hot-line-wrap p strong {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 32px;
+}
+
+.hot-line-wrap p span {
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    border: 2px solid #d32816;
+    text-align: center;
+    font-size: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    color: #fff;
+    background: url("../images/icons/phone-icon.png") no-repeat center center;
+    background-size: 80% 80%;
+    background-color: #d32816;
+}
+
+@media only screen and (max-width: 450px) {
+    .callback-popup .modal-body {
+        font-size: 16px;
+    }
+}
