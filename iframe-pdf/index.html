@@ -26,7 +26,10 @@
 
         <h3>Iframe custom</h3>
         <div class="box-pdf">
-            <iframe class="reload-iframe" data-src="https://pokerstreams.net/files/APT%20Kick%20Off%20Vietnam%202020%20Schedule%20(1).pdf" src="https://pokerstreams.net/files/APT%20Kick%20Off%20Vietnam%202020%20Schedule%20(1).pdf" type="application/pdf" height="700px" width="100%">
+            <iframe class="reload-iframe" data-src="https://pokerstreams.net/files/APT%20Kick%20Off%20Vietnam%202020%20Schedule%20(1).pdf" src="https://pokerstreams.net/files/RedManilaStrcuture4-11:1.pdf" type="application/pdf" height="700px" width="100%"></iframe>
+        </div>
+        <div class="box-pdf" style="width: 320px">
+            <iframe class="reload-iframe-2" data-src="https://pokerstreams.net/files/APT%20Kick%20Off%20Vietnam%202020%20Schedule%20(1).pdf" src="https://pokerstreams.net/files/APT%20Kick%20Off%20Vietnam%202020%20Schedule%20(1).pdf" type="application/pdf" height="700px" width="100%"></iframe>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -34,8 +37,15 @@
 
     <script>
         $(document).ready(function() {
-            // var i_pdf = $('.reload-iframe').data('src');
-            $('.reload-iframe').attr("src", $('.reload-iframe').attr("src"));
+            var i_pdf = $('.reload-iframe').data('src');
+            setTimeout(function() {
+                $('.reload-iframe').attr("src", i_pdf);
+            },1000);
+
+            var i_pdf = $('.reload-iframe-2').data('src');
+            setTimeout(function() {
+                $('.reload-iframe-2').attr("src", $('.reload-iframe-2').attr("src"));
+            },1000);
         });
     </script>
 </body>
