@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="vi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
+    <title>VBT Frontend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+        #w_award .modal-content {
+            background: url(https://dummyimage.com/1350x750/bcbcbc/000000) 100%;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Button Screen Shot</h1>
+
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#w_award"> Launch demo modal</button>
+         <!-- Popup Voucher -->
+        <div id="w_award" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" style="background: url('https://dummyimage.com/1350x750/bcbcbc/000000') cover">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times" aria-hidden="true"></i></button>
+                        <img class="award-image" src="<%= settings.award_popup_icon %>">
+                        <h5 class="title-voucher">
+                            <%= settings.voucher_small_title %>
+                        </h5>
+                        <h5 class="title-big">Freeship</h5>
+                        <div class="input-code">
+                            <input type="text" id="text-code" value="unknow" aria-label="Code Prize">
+                            <a href="javascript:;" onclick="copyToClipboard('#text-code')" id="btn-copy-code" class="btn-copy btn-copy-code" aria-label="Copy mã">Copy Mã</a>
+                        </div>
+                        <%- settings.voucher_apply %>
+                        <div class="box-btn">
+                            <div style="clear: both;margin-bottom: 10px; display: flex; flex-wrap: wrap; justify-content: center;">
+                                <a href="javascript:;" id="btn-download-code" style="background-color: #749366; margin-top: 10px;padding: 10px 25px;color: white; margin-right: 10px;" class="btn-guide" aria-label="Hướng dẫn"><i style="margin-right: 5px" class="fas fa-camera" aria-hidden="true"></i>
+                                    Chụp màn hình</a>
+                                <a href="https://www.facebook.com/messages/t/giaymira.com2008" target="_blank" class="btn-inbox btn-inbox-big-mobile" style="background-color: #cb2228;padding: 10px 25px; margin-top: 10px; color: white;" aria-label="Inbox mã trúng thưởng btn-copy-code"><i style="margin-right: 5px" class="fab fa-facebook-messenger"></i>Inbox Mã</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>

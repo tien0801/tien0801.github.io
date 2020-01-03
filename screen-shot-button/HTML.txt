@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <base href="#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title><%= settings.meta_title %></title>
+  <link rel="shortcut icon" type="image/png" href="<%- settings.home_favicon %>" />
+  <meta property="og:url" content="giaymira.woay.vn">
+  <meta property="og:title" content="<%= settings.meta_title %>" />
+  <meta property="og:description"
+    content="<%= settings.meta_description %>" />
+  <meta property="og:type" content="website" />
+  <meta name="description"
+    content="<%= settings.meta_description %>" />
+  <meta property="og:image" content="<%= settings.meta_image %>">
+  <meta http-equiv="content-language" content="vi" />
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://woay.online/template/default/css/style.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+    .bg-main {
+      background-image: url('<%= settings.main_background %>');
+      color: #111;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    #w-award .modal-content {
+      background-image: url('<%= settings.award_popup_background %>');
+    }
+
+    .popup-style-1 .modal-body {
+      background: url('https://demo.woay.app/hikool/images/Minigames%2030.4_Popup2-01.png');
+    }
+		
+		.main-content .banner-1 {
+    margin-top: 40px;
+}
+
+    @media(max-width: 991px) {
+      
+    }
+
+    @media(max-width: 767px) {
+      .bg-main {
+        background-size: cover;
+      }
+      .wheel-logo img {
+      	max-width: 80px;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-main">
+  <button class="m-menu-btn d-lg-none">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div style="overflow-x:hidden; position:relative; min-height: 100vh;">
+    <div class="m-menu-overlay"></div>
+    <div class="m-menu-wrapper">
+      <div class="m-menu-header">
+        Menu
+        <i class="fas fa-times m-menu-close-btn"></i>
+      </div>
+      <ul class="m-menu">
+        <li class="m-index-btn"><a>Vòng quay may mắn</a></li>
+        <li class="m-content-btn" data-href="huongdanthamgia"><a>Hướng dẫn tham gia</a></li>
+        <li class="m-content-btn" data-href="dieukienapdung"><a>Điều kiện áp dụng</a></li>
+        <li class="m-kiemtraphanthuong"><a>Kiểm tra phần thưởng</a></li>
+      </ul>
+    </div>
+    <div class="mobile-screen" style="overflow-x:hidden; position:relative">
+      <div class="m-main-content">
+        <div class="container">
+          
+          <div class="m-content-wrapper">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="desktop-screen" style="overflow-x:hidden; position: relative;">
+      <div class="main-content container">
+       <div class="wheel-logo" style="text-align: center;">         
+          <img src="<%= settings.logo %>">
+        </div>
+        <div class="banner-1" style="margin-bottom: 0;">
+          <a href="javascript:;" class="box-img" aria-label="Link quảng cáo">
+            <img src="<%= settings.top_banner %>">
+          </a>
+        </div>
+        <div id="background" style="max-width: 800px; margin: auto;">
+        </div>
+                <div class="w-tab-ctn mobile-hidden">
+          <ul class="nav nav-tabs primary-background" id="wTab" role="tablist">
+            <li class="nav-item border-r active">
+              <a class="nav-link" id="huongdanthamgia-tab" data-toggle="tab" href="#huongdanthamgia" role="tab"
+                aria-controls="huongdanthamgia" aria-selected="true">HƯỚNG DẪN THAM GIA</a>
+            </li>
+            <li class="nav-item border-r">
+              <a class="nav-link" id="dieukienapdung-tab" data-toggle="tab" href="#dieukienapdung" role="tab"
+                aria-controls="dieukienapdung" aria-selected="false">ĐIỀU KIỆN ÁP DỤNG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="kiemtraphanthuong-tab" data-toggle="tab" href="" role="tab"
+                aria-selected="false">KIỂM TRA PHẦN THƯỞNG</a>
+            </li>
+          </ul>
+          <div class="tab-content" id="wTabContent">
+            <div class="tab-pane fade active in style-8" id="huongdanthamgia" role="tabpanel"
+              aria-labelledby="huongdanthamgia-tab">
+              <%- settings.policy %>
+            </div>
+            <div class="tab-pane fade style-8" id="dieukienapdung" role="tabpanel" aria-labelledby="dieukienapdung-tab"
+              style="text-align: left; color: black;">
+              <%- settings.guide %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Popup Login -->
+      <div id="w-verify" class="popup-style-1 modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+              <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times"
+                  aria-hidden="true"></i></button>
+              <h5 class="title-login">BẠN CẦN ĐĂNG NHẬP ĐỂ TIẾP TỤC</h5>
+              <a href="javascript:;" class="btn-login-fb btn-icon" aria-label="Link đăng nhập facebook"><span
+                  class="icon-fb"><i class="fab fa-facebook-f"></i></span> Đăng nhập với Facebook</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end Popup Login -->
+
+      <!-- Popup Voucher -->
+      <div id="w-award" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal"><i class="fas fa-times" aria-hidden="true"></i></button> 
+                  	<img class="award-image" src="<%= settings.award_popup_icon %>">
+                    <h5 class="title-voucher"><%= settings.voucher_small_title %></h5>
+                    <h5 class="title-big">Freeship</h5>
+                    <div class="input-code">
+                        <input type="text" id="text-code" value="unknow" aria-label="Code Prize">
+                        <a href="javascript:;" onclick="copyToClipboard('#text-code')" id="btn-copy-code" class="btn-copy btn-copy-code" aria-label="Copy mã">Copy Mã</a>
+                    </div>
+                    <%- settings.voucher_apply %>
+                    <div class="box-btn">
+                      <div style="clear: both;
+    margin-bottom: 10px; display: flex; flex-wrap: wrap; justify-content: center;">
+                        <a href="javascript:;" id="btn-download-code" style="background-color: #749366; margin-top: 10px;
+    padding: 10px 25px;
+    color: white; margin-right: 10px;" class="btn-guide" aria-label="Hướng dẫn"><i style="margin-right: 5px" class="fas fa-camera" aria-hidden="true"></i>
+Chụp màn hình</a>
+                      <a href="https://www.facebook.com/messages/t/giaymira.com2008" target="_blank" class="btn-inbox btn-inbox-big-mobile" style="background-color: #cb2228;
+    padding: 10px 25px; margin-top: 10px;
+    color: white;" aria-label="Inbox mã trúng thưởng btn-copy-code"><i style="margin-right: 5px" class="fab fa-facebook-messenger"></i>Inbox Mã</a>
+              </div>
+                    </div>
+                </div>
+          </div>
+        </div>
+      </div>
+      <!-- end Popup Voucher -->
+    </div>
+  </div>
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+  </script>
+      <img id="woay-code-bg" src="<%= settings.award_popup_background %>" style="display:none" crossorigin="anonymous"/>
+
+  <script src="<%= base_url %>/api.wheel/<%= uid %>/setting?format=js"></script>
+  <script src="<%= base_url %>/lib/v3/3.1.4/woay.umd.js"></script>
+  <script src="./script.js"></script>
+  <style>
+    #woay-wheel {
+    	left: 7%;
+      top: 9%;
+    }
+  </style>
+</body>
+
+</html>
