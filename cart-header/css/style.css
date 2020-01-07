@@ -76,7 +76,7 @@
     width: 290px;
     padding: 15px 10px;
     box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
-    z-index: 2;
+    z-index: 9;
 }
 .li-toggle:hover .box-toggle {
     display: block;
