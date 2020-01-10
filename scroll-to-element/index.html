@@ -52,7 +52,7 @@ $(document).ready(function() {
         $('html,body').animate({ scrollTop: 0 }, 'slow');
         return false;
     });
-    window.addEventListener('scroll', function() {
+    $(window).bind("load", function(){
         if (window.pageYOffset > 300) {
             $(".scroll-top-btn").addClass("visible");
         } else {
@@ -138,7 +138,8 @@ $(".scroll-to-target[href^='#']").on("click", function(scroll_to_target) {
 	            $('html,body').animate({ scrollTop: 0 }, 'slow');
 	            return false;
 	        });
-	        window.addEventListener('scroll', function() {
+            $(window).bind("load", function(){
+	        // window.addEventListener('scroll', function() {
 	            if (window.pageYOffset > 300) {
 	                $(".scroll-top-btn").addClass("visible");
 	            } else {

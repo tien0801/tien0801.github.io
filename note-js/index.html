@@ -32,6 +32,28 @@ $(document).ready(function() {
 });
 </code>
 </pre>
+
+<h4><i class="far fa-hand-point-right"></i> JS blind load page</h4>
+<pre>
+<code>
+$(window).bind("load resize", function(){
+    if(jQuery(window).width()<992){
+        jQuery(document).ready(function( $ ) {
+          $("#nav-mobile").mmenu({
+             "extensions": [
+                "position-back",
+                "position-right"
+             ]
+          });
+       });
+        
+    }
+});
+</code>
+</pre>
+
+
+
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
