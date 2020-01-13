@@ -58,7 +58,7 @@ if($('.home-slider').length >0) {
 </pre>
         </div>
         <div class="col-md-6">
-            <div class="home-slider owl-carousel">
+            <div class="home-slider js-home-slider owl-carousel">
                 <div class="item">
                     <a class="item-slider" href="#">
                        <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1" frameborder="0" allowfullscreen>
@@ -167,8 +167,8 @@ if($('.home-slider').length >0) {
 	<script src="js/owl.carousel.min.js"></script>
     <!-- Home Slider -->
     <script>
-        if($('.home-slider').length >0) {
-            $('.home-slider').owlCarousel({
+        if($('.js-home-slider').length >0) {
+            $('.js-home-slider').owlCarousel({
                 loop: true,
                 // autoplay: true,
                 // autoplayTimeout: 4000,
