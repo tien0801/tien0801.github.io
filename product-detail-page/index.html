@@ -13,7 +13,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <style>
-    
+        .box-img-flex {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .box-img-flex.y-img-left {
+            justify-content: flex-start;
+        }
+        .box-img-flex img {
+            width: auto !important;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
     </style>
 </head>
 
@@ -57,13 +71,13 @@
                     <p class="text-property">Chọn size<span>*</span></p>
                     <ul class="list-inline color-detail list-size">
                         <li>
-                            <a class="active color" data-color="Màu Xanh Rách" href="javascript:;">
+                            <a class="active color" href="javascript:;">
                                 <span class="text-color">M</span>
                                 <img class="img-check" src="images/icons/icon-check.png">
                             </a>
                         </li>
                         <li>
-                            <a class="color" data-color="Màu Xanh Rách" href="javascript:;">
+                            <a class="color" href="javascript:;">
                                 <span class="text-color">XL</span>
                                 <img class="img-check" src="images/icons/icon-check.png">
                             </a>
@@ -71,6 +85,35 @@
                         <li>
                             <a class="color" href="javascript:;">
                                 <span class="text-color">XXL</span>
+                                <img class="img-check" src="images/icons/icon-check.png">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="prod-detail-property">
+                    <p class="text-property">Chọn màu<span>*</span></p>
+                    <ul class="list-inline color-detail list-size">
+                        <li>
+                            <a class="color" href="javascript:;" style="background-color: #000">
+                                <input class="input-color" type="text">
+                                <img class="img-check" src="images/icons/icon-check.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="active color" href="javascript:;" style="background-color: #ff0000">
+                                <input class="input-color" type="text">
+                                <img class="img-check" src="images/icons/icon-check.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="color" href="javascript:;" style="background-color: #00B140">
+                                <input class="input-color" type="text">
+                                <img class="img-check" src="images/icons/icon-check.png">
+                            </a>
+                        </li>
+                        <li>
+                            <a class="color" href="javascript:;" style="background-color: pink">
+                                <input class="input-color" type="text">
                                 <img class="img-check" src="images/icons/icon-check.png">
                             </a>
                         </li>
