@@ -31,6 +31,9 @@
 .prod-detail-property .color-detail li a.active .img-check {
     display: block;
 }
+.prod-detail-property .color-detail li a .input-color {
+    display: none;
+}
 .prod-detail-property ul li a.active {
     border: 1px solid #d13c2c;
 }
@@ -49,7 +52,4 @@
     width: 100%;
     height: 100%;
     border: 1px solid #fff;
-}
-.prod-detail-property .list-size li a .input-color {
-    display: none;
 }
