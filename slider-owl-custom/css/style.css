@@ -37,9 +37,9 @@
     bottom: 10px;
     right: 0;
     z-index: 99;
-    height: 15px;
     margin: 0 auto;
     text-align: center;
+    display: inline-block;
 }
 .owl-carousel .owl-dots .owl-dot {
     display: inline-block;
@@ -50,7 +50,7 @@
 }
 .owl-carousel .owl-dots .owl-dot span {
     background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
+    border-radius: 50%;
     display: block;
     height: 12px;
     margin: 5px 7px;
