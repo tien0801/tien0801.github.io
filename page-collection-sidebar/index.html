@@ -11,19 +11,374 @@
     <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
     <title>VBT Frontend</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
     <style>
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Blog page</h1>
-        
+        <h1>Collection page - Bootstrap 4</h1>
+        <br>
+        <div class="row">
+            <aside class="col-lg-3 d-none d-lg-block aside">
+                <div class="aside-block">
+                    <h4 class="aside-title">
+                        <button class="rs-btn collapse-btn" data-toggle="collapse" data-target="#collapseAside1">Danh mục sản phẩm</button>
+                    </h4>
+                    <ul class="rs-list aside-list collapse show" id="collapseAside1">
+                        <li class="item">
+                            <a href="#">iPhone</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">iPad</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">iMac</a>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">Apple Watch</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-block">
+                    <h4 class="aside-title">
+                        <button class="rs-btn collapse-btn" data-toggle="collapse" data-target="#collapseAside3">Màu sắc</button>
+                    </h4>
+                    <ul class="rs-list aside-list collapse show" id="collapseAside3">
+                        <li class="item">
+                            <label class="checkbox color">
+                                <input class="checkbox-input" type="radio" name="rad-1"><span class="checkbox-text"><span style="background-color: #F28902"></span><span>Cam san hô</span></span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox color">
+                                <input class="checkbox-input" type="radio" name="rad-1"><span class="checkbox-text"><span style="background-color: #F17F76"></span><span>Carol</span></span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox color">
+                                <input class="checkbox-input" type="radio" name="rad-1"><span class="checkbox-text"><span style="background-color: #222426"></span><span>Đen huyền bí</span></span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox color">
+                                <input class="checkbox-input" type="radio" name="rad-1"><span class="checkbox-text"><span style="background-color: #F2C94C"></span><span>Vàng</span></span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox color">
+                                <input class="checkbox-input" type="radio" name="rad-1"><span class="checkbox-text"><span style="background-color: #2F80ED"></span><span>Xanh nước biển</span></span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox color">
+                                <input class="checkbox-input" type="radio" name="rad-1"><span class="checkbox-text"><span style="background-color: #121212"></span><span>Matte Black</span></span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox color">
+                                <input class="checkbox-input" type="radio" name="rad-1"><span class="checkbox-text"><span style="background-color: #333333"></span><span>Jet Black</span></span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox color">
+                                <input class="checkbox-input" type="radio" name="rad-1"><span class="checkbox-text"><span style="background-color: #828282"></span><span>Xám</span></span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox color">
+                                <input class="checkbox-input" type="radio" name="rad-1"><span class="checkbox-text"><span style="background-color: #FFFFFF"></span><span>Trắng</span></span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox color">
+                                <input class="checkbox-input" type="radio" name="rad-1"><span class="checkbox-text"><span style="background-color: #F2C94C"></span><span>Gold</span></span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox color">
+                                <input class="checkbox-input" type="radio" name="rad-1"><span class="checkbox-text"><span style="background-color: #EB5757"></span><span>Hồng</span></span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox color">
+                                <input class="checkbox-input" type="radio" name="rad-1"><span class="checkbox-text"><span style="background-color: #EB5757"></span><span>Đỏ</span></span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-block">
+                    <h4 class="aside-title">
+                        <button class="rs-btn collapse-btn" data-toggle="collapse" data-target="#collapseAside4">Chức năng nổi bật</button>
+                    </h4>
+                    <ul class="rs-list aside-list collapse show" id="collapseAside4">
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">3D Touch</span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">Chống nước</span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">Chụp hình xóa phông</span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">Face ID</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-block">
+                    <h4 class="aside-title">
+                        <button class="rs-btn collapse-btn" data-toggle="collapse" data-target="#collapseAside5">Tình trạng</button>
+                    </h4>
+                    <ul class="rs-list aside-list collapse show" id="collapseAside5">
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">Mới</span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">Cũ</span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">CPO</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-block">
+                    <h4 class="aside-title">
+                        <button class="rs-btn collapse-btn" data-toggle="collapse" data-target="#collapseAside6">Sim</button>
+                    </h4>
+                    <ul class="rs-list aside-list collapse show" id="collapseAside6">
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">1 Sim</span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">2 Sim</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="aside-block">
+                    <h4 class="aside-title">
+                        <button class="rs-btn collapse-btn" data-toggle="collapse" data-target="#collapseAside7">Bộ nhớ trong</button>
+                    </h4>
+                    <ul class="rs-list aside-list collapse show" id="collapseAside7">
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">64GB</span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">128GB</span>
+                            </label>
+                        </li>
+                        <li class="item">
+                            <label class="checkbox">
+                                <input class="checkbox-input" type="checkbox"><span class="checkbox-text">256GB</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <div class="col-lg-9">
+                <div class="row list-collection">
+                    <div class="col-lg-4">
+                        <div class="item-prod">
+                            <a href="product.html" class="img-prod y-box-img">
+                                <img src="../images/product/1.png" alt="">
+                                <span class="installment-prod">Trả góp 0%</span>
+                                <span class="discount-prod">-20%</span>
+                                <span class="y-box-zoom"></span>
+                            </a>
+                            <div class="info-prod">
+                                <a href="product.html" class="name-prod">
+                                    <h3>Laptop Lenovo Thinkpad X1 Carbon 6 20KHS01900</h3>
+                                </a>
+                                <div class="price-prod">Giá: Liên hệ</div>
+                                <div class="desc-prod">Tặng Chuột không dây Raze 3000 , Balo chống va đập trị giá 3 triệu đồng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item-prod">
+                            <a href="product.html" class="img-prod y-box-img">
+                                <img src="../images/product/1.png" alt="">
+                                <span class="installment-prod">Trả góp 0%</span>
+                                <span class="discount-prod">-20%</span>
+                            </a>
+                            <div class="info-prod">
+                                <a href="product.html" class="name-prod">
+                                    <h3>Laptop Lenovo Thinkpad X1 Carbon 6 20KHS01900</h3>
+                                </a>
+                                <div class="price-prod">
+                                    <span class="price-cur">24.900.999đ</span>
+                                    <span class="price-old">24.900.999đ</span>
+                                </div>
+                                <div class="desc-prod">Tặng Chuột không dây Raze 3000 , Balo chống va đập trị giá 3 triệu đồng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item-prod">
+                            <a href="product.html" class="img-prod y-box-img">
+                                <img src="../images/product/1.png" alt="">
+                                <span class="installment-prod">Trả góp 0%</span>
+                                <span class="discount-prod">-20%</span>
+                            </a>
+                            <div class="info-prod">
+                                <a href="product.html" class="name-prod">
+                                    <h3>Laptop Lenovo Thinkpad X1 Carbon 6 20KHS01900</h3>
+                                </a>
+                                <div class="price-prod">
+                                    <span class="price-cur">24.900.999đ</span>
+                                    <span class="price-old">24.900.999đ</span>
+                                </div>
+                                <div class="desc-prod">Tặng Chuột không dây Raze 3000 , Balo chống va đập trị giá 3 triệu đồng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item-prod">
+                            <a href="product.html" class="img-prod y-box-img">
+                                <img src="../images/product/1.png" alt="">
+                                <span class="installment-prod">Trả góp 0%</span>
+                                <span class="discount-prod">-20%</span>
+                            </a>
+                            <div class="info-prod">
+                                <a href="product.html" class="name-prod">
+                                    <h3>Laptop Lenovo Thinkpad X1 Carbon 6 20KHS01900</h3>
+                                </a>
+                                <div class="price-prod">
+                                    <span class="price-cur">24.900.999đ</span>
+                                    <span class="price-old">24.900.999đ</span>
+                                </div>
+                                <div class="desc-prod">Tặng Chuột không dây Raze 3000 , Balo chống va đập trị giá 3 triệu đồng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item-prod">
+                            <a href="product.html" class="img-prod y-box-img">
+                                <img src="../images/product/1.png" alt="">
+                                <span class="installment-prod">Trả góp 0%</span>
+                                <span class="discount-prod">-20%</span>
+                            </a>
+                            <div class="info-prod">
+                                <a href="product.html" class="name-prod">
+                                    <h3>Laptop Lenovo Thinkpad X1 Carbon 6 20KHS01900</h3>
+                                </a>
+                                <div class="price-prod">
+                                    <span class="price-cur">24.900.999đ</span>
+                                    <span class="price-old">24.900.999đ</span>
+                                </div>
+                                <div class="desc-prod">Tặng Chuột không dây Raze 3000 , Balo chống va đập trị giá 3 triệu đồng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item-prod">
+                            <a href="product.html" class="img-prod y-box-img">
+                                <img src="../images/product/1.png" alt="">
+                                <span class="installment-prod">Trả góp 0%</span>
+                                <span class="discount-prod">-20%</span>
+                            </a>
+                            <div class="info-prod">
+                                <a href="product.html" class="name-prod">
+                                    <h3>Laptop Lenovo Thinkpad X1 Carbon 6 20KHS01900</h3>
+                                </a>
+                                <div class="price-prod">
+                                    <span class="price-cur">24.900.999đ</span>
+                                    <span class="price-old">24.900.999đ</span>
+                                </div>
+                                <div class="desc-prod">Tặng Chuột không dây Raze 3000 , Balo chống va đập trị giá 3 triệu đồng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item-prod">
+                            <a href="product.html" class="img-prod y-box-img">
+                                <img src="../images/product/1.png" alt="">
+                                <span class="installment-prod">Trả góp 0%</span>
+                                <span class="discount-prod">-20%</span>
+                            </a>
+                            <div class="info-prod">
+                                <a href="product.html" class="name-prod">
+                                    <h3>Laptop Lenovo Thinkpad X1 Carbon 6 20KHS01900</h3>
+                                </a>
+                                <div class="price-prod">
+                                    <span class="price-cur">24.900.999đ</span>
+                                    <span class="price-old">24.900.999đ</span>
+                                </div>
+                                <div class="desc-prod">Tặng Chuột không dây Raze 3000 , Balo chống va đập trị giá 3 triệu đồng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item-prod">
+                            <a href="product.html" class="img-prod y-box-img">
+                                <img src="../images/product/1.png" alt="">
+                                <span class="installment-prod">Trả góp 0%</span>
+                                <span class="discount-prod">-20%</span>
+                            </a>
+                            <div class="info-prod">
+                                <a href="product.html" class="name-prod">
+                                    <h3>Laptop Lenovo Thinkpad X1 Carbon 6 20KHS01900</h3>
+                                </a>
+                                <div class="price-prod">
+                                    <span class="price-cur">24.900.999đ</span>
+                                    <span class="price-old">24.900.999đ</span>
+                                </div>
+                                <div class="desc-prod">Tặng Chuột không dây Raze 3000 , Balo chống va đập trị giá 3 triệu đồng</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item-prod">
+                            <a href="product.html" class="img-prod y-box-img">
+                                <img src="../images/product/1.png" alt="">
+                                <span class="installment-prod">Trả góp 0%</span>
+                                <span class="discount-prod">-20%</span>
+                            </a>
+                            <div class="info-prod">
+                                <a href="product.html" class="name-prod">
+                                    <h3>Laptop Lenovo Thinkpad X1 Carbon 6 20KHS01900</h3>
+                                </a>
+                                <div class="price-prod">
+                                    <span class="price-cur">24.900.999đ</span>
+                                    <span class="price-old">24.900.999đ</span>
+                                </div>
+                                <div class="desc-prod">Tặng Chuột không dây Raze 3000 , Balo chống va đập trị giá 3 triệu đồng</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
 
 </html>
