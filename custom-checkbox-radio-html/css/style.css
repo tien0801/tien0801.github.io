@@ -67,6 +67,7 @@
 .property-list  .checkbox-button .text-check:before {
     content: "\f00c";
     font-size: 8px;
+    /*font-family: "FontAwesome";*/ /*Font Awesome 4*/
     font-family: "Font Awesome 5 Free";
     display: inline-flex;
     align-items: center;
