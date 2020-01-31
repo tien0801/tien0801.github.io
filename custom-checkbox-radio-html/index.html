@@ -2,17 +2,25 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Custom checkbox</title>
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="vi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
+    <title>VBT Frontend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+   
     <style>
-        .center{
+        /*.center{
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-        }
+        }*/
         /* Radio */
         .cs-radio {
             display: block;
@@ -104,43 +112,133 @@
 </head>
 
 <body>
-    <div class="center">
+    <div class="container">
         <h1>Custom Radio Buttons</h1>
-        <label class="cs-radio">One
-            <input type="radio" checked="checked" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="cs-radio">Two
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="cs-radio">Three
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
-        <label class="cs-radio">Four
-            <input type="radio" name="radio">
-            <span class="checkmark"></span>
-        </label>
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Custom Radio Checkmark</h3>
+                <div class="center">
+                    <label class="cs-radio">One
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="cs-radio">Two
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="cs-radio">Three
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="cs-radio">Four
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
 
-        <h2>Custom Checkbox Buttons</h2>
-        <label class="cs-checkbox">One
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-        </label>
-        <label class="cs-checkbox">Two
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
-        <label class="cs-checkbox">Three
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
-        <label class="cs-checkbox">Four
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        </label>
+                    <h2>Custom Checkbox Buttons</h2>
+                    <label class="cs-checkbox">One
+                        <input type="checkbox" checked="checked">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="cs-checkbox">Two
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="cs-checkbox">Three
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="cs-checkbox">Four
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3>Checkbox list</h3>
+                <div class="property-list">
+                    <label class="checkbox-button">
+                        <b>Tình trạng:</b>
+                    </label>
+                    <label class="checkbox-button">
+                        <input class="input" type="radio" name="price" checked>
+                        <span class="text">Mới</span>
+                        </span>
+                    </label>
+                    <label class="checkbox-button">
+                        <input class="input" type="radio" name="price" >
+                        <span class="text">Cũ</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="property-list">
+                    <label class="checkbox-button">
+                        <b>RAM:</b>
+                    </label>
+                    <label class="checkbox-button">
+                        <input class="input" type="radio" name="ram" checked>
+                        <span class="text">16GB</span>
+                        </span>
+                    </label>
+                    <label class="checkbox-button">
+                        <input class="input" type="radio" name="ram" >
+                        <span class="text">32GB</span>
+                        </span>
+                    </label>
+                    <label class="checkbox-button">
+                        <input class="input" type="radio" name="ram" >
+                        <span class="text">64GB</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="property-list">
+                    <label class="checkbox-button">
+                        <b>SSD:</b>
+                    </label>
+                    <label class="checkbox-button">
+                        <input class="input" type="radio" name="ssd" checked>
+                        <span class="text">256GB</span>
+                        </span>
+                    </label>
+                    <label class="checkbox-button">
+                        <input class="input" type="radio" name="ssd" >
+                        <span class="text">512GB</span>
+                        </span>
+                    </label>
+                    <label class="checkbox-button">
+                        <input class="input" type="radio" name="ssd" >
+                        <span class="text">1TB</span>
+                        </span>
+                    </label>
+                </div>
+                <h3>Checkbox icon check</h3>
+                <div class="property-list">
+                    <i class="fas fa-check"></i>
+                    <label class="checkbox-button">
+                        <b>SSD:</b>
+                    </label>
+                    <label class="checkbox-button">
+                        <input class="input" type="radio" name="ssd2" checked>
+                        <span class="text text-check">256GB</span>
+                        </span>
+                    </label>
+                    <label class="checkbox-button">
+                        <input class="input" type="radio" name="ssd2" >
+                        <span class="text text-check">512GB</span>
+                        </span>
+                    </label>
+                    <label class="checkbox-button">
+                        <input class="input" type="radio" name="ssd2" >
+                        <span class="text text-check">1TB</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
     </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,0 +1,88 @@
+/* Checkbox button */
+.checkbox-button {
+    display: block;
+    width: 100%;
+    margin-bottom: .7rem
+}
+.checkbox-button:hover {
+    cursor: pointer;
+}
+.checkbox-button .text {
+    position: relative;
+    text-align: center;
+    padding: .5rem .5rem;
+    display: block;
+    width: 100%;
+    border-radius: .375rem;
+    border: 1px solid #e4e6e8;
+    background-color: #fff;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .08)
+}
+
+.property-list .checkbox-button {
+  display: inline-block;
+  width: max-content;
+  position: relative;
+  margin-bottom: 15px;
+}
+.property-list .checkbox-button input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  
+}
+.property-list .checkbox-button:first-child {
+  margin-right: 20px;
+}
+.property-list .checkbox-button {
+  margin-right: 8px;
+}
+.property-list .checkbox-button .text {
+  padding-left: 30px;
+  padding-right: 16px;
+}
+.property-list .checkbox-button .text:before {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  content: "";
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #C4C6C8;
+}
+.property-list  .checkbox-button input:checked ~.text:before {
+  background-color: #0186CF;
+}
+
+/* Checkbox icon check*/
+.property-list  .checkbox-button .text-check {
+    display: inline-block;
+    line-height: 1;
+}
+.property-list  .checkbox-button .text-check:before {
+    content: "\f00c";
+    font-size: 8px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 14px;
+    height: 14px;
+    padding: 1px;
+    border-radius: 50%;
+    border: 1px solid #c4c6c8;
+    line-height: 1;
+    color: transparent;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+
+.property-list  .checkbox-button .input:checked ~ .text-check:before {
+    color: #fff;
+    background-color: #3fb846;
+}
