@@ -11,11 +11,9 @@
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/style.css">
     <style>
         img {
             width: 100%;
@@ -26,98 +24,268 @@
 
 <body>
     <div class="container">
-        <h2>Slider Syncing</h2>
-        <div class="slider slider-for">
-            <div>
-                <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=1" alt="">
+        <h1>Slick slider</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Slider Syncing</h2>
+                <div class="slider slider-for">
+                    <div>
+                        <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=1" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=2" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=3" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=4" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=5" alt="">
+                    </div>
+                </div>
+                <div class="slider slider-nav">
+                    <div>
+                        <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=1" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=2" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=3" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=4" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=5" alt="">
+                    </div>
+                </div>
+                <div class="slider slider-for">
+                    <div>
+                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=22" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
+                    </div>
+                </div>
+                <div class="slider slider-nav">
+                    <div>
+                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=22" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
+                    </div>
+                    <div>
+                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
+                    </div>
+                </div>
             </div>
-            <div>
-                <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=2" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=3" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=4" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=5" alt="">
-            </div>
-        </div>
-        <div class="slider slider-nav">
-            <div>
-                <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=1" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=2" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=3" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=4" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=5" alt="">
+            <div class="col-md-6">
+                <h1>Vertical slider</h1>
+                <div class="vertical-slider-box">
+                    <div class="text-center" style="margin-bottom: 30px;">
+                        <a class="btn btn-primary" data-toggle="modal" href='#slick-slide-modal'>Xem trên modal Bootstrap</a>
+                    </div>
+                    <!-- Slick slider -->
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <div class="row">
+                                <div class="col-xs-3 pr-0">
+                                    <div class="slider-nav-2">
+                                        <div class="item">
+                                            <figure class="ratio-box">
+                                                <img src="images/1.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="item">
+                                            <figure class="ratio-box">
+                                                <img src="images/2.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="item">
+                                            <figure class="ratio-box">
+                                                <img src="images/3.jpeg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="item">
+                                            <figure class="ratio-box">
+                                                <img src="images/4.png" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="item">
+                                            <figure class="ratio-box">
+                                                <img src="images/5.png" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-9">
+                                    <div class="slider-for-2">
+                                        <div class="item">
+                                            <figure class="ratio-box">
+                                                <img src="images/1.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="item">
+                                            <figure class="ratio-box">
+                                                <img src="images/2.jpg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="item">
+                                            <figure class="ratio-box">
+                                                <img src="images/3.jpeg" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="item">
+                                            <figure class="ratio-box">
+                                                <img src="images/4.png" alt="">
+                                            </figure>
+                                        </div>
+                                        <div class="item">
+                                            <figure class="ratio-box">
+                                                <img src="images/5.png" alt="">
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="slick-slide-modal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-xs-3 pr-0">
+                                        <div class="slider-nav">
+                                            <div class="item">
+                                                <figure class="ratio-box">
+                                                    <img src="images/1.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="item">
+                                                <figure class="ratio-box">
+                                                    <img src="images/2.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="item">
+                                                <figure class="ratio-box">
+                                                    <img src="images/3.jpeg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="item">
+                                                <figure class="ratio-box">
+                                                    <img src="images/4.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="item">
+                                                <figure class="ratio-box">
+                                                    <img src="images/5.png" alt="">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-9">
+                                        <div class="slider-for">
+                                            <div class="item">
+                                                <figure class="ratio-box">
+                                                    <img src="images/1.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="item">
+                                                <figure class="ratio-box">
+                                                    <img src="images/2.jpg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="item">
+                                                <figure class="ratio-box">
+                                                    <img src="images/3.jpeg" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="item">
+                                                <figure class="ratio-box">
+                                                    <img src="images/4.png" alt="">
+                                                </figure>
+                                            </div>
+                                            <div class="item">
+                                                <figure class="ratio-box">
+                                                    <img src="images/5.png" alt="">
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="slider slider-for">
-            <div>
-                <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=22" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-            </div>
-        </div>
-        <div class="slider slider-nav">
-            <div>
-                <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=22" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-            </div>
-            <div>
-                <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-            </div>
-        </div>
     </div>
-    
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
-
+    <!-- <script src="js/slick.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="js/slick.min.js"></script>
     <script>
-        $('.slider-for').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            fade: true,
-            asNavFor: '.slider-nav'
-        });
-        $('.slider-nav').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            asNavFor: '.slider-for',
-            dots: true,
-            centerMode: true,
-            focusOnSelect: true
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+    });
+    </script>
+
+    <!-- Slick slider vertical -->
+    <script>
+        $(document).ready(function () {
+            $('.slider-for-2').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.slider-nav-2',
+            });
+            $('.slider-nav-2').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for-2',
+                vertical: true,
+                centerMode: true,
+                focusOnSelect: true,
+                // arrows: false,
+            });
+            $(".vertical-slider-box").addClass("show");
         });
     </script>
 </body>
