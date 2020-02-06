@@ -129,6 +129,11 @@
                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-6" alt="">
                         </a>
                     </div>
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-7" alt="">
+                        </a>
+                    </div>
                     
                 </div>
                 <div id="sync2" class="y-thumb-slider owl-carousel owl-theme sync2" data-sync="s2">
@@ -160,6 +165,11 @@
                     <div class="item">
                         <a class="item-slider" href="#">
                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-6" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-7" alt="">
                         </a>
                     </div>
                     
@@ -300,8 +310,8 @@
                 //var current = el.item.index;
 
                 //if you disable loop you have to comment this block
-                var count = el.item.count - 1;
-                var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+                let count = el.item.count - 1;
+                let current = Math.round(el.item.index - (el.item.count / 2) - .5);
                 // var current = 1;
 
                 if (current < 0) {
@@ -312,9 +322,9 @@
                 }
 
                 sync2.find(".owl-item").removeClass("current").eq(current).addClass("current");
-                var onscreen = sync2.find('.owl-item.active').length - 1;
-                var start = sync2.find('.owl-item.active').first().index();
-                var end = sync2.find('.owl-item.active').last().index();
+                let onscreen = sync2.find('.owl-item.active').length - 1;
+                let start = sync2.find('.owl-item.active').first().index();
+                let end = sync2.find('.owl-item.active').last().index();
 
                 if (current > end) {
                     sync2.data('owl.carousel').to(current, 100, true);
@@ -329,7 +339,7 @@
                 sync1 = $('.sync1[data-sync="'+ parent +'"]');
 
                 if (syncedSecondary) {
-                    var number = el.item.index;
+                    let number = el.item.index;
                     sync1.data('owl.carousel').to(number, 100, true);
                 }
             }
@@ -337,7 +347,7 @@
             sync2.on("click", ".owl-item", function(e) {
                 e.preventDefault();
                 let parent = $(this).parents('.owl-carousel').data("sync");
-                var number = $(this).index();
+                let number = $(this).index();
                 console.log(parent);
                 sync1 = $('.sync1[data-sync="'+ parent +'"]');
                 sync1.data('owl.carousel').to(number, 300, true);
