@@ -27,6 +27,7 @@
     <div class="container">
         <h1>Slider OWL Carousel Thumbnail</h1>
         <h3>Source: <a href="https://codepen.io/aykutkapisiz/pen/POGJxg" target="_blank">https://codepen.io/aykutkapisiz/pen/POGJxg</a></h3>
+        <h3>Update: <a href="https://trivietdecor.com.vn/thiet-ke-noi-that-can-ho-ha-do-centrosa">https://trivietdecor.com.vn/thiet-ke-noi-that-can-ho-ha-do-centrosa</a></h3>
     </div>
     <div class="container">
         <div class="row">
@@ -180,6 +181,50 @@
         <!-- Trigger the modal with a button -->
         <br>
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="work-slider owl-carousel owl-theme">
+                    
+                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-1" alt="">
+                    
+                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-2" alt="">
+                    
+                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-3" alt="">
+                    
+                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-4" alt="">
+                    
+                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-5" alt="">
+                    
+                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-6" alt="">
+                </div>
+
+                <div class="work-item-slider-wrapper">
+                    <div class="work-item-slider owl-carousel owl-theme">
+                        <a href="#">
+                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-1" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-2" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-3" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-4" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-5" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-6" alt="">
+                        </a>
+                        
+                    </div><!-- /work-slider -->
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -359,6 +404,77 @@
         $(document).on('show.bs.modal', '.modal', function () {
             $('.sync2').trigger('refresh.owl.carousel');
         });
+    </script>
+
+    <script>
+        // SYNC SLIDER
+        // Work Slider
+        var owlItem = $('.work-slider'),
+            owlThumb = $('.work-item-slider'),
+            flag = false,
+            duration = 300;
+
+        if (owlItem.length > 0){
+            owlItem.owlCarousel({
+                autoplay: false,
+                loop: false,
+                nav: true,
+                navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
+                dots: false,
+                responsive:{
+                    0:{
+                        items: 1
+                    }
+                },
+            }).on('changed.owl.carousel', function(e) {
+              if (!flag) {
+                flag = true;
+                owlThumb.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                owlThumb.find('.owl-item').removeClass('current');
+                owlThumb.find('.owl-item').eq(e.item.index).addClass('current');
+                flag = false;
+              }
+            });
+        }
+
+        // Work Item Slider
+        if (owlThumb.length > 0){
+            owlThumb.owlCarousel({
+                margin: 30,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                loop: false,
+                nav: false,
+                navText: ['<span class="fa fa-angle-left"></span>', '<span class="fa fa-angle-right"></span>'],
+                dots: false,
+                responsive:{
+                    0:{
+                        items: 1
+                    },
+                    481:{
+                        items: 2
+                    },
+                    768:{
+                        items: 3
+                    },
+                    1200:{
+                        items: 4
+                    },
+                },
+            }).on('click', '.owl-item', function(e) {
+              owlItem.trigger('to.owl.carousel', [$(this).index(), duration, true]);
+              $(this).siblings().removeClass('current');
+              $(this).addClass('current');
+              e.preventDefault();
+            }).on('changed.owl.carousel', function(e) {
+              if (!flag) {
+                flag = true;
+                owlItem.trigger('to.owl.carousel', [e.item.index, duration, true]);
+                flag = false;
+              }
+            });
+        }
     </script>
 </body>
 
