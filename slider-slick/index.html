@@ -69,15 +69,7 @@
                     <div>
                         <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=22" alt="">
                     </div>
-                    <div>
-                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-                    </div>
-                    <div>
-                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-                    </div>
-                    <div>
-                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-                    </div>
+                    
                 </div>
                 <div class="slider slider-nav">
                     <div>
@@ -86,15 +78,7 @@
                     <div>
                         <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=22" alt="">
                     </div>
-                    <div>
-                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-                    </div>
-                    <div>
-                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-                    </div>
-                    <div>
-                        <img src="https://dummyimage.com/1720x550/bcbcbc/000000&text=21" alt="">
-                    </div>
+                    
                 </div>
             </div>
             <div class="col-md-6">
@@ -256,6 +240,8 @@
         // fade: true,
         autoplay: true,
         autoplaySpeed: 3000,
+        prevArrow: '<span class="btn-arrow btn-prev"><i class="fas fa-chevron-left"></i></span>',
+        nextArrow: '<span class="btn-arrow btn-next"><i class="fas fa-chevron-right"></i></span>',
         asNavFor: '.slider-nav'
     });
     $('.slider-nav').slick({
@@ -264,6 +250,7 @@
         asNavFor: '.slider-for',
         dots: true,
         centerMode: true,
+        infinite: false,
         focusOnSelect: true
     });
     </script>

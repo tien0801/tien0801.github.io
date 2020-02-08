@@ -192,3 +192,26 @@
     opacity: .75;
     color: black;
 }
+
+/* CSS Custom Nav, Dots */
+.slick-slider .btn-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 36px;
+    background-color: rgba(0,0,0,.6);
+    z-index: 1;
+}
+.slick-slider .btn-prev {
+    left: 0;
+}
+.slick-slider .btn-next {
+    right: 0;
+}
+.slick-slider .btn-arrow i {
+    color: #fff;
+}
