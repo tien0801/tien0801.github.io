@@ -231,13 +231,14 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- <script src="js/slick.js" type="text/javascript" charset="utf-8"></script> -->
-    <script src="js/slick.min.js"></script>
+    <script src="js/slick.js"></script>
     <script>
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         // arrows: false,
         // fade: true,
+        infinite: false,
         autoplay: true,
         autoplaySpeed: 3000,
         prevArrow: '<span class="btn-arrow btn-prev"><i class="fas fa-chevron-left"></i></span>',
@@ -246,10 +247,10 @@
     });
     $('.slider-nav').slick({
         slidesToShow: 3,
-        slidesToScroll: 1,
+        // slidesToScroll: 1,
         asNavFor: '.slider-for',
+        autoplay: true,
         dots: true,
-        centerMode: true,
         infinite: false,
         focusOnSelect: true
     });
