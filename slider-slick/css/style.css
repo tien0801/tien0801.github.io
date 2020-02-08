@@ -64,20 +64,20 @@
     transform: translateY(0);
 }
 
-.slick-prev {
+#slick-slide-modal .slick-next,
+#slick-slide-modal .slick-prev {
+    display: none !important;
+}
+
+.slick-vertical .slick-prev {
     left: 50%;
     transform: translateX(-50%) rotate(90deg);
     top: -30px;
 }
 
-.slick-next {
+.slick-vertical .slick-next {
     right: 50%;
     transform: translateX(50%) rotate(90deg);
     top: unset;
     bottom: -30px;
-}
-
-#slick-slide-modal .slick-next,
-#slick-slide-modal .slick-prev {
-    display: none !important;
 }

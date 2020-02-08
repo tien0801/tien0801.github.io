@@ -63,7 +63,7 @@
             </div>
             <div class="col-md-4">
                 <div class="item-gallery">
-                    <a class="link-popup" href="javascript:;" data-toggle="modal" data-target="#projectModal"></a>
+                    <a class="link-popup" href="javascript:;" data-toggle="modal" data-target="#projectModal2"></a>
                     <div class="img-gallery y-box-img">
                         <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
                     </div>
@@ -120,7 +120,7 @@
           <div class="modal-body">
                 
                 <!-- <div class="popup-slider owl-carousel owl-theme"> -->
-                <div class="popup-slider owl-carousel owl-theme" id="sync1">
+                <div class="popup-slider owl-carousel owl-theme sync1" data-sync="slider_1">
                     <div class="item">
                         <a class="item-slider" href="#">
                            <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
@@ -152,7 +152,89 @@
                         </a>
                     </div>
                 </div>
-                <div id="sync2" class="y-thumb-slider owl-carousel owl-theme">
+                <div class="y-thumb-slider owl-carousel owl-theme sync2" data-sync="slider_1">
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- ./The Modal Project -->
+    <!-- The Modal Project -->
+    <div class="modal" id="projectModal2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+                
+                <!-- <div class="popup-slider owl-carousel owl-theme"> -->
+                <div class="popup-slider owl-carousel owl-theme sync1" data-sync="slider_2">
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a class="item-slider" href="#">
+                           <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="y-thumb-slider owl-carousel owl-theme sync2" data-sync="slider_2">
                     <div class="item">
                         <a class="item-slider" href="#">
                            <img src="https://dummyimage.com/700x470/bcbcbc/000000" alt="">
@@ -199,8 +281,8 @@
 
     <script>
         // Slider popup Project
-        var sync1 = $("#sync1");
-        var sync2 = $("#sync2");
+        var sync1 = $(".sync1");
+        var sync2 = $(".sync2");
         var slidesPerPage = 3; 
         var syncedSecondary = true;
 
@@ -259,16 +341,26 @@
         }
 
         function syncPosition2(el) {
+            let s1 = $('.sync1[data-sync="'+ parent +'"]');
             if (syncedSecondary) {
                 var number = el.item.index;
-                sync1.data('owl.carousel').to(number, 100, true);
+                s1.data('owl.carousel').to(number, 100, true);
             }
         }
 
         sync2.on("click", ".owl-item", function(e) {
             e.preventDefault();
-            var number = $(this).index();
+            let parent = $(this).parents('.owl-carousel').data("sync");
+            console.log(parent);
+            let number = $(this).index();
+            let s1 = $('.sync1[data-sync="'+ parent +'"]');
             sync1.data('owl.carousel').to(number, 300, true);
+        });
+
+        $(document).on('show.bs.modal', '.modal', function () {
+            let abc = $(this).css('background-color','red');
+            // console.log(abc);
+            $('.sync2').trigger('refresh.owl.carousel');
         });
     </script>
 </body>
