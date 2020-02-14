@@ -16,9 +16,6 @@ html,body{
 	overflow: auto !important; 
 	/* height: 100% !important; */
 }
-/* input {
-	height: 40px;
-} */
 p {
 	line-height: 1.3;
 }
@@ -43,8 +40,6 @@ input:focus, textarea:focus {
 ul {
 	padding-left: 0;
 	margin-bottom: 0;
-}
-li {
 	list-style: none;
 }
 .color-main {
