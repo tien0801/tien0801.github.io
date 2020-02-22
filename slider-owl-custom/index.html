@@ -15,6 +15,15 @@
         iframe {
             width: 100%;
         }
+        img {
+            box-shadow: 1px 1px 1px;
+        }
+    </style>
+
+    <style>
+        .js-slider-stage .owl-stage {
+            left: -100px
+        }
     </style>
 
 </head>
@@ -138,7 +147,17 @@ if($('.js-home-slider').length >0) {
 
     <!-- Slider 2 -->
     <div class="container">
-        <div class="home-slider-2 owl-carousel owl-theme">
+        <div class="js-slider-stage owl-carousel owl-theme">
+            <div class="item">
+                <a class="item-slider" href="#">
+                   <img src="https://dummyimage.com/570x400/bcbcbc" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a class="item-slider" href="#">
+                   <img src="https://dummyimage.com/570x400/333" alt="">
+                </a>
+            </div>
             <div class="item">
                 <a class="item-slider" href="#">
                    <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1" frameborder="0" allowfullscreen>
@@ -152,12 +171,12 @@ if($('.js-home-slider').length >0) {
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/570x400/ff0000" alt="">
+                   <img src="https://dummyimage.com/570x400/bcbcbc" alt="">
                 </a>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/570x400/ff0000" alt="">
+                   <img src="https://dummyimage.com/570x400/333" alt="">
                 </a>
             </div>
         </div>
@@ -214,21 +233,21 @@ if($('.js-home-slider').length >0) {
         }, 500);*/
         
 
-        if($('.home-slider-2').length >0) {
-            $('.home-slider-2').owlCarousel({
-                loop: true,
+        if($('.js-slider-stage').length >0) {
+            $('.js-slider-stage').owlCarousel({
+                loop: false,
                 // autoplay: true,
                 // autoplayTimeout: 4000,
                 // nestedItemSelector: 'item-gall',
                 margin: 0,
                 responsiveClass:true,
-                items: 2,
+                items: 3,
                 dots: false,
                 navText : ["",""],
                 rewindNav : true,
                 nav: true,
-                center: true,
-                // stagePadding: 200,
+                // center: true,
+                stagePadding: 100,
                 responsive : {
                     // breakpoint from 0 up
                     0 : {
@@ -244,7 +263,12 @@ if($('.js-home-slider').length >0) {
                         items: 2,
                     }
                 },
-            })
+            }).on('changed.owl.carousel', stageSlider);
+        }
+        function stageSlider(slider) {
+            console.log("change slider stage");
+            var currentItem = slider.item.index;
+            console.log(currentItem);
         }
 
         if($('.home-slider-3').length >0) {
