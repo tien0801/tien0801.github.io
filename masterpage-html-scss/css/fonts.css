@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'iCiel VAG Rounded Next';
+    src: url('../fonts/iCielVAGRoundedNext-Bold.eot');
+    src: url('../fonts/iCielVAGRoundedNext-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/iCielVAGRoundedNext-Bold.woff2') format('woff2'),
+        url('../fonts/iCielVAGRoundedNext-Bold.woff') format('woff'),
+        url('../fonts/iCielVAGRoundedNext-Bold.ttf') format('truetype'),
+        url('../fonts/iCielVAGRoundedNext-Bold.svg#iCielVAGRoundedNext-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'iCiel VAG Rounded Next';
+    src: url('../fonts/iCielVAGRoundedNext-DemiBold.eot');
+    src: url('../fonts/iCielVAGRoundedNext-DemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/iCielVAGRoundedNext-DemiBold.woff2') format('woff2'),
+        url('../fonts/iCielVAGRoundedNext-DemiBold.woff') format('woff'),
+        url('../fonts/iCielVAGRoundedNext-DemiBold.ttf') format('truetype'),
+        url('../fonts/iCielVAGRoundedNext-DemiBold.svg#iCielVAGRoundedNext-DemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'iCiel VAG Rounded Next';
+    src: url('../fonts/iCielVAGRoundedNext-Medium.eot');
+    src: url('../fonts/iCielVAGRoundedNext-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/iCielVAGRoundedNext-Medium.woff2') format('woff2'),
+        url('../fonts/iCielVAGRoundedNext-Medium.woff') format('woff'),
+        url('../fonts/iCielVAGRoundedNext-Medium.ttf') format('truetype'),
+        url('../fonts/iCielVAGRoundedNext-Medium.svg#iCielVAGRoundedNext-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
