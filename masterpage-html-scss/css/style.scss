@@ -36,6 +36,12 @@ ul {
     margin-bottom: 0;
 }
 
+.clearfix {
+    display: block;
+    content: "";
+    clear: both;
+}
+
 .y-select {
     -webkit-appearance: none;
     -moz-appearance: none;
