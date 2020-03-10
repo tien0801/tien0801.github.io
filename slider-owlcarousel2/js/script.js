@@ -131,5 +131,37 @@ $(document).ready(function() {
             }
         });
     }
+    if($('.js-slider-fade').length >0) {
+        $('.js-slider-fade').owlCarousel({
+            loop: false,
+            // autoplay: true,
+            // autoplayTimeout: 4000,
+            // nestedItemSelector: 'item-gall',
+            margin: 0,
+            responsiveClass:true,
+            items: 3,
+            dots: true,
+            navText : ["<",">"],
+            rewindNav : true,
+            animateOut: 'fadeOut',
+            nav: true,
+            // center: true,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                   items: 1,
+                },
+                480 : {
+                    items: 1,
+                },
+                768 : {
+                    items: 2,
+                },
+                1200 : {
+                    items: 1,
+                }
+            }
+        });
+    }
 
 });
