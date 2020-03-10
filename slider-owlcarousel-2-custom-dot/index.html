@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-
         .owl-custom-dots .box-dot-slider {
             width: max-content;
             margin: 10px auto;
@@ -51,8 +50,8 @@
             <div class="col-md-6">
 <pre>
 <code>
-if ($('.home-slider').length > 0) {
-    var owl = $('.home-slider');
+if ($('.js-home-slider').length > 0) {
+    let owl = $('.js-home-slider');
     owl.owlCarousel({
         loop: true,
         // autoplay: true,
@@ -74,41 +73,36 @@ if ($('.home-slider').length > 0) {
         owl.trigger('to.owl.carousel', [$(this).index(), 300]);
     });
 }
-
-============================================
-
 </code>
 </pre>
             </div>
 
             <div class="col-md-6">
-                <div class="container">
-                    <div class="owl-custom-dots">
-                        <div class="home-slider owl-carousel owl-theme">
-                            <div class="item">
-                                <a class="item-slider" href="#">
-                                    <img src="https://dummyimage.com/920x400/888/fff" alt="">
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a class="item-slider" href="#">
-                                    <img src="https://dummyimage.com/920x400/888/fff" alt="">
-                                </a>
-                            </div>
-                            <div class="item">
-                                <a class="item-slider" href="#">
-                                    <img src="https://dummyimage.com/920x400/888/fff" alt="">
-                                </a>
-                            </div>
+                <div class="owl-custom-dots">
+                    <div class="home-slider js-home-slider owl-carousel owl-theme">
+                        <div class="item">
+                            <a class="item-slider" href="#">
+                                <img src="https://dummyimage.com/620x400/888/fff" alt="">
+                            </a>
                         </div>
-                        <div class="box-dot-slider">
-                            <a class="i-dot active" href="javascript:;">01</a>
-                            <a class="i-dot" href="javascript:;">02</a>
-                            <a class="i-dot" href="javascript:;">03</a>
+                        <div class="item">
+                            <a class="item-slider" href="#">
+                                <img src="https://dummyimage.com/620x400/888/fff" alt="">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a class="item-slider" href="#">
+                                <img src="https://dummyimage.com/620x400/888/fff" alt="">
+                            </a>
                         </div>
                     </div>
-
+                    <div class="box-dot-slider">
+                        <a class="i-dot active" href="javascript:;">01</a>
+                        <a class="i-dot" href="javascript:;">02</a>
+                        <a class="i-dot" href="javascript:;">03</a>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -117,8 +111,8 @@ if ($('.home-slider').length > 0) {
     <script src="js/owl.carousel.min.js"></script>
     <!-- Home Slider -->
     <script>
-        if ($('.home-slider').length > 0) {
-            var owl = $('.home-slider');
+        if ($('.js-home-slider').length > 0) {
+            let owl = $('.js-home-slider');
             owl.owlCarousel({
                 loop: true,
                 // autoplay: true,
