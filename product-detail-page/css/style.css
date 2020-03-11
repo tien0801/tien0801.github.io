@@ -7,6 +7,9 @@
 .prod-detail-property .text-property {
 	margin-bottom: 7px;
 }
+.prod-detail-property .color-detail li {
+    display: inline-block
+}
 .prod-detail-property .color-detail li a {
     position: relative;
     display: block;
