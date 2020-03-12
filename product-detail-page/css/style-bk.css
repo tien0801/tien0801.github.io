@@ -1,0 +1,59 @@
+
+/* Product property detail */
+.prod-detail-property {
+	margin-bottom: 15px;
+}
+.prod-detail-property .text-property {
+	margin-bottom: 7px;
+}
+.prod-detail-property .list-property {
+    padding-left: 0;
+}
+.prod-detail-property .list-property li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.prod-detail-property .list-property li a {
+    position: relative;
+    display: block;
+    padding: 0px 12px 0 0;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #e6e6e6;
+    margin-bottom: 8px;
+    min-width: 32px;
+    min-height: 32px;
+}
+.prod-detail-property .list-property li a.active {
+    border: 1px solid #d13c2c;
+}
+.prod-detail-property .list-property li a.active:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #fff;
+}
+.prod-detail-property .list-property li a .icon-product {
+    width: 30px;
+    max-height: 30px;
+}
+.prod-detail-property .list-property li a .img-check {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 14px;
+    height: 14px;
+    display: none;
+}
+.prod-detail-property .list-property li a.active .img-check {
+    display: block;
+}
+.prod-detail-property .list-property li a .input-color {
+    display: none;
+}
+.prod-detail-property .list-size li a {
+    padding: 5px 13px;
+}

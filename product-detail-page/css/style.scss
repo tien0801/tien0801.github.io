@@ -1,0 +1,282 @@
+.box-img-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.box-img-flex.y-img-left {
+    justify-content: flex-start;
+}
+.box-img-flex img {
+    width: auto !important;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.clearfix {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+/* Product property detail */
+.prod-detail-property {
+    margin-bottom: 15px;
+
+    .text-property {
+        margin-bottom: 7px;
+    }
+
+    .list-property {
+        padding-left: 0;
+
+        li {
+            display: inline-block;
+            margin-right: 10px;
+
+            a {
+                position: relative;
+                display: block;
+                padding: 0px 12px 0 0;
+                text-decoration: none;
+                color: #000;
+                border: 1px solid #e6e6e6;
+                margin-bottom: 8px;
+                min-width: 32px;
+                min-height: 32px;
+
+                &.active {
+                    border: 1px solid #d13c2c;
+
+                    &:after {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        border: 1px solid #fff;
+                    }
+
+
+                    .img-check {
+                        display: block;
+                    }
+                }
+
+                .icon-product {
+                    width: 30px;
+                    max-height: 30px;
+                }
+
+                .img-check {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    width: 14px;
+                    height: 14px;
+                    display: none;
+                }
+
+                .input-color {
+                    display: none;
+                }
+            }
+        }
+
+        &.list-size li a {
+            padding: 5px 13px;
+        }
+    }
+}
+
+
+/* Rating section */
+.rating.without-caption .clear-rating,
+.rating.without-caption .caption {
+    display: none;
+}
+
+.rating.without-caption .empty-stars,
+.rating.without-caption .filled-stars {
+    color: #ffc120;
+    text-shadow: none;
+    -webkit-text-stroke: inherit;
+}
+
+.rating.without-caption .rating-stars,
+.rating.without-caption .rating-container {
+    cursor: auto;
+    font-size: 10px;
+}
+
+.rating-container .star {
+    display: inline-block;
+    margin: 0 3px;
+    text-align: center;
+}
+
+.rating-container .star i {
+    font-size: 20px;
+}
+
+.box-product-rating {
+    padding: 20px 0;
+    .rating-medium {
+        text-align: center;
+        .title-evaluate {
+
+        }
+
+        .score-rating {
+            margin: 20px 0 0;
+            text-align: center;
+            font-size: 47px;
+            color: #fe302e;
+            font-weight: 500;
+        }
+
+        .rating {
+            margin-bottom: 10px;
+        }
+
+        .quantity-comment {
+            font-size: 14px;
+            color: #8f8f8f;
+        }
+    }
+
+    .progress-rating {
+        .item-progress {
+            margin-bottom: 10px;
+            text-align: left;
+
+            .rating-num {
+                display: inline-block;
+                font-size: 15px;
+                font-weight: 400;
+                width: 41px;
+                line-height: 15px;
+                vertical-align: middle;
+                position: relative;
+            }
+            .box-progress {
+                display: inline-block;
+                width: 282px;
+                vertical-align: middle;
+                
+                .progress {
+                    height: 12px;
+                    border-radius: 10px;
+                }
+
+                .progress-bar {
+                    background: #23b445;
+                }
+            }
+            
+            .rating-num-total {
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 300;
+                text-align: left;
+                margin-left: 12px;
+                color: #787878;
+                line-height: 15px;
+                vertical-align: middle;
+            }
+        }
+    }
+    
+    .btn-action-rating {
+        text-align: center;
+        padding-top: 50px;
+        .title-small {
+
+        }
+
+        .btn-main {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 13px;
+            height: 40px;
+            line-height: 40px;
+            background: #fdd22f;
+            border: 0;
+            color: #4a4a4a;
+            width: 229px;
+            margin-top: 13px;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+}
+
+.box-comment-rating {
+    .item-comment {
+        .profile-comment {
+            display: table-cell;
+            width: 130px;
+            vertical-align: top;
+            padding: 0 10px;
+
+            .avatar {
+                width: 65px;
+                height: 65px;
+                margin: 0 auto;
+                @extend .box-img-flex;
+            }
+            .name {
+                font-size: 14px;
+                margin: 15px 0 5px;
+                font-weight: 500;
+                text-transform: capitalize;
+                width: 178px;
+                text-align: center;
+            }
+            .days {
+                font-size: 12px;
+                color: #999;
+                margin: 0;
+                text-align: center;
+            }
+        }
+
+        .content-comment {
+            display: table-cell;
+            width: 100%;
+            vertical-align: top;
+            padding-left: 24px;
+
+            .replies-item {
+                margin-bottom: 20px;
+
+                &:after {
+                    @extend .clearfix;
+                }
+                .replies-image {
+                    width: 45px;
+                    height: 45px;
+                    overflow: hidden;
+                    float: left;
+                    margin-right: 10px;
+                    margin-bottom: 0;
+                    border-radius: 50%;
+                }
+
+                .replies-text {
+                    font-size: 13px;
+                    color: #4f4f4f;
+                    margin-left: 54px;
+                    line-height: 18px;
+                    
+                    .replies-name {
+                        font-size: 13px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}
