@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1">
     <title>Yosu.vn - Giải pháp website chuyên nghiệp</title>
-    <meta name="description" content="Laziweb.com - Giải pháp website chuyên nghiệp">
-    <link rel="shortcut icon" href="{{theme.uri}}/processing/images/32x32.jpg" type="image/x-icon">
-    <link rel="icon" href="{{theme.uri}}/processing/images/32x32.jpg" type="image/x-icon">
+    <meta name="title" content="{{seo.meta_title ? seo.meta_title:settings.home_name}}">
+    <meta name="description" content="{{seo.meta_description}}">
+    <link rel="shortcut icon" href="{{ settings.home_favicon | upload_url }}" type="image/x-icon">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet">
     <link href="{{theme.uri}}/processing/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{theme.uri}}/processing/css/main.css" rel="stylesheet">
@@ -44,7 +44,7 @@
                                 Xin cám ơn!
                             </span>
                         </h2>
-                        <h3><span class="rotate" style="font-weight:lighter;line-height:45px;"> Liên hệ tư vấn <a href="tel:0898866069" type="submit" class="btn btn-default" id="mc-subscribe">089.886.6069</a></h3>
+                        <h3><span class="rotate" style="font-weight:lighter;line-height:45px;"> Liên hệ tư vấn <a href="tel:{{ settings.hotline}}" type="submit" class="btn btn-default" id="mc-subscribe">{{ settings.hotline}}</a></h3>
                     </header>
                     <!--welcome-message end-->
                 </div>
