@@ -1,0 +1,38 @@
+@media (max-width: 575px) {
+    .cta-fixed-mobile {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        width: 100%;
+        margin: 0 auto;
+        padding: 8px 0 4px;
+        z-index: 10;
+    }
+
+    .cta-fixed-mobile .item-cta {
+        float: left;
+        width: 25%;
+        text-align: center;
+    }
+
+    .cta-fixed-mobile .item-cta .icon-cta {
+        height: 30px;
+    }
+
+    .cta-fixed-mobile .item-cta .icon-cta img {
+        height: 30px;
+    }
+
+    .cta-fixed-mobile .item-cta .icon-cta i {
+        font-size: 28px;
+        color: #000;
+    }
+
+    .cta-fixed-mobile .item-cta .text-cta {
+        color:  #000;
+        font-size: 12px;
+    }
+}

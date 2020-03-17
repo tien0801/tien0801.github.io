@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="vi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
+    <title>VBT Frontend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+
+        .form-search-autocomplete {
+            position: relative;
+        }
+        .box-search-autocomplete {
+            display: none;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: #fff;
+        }
+        .form-search-autocomplete.show .box-search-autocomplete {
+            display: block;
+        }
+        .box-search-autocomplete .item-result {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Seach suggest</h1>
+
+        <form action="" class="form-search-autocomplete">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button">Tìm kiếm</button>
+                </div>
+            </div>
+            <div class="box-search-autocomplete">
+                <div class="item-result">
+                    <a href="#"><img src="https://dummyimage.com/50x50/bcbcbc/000000" alt=""></a>
+                    <a href="#">
+                        <span class="name-prod">sLorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                        <span class="price-prod">15.000.000 đ</span>
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        $("input").keyup(function(){
+            console.log("The text has been changed.");
+            $('.form-search-autocomplete').addClass('show')
+        });
+    </script>
+</body>
+
+</html>
