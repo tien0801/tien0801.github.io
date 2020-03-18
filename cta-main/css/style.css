@@ -74,7 +74,7 @@
 
 .fixed-right-menu ul li:hover>span {
     transition: all 0.5s;
-    width: 200px;
+    width: 180px;
     left: -180px;
     color: #fff;
     border-radius: 3px 0 0 3px;
@@ -106,4 +106,5 @@
 .fixed-right-menu ul li>span>a {
     display: block;
     color: #fff;
+    font-size: 15px;
 }

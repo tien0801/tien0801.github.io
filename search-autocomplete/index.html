@@ -27,7 +27,7 @@
 
         <form action="" class="form-search-autocomplete">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Recipient's username">
+                <input type="text" class="form-control" id="input-autocomplete" placeholder="Recipient's username">
                 <div class="input-group-append">
                     <button class="btn btn-outline-secondary" type="button">Tìm kiếm</button>
                 </div>
@@ -58,7 +58,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <script>
-        $("input").keyup(function(){
+        $("#input-autocomplete").keyup(function(){
             console.log("The text has been changed.");
             $('.form-search-autocomplete').addClass('show')
         });

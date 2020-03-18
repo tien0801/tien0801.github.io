@@ -20,6 +20,7 @@
 }
 .box-search-autocomplete .item-result .info-prod {
     margin-left: 8px;
+    flex: 1;
 }
 .box-search-autocomplete .item-result .img-prod {
     width: 40px;
@@ -36,6 +37,6 @@
 }
 .box-search-autocomplete .item-result .price-prod {
     display: block;
-    font-size: 14px;
+    font-size: 13px;
     color: #c00;
 }
