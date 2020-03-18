@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="">
     <style>
-
         .form-search-autocomplete {
             position: relative;
+            max-width: 420px;
         }
         .box-search-autocomplete {
             display: none;
@@ -24,12 +24,33 @@
             top: 50px;
             left: 0;
             background-color: #fff;
+            width: 100%;
+            padding: 8px;
         }
         .form-search-autocomplete.show .box-search-autocomplete {
             display: block;
         }
         .box-search-autocomplete .item-result {
             margin-bottom: 10px;
+            display: flex;
+        }
+        .box-search-autocomplete .item-result .info-prod {
+            margin-left: 8px;
+        }
+        .box-search-autocomplete .item-result .name-prod {
+            color: #000;
+            display: -webkit-box;
+            font-size: 14px;
+            height: 21px; 
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .box-search-autocomplete .item-result .price-prod {
+            display: block;
+            font-size: 14px;
+            color: #c00;
         }
     </style>
 </head>
@@ -47,11 +68,22 @@
             </div>
             <div class="box-search-autocomplete">
                 <div class="item-result">
-                    <a href="#"><img src="https://dummyimage.com/50x50/bcbcbc/000000" alt=""></a>
-                    <a href="#">
-                        <span class="name-prod">sLorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
-                        <span class="price-prod">15.000.000 đ</span>
-                    </a>
+                    <a href="#" class="img-sprod"><img src="https://dummyimage.com/50x50/bcbcbc/000000" alt=""></a>
+                    <div class="info-prod">
+                        <a href="#">
+                            <span class="name-prod">sLorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            <span class="price-prod">15.000.000 đ</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-result">
+                    <a href="#" class="img-sprod"><img src="https://dummyimage.com/50x50/bcbcbc/000000" alt=""></a>
+                    <div class="info-prod">
+                        <a href="#">
+                            <span class="name-prod">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                            <span class="price-prod">15.000.000 đ</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </form>
