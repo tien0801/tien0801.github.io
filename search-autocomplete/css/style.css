@@ -1,0 +1,41 @@
+.form-search-autocomplete {
+    position: relative;
+    max-width: 420px;
+}
+.box-search-autocomplete {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 8px;
+}
+.form-search-autocomplete.show .box-search-autocomplete {
+    display: block;
+}
+.box-search-autocomplete .item-result {
+    margin-bottom: 10px;
+    display: flex;
+}
+.box-search-autocomplete .item-result .info-prod {
+    margin-left: 8px;
+}
+.box-search-autocomplete .item-result .img-prod {
+    width: 40px;
+}
+.box-search-autocomplete .item-result .name-prod {
+    color: #000;
+    display: -webkit-box;
+    font-size: 14px;
+    height: 21px; 
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.box-search-autocomplete .item-result .price-prod {
+    display: block;
+    font-size: 14px;
+    color: #c00;
+}
