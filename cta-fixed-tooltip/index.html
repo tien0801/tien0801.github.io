@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="vi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
+    <title>VBT Frontend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .cta-fixed-tooltip {
+            position: fixed;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            z-index: 999;
+        }
+        .cta-fixed-tooltip a {
+            display: block;
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+        .cta-fixed-tooltip a img {
+            width: 44px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>CTA fixed Tooltip</h1>
+    </div>
+
+    <div class="cta-fixed-tooltip">
+        <a href="tel:0909999999" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Gọi ngay 0909999999">
+            <img src="images/icons/icon_click_to_call.svg">
+        </a>
+        <a href="#" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chính sách giao hàng">
+            <img src="images/icons/delivery-truck.svg">
+        </a>
+        <a href="#" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Dịch vụ tặng kèm">
+            <img src="images/icons/qua-shop.svg">
+        </a>
+        <a href="#" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Địa chỉ cửa hàng">
+            <img src="images/icons/placeholder.svg">
+        </a>
+        <a href="https://www.messenger.com/" target="_blank" data-toggle="tooltip" data-placement="left" title="" data-original-title="Chat tư vấn">
+            <img src="images/icons/icon_messenger.svg">
+        </a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <!-- JS Tooltip -->
+    <script src="js/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();   
+        });
+    </script>
+</body>
+
+</html>
