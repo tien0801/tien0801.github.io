@@ -122,6 +122,9 @@
     max-width: 70px;
 }
 
+.shopping-cart .shopping-cart-items .info-prod {
+    display: inline-block;
+}
 .shopping-cart .shopping-cart-items .item-name {
     padding-top: 10px;
     display: -webkit-box;
