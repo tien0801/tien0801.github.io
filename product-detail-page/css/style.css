@@ -35,6 +35,7 @@
 .prod-detail-property .list-property li {
   display: inline-block;
   margin-right: 10px;
+  margin-bottom: 8px;
 }
 .prod-detail-property .list-property li a {
   position: relative;
@@ -43,7 +44,6 @@
   text-decoration: none;
   color: #000;
   border: 1px solid #e6e6e6;
-  margin-bottom: 8px;
   min-width: 32px;
   min-height: 32px;
 }
@@ -117,7 +117,7 @@
   text-align: center;
 }
 .box-product-rating .rating-medium .score-rating {
-  margin: 20px 0 0;
+  margin: 10px 0 0;
   text-align: center;
   font-size: 47px;
   color: #fe302e;
@@ -145,7 +145,7 @@
 }
 .box-product-rating .progress-rating .item-progress .box-progress {
   display: inline-block;
-  width: 282px;
+  width: calc(100% - 90px);
   vertical-align: middle;
 }
 .box-product-rating .progress-rating .item-progress .box-progress .progress {
