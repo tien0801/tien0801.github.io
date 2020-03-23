@@ -92,6 +92,34 @@ $color_green: #23b445;
         &.list-size li a {
             padding: 5px 13px;
         }
+
+        .price-variant {
+            color: $color_red;
+            font-weight: bold;
+        }
+    }
+    .list-variant {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            margin-bottom: 10px;
+            width: calc(50% - 5px);
+            &:nth-child(2n+2) {
+                margin-right: 0;
+            }
+
+            a {
+                padding: 5px;
+                &.active {
+                    background-color: rgba(255, 0, 0, 0.1);
+                }
+
+                .text-variant {
+                    line-height: 1.3;
+                    margin-bottom: 5px;
+                }
+            }
+        }
     }
 }
 
