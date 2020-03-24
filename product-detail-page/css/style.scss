@@ -180,10 +180,6 @@ $color_green: #23b445;
             font-weight: 500;
         }
 
-        .rating {
-            margin-bottom: 10px;
-        }
-
         .quantity-comment {
             font-size: 14px;
             color: #8f8f8f;
@@ -262,20 +258,38 @@ $color_green: #23b445;
 }
 
 .box-comment-rating {
-    .item-comment {
-        font-size: 15px;
+    .item-review-product {
+        font-size: 14px;
         margin-bottom: 20px;
-        .profile-comment {
+        .box-profile-review {
             display: table-cell;
             width: 130px;
             vertical-align: top;
-            padding: 0 10px;
-
+            @media (max-width: 767px) {
+                display: block;
+                width: 100%;
+            }
+        }
+        .profile-comment {
+            @media (max-width: 767px) {
+                display: flex;
+                // flex-wrap: wrap;
+                width: max-content;
+                .name {
+                    display: inline-block;
+                }
+            }
             .avatar {
                 width: 65px;
                 height: 65px;
                 margin: 0 auto;
                 @extend .box-img-flex;
+
+                @media (max-width: 767px) {
+                    width: 30px;
+                    height: 30px;
+                    display: inline-flex;
+                }
             }
             .name {
                 font-size: 14px;
@@ -284,12 +298,24 @@ $color_green: #23b445;
                 text-transform: capitalize;
                 width: 178px;
                 text-align: center;
+                @media (max-width: 767px) {
+                    display: inline-flex;
+                    margin: 0 0 0 5px;
+                    align-items: center;
+                    font-size: 13px;
+                }
             }
-            .days {
-                font-size: 12px;
-                color: #999;
-                margin: 0;
-                text-align: center;
+        }
+        .days-review {
+            display: block;
+            font-size: 12px;
+            color: #999;
+            margin: 0;
+            text-align: center;
+
+            @media (max-width: 767px) {
+                text-align: left;
+                margin-bottom: 5px;
             }
         }
 
@@ -297,53 +323,89 @@ $color_green: #23b445;
             display: table-cell;
             width: 100%;
             vertical-align: top;
-            padding-left: 24px;
+            @media (min-width: 768px) {
+                padding-left: 24px;
+            }
 
             .rating-container .star i {
                 font-size: 15px;
+                @media (max-width: 767px) {
+                    font-size: 13px;
+                }
             }
             
             .y-box-rating {
                 display: flex;
+                align-items: center;
                 .rating {
                     margin-right: 5px;
                 }
                 .title-comment {
                     font-weight: 500;
-
+                    @media (max-width: 767px) {
+                        font-size: 14px;
+                    }
                 }
             }
 
             .buy-already {
                 color: $color_green;
                 margin-bottom: 5px;
+                @media (max-width: 767px) {
+                    font-size: 13px;
+                }
+            }
+
+            .desc-comment {
+                @media (max-width: 767px) {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .replies {
+            @media (max-width: 767px) {
+                padding-left: 10px;
             }
 
             .replies-item {
-                margin-bottom: 20px;
+                margin-bottom: 15px;
+                display: flex;
+                width: max-content;
 
                 &:after {
                     @extend .clearfix;
                 }
+                &:last-child {
+                    margin-bottom: 0;
+                }
                 .replies-image {
+                    display: flex;
+                    align-items: flex-start;
                     width: 45px;
                     height: 45px;
                     overflow: hidden;
-                    float: left;
                     margin-right: 10px;
                     margin-bottom: 0;
                     border-radius: 50%;
+
+                     @media (max-width: 767px) {
+                        width: 30px;
+                        margin-right: 5px;
+                     }
                 }
 
                 .replies-text {
                     font-size: 13px;
                     color: #4f4f4f;
-                    margin-left: 54px;
                     line-height: 18px;
                     
                     .replies-name {
-                        font-size: 13px;
                         font-weight: 500;
+
+                        @media (max-width: 767px) {
+                            font-size: 12px;
+                        }
                     }
                 }
             }

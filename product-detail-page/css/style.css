@@ -1,22 +1,22 @@
-.box-img-flex, .box-comment-rating .item-comment .profile-comment .avatar {
+.box-img-flex, .box-comment-rating .item-review-product .profile-comment .avatar {
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-.box-img-flex.y-img-left, .box-comment-rating .item-comment .profile-comment .y-img-left.avatar {
+.box-img-flex.y-img-left, .box-comment-rating .item-review-product .profile-comment .y-img-left.avatar {
   justify-content: flex-start;
 }
 
-.box-img-flex img, .box-comment-rating .item-comment .profile-comment .avatar img {
+.box-img-flex img, .box-comment-rating .item-review-product .profile-comment .avatar img {
   width: auto !important;
   height: auto;
   max-width: 100%;
   max-height: 100%;
 }
 
-.clearfix, .box-comment-rating .item-comment .content-comment .replies-item:after {
+.clearfix, .box-comment-rating .item-review-product .replies .replies-item:after {
   clear: both;
   display: block;
   content: "";
@@ -168,9 +168,6 @@
   color: #fe302e;
   font-weight: 500;
 }
-.box-product-rating .rating-medium .rating {
-  margin-bottom: 10px;
-}
 .box-product-rating .rating-medium .quantity-comment {
   font-size: 14px;
   color: #8f8f8f;
@@ -236,22 +233,43 @@
   vertical-align: middle;
 }
 
-.box-comment-rating .item-comment {
-  font-size: 15px;
+.box-comment-rating .item-review-product {
+  font-size: 14px;
   margin-bottom: 20px;
 }
-.box-comment-rating .item-comment .profile-comment {
+.box-comment-rating .item-review-product .box-profile-review {
   display: table-cell;
   width: 130px;
   vertical-align: top;
-  padding: 0 10px;
 }
-.box-comment-rating .item-comment .profile-comment .avatar {
+@media (max-width: 767px) {
+  .box-comment-rating .item-review-product .box-profile-review {
+    display: block;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .box-comment-rating .item-review-product .profile-comment {
+    display: flex;
+    width: max-content;
+  }
+  .box-comment-rating .item-review-product .profile-comment .name {
+    display: inline-block;
+  }
+}
+.box-comment-rating .item-review-product .profile-comment .avatar {
   width: 65px;
   height: 65px;
   margin: 0 auto;
 }
-.box-comment-rating .item-comment .profile-comment .name {
+@media (max-width: 767px) {
+  .box-comment-rating .item-review-product .profile-comment .avatar {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+  }
+}
+.box-comment-rating .item-review-product .profile-comment .name {
   font-size: 14px;
   margin: 15px 0 5px;
   font-weight: 500;
@@ -259,55 +277,115 @@
   width: 178px;
   text-align: center;
 }
-.box-comment-rating .item-comment .profile-comment .days {
+@media (max-width: 767px) {
+  .box-comment-rating .item-review-product .profile-comment .name {
+    display: inline-flex;
+    margin: 0 0 0 5px;
+    align-items: center;
+    font-size: 13px;
+  }
+}
+.box-comment-rating .item-review-product .days-review {
+  display: block;
   font-size: 12px;
   color: #999;
   margin: 0;
   text-align: center;
 }
-.box-comment-rating .item-comment .content-comment {
+@media (max-width: 767px) {
+  .box-comment-rating .item-review-product .days-review {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+}
+.box-comment-rating .item-review-product .content-comment {
   display: table-cell;
   width: 100%;
   vertical-align: top;
-  padding-left: 24px;
 }
-.box-comment-rating .item-comment .content-comment .rating-container .star i {
+@media (min-width: 768px) {
+  .box-comment-rating .item-review-product .content-comment {
+    padding-left: 24px;
+  }
+}
+.box-comment-rating .item-review-product .content-comment .rating-container .star i {
   font-size: 15px;
 }
-.box-comment-rating .item-comment .content-comment .y-box-rating {
-  display: flex;
+@media (max-width: 767px) {
+  .box-comment-rating .item-review-product .content-comment .rating-container .star i {
+    font-size: 13px;
+  }
 }
-.box-comment-rating .item-comment .content-comment .y-box-rating .rating {
+.box-comment-rating .item-review-product .content-comment .y-box-rating {
+  display: flex;
+  align-items: center;
+}
+.box-comment-rating .item-review-product .content-comment .y-box-rating .rating {
   margin-right: 5px;
 }
-.box-comment-rating .item-comment .content-comment .y-box-rating .title-comment {
+.box-comment-rating .item-review-product .content-comment .y-box-rating .title-comment {
   font-weight: 500;
 }
-.box-comment-rating .item-comment .content-comment .buy-already {
+@media (max-width: 767px) {
+  .box-comment-rating .item-review-product .content-comment .y-box-rating .title-comment {
+    font-size: 14px;
+  }
+}
+.box-comment-rating .item-review-product .content-comment .buy-already {
   color: #23b445;
   margin-bottom: 5px;
 }
-.box-comment-rating .item-comment .content-comment .replies-item {
-  margin-bottom: 20px;
+@media (max-width: 767px) {
+  .box-comment-rating .item-review-product .content-comment .buy-already {
+    font-size: 13px;
+  }
 }
-.box-comment-rating .item-comment .content-comment .replies-item .replies-image {
+@media (max-width: 767px) {
+  .box-comment-rating .item-review-product .content-comment .desc-comment {
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .box-comment-rating .item-review-product .replies {
+    padding-left: 10px;
+  }
+}
+.box-comment-rating .item-review-product .replies .replies-item {
+  margin-bottom: 15px;
+  display: flex;
+  width: max-content;
+}
+.box-comment-rating .item-review-product .replies .replies-item:last-child {
+  margin-bottom: 0;
+}
+.box-comment-rating .item-review-product .replies .replies-item .replies-image {
+  display: flex;
+  align-items: flex-start;
   width: 45px;
   height: 45px;
   overflow: hidden;
-  float: left;
   margin-right: 10px;
   margin-bottom: 0;
   border-radius: 50%;
 }
-.box-comment-rating .item-comment .content-comment .replies-item .replies-text {
+@media (max-width: 767px) {
+  .box-comment-rating .item-review-product .replies .replies-item .replies-image {
+    width: 30px;
+    margin-right: 5px;
+  }
+}
+.box-comment-rating .item-review-product .replies .replies-item .replies-text {
   font-size: 13px;
   color: #4f4f4f;
-  margin-left: 54px;
   line-height: 18px;
 }
-.box-comment-rating .item-comment .content-comment .replies-item .replies-text .replies-name {
-  font-size: 13px;
+.box-comment-rating .item-review-product .replies .replies-item .replies-text .replies-name {
   font-weight: 500;
+}
+@media (max-width: 767px) {
+  .box-comment-rating .item-review-product .replies .replies-item .replies-text .replies-name {
+    font-size: 12px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
