@@ -283,7 +283,9 @@ $color_green: #23b445;
 
 .box-write-review {
     max-width: 600px;
-    margin: 20px auto;
+    margin: 0 auto;
+    padding: 20 auto;
+    display: none;
 
     .title-form {
         font-size: 18px;
@@ -308,20 +310,20 @@ $color_green: #23b445;
         }
 
         .box-profile-review {
-            // display: table-cell;
             width: 150px;
             vertical-align: top;
 
             @media (max-width: 767px) {
-                display: block;
+                display: flex;
                 width: 100%;
             }
 
             .profile-comment {
                 @media (max-width: 767px) {
                     display: flex;
-                    // flex-wrap: wrap;
-                    width: max-content;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    width: 60%;
 
                     .name {
                         display: inline-block;
@@ -337,7 +339,6 @@ $color_green: #23b445;
                     @media (max-width: 767px) {
                         width: 30px;
                         height: 30px;
-                        display: inline-flex;
                     }
                 }
 
@@ -349,10 +350,10 @@ $color_green: #23b445;
                     text-align: center;
 
                     @media (max-width: 767px) {
-                        display: inline-flex;
+                        width: calc(100% - 40px);
                         margin: 0 0 0 5px;
-                        align-items: center;
                         font-size: 13px;
+                        text-align: left;
                     }
                 }
             }
@@ -365,14 +366,15 @@ $color_green: #23b445;
                 text-align: center;
 
                 @media (max-width: 767px) {
-                    text-align: left;
-                    margin-bottom: 5px;
+                    width: 40%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
                 }
             }
         }
 
         .content-comment {
-            // display: table-cell;
             vertical-align: top;
             padding-left: 0px;
 
@@ -443,14 +445,13 @@ $color_green: #23b445;
                 .replies-image {
                     display: flex;
                     align-items: flex-start;
-                    width: 44px;
-                    height: 44px;
+                    width: 40px;
                     overflow: hidden;
                     margin-bottom: 0;
                     border-radius: 50%;
 
                     @media (max-width: 767px) {
-                        width: 30px;
+                        width: 22px;
                     }
                 }
 
@@ -469,7 +470,6 @@ $color_green: #23b445;
                         font-weight: 500;
 
                         @media (max-width: 767px) {
-                            width: calc(100% - 30px);
                             font-size: 12px;
                         }
                     }

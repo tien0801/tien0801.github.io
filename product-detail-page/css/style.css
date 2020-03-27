@@ -257,7 +257,9 @@
 
 .box-write-review {
   max-width: 600px;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 20 auto;
+  display: none;
 }
 .box-write-review .title-form {
   font-size: 18px;
@@ -286,14 +288,16 @@
 }
 @media (max-width: 767px) {
   .box-comment-rating .item-review-product .box-profile-review {
-    display: block;
+    display: flex;
     width: 100%;
   }
 }
 @media (max-width: 767px) {
   .box-comment-rating .item-review-product .box-profile-review .profile-comment {
     display: flex;
-    width: max-content;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 60%;
   }
   .box-comment-rating .item-review-product .box-profile-review .profile-comment .name {
     display: inline-block;
@@ -308,7 +312,6 @@
   .box-comment-rating .item-review-product .box-profile-review .profile-comment .avatar {
     width: 30px;
     height: 30px;
-    display: inline-flex;
   }
 }
 .box-comment-rating .item-review-product .box-profile-review .profile-comment .name {
@@ -320,10 +323,10 @@
 }
 @media (max-width: 767px) {
   .box-comment-rating .item-review-product .box-profile-review .profile-comment .name {
-    display: inline-flex;
+    width: calc(100% - 40px);
     margin: 0 0 0 5px;
-    align-items: center;
     font-size: 13px;
+    text-align: left;
   }
 }
 .box-comment-rating .item-review-product .box-profile-review .days-review {
@@ -335,8 +338,10 @@
 }
 @media (max-width: 767px) {
   .box-comment-rating .item-review-product .box-profile-review .days-review {
-    text-align: left;
-    margin-bottom: 5px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
 .box-comment-rating .item-review-product .content-comment {
@@ -402,15 +407,14 @@
 .box-comment-rating .item-review-product .replies .replies-item .replies-image {
   display: flex;
   align-items: flex-start;
-  width: 44px;
-  height: 44px;
+  width: 40px;
   overflow: hidden;
   margin-bottom: 0;
   border-radius: 50%;
 }
 @media (max-width: 767px) {
   .box-comment-rating .item-review-product .replies .replies-item .replies-image {
-    width: 30px;
+    width: 22px;
   }
 }
 .box-comment-rating .item-review-product .replies .replies-item .replies-text {
@@ -431,7 +435,6 @@
 }
 @media (max-width: 767px) {
   .box-comment-rating .item-review-product .replies .replies-item .replies-text .replies-name {
-    width: calc(100% - 30px);
     font-size: 12px;
   }
 }

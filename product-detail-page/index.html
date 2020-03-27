@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="css/star-rating.min.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
+        body {
+            font-size: 15px;
+        }
         img {
             max-width: 100%;
         }
@@ -30,6 +33,7 @@
                 </div>
             </div>
             <div class="col-md-6">
+                <h1>Title product</h1>
                 <div class="y-box-rating">
                     <div class="rating without-caption rating-small">
                         <input type="text" class="kv-fa rating-loading" value="2.5" title="" readonly="readonly">
@@ -212,7 +216,7 @@
             <div class="col-lg-3 col-md-4">
                 <div class="btn-action-rating">
                     <div class="title-small">Chia sẻ nhận xét về sản phẩm</div>
-                    <a class="btn-review btn-write-review" href="javascript:;">Viết nhận xét của bạn</a>
+                    <a class="btn-review js-btn-review" href="javascript:;">Viết nhận xét của bạn</a>
                 </div>
             </div>
         </div>
@@ -311,7 +315,7 @@
                         </div>
                         <div class="title-comment">Sản phẩm tuyệt vời</div>
                     </div>
-                    <div class="buy-already"><i class="fas fa-user-shield"></i> Đã mua sản phẩm này tại ABCStore</div>
+                    <!-- <div class="buy-already"><i class="fas fa-user-shield"></i> Đã mua sản phẩm này tại ABCStore</div> -->
                     <div class="desc-comment y-text-editor">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                         <br>Ex expedita autem non inventore voluptatem minus esse, amet voluptate cupiditate eum sint unde, assumenda velit est vel, ipsam praesentium </p>
@@ -401,7 +405,7 @@
     </script>
     <script src="js/star-rating.min.js"></script>
     <script>
-        // rating star
+        // JS Rating Star
         $('.kv-fa').on('change', function() {
             console.log('Rating selected: ' + $(this).val());
         });
@@ -431,6 +435,10 @@
                 scrollTop: $(".box-product-rating").offset().top
             }, 800);
         });
+
+        $('.js-btn-review').click(function() {
+            $('.box-write-review').slideToggle();
+        })
     </script>
 </body>
 
