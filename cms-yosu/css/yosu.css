@@ -1278,6 +1278,7 @@ a:hover, button:hover {
 }
 .y-sildebar-account ul li a {
   font-size: 14px;
+  color: #000;
 }
 .y-sildebar-account .y-title-slidebar {
   font-weight: 600;
@@ -1617,12 +1618,6 @@ a:hover, button:hover {
     border: 1px solid #00c4cc;
 }
 
-.hover-color {
-  color: #000;
-}
-.hover-color:hover {
-  color: #00c4cc;
-}
 .y-title-default {
     font-size: 20px;
     margin-top: 0;
@@ -1633,7 +1628,7 @@ a:hover, button:hover {
   background-color: #00c4cc;
   color: #fff;
 }
-.y-sildebar-account ul li a.active {
+.y-sildebar-account ul li.active a {
   color: #00c4cc;
 }
 .y-pagination-review li a.active, .y-pagination-review li a:hover {
