@@ -592,6 +592,7 @@ a:hover, button:hover {
 .y-review-content .y-name-prod-review {
   font-weight: 600;
   font-size: 16px;
+  margin-bottom: 10px;
 }
 .y-review-content .y-howto-review {
   padding: 10px 0;
