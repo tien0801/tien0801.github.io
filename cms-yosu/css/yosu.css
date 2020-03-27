@@ -685,6 +685,9 @@ a:hover, button:hover {
   }
 }
 @media (max-width: 767px) {
+  .yosu-account-page .y-title-account {
+    margin-bottom: 20px; 
+  }
   .y-item-cart .y-img-prod {
     margin-right: 10px;
   }
@@ -824,7 +827,7 @@ a:hover, button:hover {
 
 @media (max-width: 767px) {
   .yosu-page {
-    padding-top: 40px;
+    padding-top: 30px;
     padding-bottom: 40px;
   }
   .y-title-default {
