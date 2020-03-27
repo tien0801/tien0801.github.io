@@ -5,16 +5,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 	<title>CMS Yosu</title>
-	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+	<!-- <link rel="stylesheet" href="../css/bootstrap.css"> -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;amp;subset=vietnamese" media="all">
-	<link rel="stylesheet" href="css/yosu.css">
-<link rel="stylesheet" href="css/y-bootstrap-3.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/yosu.css">
 </head>
 <body>
 	<div class="yosu-page yosu-account-page y-bg-gray">
         <div class="container">
 			<div class="row">
-	        	<div class="yosu-col-md-3 yosu-col-sm-12 yosu-col-xs-12">
+	        	<div class="col-md-3 col-sm-12 col-xs-12">
 	        		<p class="y-title-account">Xin chào, Vũ Bá Tiến</p>
 	        		<div class="y-sildebar-account">
 	        			<div class="y-sildebar-box active">
@@ -44,9 +44,13 @@
 		        		</div>
 	        		</div>
 	        	</div>
-	        	<div class="yosu-col-md-9 yosu-col-sm-12 yosu-col-xs-12">
+	        	<div class="col-md-9 col-sm-12 col-xs-12">
 	            	<div class="row">
-		                <h5 class="y-title-default yosu-color yosu-col-sm-12 yosu-col-xs-12">Chọn "ĐỊA CHỈ THANH TOÁN" mặc định</h5>
+		                <h5 class="y-title-default yosu-color col-sm-4 col-xs-12">Sổ địa chỉ</h5>
+		                <div class="col-sm-8 col-xs-12 y-text-right-d y-f14 m-b10">
+		                	<a class="yosu-color y-address-default" href="account-address-default.html">Địa chỉ nhận hàng mặc định</a> | 
+		                	<a class="yosu-color y-address-default" href="account-address-default-2.html">Địa chỉ thanh toán mặc định</a>
+		                </div>
 		            </div>
 		            <div class="y-dashboard-content">
 			            <div class="m-no-padding y-bg-white m-b30 p-t20">
@@ -58,7 +62,7 @@
 					                      <th>Địa chỉ</th>
 					                      <th>Điện thoại</th>
 					                      <th>Địa chỉ mặc định</th>
-					                      <th>Chọn</th>
+					                      <th></th>
 					                    </tr>
 				                    </thead>
 				                    <tbody>
@@ -69,7 +73,7 @@
 					                        <th>0345678999</th>
 					                        <th>Địa chỉ thanh toán</th>
 					                        <th>
-					                          <input type="radio" value="1" name="r-check" checked>
+					                          <a class="yosu-color" href="account-address-edit.html">Chỉnh sửa</a>
 					                        </th>
 				                        </tr>
 				                    	<tr>
@@ -79,7 +83,7 @@
 					                        <th>0345678999</th>
 					                        <th></th>
 					                        <th>
-					                          <input type="radio" value="2" name="r-check">
+					                          <a class="yosu-color" href="account-address-edit.html">Chỉnh sửa</a>
 					                        </th>
 				                        </tr>
 				                    	<tr>
@@ -89,7 +93,7 @@
 					                        <th>0345678999</th>
 					                        <th>Địa chỉ nhận hàng</th>
 					                        <th>
-					                          <input type="radio" value="3" name="r-check">
+					                          <a class="yosu-color" href="account-address-edit.html">Chỉnh sửa</a>
 					                        </th>
 				                        </tr>
 
@@ -98,7 +102,7 @@
 
 				            </div>
 				            <div class="y-clearfix">
-					            <div class="yosu-col-sm-5 yosu-col-xs-12 m-b30 p-l20 m-no-padding">
+					            <div class="col-sm-5 col-xs-12 m-b30 p-l20 m-no-padding">
 					              <a href="account-address-add.html" class="y-btn-main y-d-block y-full-width">+ THÊM ĐỊA CHỈ MỚI</a>
 					            </div>
 				            </div>
@@ -113,7 +117,7 @@
 	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
 	<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script> -->
 	<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script> -->
-	<!-- <script src="js/yosu.js"></script> -->
+	<!-- <script src="../js/yosu.js"></script> -->
 
 </body>
 </html>

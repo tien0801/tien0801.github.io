@@ -5,18 +5,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 	<title>CMS Yosu</title>
-	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+	<!-- <link rel="stylesheet" href="../css/bootstrap.css"> -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;amp;subset=vietnamese" media="all">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/star-rating.min.css">
-	<link rel="stylesheet" href="css/yosu.css">
-<link rel="stylesheet" href="css/y-bootstrap-3.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/star-rating.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/yosu.css">
 </head>
 <body>
 	<div class="yosu-page yosu-account-page y-bg-gray">
         <div class="container">
 			<div class="row">
-	        	<div class="yosu-col-md-3 yosu-col-sm-12 yosu-col-xs-12">
+	        	<div class="col-md-3 col-sm-12 col-xs-12">
 	        		<p class="y-title-account">Xin chào, Vũ Bá Tiến</p>
 	        		<div class="y-sildebar-account">
         				<h5 class="y-title-slidebar">QUẢN LÍ TÀI KHOẢN</h5>
@@ -40,9 +40,9 @@
 	        			</ul>
 	        		</div>
 	        	</div>
-	        	<div class="yosu-col-md-9 yosu-col-sm-12 yosu-col-xs-12">
+	        	<div class="col-md-9 col-sm-12 col-xs-12">
 		            	<div class="row">
-			                <h5 class="y-title-default yosu-color yosu-col-sm-12 yosu-col-xs-12">Viết đánh giá sản phẩm</h5>
+			                <h5 class="y-title-default yosu-color col-sm-12 col-xs-12">Viết đánh giá sản phẩm</h5>
 			            </div>
 		            <div class="y-review-content">
 			            <div class="p-20 m-no-padding y-bg-white">
@@ -50,16 +50,16 @@
 			            	<p class="review--content__title">Nhận xét đánh giá sản phẩm đã mua</p>
 			            	
 			                <div class="row y-review-prod m-t10">
-								<div class="yosu-col-sm-2 yosu-col-xs-12">
+								<div class="col-sm-2 col-xs-12">
 									<div class= box-img-flex y-img-review m-b10">
-										<img src="images/product/1.jpg" alt="">
+										<img src="../images/product/1.jpg" alt="">
 									</div>
 								</div>
-								<div class="yosu-col-lg-7 yosu-col-md-9 yosu-col-sm-10 yosu-col-xs-12 product__name">
+								<div class="col-lg-7 col-md-9 col-sm-10 col-xs-12 product__name">
 									<p class="y-name-prod-review">Tellus eget condimentum rhoncus tellus eget </p>
 									<div class="y-box-rating y-big-star">
 										<div class="rating without-caption">
-											<input id="input-2" name="input-2" class="kv-fa rating rating-loading" data-min="0" data-max="5" data-step="0.5">
+											<input id="input-2" name="input-2" class="kv-fa rating rating-loading" value="4" data-min="0" data-max="5" data-step="0.5">
 										</div>
 									</div>
 									<div class="box-review">
@@ -67,7 +67,7 @@
 											<p class="">Đánh giá chi tiết (<a class="yosu-color y-howto-review" href="#">Cách viết một nhận xét tốt</a>)</p>
 										</div>
 										<div class="m-t10">
-											<textarea class="y-text-review y-full-width y-d-block m-b15 " name="" cols="20" rows="5"></textarea>
+											<textarea class="y-text-review y-full-width y-d-block m-b15 " name="" cols="20" rows="5">Sản phẩm tốt</textarea>
 										</div>
 										<div class="y-btn-submit-review">
 											<a href="javascript:;" class="y-btn-main y-full-width y-d-block"> <span>Gửi</span></a>
@@ -86,7 +86,7 @@
 
 	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-	<script src="js/star-rating.min.js"></script>
+	<script src="../js/star-rating.min.js"></script>
 	<script>
 		// rating star
 		$('.kv-fa').on('change', function () {

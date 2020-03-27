@@ -5,24 +5,24 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 	<title>CMS Yosu</title>
-	<!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+	<!-- <link rel="stylesheet" href="../css/bootstrap.css"> -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;amp;subset=vietnamese" media="all">
-	<link rel="stylesheet" href="css/yosu.css">
-<link rel="stylesheet" href="css/y-bootstrap-3.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="../css/yosu.css">
 </head>
 <body>
 	<div class="yosu-page yosu-account-page y-bg-gray">
         <div class="container">
 			<div class="row">
-	        	<div class="yosu-col-md-3 yosu-col-sm-12 yosu-col-xs-12">
+	        	<div class="col-md-3 col-sm-12 col-xs-12">
 	        		<p class="y-title-account">Xin chào, Vũ Bá Tiến</p>
 	        		<div class="y-sildebar-account">
         				<h5 class="y-title-slidebar">QUẢN LÍ TÀI KHOẢN</h5>
 	        			<ul class="y-list-ul">
 	        				<li><a href="account-dashboard.html" >Quản lý chung</a></li>
 	        				<li><a href="account.html" >Thông tin cá nhân</a></li>
-	        				<li><a href="account-address.html" >Quản lý sổ địa chỉ</a></li>
-	        				<li class="active"><a href="account-change-password.html">Đổi mật khẩu</a></li>
+	        				<li><a href="account-address.html" class="active">Quản lý sổ địa chỉ</a></li>
+	        				<li><a href="account-change-password.html" >Đổi mật khẩu</a></li>
 	        			</ul>
         				<h5 class="y-title-slidebar">ĐƠN HÀNG CỦA TÔI</h5>
 	        			<ul class="y-list-ul">
@@ -38,31 +38,55 @@
 	        			</ul>
 	        		</div>
 	        	</div>
-	        	<div class="yosu-col-md-9 yosu-col-sm-12 yosu-col-xs-12">
+	        	<div class="col-md-9 col-sm-12 col-xs-12">
 	            	<div class="row">
-		                <h5 class="y-title-default yosu-color yosu-col-sm-12 yosu-col-xs-12">Thay đổi mật khẩu</h5>
+		                <h5 class="y-title-default yosu-color col-sm-12 col-xs-12">Chỉnh sửa địa chỉ</h5>
 		            </div>
 		            <div class="y-login-content">
 			            <div class="p-30 m-no-padding y-bg-white">
 			                <form action="" class="y-form-style-1">
 				                <div class="row">
-				                    <div class="yosu-col-sm-6 yosu-col-xs-12">
+				                    <div class="col-sm-6 col-xs-12">
 					                    <div class="y-input">
-					                      <label>Mật khẩu hiện tại</label>
-					                    	<input type="password" name="email" placeholder="">
+					                      <label>Họ tên</label>
+					                    	<input type="text" name="email" placeholder="" value="Vũ Bá Tiến">
 					                    </div>
 					                    <div class="y-input">
-					                      <label>Nhập mật khẩu mới</label>
-					                    	<input type="password" name="email" placeholder="">
+					                      <label>Số điện thoại</label>
+					                    	<input type="text" name="email" placeholder="" value="0345678999">
 					                    </div>
 					                    <div class="y-input">
-					                      <label>Nhập lại mật khẩu mới</label>
-					                    	<input type="password" name="email" placeholder="">
+					                      <label>Địa chỉ nhận hàng</label>
+					                    	<input type="text" name="email" placeholder="" value="78/1a Phan Đình Phùng">
+					                    </div>
+				                    </div>
+				                    <div class="col-sm-6 col-xs-12">
+					                    <div class="y-input">
+					                      <label>Phường/Xã</label>
+					                    	<input type="text" name="email" placeholder="" value="Tân Thành">
+					                    </div>
+					                    <div class="y-input">
+					                    	<label>Tỉnh/Thành phố</label>
+					                    	<select name="" id="">
+						                      	<option value="" disabled="">Chọn Tỉnh/Thành phố</option>
+						                      	<option value="" selected>TP HCM</option>
+						                      	<option value="">Hà Nội</option>
+						                      	<option value="">Đà Nẵng</option>
+						                      </select>
+					                    </div>
+					                    <div class="y-input">
+					                    	<label>Quận/Huyện</label>
+					                    	<select name="" id="">
+						                      	<option value="" disabled="">Chọn Quận/Huyện</option>
+						                      	<option value="">Tân Bình</option>
+						                      	<option value="" selected>Tân Phú</option>
+						                      	<option value="">Bình Tân</option>
+						                      </select>
 					                    </div>
 				                    </div>
 				                </div>
 				                <div class="row">
-				                	<div class="yosu-col-sm-6 yosu-col-xs-12">
+				                	<div class="col-sm-6 col-xs-12">
 				                		<div class="y-input">
 						                    <button type="submit" class="login_button y-btn-main y-full-width"><span>Lưu</span></button>
 				                        </div>

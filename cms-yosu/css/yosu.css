@@ -17,7 +17,6 @@
 
 /* General */
 .yosu-page {
-  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -334,7 +333,6 @@ a:hover, button:hover {
 
 /* 5.Checkout */
 .y-header-checkout {
-  font-family: 'Open Sans', sans-serif;
   border-bottom: 1px solid #ddd;
   padding: 20px 0px;
   background-color: #fff;
