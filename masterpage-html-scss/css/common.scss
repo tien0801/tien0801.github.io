@@ -1,0 +1,126 @@
+// Fix box img Absolut
+.y-box-img {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.y-box-img .link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.y-box-img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    width: auto !important;
+    height: auto !important;
+}
+
+.y-box-zoom {
+    transition: all 0.6s;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.y-box-zoom:hover {
+    transform: scale(1.05);
+}
+
+// Fix box img Flex
+.box-img-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.box-img-flex.y-img-left {
+    justify-content: flex-start;
+}
+
+.box-img-flex img {
+    width: auto !important;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+// Text editor
+
+.y-text-editor * {
+    max-width: 100%;
+}
+
+.y-text-editor blockquote {
+    margin: 0 0 1.25em;
+    padding: 0 1.25em 0 1.875em;
+    border-left: 2px solid #111;
+    font-style: italic;
+}
+
+.y-text-editor p {
+    margin-bottom: 10px;
+}
+
+.y-text-editor img {
+    max-width: 100%;
+    height: auto !important;
+    display: initial;
+}
+
+.y-text-editor iframe {
+    max-width: 100%;
+}
+
+.y-text-editor table {
+    width: 100%;
+}
+
+.y-text-editor i {
+    font-style: italic;
+}
+
+.y-text-editor u {
+    text-decoration: underline;
+}
+
+.y-text-editor a {
+    text-decoration: underline;
+}
+
+.y-text-editor b,
+.y-text-editor strong {
+    font-weight: bold;
+}
+
+.y-text-editor ul {
+    padding-left: 30px;
+    list-style-type: disc;
+}
+
+.y-text-editor ul li {
+    display: list-item;
+}
+
+.y-text-editor ol {
+    padding-left: 30px;
+    list-style-type: decimal;
+}
+
+.y-text-editor ol li {
+    display: list-item;
+}
