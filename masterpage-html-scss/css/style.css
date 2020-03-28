@@ -1,7 +1,9 @@
 body {
   font-size: 15px;
   font-family: 'iCiel VAG Rounded Next', sans-serif;
-  color: #b7b7b7; }
+  color: #b7b7b7;
+  max-width: 1920px;
+  margin: 0 auto; }
 
 input:focus,
 textarea:focus,

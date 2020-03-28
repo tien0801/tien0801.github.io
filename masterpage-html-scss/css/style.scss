@@ -1,13 +1,16 @@
 // CSS general
 $color: #f27e7f;
 $color_blue: #00a2e0;
-$color_white: #fff;
 $color_gray : #b7b7b7;
+$color_green: #00b339;
+$color_white: #fff;
 
 body {
     font-size: 15px;
     font-family: 'iCiel VAG Rounded Next', sans-serif;
     color: $color_gray;
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 input:focus,
