@@ -1,5 +1,5 @@
 
-/* CSS menu mobile */
+/* Menu mobile */
 .y-mobile-menu {
     width: 85%;
     position: fixed;
@@ -29,7 +29,7 @@
     color: rgba(0, 0, 0, .5);
 }
 
-.m-menu__title h5 {
+.m-menu__title .title {
     font-size: 14px;
     margin: 0;
     text-align: center;
@@ -135,7 +135,7 @@
     z-index: 888;
 }
 
-/* Menu mobile */
+/* btn Menu mobile */
 .y-header-mobile {
     position: fixed;
     top: 0;
