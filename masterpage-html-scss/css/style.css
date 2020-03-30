@@ -327,4 +327,10 @@ ul {
   background-repeat: no-repeat;
   background-position: bottom left; }
 
+.list-social li {
+  display: inline-block;
+  margin-right: 5px; }
+  .list-social li a i {
+    font-size: 20px; }
+
 /*# sourceMappingURL=style.css.map */
