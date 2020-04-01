@@ -46,7 +46,7 @@
                             <br />
                             Xin cám ơn!
                        </div>
-                        <div class="text-contact"> Liên hệ tư vấn <a href="tel:{{ settings.hotline}}" class="btn btn-default">{{ settings.hotline}}</a>
+                        <div class="text-contact"> Liên hệ tư vấn <a href="tel:{{ settings.hotline ? settings.hotline : 0898866069}}" class="btn btn-default">{{ settings.hotline ? settings.hotline : '089-886-6069'}}</a>
                         </div>
                     </div>
                     <!--welcome-message end-->
