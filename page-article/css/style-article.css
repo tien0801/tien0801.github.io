@@ -56,6 +56,7 @@
 .author-article {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 .author-article .img-author {
   width: 90px;
