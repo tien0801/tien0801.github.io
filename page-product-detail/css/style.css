@@ -109,6 +109,8 @@
 /* Rating section */
 .y-box-rating {
   margin-bottom: 5px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .rating.without-caption .clear-rating, .rating.without-caption .caption {
@@ -144,19 +146,26 @@
   text-align: center;
 }
 
+.y-box-rating .rating .star {
+  margin: 0 2px;
+}
+
 .rating .rating-container .star i {
   font-size: 20px;
   line-height: 1.3;
 }
 
-.y-box-rating .rating.rating-small i {
+.y-box-rating.rating-small .star i {
   font-size: 15px;
 }
 
 .y-box-rating .viewmore-rating {
-  display: inline-block;
-  vertical-align: bottom;
   font-size: 13px;
+  margin-left: 4px;
+}
+
+.y-box-rating.rating-small .viewmore-rating {
+  font-size: 12px;
 }
 
 .box-product-rating {
