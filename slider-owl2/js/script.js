@@ -6,6 +6,7 @@ $(document).ready(function() {
             // autoplay: true,
             // autoplayTimeout: 4000,
             // nestedItemSelector: 'item-gall',
+            lazyLoad: true,
             margin: 0,
             responsiveClass:true,
             items: 3,

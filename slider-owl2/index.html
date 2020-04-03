@@ -43,6 +43,7 @@ if($('.js-home-slider').length >0) {
         // autoplay: true,
         // autoplayTimeout: 4000,
         // nestedItemSelector: 'item-gall',
+        lazyLoad: true,
         margin: 0,
         responsiveClass:true,
         items: 3,
@@ -75,7 +76,6 @@ if($('.js-home-slider').length >0) {
                 <div class="item">
                     <a class="item-slider" href="#">
                        <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1" frameborder="0" allowfullscreen>
-                       <!-- <a class="owl-video" href="https://vimeo.com/23924346"></a> -->
                     </a>
                 </div>
                 <div class="item">
@@ -85,22 +85,22 @@ if($('.js-home-slider').length >0) {
                 </div>
                 <div class="item">
                     <a class="item-slider" href="#">
-                       <img src="https://dummyimage.com/420x800/bcbcbc" alt="">
+                       <img class="owl-lazy" data-src="https://dummyimage.com/420x800/bcbcbc" alt="">
                     </a>
                 </div>
                 <div class="item">
                     <a class="item-slider" href="#">
-                       <img src="https://dummyimage.com/420x800/555/fff" alt="">
+                       <img class="owl-lazy" data-src="https://dummyimage.com/420x800/555/fff" alt="">
                     </a>
                 </div>
                 <div class="item">
                     <a class="item-slider" href="#">
-                       <img src="https://dummyimage.com/420x800/bcbcbc" alt="">
+                       <img class="owl-lazy" data-src="https://dummyimage.com/420x800/bcbcbc" alt="">
                     </a>
                 </div>
                 <div class="item">
                     <a class="item-slider" href="#">
-                       <img src="https://dummyimage.com/420x800/555/fff" alt="">
+                       <img class="owl-lazy" data-src="https://dummyimage.com/420x800/555/fff" alt="">
                     </a>
                 </div>
             </div>
