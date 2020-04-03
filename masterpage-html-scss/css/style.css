@@ -14,6 +14,16 @@ button:focus {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgba(242, 126, 127, 0.6) !important;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgba(242, 126, 127, 0.6) !important; }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0px;
+  background-image: url("../images/icons/select-arrow.svg");
+  background-position: calc(100% - 8px) 50%;
+  background-repeat: no-repeat;
+  background-size: 6px;
+  padding: 5px 18px 5px 10px; }
+
 a:hover {
   color: #f27e7f;
   text-decoration: none; }
@@ -26,21 +36,6 @@ ul {
   list-style: none;
   padding-left: 0;
   margin-bottom: 0; }
-
-.clearfix {
-  display: block;
-  content: "";
-  clear: both; }
-
-.y-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -webkit-border-radius: 0px;
-  background-image: url("../images/icons/select-arrow.svg");
-  background-position: calc(100% - 10px) 50%;
-  background-repeat: no-repeat;
-  background-size: 6px;
-  padding: 5px 18px 5px 10px; }
 
 .form-control:disabled,
 .form-control[readonly] {
