@@ -281,10 +281,16 @@ $color_green: #23b445;
     width: 100%;
     text-align: center;
     vertical-align: middle;
+    padding: 0 20px;
 
     &:hover {
         text-decoration: none;
         color: #000;
+    }
+
+    &.btn-white {
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,.1);
     }
 }
 
@@ -425,13 +431,29 @@ $color_green: #23b445;
             }
 
             .desc-comment {
+                p {
+                    margin-bottom: 10px;
+                }
                 @media (max-width: 767px) {
                     font-size: 12px;
+                }
+            }
+
+            .quick-reply {
+                display: none;
+                padding: 10px 0;
+                
+                .btn-review {
+                    width: max-content;
+                    height: 30px;
+                    line-height: 30px;
                 }
             }
         }
 
         .replies {
+            margin-top: 10px;
+
             @media (max-width: 767px) {
                 padding-left: 10px;
             }

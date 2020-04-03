@@ -258,10 +258,15 @@
   width: 100%;
   text-align: center;
   vertical-align: middle;
+  padding: 0 20px;
 }
 .btn-review:hover {
   text-decoration: none;
   color: #000;
+}
+.btn-review.btn-white {
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .box-write-review {
@@ -395,10 +400,25 @@
     font-size: 13px;
   }
 }
+.box-comment-rating .item-review-product .content-comment .desc-comment p {
+  margin-bottom: 10px;
+}
 @media (max-width: 767px) {
   .box-comment-rating .item-review-product .content-comment .desc-comment {
     font-size: 12px;
   }
+}
+.box-comment-rating .item-review-product .content-comment .quick-reply {
+  display: none;
+  padding: 10px 0;
+}
+.box-comment-rating .item-review-product .content-comment .quick-reply .btn-review {
+  width: max-content;
+  height: 30px;
+  line-height: 30px;
+}
+.box-comment-rating .item-review-product .replies {
+  margin-top: 10px;
 }
 @media (max-width: 767px) {
   .box-comment-rating .item-review-product .replies {
