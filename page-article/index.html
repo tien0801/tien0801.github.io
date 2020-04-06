@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-article.css">
     <style>
-        img {
-            max-width: 100%;
-        }
-        
+    img {
+        max-width: 100%;
+    }
+
     .y-box-img {
         position: relative;
         display: block;
@@ -118,7 +118,7 @@
     <div class="container">
         <h1>Post page</h1>
         <div class="row">
-            <div class="col-lg-9 col-md-8 y-box-article">
+            <div class="col-md-8 y-box-article">
                 <div class="top-article">
                     <h1 class="title-article">Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
                     <!-- <div class="date-article"><i class="fa fa-clock-o" aria-hidden="true"></i> Ngày 17/12/2019</div> -->
@@ -137,112 +137,146 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim facere suscipit, vitae dolorem quo fuga distinctio alias ullam quas natus officiis, aperiam facilis commodi perspiciatis magni quis voluptatem corrupti ea!</p>
                     </div>
                     <div class="author-article">
-                        <div class="img-author">
-                            <img src="https://dummyimage.com/90x90/bcbcbc/000000" alt="">
+                        <div class="author-img">
+                            <img src="https://dummyimage.com/100x100/bcbcbc/000000" alt="">
                         </div>
-                        <div class="info-author">
-                            <div class="name-author">Vũ Bá Tiến - Yosu</div>
+                        <div class="author-info">
+                            <div class="author-name">Vũ Bá Tiến - Yosu</div>
                             <div class="desc-author">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores eveniet, magnam itaque beatae sint consequatur impedit a inventore et, natus voluptatem qui, laborum dignissimos! Deleniti veritatis, labore esse sunt doloremque!</p>
                             </div>
                         </div>
                     </div>
+                    <div class="author-article">
+                        <div class="author-img">
+                            <span itemscope itemprop="image" alt="Photo of Vincent Do">
+                                <img src="https://dummyimage.com/100x100/bcbcbc/000000" alt="Photo of Vincent Do">
+                            </span>
+                        </div>
+                        <div class="author-info" itemscope itemtype="http://schema.org/Person" itemid="#author">
+                            <p class="author-name">
+                                <span itemprop="name">Vincent Do </span>
+                            </p>
+                            <div class="desc-author">
+                                <p>Tôi là Vincent Do, hiện đang là CEO, Co-Founder của GTV SEO. Tôi đã từng gặp khá nhiều khó khăn trong quá trình tìm hiểu SEO &amp; Inbound Marketing. Với kinh nghiệm thực chiến nhiều dự án ở các lĩnh vực khác nhau và niềm đam mê S.E.O &amp; Inbound Marketing, tôi hy vọng những kiến thức miễn phí tôi chia sẻ có thể giúp mọi người đạt nhiều thành công hơn trong quá trình triển khai SEO.</p>
+                            </div>
+                            <a class="btn-main" href="https://gtvseo.com/vincent-do/" itemprop="url">
+                                Xem thêm bài viết của tác giả
+                            </a>
+                            <div class="social-share">
+                                <a href="https://www.facebook.com/gtvseo" target="_blank">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                                <a href="https://twitter.com/gtvseo" target="_blank">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a>
+                                <a href="https://linkedin.com/gtvseo" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://instagram.com/gtvseo" target="_blank">
+                                    <i class="fab fa-instagram-square"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="list-blog-related">
-                    <div class="title-blog-related">Tin liên quan</div>
+            </div>
+            <div class="list-blog-related col-md-4">
+                <div class="title-blog-related">Tin liên quan</div>
+                <ul>
+                    <li>
+                        <a href="post.html"><i class="fa fa-angle-double-right"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li>
+                        <a href="post.html"><i class="fa fa-angle-double-right"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li>
+                        <a href="post.html"><i class="fa fa-angle-double-right"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li>
+                        <a href="post.html"><i class="fa fa-angle-double-right"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                    <li>
+                        <a href="post.html"><i class="fa fa-angle-double-right"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 y-sidebar-blog">
+            <div class="box-slidebar">
+                <div class="title-sidebar-blog">Bài viết nổi bật</div>
+                <div class="item-blog-inline">
+                    <div class="blog-img">
+                        <a href="post.html" class="y-box-img">
+                            <img src="https://dummyimage.com/546x328/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-info">
+                        <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                        <div class="blog-date">Ngày: 18/12/2019</div>
+                    </div>
+                </div>
+                <div class="item-blog-inline">
+                    <div class="blog-img">
+                        <a href="post.html" class="y-box-img">
+                            <img src="https://dummyimage.com/546x328/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-info">
+                        <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                        <div class="blog-date">Ngày: 18/12/2019</div>
+                    </div>
+                </div>
+                <div class="item-blog-inline">
+                    <div class="blog-img">
+                        <a href="post.html" class="y-box-img">
+                            <img src="https://dummyimage.com/546x328/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-info">
+                        <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                        <div class="blog-date">Ngày: 18/12/2019</div>
+                    </div>
+                </div>
+                <div class="item-blog-inline">
+                    <div class="blog-img">
+                        <a href="post.html" class="y-box-img">
+                            <img src="https://dummyimage.com/546x328/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-info">
+                        <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                        <div class="blog-date">Ngày: 18/12/2019</div>
+                    </div>
+                </div>
+                <div class="item-blog-inline">
+                    <div class="blog-img">
+                        <a href="post.html" class="y-box-img">
+                            <img src="https://dummyimage.com/546x328/bcbcbc/000000" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-info">
+                        <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
+                        <div class="blog-date">Ngày: 18/12/2019</div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-slidebar">
+                <div class="title-sidebar-blog">Nhóm tin tức</div>
+                <div class="box-cate-blog">
                     <ul>
-                        <li>
-                            <a href="post.html"><i class="fa fa-angle-double-right"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        </li>
-                        <li>
-                            <a href="post.html"><i class="fa fa-angle-double-right"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        </li>
-                        <li>
-                            <a href="post.html"><i class="fa fa-angle-double-right"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        </li>
-                        <li>
-                            <a href="post.html"><i class="fa fa-angle-double-right"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        </li>
-                        <li>
-                            <a href="post.html"><i class="fa fa-angle-double-right"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a>
-                        </li>
+                        <li class="active"><a href="blog.html"><i class="fa fa-angle-double-right"></i> Tin khuyến mãi</a></li>
+                        <li><a href="blog.html"><i class="fa fa-angle-double-right"></i> Tin công ty</a></li>
+                        <li><a href="blog.html"><i class="fa fa-angle-double-right"></i> Hệ thống của hàng</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 y-sidebar-blog">
-                <div class="box-slidebar">
-                    <div class="title-sidebar-blog">Bài viết nổi bật</div>
-                    <div class="item-blog-inline">
-                        <div class="blog-img">
-                            <a href="post.html" class="y-box-img">
-                                <img src="https://dummyimage.com/546x328/bcbcbc/000000" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-info">
-                            <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                            <div class="blog-date">Ngày: 18/12/2019</div>
-                        </div>
-                    </div>
-                    <div class="item-blog-inline">
-                        <div class="blog-img">
-                            <a href="post.html" class="y-box-img">
-                                <img src="https://dummyimage.com/546x328/bcbcbc/000000" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-info">
-                            <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                            <div class="blog-date">Ngày: 18/12/2019</div>
-                        </div>
-                    </div>
-                    <div class="item-blog-inline">
-                        <div class="blog-img">
-                            <a href="post.html" class="y-box-img">
-                                <img src="https://dummyimage.com/546x328/bcbcbc/000000" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-info">
-                            <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                            <div class="blog-date">Ngày: 18/12/2019</div>
-                        </div>
-                    </div>
-                    <div class="item-blog-inline">
-                        <div class="blog-img">
-                            <a href="post.html" class="y-box-img">
-                                <img src="https://dummyimage.com/546x328/bcbcbc/000000" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-info">
-                            <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                            <div class="blog-date">Ngày: 18/12/2019</div>
-                        </div>
-                    </div>
-                    <div class="item-blog-inline">
-                        <div class="blog-img">
-                            <a href="post.html" class="y-box-img">
-                                <img src="https://dummyimage.com/546x328/bcbcbc/000000" alt="">
-                            </a>
-                        </div>
-                        <div class="blog-info">
-                            <a href="post.html" class="blog-name">Lorem ipsum dolor sit amet, consectetur adipisicing elit</a>
-                            <div class="blog-date">Ngày: 18/12/2019</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box-slidebar">
-                    <div class="title-sidebar-blog">Nhóm tin tức</div>
-                    <div class="box-cate-blog">
-                        <ul>
-                            <li class="active"><a href="blog.html"><i class="fa fa-angle-double-right"></i> Tin khuyến mãi</a></li>
-                            <li><a href="blog.html"><i class="fa fa-angle-double-right"></i> Tin công ty</a></li>
-                            <li><a href="blog.html"><i class="fa fa-angle-double-right"></i> Hệ thống của hàng</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="banner-poster">
-                    <img src="https://dummyimage.com/360x400/bcbcbc/000000" alt="">
-                </div>
+            <div class="banner-poster">
+                <img src="https://dummyimage.com/360x400/bcbcbc/000000" alt="">
             </div>
         </div>
+    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
