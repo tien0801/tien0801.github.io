@@ -1,31 +1,41 @@
 .list-dropdow {
-	.item-dropdow {
-		.title-dropdow {
-			display: block;
-			position: relative;
-			padding: 10px;
+    .item-dropdow {
+        padding: 12px 0;
+        a {
+            display: block;
+            position: relative;
+        }
+        .title-dropdow {
+            position: relative;
 
-			.icon {
-				position: absolute;
-				top: 50%;
-				right: 10px;
-				transform: translateY(-50%);
-				width: 36px;
-				height: 36px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
-		}
+            .icon {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                z-index: 2;
+            }
+        }
 
-		.sub-dropdow {
-			display: none;
-		}
+        .sub-dropdow {
+            display: none;
+            padding-left: 15px;
 
-		&.active {
-			.sub-dropdow {
-				display: block;
-			}
-		}
-	}
+            a {
+                padding: 5px 0;
+            }
+        }
+
+        &.show {
+            .sub-dropdow {
+                display: block;
+            }
+        }
+    }
 }
