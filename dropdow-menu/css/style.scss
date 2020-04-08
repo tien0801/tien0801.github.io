@@ -1,0 +1,31 @@
+.list-dropdow {
+	.item-dropdow {
+		.title-dropdow {
+			display: block;
+			position: relative;
+			padding: 10px;
+
+			.icon {
+				position: absolute;
+				top: 50%;
+				right: 10px;
+				transform: translateY(-50%);
+				width: 36px;
+				height: 36px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+
+		.sub-dropdow {
+			display: none;
+		}
+
+		&.active {
+			.sub-dropdow {
+				display: block;
+			}
+		}
+	}
+}
