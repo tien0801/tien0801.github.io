@@ -1,40 +1,71 @@
+$color: #F1572A;
+
 .list-dropdow {
     .item-dropdow {
         padding: 12px 0;
-        a {
+        .link {
             display: block;
             position: relative;
         }
         .title-dropdow {
             position: relative;
 
-            .icon {
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                width: 36px;
-                height: 36px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 16px;
-                z-index: 2;
+            .link {
+                font-weight: bold;
             }
+        }
+        .icon {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            z-index: 2;
+        }
+        .icon-plus {
+            display: flex;
+        }
+        .icon-minus {
+            display: none;
         }
 
         .sub-dropdow {
             display: none;
             padding-left: 15px;
 
-            a {
+            .link {
                 padding: 5px 0;
+            }
+
+            .active {
+                .link {
+                    color: $color;
+                }
             }
         }
 
+        &.active {
+            .title-dropdow {
+                .link {
+                    color: $color;
+                }
+            }
+        }
         &.show {
             .sub-dropdow {
                 display: block;
+            }
+
+            .icon-plus {
+                display: none;
+            }
+            .icon-minus {
+                display: flex;
             }
         }
     }
