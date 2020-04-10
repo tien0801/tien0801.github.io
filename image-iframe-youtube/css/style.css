@@ -1,0 +1,26 @@
+.iframe-video iframe {
+    width: 100%;
+    height: 320px;
+}
+
+.iframe-video .overlay-img:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(../images/icons/btn-play.svg);
+    background-repeat: no-repeat;
+    background-size: 60px;
+    background-position: center center;
+    z-index: 3;
+}
+
+.iframe-video .overlay-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+}
