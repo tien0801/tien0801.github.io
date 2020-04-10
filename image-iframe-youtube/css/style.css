@@ -1,6 +1,9 @@
+.iframe-video {
+    position: relative;
+}
 .iframe-video iframe {
     width: 100%;
-    height: 320px;
+    height: 303px;
 }
 
 .iframe-video .overlay-img:after {
