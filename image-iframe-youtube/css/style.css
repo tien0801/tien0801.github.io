@@ -38,9 +38,9 @@
 
 .video-container {
     position: relative;
-    padding-bottom: 76.25%;
     height: 0;
     overflow: hidden;
+    padding-bottom: 76.25%;
     padding-top: 30%;
 }
 
