@@ -1,9 +1,24 @@
 .iframe-video {
     position: relative;
+    padding-bottom: 56.25%;
 }
+
 .iframe-video iframe {
+    /*width: 100%;
+    height: 303px;*/
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 303px;
+    height: 100%;
+}
+
+.iframe-video .overlay-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
 }
 
 .iframe-video .overlay-img:after {
@@ -20,10 +35,21 @@
     z-index: 3;
 }
 
-.iframe-video .overlay-img {
+
+.video-container {
+    position: relative;
+    padding-bottom: 76.25%;
+    height: 0;
+    overflow: hidden;
+    padding-top: 30%;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    cursor: pointer;
+    height: 100%;
 }
