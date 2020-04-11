@@ -35,20 +35,18 @@
                     </div>
                 </div>
 
-                
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xB2qsCnqAXA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-
-                
-            </div>
-            <div class="col-md-6">
-<h3>JS:</h3>
+                <h3>JS:</h3>
 <pre><code>$(".iframe-video .overlay-img").on("click", function() {
     $(this).addClass("d-none");
     $(this).prev("iframe")[0].src += "?autoplay=1";
 })
 </code></pre>
+            </div>
+            <div class="col-md-6">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/xB2qsCnqAXA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
             </div>
         </div>
     </div>
