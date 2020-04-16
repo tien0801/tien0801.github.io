@@ -3,8 +3,7 @@ body {
   font-family: 'iCiel VAG Rounded Next', sans-serif;
   color: #b7b7b7;
   max-width: 1920px;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 input:focus,
 textarea:focus,
@@ -13,8 +12,7 @@ button:focus {
   border-color: rgba(242, 126, 127, 0.6) !important;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgba(242, 126, 127, 0.6) !important;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgba(242, 126, 127, 0.6) !important;
-}
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgba(242, 126, 127, 0.6) !important; }
 
 select {
   -webkit-appearance: none;
@@ -24,37 +22,31 @@ select {
   background-position: calc(100% - 8px) 50%;
   background-repeat: no-repeat;
   background-size: 6px;
-  padding-right: 18px !important;
-}
+  padding-right: 18px !important; }
 
 a:hover {
   color: #f27e7f;
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 img,
 iframe {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 ul {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 0;
-}
+  margin-bottom: 0; }
 
 .form-control:disabled,
 .form-control[readonly] {
-  background-color: #fefefe;
-}
+  background-color: #fefefe; }
 
 .y-box-img {
   position: relative;
   display: block;
   width: 100%;
   padding-bottom: 100%;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .y-box-img .link {
   position: absolute;
@@ -62,8 +54,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-}
+  opacity: 0; }
 
 .y-box-img img {
   position: absolute;
@@ -75,101 +66,81 @@ ul {
   max-width: 100%;
   max-height: 100%;
   width: auto !important;
-  height: auto !important;
-}
+  height: auto !important; }
 
 .y-box-zoom {
   transition: all 0.6s;
   width: 100%;
   height: 100%;
-  position: absolute;
-}
+  position: absolute; }
 
 .y-box-zoom:hover {
-  transform: scale(1.05);
-}
+  transform: scale(1.05); }
 
 .box-img-flex {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .box-img-flex.y-img-left {
-  justify-content: flex-start;
-}
+  justify-content: flex-start; }
 
 .box-img-flex img {
   width: auto !important;
   height: auto;
   max-width: 100%;
-  max-height: 100%;
-}
+  max-height: 100%; }
 
 .y-text-editor * {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 .y-text-editor blockquote {
   margin: 0 0 1.25em;
   padding: 0 1.25em 0 1.875em;
   border-left: 2px solid #111;
-  font-style: italic;
-}
+  font-style: italic; }
 
 .y-text-editor p {
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
 
 .y-text-editor img {
   max-width: 100%;
   height: auto !important;
-  display: initial;
-}
+  display: initial; }
 
 .y-text-editor iframe {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 .y-text-editor table {
-  width: 100%;
-}
+  width: 100%; }
 
 .y-text-editor i {
-  font-style: italic;
-}
+  font-style: italic; }
 
 .y-text-editor u {
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
 .y-text-editor a {
-  text-decoration: underline;
-}
+  text-decoration: underline; }
 
 .y-text-editor b,
 .y-text-editor strong {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .y-text-editor ul {
   padding-left: 30px;
-  list-style-type: disc;
-}
+  list-style-type: disc; }
 
 .y-text-editor ul li {
-  display: list-item;
-}
+  display: list-item; }
 
 .y-text-editor ol {
   padding-left: 30px;
-  list-style-type: decimal;
-}
+  list-style-type: decimal; }
 
 .y-text-editor ol li {
-  display: list-item;
-}
+  display: list-item; }
 
 .y-mobile-menu {
   width: 85%;
@@ -183,12 +154,10 @@ ul {
   transition: .2s;
   overflow-y: auto;
   overflow-x: hidden;
-  z-index: 999;
-}
+  z-index: 999; }
 
 .y-mobile-menu.show {
-  left: 0;
-}
+  left: 0; }
 
 .m-menu__title {
   position: relative;
@@ -197,15 +166,13 @@ ul {
   align-items: center;
   padding: 12px 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 0.5);
-}
+  color: rgba(0, 0, 0, 0.5); }
 
 .m-menu__title .title {
   font-size: 14px;
   margin: 0;
   text-align: center;
-  width: 100%;
-}
+  width: 100%; }
 
 .m-menu__title .m-menu-close {
   padding: 0;
@@ -219,18 +186,15 @@ ul {
   transform: translateY(-50%) rotate(45deg);
   position: absolute;
   top: 50%;
-  right: 8px;
-}
+  right: 8px; }
 
 .y-mobile-menu ul {
   margin: 0;
-  padding-left: 0;
-}
+  padding-left: 0; }
 
 .y-mobile-menu li {
   position: relative;
-  list-style-type: none;
-}
+  list-style-type: none; }
 
 .y-mobile-menu li a {
   color: #000;
@@ -238,16 +202,13 @@ ul {
   display: block;
   padding: 11px 20px;
   transition: .2s;
-  line-height: 1.3;
-}
+  line-height: 1.3; }
 
 .y-mobile-menu li.active > a {
-  color: #00B140;
-}
+  color: #00B140; }
 
 .y-mobile-menu li.has-submenu a {
-  padding-right: 35px;
-}
+  padding-right: 35px; }
 
 .y-mobile-menu li > a:before {
   content: '';
@@ -256,12 +217,10 @@ ul {
   position: absolute;
   left: 20px;
   right: 0;
-  bottom: 0;
-}
+  bottom: 0; }
 
 .has-submenu > a {
-  position: relative;
-}
+  position: relative; }
 
 .has-submenu > .btn-toggle-sub {
   width: 40px;
@@ -271,8 +230,7 @@ ul {
   top: 0;
   right: 0;
   color: #000;
-  z-index: 2;
-}
+  z-index: 2; }
 
 .has-submenu > .btn-toggle-sub:before {
   content: "+";
@@ -282,21 +240,17 @@ ul {
   justify-content: center;
   align-items: center;
   transition: .2s;
-  font-size: 18px;
-}
+  font-size: 18px; }
 
 .has-submenu.opened > .btn-toggle-sub:before {
-  content: "-";
-}
+  content: "-"; }
 
 .has-submenu .sub-menu {
   padding-left: 20px;
-  display: none;
-}
+  display: none; }
 
 .has-submenu .sub-menu li a {
-  font-size: 14px;
-}
+  font-size: 14px; }
 
 .overlay-menu.active {
   content: '';
@@ -307,8 +261,7 @@ ul {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   transition: .5s;
-  z-index: 888;
-}
+  z-index: 888; }
 
 /* btn Menu mobile */
 .y-header-mobile {
@@ -319,8 +272,7 @@ ul {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   padding: 7px 15px;
   box-sizing: border-box;
-  z-index: 777;
-}
+  z-index: 777; }
 
 .mobile-menu-btn {
   display: flex;
@@ -331,19 +283,16 @@ ul {
   position: absolute;
   top: 50%;
   left: 15px;
-  transform: translateY(-50%);
-}
+  transform: translateY(-50%); }
 
 .mobile-menu-btn span {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #fff;
-}
+  background-color: #fff; }
 
 .mobile-menu-btn span:not(:last-child) {
-  margin-bottom: 6px;
-}
+  margin-bottom: 6px; }
 
 /* ./Menu mobile */
 
