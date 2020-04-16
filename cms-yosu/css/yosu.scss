@@ -1,4 +1,5 @@
-@charset "UTF-8";
+$color: #00c4cc;
+
 /* ---------------------------------------------------------------------- */
 /* ------------------------- YOSU CSS ------------------------------------- */
 /* ---------------------------------------------------------------------- */
@@ -10,8 +11,10 @@
 /* 5.Checkout */
 /* 6.Account */
 /* 7.Account dashboard */
+
 /* * Change main CSS*/
 /* --------------------------------------- */
+
 /* General */
 .yosu-page {
   font-size: 15px;
@@ -19,197 +22,115 @@
   padding-bottom: 60px;
   background-color: #fff;
 }
-
 .yosu-page a {
   text-decoration: none;
 }
-
 .yosu-page p {
   margin: 0;
   padding: 0;
 }
-
 .yosu-page img {
   width: 100%;
   height: auto;
 }
-
 .yosu-page ul {
   padding-left: 0;
 }
-
 .yosu-page ul li {
   list-style: none;
 }
-
 a:hover, button:hover {
   cursor: pointer;
 }
-
 .y-f13 {
   font-size: 13px;
 }
-
 .y-f14 {
   font-size: 14px;
 }
-
 .y-f600 {
   font-weight: 600;
 }
-
 .y-clearfix:after {
   display: block;
   content: "";
   clear: both;
 }
 
-.m-0 {
-  margin: 0;
-}
+.m-0 { margin: 0; }
+.m-t5 { margin-top: 5px; }
+.m-t10 { margin-top: 10px; }
 
-.m-t5 {
-  margin-top: 5px;
-}
+.m-b10 { margin-bottom: 10px; }
+.m-b15 { margin-bottom: 15px; }
+.m-b20 { margin-bottom: 20px; }
+.m-b30 { margin-bottom: 30px; }
 
-.m-t10 {
-  margin-top: 10px;
-}
+.p-t10 { padding-top: 10px; }
+.p-t15 { padding-top: 15px; }
+.p-t20 { padding-top: 20px; }
+.p-tb10 { padding-top: 10px; padding-bottom: 10px; }
 
-.m-b10 {
-  margin-bottom: 10px;
-}
+.p-b20 { padding-bottom: 20px; }
+.p-b30 { padding-bottom: 30px; }
 
-.m-b15 {
-  margin-bottom: 15px;
-}
+.p-l20 { padding-left: 20px; }
 
-.m-b20 {
-  margin-bottom: 20px;
-}
-
-.m-b30 {
-  margin-bottom: 30px;
-}
-
-.p-t10 {
-  padding-top: 10px;
-}
-
-.p-t15 {
-  padding-top: 15px;
-}
-
-.p-t20 {
-  padding-top: 20px;
-}
-
-.p-tb10 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.p-b20 {
-  padding-bottom: 20px;
-}
-
-.p-b30 {
-  padding-bottom: 30px;
-}
-
-.p-l20 {
-  padding-left: 20px;
-}
-
-.p-0 {
-  padding: 0;
-}
-
-.p-15 {
-  padding: 15px;
-}
-
-.p-20 {
-  padding: 20px;
-}
-
-.p-25 {
-  padding: 25px;
-}
-
-.p-30 {
-  padding: 30px;
-}
-
-.p-50 {
-  padding: 50px;
-}
-
-.p-60 {
-  padding: 60px;
-}
-
+.p-0 { padding: 0; }
+.p-15 { padding: 15px; }
+.p-20 { padding: 20px; }
+.p-25 { padding: 25px; }
+.p-30 { padding: 30px; }
+.p-50 { padding: 50px; }
+.p-60 { padding: 60px; }
 .border-color-y1 {
   border: 1px solid #c2c2c2;
 }
-
 .y-float-right {
   float: right !important;
 }
-
 .y-float-left {
   float: left !important;
 }
-
 .y-d-block {
   display: block;
 }
-
 .y-full-width {
   display: block;
   width: 100%;
 }
-
 .y-text-left {
   text-align: left;
 }
-
 .y-text-right {
   text-align: right;
 }
-
 .y-text-center {
   text-align: center;
 }
-
 .box-img-flex {
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-
 .box-img-flex.y-img-left {
   justify-content: flex-start;
 }
-
 .box-img-flex img {
   width: auto !important;
   height: auto;
   max-width: 100%;
   max-height: 100%;
 }
-
 .y-bg-white {
   background-color: #fff;
 }
-
 .y-box-1400 {
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
 }
-
 .y-box-940 {
   max-width: 940px;
   margin-left: auto;
@@ -219,7 +140,6 @@ a:hover, button:hover {
 .y-border-b1 {
   border-bottom: 1px solid #ddd;
 }
-
 .y-no-border {
   border: 0;
 }
@@ -228,7 +148,6 @@ a:hover, button:hover {
   font-size: 14px;
   margin-bottom: 15px;
 }
-
 .y-form-style-1 label {
   width: 100%;
   margin-bottom: 5px;
@@ -237,21 +156,20 @@ a:hover, button:hover {
 }
 
 .y-form-style-1 input,
-.y-form-style-1 select {
-  outline: none;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0 15px;
-  border: 1px solid #e6e6e6;
-  font-size: 14px;
-  height: 38px;
-  line-height: initial;
-  color: #000;
-  background-color: #fff;
+  .y-form-style-1 select {
+    outline: none;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border: 1px solid #e6e6e6;
+    font-size: 14px;
+    height: 38px;
+    line-height: initial;
+    color: #000;
+    background-color: #fff;
 }
-
 .y-form-style-1 select {
   padding: 0 12px;
 }
@@ -264,7 +182,6 @@ a:hover, button:hover {
 .yosu-page table thead tr th {
   font-weight: 600;
 }
-
 .yosu-page table tbody tr th {
   font-weight: 400;
 }
@@ -284,28 +201,25 @@ a:hover, button:hover {
   .m-no-padding {
     padding: 0;
   }
-
   .m-border-c1 {
     border: 1px solid #ddd;
   }
 }
+
 /* 1.Cart */
 .y-item-cart {
   padding: 15px 0;
   border: 1px solid #c2c2c2;
   margin-bottom: 15px;
 }
-
 .y-item-cart p {
   margin-bottom: 10px;
 }
-
 .y-item-cart:after, .y-item-cart .y-right:after {
-  display: block;
-  content: "";
-  clear: both;
+    display: block;
+    content: "";
+    clear: both;
 }
-
 .y-item-cart .y-img-prod {
   height: 120px;
   align-items: start;
@@ -314,24 +228,19 @@ a:hover, button:hover {
 .y-item-cart .y-info-prod .prod-name {
   font-weight: bold;
 }
-
 .y-item-cart .y-info-prod .prod-type {
   font-weight: 500;
 }
-
 .y-item-cart .y-info-prod .prod-type span {
   font-weight: normal;
 }
-
 .y-item-cart .y-price-curr {
   font-weight: bold;
 }
-
 .y-item-cart .input-quanti {
   text-align: center;
   height: 28px;
 }
-
 .y-item-cart .y-remove-item img {
   width: 16px;
   height: 16px;
@@ -344,24 +253,20 @@ a:hover, button:hover {
   font-weight: 600;
   color: #1f1f1f;
 }
-
 .slidebar-info-cart .y-box-price {
   font-size: 14px;
   font-weight: 500;
   margin: 0 0 10px;
 }
-
 .slidebar-info-cart .price-sum {
   font-size: 16px;
   margin-bottom: 15px;
 }
-
 .slidebar-info-cart .y-form-coupon {
   position: relative;
   word-spacing: -4px;
   margin-bottom: 10px;
 }
-
 .slidebar-info-cart input {
   display: inline-block;
   border: none;
@@ -378,7 +283,6 @@ a:hover, button:hover {
   width: 100%;
   padding-right: 90px;
 }
-
 .slidebar-info-cart .y-form-coupon .bnt-coupon {
   position: absolute;
   top: 0;
@@ -392,13 +296,11 @@ a:hover, button:hover {
 .y-cart-null {
   padding: 30px 0;
 }
-
 .y-cart-null .y-noti {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
-
 .y-cart-null .y-btn-main-2 {
-  display: inline-block;
+    display: inline-block;
 }
 
 /* 3.Login */
@@ -413,15 +315,12 @@ a:hover, button:hover {
   cursor: pointer;
   vertical-align: middle;
 }
-
 .y-login-social a:hover, .y-login-social a:focus {
   color: #fff;
 }
-
 .y-login-social .btn-facebook {
   background: #3d5a96;
 }
-
 .y-login-social .btn-google {
   background: #d1493c;
 }
@@ -431,7 +330,6 @@ a:hover, button:hover {
   font-weight: normal;
   margin-bottom: 10px;
 }
-
 .y-checkbox-subcribe input[type="checkbox"] {
   height: 13px;
 }
@@ -442,17 +340,14 @@ a:hover, button:hover {
   padding: 20px 0px;
   background-color: #fff;
 }
-
 .y-header-checkout .y-order-logo .box-img-flex {
   height: 80px;
 }
-
 .y-header-checkout .y-order-process {
   position: relative;
   margin-top: 20px;
   min-height: 52px;
 }
-
 .y-header-checkout .y-line-process .line-item {
   position: absolute;
   top: 0;
@@ -464,7 +359,6 @@ a:hover, button:hover {
   padding: 0px;
   margin-top: 8px;
 }
-
 .y-header-checkout .y-dot-process .dot-item {
   position: absolute;
   width: 24px;
@@ -480,51 +374,42 @@ a:hover, button:hover {
   align-items: center;
   justify-content: center;
 }
-
 .y-header-checkout .y-dot-process .dot-item:first-child {
   left: 0%;
 }
-
 .y-header-checkout .y-dot-process .dot-item:nth-child(2) {
   left: 50%;
   transform: translateX(-50%);
 }
-
 .y-header-checkout .y-dot-process .dot-item:last-child {
   right: 0;
 }
-
 .y-header-checkout .y-dot-process .dot-item:after {
-  position: absolute;
-  top: 35px;
-  font-size: 12px;
-  line-height: 15px;
-  font-weight: 600;
-  color: #000 !important;
-  display: inline-block;
-  width: max-content;
-  max-width: 128px;
+      position: absolute;
+      top: 35px;
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 600;
+      color: #000 !important;
+      display: inline-block;
+      width: max-content;
+      max-width: 128px;
 }
-
-.y-header-checkout .y-dot-process .dot-item:first-child:after {
+.y-header-checkout .y-dot-process .dot-item:first-child:after{
   content: 'Đăng nhập';
   left: -130%;
 }
-
 .y-header-checkout .y-dot-process .dot-item:nth-child(2):after {
   content: 'Địa chỉ giao hàng';
   left: -181%;
 }
-
 .y-header-checkout .y-dot-process .dot-item:last-child:after {
   content: 'Thanh toán đặt mua';
   right: -50px;
 }
-
 .y-header-checkout .y-order-header-phone {
   margin-top: 10px;
 }
-
 .y-header-checkout .y-order-header-phone .y-call-phone {
   position: relative;
   display: inline-block;
@@ -534,7 +419,6 @@ a:hover, button:hover {
   text-decoration: none;
   font-weight: bold;
 }
-
 .y-header-checkout .y-order-header-phone .y-icon-phone {
   position: absolute;
   top: 5px;
@@ -546,23 +430,20 @@ a:hover, button:hover {
   width: 30px;
   height: 30px;
 }
-
 .y-header-checkout .y-order-header-phone .y-phone-number {
   padding-left: 36px;
   line-height: 30px;
 }
-
 /* 6.Success */
 .yosu-success-page .y-title-success {
-  font-size: 30px;
-  position: relative;
-  padding-left: 70px;
-  line-height: 1.9;
-  width: max-content;
-  max-width: 100%;
-  margin: 10px auto 30px;
+    font-size: 30px;
+    position: relative;
+    padding-left: 70px;
+    line-height: 1.9;
+    width: max-content;
+    max-width: 100%;
+    margin: 10px auto 30px;
 }
-
 .yosu-success-page .y-icon-check {
   position: absolute;
   left: 0;
@@ -573,31 +454,26 @@ a:hover, button:hover {
 
 /* 6.Account */
 .yosu-account-page .y-title-account {
-  margin-bottom: 30px;
+  margin-bottom: 30px; 
   font-size: 14px;
 }
-
 .y-sildebar-account ul {
   margin: 0 0 20px;
 }
-
 .y-sildebar-account ul li {
   padding-left: 12px;
   margin-bottom: 5px;
 }
-
 .y-sildebar-account ul li a {
   font-size: 14px;
   color: #000;
 }
-
 .y-sildebar-account .y-title-slidebar {
   font-weight: 600;
   font-size: 16px;
   text-transform: uppercase;
   margin: 0 0 5px;
 }
-
 .y-info-account-txt {
   border-bottom: 1px solid #f0f0f0;
   padding-left: 5px;
@@ -608,40 +484,35 @@ a:hover, button:hover {
   line-height: 30px;
   display: inline-block;
 }
-
 .y-dashboard-content .y-name-user {
   font-size: 16px;
   margin-bottom: 5px;
   margin-top: 15px;
   font-weight: 600;
 }
-
 .y-dashboard-content .y-link-edit-user {
   font-weight: 600;
 }
-
+.y-dashboard-content .y-info-user {
+  
+}
 .y-dashboard-content .y-checkout-done {
   padding: 15px 20px;
   font-size: 18px;
 }
-
 .y-table-style-1 {
   font-size: 14px;
 }
-
 .y-table-style-1 thead tr th {
   font-weight: 600;
 }
-
 .y-table-style-1 thead tr th {
   border-top: 1px solid transparent;
 }
-
 .y-table-style-1 tbody tr th {
   vertical-align: middle;
 }
-
-.y-table-style-1 input[type="radio"] {
+.y-table-style-1 input[type="radio"]{
   width: 18px;
   height: 18px;
 }
@@ -650,30 +521,24 @@ a:hover, button:hover {
   width: max-content;
   margin-bottom: 15px;
 }
-
 .y-dashboard-content .y-list-imgprod {
   margin: 0;
 }
-
 .y-dashboard-content .y-list-imgprod li {
   display: inline-block;
   padding: 0 3px;
 }
-
 .y-dashboard-content .y-list-imgprod li a {
   display: inline-block;
   width: 40px;
 }
-
 .y-dashboard-content .y-box-order-s1 {
   font-size: 13px;
 }
-
 .y-table-order .y-img-prod {
   width: 72px;
   height: 100px;
 }
-
 .y-table-order .y-status-order {
   padding: 5px 10px;
   -webkit-border-radius: 15px;
@@ -683,104 +548,88 @@ a:hover, button:hover {
   text-align: center;
   font-size: 12px;
 }
-
 .y-table-order tbody tr {
-  border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
 }
-
 .y-order-item .y-header-checkout {
   padding: 0 130px 20px;
   border-bottom: 0;
 }
-
 .y-order-item .y-header-checkout .y-dot-process .dot-item:first-child:after {
   content: 'Tạo mới';
 }
-
 .y-order-item .y-header-checkout .y-dot-process .dot-item:nth-child(2):after {
   content: 'Đang xử lý';
 }
-
 .y-order-item .y-header-checkout .y-dot-process .dot-item:last-child:after {
   content: 'Đã giao hàng';
 }
-
 .y-order-item .y-process-info .y-process-info-show p {
   padding-bottom: 5px;
 }
 
 /* Rating review */
 .y-review-content .rating.without-caption .clear-rating, .y-review-content .rating.without-caption .caption {
-  display: none;
+    display: none;
 }
-
 .y-review-content .rating.without-caption .empty-stars, .y-review-content .rating.without-caption .filled-stars {
   color: #f39019;
   text-shadow: none;
   -webkit-text-stroke: inherit;
 }
-
 .y-review-content .rating.without-caption .rating-stars, .y-review-content .rating.without-caption .rating-container {
-  cursor: auto;
-  font-size: initial;
+    cursor: auto;
+    font-size: initial;
 }
-
 .y-review-content .y-img-review {
   height: 150px;
   justify-content: start;
 }
-
 .y-review-content .y-big-star {
   padding: 10px 0;
 }
-
 .y-review-content .y-big-star .rating-container .star i {
-  font-size: 25px;
+    font-size: 25px;
 }
-
 .y-review-content .y-name-prod-review {
   font-weight: 600;
   font-size: 16px;
   margin-bottom: 10px;
 }
-
 .y-review-content .y-howto-review {
   padding: 10px 0;
 }
-
 .y-review-content .y-text-review {
   width: 100%;
   height: 120px;
   padding: 10px;
 }
-
 .y-review-content .y-my-review-info .y-prod-img {
   margin-bottom: 10px;
 }
-
 .y-review-content .y-my-review-info .y-my-review-text {
-  border: 1px solid #ddd;
+  border:  1px solid #ddd;
   padding: 10px 15px;
 }
-
 .y-review-content .y-date-review a {
   display: inline-block;
 }
-
 .y-review-content .disable-star .rating-container .star i {
   color: #d3d3d3;
 }
-
 .y-pagination-review li {
   display: inline-block;
   padding: 0 2px;
 }
-
 .y-pagination-review li a {
   color: white;
   background-color: #ccc;
   padding: 5px 12px;
 }
+
+
+
+
 
 /* RESPONSIVE */
 @media (min-width: 1430px) {
@@ -798,160 +647,133 @@ a:hover, button:hover {
     float: left;
     width: 60%;
   }
-
   .y-text-right-d {
     text-align: right;
   }
-
   .y-table-style-1 thead tr th:nth-child(1), .y-table-style-1 tbody tr th:first-child {
     padding-left: 20px;
   }
-
   .y-border-b1-d {
     border-bottom: 1px solid #ddd;
   }
-
   .y-dashboard-content .y-box-order-s1 {
     padding-left: 5px;
   }
-
   .y-order-item .y-header-checkout .y-dot-process .dot-item:first-child:after {
     content: 'Tạo mới';
     left: -60%;
   }
-
   .y-order-item .y-header-checkout .y-dot-process .dot-item:nth-child(2):after {
     content: 'Đang xử lý';
     left: -80%;
   }
-
   .y-order-item .y-header-checkout .y-dot-process .dot-item:last-child:after {
     content: 'Đã giao hàng';
     right: -31px;
   }
-
   .y-order-item .y-process-info {
-    padding: 20px 80px;
+      padding: 20px 80px;
   }
 }
+
 @media (max-width: 991px) {
   .y-header-checkout .y-order-header-phone {
     text-align: center;
   }
-
   .y-header-checkout .y-dot-process .dot-item:first-child:after {
     left: 0;
   }
-
   .y-header-checkout .y-dot-process .dot-item:last-child:after {
     right: 0;
   }
 }
 @media (max-width: 767px) {
   .yosu-account-page .y-title-account {
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
   }
-
   .y-item-cart .y-img-prod {
     margin-right: 10px;
   }
-
   .y-item-cart .y-right {
     padding-left: 0;
   }
-
   .y-item-cart p {
     font-size: 12px;
     margin-bottom: 5px;
   }
-
   .y-header-checkout {
     padding: 10px 0 15px;
   }
-
   .y-header-checkout .y-dot-process .dot-item:not(.active):after {
     display: none !important;
   }
-
   .y-header-checkout .y-dot-process .dot-item:after {
     top: 30px;
   }
-
   .yosu-success-page .y-title-success {
     font-size: 20px;
     padding-left: 50px;
   }
-
   .yosu-success-page .y-icon-check {
     height: 40px;
   }
-
   .y-dashboard-content .y-checkout-done {
     padding: 10px 0;
   }
-
   .y-table-style-1 tbody tr:nth-child(2n + 2) {
     background-color: #f5f5f5;
   }
-
   .y-dashboard-content .y-box-order-s1 {
     background: #eef0f4;
     border: 1px solid #ddd;
     border-bottom: none;
   }
-
   .y-table-order .y-img-prod {
     width: 50px;
     height: 60px;
   }
-
   .y-sildebar-account {
     padding-bottom: 15px;
   }
-
   .y-order-item .y-header-checkout {
     padding: 0 15px 15px;
   }
-
   .y-account-order {
     border: 1px solid #ddd;
   }
-
   .y-account-order .y-box-order-s1 {
     border: 0;
   }
-
   .y-account-order .y-table-responsive {
     border: 0;
   }
-
   .y-order-item .y-process-info {
     font-size: 13px;
   }
-
   .y-review-content .y-my-review-info .y-prod-img {
     height: 100px;
     justify-content: start;
   }
+
 }
 /* ./@media (max-width: 767px) */
+
+
+
+
 /* ---------------------- Change main CSS ------------------------------ */
 .yosu-color {
-  color: #00c4cc;
+  color: $color;
 }
-
 .yosu-color-red {
   color: #ee0000;
 }
-
 .yosu-bg-color {
-  background-color: #00c4cc;
+  background-color: $color;
 }
-
 .y-bg-gray {
   background-color: #eef0f4;
 }
-
 .y-bg-gray-2 {
   background-color: #f4f4f4;
 }
@@ -959,7 +781,7 @@ a:hover, button:hover {
 .y-btn-main {
   text-align: center;
   color: #fff;
-  background-color: #00c4cc;
+  background-color: $color;
   padding: 10px;
   border-radius: 0;
   box-shadow: none;
@@ -968,63 +790,54 @@ a:hover, button:hover {
   font-weight: 500;
   line-height: 1.4;
 }
-
 .y-btn-main:hover, .y-btn-main:focus {
   color: #fff;
 }
-
 .y-btn-main span {
   text-transform: uppercase;
 }
-
 .y-btn-main-2 {
   font-weight: 500;
   padding: 9px 20px;
   text-align: center;
   font-size: 14px;
-  color: #00c4cc;
-  border: 1px solid #00c4cc;
+  color: $color;
+  border: 1px solid $color;
 }
-
 .y-btn-main-2:hover, .y-btn-main-2.active {
-  background: #00c4cc;
-  color: #fff;
-  border: 1px solid #00c4cc;
+    background: $color;
+    color: #fff;
+    border: 1px solid $color;
 }
 
 .y-title-default {
-  font-size: 20px;
-  margin-top: 0;
-  font-weight: 600;
-  margin-bottom: 15px;
+    font-size: 20px;
+    margin-top: 0;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
-
 .y-header-checkout .y-dot-process .dot-item.active {
-  background-color: #00c4cc;
+  background-color: $color;
   color: #fff;
 }
-
 .y-sildebar-account ul li.active a {
-  color: #00c4cc;
+  color: $color;
+}
+.y-pagination-review li a.active, .y-pagination-review li a:hover {
+  background-color: $color;
 }
 
-.y-pagination-review li a.active, .y-pagination-review li a:hover {
-  background-color: #00c4cc;
-}
 
 @media (max-width: 767px) {
   .yosu-page {
     padding-top: 30px;
     padding-bottom: 40px;
   }
-
   .y-title-default {
-    font-size: 18px;
+      font-size: 18px;
   }
-
   .yosu-page.y-bg-gray {
     background-color: #fff;
   }
-}
 
-/*# sourceMappingURL=yosu.css.map */
+}
