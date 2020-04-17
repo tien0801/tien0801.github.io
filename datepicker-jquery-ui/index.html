@@ -17,16 +17,39 @@
 
 <body>
     <div class="container">
-        <input type="text" class="datepicker">
+        <h1>Datepicker Jquery UI</h1>
+        <h3>Link Tham khảo <a href="https://timepicker.co/">https://timepicker.co/</a></h3>
+        <div class="col-md-6">
+            <input type="text" class="datepicker">
+        </div>
+        <div class="col-md-6">
+            <input type="text" class="datepicker2">
+        </div>
     </div>
-    
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/jquery-ui.js"></script>
     <script>
-        $('.datepicker').datepicker();
+    $(document).ready(function() {
+        // $('.datepicker').datepicker();
         // $('.datepicker').formatDate( "yy-mm-dd", new Date( 2007, 1 - 1, 26 ) );
-        
+        $('.datepicker2').datepicker({
+            dateFormat: "yy-mm-dd",
+            timeFormat: "hh:mm:ss"
+        });
+
+        $('.datepicker').datepicker({
+            change: function(time) {
+                // the input field
+                var element = $(this),
+                    text;
+                // get access to this Timepicker instance
+                var timepicker = element.timepicker();
+                text = 'Selected time is: ' + timepicker.format(time);
+                element.siblings('span.help-line').text(text);
+            }
+        });
+    });
     </script>
 </body>
 
