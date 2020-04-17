@@ -87,4 +87,39 @@ $(document).ready(function() {
         }, 1500, "swing", function() {})
     })
 
+    if($('.js-feedback-slider').length >0) {
+        $('.js-feedback-slider').owlCarousel({
+            loop: true,
+            // autoplay: true,
+            // autoplayTimeout: 4000,
+            // nestedItemSelector: 'item-gall',
+            margin: 30,
+            responsiveClass:true,
+            items: 1,
+            dots: false,
+            navText : ["<img src='../images/icons/btn-prev.svg'/>","<img src='../images/icons/btn-next.svg'/>"],
+            rewindNav : true,
+            nav: false,
+            responsive : {
+                // breakpoint from 0 up
+                0 : {
+                   items: 1,
+                   nav: true,
+                },
+                480 : {
+                    items: 1,
+                },
+                768 : {
+                    items: 2,
+                },
+                992 : {
+                    items: 1,
+                },
+                1200 : {
+                    items: 1,
+                }
+            }
+        })
+    }
+
 });
