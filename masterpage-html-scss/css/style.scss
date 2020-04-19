@@ -242,3 +242,46 @@
         }
     }
 }
+
+.feedback-slider {
+    .item-feedback {
+        .info-customer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 15px 8px;
+            border-bottom: 1px solid #e1e8ed;
+            .img-cus {
+                width: 40px;
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .rating-feedback {
+            width: calc(100% - 40px);
+            padding-left: 10px;
+            .name-cus {
+                line-height: 1.3;
+                margin-bottom: 3px;
+                text-transform: uppercase;
+            }
+            .rating {
+                display: flex;
+                i {
+                    display: inline-block;
+                    color: #ffc120;
+                    font-size: 13px;
+                    margin-right: 2px;
+                }
+            }
+        }
+
+        .desc-feedback {
+            padding: 10px 15px 15px;
+        }
+    }
+}
