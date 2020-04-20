@@ -8,6 +8,7 @@
 	width: 600px;
 	min-height: 700px;
 	margin: 10px auto;
+    max-width: 100%;
 }
 img {
 	width: 100%;
@@ -16,7 +17,10 @@ img {
 #menuGame {
 	display: block;
 	margin: auto;
+    width: 100%;
+
 }
 #canvas {
+    width: 100%;
 	cursor: all-scroll;
 }
