@@ -12,6 +12,9 @@ body {
     max-width: 1920px;
     margin: 0 auto;
 }
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 
 input:focus,
 textarea:focus,
