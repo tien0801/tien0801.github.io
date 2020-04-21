@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+        .container {
+        max-width: 1200px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>HTML 5</h1>
+        <h3>Tham khảo <a target="_blank" href="https://nguyenvanhieu.vn/hoc-20-kien-thuc-thu-vi-ve-html/?fbclid=IwAR1JpRv2qL-ZIZdjF4FnheAUTTAOWB6YAucmnb1OMgirEFLkpjFl_-3Q770">https://nguyenvanhieu.vn/hoc-20-kien-thuc-thu-vi-ve-html/?fbclid=IwAR1JpRv2qL-ZIZdjF4FnheAUTTAOWB6YAucmnb1OMgirEFLkpjFl_-3Q770</a></h3>
+        <h4>Ngày 5. Định nghĩa options sử dụng thẻ datalist</h4>
+        <input list="languages" placeholder="Choose language" />
+        <datalist id="languages">
+            <option>Python</option>
+            <option>Javascript</option>
+            <option>Java</option>
+        </datalist>
+        <h4>Ngày 6. Tạo các thành phần có thể thu gọn với HTML5</h4>
+        <details>
+            <summary> Bạn biết gì về Lập Trình Không Khó? </summary>
+            <p> <strong>Lập Trình Không Khó</strong> là một hệ thống đào tạo lập trình phi lợi nhuận. Các bạn có thể vào website, kênh youtube của hệ thống để tham gia các bài học miễn phí 100% </p>
+            <p>Website: <a href="http://nguyenvanhieu.vn/">http://nguyenvanhieu.vn/</a></p>
+            <p>Youtube: <a href="http://youtube.com/LapTrinhKhongKho">http://youtube.com/LapTrinhKhongKho</a></p>
+        </details>
+        <h4>Ngày 7. Responsive hình ảnh với srcset</h4>
+        <img srcset="pizza-small.jpg,
+		            pizza-medium.jpg 1.5x,
+		            pizza-large.jpg 2x" src="pizza-large.jpg" alt="a slice of cheesy pizza">
+        <h4>Ngày 8. Bảng tra cứu về HTML (HTML Cheatsheet)</h4>
+        <a target="_blank" href="https://htmlcheatsheet.com/">https://htmlcheatsheet.com/</a>
+        <a target="_blank" href="https://developer.mozilla.org/enUS/docs/Learn/HTML/Cheatsheet">https://developer.mozilla.org/enUS/docs/Learn/HTML/Cheatsheet</a>
+        <a target="_blank" href="https://websitesetup.org/html5-periodical-table/">https://websitesetup.org/html5-periodical-table/</a>
+        <h4>Ngày 10. Làm nổi bật một phần văn bản</h4>
+        <p>
+            <q>The goal isn't to live forever, the goal is to <mark>create something</mark> that will.
+            </q><br />
+            ― Chuck Palahniuk, <cite>Diary</cite>
+        </p>
+        <h4>Ngày 11. Cho phép kéo thả bất kỳ thành phần HTML nào</h4>
+        <p draggable="true">
+            <a href="#123">Drag and Drop me on the other side!</a>
+        </p>
+        <textarea name="" id="" cols="100" rows="5"></textarea>
+        <h4>Ngày 12. Thẻ progress và thẻ meter</h4>
+        1. Thẻ progress
+        <ul>
+            <li>Hiển thị thanh tiến trình giúp bạn thấy tiến trình hoàn thành của một nhiệm vụ.⁣⁣</li>
+            <li>Nó có 2 thuộc tính max và value</li>
+            <li>Không có thuộc tính min, giá trị min luôn luôn là 0.</li>
+        </ul>
+        2. Thẻ meter
+        <ul>
+            <li>Có thể hiển thị cả giá trị thập phân trong phạm vi khai báo trước.</li>
+            <li>Nó không chỉ hiển thị tiến trình, mà còn cho ta thấy các cảnh báo ở các mức giá trị khác nhau</li>
+            <li>Bao gồm các thuộc tính: min, max, high, low, optimum</li>
+        </ul>
+        <label for="downdload">Download Progress</label>
+        <progress id="download" max="100" value="50"> </progress>
+        <br />
+        <label for="temp">Temperature Meter:</label>
+        <meter id="temp" min="0" max="100" low="40" high="60" optimum="80" value="10"> </meter>
+        <h4>Ngày 17. Color picker và Date picker</h4>
+        <label>Choose Color:
+        </label>
+        <input type="color" value="#ffffff" />
+        <br />
+        <label>Choose date:
+        </label>
+        <input type="date" value="" />
+    </div>
+</body>
+
+</html>
