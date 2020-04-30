@@ -588,11 +588,7 @@
             return false;
         });
 
-        $(window).bind('scroll load', function () {
-            
-        })
-
-        $(window).bind('scroll load', function () {
+        $(window).bind('scroll', function () {
             var scrollDistance = $(window).scrollTop();
 
             // Show/hide menu on scroll
@@ -614,8 +610,8 @@
     <script>
     $(document).ready(function() {
         $('.page-section ul li').each(function(i) {
-            console.log('li count = ' + i);
             $('.page-section ul li:nth-child(' + i + ') a').prepend('<span class="number">' + i + '</span>');
+            console.log('li count = ' + i);
         })
     });
     </script>
