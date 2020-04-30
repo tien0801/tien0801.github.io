@@ -552,7 +552,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="page-section">
+                    <div class="page-section" id="author">
                         <div class="row">
                             <div class="col-md-3">
                                 <img style="width: 300px" src="vubatien.jpg" alt="Vũ Bá Tiến">
@@ -574,24 +574,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!-- JS Main -->
     <script>
-        $(document).ready(function() {
-            $('#mainNav a').bind('click', function(e) {
-                e.preventDefault(); // prevent hard jump, the default behavior
+        $('#mainNav a').bind('click', function(e) {
+            e.preventDefault(); // prevent hard jump, the default behavior
 
-                var target = $(this).attr("href"); // Set the target as variable
+            var target = $(this).attr("href"); // Set the target as variable
 
-                // perform animated scrolling by getting top-position of target-element and set it as scroll target
-                $('html, body').stop().animate({
-                    scrollTop: $(target).offset().top
-                }, 600, function() {
-                    location.hash = target; //attach the hash (#jumptarget) to the pageurl
-                });
-                return false;
+            // perform animated scrolling by getting top-position of target-element and set it as scroll target
+            $('html, body').stop().animate({
+                scrollTop: $(target).offset().top + 5
+            }, 600, function() {
+                // location.hash = target; //attach the hash (#jumptarget) to the pageurl
             });
+            return false;
         });
 
-        // $(window).scroll(function() {
-         $(window).bind('scroll load', function () {
+        $(window).bind('scroll load', function () {
+            
+        })
+
+        $(window).bind('scroll load', function () {
             var scrollDistance = $(window).scrollTop();
 
             // Show/hide menu on scroll
@@ -603,18 +604,17 @@
 
             // Assign active class to nav links while scolling
             $('.page-section').each(function(i) {
-                if ($(this).position().top <= scrollDistance) {
+                if ($(this).position().top < scrollDistance) {
                     $('#mainNav a.active').removeClass('active');
                     $('#mainNav a').eq(i).addClass('active');
                 }
             });
-        })/*.scroll();*/
+        })
     </script>
     <script>
     $(document).ready(function() {
-        // var index = $('.page-section li').index();
         $('.page-section ul li').each(function(i) {
-            console.log(i);
+            console.log('li count = ' + i);
             $('.page-section ul li:nth-child(' + i + ') a').prepend('<span class="number">' + i + '</span>');
         })
     });

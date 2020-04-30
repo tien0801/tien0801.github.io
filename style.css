@@ -1,5 +1,4 @@
 body {
-    /* background-color: #000; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -16,7 +15,6 @@ p {
 }
 
 .wrapper {
-    /* background-color: #fff; */
     margin: 0 auto;
     max-width: 1400px;
     position: relative;
@@ -82,7 +80,7 @@ p {
 }
 
 .navigation__link:hover {
-    background-color: #aaa;
+    background-color: #727272;
     color: #fff;
 }
 
