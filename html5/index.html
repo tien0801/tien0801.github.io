@@ -4,9 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
     <title></title>
-    <link rel="stylesheet" href="">
     <style>
+        * {
+            max-width: 100%;
+        }
         .container {
         max-width: 1200px;
         padding: 0 15px;
@@ -18,7 +22,33 @@
 <body>
     <div class="container">
         <h1>HTML 5</h1>
-        <h3>Tham khảo <a target="_blank" href="https://nguyenvanhieu.vn/hoc-20-kien-thuc-thu-vi-ve-html/?fbclid=IwAR1JpRv2qL-ZIZdjF4FnheAUTTAOWB6YAucmnb1OMgirEFLkpjFl_-3Q770">https://nguyenvanhieu.vn/hoc-20-kien-thuc-thu-vi-ve-html/?fbclid=IwAR1JpRv2qL-ZIZdjF4FnheAUTTAOWB6YAucmnb1OMgirEFLkpjFl_-3Q770</a></h3>
+        <h3>Tham khảo</h3> 
+            <h4><a target="_blank" href="https://nguyenvanhieu.vn/hoc-20-kien-thuc-thu-vi-ve-html/?fbclid=IwAR1JpRv2qL-ZIZdjF4FnheAUTTAOWB6YAucmnb1OMgirEFLkpjFl_-3Q770">https://nguyenvanhieu.vn/hoc-20-kien-thuc-thu-vi-ve-html/?fbclid=IwAR1JpRv2qL-ZIZdjF4FnheAUTTAOWB6YAucmnb1OMgirEFLkpjFl_-3Q770</a></h4>
+            <h4><a href="https://techmaster.vn/posts/35050/co-gi-moi-trong-html5">Có gì mới trong HTML5?</a></h4>
+        </h4>
+
+        <h3>HTML5 Cấu trúc mới</h3>
+        HTML5 nhận ra rằng các trang Web có cấu trúc (<em>structure</em>)&nbsp;, giống như các sách có cấu trúc hoặc các tài liệu XML khác. Nói chung, các thành phần trong web bao gồm <em>navigation</em>,&nbsp; <em>body content</em>, <em>sidebar content plus headers</em>, <em>footers,</em>&nbsp;<em>và các thành phần&nbsp;khác</em> . HTML 5 đã tạo thẻ để hỗ trợ các yếu tố đó của trang.</p>
+        <ul>
+            <li>Để xác định các phần sections (<strong>section</strong>) của trang</li>
+            <li>Xác định tiêu đề header (<strong>header</strong>) của trang</li>
+            <li>Xác định chân trang footer (<strong>footer)</strong> của một trang</li>
+            <li>Xác định điều hướng navigation (<strong>nav</strong>)&nbsp;trên trang</li>
+            <li>Xác định bài viết (<strong>article</strong>) hoặc nội dung chính (<strong>primary content</strong>)&nbsp;trên một trang</li>
+            <li>Xác định nội dung bổ sung như thanh bên sidebar (<strong>aside</strong>) trên trang</li>
+            <li>Xác định hình ảnh (<strong>image</strong>) chú thích một bài viết</li>
+        </ul>
+
+        <h3>HTML 5 Hỗ trợ trang động mới</h3>
+        HTML 5 được phát triển để giúp các nhà phát triển ứng dụng web, do đó, có rất nhiều tính năng mới để giúp dễ dàng tạo các trang HTML động:</p>
+
+        <ul>
+            <li>Content menu&nbsp;- HTML 5 sẽ hỗ trợ việc tạo và sử dụng các menu nội dung trong các trang web và ứng dụng</li>
+            <li>href is not required on a tag - Điều này cho phép bạn sử dụng thẻ với các tập lệnh và trong các ứng dụng web mà không cần một nơi để gửi neo đó</li>
+            <li>async attribute - Điều này được thêm vào thẻ script để cho trình duyệt biết rằng tập lệnh sẽ được tải không đồng bộ để nó không làm chậm tải và hiển thị phần còn lại của trang.</li>
+            <li>Provides details about an element -&nbsp;Điều này sẽ giống như các mẹo công cụ trong các ứng dụng không phải Web.</li>
+        </ul>
+
         <h4>Ngày 5. Định nghĩa options sử dụng thẻ datalist</h4>
         <input list="languages" placeholder="Choose language" />
         <datalist id="languages">
@@ -35,11 +65,13 @@
         </details>
         <h4>Ngày 7. Responsive hình ảnh với srcset</h4>
         <img srcset="pizza-small.jpg,
-		            pizza-medium.jpg 1.5x,
-		            pizza-large.jpg 2x" src="pizza-large.jpg" alt="a slice of cheesy pizza">
+                    pizza-medium.jpg 1.5x,
+                    pizza-large.jpg 2x" src="pizza-large.jpg" alt="a slice of cheesy pizza">
         <h4>Ngày 8. Bảng tra cứu về HTML (HTML Cheatsheet)</h4>
         <a target="_blank" href="https://htmlcheatsheet.com/">https://htmlcheatsheet.com/</a>
+        <br>
         <a target="_blank" href="https://developer.mozilla.org/enUS/docs/Learn/HTML/Cheatsheet">https://developer.mozilla.org/enUS/docs/Learn/HTML/Cheatsheet</a>
+        <br>
         <a target="_blank" href="https://websitesetup.org/html5-periodical-table/">https://websitesetup.org/html5-periodical-table/</a>
         <h4>Ngày 10. Làm nổi bật một phần văn bản</h4>
         <p>
@@ -78,6 +110,28 @@
         <label>Choose date:
         </label>
         <input type="date" value="" />
+        <!-- tag Picture -->
+        <h3>Phần tử <code>&lt;picture&gt;</code></h3>
+            <p>HTML5 có thêm phần tử <code>&lt;picture&gt;</code> để thêm sự linh hoạt khi xác định nguồn ảnh.
+                <br>
+                Phần tử <code>&lt;picture&gt;</code> gồm số các phần tử
+                &lt;source&gt;, mỗi phần tử tham chiếu tới các nguồn ảnh khác nhau. Bằng cách này trình duyệt sẽ chọn ảnh hợp với cách xem và/hoặc thiết bị hiện tại nhất.
+                <br>
+                    Mỗi phần tử &lt;source&gt; có các thuộc tính mô tả khi nào thì hợp ảnh nào nhất. Trình duyệt sẽ dùng phần tử
+                    &lt;source&gt; đầu tiên hợp với giá trị thuộc tính, bỏ qua các phần tử
+                    &lt;source&gt; sau.
+                <br>
+                    Hiển thị ảnh hoa hồng nếu khung nhìn tối thiểu là 650px và ảnh hoa trắng nếu tối thiểu là 465px.
+            </p>
+            <picture>
+                <source media="(max-width: 650px)" srcset="https://www.w3schools.com/tags/img_pink_flowers.jpg">
+                <source media="(max-width: 465px)" srcset="https://www.w3schools.com/tags/img_white_flower.jpg">
+                <img src="https://www.w3schools.com/tags/img_orange_flowers.jpg" alt="Flowers" style="width:auto;">
+            </picture>
+            <br>
+            Lưu ý: Luôn dùng phần tử &lt;img&gt; làm phần tử con cuối cùng trong phần tử <code>&lt;picture&gt;</code>. Phần tử &lt;img&gt; được các trình duyệt không hỗ trợ phần tử <code>&lt;picture&gt;</code> sử dụng, hoặc nếu không thẻ
+            <source> nào phù hợp.
+        </h4>
     </div>
 </body>
 
