@@ -3,131 +3,473 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Email-template</title>
 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+
     <style type="text/css">
-        body {
-            font-size: 16px;
-            margin: 0;
-            padding: 0;
-            min-width: 100%!important;
+        .bg-template {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            background-image: url('images/main.jpg');
+            background-repeat: no-repeat;
+            background-position: top 18px center;
+            width: 1170px;
+            height: 100%;
+            opacity: 0.6;
+            background-size: 100%;
+            z-index: 1;
         }
         
-        .content {
-            width: 100%;
-            max-width: 600px;
-        }
-        
-        table,
-        th,
-        td {
-            border: 1px solid black;
+        img {
+            max-width: 100%;
+            height: auto;
         }
         
         table {
+            max-width: 100%;
+            border-spacing: 0;
             border-collapse: collapse;
         }
         
-        td,
-        th {
-            padding: 5px;
+        .logo {
+            padding: 40px;
+        }
+        
+        .desc-company {
+            padding: 0 40px;
+        }
+        
+        .title-main {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        
+        .section-news:before {
+            position: absolute;
+            content: "";
+            background-color: #fff;
+            opacity: .5;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .list-news .item-news.news-1 {
+            top: -216px;
+        }
+        
+        .list-news .item-news.news-2 {
+            top: -174px;
+        }
+        
+        .list-news .item-news.news-3 {
+            top: -124px;
+        }
+        
+        .list-news .item-news.news-4 {
+            top: -84px;
+        }
+        
+        .list-news .item-news .box-news {
+            background-color: #f89c3a;
+            display: block;
+        }
+        
+        .list-news .item-news .title-news {
+            color: #fff;
+            display: table-cell;
+            vertical-align: middle;
+            height: 60px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-transform: uppercase;
+            font-size: 11px;
+            line-height: 1.5;
         }
         /* Media Queries */
         
-        @media screen and (max-width: 400px) {
-            body {
-                font-size: 14px;
+        @media only screen and (min-width: 768px) {
+            .section-news {
+                display: block;
+            }
+        }
+        
+        @media only screen and (max-width: 767px) {
+            .deviceWidth {
+                width: 440px!important;
+                padding: 0;
+            }
+            .center {
+                text-align: center!important;
+            }
+            .list-news .item-news.news-1,
+            .list-news .item-news.news-2,
+            .list-news .item-news.news-3,
+            .list-news .item-news.news-4 {
+                top: 0;
+            }
+        }
+        
+        @media only screen and (max-width: 479px) {
+            .deviceWidth {
+                width: 280px!important;
+                padding: 0;
+            }
+            .center {
+                text-align: center!important;
             }
         }
     </style>
 </head>
 
-<body>
+<body style="position: relative;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1170px;
+    line-height: 1.4;
+    box-sizing: border-box;">
 
-    <code>
-        <p>no position</p>
-        <p>no tag div</p>
-    </code>
+    <!-- <div class="bg-template"></div> -->
 
-    <p>&nbsp;</p>
-
-    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-spacing: 0;">
+    <table class="section-header" border="0" cellspacing="0" cellpadding="0" style="border-spacing: 0;">
         <tr>
-            <td align="center">
-                Header
+            <td>
+                <span class="top-header" style="display: inline-block; width: 260px; height: 30px; background-color: #f89c3a; ">
+                </span>
+                <span style="display: inline-block;
+                margin-left: -3px; width: 0; height: 0; border-top: 0px solid transparent;
+                    border-bottom: 30px solid transparent; border-left: 64px solid #f89c3a;"></span>
             </td>
         </tr>
-
-        <tbody>
-
-            <tr>
-                <td style="text-align: center;" rowspan="15" width="300"><img src="http://hoamattroi.edu.vn/public/uploads/images/mail-template/logo--1-.png" alt="Logo Hoa Mặt Trời" /></td>
-            </tr>
-            <tr>
-                <td style="text-align: center;" rowspan="15"><img src="http://hoamattroi.edu.vn/public/uploads/images/mail-template/Untitled-1.jpg" height="230px" /></td>
-            </tr>
-            <tr>
-                <td rowspan="15">&nbsp;&nbsp;&nbsp;</td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td style="font-size: 16px; font-weight: bold; font-family: Arial; color: #ff0000;">NGUYỄN PHƯƠNG T M - Entrepreneur/Chủ trường</td>
-            </tr>
-            <tr>
-                <td><span style="color: #6aa84f; font-size: 13px; font-weight: bold; font-family: Arial;">Mobile&nbsp;&nbsp;&nbsp;&nbsp;:</span>
-                    <a style="text-decoration: none; color: #434343; font-size: 13px; font-family: Arial;" href="tel:+84.981 610 617">+84.981
-                        610617</a></td>
-            </tr>
-            <tr>
-                <td><span style="color: #6aa84f; font-size: 13px; font-weight: bold; font-family: Arial;">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        :</span> <a style="text-decoration: none; color: #434343; font-size: 13px; font-family: Arial;" href="mailto:nguyenphuongtam@hoamattroi.edu.vn">nguyenphuongtam@hoamattroi.edu.vn</a></td>
-            </tr>
-            <tr>
-                <td valign="middle">
-                    ................................................................................................................................
-                </td>
-            </tr>
-            <tr>
-                <td style="color: #434343; text-transform: uppercase; font-size: 16px; font-weight: bold; font-family: Arial;">
-                    HOA MẶT TRỜI NURSERY &amp; KINDERGARTEN</td>
-            </tr>
-            <tr>
-                <td style="font-size: 13px; font-family: Arial; color: #434343;"><span style="color: #6aa84f; font-size: 13px; font-weight: bold; font-family: Arial;">Address&nbsp;&nbsp;&nbsp;:</span> 25 - 27, No. 1 street (Cityland Center Hills), ward 7, Go Vap district, HCMC, Vietnam</td>
-            </tr>
-            <tr>
-                <td><span style="color: #6aa84f; font-size: 13px; font-weight: bold; font-family: Arial;">Tel&nbsp;&nbsp;&nbsp;:</span>
-                    <a style="text-decoration: none; color: #434343; font-size: 13px; font-family: Arial;" href="tel:(028) 2253.7391">(028)
-                        2253.7391</a> - <a style="text-decoration: none; color: #434343; font-size: 13px; font-family: Arial;" href="tel:(028) 2253.7381">(028) 2253.7381</a></td>
-            </tr>
-            <tr>
-                <td><span style="color: #6aa84f; font-size: 13px; font-weight: bold; font-family: Arial;">Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:</span>
-                    <a style="text-decoration: none; color: #434343; font-size: 13px; font-family: Arial;" href="mailto:info@hoamattroi.edu.vn">info@hoamattroi.edu.vn</a></td>
-            </tr>
-            <tr>
-                <td><span style="color: #6aa84f; font-size: 13px; font-weight: bold; font-family: Arial;">Website&nbsp;&nbsp;&nbsp;:</span>
-                    <a style="text-decoration: none; color: #434343; font-size: 13px; font-family: Arial;" href="mailto:hoamattroi.edu.vn">hoamattroi.edu.vn</a></td>
-            </tr>
-            <tr>
-                <td><span style="color: #6aa84f; font-size: 13px; font-weight: bold; font-family: Arial;">Fanpage&nbsp;&nbsp;:</span>
-                    <a style="text-decoration: none; color: #434343; font-size: 13px; font-family: Arial;" href="https://facebook.com/truongmamnonhoamattroi">fb.com/truongmamnonhoamattroi</a></td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <table border="0" cellpadding="0" cellspacing="0" style="background-color:#505050; border:1px solid #353535; border-radius:5px; margin: 0 auto;">
         <tr>
-            <td align="center" valign="middle" style="color:#FFFFFF; font-family:Helvetica, Arial, sans-serif; font-size:16px; font-weight:bold; padding-top:15px; padding-right:30px; padding-bottom:15px; padding-left:30px;">
-                <a href="#" target="_blank" style="color:#FFFFFF; text-decoration:none;">Read More</a>
+            <td class="logo" style="padding: 55px 15px 50px 75px">
+                <img src="https://dummyimage.com/144x118/bcbcbc&text=logo" alt="">
+            </td>
+        </tr>
+        <tr>
+            <td class="desc-company">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa veritatis aspernatur laboriosam ipsum eligendi assumenda beatae tenetur nostrum quisquam facere excepturi deserunt dolorem magni consequatur porro numquam, harum obcaecati illum?
+                <br> asdfs
+            </td>
+        </tr>
+        <tr>
+            <td class="title-main" style="font-size: 70px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 24px 40px 60px;">
+                Newsletter
+            </td>
+        </tr>
+        <tr>
+            <td class="banner-newsletter">
+                <img src="https://dummyimage.com/1170x610/bcbcbc" alt="">
             </td>
         </tr>
     </table>
+
+    <!-- Section News -->
+    <table class="section-news" border="0" cellspacing="0" cellpadding="0" style="position: relative; width: 100%; margin-top: 20px; background-image: url('https://dummyimage.com/1170x308/bcbcbc'); background-position: top center; background-repeat: no-repeat;">
+        <tr>
+            <td style="padding: 0 24px;">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr class="list-news">
+                        <td class="item-news news-1" style="width: 25%; max-width: 234px; padding-left: 15px; padding-right:15px; position: relative;">
+                            <span class="box-news">
+                                <img src="https://dummyimage.com/234x234/000" width="234px" alt="">
+                                <span class="title-news">Get started right away</span>
+                            </span>
+                        </td>
+
+                        <td class="item-news news-2" style="width: 25%; max-width: 234px; padding-left: 15px; padding-right:15px; position: relative;">
+                            <span class="box-news">
+                                <img src="https://dummyimage.com/234x234/000" width="234px" alt="">
+                                <span class="title-news">Want to view andedit
+                                    <br>This document in word on
+                                    <br>Your computer, tablet, or phone?
+                                </span>
+                            </span>
+                        </td>
+
+                        <td class="item-news news-3" style="width: 25%; max-width: 234px; padding-left: 15px; padding-right:15px; position: relative;">
+                            <span class="box-news">
+                                <img src="https://dummyimage.com/234x234/000" width="234px" alt="">
+                                <span class="title-news">Let it flow</span>
+                            </span>
+                        </td>
+
+                        <td class="item-news news-4" style="width: 25%; max-width: 234px; padding-left: 15px; padding-right:15px; position: relative;">
+                            <span class="box-news">
+                                <img src="https://dummyimage.com/234x234/000" width="234px" alt="">
+                                <p class="title-news">Have more to say</p>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- End Section News -->
+
+    <!-- Section 3 -->
+    <table border="0" cellpadding="0" cellspacing="0" class="deviceWidth" style="margin:0 auto; width: 100%;">
+        <tr>
+            <td style="background-color: #d3c4a7">
+                <table align="left" width="54%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                    <tr>
+                        <td valign="top" align="center" class="center">
+                            <img width="632" src="https://dummyimage.com/632x624/bcbcbc" alt="" border="0" style="display: block;" class="deviceWidth" />
+                        </td>
+                    </tr>
+                </table>
+                <table align="right" width="46%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                    <tr>
+                        <td>
+                            <p class="title-2" style="margin: 0;
+                            background-color: #414141;
+                            color: #fff;
+                            text-transform: uppercase;
+                            padding: 28px 15px;
+                            text-align: center;
+                            font-size: 32px;">Get started right away</p>
+                            <img src="https://dummyimage.com/538x180/cccccc" alt="" />
+
+                            <p style="margin: 0; padding: 26px 20px 44px 58px; font-size: 24px; text-align: justify;">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+
+    </table>
+    <!-- End Section 3 -->
+
+    <!-- Section 4 -->
+    <table border="0" cellpadding="0" cellspacing="0" class="deviceWidth" style="margin:0 auto; width: 100%;">
+        <tr>
+            <td style="background-color: #dfe3ed">
+                <table align="left" width="54%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                    <tr>
+                        <td style="padding: 52px 40px 0 38px;">
+                            <table style="margin-bottom: 50px;">
+                                <tr>
+                                    <td valign="top" style="width: 42px; font-size: 32px; vertical-align: middle; padding:0 10px 10px 5px; background-color: #414141; color: #fff; text-align: center">
+                                        1
+                                    </td>
+                                    <td valign="top" style="padding:0 10px 0 20px; font-size: 24px; text-align: justify;">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor soluta necessitatibus, quasi voluptas cupiditate est quis aliquam excepturi recusandae accusamus
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="margin-bottom: 50px;">
+                                <tr>
+                                    <td valign="top" style="width: 42px; font-size: 32px; vertical-align: middle; padding:0 10px 10px 5px; background-color: #414141; color: #fff; text-align: center">
+                                        2
+                                    </td>
+                                    <td valign="top" style="padding:0 10px 0 20px; font-size: 24px; text-align: justify;">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor soluta necessitatibus, quasi voluptas cupiditate est quis aliquam excepturi recusandae accusamus
+                                    </td>
+                                </tr>
+                            </table>
+                            <table style="margin-bottom: 50px;">
+                                <tr>
+                                    <td valign="top" style="width: 42px; font-size: 32px; vertical-align: middle; padding:0 10px 10px 5px; background-color: #414141; color: #fff; text-align: center">
+                                        3
+                                    </td>
+                                    <td valign="top" style="padding:0 10px 0 20px; font-size: 24px; text-align: justify;">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor soluta necessitatibus, quasi voluptas cupiditate est quis aliquam excepturi recusandae accusamus
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table align="right" width="46%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                    <tr>
+                        <td valign="top" align="center" class="center">
+                            <img width="632" src="https://dummyimage.com/538x600/bcbcbc" alt="" border="0" style="display: block;" class="deviceWidth" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- End Section 4 -->
+
+    <!-- Section 5 -->
+    <table border="0" cellpadding="0" cellspacing="0" class="deviceWidth" style="margin:0 auto; width: 100%;">
+        <tr>
+            <td style="background-color: #fff">
+                <table align="left" width="54%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                    <tr>
+                        <td valign="top" align="center" class="center">
+                            <img width="632" src="https://dummyimage.com/632x624/bcbcbc" alt="" border="0" style="display: block;" class="deviceWidth" />
+                        </td>
+                    </tr>
+                </table>
+                <table align="right" width="46%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                    <tr>
+                        <td>
+                            <p class="title-2" style="margin: 0;
+                            background-color: #414141;
+                            color: #fff;
+                            text-transform: uppercase;
+                            padding: 28px 40px;
+                            font-size: 32px;">Want to view and edit <br> this document in word <br> on your computer, <br> tablet, or phone?</p>
+
+                            <p style="margin: 0; padding: 26px 20px 44px 58px; font-size: 24px; text-align: justify;">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- End Section 5 -->
+
+    <!-- Section 6: Have more to say -->
+    <table border="0" cellpadding="0" cellspacing="0" class="deviceWidth" style="margin:0 auto; width: 100%;">
+        <tr>
+            <td style="background-color: #414141;">
+                <table align="left" width="54%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                    <tr>
+                        <td style="padding: 24px 15px">
+                            <p class="title-2" style="margin: 0;
+                            color: #fff;
+                            text-transform: uppercase;
+                            padding: 0 0 10px;
+                            text-align: center;
+                            font-size: 34px;">How more to say?</p>
+
+                            <table align="left" width="50%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                <tr>
+                                    <td valign="top" align="center" class="center">
+                                        <p style="margin: 0; color: #fff; text-align: justify; padding: 17px 10px 0 20px;
+                                        font-size: 21px; line-height: 32px;">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table align="right" width="50%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                <tr>
+                                    <td>
+                                        <p style="margin: 0; color: #fff; text-align: justify; padding: 17px 10px 0 20px; 
+                                        font-size: 21px; line-height: 32px;">
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                                            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table align="right" width="46%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                    <tr>
+                        <td style="padding: 22px 20px 5px" valign="top" align="center" cellpadding="0" cellspacing="0" border="0">
+                            <table align="left" style="padding:0 5px; display: inline-block;" width="50%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                <tr>
+                                    <td>
+                                        <img src="https://dummyimage.com/270x270/bcbcbc" alt="" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <table align="right" style="padding: 0 5px; display: inline-block;" width="50%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                <tr>
+                                    <td style="position: relative;">
+                                        <img src="https://dummyimage.com/270x270/bcbcbc" alt="" />
+                                        <span style="position: absolute; top: 97px; left: -10px; content: '';
+                                        border-top: 24px solid transparent;
+                                        border-bottom: 24px solid transparent;
+                                        border-left: 34px solid #fff;"></span>
+                                        <span style="position: absolute; top: 101px; left: -8px; content: '';
+                                        border-top: 20px solid transparent;
+                                        border-bottom: 20px solid transparent;
+                                        border-left: 28px solid #646464;"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0 20px 0" valign="top" align="center" cellpadding="0" cellspacing="0" border="0">
+                            <table align="left" style="padding: 0 5px; display: inline-block;" width="50%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                <tr>
+                                    <td>
+                                        <img src="https://dummyimage.com/270x270/bcbcbc" alt="" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <table align="right" style="padding: 0 5px; display: inline-block;" width="50%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                <tr>
+                                    <td>
+                                        <img src="https://dummyimage.com/270x270/bcbcbc" alt="" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <!-- End Section 6 -->
+
+    <!-- Section Footer -->
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="color: #f89c3a;
+            font-size: 26px;
+            padding: 32px 40px 10px;
+            text-transform: uppercase;
+            font-weight: bold;">
+                Company name
+            </td>
+        </tr>
+        <tr style="position: relative;">
+            <td style="font-weight: bold;
+            font-size: 23px;
+            padding-left: 40px;">
+                Street Address
+                <br> City, ST ZIP Code
+            </td>
+
+        </tr>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" align="right">
+        <tr>
+            <td>
+                <span style="display: inline-block;
+                margin-right: -3px; width: 0; height: 0; border-top: 30px solid transparent;
+                    border-bottom: 0 solid transparent; border-right: 64px solid #f89c3a;"></span>
+                <span class="top-header" style="display: inline-block; width: 260px; height: 30px; background-color: #f89c3a; ">
+                </span>
+
+            </td>
+        </tr>
+    </table>
+    <!-- End Section Footer -->
+
 </body>
 
 </html>
