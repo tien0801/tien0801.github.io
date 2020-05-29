@@ -12,7 +12,7 @@
 
 
     <style type="text/css">
-        /* .bg-template {
+        .bg-template {
             position: absolute;
             content: "";
             top: 0;
@@ -27,7 +27,6 @@
             background-size: 100%;
             z-index: 1;
         }
-         */
         
         img {
             max-width: 100%;
@@ -39,60 +38,104 @@
             border-spacing: 0;
             border-collapse: collapse;
         }
+        
+        .title-main {
+            font-size: 40px;
+            font-weight: bold;
+        }
+        
+        .section-news:before {
+            position: absolute;
+            content: "";
+            background-color: #fff;
+            opacity: .5;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+        
+        .list-news .item-news.news-1 {
+            top: 216px;
+        }
+        
+        .list-news .item-news.news-2 {
+            top: 174px;
+        }
+        
+        .list-news .item-news.news-3 {
+            top: 124px;
+        }
+        
+        .list-news .item-news.news-4 {
+            top: 84px;
+        }
+        
+        .list-news .item-news .box-news {
+            background-color: #f89c3a;
+            display: block;
+        }
+        
+        .list-news .item-news .title-news {
+            color: #fff;
+            display: table-cell;
+            vertical-align: middle;
+            height: 60px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            text-transform: uppercase;
+            font-size: 11px;
+            line-height: 1.5;
+        }
         /* Media Queries */
         
-        @media only screen and (min-width: 992px) {
+        @media only screen and (min-width: 768px) {
             .section-news {
-                display: block !important;
+                display: block;
             }
         }
         
-        @media only screen and (max-width: 991px) {
-            body {
-                font-size: 15px !important;
-            }
+        @media only screen and (max-width: 767px) {
             .deviceWidth {
-                width: 100%!important;
-                padding: 0 !important;
-                max-width: 575px !important;
+                width: 440px!important;
+                padding: 0;
             }
             .center {
                 text-align: center!important;
             }
-            .item-news.news-1,
-            .item-news.news-2,
-            .item-news.news-3,
-            .item-news.news-4 {
-                padding-top: 20px !important;
+            .list-news .item-news.news-1,
+            .list-news .item-news.news-2,
+            .list-news .item-news.news-3,
+            .list-news .item-news.news-4 {
+                top: 0;
             }
-            .title-news {
-                font-size: 9px !important;
+        }
+        
+        @media only screen and (max-width: 479px) {
+            .deviceWidth {
+                width: 280px!important;
+                padding: 0;
             }
-            .box-content-section2 {
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-            .title-main {
-                font-size: 32px !important;
-            }
-            .title-2 {
-                font-size: 18px !important;
-                text-align: center !important;
-            }
-            .banner-newsletter {
-                padding-top: 30px !important;
+            .center {
+                text-align: center!important;
             }
         }
     </style>
 </head>
 
-<body style="position: relative; font-family: 'Lato', sans-serif;
-    font-size: 16px; margin: 0 auto; padding: 0; max-width: 1170px;
-    line-height: 1.4; box-sizing: border-box;">
+<body style="position: relative;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1170px;
+    line-height: 1.4;
+    box-sizing: border-box;">
 
     <!-- <div class="bg-template"></div> -->
 
-    <!-- Section Header -->
     <table class="section-header" border="0" cellspacing="0" cellpadding="0" style="border-spacing: 0;">
         <tr>
             <td class="top-header" style="display: inline-block; width: 260px; height: 30px; background-color: #f89c3a; "></td>
@@ -100,7 +143,7 @@
                 border-bottom: 30px solid transparent; border-left: 64px solid #f89c3a;"> </td>
         </tr>
         <tr>
-            <td class="logo" style="padding: 55px 15px 50px 75px;">
+            <td class="logo" style="padding: 55px 15px 50px 75px">
                 <img src="https://dummyimage.com/144x118/bcbcbc&text=logo" alt="">
             </td>
         </tr>
@@ -110,95 +153,71 @@
             </td>
         </tr>
         <tr>
-            <td class="title-main" style="font-size: 70px; font-weight: bold; text-transform: uppercase;
+            <td class="title-main" style="font-size: 70px;
+            font-weight: bold;
+            text-transform: uppercase;
             padding: 24px 40px 60px;">
                 Newsletter
             </td>
         </tr>
-
-    </table>
-    <!-- End Section Header -->
-
-    <!-- Section 2 -->
-    <table style="width: 100%;" border="0" cellpadding="0" cellspacing="0">
         <tr>
-            <td style="background-image: url('https://dummyimage.com/1170x700/ccc'); padding-top: 350px;
-            background-position: top center; background-repeat: no-repeat;" class="banner-newsletter">
-                <table style="position: relative; width: 100%; margin-top: 20px; 
-                background-image: url('https://dummyimage.com/1170x300/bcbcbc'); background-size: inherit; 
-                background-position: bottom center; background-repeat: no-repeat;" class="section-news" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td style="padding: 0 24px 50px;" class="box-content-section2">
-                            <table align="left" width="50%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
-                                <tr class="list-news">
-                                    <td class="item-news news-1" style="padding-top: 0; width: 50%; max-width: 234px; padding-left: 15px; padding-right:15px; position: relative;">
-                                        <span style="background-color: #f89c3a;
-                            display: block;" class="box-news">
-                                                <img src="https://dummyimage.com/234x234/000" width="234px" alt="">
-                                                <span style="color: #fff; display: table-cell; vertical-align: middle; height: 60px; padding-top: 5px;
-                            padding-bottom: 5px; padding-left: 10px; padding-right: 10px;
-                            text-transform: uppercase; font-size: 11px; line-height: 1.5;" class="title-news">Get started right away</span>
-                                        </span>
-                                    </td>
+            <td class="banner-newsletter">
+                <img src="https://dummyimage.com/1170x610/bcbcbc" alt="">
+            </td>
+        </tr>
+    </table>
 
-                                    <td class="item-news news-2" style="padding-top: 70px; width: 50%; max-width: 234px; padding-left: 15px; padding-right:15px;">
-                                        <span style="background-color: #f89c3a;
-                            display: block;" class="box-news">
-                                                <img src="https://dummyimage.com/234x234/000" width="234px" alt="">
-                                                <span style="color: #fff; display: table-cell; vertical-align: middle; height: 60px; padding-top: 5px;
-                            padding-bottom: 5px; padding-left: 10px; padding-right: 10px;
-                            text-transform: uppercase; font-size: 11px; line-height: 1.5;" class="title-news">Want to view andedit
-                                                    <br>This document in word on
-                                                    <br>Your computer, tablet, or phone?
-                                                </span>
-                                        </span>
-                                    </td>
-                                </tr>
-                            </table>
+    <!-- Section News -->
+    <table class="section-news" border="0" cellspacing="0" cellpadding="0" style="position: relative; width: 100%; margin-top: 20px; background-image: url('https://dummyimage.com/1170x308/bcbcbc'); background-position: top center; background-repeat: no-repeat;">
+        <tr>
+            <td style="padding: 0 24px;">
+                <table cellpadding="0" cellspacing="0" border="0">
+                    <tr class="list-news">
+                        <td class="item-news news-1" style="top: 40px; width: 25%; max-width: 234px; padding-left: 15px; padding-right:15px; position: relative;">
+                            <span class="box-news">
+                                <img src="https://dummyimage.com/234x234/000" width="234px" alt="">
+                                <span class="title-news">Get started right away</span>
+                            </span>
+                        </td>
 
-                            <table align="right" width="50%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
-                                <tr>
-                                    <td class="item-news news-3" style="padding-top: 140px; width: 50%; max-width: 234px; padding-left: 15px; padding-right:15px; position: relative;">
-                                        <span style="background-color: #f89c3a;
-                                            display: block;" class="box-news">
-                                                                <img src="https://dummyimage.com/234x234/000" width="234px" alt="">
-                                                                <span style="color: #fff; display: table-cell; vertical-align: middle; height: 60px; padding-top: 5px;
-                                            padding-bottom: 5px; padding-left: 10px; padding-right: 10px;
-                                            text-transform: uppercase; font-size: 11px; line-height: 1.5;" class="title-news">Let it flow</span>
-                                        </span>
-                                    </td>
+                        <td class="item-news news-2" style="position: absolute; top: 60px; width: 25%; max-width: 234px; padding-left: 15px; padding-right:15px;">
+                            <span class="box-news">
+                                <img src="https://dummyimage.com/234x234/000" width="234px" alt="">
+                                <span class="title-news">Want to view andedit
+                                    <br>This document in word on
+                                    <br>Your computer, tablet, or phone?
+                                </span>
+                            </span>
+                        </td>
 
-                                    <td class="item-news news-4" style="padding-top: 210px; width: 50%; max-width: 234px; padding-left: 15px; padding-right:15px; position: relative;">
-                                        <span style="background-color: #f89c3a;
-                                            display: block;" class="box-news">
-                                                                <img src="https://dummyimage.com/234x234/000" width="234px" alt="">
-                                                                <span style="color: #fff; display: table-cell; vertical-align: middle; height: 60px; padding-top: 5px;
-                                            padding-bottom: 5px; padding-left: 10px; padding-right: 10px;
-                                            text-transform: uppercase; font-size: 11px; line-height: 1.5;" class="title-news">Have more to say</span>
-                                        </span>
-                                    </td>
-                                </tr>
-                            </table>
+                        <td class="item-news news-3" style="width: 25%; max-width: 234px; padding-left: 15px; padding-right:15px; position: relative;">
+                            <span class="box-news">
+                                <img src="https://dummyimage.com/234x234/000" width="234px" alt="">
+                                <span class="title-news">Let it flow</span>
+                            </span>
+                        </td>
 
+                        <td class="item-news news-4" style="width: 25%; max-width: 234px; padding-left: 15px; padding-right:15px; position: relative;">
+                            <span class="box-news">
+                                <img src="https://dummyimage.com/234x234/000" width="234px" alt="">
+                                <p class="title-news">Have more to say</p>
+                            </span>
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
     </table>
-    </td>
-    </tr>
-    </table>
-    <!-- End Section 2 -->
+    <!-- End Section News -->
 
     <!-- Section 3 -->
     <table border="0" cellpadding="0" cellspacing="0" class="deviceWidth" style="margin:0 auto; width: 100%;">
         <tr>
             <td style="background-color: #d3c4a7">
-                <table style="font-size: 0;" align="left" width="54%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                <table align="left" width="54%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
                     <tr>
                         <td valign="top" align="center" class="center">
-                            <img width="632" src="https://dummyimage.com/632x624/909090" alt="" border="0" style="display: block;" class="deviceWidth" />
+                            <img width="632" src="https://dummyimage.com/632x624/bcbcbc" alt="" border="0" style="display: block;" class="deviceWidth" />
                         </td>
                     </tr>
                 </table>
@@ -271,7 +290,7 @@
                 <table align="right" width="46%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
                     <tr>
                         <td valign="top" align="center" class="center">
-                            <img width="632" src="https://dummyimage.com/538x520/bcbcbc" alt="" border="0" style="display: block;" class="deviceWidth" />
+                            <img width="632" src="https://dummyimage.com/538x530/bcbcbc" alt="" border="0" style="display: block;" class="deviceWidth" />
                         </td>
                     </tr>
                 </table>
@@ -284,7 +303,7 @@
     <table border="0" cellpadding="0" cellspacing="0" class="deviceWidth" style="margin:0 auto; width: 100%;">
         <tr>
             <td style="background-color: #fff">
-                <table style="font-size: 0;" align="left" width="54%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                <table align="left" width="54%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
                     <tr>
                         <td valign="top" align="center" class="center">
                             <img width="632" src="https://dummyimage.com/632x610/bcbcbc" alt="" border="0" style="display: block;" class="deviceWidth" />
@@ -352,10 +371,49 @@
                         </td>
                     </tr>
                 </table>
-                <table style="font-size: 0;" align="right" width="46%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                <table align="right" width="46%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
                     <tr>
-                        <td>
-                            <img src="https://dummyimage.com/538x500/bcbcbc" alt="">
+                        <td style="padding: 20px 20px 5px" valign="top" align="center" cellpadding="0" cellspacing="0" border="0">
+                            <table align="left" style="padding:0 5px; display: inline-block;" width="50%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                <tr>
+                                    <td>
+                                        <img src="https://dummyimage.com/270x270/bcbcbc" alt="" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <table align="right" style="padding: 0 5px; display: inline-block;" width="50%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                <tr>
+                                    <td style="position: relative;">
+                                        <img src="https://dummyimage.com/270x270/bcbcbc" alt="" />
+                                        <span style="position: absolute; top: 97px; left: -10px; content: '';
+                                        border-top: 24px solid transparent;
+                                        border-bottom: 24px solid transparent;
+                                        border-left: 34px solid #fff;"></span>
+                                        <span style="position: absolute; top: 101px; left: -8px; content: '';
+                                        border-top: 20px solid transparent;
+                                        border-bottom: 20px solid transparent;
+                                        border-left: 28px solid #646464;"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0 20px 20px" valign="top" align="center" cellpadding="0" cellspacing="0" border="0">
+                            <table align="left" style="padding: 0 5px; display: inline-block;" width="50%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                <tr>
+                                    <td>
+                                        <img src="https://dummyimage.com/270x270/bcbcbc" alt="" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <table align="right" style="padding: 0 5px; display: inline-block;" width="50%" cellpadding="0" cellspacing="0" border="0" class="deviceWidth">
+                                <tr>
+                                    <td>
+                                        <img src="https://dummyimage.com/270x270/bcbcbc" alt="" />
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
                     </tr>
                 </table>
@@ -392,7 +450,7 @@
                     border-bottom: 0 solid transparent; border-right: 64px solid #f89c3a;">
 
             </td>
-            <td class="" style="display: inline-block; width: 260px; height: 30px; background-color: #f89c3a; ">
+            <td class="top-header" style="display: inline-block; width: 260px; height: 30px; background-color: #f89c3a; ">
             </td>
         </tr>
     </table>
