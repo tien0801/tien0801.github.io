@@ -5,6 +5,12 @@
 		},
 		{
 			"path": ".."
+		},
+		{
+			"path": "../../synova-newsletter-email-template"
+		},
+		{
+			"path": "../../../../../Applications/MAMP/htdocs/meocode"
 		}
 	],
     "settings": {}
