@@ -11,6 +11,12 @@
 		},
 		{
 			"path": "../../../../../Applications/MAMP/htdocs/meocode"
+		},
+		{
+			"path": "../../Synova/vtce-moodle"
+		},
+		{
+			"path": "../../Synova/moodle/moodle_data/moodle"
 		}
 	],
     "settings": {}
