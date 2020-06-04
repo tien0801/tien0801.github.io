@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
+    <title>VBT Frontend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="">
+    <style>
+        .main-content {
+            background-color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Particles JS</h1>
+        <!-- particles -->
+        <div class="main-content">
+            <div id="particles-js"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- particles.min js -->
+    <script src="js/particles.min.js"></script>
+
+    <script>
+        /* ---- particles.js config ---- */
+
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 70,
+      "density": {
+        "enable": true,
+        "value_area":1000
+      }
+    },
+    "color": {
+      "value": "#888"
+    },
+    
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#fff"
+      },
+      "polygon": {
+        "nb_sides": 9
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": .5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 2,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 6,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 120,
+      "color": "#ffffff",
+      "opacity": 0.06,
+      "width": 1
+    },
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": false
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 240,
+        "line_linked": {
+          "opacity": 0.2
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+    </script>
+</body>
+
+</html>
