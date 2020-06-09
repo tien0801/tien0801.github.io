@@ -5,6 +5,16 @@ body {
   max-width: 1920px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 991px) {
+  body {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  body {
+    font-size: 14px;
+  }
+}
 
 *, ::after, ::before {
   box-sizing: border-box;
