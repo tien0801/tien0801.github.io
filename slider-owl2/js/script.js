@@ -47,8 +47,8 @@ $(document).ready(function() {
         // $('#ifrm').attr('src', "http://www.google.com")
     }, 500);*/
 
-    if($('.home-slider-3').length >0) {
-        $('.home-slider-3').owlCarousel({
+    if($('.js-home-slider-3').length >0) {
+        $('.js-home-slider-3').owlCarousel({
             loop: true,
             // autoplay: true,
             // autoplayTimeout: 4000,
