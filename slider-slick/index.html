@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href="https://yosu.vn/current-page">
-    <title></title>
+    <title>Slick slider</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
@@ -19,15 +19,56 @@
             width: 100%;
             height: auto;
         }
+        .home-slider .item {
+            margin: 20px;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Slick slider</h1>
+        <h1><a href="https://kenwheeler.github.io/slick/" target="_blank">Slick slider</a></h1>
         <div class="row">
             <div class="col-md-6">
-                <h2>Slider Syncing</h2>
+                <h3>Slider Simple</h3>
+                <div class="home-slider slick-slider js-slick-home">
+                    <div class="item">
+                        <img src="https://dummyimage.com/435x350/bcbcbc/000000&text=1" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="https://dummyimage.com/435x350/bcbcbc/000000&text=2" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="https://dummyimage.com/435x350/bcbcbc/000000&text=3" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="https://dummyimage.com/435x350/bcbcbc/000000&text=4" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h3>Slider Vertical</h3>
+                <div class="slick-slider js-vertical-home">
+                    <div class="item">
+                        <img src="https://dummyimage.com/935x250/bcbcbc/000000&text=1" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="https://dummyimage.com/935x250/bcbcbc/000000&text=2" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="https://dummyimage.com/935x250/bcbcbc/000000&text=3" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="https://dummyimage.com/935x250/bcbcbc/000000&text=4" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Slider Syncing</h3>
                 <div class="slider slider-for">
                     <div>
                         <img src="https://dummyimage.com/1135x350/bcbcbc/000000&text=1" alt="">
@@ -82,7 +123,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <h1>Vertical slider</h1>
+                <h3>Vertical slider</h3>
                 <div class="vertical-slider-box">
                     <div class="text-center" style="margin-bottom: 30px;">
                         <a class="btn btn-primary" data-toggle="modal" href='#slick-slide-modal'>Xem trên modal Bootstrap</a>
@@ -230,35 +271,68 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <!-- <script src="js/slick.js" type="text/javascript" charset="utf-8"></script> -->
-    <script src="js/slick.js"></script>
+    <script src="js/slick.min.js"></script>
     <script>
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        // arrows: false,
-        // fade: true,
-        infinite: false,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        prevArrow: '<span class="btn-arrow btn-prev"><i class="fas fa-chevron-left"></i></span>',
-        nextArrow: '<span class="btn-arrow btn-next"><i class="fas fa-chevron-right"></i></span>',
-        asNavFor: '.slider-nav'
-    });
-    $('.slider-nav').slick({
-        slidesToShow: 3,
-        // slidesToScroll: 1,
-        asNavFor: '.slider-for',
-        autoplay: true,
-        dots: true,
-        infinite: false,
-        focusOnSelect: true
-    });
+    
     </script>
 
     <!-- Slick slider vertical -->
     <script>
         $(document).ready(function () {
+            // Simple
+            $('.js-slick-home').slick({
+                infinite: false, //Loop
+                autoplay: true,
+                autoplaySpeed: 3000,
+                // centerPadding: '40px',
+                dots: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                prevArrow: '<span class="btn-arrow btn-prev"><i class="fas fa-chevron-left"></i></span>',
+                nextArrow: '<span class="btn-arrow btn-next"><i class="fas fa-chevron-right"></i></span>',
+                // vertical: true,
+                // verticalSwiping: true,
+                
+            });
+
+            //Slier Vertical
+            $('.js-vertical-home').slick({
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                vertical: true,
+                verticalSwiping: true,
+                prevArrow: '<span class="btn-arrow btn-prev"><i class="fas fa-chevron-left"></i></span>',
+                nextArrow: '<span class="btn-arrow btn-next"><i class="fas fa-chevron-right"></i></span>',
+            });
+
+            // Slider SYNC
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                // arrows: false,
+                // fade: true,
+                infinite: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                prevArrow: '<span class="btn-arrow btn-prev"><i class="fas fa-chevron-left"></i></span>',
+                nextArrow: '<span class="btn-arrow btn-next"><i class="fas fa-chevron-right"></i></span>',
+                asNavFor: '.slider-nav'
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 3,
+                // slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                autoplay: true,
+                dots: true,
+                infinite: false,
+                focusOnSelect: true
+            });
+
+            // Slider Vertical
             $('.slider-for-2').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
