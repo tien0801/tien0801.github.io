@@ -292,6 +292,29 @@
                 nextArrow: '<span class="btn-arrow btn-next"><i class="fas fa-chevron-right"></i></span>',
                 // vertical: true,
                 // verticalSwiping: true,
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
                 
             });
 
