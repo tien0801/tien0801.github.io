@@ -58,21 +58,19 @@
     <script src="js/froogaloop2.min.js"></script>
     <script>
         $(window).bind('scroll load', function () {
+            var scrollDistance = $(window).scrollTop();
+            var iframe = $('#vimeo-player')[0];
+            var player = $f(iframe);
+        
+            function videoPlay() {
+                player.api('play');
+                console.log('---video play---');
+            }
+            function videoPause() {
+                player.api('pause');
+                console.log('---video pause---');
+            }
             if ($('.js-player-section').length > 0 && $('#vimeo-player').length > 0) {
-                var scrollDistance = $(window).scrollTop();
-
-                function videoPlay() {
-                    var iframe = $('#vimeo-player')[0];
-                    var player = $f(iframe);
-                    player.api('play');
-                    console.log('video play');
-                }
-                function videoPause() {
-                    var iframe = $('#vimeo-player')[0];
-                    var player = $f(iframe);
-                    player.api('pause');
-                    console.log('video pause');
-                }
                 $.fn.isInViewport = function () {
                     let elementTop = $(this).offset().top;
                     let elementBottom = elementTop + $(this).outerHeight();
@@ -82,6 +80,7 @@
 
                     return elementBottom > viewportTop && elementTop < viewportBottom;
                 };
+
                 if ($('.js-player-section').isInViewport()) {
                     videoPlay();
                 } else {
@@ -104,6 +103,8 @@
             }
 
         })
+
+        
     </script>
 </body>
 
