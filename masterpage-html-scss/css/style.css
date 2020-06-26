@@ -482,8 +482,7 @@ ul {
 }
 
 .btn-main,
-.btn-main-2,
-.btn-trans {
+.btn-main-2 {
   display: inline-flex;
   font-size: 18px;
   font-weight: bold;
@@ -491,22 +490,19 @@ ul {
   text-align: center;
 }
 .btn-main:hover,
-.btn-main-2:hover,
-.btn-trans:hover {
+.btn-main-2:hover {
   text-decoration: none;
 }
 @media (max-width: 1199px) {
   .btn-main,
-  .btn-main-2,
-  .btn-trans {
+  .btn-main-2 {
     padding: 10px 24px;
     font-size: 18px;
   }
 }
 @media (max-width: 767px) {
   .btn-main,
-  .btn-main-2,
-  .btn-trans {
+  .btn-main-2 {
     font-size: 14px;
     padding: 10px 20px;
   }
@@ -527,15 +523,6 @@ ul {
 }
 .btn-main-2:hover {
   color: #fff;
-}
-
-.btn-trans {
-  background-color: transparent;
-  color: #f27e7f;
-  border: 1px solid #f27e7f;
-}
-.btn-trans:hover {
-  color: #f27e7f;
 }
 
 .title-main {
