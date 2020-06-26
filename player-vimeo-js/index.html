@@ -13,16 +13,98 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="">
     <style>
+        iframe {
+            width: 100%;
+        }
+        .div-none, .div-bot {
+            display: block;
+            width: 100%;
+            height: 140px;
+            background-color: #000;
+        }
+        .div-bot {
+            height: 1500px;
+        }
+        .padding-section {
+            padding: 40px 0;
+        }
+
+        .box-vimeo-player {
+            position: relative;
+            padding: 56.25% 0 0 0;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>page</h1>
+        <h1>Scroll Player video Vimeo - <a href="http://jsfiddle.net/joan_r/dutzh512/">link demo</a></h1>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+
+        <section class="padding-section">
+            <div class="box-vimeo-player js-player-section">
+                <iframe id="vimeo-player" src="https://player.vimeo.com/video/428165246" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <div class="div-bot"></div>
         
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="js/froogaloop2.min.js"></script>
+    <script>
+        $(window).bind('scroll load', function () {
+            if ($('.js-player-section').length > 0 && $('#vimeo-player').length > 0) {
+                var scrollDistance = $(window).scrollTop();
+
+                function videoPlay() {
+                    var iframe = $('#vimeo-player')[0];
+                    var player = $f(iframe);
+                    player.api('play');
+                    console.log('video play');
+                }
+                function videoPause() {
+                    var iframe = $('#vimeo-player')[0];
+                    var player = $f(iframe);
+                    player.api('pause');
+                    console.log('video pause');
+                }
+                $.fn.isInViewport = function () {
+                    let elementTop = $(this).offset().top;
+                    let elementBottom = elementTop + $(this).outerHeight();
+
+                    let viewportTop = $(window).scrollTop();
+                    let viewportBottom = viewportTop + $(window).height();
+
+                    return elementBottom > viewportTop && elementTop < viewportBottom;
+                };
+                if ($('.js-player-section').isInViewport()) {
+                    videoPlay();
+                } else {
+                    videoPause();
+                }
+
+                // $('.js-player-section').each(function(i) {
+                //     var height_iframe = $('#vimeo-player').height();
+                //     console.log(height_iframe);
+                //     if ($(this).position().top < scrollDistance) {
+                //         videoPlay();
+                //     } else {
+                //         videoPause();
+                //     }
+                //     if(($(this).position().top + height_iframe) < scrollDistance) {
+                //         console.log('bot video');
+                //         videoPause();
+                //     }
+                // });
+            }
+
+        })
+    </script>
 </body>
 
 </html>
