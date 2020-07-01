@@ -5,6 +5,7 @@ $(document).ready(function() {
             loop: true,
             // autoplay: true,
             // autoplayTimeout: 4000,
+            // autoplaySpeed: 2000,
             // nestedItemSelector: 'item-gall',
             lazyLoad: true,
             margin: 0,
