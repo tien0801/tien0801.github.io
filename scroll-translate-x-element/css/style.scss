@@ -1,0 +1,60 @@
+// About page
+.about-page {
+    color: #000;
+    min-height: 100vh;
+
+    .about-top-content {
+        position: relative;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        // padding-top: 200vh;
+
+        .wrap-case-top-intro {
+            -webkit-transform: translateZ(0);
+            -moz-transform: translateZ(0);
+            -ms-transform: translateZ(0);
+            -o-transform: translateZ(0);
+            transform: translateZ(0);
+            position: fixed;
+            bottom: 0;
+            width: calc(100vw);
+
+            .case-top {
+                height: 100vh;
+            }
+        }
+    }
+
+    .case-intro {
+        position: absolute;
+        left: 100%;
+        bottom: 0;
+        background-color: #fff;
+        width: 100%;
+        height: calc(100vh);
+        background-color: red;
+
+        .content-case {
+            background-color: red;
+        }
+    }
+}
+
+.about-page.scroll-done-case-intro {
+    .wrap-case-top-intro {
+        position: absolute;
+    }
+
+    .case-intro {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        -webkit-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -o-transform: none !important;
+        transform: none !important;
+    }
+}

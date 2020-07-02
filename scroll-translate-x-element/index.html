@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
+    <title>VBT Frontend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+        img {
+            max-width: 100%;
+        }
+
+        .div-none {
+            background-color: #333;
+            color: #fff;
+            height: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+    </div>
+    
+    <section class="page-section about-page">
+        <h1 class="text-center">Scroll translateX div</h1>
+        
+            <div class="about-top-content project-top-content" style=" background-image: url('https://dummyimage.com/1920x1080/bdbdbd/fff');">
+                <div class="wrap-case-top-intro">
+                    <div class="case-top">
+                        <div class="img-desktop">
+                            <!-- <div class="super-img ng-isolate-scope">
+                                <img src="https://gxn.3xn.com/wp-content/uploads/sites/4/2017/08/HERO-1.jpg" alt="">
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="case-intro" id="case-intro">
+                        <div class="content-case">
+                            <img src="https://dummyimage.com/1920x1080/000/fff" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <div class="section div-none">
+            More Section ...
+        </div>
+        
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script>
+        $(window).bind('load resize', function () {
+            var width_case = $('#case-intro .content-case').width();
+            var height_case = $('#case-intro .content-case').height();
+        
+            $('.about-top-content').css('padding-top', (width_case + height_case));
+
+            if ($('.case-intro').length > 0) {
+                $('html,body').animate({ scrollTop: 0 }, 'slow');
+                return false;
+            }
+        });
+
+        $(window).on('scroll', function(){
+            var width_case = $('#case-intro .content-case').width();
+            var trainPosition = $(window).scrollTop();
+        
+            $('#case-intro').css('transform','translateX(' + (-trainPosition) + 'px)');
+
+            if (trainPosition >= width_case) {
+                $('.about-page').addClass('scroll-done-case-intro');
+            } else {
+                $('.about-page').removeClass('scroll-done-case-intro');
+            }
+            
+            console.log('scroll top = ' + trainPosition);
+        });
+    </script>
+</body>
+
+</html>
