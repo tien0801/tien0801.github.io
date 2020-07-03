@@ -1,0 +1,47 @@
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box-loadmore.active .loader {
+  display: block;
+}
+.box-loadmore.active .btn-view-more {
+  display: none;
+}
+.box-loadmore .loader {
+  display: none;
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #3498db;
+  width: 64px;
+  height: 64px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+.box-loadmore .btn-view-more {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+}
+
+/*# sourceMappingURL=style.css.map */

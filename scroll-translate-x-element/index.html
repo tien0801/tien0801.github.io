@@ -31,20 +31,18 @@
     </div>
     
     <section class="page-section about-page">
-        <h1 class="text-center">Scroll translateX div</h1>
         
-            <div class="about-top-content project-top-content" style=" background-image: url('https://dummyimage.com/1920x1080/bdbdbd/fff');">
+            <div class="about-top-content">
                 <div class="wrap-case-top-intro">
                     <div class="case-top">
                         <div class="img-desktop">
-                            <!-- <div class="super-img ng-isolate-scope">
-                                <img src="https://gxn.3xn.com/wp-content/uploads/sites/4/2017/08/HERO-1.jpg" alt="">
-                            </div> -->
+                            <img src="https://dummyimage.com/1920x1080/bdbdbd/fff" alt="">
                         </div>
                     </div>
                     <div class="case-intro" id="case-intro">
                         <div class="content-case">
-                            <img src="https://dummyimage.com/1920x1080/000/fff" alt="">
+                            <h1 class="">Scroll translateX div</h1>
+                            <img src="https://dummyimage.com/1000x580/000/fff" alt="">
                         </div>
                     </div>
                 </div>
@@ -62,8 +60,8 @@
 
     <script>
         $(window).bind('load resize', function () {
-            var width_case = $('#case-intro .content-case').width();
-            var height_case = $('#case-intro .content-case').height();
+            var width_case = $('#case-intro').width();
+            var height_case = $('#case-intro').height();
         
             $('.about-top-content').css('padding-top', (width_case + height_case));
 

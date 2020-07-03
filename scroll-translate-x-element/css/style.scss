@@ -5,11 +5,7 @@
 
     .about-top-content {
         position: relative;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
         overflow: hidden;
-        // padding-top: 200vh;
 
         .wrap-case-top-intro {
             -webkit-transform: translateZ(0);
@@ -19,7 +15,7 @@
             transform: translateZ(0);
             position: fixed;
             bottom: 0;
-            width: calc(100vw);
+            width: 100%;
 
             .case-top {
                 height: 100vh;
