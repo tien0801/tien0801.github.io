@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html lang="vi">
-
+<html lang="en">
 <head>
-    <meta name='revisit-after' content='1 days' />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://yosu.vn/current-page">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="shortcut icon" href="./vubatien.jpg" type="image/gif">
-    <title>VBT Frontend</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
+    
     <style>
         iframe {
             width: 100%;
@@ -19,7 +14,7 @@
         .div-none, .div-bot {
             display: block;
             width: 100%;
-            height: 140px;
+            height: 240px;
             background-color: #000;
         }
         .div-bot {
@@ -45,71 +40,32 @@
         }
     </style>
 </head>
-
 <body>
     <div class="container">
-        <h1>Scroll Player video Youtube - <a href="http://jsfiddle.net/joan_r/dutzh512/">link demo</a></h1>
-        <div class="div-none"></div>
-        <div class="div-none"></div>
-        <div class="div-none"></div>
 
-        <section class="padding-section">
-            <div class="box-vimeo-player js-player-section">
-                <iframe id="i_video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <div class="div-bot"></div>
+        <h1>Scroll Player video Youtube - <a href="#">link demo</a></h1>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
         
+        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+        <div class="js-player-section">
+            <div class="box-vimeo-player">
+                <div id="id_video"></div>
+            </div>
+        </div>
+
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/script-video.js"></script>
 
-    <script src="js/froogaloop2.min.js"></script>
-    <script>
-        $(window).bind('scroll load', function () {
-            var scrollDistance = $(window).scrollTop();
-            var iframe = $('#vimeo-player')[0];
-            var player = $f(iframe);
-
-            var dv = document.getElementById('video-box');
-            var v = $('#i_video');
-        
-            function videoPlay() {
-                player.api('play');
-                console.log('---video play---');
-            }
-            function videoPause() {
-                player.api('pause');
-                console.log('---video pause---');
-            }
-            if ($('.js-player-section').length > 0 && v.length > 0) {
-                $.fn.isInViewport = function () {
-                    let elementTop = $(this).offset().top;
-                    let elementBottom = elementTop + $(this).outerHeight();
-
-                    let viewportTop = $(window).scrollTop();
-                    let viewportBottom = viewportTop + $(window).height();
-
-                    return elementBottom > viewportTop && elementTop < viewportBottom;
-                };
-
-                if ($('.js-player-section').isInViewport()) {
-                    // videoPlay();
-                    v.src='https://www.youtube.com/embed/lgkyhEHIC_c';
-                    console.log('play');
-                } else {
-                    // videoPause();
-                    v.src='';
-                    console.log('pause');
-                }
-
-            }
-
-        })
-
-        
-    </script>
 </body>
-
 </html>
