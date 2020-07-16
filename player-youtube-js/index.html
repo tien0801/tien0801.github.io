@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href="https://yosu.vn/current-page">
-    <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
+    <link rel="shortcut icon" href="./vubatien.jpg" type="image/gif">
     <title>VBT Frontend</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -31,21 +31,31 @@
 
         .box-vimeo-player {
             position: relative;
-            padding: 56.25% 0 0 0;
+            height: 0;
+            overflow: hidden;
+            padding-bottom: 26.5%;
+            padding-top: 30%;
+        }
+        .box-vimeo-player iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Scroll Player video Vimeo - <a href="http://jsfiddle.net/joan_r/dutzh512/">link demo</a></h1>
+        <h1>Scroll Player video Youtube - <a href="http://jsfiddle.net/joan_r/dutzh512/">link demo</a></h1>
         <div class="div-none"></div>
         <div class="div-none"></div>
         <div class="div-none"></div>
 
         <section class="padding-section">
             <div class="box-vimeo-player js-player-section">
-                <iframe id="vimeo-player" src="https://player.vimeo.com/video/428165246" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe id="i_video" width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
 
@@ -61,6 +71,9 @@
             var scrollDistance = $(window).scrollTop();
             var iframe = $('#vimeo-player')[0];
             var player = $f(iframe);
+
+            var dv = document.getElementById('video-box');
+            var v = $('#i_video');
         
             function videoPlay() {
                 player.api('play');
@@ -70,7 +83,7 @@
                 player.api('pause');
                 console.log('---video pause---');
             }
-            if ($('.js-player-section').length > 0 && $('#vimeo-player').length > 0) {
+            if ($('.js-player-section').length > 0 && v.length > 0) {
                 $.fn.isInViewport = function () {
                     let elementTop = $(this).offset().top;
                     let elementBottom = elementTop + $(this).outerHeight();
@@ -82,30 +95,15 @@
                 };
 
                 if ($('.js-player-section').isInViewport()) {
-                    if(!$('.js-player-section').hasClass('play')) {
-                        $('.js-player-section').addClass('play');
-                        videoPlay();
-                    }
+                    // videoPlay();
+                    v.src='https://www.youtube.com/embed/lgkyhEHIC_c';
+                    console.log('play');
                 } else {
-                    if($('.js-player-section').hasClass('play')) {
-                        $('.js-player-section').removeClass('play');
-                        videoPause();
-                    }
+                    // videoPause();
+                    v.src='';
+                    console.log('pause');
                 }
 
-                // $('.js-player-section').each(function(i) {
-                //     var height_iframe = $('#vimeo-player').height();
-                //     console.log(height_iframe);
-                //     if ($(this).position().top < scrollDistance) {
-                //         videoPlay();
-                //     } else {
-                //         videoPause();
-                //     }
-                //     if(($(this).position().top + height_iframe) < scrollDistance) {
-                //         console.log('bot video');
-                //         videoPause();
-                //     }
-                // });
             }
 
         })
