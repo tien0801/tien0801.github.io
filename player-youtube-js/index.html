@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="shortcut icon" href="./vubatien.jpg" type="image/gif">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
     <style>
@@ -28,8 +27,7 @@
             position: relative;
             height: 0;
             overflow: hidden;
-            padding-bottom: 26.5%;
-            padding-top: 30%;
+            padding-bottom: 56.2%;
         }
         .box-vimeo-player iframe {
             position: absolute;
@@ -65,7 +63,87 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="js/script-video.js"></script>
+
+    <script>
+                    
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+            
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+        var player;
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('id_video', {
+            //  height: '390',
+            //  width: '640',
+                videoId: 'lgkyhEHIC_c',
+                events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+        
+        // 4. The API will call this function when the video player is ready.
+        function onPlayerReady(event) {
+            event.target.playVideo();
+        }
+        
+        // 5. The API calls this function when the player's state changes.
+        //    The function indicates that when playing a video (state=1),
+        //    the player should play for six seconds and then stop.
+        var done = false;
+        function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING && !done) {
+                //   setTimeout(stopVideo, 6000);
+                done = true;
+            }
+        }
+        function stopVideo() {
+            player.stopVideo();
+        }
+        function pauseVideo() {
+            player.pauseVideo();
+        }
+        function playVideo() {
+            player.playVideo();
+        }
+        
+        var id_video = $('#id_video');
+        $(window).bind('scroll load', function () {
+            if ($('.js-player-section').length > 0 && id_video.length > 0) {
+                $.fn.isInViewport = function () {
+                    let elementTop = $(this).offset().top;
+                    let elementBottom = elementTop + $(this).outerHeight();
+        
+                    let viewportTop = $(window).scrollTop();
+                    let viewportBottom = viewportTop + $(window).height();
+        
+                    return elementBottom > viewportTop && elementTop < viewportBottom;
+                };
+        
+                if ($('.js-player-section').isInViewport()) {
+                    if(!$('.js-player-section').hasClass('play')) {
+                        $('.js-player-section').addClass('play');
+                        playVideo();
+                        console.log('play');
+                    }
+                } else {
+                    if($('.js-player-section').hasClass('play')) {
+                        $('.js-player-section').removeClass('play');
+                        pauseVideo();
+                        console.log('pause');
+                    }
+                }
+        
+            }
+        })
+    
+    </script>
 
 </body>
 </html>

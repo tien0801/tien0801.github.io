@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="./vubatien.jpg" type="image/gif">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <style>
+        iframe {
+            width: 100%;
+        }
+        .div-none, .div-bot {
+            display: block;
+            width: 100%;
+            height: 240px;
+            background-color: #ddd;
+        }
+        .div-bot {
+            height: 1500px;
+        }
+        .padding-section {
+            padding: 40px 0;
+        }
+
+        .box-iframe-youtube {
+            position: relative;
+            height: 0;
+            overflow: hidden;
+            padding-bottom: 56.2%;
+        }
+        .box-iframe-youtube iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Scroll Player video Youtube - <a href="#">link demo</a></h1>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+        
+        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+        <div class="js-player-section">
+            <div class="box-iframe-youtube">
+                <div id="id_video" class="iframe-youtube-autoplay" data-videoid="lgkyhEHIC_c"></div>
+            </div>
+        </div>
+
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+        <div class="div-none"></div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/script-video.js"></script>
+
+</body>
+</html>
