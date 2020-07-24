@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+    	img {
+    		width: 100%;
+    		height: auto;
+    	}
+    	.col-md-4 {
+			margin-bottom: 20px;
+		}
+		.flex-vertical {
+			background-color: #ddd;
+		}
+		.item-student .bot-student {
+			color: red
+		}
+    </style>
+
+	<!-- CSS Main -->
+	<style>
+		/* section 1 */
+		.item-student {
+			display: flex;
+			height: 100%;
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			flex-direction: column;
+			-webkit-box-pack: start;
+		}
+
+		.item-student .bot-student {
+			margin-top: auto;
+		}
+
+		.item-student .desc-student {
+			margin-bottom: 20px;
+		}
+
+		/* section 2 */
+		.row-flex {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		/* section 3 */
+		.flex-vertical {
+			display: flex;
+			justify-content: center;
+			position: relative;
+			min-height: 154px;
+			flex-direction: column;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center">Flexbox CSS</h1>
+	</div>
+	<div class="container">
+		<h3>Fix Height Content Box</h3>
+
+	  	<pre>
+	    	<code>
+.item-student {
+	display: flex;
+	height: 100%;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	flex-direction: column;
+	-webkit-box-pack: start;
+}
+
+.item-student .bot-student {
+	margin-top: auto;
+}
+	    	</code>
+	  	</pre>
+
+		<div class="row row-flex">
+			<div class="col-md-4 col-xs-6">
+				<div class="item-student">
+					<div class="img-student">
+						<img src="https://dummyimage.com/490x340/bcbcbc/fff" alt="">
+					</div>
+					<h3 class="title-student">Lorem ipsum dolor sit amet </h3>
+					<div class="desc-student">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas repellendus recusandae earum, quasi facilis molestiae fuga, 
+						minima dolores similique, quod blanditiis id dolor accusantium eius hic atque perspiciatis. Voluptates, repellendus.
+						minima dolores similique, quod blanditiis id dolor accusantium eius hic atque perspiciatis. Voluptates, repellendus.
+					</div>
+					<div class="bot-student">Text bottom item</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<div class="item-student">
+					<div class="img-student">
+						<img src="https://dummyimage.com/490x340/bcbcbc/fff" alt="">
+					</div>
+					<h3 class="title-student">Lorem ipsum dolor sit amet </h3>
+					<div class="desc-student">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas repellendus recusandae earum, quasi facilis molestiae fuga, 
+					</div>
+					<div class="bot-student">Text bottom item</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<div class="item-student">
+					<div class="img-student">
+						<img src="https://dummyimage.com/490x340/bcbcbc/fff" alt="">
+					</div>
+					<h3 class="title-student">Lorem ipsum dolor sit amet </h3>
+					<div class="desc-student">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas repellendus recusandae earum, quasi facilis molestiae fuga, 
+						minima dolores similique, quod blanditiis id dolor accusantium eius hic atque perspiciatis. Voluptates, repellendus.
+					</div>
+					<div class="bot-student">Text bottom item</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="container">
+		<h3>Fix Row Center Box</h3>
+
+	  	<pre>
+	    	<code>
+.row-flex {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+	    	</code>
+	  	</pre>
+
+		<div class="row row-flex">
+			<div class="col-md-4 col-xs-6">
+				<img src="https://dummyimage.com/360x180/bcbcbc/fff" alt="">
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<img src="https://dummyimage.com/360x180/bcbcbc/fff" alt="">
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<img src="https://dummyimage.com/360x180/bcbcbc/fff" alt="">
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<img src="https://dummyimage.com/360x180/bcbcbc/fff" alt="">
+			</div>
+			<div class="col-md-4 col-xs-6">
+				<img src="https://dummyimage.com/360x180/bcbcbc/fff" alt="">
+			</div>
+		</div>
+	</div>
+
+	<!-- Section 2 Box Content Vertical Middle -->
+	<div class="container">
+		<h1>Box Content Vertical Middle</h1>
+		<pre><code>
+.flex-vertical {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	min-height: 54px;
+	flex-direction: column;
+}
+</code></pre>
+		<div class="flex-vertical">
+			<i class="fa fa-phone"></i>
+			<span><a target="_blank" href="tel:1 703-697-1776">1 703-697-1776</a></span>
+			<span><a target="_blank" href="tel:999 9999 9999">999 9999 9999</a></span>
+		</div>
+	</div>
+
+
+	<script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+</body>
+</html>
