@@ -7,10 +7,13 @@ $color_white: #fff;
 
 // Khai báo kích thước tương ứng với màn hình thiết bị
    
-$XS:    575px;   
-$SM:    767px;  
-$MD:    991px;   
-$LG:   1190px;     
+$XS:    575px;
+$SM:    767px;
+$MD:    991px;
+$LG:   1190px;
+$X14:  1480px;
+$XL:   1700px;
+$XXX:  2560px;
 
 // media queries
 
@@ -27,6 +30,94 @@ $LG:   1190px;
   @else if $canvas == LG {
    @media only screen and (max-width: $LG) { @content; } 
   }
+}
+
+@mixin font_18 {
+    font-size: 24;
+
+    @include Responsive(SM) {
+        font-size: 16px;
+    }
+}
+
+@mixin font_24 {
+    font-size: 24;
+
+    @include Responsive(XL) {
+        font-size: 20px;
+    }
+    @include Responsive(X14) {
+        font-size: 18px;
+    }
+    @include Responsive(SM) {
+        font-size: 16px;
+    }
+}
+
+@mixin font_36 {
+    font-size: 36px;
+
+    @include Responsive(XL) {
+        font-size: 30px;
+    }
+    @include Responsive(LG) {
+        font-size: 24px;
+    }
+}
+
+@mixin font_48 {
+    font-size: 48px;
+
+    @include Responsive(XL) {
+        font-size: 36px;
+    }
+    @include Responsive(X14) {
+        font-size: 30px;
+    }
+    @include Responsive(LG) {
+        font-size: 26;
+    }
+    @include Responsive(SM) {
+        font-size: 24px;
+    }
+}
+
+@mixin font_64 {
+    font-size: 64px;
+
+    @include Responsive(XL) {
+        font-size: 50px;
+    }
+    @include Responsive(X14) {
+        font-size: 44px;
+    }
+
+    @include Responsive(LG) {
+        font-size: 40px;
+    }
+    @include Responsive(MD) {
+        font-size: 32px;
+    }
+    @include Responsive(XS) {
+        font-size: 24px;
+    }
+}
+
+@mixin font_72 {
+    font-size: 72px;
+
+    @include Responsive(XL) {
+        font-size: 48px;
+    }
+    @include Responsive(X14) {
+        font-size: 40px;
+    }
+    @include Responsive(LG) {
+        font-size: 36px;
+    }
+    @include Responsive(SM) {
+        font-size: 24px;
+    }
 }
 
 body {
@@ -158,6 +249,27 @@ ul {
 // Text editor
 .y-text-editor * {
     max-width: 100%;
+}
+
+.y-text-editor {
+    h1 {
+        @include font_72;
+    }
+    h2 {
+        @include font_64;
+    }
+    h3 {
+        @include font_48;
+    }
+    h4 {
+        @include font_36;
+    }
+    h5 {
+        @include font_24;
+    }
+    h6 {
+        @include font_18;
+    }
 }
 
 .y-text-editor blockquote {

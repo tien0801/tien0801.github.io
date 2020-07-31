@@ -126,6 +126,75 @@ ul {
   max-width: 100%;
 }
 
+.y-text-editor h1 {
+  font-size: 72px;
+}
+@media only screen and (max-width: 1190px) {
+  .y-text-editor h1 {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .y-text-editor h1 {
+    font-size: 24px;
+  }
+}
+.y-text-editor h2 {
+  font-size: 64px;
+}
+@media only screen and (max-width: 1190px) {
+  .y-text-editor h2 {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .y-text-editor h2 {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .y-text-editor h2 {
+    font-size: 24px;
+  }
+}
+.y-text-editor h3 {
+  font-size: 48px;
+}
+@media only screen and (max-width: 1190px) {
+  .y-text-editor h3 {
+    font-size: 26;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .y-text-editor h3 {
+    font-size: 24px;
+  }
+}
+.y-text-editor h4 {
+  font-size: 36px;
+}
+@media only screen and (max-width: 1190px) {
+  .y-text-editor h4 {
+    font-size: 24px;
+  }
+}
+.y-text-editor h5 {
+  font-size: 24;
+}
+@media only screen and (max-width: 767px) {
+  .y-text-editor h5 {
+    font-size: 16px;
+  }
+}
+.y-text-editor h6 {
+  font-size: 24;
+}
+@media only screen and (max-width: 767px) {
+  .y-text-editor h6 {
+    font-size: 16px;
+  }
+}
+
 .y-text-editor blockquote {
   margin: 0 0 1.25em;
   padding: 0 1.25em 0 1.875em;
