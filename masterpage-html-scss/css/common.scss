@@ -33,7 +33,7 @@ $XXX:  2560px;
 }
 
 @mixin font_18 {
-    font-size: 24;
+    font-size: 18px;
 
     @include Responsive(SM) {
         font-size: 16px;
@@ -41,7 +41,7 @@ $XXX:  2560px;
 }
 
 @mixin font_24 {
-    font-size: 24;
+    font-size: 24px;
 
     @include Responsive(XL) {
         font-size: 20px;
@@ -98,7 +98,7 @@ $XXX:  2560px;
     @include Responsive(MD) {
         font-size: 32px;
     }
-    @include Responsive(XS) {
+    @include Responsive(SM) {
         font-size: 24px;
     }
 }

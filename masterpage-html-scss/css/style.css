@@ -152,7 +152,7 @@ ul {
     font-size: 32px;
   }
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 767px) {
   .y-text-editor h2 {
     font-size: 24px;
   }
@@ -179,7 +179,7 @@ ul {
   }
 }
 .y-text-editor h5 {
-  font-size: 24;
+  font-size: 24px;
 }
 @media only screen and (max-width: 767px) {
   .y-text-editor h5 {
@@ -187,7 +187,7 @@ ul {
   }
 }
 .y-text-editor h6 {
-  font-size: 24;
+  font-size: 18px;
 }
 @media only screen and (max-width: 767px) {
   .y-text-editor h6 {

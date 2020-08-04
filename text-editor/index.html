@@ -11,79 +11,8 @@
     <title>VBT Frontend</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 
-	<style>
-		.y-text-editor *{
-			max-width: 100%;
-		}
-		.y-text-editor blockquote {
-			margin: 0 0 1.25em;
-		    padding: 0 1.25em 0 1.875em;
-		    border-left: 2px solid #111;
-		    font-style: italic;
-		}
-		.y-text-editor h1 {
-			font-size: 30px;
-		}
-		.y-text-editor h2 {
-			font-size: 28px;
-		}
-		.y-text-editor h3 {
-			font-size: 24px;
-		}
-		.y-text-editor h4 {
-			font-size: 20px;
-		}
-		.y-text-editor h5 {
-			font-size: 18px;
-		}
-		.y-text-editor h6 {
-			font-size: 16px;
-		}
-		.y-text-editor p {
-			margin-bottom: 10px;
-		}
-		.y-text-editor img{
-			max-width: 100%;
-			height: auto !important;
-			display: initial;
-		}
-		.y-text-editor iframe{
-			max-width: 100%;
-		}
-		.y-text-editor table{
-			width: 100%;
-		}
-		.y-text-editor i{
-			font-style: italic;
-		}
-		.y-text-editor u{
-		    text-decoration: underline;
-		}
-		.y-text-editor a{
-			text-decoration: underline;
-		}
-		.y-text-editor b,
-		.y-text-editor strong{
-			font-weight: bold;
-		}
-		.y-text-editor ul{
-			padding-left: 30px;
-			list-style-type: disc;
-		}
-		.y-text-editor ul li{
-			display: list-item;
-			list-style-type: disc;
-		}
-		.y-text-editor ol{
-			padding-left: 30px;
-			list-style-type: decimal;
-		}
-		.y-text-editor ol li{
-			display: list-item;
-			list-style-type: decimal;
-		}
-	</style>
 </head>
 <body>
 	<div class="container">
@@ -170,7 +99,8 @@
 <pre>
 	
 $(document).ready(function() {
-	$(".y-text-editor table").wrap("Code div <!-- <div class='table-responsive'></div> -->");
+	$(".y-text-editor table").wrap("Add Code element here <!-- <div class='table-responsive'></div> -->");
+	$(".y-text-editor iframe").wrap("Add Code element div here <!-- <div class='box-iframe'></div> -->");
 });
 </pre>
 			</div>
@@ -178,12 +108,33 @@ $(document).ready(function() {
 		<div class="post-detail">
 			<div class="y-text-editor">
 				<h1>Tiêu đề H1</h1>
+				<h2>Tiêu đề H2 </h2>
+				<h3>Tiêu đề H3 </h3>
+				<h4>Tiêu đề H4 </h4>
+				<h5>Tiêu đề H5 </h5>
+				<h6>Tiêu đề H6 </h6>
+
 				<p><strong>Test thẻ strong: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quae eveniet consequuntur minima ad incidunt, delectus fuga explicabo saepe similique odit voluptates maxime repudiandae porro quis impedit vitae neque. Atque?</strong></p>
+				<h5>Test tag image</h5>
 				<p style="text-align: center;">
 					<img src="http://demo2.laziweb.com/html-component/test-checklist/1900x400.png" alt="" width="1900" height="400">
 				</p>
-				<h2>Tiêu đề H2 - test ul</h2>
-					
+				
+				<p style="text-align: center;">
+					<img src="http://demo2.laziweb.com/html-component/test-checklist/500x400.png" width="500" height="400" alt="">
+				</p>
+
+				<h5>Test tag iframe youtube</h5>
+				<p style="text-align: center;">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/otlfrKv5Huk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</p>
+				
+				<h5>Test color inline</h5>
+				<p style="width: 1920px;">
+					Lorem ipsum dolor sit amet, <span style="color: red;">consectetur</span> adipisicing <span style="color: orange;">elit</span>. Enim, sunt ipsum perspiciatis quae veritatis quidem qui. Cupiditate libero dicta rem nam voluptatum nesciunt, delectus distinctio similique obcaecati explicabo expedita fugit.
+				</p>
+
+				<h5>Test tag ul</h5>
 				<p>
 					<ul>
 						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
@@ -191,11 +142,7 @@ $(document).ready(function() {
 						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
 					</ul>
 				</p>
-				<p style="text-align: center;">
-					<img src="http://demo2.laziweb.com/html-component/test-checklist/500x400.png" width="500" height="400" alt="">
-				</p>
-				
-				<h3>Tiêu đề H3 - Test ol</h3>
+				<h5>Test tag ol</h5>
 				<p>
 					<ol>
 						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
@@ -203,42 +150,36 @@ $(document).ready(function() {
 						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
 					</ol>
 				</p>
-				<h4>Tiêu đề H4 - Test iframe 1900 x 400</h4>
-
-				<p style="text-align: center;">
-					<iframe width="1900" height="400" src="https://www.youtube.com/embed/CwfoyVa980U" frameborder="0" allowfullscreen></iframe>
-				</p>
-				<h5>Tiêu đề H5 - Test iframe 500 x 400</h5>
-				<p style="text-align: center;">
-					<iframe width="500" height="400" src="https://www.youtube.com/embed/CwfoyVa980U" frameborder="0" allowfullscreen></iframe>
-				</p>
-				<p style="width: 1920px;">
-					Lorem ipsum dolor sit amet, <span style="color: red;">consectetur</span> adipisicing <span style="color: orange;">elit</span>. Enim, sunt ipsum perspiciatis quae veritatis quidem qui. Cupiditate libero dicta rem nam voluptatum nesciunt, delectus distinctio similique obcaecati explicabo expedita fugit.
-				</p>
-				<h5>Tiêu đề H5 - Test u i b</h5>
+				<h5>Test tag u i b</h5>
 				<ul>
 					<li><u>Thẻ u</u></li>
 					<li><i>Thẻ i</i></li>
 					<li><b>Thẻ b</b></li>
 				</ul>
-				<h5>Tiêu đề H6 - Test nội dung có thẻ a</h5>
+
+				<h5>Test nội dung có thẻ a</h5>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus incidunt quidem sed asperiores ipsam, culpa, distinctio eligendi! Deleniti numquam aliquam beatae, culpa in itaque facilis, asperiores tempore amet enim repellendus? <a href="#" title="Xem thêm">Xem thêm</a></p>
-				<table style="width: 838px;">
-				    <tbody>
-				        <tr style="background-color: #dbdbdb; height: 34px;">
-				            <th style="width: 617px; text-align: center; height: 34px;"><span face="Georgia" style="font-family: Georgia;"><span style="font-size: 16px; font-weight: 400;">TÊN DỊCH VỤ</span></span></th>
-				            <th style="width: 205px; text-align: center; height: 34px;"><span face="Georgia" style="font-family: Georgia;"><span style="font-size: 16px; font-weight: 400;">GIÁ GỐC</span></span></th>
-				        </tr>
-				        <tr style="border-color: #ffbb00; height: 25px;">
-				            <td style="width: 588px; height: 25px; padding-left: 30px;">Trẻ hóa da với công nghệ Oxy Jet</td>
-				            <td style="width: 205px; text-align: center; height: 25px;">700.000 vnđ</td>
-				        </tr>
-				        <tr style="border-color: #ffbb00; height: 25px;">
-				            <td style="width: 588px; height: 25px; padding-left: 30px;">Trẻ hóa da với công nghệ New E-Light</td>
-				            <td style="width: 205px; text-align: center; height: 25px;">800.000 vnđ</td>
-				        </tr>
-				    </tbody>
-				</table>
+				
+				<h5>Test tag table responsive</h5>
+				<p>
+					<table style="width: 838px;">
+						<tbody>
+							<tr style="background-color: #dbdbdb; height: 34px;">
+								<th style="width: 617px; text-align: center; height: 34px;"><span face="Georgia" style="font-family: Georgia;"><span style="font-size: 16px; font-weight: 400;">TÊN DỊCH VỤ</span></span></th>
+								<th style="width: 205px; text-align: center; height: 34px;"><span face="Georgia" style="font-family: Georgia;"><span style="font-size: 16px; font-weight: 400;">GIÁ GỐC</span></span></th>
+							</tr>
+							<tr style="border-color: #ffbb00; height: 25px;">
+								<td style="width: 588px; height: 25px; padding-left: 30px;">Trẻ hóa da với công nghệ Oxy Jet</td>
+								<td style="width: 205px; text-align: center; height: 25px;">700.000 vnđ</td>
+							</tr>
+							<tr style="border-color: #ffbb00; height: 25px;">
+								<td style="width: 588px; height: 25px; padding-left: 30px;">Trẻ hóa da với công nghệ New E-Light</td>
+								<td style="width: 205px; text-align: center; height: 25px;">800.000 vnđ</td>
+							</tr>
+						</tbody>
+					</table>
+				</p>
+				<br>
 			</div>
 		</div>
 	</div>
@@ -250,7 +191,9 @@ $(document).ready(function() {
 		$(document).ready(function() {
 			if($(".y-text-editor").length > 0) {
 				$(".y-text-editor table").wrap("<div class='table-responsive'></div>");
+				$(".y-text-editor iframe").wrap("<div class='box-iframe'></div>");
 			}
+
 		});
 	</script>
 </body>
