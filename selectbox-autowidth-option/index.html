@@ -10,103 +10,115 @@
 	<link rel="stylesheet" href="">
 	<style>
 		#navbar.nav-bluebeacon #nav-search .nav-search-scope {
-    background-color: #f3f3f3;
-    background-image: none;
-    border-left: 1px solid #f3f3f3;
-    border-top: 1px solid #f3f3f3;
-    border-bottom: 1px solid #f3f3f3;
-}
-#nav-search .nav-search-scope {
-    position: relative;
-    float: left;
-    height: 35px;
-    margin: 0;
-    padding-left: 5px;
-    overflow: hidden;
-    border: 1px solid #cdcdcd;
-    border-top-color: #bdbdbd;
-    -webkit-border-radius: 4px 0 0 4px;
-    -moz-border-radius: 4px 0 0 4px;
-    border-radius: 4px 0 0 4px;
-    border-radius: 0\9;
-    background-position: 0 -532px;
-}
-#navbar.nav-bluebeacon #nav-search .nav-search-facade {
-    top: 1px;
-}
-#nav-search .nav-search-facade {
-    position: relative;
-    float: left;
-    cursor: default;
-    overflow: hidden;
-}
-#nav-search .nav-search-facade .nav-search-label {
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: #666;
-    font-size: 12px;
-    line-height: 33px;
-    margin-right: 21px;
-    margin-left: 5px;
-}
-#nav-search .nav-search-facade .nav-icon {
-    position: absolute;
-    top: 14px;
-    right: 8px;
-    border-style: solid;
-    _border-style: dashed;
-    border-width: 4px;
-    border-color: transparent;
-    border-top: 4px solid #666;
-    border-bottom-width: 0;
-    width: 0;
-    height: 0;
-    font-size: 0;
-    line-height: 0;
-}
-#nav-search .nav-search-dropdown {
-    position: absolute;
-    display: block;
-    top: -1px;
-    left: 0;
-    height: 35px;
-    width: auto;
-    font-family: arial,sans-serif;
-    outline: 0;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-    opacity: 0;
-    filter: alpha(opacity=0);
-    visibility: visible;
-    border: 0;
-    line-height: 35px;
-}
+            background-color: #f3f3f3;
+            background-image: none;
+            border-left: 1px solid #f3f3f3;
+            border-top: 1px solid #f3f3f3;
+            border-bottom: 1px solid #f3f3f3;
+        }
+        #nav-search .nav-search-scope {
+            position: relative;
+            float: left;
+            height: 35px;
+            margin: 0;
+            padding-left: 5px;
+            overflow: hidden;
+            border: 1px solid #cdcdcd;
+            border-top-color: #bdbdbd;
+            -webkit-border-radius: 4px 0 0 4px;
+            -moz-border-radius: 4px 0 0 4px;
+            border-radius: 4px 0 0 4px;
+            border-radius: 0\9;
+            background-position: 0 -532px;
+        }
+        #navbar.nav-bluebeacon #nav-search .nav-search-facade {
+            top: 1px;
+        }
+        #nav-search .nav-search-facade {
+            position: relative;
+            float: left;
+            cursor: default;
+            overflow: hidden;
+        }
+        #nav-search .nav-search-facade .nav-search-label {
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            color: #666;
+            font-size: 12px;
+            line-height: 33px;
+            margin-right: 21px;
+            margin-left: 5px;
+        }
+        #nav-search .nav-search-facade .nav-icon {
+            position: absolute;
+            top: 14px;
+            right: 8px;
+            border-style: solid;
+            _border-style: dashed;
+            border-width: 4px;
+            border-color: transparent;
+            border-top: 4px solid #666;
+            border-bottom-width: 0;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+        }
+        #nav-search .nav-search-dropdown {
+            position: absolute;
+            display: block;
+            top: -1px;
+            left: 0;
+            height: 35px;
+            width: auto;
+            font-family: arial,sans-serif;
+            outline: 0;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            visibility: visible;
+            border: 0;
+            line-height: 35px;
+        }
 
 	</style>
 </head>
 <body>
 	<div class="container">
-		<div class="" id="nav-search">
-			<div class='nav-search-scope nav-sprite'>
-			    <div class="nav-search-facade" data-value="search-alias=aps">
-			        <span class="nav-search-label">All</span>
-			        <i class="nav-icon"></i>
-			    </div>
+        <h1>Select auto width</h1>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="" id="nav-search">
+                    <div class='nav-search-scope nav-sprite'>
+                        <div class="nav-search-facade" data-value="search-alias=aps">
+                            <span class="nav-search-label">All</span>
+                            <i class="nav-icon"></i>
+                        </div>
 
-			    <span id='searchDropdownDescription' style='display:none'>Select the department you want to search in</span>
+                        <span id='searchDropdownDescription' style='display:none'>Select the department you want to search in</span>
 
-			    <select aria-describedby='searchDropdownDescription' class='nav-search-dropdown searchSelect' data-nav-digest='kMbNLE0R7aqVrpllQXRf8Hb8e+Y' data-nav-selected='0' id='searchDropdownBox' name='url' style='display:block' tabindex='18' title='Search in'>
-			        <option selected='selected' value='A' >All Departments</option>
-			        <option value='All '>All Departments</option>
-			        <option value='Amazon '>Amazon Devices</option>
-			        <option value='Amazon  '>Amazon Warehouse dfsgfsg</option>
-			       
-			    </select>
+                        <select aria-describedby='searchDropdownDescription' class='nav-search-dropdown searchSelect' data-nav-digest='kMbNLE0R7aqVrpllQXRf8Hb8e+Y' data-nav-selected='0' id='searchDropdownBox' name='url' style='display:block' tabindex='18' title='Search in'>
+                            <option selected='selected' value='A' >All Departments</option>
+                            <option value='All '>All Departments</option>
+                            <option value='Amazon '>Amazon Devices</option>
+                            <option value='Amazon  '>Amazon Warehouse dfsgfsg</option>
+                        
+                        </select>
 
-			</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <select name="" id="" class="select-autowidth">
+                    <option value="">Lorem ipsum dolor sit amet  </option>
+                    <option value="">Lorem ipsum dolor sit amet consectetur </option>
+                    <option value="">Lorem ipsum dolor </option>
+                </select>
+            </div>
 		</div>
 	</div>
 
@@ -121,7 +133,15 @@
 			console.log(singleValues);
 			console.log("change");
 			$( ".nav-search-label" ).html( singleValues );
-		});
+        });
+        
+        $('select.select-autowidth').change(function(){
+            var text = $(this).find('option:selected').text()
+            var $aux = $('<select/>').append($('<option/>').text(text))
+            $(this).after($aux)
+            $(this).width($aux.width())
+            $aux.remove()
+        }).change()
 
 	</script>
 
