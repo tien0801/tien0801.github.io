@@ -1,9 +1,4 @@
 /* Rating section */
-.y-box-rating {
-    margin-bottom: 5px;
-    display: inline-flex;
-    align-items: center;
-}
 .rating.without-caption .clear-rating, .rating.without-caption .caption {
     display: none;
 }
@@ -42,6 +37,10 @@
 }
 
 .y-box-rating {
+    margin-bottom: 5px;
+    display: inline-flex;
+    align-items: center;
+
     .rating .star {
         margin: 0 2px;
     }
