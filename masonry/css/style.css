@@ -1,0 +1,37 @@
+.list-prod-masonry {
+  margin: 0 -8px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-prod-masonry .box-item-product {
+  margin-bottom: 35px;
+  width: 14.285%;
+}
+.list-prod-masonry .box-item-product .item-product {
+  position: relative;
+  padding: 0 8px;
+}
+.list-prod-masonry .box-item-product .item-product .img-product {
+  display: block;
+  margin-bottom: 8px;
+}
+.list-prod-masonry .box-item-product .item-product .img-product img {
+  border-radius: 15px;
+  width: 100%;
+  height: auto;
+}
+.list-prod-masonry .box-item-product .item-product .img-product video {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+.list-prod-masonry .box-item-product .item-product .info-product {
+  font-size: 18px;
+}
+.list-prod-masonry .box-item-product .item-product .info-product .name-product {
+  color: #000;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+/*# sourceMappingURL=style.css.map */

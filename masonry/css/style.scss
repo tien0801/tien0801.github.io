@@ -1,0 +1,46 @@
+.list-prod-masonry {
+    margin: 0 -8px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .box-item-product {
+        // position: absolute;
+        // float: left;
+        // padding: 0 10px;
+        margin-bottom: 35px;
+        width: 14.285%;
+
+        .item-product {
+            position: relative;
+            padding: 0 8px;
+        
+            .img-product {
+                display: block;
+                margin-bottom: 8px;
+
+                img {
+                    border-radius: 15px;
+                    width: 100%;
+                    height: auto;
+                }
+                video {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 15px;
+                }
+            }
+        
+            .info-product {
+                font-size: 18px;
+                
+                .name-product {
+                    color: #000;
+                    font-weight: bold;
+                    line-height: 1.1;
+                }
+        
+            }
+        }
+
+    }
+}
