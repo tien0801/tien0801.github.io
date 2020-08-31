@@ -34,39 +34,20 @@ $(document).ready(function() {
     $('.overlay-menu, .m-menu-close').on("click", function(){
         closeMenu();
     })
-
-    if($('.js-thiep-slider').length >0) {
-        $('.js-thiep-slider').owlCarousel({
+    
+    if($('.js-home-slider').length >0) {
+        $('.js-home-slider').owlCarousel({
             loop: true,
-            // autoplay: true,
-            // autoplayTimeout: 4000,
+            autoplay: true,
+            autoplayTimeout: 5000,
             // nestedItemSelector: 'item-gall',
-            margin: 30,
+            margin: 0,
             responsiveClass:true,
-            items: 3,
-            dots: false,
-            navText : ["<img src='../images/icons/btn-prev.svg'/>","<img src='../images/icons/btn-next.svg'/>"],
-            rewindNav : true,
+            items: 1,
+            dots: true,
+            navText : ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
+            rewindNav : false,
             nav: false,
-            responsive : {
-                // breakpoint from 0 up
-                0 : {
-                   items: 1,
-                   nav: true,
-                },
-                480 : {
-                    items: 2,
-                },
-                768 : {
-                    items: 2,
-                },
-                992 : {
-                    items: 3,
-                },
-                1200 : {
-                    items: 3,
-                }
-            }
         })
     }
 
