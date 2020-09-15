@@ -5,8 +5,7 @@ $color_gray : #b7b7b7;
 $color_green: #00b339;
 $color_white: #fff;
 
-// Khai báo kích thước tương ứng với màn hình thiết bị
-   
+// Media queries Config
 $XS:    575px;
 $SM:    767px;
 $MD:    991px;
@@ -14,8 +13,6 @@ $LG:   1190px;
 $X14:  1480px;
 $XL:   1700px;
 $XXX:  2560px;
-
-// media queries
 
 @mixin Responsive($canvas) {
   @if $canvas == XS {
