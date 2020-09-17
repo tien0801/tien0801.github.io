@@ -333,7 +333,9 @@
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
+
+        <a href="javascript:;" class="btn-loadmore btn btn-success">Loadmore</a>
 
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -358,6 +360,28 @@
                 $(this).find('video').get(0).pause();
             })
         });
+
+        var index = 0;
+        var man = $('#list-prod-masonry');
+        $('.btn-loadmore').click(function() {
+            index += 1;
+            let data =  '<div class="box-item-product">  '  + 
+ '                   <div class="item-product ">  '  + 
+ '                       <a href="product-detail.html" class="img-product">  '  + 
+ '                           <img src="https://dummyimage.com/227x378/bcbcbc/fff" alt="">  '  + 
+ '                       </a>  '  + 
+ '                       <div class="info-product">  '  + 
+ '                           <a href="#" class="name-product">Item masonry '+ index + '</a>  '  + 
+ '                           <div class="desc-product">Dựng hình 3D</div>  '  + 
+ '                       </div>  '  + 
+ '                   </div>  '  + 
+ '              </div>  ' ;
+ 
+            man.append(data);
+            man.masonry('reloadItems');
+            man.masonry('layout');
+        })
+
     </script>
 </body>
 
