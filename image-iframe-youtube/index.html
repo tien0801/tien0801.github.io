@@ -50,7 +50,18 @@
 
             </div>
         </div>
+        
+        <h1>Click Image run Video</h1>
+
+        <div class="section-video">
+            <div class="box-video">
+                <video controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
@@ -62,7 +73,15 @@
             // $(this).prev("iframe").trigger('click');
         })
     });
+
+    $(document).ready(function () {
+        $('.section-video .box-video').click(function() {
+            console.log("click video");
+            $(this).addClass('video-play');
+        })
+    });
     </script>
+
 </body>
 
 </html>

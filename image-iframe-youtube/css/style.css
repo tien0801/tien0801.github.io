@@ -53,3 +53,28 @@
     width: 100%;
     height: 100%;
 }
+
+/* Video */
+.section-video .box-video {
+    position: relative;
+}
+.section-video .box-video:after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: url(../images/bg-video.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    pointer-events: none;
+    z-index: 3;
+}
+.section-video .box-video.video-play:after {
+    display: none;
+}
+.section-video .box-video video {
+    width: 100%;
+}
