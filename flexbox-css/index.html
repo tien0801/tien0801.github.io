@@ -19,6 +19,27 @@
 		.item-student .bot-student {
 			color: red
 		}
+
+		flex-container {
+			display: flex;                 /* primary flex container */
+			flex-direction: row;           /* horizontal alignment of flex items (default value; can be omitted) */
+			align-items: stretch;          /* will apply equal heights to flex items (default value; can be omitted) */
+			height: 100%;
+		}
+		flex-item {
+			display: flex;                 /* nested flex container */
+			flex-direction: column;        /* vertical alignment of flex items */
+			justify-content: center;       /* center flex items vertically */
+			align-items: center;           /* center flex items horizontally */
+		}
+		flex-item:first-child {
+			background-color: #a333c8;
+			flex: 3;                       /* consume 3x available space than sibling; more details: http://stackoverflow.com/q/34644807/3597276 */
+		}
+		flex-item:last-child {
+			background-color: #db2828;
+			flex: 1;
+		}
     </style>
 
 	<!-- CSS Main -->
@@ -174,6 +195,35 @@
 			<span><a target="_blank" href="tel:1 703-697-1776">1 703-697-1776</a></span>
 			<span><a target="_blank" href="tel:999 9999 9999">999 9999 9999</a></span>
 		</div>
+	</div>
+
+	<div class="container">
+		<h1>Equal height columns</h1>
+		<pre><code>
+flex-container {
+	display: flex;                 /* primary flex container */
+	flex-direction: row;           /* horizontal alignment of flex items (default value; can be omitted) */
+	align-items: stretch;          /* will apply equal heights to flex items (default value; can be omitted) */
+	height: 100%;
+}
+
+flex-item {
+	display: flex;                 /* nested flex container */
+	flex-direction: column;        /* vertical alignment of flex items */
+	justify-content: center;       /* center flex items vertically */
+	align-items: center;           /* center flex items horizontally */
+}
+</code></pre>
+		<flex-container>
+			<flex-item>
+				<p>Text Text Text</p>
+				<p>Text Text Text</p>
+				<p>Text Text Text</p>
+			</flex-item>
+			<flex-item>
+				<div>Forward</div>
+			</flex-item>
+		</flex-container>
 	</div>
 
 
