@@ -7,37 +7,16 @@
     <meta http-equiv="Content-Language" content="vi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Meo Code - Frontend</title>
     <link rel="canonical" href="https://yosu.vn/current-page">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <style>
-        html {
-			font-size: 15px;
-		}
-        img {
-			max-width: 100%;
-		}
-		.list-item {
-			padding: 0 30px;
-		}
-		.list-item .item {
-			padding: 5px 0;
-			margin-bottom: 10px;
-		}
-		.list-item .item:nth-child(2n + 1) {
-			background-color: #eee;
-		}
-
-		.btn-focus {
-			outline: 0;
-		}
-    </style>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <div class="container-fluid">
         <h1>Note Css</h1>
-        <div class="row">
+        <div class="row row-custom">
             <div class="col-md-6 list-item">
                 <div class="row item">
                     <div class="col-md-6">
@@ -248,7 +227,30 @@ input:focus, textarea:focus {
                         <p>transform: skewX(-10deg);</p>
                     </div>
                     <div class="col-md-6">
-                        <div href="#" class="" style="width: 100px; height: 60px; background-color: #111; transform: skewX(-10deg);"></div>
+                        <div href="#" class="" style="width: 100px; height: 60px; background-color: #EC6607; transform: skewX(-10deg);"></div>
+                    </div>
+                </div>
+
+                <div class="row item">
+                    <div class="col-md-6">
+                        <p><b>border-bottom: 10vw solid #EC6607;</b></p>
+                        <p><b>border-left: 50vw solid transparent;</b></p>
+                       
+                    </div>
+                    <div class="col-md-6">
+                        <div href="#" style="width: 100px; height: 60px; background-color: #111;
+                        border-bottom: 8vw solid #EC6607;
+                        border-left: 50vw solid transparent;"></div>
+                    </div>
+                </div>
+
+                <div class="row item">
+                    <div class="col-md-6">
+                        <p><b>Clip-path css</b></p>
+                        <a href="https://bennettfeely.com/clippy/" target="_blank">https://bennettfeely.com/clippy/</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);" src="images/bg-test.jpg" width="120" alt="">
                     </div>
                 </div>
             </div>

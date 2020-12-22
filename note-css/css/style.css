@@ -1,3 +1,34 @@
+/* Css page */
+body {
+  font-size: 15px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.row-custom {
+  margin-right: -40px;
+  margin-left: -40px;
+}
+.row-custom .list-item {
+  padding: 0 40px;
+}
+
+.list-item .item {
+  padding: 5px 0;
+  margin-bottom: 10px;
+}
+
+.list-item .item:nth-child(2n + 1) {
+  background-color: #eee;
+}
+
+.btn-focus {
+  outline: 0;
+}
+
+/* end Css page */
 .gradient-box {
   display: flex;
   align-items: center;
@@ -7,7 +38,7 @@
   position: relative;
   padding: 10px 2em;
   box-sizing: border-box;
-  color: #FFF;
+  color: #fff;
   background: #000;
   background-clip: padding-box;
   /* !important */
@@ -16,7 +47,7 @@
   border-radius: 1em;
 }
 .gradient-box:before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -44,7 +75,8 @@
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1px rgba(21, 156, 64, 0.6) !important;
 }
 
-.input-hover:focus, .textarea-hover:focus {
+.input-hover:focus,
+.textarea-hover:focus {
   border-color: rgba(21, 156, 64, 0.6) !important;
   outline: 0;
   outline-color: #000000;

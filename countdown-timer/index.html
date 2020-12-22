@@ -7,14 +7,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="vi">
     <link rel="canonical" href="https://yosu.vn/current-page">
-    <title></title>
+    <title>VBT Frontend</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="">
     <style>
 		.y-box-countdown {
 		    display: block;
 		    width: max-content;
-		    margin: 20px auto;
+		    margin: 20px 0;
 		}
 		.y-box-countdown .item-countdown {
 		    display: inline-block;
@@ -37,6 +37,9 @@
 		    margin-top: 5px;
 		}
 
+		.countdow-timer {
+			font-size: 50px;
+		}
 
 		@media (max-width: 767px) {
 		    .y-box-countdown .value-countdown {
@@ -52,22 +55,35 @@
     <div class="container">
         <h1>Countdown Timer</h1>
         <div class="row">
-            <div class="y-box-countdown">
-            	<div class="item-countdown">
-				    <div class="value-countdown ds-days" id="y-days">00</div>
-				    <div class="title-countdown">Days</div>
+			<div class="col-md-6">
+				<h3>Countdown Timer Days: <a href="https://www.w3schools.com/howto/howto_js_countdown.asp" target="_blank">Source code</a></h3>
+				<div class="y-box-countdown">
+					<div class="item-countdown">
+						<div class="value-countdown ds-days" id="y-days">00</div>
+						<div class="title-countdown">Days</div>
+					</div>
+					<div class="item-countdown">
+						<div class="value-countdown ds-hours" id="y-hours">00</div>
+						<div class="title-countdown">Hours</div>
+					</div>
+					<div class="item-countdown">
+						<div class="value-countdown ds-minutes" id="y-minutes">00</div>
+						<div class="title-countdown">Minutes</div>
+					</div>
+					<div class="item-countdown">
+						<div class="value-countdown ds-seconds" id="y-seconds">00</div>
+						<div class="title-countdown">Seconds</div>
+					</div>
 				</div>
-				<div class="item-countdown">
-				    <div class="value-countdown ds-hours" id="y-hours">00</div>
-				    <div class="title-countdown">Hours</div>
-				</div>
-				<div class="item-countdown">
-				    <div class="value-countdown ds-minutes" id="y-minutes">00</div>
-				    <div class="title-countdown">Minutes</div>
-				</div>
-				<div class="item-countdown">
-				    <div class="value-countdown ds-seconds" id="y-seconds">00</div>
-				    <div class="title-countdown">Seconds</div>
+				<!-- Display the countdown timer in an element -->
+				<p id="demo"></p>
+			</div>
+			<div class="col-md-6">
+				<h3>Countdown Timer Hours: <a href="https://jsfiddle.net/c6jbntLe/" target="_blank">Source Code</a></h3>
+				<div class="countdow-timer">
+					<span id="y-hours-2"></span> :
+					<span id="y-minutes-2"></span> :
+					<span id="y-seconds-2"></span>
 				</div>
 			</div>
         </div>
@@ -77,7 +93,7 @@
     <script>
     // Set the date we're counting down to
     // var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-    var countDownDate = new Date("5/25/2020 15:37:25").getTime();
+    var countDownDate = new Date("5/25/2022 15:37:25").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
@@ -92,22 +108,72 @@
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		
+		if(days < 10) {
+			days = '0' + days;
+		}
+		if(hours < 10) {
+			hours = '0' + hours;
+		}
+		if(minutes < 10) {
+			minutes = '0' + minutes;
+		}
+		if(seconds < 10) {
+			seconds = '0' + seconds;
+		}
 
         // Output the result in an element with id="demo"
         // document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
         document.getElementById("y-days").innerHTML = days;
         document.getElementById("y-hours").innerHTML = hours;
         document.getElementById("y-minutes").innerHTML = minutes;
-        document.getElementById("y-seconds").innerHTML = seconds;
-
+		document.getElementById("y-seconds").innerHTML = seconds;
+		
         // If the count down is over, write some text 
         if (distance < 0) {
             clearInterval(x);
             document.getElementById("demo").innerHTML = "EXPIRED";
         }
     }, 100);
-    </script>
+	</script>
+	
+	<script>
+		$(document).ready(function () {
+			function timerCheckout() {
+				console.log("Start Checkout Timer >>>");
+				let myTimer = setInterval(myClock, 1000);
+				let time = 60*10;
+		
+				function myClock() {
+					--time
+					var seconds = time % 60;
+					var minutes = (time - seconds) / 60;
+					var minutesLeft = minutes % 60; // Minutes that cannot be written in hours
+					var hours = (minutes - minutesLeft) % 60;
+					// Now in hours, minutes and seconds, you have the time you need.
+					// console.log(hours + ":" + minutes + ":" + seconds)
+					
+					if(seconds < 10) {
+						seconds = '0' + seconds;
+					}
+					if(minutes < 10) {
+						minutes = '0' + minutes;
+					}
+					document.getElementById("y-hours-2").innerHTML = hours;
+					document.getElementById("y-minutes-2").innerHTML = minutes;
+					document.getElementById("y-seconds-2").innerHTML = seconds;
+					if (time == 0) {
+						clearInterval(myTimer);
+						console.log("Stop Checkout Timer")
+					}
+				}
+		
+			}
+	
+			timerCheckout();
+		});
+	</script>
 </body>
 
 </html>
