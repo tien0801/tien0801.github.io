@@ -373,6 +373,10 @@
                 // arrows: false,
             });
             $(".vertical-slider-box").addClass("show");
+
+            $("#slick-slide-modal").on('shown.bs.modal', function () {
+                $('#slick-slide-modal .slider-for').slick('setPosition');
+            });
         });
     </script>
 </body>

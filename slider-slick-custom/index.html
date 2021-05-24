@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="vi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://yosu.vn/current-page">
+    <title>Slick slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        img {
+            /* width: 100%; */
+            height: auto;
+        }
+
+        .home-slider .item {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="https://kenwheeler.github.io/slick/" target="_blank">Slick slider</a></h1>
+        <h3>Slider Simple Custom</h3>
+        <div class="slider-custom slick-slider js-slick-home">
+            <div class="item">
+                <img src="https://dummyimage.com/435x350/bcbcbc/000000&text=1" alt="">
+            </div>
+            <div class="item">
+                <img src="https://dummyimage.com/435x350/bcbcbc/000000&text=2" alt="">
+            </div>
+            <div class="item">
+                <img src="https://dummyimage.com/435x350/bcbcbc/000000&text=3" alt="">
+            </div>
+            <div class="item">
+                <img src="https://dummyimage.com/435x350/bcbcbc/000000&text=4" alt="">
+            </div>
+            <div class="item">
+                <img src="https://dummyimage.com/435x350/bcbcbc/000000&text=5" alt="">
+            </div>
+            <div class="item">
+                <img src="https://dummyimage.com/435x350/bcbcbc/000000&text=6" alt="">
+            </div>
+            <div class="item">
+                <img src="https://dummyimage.com/435x350/bcbcbc/000000&text=7" alt="">
+            </div>
+        </div>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="js/slick.min.js"></script>
+    <script>
+
+    </script>
+
+    <!-- Slick slider vertical -->
+    <script>
+        $(document).ready(function () {
+            // Simple
+            $('.js-slick-home').slick({
+                infinite: true, //Loop
+
+                centerMode: true,
+                centerPadding: '0',
+
+                dots: true,
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                arrows: false,
+                // fade: true,
+
+                // autoplay: true,
+                // autoplaySpeed: 3000,
+                // cssEase: 'linear',
+                // prevArrow: '<span class="btn-arrow btn-prev"><i class="fas fa-chevron-left"></i></span>',
+                // nextArrow: '<span class="btn-arrow btn-next"><i class="fas fa-chevron-right"></i></span>',
+
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 576,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+
+            });
+            resetClassItem();
+
+            // Custom
+            $('.js-slick-home').on('afterChange', function (event, slick, currentSlide) {
+                console.log("afterChange");
+                resetClassItem()
+            });
+
+            $('.js-slick-home').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+                console.log('beforeChange');
+                resetClassItem()
+            });
+
+            function resetClassItem() {
+                $('.js-slick-home .slick-slide').removeClass('slider-next-02');
+                $('.js-slick-home .slick-slide').removeClass('slider-next-01');
+                $('.js-slick-home .slick-slide').removeClass('slider-next-1');
+                $('.js-slick-home .slick-slide').removeClass('slider-next-2');
+                $('.js-slick-home .slick-slide.slick-center').prev().prev().addClass('slider-next-02');
+                $('.js-slick-home .slick-slide.slick-center').prev().addClass('slider-next-01');
+                $('.js-slick-home .slick-slide.slick-center').next().addClass('slider-next-1');
+                $('.js-slick-home .slick-slide.slick-center').next().next().addClass('slider-next-2');
+            }
+
+            $('.js-slick-home .slick-slide').on('click', function (e) {
+                console.log("item clider click");
+
+                e.stopPropagation();
+                $('.js-slick-home .slick-slide').removeClass('slick-current')
+                $(this).addClass('slick-current');
+                var index = $(this).data("slick-index");
+                if ($('.slick-slider').slick('slickCurrentSlide') !== index) {
+                    $('.slick-slider').slick('slickGoTo', index);
+                }
+                resetClassItem();
+            });
+        });
+    </script>
+</body>
+
+</html>

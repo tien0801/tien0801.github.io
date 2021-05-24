@@ -1,0 +1,23 @@
+.slider-custom {
+  background-color: #000;
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
+.slider-custom .item.slick-center {
+  transform: initial;
+}
+.slider-custom .item.slider-next-02 {
+  transform: translate(100%, -75%) scale(0.3);
+}
+.slider-custom .item.slider-next-01 {
+  transform: translate(50%, -15%) scale(0.75);
+}
+.slider-custom .item.slider-next-1 {
+  transform: translate(-50%, 5%) scale(0.75);
+}
+.slider-custom .item.slider-next-2 {
+  transform: translate(-100%, 60%) scale(0.3);
+}
+
+/*# sourceMappingURL=style.css.map */

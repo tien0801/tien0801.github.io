@@ -1,0 +1,30 @@
+.slider-custom {
+    background-color: #000;
+    height: 400px;
+    display: flex;
+    align-items: center;
+
+    .slick-list {
+        // height: 100%;
+    }
+
+    .item {
+        // transform: initial;
+       
+        &.slick-center {
+            transform: initial;
+        }
+        &.slider-next-02 {
+            transform: translate(100%, -75%) scale(0.3)
+        }
+        &.slider-next-01 {
+            transform: translate(50%, -15%) scale(0.75) 
+        }
+        &.slider-next-1 {
+            transform: translate(-50%, 5%) scale(0.75)
+        }
+        &.slider-next-2 {
+            transform: translate(-100%, 60%) scale(0.3)
+        }
+    }
+}

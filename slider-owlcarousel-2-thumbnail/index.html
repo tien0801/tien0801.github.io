@@ -20,6 +20,10 @@
         .y-thumb-slider .current .item {
             border: 1px solid #ff0000;
         }
+
+        .work-slider {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -30,6 +34,7 @@
         <h3>Update: <a href="https://trivietdecor.com.vn/thiet-ke-noi-that-can-ho-ha-do-centrosa">https://trivietdecor.com.vn/thiet-ke-noi-that-can-ho-ha-do-centrosa</a></h3>
     </div>
     <div class="container">
+        <h3>Option 1</h3>
         <div class="row">
             <div class="col-md-6">
                 <div id="sync1" class="owl-carousel owl-theme sync1" data-sync="s1">
@@ -182,6 +187,7 @@
         <br>
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
+        <h3>Option 2</h3>
         <div class="row">
             <div class="col-md-6">
                 <div class="work-slider owl-carousel owl-theme">
@@ -344,6 +350,8 @@
                     items: slidesPerPage,
                     dots: false,
                     nav: false,
+                    touchDrag  : false,
+                    mouseDrag  : false,
                     smartSpeed: 200,
                     slideSpeed: 500,
                     slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
@@ -440,7 +448,7 @@
         // Work Item Slider
         if (owlThumb.length > 0){
             owlThumb.owlCarousel({
-                margin: 30,
+                margin: 10,
                 autoplay: true,
                 autoplayTimeout: 5000,
                 autoplayHoverPause: true,
