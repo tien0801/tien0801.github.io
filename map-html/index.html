@@ -36,29 +36,6 @@
 		  	</pre>
 		</blockquote>
 
-		<script>
-		    var map;
-		    var myLatLng = {lat: 10.740987, lng: 106.697121};
-		    function initMap() {
-		        map = new google.maps.Map(document.getElementById('map_canvas'), {
-		        center: myLatLng,
-		        zoom: 16
-		        });
-		        var marker = new google.maps.Marker({
-		          position: myLatLng,
-		          map: map,
-		          animation: google.maps.Animation.BOUNCE,
-		          icon: 'images/map-marker.png'
-		        });
-		    }
-		    
-		    window.onload = function () {
-		        initMap();
-		    }
-
-		    // google.maps.event.addDomListener(window, 'load', initialize);
-		</script>
-
 		<div class="map-canvas" id="map_canvas" style="margin-top: 20px; height: 500px;"></div>
 		
 	</div>
@@ -66,5 +43,27 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD9lAU0F3EL9rM0i9wX0DCot5mhq9NNVAw"></script>
 	
+	<script>
+		var map;
+		var myLatLng = {lat: 10.740987, lng: 106.697121};
+		function initMap() {
+			map = new google.maps.Map(document.getElementById('map_canvas'), {
+			center: myLatLng,
+			zoom: 16
+			});
+			var marker = new google.maps.Marker({
+			  position: myLatLng,
+			  map: map,
+			  animation: google.maps.Animation.BOUNCE,
+			  icon: 'images/map-marker.png'
+			});
+		}
+		
+		window.onload = function () {
+			initMap();
+		}
+
+		// google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 </body>
 </html>
