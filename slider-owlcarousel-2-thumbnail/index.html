@@ -14,11 +14,11 @@
         iframe {
             width: 100%;
         }
-        .y-thumb-slider .owl-item .item {
+        .css-thumb-slider .owl-item .item {
             display: block;
             border: 1px solid transparent;
         }
-        .y-thumb-slider .current .item {
+        .css-thumb-slider .current .item {
             border: 1px solid #ff0000;
         }
 
@@ -38,7 +38,7 @@
         <h3>Option 1</h3>
         <div class="row">
             <div class="col-md-6">
-                <div id="sync1" class="owl-carousel owl-theme sync1" data-sync="s1">
+                <div id="sync1" class="js-home-slider owl-carousel owl-theme sync1" data-sync="s1">
                     <div class="item">
                         <a class="item-slider" href="#">
                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-1" alt="">
@@ -71,7 +71,7 @@
                     </div>
                     
                 </div>
-                <div id="sync2" class="y-thumb-slider owl-carousel owl-theme sync2" data-sync="s1">
+                <div id="sync2" class="css-thumb-slider owl-carousel owl-theme sync2" data-sync="s1">
                     <div class="item">
                         <a class="item-slider" href="#">
                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-1" alt="">
@@ -105,8 +105,8 @@
                     
                 </div>
             </div>
-            <!-- <div class="col-md-6">
-                <div id="sync1" class="owl-carousel owl-theme sync1" data-sync="s2">
+            <div class="col-md-6">
+                <div id="owl-product-slider" class="owl-carousel owl-theme sync1">
                     <div class="item">
                         <a class="item-slider" href="#">
                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-1" alt="">
@@ -122,29 +122,9 @@
                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-3" alt="">
                         </a>
                     </div>
-                    <div class="item">
-                        <a class="item-slider" href="#">
-                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-4" alt="">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="item-slider" href="#">
-                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-5" alt="">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="item-slider" href="#">
-                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-6" alt="">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="item-slider" href="#">
-                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-7" alt="">
-                        </a>
-                    </div>
                     
                 </div>
-                <div id="sync2" class="y-thumb-slider owl-carousel owl-theme sync2" data-sync="s2">
+                <div id="thumb-product-slider" class="css-thumb-slider owl-carousel owl-theme sync2">
                     <div class="item">
                         <a class="item-slider" href="#">
                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-1" alt="">
@@ -155,35 +135,11 @@
                            <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-2" alt="">
                         </a>
                     </div>
-                    <div class="item">
-                        <a class="item-slider" href="#">
-                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-3" alt="">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="item-slider" href="#">
-                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-4" alt="">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="item-slider" href="#">
-                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-5" alt="">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="item-slider" href="#">
-                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-6" alt="">
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a class="item-slider" href="#">
-                           <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-7" alt="">
-                        </a>
-                    </div>
                     
                 </div>
-            </div> -->
+            </div>
         </div>
+
         <!-- Trigger the modal with a button -->
         <br>
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
@@ -207,7 +163,7 @@
                 </div>
 
                 <div class="work-item-slider-wrapper">
-                    <div class="work-item-slider y-thumb-slider owl-carousel owl-theme">
+                    <div class="work-item-slider css-thumb-slider owl-carousel owl-theme">
                         <a class="item" href="#">
                             <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-1" alt="">
                         </a>
@@ -279,7 +235,7 @@
                 </div>
                 
             </div>
-            <div id="sync2" class="y-thumb-slider owl-carousel owl-theme sync2" data-sync="popup1">
+            <div id="sync2" class="css-thumb-slider owl-carousel owl-theme sync2" data-sync="popup1">
                 <div class="item">
                     <a class="item-slider" href="#">
                        <img src="https://dummyimage.com/920x400/bcbcbc/000000&text=slider-1" alt="">
@@ -400,11 +356,7 @@
 
                 //end block
 
-                sync2
-                    .find(".owl-item")
-                    .removeClass("current")
-                    .eq(current)
-                    .addClass("current");
+                sync2.find(".owl-item").removeClass("current").eq(current).addClass("current");
                 var onscreen = sync2.find('.owl-item.active').length - 1;
                 var start = sync2.find('.owl-item.active').first().index();
                 var end = sync2.find('.owl-item.active').last().index();
@@ -423,7 +375,6 @@
                     sync1.data('owl.carousel').to(number, 100, true);
                 }
             }
-
 
             sync2.on("click", ".owl-item", function(e) {
                 e.preventDefault();
