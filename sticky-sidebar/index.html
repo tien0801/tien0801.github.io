@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://tien0801.github.io/vubatien.jpg" type="image/gif">
+    <title>Meo Code - Frontend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+		#content{
+			border: 2px dotted green;
+			padding: 18px;
+			min-height: 2000px;
+		}
+
+        .sticky-sidebar {
+            display: flex;
+        }
+        .sticky-sidebar .sidebar {
+            width: 33%;
+        }
+        .sticky-sidebar .content-sidebar {
+            width: 67%;
+        }
+
+		.sticky-sidebar .sidebar .sidebar__inner{
+			border: 2px dotted red;
+			position: relative;
+			transform: translate(0, 0);
+			transform: translate3d(0, 0, 0);
+			will-change: position, transform;
+		}
+
+		footer{
+			height: 500px;
+			border: 2px dotted black;
+			background: rgba(0, 0, 0, 0.02);
+		}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1><a target="_blank" href="https://abouolia.github.io/sticky-sidebar/">Sticky Sidebar</a></h1>
+        
+    </div>
+        <header style="background-color: #f4f4f4;">
+            <div class="container">
+                <h2>Header</h2>
+            </div>
+        </header>
+
+    <div class="container">
+        <div class="sticky-sidebar">
+            <div class="sidebar">
+                <div class="sidebar__inner">
+                    <p>This is sticky column</p>
+                </div>
+            </div>
+            <div class="content-sidebar">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tempus id leo et aliquam. Proin consectetur ligula vel neque cursus laoreet. Nullam dignissim, augue at consectetur pellentesque, metus ipsum interdum sapien, quis ornare quam enim vel ipsum.</p>
+                
+                <p>In congue nunc vitae magna tempor ultrices. Cras ultricies posuere elit. Nullam ultrices purus ante, at mattis leo placerat ac. Nunc faucibus ligula nec lorem sodales venenatis. Curabitur nec est condimentum, blandit tellus nec, semper arcu. Nullam in porta ipsum, non consectetur mi. Sed pharetra sapien nisl. Aliquam ac lectus sed elit vehicula scelerisque ut vel sem. Ut ut semper nisl.</p>
+                
+                <p>Curabitur rhoncus, arcu at placerat volutpat, felis elit sollicitudin ante, sed tempus justo nibh sed massa. Integer vestibulum non ante ornare eleifend. In vel mollis dolor.</p>
+                <p>Curabitur rhoncus, arcu at placerat volutpat, felis elit sollicitudin ante, sed tempus justo nibh sed massa. Integer vestibulum non ante ornare eleifend. In vel mollis dolor.</p>
+                <p>Curabitur rhoncus, arcu at placerat volutpat, felis elit sollicitudin ante, sed tempus justo nibh sed massa. Integer vestibulum non ante ornare eleifend. In vel mollis dolor.</p>
+                <p>Curabitur rhoncus, arcu at placerat volutpat, felis elit sollicitudin ante, sed tempus justo nibh sed massa. Integer vestibulum non ante ornare eleifend. In vel mollis dolor.</p>
+                <p>Curabitur rhoncus, arcu at placerat volutpat, felis elit sollicitudin ante, sed tempus justo nibh sed massa. Integer vestibulum non ante ornare eleifend. In vel mollis dolor.</p>
+                <p>Curabitur rhoncus, arcu at placerat volutpat, felis elit sollicitudin ante, sed tempus justo nibh sed massa. Integer vestibulum non ante ornare eleifend. In vel mollis dolor.</p>
+                <p>Curabitur rhoncus, arcu at placerat volutpat, felis elit sollicitudin ante, sed tempus justo nibh sed massa. Integer vestibulum non ante ornare eleifend. In vel mollis dolor.</p>
+            </div>		
+        </div>
+    </div>
+
+    <footer class="container">
+        <h2>Very Tall Footer</h2>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="js/sticky-sidebar.js"></script>
+    <script type="text/javascript">
+		var a = new StickySidebar('.sidebar', {
+			topSpacing: 20,
+			bottomSpacing: 20,
+			containerSelector: '.container',
+			innerWrapperSelector: '.sidebar__inner'
+		});
+	</script>
+</body>
+
+</html>
