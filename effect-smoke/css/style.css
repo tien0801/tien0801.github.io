@@ -78,10 +78,6 @@ body {
   color: grey;
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
-}
 
 #wrap {
   margin: 0 auto;
@@ -100,17 +96,8 @@ a {
   position: absolute;
   width: 250px;
   height: 250px;
-  background: url("http://res.cloudinary.com/da51wkm4r/image/upload/v1461143297/title/smoke.png")
+  background: url("../images/smoke.png")
     no-repeat;
   bottom: 150px;
   margin-left: 0px;
-}
-
-@-webkit-keyframes masked-animation {
-  0% {
-    background-position: left bottom;
-  }
-  100% {
-    background-position: right bottom;
-  }
 }
