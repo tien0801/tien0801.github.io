@@ -4,7 +4,7 @@ $(document).ready(function () {
         $parentli.siblings('li').find('ul:visible').slideUp().prev('a').removeClass("active");
         $parentli.find('> ul').slideToggle().prev('a').toggleClass("active");
     })
-    $('.mobile-menu-btn, .mobile-menu-close').on("click", function(){
+    $('.btn-menu-mobile, .mobile-menu-close').on("click", function(){
         $('.overlay').toggleClass("active");
         $(".mobile-menu").toggleClass("show");
         return false;

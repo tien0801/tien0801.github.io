@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="css/style.css">
 
     <style>
-     
         .y-header-mobile {
             max-width: 767px;
         }
@@ -53,7 +52,21 @@
         }
         .page-content {
             margin-top: 58px;
+            background-color: #f5f5f5;
         }
+
+        /* Btn Menu mobile */
+        .y-header-mobile {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: grey;
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            padding: 7px 15px;
+            box-sizing: border-box;
+            z-index: 777;
+        }
+
         
 
     </style>
@@ -62,7 +75,7 @@
 <body>
     <!-- Header Mobile -->
     <div class="y-header-mobile">
-        <a class="mobile-menu-btn" href="javascript:;">
+        <a class="btn-menu-mobile" href="javascript:;">
             <span></span>
             <span></span>
             <span></span>
@@ -165,6 +178,45 @@
 
     <!-- Content page -->
     <div class="page-content" style="padding-left: 15px; padding-right: 15px; text-align: justify">
+        <h3>Class using:</h3>
+        <h5>
+            .btn-menu-mobile 
+            <br>
+            .y-mobile-menu
+        </h5>
+
+        <h3>JS using: </h3>
+        <pre>
+<code>
+    $(document).ready(function () {
+        function closeMenu() {
+            $('.y-mobile-menu').removeClass('show');
+            $('.overlay-menu').removeClass('active');
+        }
+        $(".has-submenu > .btn-toggle-sub").on("click", function(e){
+            var parentli = $(this).closest('li');
+            if(parentli.hasClass('opened')) {
+                parentli.removeClass('opened');
+                parentli.find('> ul.sub-menu').slideUp(400);
+            } else {
+                parentli.addClass('opened');
+                parentli.find('> ul.sub-menu').slideDown(400);
+            }
+            parentli.siblings('li').removeClass('opened');
+            parentli.siblings('li').find('.has-submenu.opened').removeClass('opened');
+            parentli.siblings('li').find('ul:visible').slideUp();
+        })
+        $('.btn-menu-mobile').on("click", function(){
+            $('.overlay-menu').toggleClass("active");
+            $(".y-mobile-menu").toggleClass("show");
+            return false;
+        })
+        $('.overlay-menu, .m-menu-close').on("click", function(){
+            closeMenu();
+        })
+    });
+</code>
+        </pre>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
         exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
         assumenda fugiat?
@@ -285,42 +337,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
         exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
         assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
+        
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
         exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
         assumenda fugiat?
@@ -338,6 +355,7 @@
 
     <script>
         $(document).ready(function () {
+            // JS Menu mobile
             function closeMenu() {
                 $('.y-mobile-menu').removeClass('show');
                 $('.overlay-menu').removeClass('active');
@@ -355,7 +373,7 @@
                 parentli.siblings('li').find('.has-submenu.opened').removeClass('opened');
                 parentli.siblings('li').find('ul:visible').slideUp();
             })
-            $('.mobile-menu-btn').on("click", function(){
+            $('.btn-menu-mobile').on("click", function(){
                 $('.overlay-menu').toggleClass("active");
                 $(".y-mobile-menu").toggleClass("show");
                 return false;
@@ -364,7 +382,6 @@
                 closeMenu();
             })
         });
-       
     </script>
 
 </body>
