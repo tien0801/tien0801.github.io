@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta name='revisit-after' content='1 days' />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>Website</title>
+    <meta name="description" content="lorem">
+
+    <!-- <link href="images/icon.png" rel="shortcut icon"> -->
+    <link rel="stylesheet" href="css/font-awesome-5.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="vue">
+            <div class="bg_normal" style="background-image: url('images/splashScreen-vl.webp')"></div>
+            <!-- Quiz Start -->
+            <div id="vue_splashScreen" class="vue_splashScreen">
+                <section class="v_sectionLeft">
+                    <div class="v_sectionRestrict">
+                        <div class="v_sectionContent">
+                            <div class="v_content">
+                                <h1><span>Find the coffee that best<br>suits your taste.</span></h1>
+                                <p>Not sure which coffee to choose from? Answer a few questions and get a
+                                    recommendation of
+                                    5 coffees tailored for you.</p>
+                                <div class="box-btn">
+                                    <a href="javascript:;" id="btn-start" class="v_btn v_btnGold v_btnRoundCorner">
+                                        <span>START NOW</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Quiz content -->
+            <div class="vue-quiz">
+                <section class="v_sectionLeft">
+                    <div class="v_sectionRestrict">
+                        <div class="v_sectionContent">
+                            <div class="v_question">
+                                <!-- item quiz -->
+                                <div class="item active">
+                                    <h3>1. What would you like to discover?</h3>
+                                    <div class="v_answers row-2">
+                                        <div class="v_answer" data-next="2">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div style="background-image: url('images/a1.webp')">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>The classic espresso
+                                                        experience</span></div>
+                                                <div class="v_answer__description" style="height: 42px;">
+                                                    <p>If you like your coffee in a short cup or if you're a fan of
+                                                        espresso-based recipes (like Cappuccinos, Lattes, Flat
+                                                        whites...)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="v_answer" data-next="2">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div style="background-image: url('images/a2.webp')">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>The full range of coffee
+                                                        styles</span></div>
+                                                <div class="v_answer__description" style="height: 42px;">
+                                                    <p>If you like to switch it up and drink everything from Espresso to
+                                                        large mugs. With or without milk.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- item quiz -->
+                                <div class="item">
+                                    <h3>2. How do you like your breakfast?</h3>
+                                    <div class="v_answers row-3">
+                                        <div class="v_answer" data-next="3">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div
+                                                        style="background-image: url(images/h1.jpeg);">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>I like it savoury: cheese, eggs,
+                                                        bacon, rice…</span></div>
+                                                <div class="v_answer__description" style="height: 63px;">
+                                                    <p>If you like to start your day with savoury foods like cheese,
+                                                        eggs, mushrooms or rice.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="v_answer" data-next="3">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div
+                                                        style="background-image: url(images/h2.jpeg);">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>I like it sweet: pancakes,
+                                                        croissant, bread and jam, muesli</span></div>
+                                                <div class="v_answer__description" style="height: 63px;">
+                                                    <p>If you like to start your day on a sweet note.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="v_answer" data-next="3">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div
+                                                        style="background-image: url(images/h3.webp);">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>I like a little bit of
+                                                        both</span></div>
+                                                <div class="v_answer__description" style="height: 63px;">
+                                                    <p>If you like having both savoury and sweet foods to start your
+                                                        day.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- item quiz -->
+                                <div class="item">
+                                    <h3>3. What would you like to discover?</h3>
+                                    <div class="v_answers row-2">
+                                        <div class="v_answer" data-next="4">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div style="background-image: url('images/a1.webp')">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>The classic espresso
+                                                        experience</span></div>
+                                                <div class="v_answer__description" style="height: 42px;">
+                                                    <p>If you like your coffee in a short cup or if you're a fan of
+                                                        espresso-based recipes (like Cappuccinos, Lattes, Flat
+                                                        whites...)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="v_answer" data-next="4">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div style="background-image: url('images/a2.webp')">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>The full range of coffee
+                                                        styles</span></div>
+                                                <div class="v_answer__description" style="height: 42px;">
+                                                    <p>If you like to switch it up and drink everything from Espresso to
+                                                        large mugs. With or without milk.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- item quiz -->
+                                <div class="item">
+                                    <h3>4. What would you like to discover?</h3>
+                                    <div class="v_answers row-2">
+                                        <div class="v_answer" data-next="5">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div style="background-image: url('images/a1.webp')">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>The classic espresso
+                                                        experience</span></div>
+                                                <div class="v_answer__description" style="height: 42px;">
+                                                    <p>If you like your coffee in a short cup or if you're a fan of
+                                                        espresso-based recipes (like Cappuccinos, Lattes, Flat
+                                                        whites...)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="v_answer" data-next="5">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div style="background-image: url('images/a2.webp')">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>The full range of coffee
+                                                        styles</span></div>
+                                                <div class="v_answer__description" style="height: 42px;">
+                                                    <p>If you like to switch it up and drink everything from Espresso to
+                                                        large mugs. With or without milk.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- item quiz -->
+                                <div class="item">
+                                    <h3>5. What would you like to discover?</h3>
+                                    <div class="v_answers row-2">
+                                        <div class="v_answer" data-next="6">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div style="background-image: url('images/a1.webp')">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>The classic espresso
+                                                        experience</span></div>
+                                                <div class="v_answer__description" style="height: 42px;">
+                                                    <p>If you like your coffee in a short cup or if you're a fan of
+                                                        espresso-based recipes (like Cappuccinos, Lattes, Flat
+                                                        whites...)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="v_answer" data-next="6">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div style="background-image: url('images/a2.webp')">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>The full range of coffee
+                                                        styles</span></div>
+                                                <div class="v_answer__description" style="height: 42px;">
+                                                    <p>If you like to switch it up and drink everything from Espresso to
+                                                        large mugs. With or without milk.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- item quiz -->
+                                <div class="item">
+                                    <h3>6. What would you like to discover?</h3>
+                                    <div class="v_answers row-2">
+                                        <div class="v_answer" data-next="7">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div style="background-image: url('images/a1.webp')">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>The classic espresso
+                                                        experience</span></div>
+                                                <div class="v_answer__description" style="height: 42px;">
+                                                    <p>If you like your coffee in a short cup or if you're a fan of
+                                                        espresso-based recipes (like Cappuccinos, Lattes, Flat
+                                                        whites...)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="v_answer" data-next="7">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div style="background-image: url('images/a2.webp')">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>The full range of coffee
+                                                        styles</span></div>
+                                                <div class="v_answer__description" style="height: 42px;">
+                                                    <p>If you like to switch it up and drink everything from Espresso to
+                                                        large mugs. With or without milk.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- item quiz -->
+                                <div class="item">
+                                    <h3>7. What would you like to discover?</h3>
+                                    <div class="v_answers row-2">
+                                        <div class="v_answer" data-next="0">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div style="background-image: url('images/a1.webp')">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>The classic espresso
+                                                        experience</span></div>
+                                                <div class="v_answer__description" style="height: 42px;">
+                                                    <p>If you like your coffee in a short cup or if you're a fan of
+                                                        espresso-based recipes (like Cappuccinos, Lattes, Flat
+                                                        whites...)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="v_answer" data-next="0">
+                                            <div class="v_answer__content">
+                                                <div class="v_answer__visual">
+                                                    <div style="background-image: url('images/a2.webp')">
+                                                    </div>
+                                                </div>
+                                                <div class="v_answer__title"><span>The full range of coffee
+                                                        styles</span></div>
+                                                <div class="v_answer__description" style="height: 42px;">
+                                                    <p>If you like to switch it up and drink everything from Espresso to
+                                                        large mugs. With or without milk.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="v_breadcrumbs">
+                                <div class="prev-quiz v_previous v_link" id="prev-quiz" data-prevq=1 data-currq=1 >
+                                    <span><i class="fas fa-chevron-left"></i> Previous question</span>
+                                </div>
+                                <ul class="list-process">
+                                    <li class="active"><span>1</span></li>
+                                    <li class=""><span>2</span></li>
+                                    <li class=""><span>3</span></li>
+                                    <li class=""><span>4</span></li>
+                                    <li class=""><span>5</span></li>
+                                    <li class=""><span>6</span></li>
+                                    <li class=""><span>7</span></li>
+                                    <li><span><i class="fas fa-check"></i></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <!-- <div id="slider-quiz">
+                    <ul id="sliderWrap">
+                        <li>
+                            <img src="images/slide/fullimage1.jpg">
+                        </li>
+                        <li>
+                            <img src="images/slide/fullimage2.jpg">
+                        </li>
+                        <li>
+                            <img src="images/slide/fullimage3.jpg">
+                        </li>
+                        <li>
+                            <img src="images/slide/fullimage4.jpg">
+                        </li>
+                        <li>
+                            <img src="images/slide/fullimage5.jpg">
+                        </li>
+                        <li>
+                            <img src="images/slide/fullimage6.jpg">
+                        </li>
+                    </ul>
+                    <div>
+                        <img id="prev" src="images/pre.png" />
+                    </div>
+                    <div>
+                        <img id="next" src="images/next.png" />
+                    </div>
+                </div>
+               
+                <ul class="process-quiz">
+                    <li>
+                        <img class="thumb_slide" src="images/slide/fullimage1.jpg">
+                    </li>
+                    <li>
+                        <img class="thumb_slide" src="images/slide/fullimage2.jpg">
+                    </li>
+                    <li>
+                        <img class="thumb_slide" src="images/slide/fullimage3.jpg">
+                    </li>
+                    <li>
+                        <img class="thumb_slide" src="images/slide/fullimage4.jpg">
+                    </li>
+                    <li>
+                        <img class="thumb_slide" src="images/slide/fullimage5.jpg">
+                    </li>
+                    <li>
+                        <img class="thumb_slide" src="images/slide/fullimage6.jpg">
+                    </li>
+                </ul> -->
+
+
+            </div>
+
+            <!-- Quiz result -->
+            <div class="quiz-result">
+                This is result page!
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Main JS -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
