@@ -152,9 +152,8 @@ body {
 
                 &.active {
                     transform: translateX(0);
-                    transition: all 1s;
-                    transition-delay: 1s;
-
+                    transition: all .8s;
+                    transition-delay: .8s;
                 }
             }
 
@@ -167,13 +166,12 @@ body {
 
             &.hide {
                 transform: translateX(-100%);
-                transition: all 1s;
-                // transition-delay: 1s;
+                transition: all .8s;
             }
 
             &.wait {
                 transform: translateX(100%);
-                transition: all 1s;
+                transition: all .8s;
             }
 
         }

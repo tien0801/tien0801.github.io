@@ -566,8 +566,8 @@ body {
 }
 .vue-quiz .v_question .item:not(:first-child).active {
   transform: translateX(0);
-  transition: all 1s;
-  transition-delay: 1s;
+  transition: all .8s;
+  transition-delay: .8s;
 }
 .vue-quiz .v_question .item:first-child {
   animation: none;
@@ -577,11 +577,11 @@ body {
 }
 .vue-quiz .v_question .item.hide {
   transform: translateX(-100%);
-  transition: all 1s;
+  transition: all .8s;
 }
 .vue-quiz .v_question .item.wait {
   transform: translateX(100%);
-  transition: all 1s;
+  transition: all .8s;
 }
 .vue-quiz .v_question .v_answers {
   display: flex;
