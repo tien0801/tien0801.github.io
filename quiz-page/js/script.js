@@ -3,7 +3,7 @@ $(document).ready(function() {
     console.log("script.js Ready");
 
     $('#btn-start').click(function() {
-        console.log('click Button start');
+        console.log('click Button Start');
 
         $('.bg_normal').addClass('active');
         $('#vue_splashScreen').addClass('disable');
@@ -23,6 +23,8 @@ $(document).ready(function() {
             $('.vue-quiz').removeClass('active');
             $('.quiz-result').addClass('active');
         }
+
+		$(this).find('.check-quiz').prop('checked', true);
 
         $('#prev-quiz').addClass('active');
         $('#prev-quiz').attr('data-prevq', n_next - 1);
@@ -50,12 +52,13 @@ $(document).ready(function() {
             $(this).removeClass('active');
         }
 
-        // $('.vue-quiz .v_question .item').eq(n_curr-1).removeClass('hide');
         $('.vue-quiz .v_question .item').eq(n_curr-1).removeClass('active');
         $('.vue-quiz .v_question .item').eq(n_curr-1).addClass('wait');
 
         $('.vue-quiz .v_question .item').eq(n_prev-1).addClass('active');
         $('.vue-quiz .v_question .item').eq(n_prev-1).removeClass('hide');
+
+		$('.vue-quiz .v_question .item').eq(n_prev-1).find('.check-quiz').prop('checked', false);
 
         $('#prev-quiz').attr('data-prevq', n_prev - 1);
         $('#prev-quiz').attr('data-currq', n_curr - 1);

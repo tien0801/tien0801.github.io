@@ -583,20 +583,6 @@ body {
   transform: translateX(100%);
   transition: all 1s;
 }
-@keyframes hideQuiz {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes aniQuiz {
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 .vue-quiz .v_question .v_answers {
   display: flex;
   flex-wrap: wrap;
@@ -636,6 +622,9 @@ body {
 }
 .vue-quiz .v_question .v_answers .v_answer:hover .v_answer__description p {
   color: #000;
+}
+.vue-quiz .v_question .v_answers .v_answer .check-quiz {
+  display: none;
 }
 .vue-quiz .v_question .v_answers .v_answer__content {
   position: relative;
