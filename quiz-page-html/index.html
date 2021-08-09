@@ -18,7 +18,37 @@
 
 <body>
     <main>
+        <div class="top-header">
+            <div class="box-header">
+                <div class="logo">
+                    <a href="#">
+                        <img src="https://dummyimage.com/150x50/999999/fff" alt="">
+                    </a>
+                </div>
+
+                <div class="box-login">
+                    <a href="#">
+                        <i class="fas fa-user"></i> <span>Đăng nhập / Tạo tài khoản mới</span>
+                    </a>
+                    <a href="#" class="cart-header">
+                        <i class="fas fa-shopping-basket"></i> <span>Giỏ hàng của bạn (0)</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <div class="vue">
+            <header class="header">
+                <h3><span>Coffee Quiz</span></h3>
+                <ul class="menu">
+                    <li class="active"><a href="/sg/en/coffee-selector-breakfast" class="v_active"><span>Coffee Quiz</span></a></li>
+                    <li><a href="/sg/en/coffee-range" class=""><span>Discover our Coffee Range</span></a></li>
+                    <li><a href="/coffee-origins" class=""><span><strong class="v_brand"
+                        term="nespresso">Nespresso</strong> Coffee Origins</span></a></li>
+                    <li><a href="/coffee-expertise" class=""><span>Our Coffee Expertise</span></a></li>
+                </ul>
+            </header>
+
             <div class="bg_normal" style="background-image: url('images/splashScreen-vl.webp')"></div>
             <!-- Quiz Start -->
             <div id="vue_splashScreen" class="vue_splashScreen">
@@ -93,7 +123,8 @@
                                             <input class="check-quiz" type="checkbox" name="check1" value="value">
                                             <div class="v_answer__content">
                                                 <div class="v_answer__visual">
-                                                    <div style="background-image: url(images/h1.jpeg);"></div>
+                                                    <div style="background-image: url(images/h1.jpeg);">
+                                                    </div>
                                                 </div>
                                                 <div class="v_answer__title"><span>I like it savoury: cheese, eggs,
                                                         bacon, rice…</span></div>
@@ -324,7 +355,7 @@
 
                             </div>
                             <div class="v_breadcrumbs">
-                                <div class="prev-quiz v_previous v_link" id="prev-quiz" data-prevq=1 data-currq=1 >
+                                <div class="prev-quiz v_previous v_link" id="prev-quiz" data-prevq=1 data-currq=1>
                                     <span><i class="fas fa-chevron-left"></i> Previous question</span>
                                 </div>
                                 <ul class="list-process">

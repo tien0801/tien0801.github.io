@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Proxima Nova Th';
+    src: url('ProximaNova-Extrabld.woff2') format('woff2'),
+        url('ProximaNova-Extrabld.woff') format('woff'),
+        url('ProximaNova-Extrabld.ttf') format('truetype'),
+        url('ProximaNova-Extrabld.svg#ProximaNova-Extrabld') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Share Tech';
+    src: url('ShareTech-Regular.woff2') format('woff2'),
+        url('ShareTech-Regular.woff') format('woff'),
+        url('ShareTech-Regular.ttf') format('truetype'),
+        url('ShareTech-Regular.svg#ShareTech-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
