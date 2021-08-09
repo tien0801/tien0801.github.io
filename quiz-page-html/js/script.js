@@ -2,6 +2,34 @@
 $(document).ready(function() {
     console.log("script.js Ready");
 
+    // JS Menu mobile
+    function closeMenu() {
+        $('.y-mobile-menu').removeClass('show');
+        $('.overlay-menu').removeClass('active');
+    }
+    $(".has-submenu > .btn-toggle-sub").on("click", function(e){
+        var parentli = $(this).closest('li');
+        if(parentli.hasClass('opened')) {
+            parentli.removeClass('opened');
+            parentli.find('> ul.sub-menu').slideUp(400);
+        } else {
+            parentli.addClass('opened');
+            parentli.find('> ul.sub-menu').slideDown(400);
+        }
+        parentli.siblings('li').removeClass('opened');
+        parentli.siblings('li').find('.has-submenu.opened').removeClass('opened');
+        parentli.siblings('li').find('ul:visible').slideUp();
+    })
+    $('.btn-menu-mobile').on("click", function(){
+        $('.overlay-menu').toggleClass("active");
+        $(".y-mobile-menu").toggleClass("show");
+        return false;
+    })
+    $('.overlay-menu, .m-menu-close').on("click", function(){
+        closeMenu();
+    })
+
+    // Quiz
     $('#btn-start').click(function() {
         console.log('click Button Start');
 
