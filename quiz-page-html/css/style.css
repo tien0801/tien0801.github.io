@@ -844,6 +844,7 @@ body {
   transform: translateX(100%);
   position: absolute;
   top: 0;
+  width: 100%;
 }
 .vue-quiz .v_question .item:not(:first-child).active {
   transform: translateX(0);
