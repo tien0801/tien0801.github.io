@@ -21,41 +21,103 @@
 <body>
     <div class="container">
         <h1>Range Slider</h1>
-        <p>
-            <label for="amount">Price range:</label>
-            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-        </p>
+        <div class="row">
+            <div class="col-lg-6">
+                <p>
+                    <label for="amount">Price range:</label>
+                    <input type="text" id="amount-1" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                </p>
 
-        <div id="slider-range" data-min="0" data-max="600" data-vmin="100" data-vmax="300"></div>
+                <div id="slider-range-1" data-min="0" data-max="600" data-vmin="100" data-vmax="300"></div>
 
+                <br><br>
+            </div>
+
+            <!-- V2 custom -->
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label>Chọn khoảng giá</label>
+                    <div id="slider-range" data-min="1" data-max="10000" data-vmin="1" data-vmax="1500"></div>
+                    <p class="text-range text-center">
+                        <input class="text-center" type="text" id="amount" readonly>
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
     <script>
         $(document).ready(function($) {
-            if($("#slider-range").length) {
-                var min = $("#slider-range").data('min');
-                var max = $("#slider-range").data('max');
-                var vmin = $("#slider-range").data('vmin');
-                var vmax = $("#slider-range").data('vmax');
+            if($("#slider-range-1").length) {
+                var min = $("#slider-range-1").data('min');
+                var max = $("#slider-range-1").data('max');
+                var vmin = $("#slider-range-1").data('vmin');
+                var vmax = $("#slider-range-1").data('vmax');
                 console.log(min);
-                $("#slider-range").slider({
+                $("#slider-range-1").slider({
                     range: true,
                     min: min,
                     max: max,
                     values: [ vmin, vmax ],
                     slide: function( event, ui ) {
-                        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                        $( "#amount-1" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
                     }
                 });
-                $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-                    " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+                $( "#amount-1" ).val( "$" + $( "#slider-range-1" ).slider( "values", 0 ) +
+                    " - $" + $( "#slider-range-1" ).slider( "values", 1 ) );
 
             }
          
         });
     </script>
+
+    <script>
+        $(document).ready(function($) {
+            if ($("#slider-range").length) {
+                var min = $("#slider-range").data('min');
+                var max = $("#slider-range").data('max');
+                var vmin = $("#slider-range").data('vmin');
+                var vmax = $("#slider-range").data('vmax');
+
+                var unit = "triệu";
+                $("#slider-range").slider({
+                range: true,
+                min: min,
+                max: max,
+                values: [vmin, vmax],
+                slide: function (event, ui) {
+                    let _html = ``;
+                    if (ui.values[0] > 999) {
+                    ui.values[0] /= 1000;
+                    unit = "tỉ";
+                    } else {
+                    unit = "triệu";
+                    }
+                    _html += ui.values[0] + unit + " - ";
+
+                    if (ui.values[1] > 999) {
+                    ui.values[1] /= 1000;
+                    unit = "tỉ";
+                    } else {
+                    unit = "triệu";
+                    }
+                    _html += ui.values[1] + unit;
+                    $("#amount").val(_html);
+                }
+                });
+                $("#amount").val("" + $("#slider-range").slider("values", 0) +
+                " triệu - 1.5 tỉ");
+            }
+
+            $('.filter-color li').click(function(event) {
+                $('.filter-color li').removeClass('active')
+                $(this).addClass('active');
+            });
+        });
+    </script>
+
 </body>
 
 </html>

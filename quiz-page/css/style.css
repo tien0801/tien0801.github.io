@@ -576,7 +576,7 @@ body {
   opacity: 1;
   transform: translateX(0);
 }
-.vue-quiz .v_question .item.hide {
+.vue-quiz .v_question .item.hidden {
   transform: translateX(-100%);
   transition: all .8s;
 }

@@ -37,7 +37,7 @@ $(document).ready(function() {
         $('#prev-quiz').attr('data-prevq', n_next - 1);
         $('#prev-quiz').attr('data-currq', n_next);
 
-        $(this).closest('.item').addClass('hide');
+        $(this).closest('.item').addClass('hidden');
         $(this).closest('.item').removeClass('active');
 
         $('.vue-quiz .v_question .item:nth-child(' + n_next + ')').addClass('active');
@@ -63,7 +63,7 @@ $(document).ready(function() {
         $('.vue-quiz .v_question .item').eq(n_curr-1).addClass('wait');
 
         $('.vue-quiz .v_question .item').eq(n_prev-1).addClass('active');
-        $('.vue-quiz .v_question .item').eq(n_prev-1).removeClass('hide');
+        $('.vue-quiz .v_question .item').eq(n_prev-1).removeClass('hidden');
 
 		$('.vue-quiz .v_question .item').eq(n_prev-1).find('.check-quiz').prop('checked', false);
 
