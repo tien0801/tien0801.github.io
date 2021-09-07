@@ -641,18 +641,18 @@ body {
 
             .v_answer__title {
                 position: absolute;
-                top: 0;
+                top: 50%;
                 right: 0;
-                bottom: 50%;
+                // bottom: 50%;
                 left: 0;
                 margin: 0 auto;
                 text-align: center;
                 width: 100%;
                 padding: 0 20px;
                 z-index: 10;
-                -ms-transform: translateY(100%);
-                -webkit-transform: translateY(100%);
-                transform: translateY(100%);
+                -ms-transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
 
                 @include Responsive(SM) {
                     float: right;
