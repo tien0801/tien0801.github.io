@@ -97,11 +97,14 @@
 			</div>
 			<div class="col-md-6">
 <pre>
-	
+	<code>
 $(document).ready(function() {
-	$(".y-text-editor table").wrap("Add Code element here <!-- <div class='table-responsive'></div> -->");
-	$(".y-text-editor iframe").wrap("Add Code element div here <!-- <div class='box-iframe'></div> -->");
+	if($(".y-text-editor").length > 0) {
+		$(".y-text-editor table").wrap("Add Code here <!-- <div class='table-responsive'></div> -->");
+		$(".y-text-editor iframe").wrap("Add Code here <!-- <div class='box-iframe'></div> -->");
+	}
 });
+</code>
 </pre>
 			</div>
 		</div>
@@ -193,7 +196,6 @@ $(document).ready(function() {
 				$(".y-text-editor table").wrap("<div class='table-responsive'></div>");
 				$(".y-text-editor iframe").wrap("<div class='box-iframe'></div>");
 			}
-
 		});
 	</script>
 </body>
