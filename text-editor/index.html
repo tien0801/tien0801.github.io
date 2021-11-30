@@ -21,79 +21,101 @@
 			<div class="col-md-6">
 <pre>
 <code>
-.y-text-editor *{
-	max-width: 100%;
-}
-.y-text-editor blockquote {
-	margin: 0 0 1.25em;
-    padding: 0 1.25em 0 1.875em;
-    border-left: 2px solid #111;
-    font-style: italic;
-}
-.y-text-editor h1 {
-	font-size: 30px;
-}
-.y-text-editor h2 {
-	font-size: 28px;
-}
-.y-text-editor h3 {
-	font-size: 24px;
-}
-.y-text-editor h4 {
-	font-size: 20px;
-}
-.y-text-editor h5 {
-	font-size: 18px;
-}
-.y-text-editor h5 {
-	font-size: 16px;
-}
-.y-text-editor p {
-	margin-bottom: 10px;
-}
-.y-text-editor img{
-	max-width: 100%;
-	height: auto !important;
-	display: initial;
-}
-.y-text-editor iframe{
-	max-width: 100%;
-}
-.y-text-editor table{
-	width: 100%;
-}
-.y-text-editor i{
-	font-style: italic;
-}
-.y-text-editor u{
-    text-decoration: underline;
-}
-.y-text-editor a{
-	text-decoration: underline;
-}
-.y-text-editor b,
-.y-text-editor strong{
-	font-weight: bold;
-}
-.y-text-editor ul{
-	padding-left: 30px;
-	list-style-type: disc;
-}
-.y-text-editor ul li{
-	display: list-item;
-	list-style-type: disc;
-}
-.y-text-editor ol{
-	padding-left: 30px;
-	list-style-type: decimal;
-}
-.y-text-editor ol li{
-	display: list-item;
-	list-style-type: decimal;
-}
-.y-text-editor blockquote {
-	border-left: 5px solid #000;
-}
+	.y-text-editor {
+		*{
+			max-width: 100%;
+		}
+	
+		h1 {
+			@include font_72;
+		}
+		h2 {
+			@include font_64;
+		}
+		h3 {
+			@include font_48;
+		}
+		h4 {
+			@include font_36;
+		}
+		h5 {
+			@include font_24;
+		}
+		h6 {
+			@include font_18;
+		}
+	
+		blockquote {
+			margin: 0 0 1.25em;
+			padding: 0 1.25em 0 1.875em;
+			border-left: 2px solid #111;
+			font-style: italic;
+		}
+		
+		p {
+			margin-bottom: 10px;
+		}
+		img {
+			max-width: 100%;
+			height: auto !important;
+		}
+		iframe{
+			max-width: 100%;
+		}
+	
+		.box-iframe {
+			position: relative;
+			height: 0;
+			overflow: hidden;
+			padding-bottom: 26.2%;
+			padding-top: 30%;
+	
+			iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		
+		table{
+			width: 100%;
+		}
+		i{
+			font-style: italic;
+		}
+		u{
+			text-decoration: underline;
+		}
+		a{
+			text-decoration: underline;
+		}
+		b,
+		strong{
+			font-weight: bold;
+		}
+		ul{
+			padding-left: 30px;
+			list-style-type: disc;
+		}
+		ul li{
+			display: list-item;
+			list-style-type: disc;
+		}
+		ol{
+			padding-left: 30px;
+			list-style-type: decimal;
+		}
+		ol li{
+			display: list-item;
+			list-style-type: decimal;
+		}
+	
+		blockquote {
+			border-left: 5px solid #000;
+		}
+	}
 </code>
 </pre>
 
