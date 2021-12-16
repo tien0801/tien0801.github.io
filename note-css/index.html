@@ -9,7 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Meo Code - Frontend</title>
     <link rel="canonical" href="https://yosu.vn/current-page">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -23,8 +24,10 @@
                         <p><strong>Flexbox Css</strong></p>
                     </div>
                     <div class="col-md-6">
-                        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
-                        <a href="https://thachpham.com/web-development/html-css/huong-dan-css3-flexbox-toan-tap.html" target="_blank">https://thachpham.com/web-development/html-css/huong-dan-css3-flexbox-toan-tap.html</a>
+                        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/"
+                            target="_blank">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
+                        <a href="https://thachpham.com/web-development/html-css/huong-dan-css3-flexbox-toan-tap.html"
+                            target="_blank">https://thachpham.com/web-development/html-css/huong-dan-css3-flexbox-toan-tap.html</a>
                     </div>
                 </div>
                 <div class="row item">
@@ -46,7 +49,8 @@
                     </div>
                     <div class="col-md-6">
                         <p>CSS Xác định khoảng trắng có bên trong thành phần được xử lý như thế nào. </p>
-                        <p>Text will never wrap to the next line. The text continues on the same line until a <br> tag is encountered</p>
+                        <p>Text will never wrap to the next line. The text continues on the same line until a <br> tag
+                            is encountered</p>
                         <p>Break words at any character:</p>
                     </div>
                 </div>
@@ -96,10 +100,19 @@ li:before {
                     <div class="col-md-6">
                         <p>CSS Ordered list</p>
                         <style>
-                            ol { counter-reset: item }
-						li{ display: block }
-						li:before { content: counters(item, ".") " "; counter-increment: item }
-					</style>
+                            ol {
+                                counter-reset: item
+                            }
+
+                            li {
+                                display: block
+                            }
+
+                            li:before {
+                                content: counters(item, ".") " ";
+                                counter-increment: item
+                            }
+                        </style>
                         <ol>
                             <li><a href="#">Menu 1</a></li>
                             <li><a href="#">Menu 1</a>
@@ -123,7 +136,7 @@ li:before {
                 <div class="row item">
                     <div class="col-md-6">
                         <p>CSS:</p>
-<pre><code>
+                        <pre><code>
 input:focus, textarea:focus {
     border-color: rgba(21,156,64,.6) !important;
     outline: 0;
@@ -151,6 +164,23 @@ input:focus, textarea:focus {
             </div>
             <div class="col-md-6 list-item">
                 <div class="row item">
+                    <style>
+                        .text-stroke {
+                           text-shadow: rgb(43, 191, 255) 8px 0px 0px, rgb(43, 191, 255) 7.93758px 0.997398px 0px, rgb(43, 191, 255) 7.7513px 1.97923px 0px, rgb(43, 191, 255) 7.44406px 2.93018px 0px, rgb(43, 191, 255) 7.02066px 3.8354px 0px, rgb(43, 191, 255) 6.4877px 4.68078px 0px, rgb(43, 191, 255) 5.85351px 5.45311px 0px, rgb(43, 191, 255) 5.12797px 6.14035px 0px, rgb(43, 191, 255) 4.32242px 6.73177px 0px, rgb(43, 191, 255) 3.44941px 7.21814px 0px, rgb(43, 191, 255) 2.52258px 7.59188px 0px, rgb(43, 191, 255) 1.55638px 7.84714px 0px, rgb(43, 191, 255) 0.565898px 7.97996px 0px, rgb(43, 191, 255) -0.433417px 7.98825px 0px, rgb(43, 191, 255) -1.42597px 7.87189px 0px, rgb(43, 191, 255) -2.39627px 7.63269px 0px, rgb(43, 191, 255) -3.32917px 7.27438px 0px, rgb(43, 191, 255) -4.21013px 6.80256px 0px, rgb(43, 191, 255) -5.02539px 6.22459px 0px, rgb(43, 191, 255) -5.76223px 5.54948px 0px, rgb(43, 191, 255) -6.40915px 4.78778px 0px, rgb(43, 191, 255) -6.95606px 3.95136px 0px, rgb(43, 191, 255) -7.39442px 3.05329px 0px, rgb(43, 191, 255) -7.71739px 2.10757px 0px, rgb(43, 191, 255) -7.91994px 1.12896px 0px, rgb(43, 191, 255) -7.9989px 0.132735px 0px, rgb(43, 191, 255) -7.95304px -0.865561px 0px, rgb(43, 191, 255) -7.78307px -1.85035px 0px, rgb(43, 191, 255) -7.49165px -2.80627px 0px, rgb(43, 191, 255) -7.08333px -3.71839px 0px, rgb(43, 191, 255) -6.56448px -4.57249px 0px, rgb(43, 191, 255) -5.94318px -5.35524px 0px, rgb(43, 191, 255) -5.22915px -6.05442px 0px, rgb(43, 191, 255) -4.43352px -6.65912px 0px, rgb(43, 191, 255) -3.5687px -7.15991px 0px, rgb(43, 191, 255) -2.6482px -7.54898px 0px, rgb(43, 191, 255) -1.68637px -7.82024px 0px, rgb(43, 191, 255) -0.698222px -7.96947px 0px, rgb(43, 191, 255) 0.300817px -7.99434px 0px, rgb(43, 191, 255) 1.29516px -7.89446px 0px, rgb(43, 191, 255) 2.2693px -7.67139px 0px, rgb(43, 191, 255) 3.20802px -7.32862px 0px, rgb(43, 191, 255) 4.09668px -6.87148px 0px, rgb(43, 191, 255) 4.92142px -6.30711px 0px, rgb(43, 191, 255) 5.66936px -5.64432px 0px, rgb(43, 191, 255) 6.32883px -4.89346px 0px, rgb(43, 191, 255) 6.88954px -4.06623px 0px, rgb(43, 191, 255) 7.34274px -3.17555px 0px, rgb(43, 191, 255) 7.68136px -2.23532px 0px, rgb(43, 191, 255) 7.90012px -1.26021px 0px, rgb(43, 191, 255) 7.9956px -0.265434px 0px;
+                        }
+                    </style>
+                    <div class="col-md-6">
+                        <a target="_blank" href="https://owumaro.github.io/text-stroke-generator/?fbclid=IwAR2kKNrXddo7JSKjP3mQ1iCp290mxLffISadSbZ6czeCEjjupsgzvMqA_EQ">
+                            <b>CSS text-stroke generator</b>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="text-stroke">
+                            CSS text-stroke generator
+                        </p>
+                    </div>
+                </div>
+                <div class="row item">
                     <div class="col-md-6">
                         <p>[class^="col-"], div[class*=" col-"] { border-color: red; }</p>
                     </div>
@@ -165,13 +195,14 @@ input:focus, textarea:focus {
                     </div>
                     <div class="col-md-6">
                         <style>
-                        .filter-img {
-                            filter: grayscale(100%);
-                            width: 100px;
-                        }
-                        .filter-img:hover {
-                            filter: grayscale(0);
-                        }
+                            .filter-img {
+                                filter: grayscale(100%);
+                                width: 100px;
+                            }
+
+                            .filter-img:hover {
+                                filter: grayscale(0);
+                            }
                         </style>
                         <div>
                             <img class="filter-img" src="images/bg-test.jpg" alt="">
@@ -182,28 +213,31 @@ input:focus, textarea:focus {
                 </div>
                 <div class="row item">
                     <div class="col-md-6">
-                        <p><strong>rem:</strong> là đơn vị tham chiếu tỷ lệ so với phần tử gốc của website ở đây là thẻ <span><</span>html <span>></span> dựa vào giá trị của thuộc tính font-size
-                        <p><strong>em:</strong> là đơn vị tham chiếu tỷ lệ so với phần tử cha trực tiếp chứa nó hoặc chính nó dựa vào giá trị của thuộc tính là font-size</p>
+                        <p><strong>rem:</strong> là đơn vị tham chiếu tỷ lệ so với phần tử gốc của website ở đây là thẻ
+                            <span>
+                                << /span>html <span>></span> dựa vào giá trị của thuộc tính font-size
+                                    <p><strong>em:</strong> là đơn vị tham chiếu tỷ lệ so với phần tử cha trực tiếp chứa
+                                        nó hoặc chính nó dựa vào giá trị của thuộc tính là font-size</p>
                     </div>
                     <div class="col-md-6">
                         <style>
-                        .box-em-rem {
-                            color: white;
-                            display: flex;
-                            font-size: 13px;
-                        }
+                            .box-em-rem {
+                                color: white;
+                                display: flex;
+                                font-size: 13px;
+                            }
 
-                        .em {
-                            width: 10em;
-                            height: 10em;
-                            background-color: red;
-                        }
+                            .em {
+                                width: 10em;
+                                height: 10em;
+                                background-color: red;
+                            }
 
-                        .rem {
-                            width: 10rem;
-                            height: 10rem;
-                            background-color: blue;
-                        }
+                            .rem {
+                                width: 10rem;
+                                height: 10rem;
+                                background-color: blue;
+                            }
                         </style>
                         <div class="box-em-rem">
                             <div class="em">EM</div>
@@ -220,14 +254,16 @@ input:focus, textarea:focus {
                         <a href="#" class="gradient-box">Button border gradient</a>
                     </div>
                 </div>
-                
+
                 <div class="row item">
                     <div class="col-md-6">
                         <p><b>transform: skew(ax, ay)</b></p>
                         <p>transform: skewX(-10deg);</p>
                     </div>
                     <div class="col-md-6">
-                        <div href="#" class="" style="width: 100px; height: 60px; background-color: #EC6607; transform: skewX(-10deg);"></div>
+                        <div href="#" class=""
+                            style="width: 100px; height: 60px; background-color: #EC6607; transform: skewX(-10deg);">
+                        </div>
                     </div>
                 </div>
 
@@ -235,7 +271,7 @@ input:focus, textarea:focus {
                     <div class="col-md-6">
                         <p><b>border-bottom: 10vw solid #EC6607;</b></p>
                         <p><b>border-left: 50vw solid transparent;</b></p>
-                       
+
                     </div>
                     <div class="col-md-6">
                         <div href="#" style="width: 100px; height: 60px; background-color: #111;
@@ -250,14 +286,18 @@ input:focus, textarea:focus {
                         <a href="https://bennettfeely.com/clippy/" target="_blank">https://bennettfeely.com/clippy/</a>
                     </div>
                     <div class="col-md-6">
-                        <img style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);" src="images/bg-test.jpg" width="120" alt="">
+                        <img style="clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);" src="images/bg-test.jpg"
+                            width="120" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div> <!-- ./container -->
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

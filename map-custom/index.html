@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Index</title>
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> -->
+	<style>
+		#address {
+			width: 90%;
+			padding: 4px;
+			border: 1px solid #000;
+		}
+
+		#map-canvas {
+			width: 90%;
+			border: 1px solid #CCC;
+			height: 400px;
+			margin: 10px 0;
+			padding: 4px
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h3 class="h1">Google Map</h3>
+
+		<div id="floating-panel">
+			<b>Start: </b>
+			<select id="start">
+				<option value="chicago, il">Chicago</option>
+				<option value="st louis, mo">St Louis</option>
+				<option value="joplin, mo">Joplin, MO</option>
+				<option value="oklahoma city, ok">Oklahoma City</option>
+				<option value="amarillo, tx">Amarillo</option>
+				<option value="gallup, nm">Gallup, NM</option>
+				<option value="flagstaff, az">Flagstaff, AZ</option>
+				<option value="winona, az">Winona</option>
+				<option value="kingman, az">Kingman</option>
+				<option value="barstow, ca">Barstow</option>
+				<option value="san bernardino, ca">San Bernardino</option>
+				<option value="los angeles, ca">Los Angeles</option>
+			</select>
+			<b>End: </b>
+			<select id="end">
+				<option value="chicago, il">Chicago</option>
+				<option value="st louis, mo">St Louis</option>
+				<option value="joplin, mo">Joplin, MO</option>
+				<option value="oklahoma city, ok">Oklahoma City</option>
+				<option value="amarillo, tx">Amarillo</option>
+				<option value="gallup, nm">Gallup, NM</option>
+				<option value="flagstaff, az">Flagstaff, AZ</option>
+				<option value="winona, az">Winona</option>
+				<option value="kingman, az">Kingman</option>
+				<option value="barstow, ca">Barstow</option>
+				<option value="san bernardino, ca">San Bernardino</option>
+				<option value="los angeles, ca">Los Angeles</option>
+			</select>
+
+			<!-- <input type="text" value="" id="end"> -->
+
+		</div>
+		<div class="map-canvas" id="map_canvas" style="margin-top: 20px; height: 500px;"></div>
+
+		<input type="text" id="address" />
+		<div class="map-canvas"></div>
+
+	</div>
+	<script src="js/jquery-2.2.4.min.js"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> -->
+	<script type="text/javascript"
+		src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD4S-7VnutQrvqzKjycYf4dmgxViUG9CGM"></script>
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true&libraries=places"></script> -->
+
+	<script>
+		(function () {
+			// Khởi tạo biến chứa PlacesService
+			var addressAutocomplete, addressInput, directionsDisplay, directionsSvc, infoWindow, map, mapLatLng, mapOptions, marker, placeMarkerMaker, placesSvc, searchPlacesResult;
+
+			placesSvc = null;
+
+			// Khởi tạo biến chứa infoWindow
+			infoWindow = new google.maps.InfoWindow();
+
+			// Khởi tạo object chứa kinh/vĩ độ. Mình lấy mặc định là Hà Nội nhé :D
+			mapLatLng = new google.maps.LatLng(21.0277644, 105.83415979999995);
+
+			// Khởi tạo directions display và directions service
+			directionsDisplay = new google.maps.DirectionsRenderer({
+				suppressMarkers: true // Không hiển thị đánh dấu điểm A và B
+			});
+
+			directionsSvc = new google.maps.DirectionsService();
+
+			// Khởi tạo các tùy chọn cho Map
+			mapOptions = {
+				zoom: 12,
+				center: mapLatLng
+			};
+
+			// Gắn map vào div
+			map = new google.maps.Map($("#map-canvas")[0], mapOptions);
+
+			// Gắn directions display vào map
+			// để nó còn biết là sẽ vẽ vào đâu ^^
+			directionsDisplay.setMap(map);
+
+			// Tạo một marker để đánh dấu vị trí hiện tại
+			marker = new google.maps.Marker({
+				position: mapLatLng,
+				map: map
+			});
+
+			// Lấy input DOM
+			addressInput = $("#address")[0];
+
+			// Khởi tạo Autocomplete
+			addressAutocomplete = new google.maps.places.Autocomplete(addressInput);
+
+			// Gắn nó vào map
+			addressAutocomplete.bindTo("bounds", map);
+
+			// Lắng nghe khi sự kiện địa chỉ được thay đổi. Chúng ta sẽ set cái map và đánh đấu về vị trí đó
+			google.maps.event.addListener(addressAutocomplete, "place_changed", function () {
+				var placeObj;
+				// Lấy object place
+				placeObj = addressAutocomplete.getPlace();
+				// Chuyển đánh dấu và map center về vị trí đã nhập
+				marker.setPosition(placeObj.geometry.location);
+				map.setCenter(placeObj.geometry.location);
+				// Set lại kinh/vĩ độ cho mapLatLng
+				return mapLatLng = placeObj.geometry.location;
+			});
+
+			// Tạo sự kiện khi click search button
+			$("#search").on("click", function () {
+				var placeKeyword, placeRequestObj;
+				// Lấy từ khóa người dùng đã nhập
+				placeKeyword = $("#keyword").val().trim();
+
+				// Kiểm tra để chắc chắn từ khóa đã được nhập
+				if (placeKeyword) {
+					// Khởi tạo object chứa tùy chọn cho việc tìm kiếm địa điểm
+					// bao gồm vị trí, bán kính và từ khóa của địa điểm
+					placeRequestObj = {
+						location: mapLatLng,
+						radius: 5000, // bán kính tính bằng m.
+						keyword: placeKeyword
+					};
+
+					//Khởi tạo PlacesService
+					placesSvc = new google.maps.places.PlacesService(map);
+					// Thực hiện tìm kiếm địa điểm và gọi callback function
+					return placesSvc.nearbySearch(placeRequestObj, searchPlacesResult);
+				} else {
+					return $("#keyword").focus();
+				}
+			});
+
+			// Callback function nhận kết quả tìm kiếm
+			searchPlacesResult = function (results, status) {
+				var drawCircle, i, results1;
+				// Kiểm tra xem kết quả có thành công không
+				if (status === google.maps.places.PlacesServiceStatus.OK) {
+					// Vẽ một vòng tròn để đánh dấu bán kính tìm kiếm
+					drawCircle = new google.maps.Circle({
+						map: map,
+						center: mapLatLng,
+						radius: 5000,
+						strokeColor: "#FF0000",
+						strokeOpacity: 0.8,
+						strokeWeight: 1,
+						strokeColor: "#FF0000",
+						fillColor: "#FF0000",
+						fillOpacity: 0.35
+					});
+
+					// Duyệt mảng kết quả
+					i = 0;
+					results1 = [];
+					while (i < results.length) {
+						// Tạo các đánh dấu cho địa điểm trên bản đồ
+						placeMarkerMaker(results[i]);
+						results1.push(i++);
+					}
+					return results1;
+				}
+			};
+
+			// Tạo đánh dấu các điểm và gắn thông tin chi tiết khi click vào các đánh dấu đó
+			placeMarkerMaker = function (place) {
+				var detailRequest, placeLocation;
+				// Lấy kinh/vĩ độ của địa điểm
+				placeLocation = place.geometry.location;
+				// Lấy tham chiếu địa điểm để lấy ra thông tin chi tiết
+				detailRequest = {
+					reference: place.reference
+				};
+				// Lấy chi tiết về địa điểm
+				return placesSvc.getDetails(detailRequest, function (details, status) {
+					var markerIcon, placeMarker;
+					markerIcon = '';
+					if (details.icon) {
+						// Tạo icon cho đánh dấu
+						markerIcon = new google.maps.MarkerImage(details.icon, null, null, null, new google.maps.Size(32, 32));
+					}
+					// Tạo đánh dấu
+					placeMarker = new google.maps.Marker({
+						map: map,
+						position: placeLocation,
+						icon: markerIcon,
+						animation: google.maps.Animation.DROP
+					});
+					// Gắn sự kiện, khi click vào một địa điểm
+					// hiển thị thông tin về địa điểm đó
+					google.maps.event.addListener(placeMarker, 'click', function (e) {
+						infoWindow.setContent(`<b>${details.name}</b><br />${details.formatted_address}`);
+						// Bật InfoWindow
+						return infoWindow.open(map, placeMarker);
+					});
+
+					// Tạo eventListener cho đánh dấu.
+					// khi click vào nó, sẽ vẽ đường đi từ vị trí hiện tại trên map
+					// đến địa điểm được click
+					return google.maps.event.addListener(placeMarker, 'click', function (e) {
+						var directionsRequest;
+						// Tạo object chứa tùy chọn cho direction
+						directionsRequest = {
+							origin: mapLatLng, // Kinh/vĩ độ điểm A
+							destination: e.latLng, // Kinh/vĩ độ điểm B (vị trí hiện tại của địa điểm)
+							travelMode: google.maps.DirectionsTravelMode.DRIVING // Chọn chế độ lái xe.
+						};
+
+						// Set tuyến đường cho directions với tùy chọn ở trên
+						return directionsSvc.route(directionsRequest, function (result, status) {
+							// Kiểm tra xem có thể vẽ được đường không
+							if (status === google.maps.DirectionsStatus.OK) {
+								// Vẽ lên bản đồ với kết quả nhận được
+								return directionsDisplay.setDirections(result);
+							} else {
+								return alert(status);
+							}
+						});
+					});
+				});
+			};
+
+		}).call(this);
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiPGFub255bW91cz4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQWtDO0VBQUE7QUFBQSxNQUFBLG1CQUFBLEVBQUEsWUFBQSxFQUFBLGlCQUFBLEVBQUEsYUFBQSxFQUFBLFVBQUEsRUFBQSxHQUFBLEVBQUEsU0FBQSxFQUFBLFVBQUEsRUFBQSxNQUFBLEVBQUEsZ0JBQUEsRUFBQSxTQUFBLEVBQUE7O0VBQ2xDLFNBQUEsR0FBWSxLQURzQjs7O0VBR2xDLFVBQUEsR0FBYSxJQUFJLE1BQU0sQ0FBQyxJQUFJLENBQUMsVUFBaEIsQ0FBQSxFQUhxQjs7O0VBS2xDLFNBQUEsR0FBWSxJQUFJLE1BQU0sQ0FBQyxJQUFJLENBQUMsTUFBaEIsQ0FBdUIsVUFBdkIsRUFBbUMsa0JBQW5DLEVBTHNCOzs7RUFPbEMsaUJBQUEsR0FBb0IsSUFBSSxNQUFNLENBQUMsSUFBSSxDQUFDLGtCQUFoQixDQUNoQjtJQUFBLGVBQUEsRUFBaUIsSUFBakI7RUFBQSxDQURnQjs7RUFFcEIsYUFBQSxHQUFnQixJQUFJLE1BQU0sQ0FBQyxJQUFJLENBQUMsaUJBQWhCLENBQUEsRUFUa0I7OztFQVdsQyxVQUFBLEdBQ0k7SUFBQSxJQUFBLEVBQU0sRUFBTjtJQUNBLE1BQUEsRUFBUTtFQURSLEVBWjhCOzs7RUFlbEMsR0FBQSxHQUFNLElBQUksTUFBTSxDQUFDLElBQUksQ0FBQyxHQUFoQixDQUFvQixDQUFBLENBQUUsYUFBRixDQUFnQixDQUFDLENBQUQsQ0FBcEMsRUFBeUMsVUFBekMsRUFmNEI7Ozs7RUFrQmxDLGlCQUFpQixDQUFDLE1BQWxCLENBQXlCLEdBQXpCLEVBbEJrQzs7O0VBb0JsQyxNQUFBLEdBQVMsSUFBSSxNQUFNLENBQUMsSUFBSSxDQUFDLE1BQWhCLENBQ0w7SUFBQSxRQUFBLEVBQVUsU0FBVjtJQUNBLEdBQUEsRUFBSztFQURMLENBREssRUFwQnlCOzs7RUF3QmxDLFlBQUEsR0FBZSxDQUFBLENBQUUsVUFBRixD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QUQsRUFBUyxNQUFULENBQUEsRUFBQTs7VUFFbkMsSUFBRyxNQUFBLEtBQVUsTUFBTSxDQUFDLElBQUksQ0FBQyxnQkFBZ0IsQ0FBQyxFQUExQzs7bUJBRUksaUJBQWlCLENBQUMsYUFBbEIsQ0FBZ0MsTUFBaEMsRUFGSjtXQUFBLE1BQUE7bUJBSUksS0FBQSxDQUFNLE1BQU4sRUFKSjs7UUFGbUMsQ0FBdkM7TUFSZ0QsQ0FBcEQ7SUFyQmdDLENBQXBDO0VBUGU7QUF2RmUiLCJzb3VyY2VzQ29udGVudCI6WyIjIEto4bufaSB04bqhbyBiaeG6v24gY2jhu6lhIFBsYWNlc1NlcnZpY2VcbnBsYWNlc1N2YyA9IG51bGxcbiMgS2jhu59pIHThuqFvIGJp4bq/biBjaOG7qWEgaW5mb1dpbmRvd1xuaW5mb1dpbmRvdyA9IG5ldyBnb29nbGUubWFwcy5JbmZvV2luZG93KClcbiMgS2jhu59pIHThuqFvIG9iamVjdCBjaOG7qWEga2luaC92xKkgxJHhu5kuIE3DrG5oIGzhuqV5IG3hurdjIMSR4buLbmggbMOgIEjDoCBO4buZaSBuaMOpIDpEXG5tYXBMYXRMbmcgPSBuZXcgZ29vZ2xlLm1hcHMuTGF0TG5nIDIxLjAyNzc2NDQsIDEwNS44MzQxNTk3OTk5OTk5NVxuIyBLaOG7n2kgdOG6oW8gZGlyZWN0aW9ucyBkaXNwbGF5IHbDoCBkaXJlY3Rpb25zIHNlcnZpY2VcbmRpcmVjdGlvbnNEaXNwbGF5ID0gbmV3IGdvb2dsZS5tYXBzLkRpcmVjdGlvbnNSZW5kZXJlclxuICAgIHN1cHByZXNzTWFya2VyczogeWVzICMgS2jDtG5nIGhp4buDbiB0aOG7iyDEkcOhbmggZOG6pXUgxJFp4buDbSBBIHbDoCBCXG5kaXJlY3Rpb25zU3ZjID0gbmV3IGdvb2dsZS5tYXBzLkRpcmVjdGlvbnNTZXJ2aWNlKClcbiMgS2jhu59pIHThuqFvIGPDoWMgdMO5eSBjaOG7jW4gY2hvIE1hcFxubWFwT3B0aW9ucyA9XG4gICAgem9vbTogMTJcbiAgICBjZW50ZXI6IG1hcExhdExuZ1xuIyBH4bqvbiBtYXAgdsOgbyBkaXZcbm1hcCA9IG5ldyBnb29nbGUubWFwcy5NYXAgJChcIiNtYXAtY2FudmFzXCIpWzBdLCBtYXBPcHRpb25zXG4jIEfhuq9uIGRpcmVjdGlvbnMgZGlzcGxheSB2w6BvIG1hcFxuIyDEkeG7gyBuw7MgY8OybiBiaeG6v3QgbMOgIHPhur0gduG6vSB2w6BvIMSRw6J1IF5eXG5kaXJlY3Rpb25zRGlzcGxheS5zZXRNYXAgbWFwXG4jIFThuqFvIG3hu5l0IG1hcmtlciDEkeG7gyDEkcOhbmggZOG6pXUgduG7iyB0csOtIGhp4buHbiB04bqhaVxubWFya2VyID0gbmV3IGdvb2dsZS5tYXBzLk1hcmtlclxuICAgIHBvc2l0aW9uOiBtYXBMYXRMbmdcbiAgICBtYXA6IG1hcFxuIyBM4bqleSBpbnB1dCBET01cbmFkZHJlc3NJbnB1dCA9ICQoXCIjYWRkcmVzc1wiKVswXVxuIyBLaOG7n2kgdOG6oW8gQXV0b2NvbXBsZXRlXG5hZGRyZXNzQXV0b2NvbXBsZXRlID0gbmV3IGdvb2dsZS5tYXBzLnBsYWNlcy5BdXRvY29tcGxldGUgYWRkcmVzc0lucHV0XG4jIEfhuq9uIG7DsyB2w6BvIG1hcFxuYWRkcmVzc0F1dG9jb21wbGV0ZS5iaW5kVG8gXCJib3VuZHNcIiwgbWFwXG4jIEzhuq9uZyBuZ2hlIGtoaSBz4buxIGtp4buHbiDEkeG7i2EgY2jhu4kgxJHGsOG7o2MgdGhheSDEkeG7lWkuIENow7puZyB0YSBz4bq9IHNldCBjw6FpIG1hcCB2w6AgxJHDoW5oIMSR4bqldSB24buBIHbhu4sgdHLDrSDEkcOzXG5nb29nbGUubWFwcy5ldmVudC5hZGRMaXN0ZW5lciBhZGRyZXNzQXV0b2NvbXBsZXRlLCBcInBsYWNlX2NoYW5nZWRcIiwgLT5cbiAgICAjIEzhuqV5IG9iamVjdCBwbGFjZVxuICAgIHBsYWNlT2JqID0gYWRkcmVzc0F1dG9jb21wbGV0ZS5nZXRQbGFjZSgpXG4gICAgIyBDaHV54buDbiDEkcOhbmggZOG6pXUgdsOgIG1hcCBjZW50ZXIgduG7gSB24buLIHRyw60gxJHDoyBuaOG6rXBcbiAgICBtYXJrZXIuc2V0UG9zaXRpb24gcGxhY2VPYmouZ2VvbWV0cnkubG9jYXRpb25cbiAgICBtYXAuc2V0Q2VudGVyIHBsYWNlT2JqLmdlb21ldHJ5LmxvY2F0aW9uXG4gICAgIyBTZXQgbOG6oWkga2luaC92xKkgxJHhu5kgY2hvIG1hcExhdExuZ1xuICAgIG1hcExhdExuZyA9IHBsYWNlT2JqLmdlb21ldHJ5LmxvY2F0aW9uXG5cbiMgVOG6oW8gc+G7sSBraeG7h24ga2hpIGNsaWNrIHNlYXJjaCBidXR0b25cbiQgXCIjc2VhcmNoXCJcbiAgICAub24gXCJjbGlja1wiLCAtPlxuICAgICAgICAjIEzhuqV5IHThu6sga2jDs2EgbmfGsOG7nWkgZMO5bmcgxJHDoyBuaOG6rXBcbiAgICAgICAgcGxhY2VLZXl3b3JkID0gJCBcIiNrZXl3b3JkXCJcbiAgICAgICAgICAgIC52YWwoKS50cmltKClcbiAgICAgICAgXG4gICAgICAgICMgS2nhu4NtIHRyYSDEkeG7gyBjaOG6r2MgY2jhuq9uIHThu6sga2jDs2EgxJHDoyDEkcaw4bujYyBuaOG6rXBcbiAgICAgICAgaWYgcGxhY2VLZXl3b3JkXG4gICAgICAgICAgICAjIEto4bufaSB04bqhbyBvYmplY3QgY2jhu6lhIHTDuXkgY2jhu41uIGNobyB2aeG7h2MgdMOsbSBraeG6v20gxJHhu4thIMSRaeG7g21cbiAgICAgICAgICAgICMgYmFvIGfhu5NtIHbhu4sgdHLDrSwgYsOhbiBrw61uaCB2w6AgdOG7qyBraMOzYSBj4bunYSDEkeG7i2EgxJFp4buDbVxuICAgICAgICAgICAgcGxhY2VSZXF1ZXN0T2JqID1cbiAgICAgICAgICAgICAgICBsb2NhdGlvbjogbWFwTGF0TG5nXG4gICAgICAgICAgICAgICAgcmFkaXVzOiA1MDAwICMgYsOhbiBrw61uaCB0w61uaCBi4bqxbmcgbS5cbiAgICAgICAgICAgICAgICBrZXl3b3JkOiBwbGFjZUtleXdvcmRcbiAgICAgICAgICAgIFxuICAgICAgICAgICAgI0to4bufaSB04bqhbyBQbGFjZXNTZXJ2aWNlXG4gICAgICAgICAgICBwbGFjZXNTdmMgPSBuZXcgZ29vZ2xlLm1hcHMucGxhY2VzLlBsYWNlc1NlcnZpY2UgbWFwXG4gICAgICAgICAgICAjIFRo4buxYyBoaeG7h24gdMOsbSBraeG6v20gxJHhu4thIMSRaeG7g20gdsOgIGfhu41pIGNhbGxiYWNrIGZ1bmN0aW9uXG4gICAgICAgICAgICBwbGFjZXNTdmMubmVhcmJ5U2VhcmNoIHBsYWNlUmVxdWVzdE9iaiwgc2VhcmNoUGxhY2VzUmVzdWx0XG4gICAgICAgIGVsc2VcbiAgICAgICAgICAgICQgXCIja2V5d29yZFwiXG4gICAgICAgICAgICAgICAgLmZvY3VzKClcblxuIyBDYWxsYmFjayBmdW5jdGlvbiBuaOG6rW4ga+G6v3QgcXXhuqMgdMOsbSBraeG6v21cbnNlYXJjaFBsYWNlc1Jlc3VsdCA9IChyZXN1bHRzLCBzdGF0dXMpIC0+XG4gICAgIyBLaeG7g20gdHJhIHhlbSBr4bq/dCBxdeG6oyBjw7MgdGjDoG5oIGPDtG5nIGtow7RuZ1xuICAgIGlmIHN0YXR1cyBpcyBnb29nbGUubWFwcy5wbGFjZXMuUGxhY2VzU2VydmljZVN0YXR1cy5PS1xuICAgICAgICAjIFbhur0gbeG7mXQgdsOybmcgdHLDsm4gxJHhu4MgxJHDoW5oIGThuqV1IGLDoW4ga8OtbmggdMOsbSBraeG6v21cbiAgICAgICAgZHJhd0NpcmNsZSA9IG5ldyBnb29nbGUubWFwcy5DaXJjbGVcbiAgICAgICAgICAgIG1hcDogbWFwXG4gICAgICAgICAgICBjZW50ZXI6IG1hcExhdExuZ1xuICAgICAgICAgICAgcmFkaXVzOiA1MDAwXG4gICAgICAgICAgICBzdHJva2VDb2xvcjogXCIjRkYwMDAwXCJcbiAgICAgICAgICAgIHN0cm9rZU9wYWNpdHk6IDAuOFxuICAgICAgICAgICAgc3Ryb2tlV2VpZ2h0OiAxXG4gICAgICAgICAgICBzdHJva2VDb2xvcjogXCIjRkYwMDAwXCJcbiAgICAgICAgICAgIGZpbGxDb2xvcjogXCIjRkYwMDAwXCJcbiAgICAgICAgICAgIGZpbGxPcGFjaXR5OiAwLjM1XG4gICAgICAgICAgICBcbiAgICAgICAgIyBEdXnhu4d0IG3huqNuZyBr4bq/dCBxdeG6o1xuICAgICAgICBpID0gMFxuICAgICAgICB3aGlsZSBpIDwgcmVzdWx0cy5sZW5ndGhcbiAgICAgICAgICAgICMgVOG6oW8gY8OhYyDEkcOhbmggZOG6pXUgY2hvIMSR4buLYSDEkWnhu4NtIHRyw6puIGLhuqNuIMSR4buTXG4gICAgICAgICAgICBwbGFjZU1hcmtlck1ha2VyIHJlc3VsdHNbaV1cbiAgICAgICAgICAgIGkrK1xuXG4jIFThuqFvIMSRw6FuaCBk4bqldSBjw6FjIMSRaeG7g20gdsOgIGfhuq9uIHRow7RuZyB0aW4gY2hpIHRp4bq/dCBraGkgY2xpY2sgdsOgbyBjw6FjIMSRw6FuaCBk4bqldSDEkcOzXG5wbGFjZU1hcmtlck1ha2VyID0gKHBsYWNlKSAtPlxuICAgICMgTOG6pXkga2luaC92xKkgxJHhu5kgY+G7p2EgxJHhu4thIMSRaeG7g21cbiAgICBwbGFjZUxvY2F0aW9uID0gcGxhY2UuZ2VvbWV0cnkubG9jYXRpb25cbiAgICAjIEzhuqV5IHRoYW0gY2hp4bq/dSDEkeG7i2EgxJFp4buDbSDEkeG7gyBs4bqleSByYSB0aMO0bmcgdGluIGNoaSB0aeG6v3RcbiAgICBkZXRhaWxSZXF1ZXN0ID0gXG4gICAgICAgIHJlZmVyZW5jZTogcGxhY2UucmVmZXJlbmNlXG4gICAgIyBM4bqleSBjaGkgdGnhur90IHbhu4EgxJHhu4thIMSRaeG7g21cbiAgICBwbGFjZXNTdmMuZ2V0RGV0YWlscyBkZXRhaWxSZXF1ZXN0LCAoZGV0YWlscywgc3RhdHVzKSAtPlxuICAgICAgICBtYXJrZXJJY29uID0gJydcbiAgICAgICAgaWYgZGV0YWlscy5pY29uXG4gICAgICAgICAgICAjIFThuqFvIGljb24gY2hvIMSRw6FuaCBk4bqldVxuICAgICAgICAgICAgbWFya2VySWNvbiA9IG5ldyBnb29nbGUubWFwcy5NYXJrZXJJbWFnZSBkZXRhaWxzLmljb24sIG51bGwsIG51bGwsIG51bGwsIG5ldyBnb29nbGUubWFwcy5TaXplIDMyLCAzMlxuICAgICAgICAjIFThuqFvIMSRw6FuaCBk4bqldVxuICAgICAgICBwbGFjZU1hcmtlciA9IG5ldyBnb29nbGUubWFwcy5NYXJrZXJcbiAgICAgICAgICAgIG1hcDogbWFwXG4gICAgICAgICAgICBwb3NpdGlvbjogcGxhY2VMb2NhdGlvblxuICAgICAgICAgICAgaWNvbjogbWFya2VySWNvblxuICAgICAgICAgICAgYW5pbWF0aW9uOiBnb29nbGUubWFwcy5BbmltYXRpb24uRFJPUFxuICAgICAgICAjIEfhuq9uIHPhu7Ega2nhu4duLCBraGkgY2xpY2sgdsOgbyBt4buZdCDEkeG7i2EgxJFp4buDbVxuICAgICAgICAjIGhp4buDbiB0aOG7iyB0aMO0bmcgdGluIHbhu4EgxJHhu4thIMSRaeG7g20gxJHDs1xuICAgICAgICBnb29nbGUubWFwcy5ldmVudC5hZGRMaXN0ZW5lciBwbGFjZU1hcmtlciwgJ2NsaWNrJywgKGUpIC0+XG4gICAgICAgICAgICBpbmZvV2luZG93LnNldENvbnRlbnQgXCI8Yj4je2RldGFpbHMubmFtZX08L2I+PGJyIC8+I3tkZXRhaWxzLmZvcm1hdHRlZF9hZGRyZXNzfVwiXG4gICAgICAgICAgICAjIELhuq10IEluZm9XaW5kb3dcbiAgICAgICAgICAgIGluZm9XaW5kb3cub3BlbiBtYXAsIHBsYWNlTWFya2VyXG4gICAgICAgICAgICBcbiAgICAgICAgIyBU4bqhbyBldmVudExpc3RlbmVyIGNobyDEkcOhbmggZOG6pXUuXG4gICAgICAgICMga2hpIGNsaWNrIHbDoG8gbsOzLCBz4bq9IHbhur0gxJHGsOG7nW5nIMSRaSB04burIHbhu4sgdHLDrSBoaeG7h24gdOG6oWkgdHLDqm4gbWFwXG4gICAgICAgICMgxJHhur9uIMSR4buLYSDEkWnhu4NtIMSRxrDhu6NjIGNsaWNrXG4gICAgICAgIGdvb2dsZS5tYXBzLmV2ZW50LmFkZExpc3RlbmVyIHBsYWNlTWFya2VyLCAnY2xpY2snLCAoZSkgLT5cbiAgICAgICAgICAgICMgVOG6oW8gb2JqZWN0IGNo4bupYSB0w7l5IGNo4buNbiBjaG8gZGlyZWN0aW9uXG4gICAgICAgICAgICBkaXJlY3Rpb25zUmVxdWVzdCA9XG4gICAgICAgICAgICAgICAgb3JpZ2luOiBtYXBMYXRMbmcgIyBLaW5oL3bEqSDEkeG7mSDEkWnhu4NtIEFcbiAgICAgICAgICAgICAgICBkZXN0aW5hdGlvbjogZS5sYXRMbmcgIyBLaW5oL3bEqSDEkeG7mSDEkWnhu4NtIEIgKHbhu4sgdHLDrSBoaeG7h24gdOG6oWkgY+G7p2EgxJHhu4thIMSRaeG7g20pXG4gICAgICAgICAgICAgICAgdHJhdmVsTW9kZTogZ29vZ2xlLm1hcHMuRGlyZWN0aW9uc1RyYXZlbE1vZGUuRFJJVklORyAjIENo4buNbiBjaOG6vyDEkeG7mSBsw6FpIHhlLlxuICAgICAgICAgICAgXG4gICAgICAgICAgICAjIFNldCB0dXnhur9uIMSRxrDhu51uZyBjaG8gZGlyZWN0aW9ucyB24bubaSB0w7l5IGNo4buNbiDhu58gdHLDqm5cbiAgICAgICAgICAgIGRpcmVjdGlvbnNTdmMucm91dGUgZGlyZWN0aW9uc1JlcXVlc3QsIChyZXN1bHQsIHN0YXR1cykgLT5cbiAgICAgICAgICAgICAgICAjIEtp4buDbSB0cmEgeGVtIGPDsyB0aOG7gyB24bq9IMSRxrDhu6NjIMSRxrDhu51uZyBraMO0bmdcbiAgICAgICAgICAgICAgICBpZiBzdGF0dXMgaXMgZ29vZ2xlLm1hcHMuRGlyZWN0aW9uc1N0YXR1cy5PS1xuICAgICAgICAgICAgICAgICAgICAjIFbhur0gbMOqbiBi4bqjbiDEkeG7kyB24bubaSBr4bq/dCBxdeG6oyBuaOG6rW4gxJHGsOG7o2NcbiAgICAgICAgICAgICAgICAgICAgZGlyZWN0aW9uc0Rpc3BsYXkuc2V0RGlyZWN0aW9ucyByZXN1bHRcbiAgICAgICAgICAgICAgICBlbHNlXG4gICAgICAgICAgICAgICAgICAgIGFsZXJ0IHN0YXR1cyJdfQ==
+//# sourceURL=coffeescript
+	</script>
+</body>
+
+</html>
