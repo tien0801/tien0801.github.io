@@ -16,19 +16,37 @@
             text-align: center;
             color: #fff;
         }
+
         img {
             max-width: 100%;
         }
+
         section {
+            position: relative;
             padding-top: 50px;
             min-height: 120vh;
-            background-color:coral;
+            background-color: coral;
         }
+
+        section::before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 0;
+            right: 0;
+            width: 90%;
+            height: 2px;
+            margin: 0 auto;
+            background-color: gold;
+            transform: translateY(-50%);
+        }
+
         section:nth-child(2n) {
-            background-color:cornflowerblue;
+            background-color: cornflowerblue;
         }
+
         section:nth-child(3n) {
-            background-color:darkolivegreen;
+            background-color: darkolivegreen;
         }
     </style>
 </head>
@@ -78,9 +96,6 @@
                     page.animate({ scrollTop: $(next).position().top + ontop }, 500, function () {
                         // page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
                     });
-                    // setTimeout(function() {
-                    //     page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
-                    // }, 500)
                     return false;
                 } else {
                     console.log('scroll disable');
