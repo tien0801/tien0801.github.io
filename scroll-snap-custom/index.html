@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="https://tien0801.github.io/vubatien.jpg" type="image/gif">
+    <title>Meo Code - Frontend</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        h2 {
+            text-align: center;
+            color: #fff;
+        }
+        img {
+            max-width: 100%;
+        }
+        section {
+            padding-top: 50px;
+            min-height: 120vh;
+            background-color:coral;
+        }
+        section:nth-child(2n) {
+            background-color:cornflowerblue;
+        }
+        section:nth-child(3n) {
+            background-color:darkolivegreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Scroll Snap Next Section</h1>
+        <h3> Scroll to >50% section >>></h3>
+        <section class="section-1">
+            <h2>section 1</h2>
+        </section>
+        <section class="section-2">
+            <h2>section 2</h2>
+        </section>
+        <section class="section-3">
+            <h2>section 3</h2>
+        </section>
+        <section class="section-4">
+            <h2>section 4</h2>
+        </section>
+        <section class="section-5">
+            <h2>section 5</h2>
+        </section>
+        <section class="section-6">
+            <h2>section 6</h2>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script>
+        if ($(window).width() > 991) {
+            var page = $("html, body");
+            function scrolled(current, next, ontop) {
+                var scrollDistance = $(window).scrollTop();
+                console.log(current);
+                if (
+                    scrollDistance > ($(current).position().top + $(current).innerHeight() / 2)
+                    && scrollDistance < ($(current).position().top + $(current).innerHeight() - 50)) {
+                    console.log('scroll active');
+                    page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function () {
+                        page.stop();
+                    });
+                    page.animate({ scrollTop: $(next).position().top + ontop }, 500, function () {
+                        // page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+                    });
+                    // setTimeout(function() {
+                    //     page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+                    // }, 500)
+                    return false;
+                } else {
+                    console.log('scroll disable');
+                }
+            }
+            $(window).scroll(function () {
+                scrolled('.section-1', '.section-2', 150);
+                scrolled('.section-2', '.section-3', 0);
+                scrolled('.section-3', '.section-4', 0);
+                scrolled('.section-4', '.section-5', 0);
+                scrolled('.section-5', '.section-6', 0);
+            })
+        }
+    </script>
+
+</body>
+
+</html>
