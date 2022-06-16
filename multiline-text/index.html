@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" href="">
 	<style>
 		h2 {
-		  /* display: block; */
-		  display: -webkit-box;
-		  height: 67px; 
-		  -webkit-line-clamp: 2;
-		  -webkit-box-orient: vertical;
-		  overflow: hidden;
-		  text-overflow: ellipsis;
+			/* display: block; */
+			display: -webkit-box;
+			height: 67px;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		h3 {
+			display: inline-block;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			max-width: 18ch;
 		}
 	</style>
 </head>
+
 <body>
 	<div class="container">
-		<p>Link Source: <a href="https://codepen.io/martinwolf/pen/qlFdp" target="_blank">https://codepen.io/martinwolf/pen/qlFdp</a></p>
-	</div>
-	<div class="container">
-		<div class="col-md-6">
-			<h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et.</h2>
+		<h1>CSS multiline text with ellipsis</h1>
+		<br>
+		<p>Link Source Demo: <a href="https://codepen.io/martinwolf/pen/qlFdp"
+				target="_blank">https://codepen.io/martinwolf/pen/qlFdp</a></p>
+		<div class="row">
+			<div class="col-md-6">
+				<h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+					labore et.</h2>
+			</div>
 		</div>
 	</div>
 	<div class="container">
@@ -42,7 +57,32 @@ h2 {
 		</pre>
 	</div>
 
-	<script  src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo tempora, velit dolores aliquid
+					dolorem repudiandae consequuntur quas quo culpa eos?</h3>
+			</div>
+		</div>
+		<pre>
+			<code>
+h3 {
+	display:inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 18ch;
+}
+			</code>
+		</pre>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
 </body>
+
 </html>
