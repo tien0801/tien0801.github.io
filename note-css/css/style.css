@@ -27,40 +27,30 @@ img {
 .btn-focus {
   outline: 0;
 }
-
 /* end Css page */
-.gradient-box {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin: auto;
-  max-width: 22em;
-  position: relative;
-  padding: 10px 2em;
-  box-sizing: border-box;
-  color: #fff;
-  background: #000;
-  background-clip: padding-box;
-  /* !important */
+
+/* Gradient Button */
+.gradient-button {
+  display: inline-block;
+  border-radius: 100rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 3rem;
+  color: #000;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
   border: solid 3px transparent;
-  /* !important */
-  border-radius: 1em;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+    linear-gradient(101deg, #78e4ff, #ff48fa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
+  height: max-content;
 }
-.gradient-box:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  margin: -3px;
-  /* !important */
-  border-radius: inherit;
-  /* !important */
-  background: linear-gradient(to right, red, orange);
+.gradient-button:hover {
+  box-shadow: none;
+  color: white;
 }
 
+/* Input, Textarea */
 .input-hover {
   border-color: rgba(21, 156, 64, 0.6) !important;
   outline: 0;
@@ -85,3 +75,36 @@ img {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* CSS Triangle */
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid black;
+}
+
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #f00;
+}
+
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid blue;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid green;
+}
