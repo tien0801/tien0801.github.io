@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
-	<title>Slider-OwlCarousel-2-simple</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
-	<link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <title>Slider-OwlCarousel-2-simple</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.css">
     <link rel="stylesheet" href="css/style.css">
 
     <style>
         iframe {
             width: 100%;
         }
+
         img {
             box-shadow: 1px 1px 1px;
         }
+
         .padding-section {
             margin-bottom: 30px;
         }
@@ -31,11 +35,12 @@
     </style>
 
 </head>
+
 <body>
     <div class="container padding-section">
         <h1>Slider OWL Carousel Simple </h1>
         <div class="col-md-5">
-<pre>
+            <pre>
     <code>
 if($('.js-home-slider').length >0) {
     $('.js-home-slider').owlCarousel({
@@ -54,16 +59,19 @@ if($('.js-home-slider').length >0) {
         nav: true,
         responsive : {
             // breakpoint from 0 up
-            0 : {
-               items: 1,
-            },
-            480 : {
+            0: {
                 items: 1,
             },
-            768 : {
+            576: {
+                items: 1,
+            },
+            768: {
                 items: 2,
             },
-            1200 : {
+            992: {
+                items: 2,
+            },
+            1200: {
                 items: 3,
             }
         }
@@ -76,75 +84,85 @@ if($('.js-home-slider').length >0) {
             <div class="home-slider js-home-slider owl-carousel">
                 <div class="item">
                     <a class="item-slider" href="#">
-                       <iframe id="ytplayer" type="text/html" width="720" height="405" src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1" frameborder="0" allowfullscreen>
+                        <iframe id="ytplayer" type="text/html" width="720" height="405"
+                            src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1" frameborder="0" allowfullscreen>
                     </a>
                 </div>
                 <div class="item">
                     <a class="item-slider" href="#">
-                       <iframe width="560" height="315" src="https://www.youtube.com/embed/AmvA-XJF0j8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/AmvA-XJF0j8" frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </a>
                 </div>
                 <div class="item">
                     <a class="item-slider" href="#">
-                       <img class="owl-lazy" data-src="https://dummyimage.com/420x800/bcbcbc" alt="">
+                        <img class="owl-lazy" data-src="https://dummyimage.com/420x800/bcbcbc" alt="">
                     </a>
                 </div>
                 <div class="item">
                     <a class="item-slider" href="#">
-                       <img class="owl-lazy" data-src="https://dummyimage.com/420x800/555/fff" alt="">
+                        <img class="owl-lazy" data-src="https://dummyimage.com/420x800/555/fff" alt="">
                     </a>
                 </div>
                 <div class="item">
                     <a class="item-slider" href="#">
-                       <img class="owl-lazy" data-src="https://dummyimage.com/420x800/bcbcbc" alt="">
+                        <img class="owl-lazy" data-src="https://dummyimage.com/420x800/bcbcbc" alt="">
                     </a>
                 </div>
                 <div class="item">
                     <a class="item-slider" href="#">
-                       <img class="owl-lazy" data-src="https://dummyimage.com/420x800/555/fff" alt="">
+                        <img class="owl-lazy" data-src="https://dummyimage.com/420x800/555/fff" alt="">
                     </a>
                 </div>
             </div>
         </div>
 
     </div>
-    
+
     <div class="container padding-section">
-    	<div class="y-owl-style-3 js-home-slider-3 owl-carousel">
+        <div class="y-owl-style-3 js-home-slider-3 owl-carousel">
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/920x400/666" alt="">
+                    <img src="https://dummyimage.com/920x400/666" alt="">
                 </a>
                 <div class="box-info-slider">
                     <h5 class="title-slider">Lorem ipsum dolor sit amet</h5>
-                    <p class="desc-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam sit reiciendis, laborum nihil illum vero consequatur quasi fugit quidem totam porro in repellat ab ducimus minus dolore nisi, ratione deserunt.</p>
+                    <p class="desc-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam sit
+                        reiciendis, laborum nihil illum vero consequatur quasi fugit quidem totam porro in repellat ab
+                        ducimus minus dolore nisi, ratione deserunt.</p>
                 </div>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/920x400/666/fff" alt="">
+                    <img src="https://dummyimage.com/920x400/666/fff" alt="">
                 </a>
                 <div class="box-info-slider">
                     <h5 class="title-slider">Lorem ipsum dolor sit amet 2</h5>
-                    <p class="desc-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aliquam sed earum veniam distinctio. Nemo omnis beatae at molestias facilis sequi. Ipsum quaerat, officiis. Odio iure error obcaecati consectetur dicta!</p>
+                    <p class="desc-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe aliquam sed
+                        earum veniam distinctio. Nemo omnis beatae at molestias facilis sequi. Ipsum quaerat, officiis.
+                        Odio iure error obcaecati consectetur dicta!</p>
                 </div>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/920x400/666" alt="">
+                    <img src="https://dummyimage.com/920x400/666" alt="">
                 </a>
                 <div class="box-info-slider">
                     <h5 class="title-slider">Lorem ipsum dolor sit amet 3</h5>
-                    <p class="desc-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis non asperiores quos recusandae quae libero eos cumque culpa! Commodi quia dolore expedita officiis facere, in soluta id laborum dignissimos officia!</p>
+                    <p class="desc-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis non
+                        asperiores quos recusandae quae libero eos cumque culpa! Commodi quia dolore expedita officiis
+                        facere, in soluta id laborum dignissimos officia!</p>
                 </div>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/920x400/666/fff" alt="">
+                    <img src="https://dummyimage.com/920x400/666/fff" alt="">
                 </a>
                 <div class="box-info-slider">
                     <h5 class="title-slider">Lorem ipsum dolor sit amet 4</h5>
-                    <p class="desc-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius tempore obcaecati veniam eligendi, veritatis consequuntur beatae eum, soluta repudiandae sunt similique animi dolorum consectetur porro, ab quidem. Quidem, vel.</p>
+                    <p class="desc-slider">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur eius
+                        tempore obcaecati veniam eligendi, veritatis consequuntur beatae eum, soluta repudiandae sunt
+                        similique animi dolorum consectetur porro, ab quidem. Quidem, vel.</p>
                 </div>
             </div>
         </div>
@@ -156,22 +174,22 @@ if($('.js-home-slider').length >0) {
         <div class="js-slider-stage owl-carousel owl-theme">
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/570x300/bcbcbc" alt="">
+                    <img src="https://dummyimage.com/570x300/bcbcbc" alt="">
                 </a>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/570x300/333" alt="">
+                    <img src="https://dummyimage.com/570x300/333" alt="">
                 </a>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/570x300/bcbcbc" alt="">
+                    <img src="https://dummyimage.com/570x300/bcbcbc" alt="">
                 </a>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/570x300/333" alt="">
+                    <img src="https://dummyimage.com/570x300/333" alt="">
                 </a>
             </div>
         </div>
@@ -183,22 +201,22 @@ if($('.js-home-slider').length >0) {
         <div class="js-slider-center owl-carousel owl-theme">
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/570x300/bcbcbc" alt="">
+                    <img src="https://dummyimage.com/570x300/bcbcbc" alt="">
                 </a>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/570x300/333" alt="">
+                    <img src="https://dummyimage.com/570x300/333" alt="">
                 </a>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/570x300/bcbcbc" alt="">
+                    <img src="https://dummyimage.com/570x300/bcbcbc" alt="">
                 </a>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/570x300/333" alt="">
+                    <img src="https://dummyimage.com/570x300/333" alt="">
                 </a>
             </div>
         </div>
@@ -210,30 +228,31 @@ if($('.js-home-slider').length >0) {
         <div class="js-slider-fade owl-carousel owl-theme">
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/1140x300/bcbcbc" alt="">
+                    <img src="https://dummyimage.com/1140x300/bcbcbc" alt="">
                 </a>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/1140x300/333" alt="">
+                    <img src="https://dummyimage.com/1140x300/333" alt="">
                 </a>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/1140x300/bcbcbc" alt="">
+                    <img src="https://dummyimage.com/1140x300/bcbcbc" alt="">
                 </a>
             </div>
             <div class="item">
                 <a class="item-slider" href="#">
-                   <img src="https://dummyimage.com/1140x300/333" alt="">
+                    <img src="https://dummyimage.com/1140x300/333" alt="">
                 </a>
             </div>
         </div>
     </div>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-	<script src="js/owl.carousel.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
 
 </body>
+
 </html>

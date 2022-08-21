@@ -1,6 +1,6 @@
-$(document).ready(function() {
-       
-    if($('.js-home-slider').length >0) {
+$(document).ready(function () {
+
+    if ($('.js-home-slider').length > 0) {
         $('.js-home-slider').owlCarousel({
             loop: true,
             // autoplay: true,
@@ -9,27 +9,30 @@ $(document).ready(function() {
             // nestedItemSelector: 'item-gall',
             lazyLoad: true,
             margin: 0,
-            responsiveClass:true,
+            responsiveClass: true,
             items: 3,
             dots: true,
-            navText : ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
-            rewindNav : true,
+            navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+            rewindNav: true,
             nav: true,
-            responsive : {
-    		    // breakpoint from 0 up
-    		    0 : {
-    		       items: 1,
-    		    },
-    		    480 : {
-    		        items: 1,
-    		    },
-    		    768 : {
-    		        items: 2,
-    		    },
-    		    1200 : {
-    		        items: 3,
-    		    }
-    		}
+            responsive: {
+                // breakpoint from 0 up
+                0: {
+                    items: 1,
+                },
+                576: {
+                    items: 1,
+                },
+                768: {
+                    items: 2,
+                },
+                992: {
+                    items: 2,
+                },
+                1200: {
+                    items: 3,
+                }
+            }
         })
     }
 
@@ -48,49 +51,49 @@ $(document).ready(function() {
         // $('#ifrm').attr('src', "http://www.google.com")
     }, 500);*/
 
-    if($('.js-home-slider-3').length >0) {
+    if ($('.js-home-slider-3').length > 0) {
         $('.js-home-slider-3').owlCarousel({
             loop: true,
             // autoplay: true,
             // autoplayTimeout: 4000,
             // nestedItemSelector: 'item-gall',
             margin: 0,
-            responsiveClass:true,
+            responsiveClass: true,
             items: 1,
             dots: true,
-            navText : ["<i class='fas fa-chevron-left'></i>","<i class='fas fa-chevron-right'></i>"],
-            rewindNav : true,
+            navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+            rewindNav: true,
             nav: true,
         })
     }
 
-    if($('.js-slider-stage').length >0) {
+    if ($('.js-slider-stage').length > 0) {
         $('.js-slider-stage').owlCarousel({
             loop: false,
             // autoplay: true,
             // autoplayTimeout: 4000,
             // nestedItemSelector: 'item-gall',
             margin: 0,
-            responsiveClass:true,
+            responsiveClass: true,
             items: 3,
             dots: false,
-            navText : ["",""],
-            rewindNav : true,
+            navText: ["", ""],
+            rewindNav: true,
             nav: true,
             // center: true,
             stagePadding: 100,
-            responsive : {
+            responsive: {
                 // breakpoint from 0 up
-                0 : {
-                   items: 1,
-                },
-                480 : {
+                0: {
                     items: 1,
                 },
-                768 : {
+                480: {
+                    items: 1,
+                },
+                768: {
                     items: 2,
                 },
-                1200 : {
+                1200: {
                     items: 2,
                 }
             },
@@ -102,64 +105,64 @@ $(document).ready(function() {
         console.log(currentItem);
     }
 
-    if($('.js-slider-center').length >0) {
+    if ($('.js-slider-center').length > 0) {
         $('.js-slider-center').owlCarousel({
             loop: false,
             // autoplay: true,
             // autoplayTimeout: 4000,
             // nestedItemSelector: 'item-gall',
             margin: 0,
-            responsiveClass:true,
+            responsiveClass: true,
             items: 3,
             dots: false,
-            navText : ["",""],
-            rewindNav : true,
+            navText: ["", ""],
+            rewindNav: true,
             nav: true,
             center: true,
-            responsive : {
+            responsive: {
                 // breakpoint from 0 up
-                0 : {
-                   items: 1,
-                },
-                480 : {
+                0: {
                     items: 1,
                 },
-                768 : {
+                480: {
+                    items: 1,
+                },
+                768: {
                     items: 2,
                 },
-                1200 : {
+                1200: {
                     items: 2,
                 }
             }
         });
     }
-    if($('.js-slider-fade').length >0) {
+    if ($('.js-slider-fade').length > 0) {
         $('.js-slider-fade').owlCarousel({
             loop: false,
             // autoplay: true,
             // autoplayTimeout: 4000,
             // nestedItemSelector: 'item-gall',
             margin: 0,
-            responsiveClass:true,
+            responsiveClass: true,
             items: 3,
             dots: true,
-            navText : ["<",">"],
-            rewindNav : true,
+            navText: ["<", ">"],
+            rewindNav: true,
             animateOut: 'fadeOut',
             nav: true,
             // center: true,
-            responsive : {
+            responsive: {
                 // breakpoint from 0 up
-                0 : {
-                   items: 1,
-                },
-                480 : {
+                0: {
                     items: 1,
                 },
-                768 : {
+                480: {
+                    items: 1,
+                },
+                768: {
                     items: 2,
                 },
-                1200 : {
+                1200: {
                     items: 1,
                 }
             }
