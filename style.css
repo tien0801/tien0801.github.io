@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: #000;
 }
 
@@ -43,7 +43,7 @@ p {
     padding: 7px 15px;
 }
 
-.page-section ul li:nth-child(2n + 1) {
+.page-section ul.ul-number li:nth-child(2n + 1) {
     background-color: #f9f9f9;
 }
 
@@ -56,7 +56,7 @@ p {
     text-align: right;
 }
 
-.page-section ul li a {
+.page-section ul.ul-number li a {
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -90,6 +90,6 @@ p {
     background-color: #00b140;
 }
 
-.name-author {  
+.name-author {
     font-size: 30px;
 }
