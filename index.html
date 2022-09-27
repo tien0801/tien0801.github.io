@@ -6,66 +6,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1,maximum-scale=1">
     <title>Meo Code - Frontend</title>
-    <link rel="shortcut icon" type="image/png" href="vubatien.jpg" />
-    <link
-        href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900&display=swap&subset=vietnamese"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/png" href="assets/images/logo.jpg" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/animations.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <div class="wrapper container">
-        <div class="row">
-            <div class="col-md-3">
-                <nav class="navigation" id="mainNav">
-                    <a class="navigation__link" href="#html">HTML</a>
-                    <a class="navigation__link" href="#css">CSS</a>
-                    <a class="navigation__link" href="#css-animate">CSS animate</a>
-                    <a class="navigation__link" href="#iframe-video">Iframe Video</a>
-                    <a class="navigation__link" href="#js">JS Snippet</a>
-                    <a class="navigation__link" href="#js-animate">JS animate</a>
-                    <a class="navigation__link" href="#scroll">Scroll</a>
-                    <a class="navigation__link" href="#slider">Slider</a>
-                    <a class="navigation__link" href="#snippet">Snippet</a>
-                    <a class="navigation__link" href="#page">Page</a>
-                    <a class="navigation__link" href="#module">Module</a>
-                    <a class="navigation__link" href="#library">Library</a>
-                    <a class="navigation__link" href="#api">API</a>
-                    <a class="navigation__link" href="#plugin">Pagespeed</a>
-                    <a class="navigation__link" href="#mobile">Fix Mobile</a>
-                    <a class="navigation__link" href="#doc">Doc</a>
-                </nav>
-            </div>
-            <div class="col-md-9">
+    <div class="wrapper">
+        <div class="box-content">
+            <nav class="navigation y-scrollbar" data-sequence="500" id="mainNav">
+                <a class="navigation__link" href="#author">Giới thiệu</a>
+                <a class="navigation__link" href="#html">HTML</a>
+                <a class="navigation__link" href="#css">CSS</a>
+                <a class="navigation__link" href="#css-animate">CSS animate</a>
+                <a class="navigation__link" href="#iframe-video">Iframe Video</a>
+                <a class="navigation__link" href="#js">JS Snippet</a>
+                <a class="navigation__link" href="#js-animate">JS animate</a>
+                <a class="navigation__link" href="#scroll">Scroll</a>
+                <a class="navigation__link" href="#slider">Slider</a>
+                <a class="navigation__link" href="#snippet">Snippet</a>
+                <a class="navigation__link" href="#page">Page</a>
+                <a class="navigation__link" href="#module">Module</a>
+                <a class="navigation__link" href="#library">Library</a>
+                <a class="navigation__link" href="#api">API</a>
+                <a class="navigation__link" href="#plugin">Pagespeed</a>
+                <a class="navigation__link" href="#mobile">Fix Mobile</a>
+                <a class="navigation__link" href="#doc">Doc</a>
+            </nav>
+            <div class="content-right">
                 <div class="content">
-                    <div class="page-section" id="author">
+                    <div class="page-section animatedParent author-section animatedParent" id="author">
                         <div class="row">
                             <div class="col-md-3">
-                                <img style="width: 320px" src="vubatien.jpg" alt="Vũ Bá Tiến">
+                                <div class="box-author">
+                                    <a href="https://www.facebook.com/meocode1/" target="_blank"
+                                        class="img-author box-img">
+                                        <img src="assets/images/logo.jpg" alt="Vũ Bá Tiến">
+                                    </a>
+                                    <h4 class="name-author">Vũ Bá Tiến</h4>
+                                </div>
                             </div>
-                            <div class="col-md-9">
-                                <div class="author">
-                                    <h4 class="name-author">Vũ Bá Tiến - Meocode</h4>
-                                    <p>Frontend Develop - Freelancer</p>
-                                    <ul>
-                                        <li><a target="_blank" href="https://laziweb.com/">Laziweb.com</a></li>
-                                        <li><a target="_blank" href="https://yosu.vn/">Yosu.vn</a></li>
-                                        <li>
-                                            <a target="_blank" href="https://synova-solutions.com/">Synova Solutions</a>
-                                        </li>
-                                        <li>
-                                            <a target="_blank" href="https://www.bittosolution.vn/">Bitto Solutions</a>
-                                        </li>
-                                    </ul>
+                            <div class="col-md-6">
+                                <div class="info-author">
+                                    <h5 class="position animated fadeInRight"><i class="fa-brands fa-dev"></i>
+                                        Frontend Develop</h5>
+                                    <p class="status animated fadeInRight delay-200">
+                                        <span class="dot-green"></span> Đang làm Freelancer
+                                    </p>
+                                    <div class="contact animated fadeInRight delay-800">
+                                        <h5>Thông tin liên hệ:</h5>
+                                        <div class="item">
+                                            <div class="left"><i class="fa-solid fa-envelope"></i> Email</div>
+                                            <div class="right">
+                                                <a href="mailto:vubatientien@gmail.com">vubatientien@gmail.com</a>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="left"><i class="fa-solid fa-phone"></i> SĐT</div>
+                                            <div class="right"><a href="tel:0398822724">039 8822 724</a></div>
+                                        </div>
+                                    </div>
+                                    <div class="list-social">
+                                        <a class="animated fadeInUpShort delay-1200 facebook"
+                                            href="https://www.youtube.com/channel/UCxCw6jNHC0qjXGbJ7Vw1vmQ"
+                                            target="_blank" class="item">
+                                            <i class="fab fa-facebook-square"></i>
+                                            <div class="text">Vũ Bá Tiến</div>
+                                        </a>
+                                        <a class="animated fadeInUpShort delay-1500 youtube"
+                                            href="https://www.facebook.com/meocode1/" target="_blank" class="item">
+                                            <i class="fa-brands fa-youtube"></i>
+                                            <div class="text">Mèo Code</div>
+                                        </a>
+                                        <a class="animated fadeInUpShort delay-1750 tiktok"
+                                            href="https://www.facebook.com/meocode1/" target="_blank" class="item">
+                                            <i class="fab fa-tiktok"></i>
+                                            <div class="text">Mèo code</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="logo-meocode">
+                                    <img src="assets/images/Logo-MeoCode.png" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="page-section hero" id="html">
-                        <h1>HTML</h1>
+                    <div class="page-section animatedParent hero" id="html">
+                        <h1 class="title-section animated fadeInDownShort delay-200">HTML</h1>
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="ul-number">
@@ -81,8 +114,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="page-section hero" id="css">
-                        <h1>Css</h1>
+                    <div class="page-section animatedParent hero" id="css">
+                        <h1 class="title-section animated fadeInDownShort delay-200">Css</h1>
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="ul-number">
@@ -165,8 +198,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="page-section hero" id="css-animate">
-                        <h1>CSS Animate</h1>
+                    <div class="page-section animatedParent hero" id="css-animate">
+                        <h1 class="title-section animated fadeInDownShort delay-200">CSS Animate</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="css-text-typing-animation/">Text typing Animate</a>
@@ -190,8 +223,8 @@
                         </ul>
                     </div>
 
-                    <div class="page-section" id="canvas">
-                        <h1>Canvas</h1>
+                    <div class="page-section animatedParent" id="canvas">
+                        <h1 class="title-section animated fadeInDownShort delay-200">Canvas</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="#"></a>
@@ -199,8 +232,8 @@
                         </ul>
                     </div>
 
-                    <div class="page-section hero" id="iframe-video">
-                        <h1>Iframe Video</h1>
+                    <div class="page-section animatedParent hero" id="iframe-video">
+                        <h1 class="title-section animated fadeInDownShort delay-200">Iframe Video</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="video-autoplay/">
@@ -224,8 +257,8 @@
                         </ul>
                     </div>
 
-                    <div class="page-section hero" id="js">
-                        <h1>JS Snippet</h1>
+                    <div class="page-section animatedParent hero" id="js">
+                        <h1 class="title-section animated fadeInDownShort delay-200">JS Snippet</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="note-js">Note JS</a>
@@ -254,8 +287,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="page-section hero" id="js-animate">
-                        <h1>JS Animate</h1>
+                    <div class="page-section animatedParent hero" id="js-animate">
+                        <h1 class="title-section animated fadeInDownShort delay-200">JS Animate</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="animation-number-counter">Animation number Counter</a>
@@ -277,8 +310,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="page-section" id="scroll">
-                        <h1>Scroll</h1>
+                    <div class="page-section animatedParent" id="scroll">
+                        <h1 class="title-section animated fadeInDownShort delay-200">Scroll</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="scroll-snap-custom/index.html">
@@ -296,8 +329,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="page-section" id="slider">
-                        <h1>Slider</h1>
+                    <div class="page-section animatedParent" id="slider">
+                        <h1 class="title-section animated fadeInDownShort delay-200">Slider</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="vertical-thumbnails/">Slider chi tiết sản phẩm kèm zoom khi
@@ -343,8 +376,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="page-section" id="snippet">
-                        <h1>Snippet</h1>
+                    <div class="page-section animatedParent" id="snippet">
+                        <h1 class="title-section animated fadeInDownShort delay-200">Snippet</h1>
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="ul-number">
@@ -477,8 +510,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="page-section" id="page">
-                        <h1>Page</h1>
+                    <div class="page-section animatedParent" id="page">
+                        <h1 class="title-section animated fadeInDownShort delay-200">Page</h1>
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="ul-number">
@@ -545,8 +578,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="page-section" id="module">
-                        <h1>Module</h1>
+                    <div class="page-section animatedParent" id="module">
+                        <h1 class="title-section animated fadeInDownShort delay-200">Module</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="loadmore-scroll/index.html">Loadmore scroll</a>
@@ -581,8 +614,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="page-section" id="library">
-                        <h1>Library</h1>
+                    <div class="page-section animatedParent" id="library">
+                        <h1 class="title-section animated fadeInDownShort delay-200">Library</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="jQuery-Mouse-Parallax-hover/">Parallax on Hover</a>
@@ -617,8 +650,8 @@
 
                         </ul>
                     </div>
-                    <div class="page-section" id="api">
-                        <h1>API</h1>
+                    <div class="page-section animatedParent" id="api">
+                        <h1 class="title-section animated fadeInDownShort delay-200">API</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="map-black-white/index.html">Map black and White</a>
@@ -637,8 +670,8 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="page-section" id="plugin">
-                        <h1>Pagespeed</h1>
+                    <div class="page-section animatedParent" id="plugin">
+                        <h1 class="title-section animated fadeInDownShort delay-200">Pagespeed</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="lazy-load/index.html">Lazy Load</a>
@@ -651,16 +684,16 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="page-section" id="mobile">
-                        <h1>Fix Mobile</h1>
+                    <div class="page-section animatedParent" id="mobile">
+                        <h1 class="title-section animated fadeInDownShort delay-200">Fix Mobile</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="fix-zoom-iphone">fix-zoom-iphone</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="page-section" id="doc">
-                        <h1>Document</h1>
+                    <div class="page-section animatedParent" id="doc">
+                        <h1 class="title-section animated fadeInDownShort delay-200">Document</h1>
                         <ul class="ul-number">
                             <li>
                                 <a target="_blank" href="seo-html">Html chuẩn SEO</a>
@@ -688,14 +721,42 @@
                 </div>
             </div>
         </div>
+
+        <a href="javascript:;" class="scroll-top-btn">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </a>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+
+    <section class="stars-container">
+        <div class="box-start">
+            <div id="stars"></div>
+            <div id="stars2"></div>
+            <div id="stars3"></div>
+            <!-- <div class="row">
+                <div class="col-sm-6 col-xs-12"> <img src="img/moon.png" alt="Moon"> </div>
+                <div class="col-sm-6 col-xs-12"></div>
+            </div> -->
+        </div>
+    </section>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/css3-animate-it.min.js"></script>
     <!-- JS Main -->
     <script>
+        $(document).ready(function () {
+            $(".scroll-top-btn").on("click", function () {
+                $('html,body').animate({ scrollTop: 0 }, 'slow');
+                return false;
+            });
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    $(".scroll-top-btn").addClass("visible");
+                } else {
+                    $(".scroll-top-btn").removeClass("visible");
+                }
+            });
+        });
+
         $('#mainNav a').bind('click', function (e) {
             e.preventDefault(); // prevent hard jump, the default behavior
 
@@ -711,6 +772,7 @@
         });
 
         $(window).bind('scroll', function () {
+            $('.navigation').addClass('scrolled');
             var scrollDistance = $(window).scrollTop();
 
             // Show/hide menu on scroll
@@ -728,14 +790,17 @@
                 }
             });
         })
-    </script>
-    <script>
+
         $(document).ready(function () {
             $('.page-section ul.ul-number li').each(function (i) {
                 $('.page-section ul.ul-number li:nth-child(' + i + ') a').prepend('<span class="number">' + i + '</span>');
                 console.log('li count = ' + i);
             })
-        });
+
+            if (!$('.navigation').hasClass('scrolled')) {
+                $('.navigation .navigation__link').first().addClass('active');
+            }
+        })
     </script>
 </body>
 

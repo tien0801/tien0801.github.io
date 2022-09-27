@@ -1,0 +1,504 @@
+// CSS general
+$color: #44993b;
+$color_blue: #6129d5;
+$color_black: #1a1a1a;
+$color_red: #ff0000;
+$color_blue_2: rgb(0, 221, 255);
+$color_gray: #e5e5e5;
+$color_green: #00b339;
+$color_white: #fff;
+$color_yellow: #fcfe15;
+$color_pink: #ff63fa;
+$font_main: "Roboto";
+$font_title: "ALP Visby Round CF";
+
+// Khai báo kích thước tương ứng với màn hình thiết bị
+$X48: 480px;
+$XS: 575px;
+$SM: 767px;
+$MD: 991px;
+$LG: 1199px;
+$X13: 1366px;
+$X15: 1500px;
+$X17: 1700px;
+$X1920: 1920px;
+
+// media queries
+@mixin Responsive($canvas) {
+    @if $canvas == XS {
+        @media only screen and (max-width: $XS) {
+            @content;
+        }
+    } @else if $canvas == SM {
+        @media only screen and (max-width: $SM) {
+            @content;
+        }
+    } @else if $canvas == MD {
+        @media only screen and (max-width: $MD) {
+            @content;
+        }
+    } @else if $canvas == LG {
+        @media only screen and (max-width: $LG) {
+            @content;
+        }
+    } @else if $canvas == X13 {
+        @media only screen and (max-width: $X13) {
+            @content;
+        }
+    } @else if $canvas == X15 {
+        @media only screen and (max-width: $X15) {
+            @content;
+        }
+    } @else if $canvas == X17 {
+        @media only screen and (max-width: $X17) {
+            @content;
+        }
+    } @else if $canvas == X1920 {
+        @media only screen and (max-width: $X1920) {
+            @content;
+        }
+    } @else if $canvas == X48 {
+        @media only screen and (max-width: $X48) {
+            @content;
+        }
+    } @else if $canvas == M16 {
+        @media only screen and (max-width: 1700px) and (min-width: 1501px) {
+            @content;
+        }
+    } @else if $canvas == M13 {
+        @media only screen and (max-width: 1500px) and (min-width: 1200px) {
+            @content;
+        }
+    } @else if $canvas == UMD {
+        @media only screen and (min-width: 992px) {
+            @content;
+        }
+    } @else if $canvas == UX15 {
+        @media only screen and (min-width: 1501px) {
+            @content;
+        }
+    }
+}
+
+$f16: 16px;
+$f18: 18px;
+$f20: 20px;
+$f24: 24px;
+$f28: 28px;
+$f32: 32px;
+$f40: 40px;
+$f43: 43px;
+$f50: 50px;
+$f60: 60px;
+$f64: 64px;
+$f80: 80px;
+
+@mixin Font($fonts) {
+    @if $fonts == f16 {
+        font-size: 16px;
+        @include Responsive(X15) {
+            font-size: 15.5px;
+        }
+        @include Responsive(X13) {
+            font-size: 15px;
+        }
+        @include Responsive(LG) {
+            font-size: 14.5px;
+        }
+        @include Responsive(MD) {
+            font-size: 14px;
+        }
+        @include Responsive(SM) {
+            font-size: 13.5px;
+        }
+        @include Responsive(XS) {
+            font-size: 12.5px;
+        }
+    } @else if $fonts == f18 {
+        font-size: 18px;
+        @include Responsive(X17) {
+            font-size: 17.5px;
+        }
+        @include Responsive(X15) {
+            font-size: 17px;
+        }
+        @include Responsive(X13) {
+            font-size: 16px;
+        }
+        @include Responsive(LG) {
+            font-size: 16px;
+        }
+        @include Responsive(MD) {
+            font-size: 16px;
+        }
+        @include Responsive(SM) {
+            font-size: 15.5px;
+        }
+        @include Responsive(XS) {
+            font-size: 14px;
+        }
+    } @else if $fonts == f20 {
+        font-size: 20px;
+        @include Responsive(X15) {
+            font-size: 19px;
+        }
+        @include Responsive(X15) {
+            font-size: 18.5px;
+        }
+        @include Responsive(LG) {
+            font-size: 18px;
+        }
+        @include Responsive(MD) {
+            font-size: 17px;
+        }
+        @include Responsive(SM) {
+            font-size: 16.5px;
+        }
+        @include Responsive(XS) {
+            font-size: 16px;
+        }
+    } @else if $fonts == f24 {
+        font-size: 24px;
+        @include Responsive(X15) {
+            font-size: 23px;
+        }
+        @include Responsive(LG) {
+            font-size: 22px;
+        }
+        @include Responsive(MD) {
+            font-size: 20px;
+        }
+        @include Responsive(SM) {
+            font-size: 17px;
+        }
+        @include Responsive(XS) {
+            font-size: 16.5px;
+        }
+    } @else if $fonts == f28 {
+        font-size: 28px;
+        @include Responsive(X15) {
+            font-size: 25px;
+        }
+        @include Responsive(LG) {
+            font-size: 23px;
+        }
+        @include Responsive(MD) {
+            font-size: 22px;
+        }
+        @include Responsive(SM) {
+            font-size: 20px;
+        }
+        @include Responsive(XS) {
+            font-size: 18px;
+        }
+    } @else if $fonts == f32 {
+        font-size: 32px;
+        @include Responsive(X17) {
+            font-size: 29px;
+        }
+        @include Responsive(X15) {
+            font-size: 25px;
+        }
+        @include Responsive(X13) {
+            font-size: 23px;
+        }
+        @include Responsive(LG) {
+            font-size: 21px;
+        }
+        @include Responsive(MD) {
+            font-size: 18px;
+        }
+        @include Responsive(SM) {
+            font-size: 17px;
+        }
+    } @else if $fonts == f40 {
+        font-size: 40px;
+        @include Responsive(X17) {
+            font-size: 36px;
+        }
+        @include Responsive(X15) {
+            font-size: 30px;
+        }
+        @include Responsive(X13) {
+            font-size: 28px;
+        }
+        @include Responsive(LG) {
+            font-size: 25px;
+        }
+        @include Responsive(MD) {
+            font-size: 21px;
+        }
+        @include Responsive(SM) {
+            font-size: 20px;
+        }
+        @include Responsive(XS) {
+            font-size: 18px;
+        }
+    } @else if $fonts == f43 {
+        font-size: 43px;
+        @include Responsive(X17) {
+            font-size: 38px;
+        }
+        @include Responsive(X15) {
+            font-size: 33px;
+        }
+        @include Responsive(X13) {
+            font-size: 30px;
+        }
+        @include Responsive(LG) {
+            font-size: 26px;
+        }
+        @include Responsive(MD) {
+            font-size: 22px;
+        }
+        @include Responsive(SM) {
+            font-size: 21px;
+        }
+        @include Responsive(XS) {
+            font-size: 20.5px;
+        }
+    } @else if $fonts == f50 {
+        font-size: 50px;
+        @include Responsive(X17) {
+            font-size: 44px;
+        }
+        @include Responsive(X15) {
+            font-size: 37px;
+        }
+        @include Responsive(X13) {
+            font-size: 35px;
+        }
+        @include Responsive(LG) {
+            font-size: 30px;
+        }
+        @include Responsive(MD) {
+            font-size: 26px;
+        }
+        @include Responsive(SM) {
+            font-size: 23px;
+        }
+        @include Responsive(XS) {
+            font-size: 21px;
+        }
+    } @else if $fonts == f60 {
+        font-size: 60px;
+        @include Responsive(X17) {
+            font-size: 54px;
+        }
+        @include Responsive(X15) {
+            font-size: 45px;
+        }
+        @include Responsive(X13) {
+            font-size: 42px;
+        }
+        @include Responsive(LG) {
+            font-size: 36px;
+        }
+        @include Responsive(MD) {
+            font-size: 31px;
+        }
+        @include Responsive(SM) {
+            font-size: 24px;
+        }
+        @include Responsive(XS) {
+            font-size: 23px;
+        }
+    } @else if $fonts == f64 {
+        font-size: 64px;
+        @include Responsive(X17) {
+            font-size: 57px;
+        }
+        @include Responsive(X15) {
+            font-size: 48px;
+        }
+        @include Responsive(X13) {
+            font-size: 45px;
+        }
+        @include Responsive(LG) {
+            font-size: 40px;
+        }
+        @include Responsive(MD) {
+            font-size: 33px;
+        }
+        @include Responsive(SM) {
+            font-size: 25px;
+        }
+        @include Responsive(XS) {
+            font-size: 24px;
+        }
+    } @else if $fonts == f80 {
+        font-size: 80px;
+        @include Responsive(X17) {
+            font-size: 70px;
+        }
+        @include Responsive(X15) {
+            font-size: 60px;
+        }
+        @include Responsive(X13) {
+            font-size: 56px;
+        }
+        @include Responsive(LG) {
+            font-size: 50px;
+        }
+        @include Responsive(MD) {
+            font-size: 41px;
+        }
+        @include Responsive(SM) {
+            font-size: 32px;
+        }
+        @include Responsive(XS) {
+            font-size: 30px;
+        }
+    }
+}
+
+$mb24: 20px;
+$mb24: 24px;
+$mb30: 30px;
+$mb32: 32px;
+$mb40: 40px;
+$mb48: 48px;
+$mb80: 80px;
+@mixin Margin($margins) {
+    @if $margins == mb20 {
+        margin-bottom: 20px;
+        @include Responsive(X15) {
+            margin-bottom: 19px;
+        }
+        @include Responsive(X13) {
+            margin-bottom: 18px;
+        }
+        @include Responsive(LG) {
+            margin-bottom: 17px;
+        }
+        @include Responsive(MD) {
+            margin-bottom: 16px;
+        }
+        @include Responsive(SM) {
+            margin-bottom: 15.5px;
+        }
+        @include Responsive(XS) {
+            margin-bottom: 15px;
+        }
+    } @else if $margins == mb24 {
+        margin-bottom: 24px;
+        @include Responsive(X15) {
+            margin-bottom: 23px;
+        }
+        @include Responsive(X13) {
+            margin-bottom: 22px;
+        }
+        @include Responsive(LG) {
+            margin-bottom: 21px;
+        }
+        @include Responsive(MD) {
+            margin-bottom: 20px;
+        }
+        @include Responsive(SM) {
+            margin-bottom: 18px;
+        }
+        @include Responsive(XS) {
+            margin-bottom: 16px;
+        }
+    } @else if $margins == mb30 {
+        margin-bottom: 30px;
+        @include Responsive(X15) {
+            margin-bottom: 28px;
+        }
+        @include Responsive(X13) {
+            margin-bottom: 26px;
+        }
+        @include Responsive(LG) {
+            margin-bottom: 24px;
+        }
+        @include Responsive(MD) {
+            margin-bottom: 22px;
+        }
+        @include Responsive(SM) {
+            margin-bottom: 20px;
+        }
+        @include Responsive(XS) {
+            margin-bottom: 18px;
+        }
+    } @else if $margins == mb32 {
+        margin-bottom: 32px;
+        @include Responsive(X15) {
+            margin-bottom: 30px;
+        }
+        @include Responsive(X13) {
+            margin-bottom: 28px;
+        }
+        @include Responsive(LG) {
+            margin-bottom: 26px;
+        }
+        @include Responsive(MD) {
+            margin-bottom: 24px;
+        }
+        @include Responsive(SM) {
+            margin-bottom: 22px;
+        }
+        @include Responsive(XS) {
+            margin-bottom: 20px;
+        }
+    } @else if $margins == mb40 {
+        margin-bottom: 40px;
+        @include Responsive(X15) {
+            margin-bottom: 38px;
+        }
+        @include Responsive(X13) {
+            margin-bottom: 36px;
+        }
+        @include Responsive(LG) {
+            margin-bottom: 32px;
+        }
+        @include Responsive(MD) {
+            margin-bottom: 30px;
+        }
+        @include Responsive(SM) {
+            margin-bottom: 28px;
+        }
+        @include Responsive(XS) {
+            margin-bottom: 22px;
+        }
+    } @else if $margins == mb48 {
+        margin-bottom: 48px;
+        @include Responsive(X15) {
+            margin-bottom: 44px;
+        }
+        @include Responsive(X13) {
+            margin-bottom: 40px;
+        }
+        @include Responsive(LG) {
+            margin-bottom: 38px;
+        }
+        @include Responsive(MD) {
+            margin-bottom: 34px;
+        }
+        @include Responsive(SM) {
+            margin-bottom: 32px;
+        }
+        @include Responsive(XS) {
+            margin-bottom: 30px;
+        }
+    } @else if $margins == mb80 {
+        margin-bottom: 80px;
+        @include Responsive(X17) {
+            margin-bottom: 80px;
+        }
+        @include Responsive(X15) {
+            margin-bottom: 75px;
+        }
+        @include Responsive(X13) {
+            margin-bottom: 70px;
+        }
+        @include Responsive(MD) {
+            margin-bottom: 60px;
+        }
+        @include Responsive(SM) {
+            margin-bottom: 50px;
+        }
+        @include Responsive(XS) {
+            margin-bottom: 40px;
+        }
+    }
+}
