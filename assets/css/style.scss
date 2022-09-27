@@ -112,6 +112,7 @@ p {
     /* background: linear-gradient(45deg, #43cea2 10%, #185a9d 90%); */
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
     background-color: #fff;
+    border-radius: 2px;
 
     @include Responsive(SM) {
         padding: 20px 12px;
