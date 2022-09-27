@@ -96,7 +96,7 @@ p {
                 margin-left: auto;
                 padding-top: 20px;
                 @include Responsive(X17) {
-                    padding-top: 15px;
+                    padding-top: 16px;
                 }
             }
         }
@@ -156,6 +156,9 @@ p {
 
 .author-section {
     padding-top: 30px;
+    @include Responsive(SM) {
+        padding-top: 20px;
+    }
 
     .position {
         margin-bottom: 10px;
@@ -176,6 +179,7 @@ p {
             margin-top: 10px;
             @include Responsive(X17) {
                 font-size: 28px;
+                margin-bottom: 16px;
             }
         }
     }
