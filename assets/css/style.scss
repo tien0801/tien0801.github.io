@@ -334,6 +334,7 @@ p {
 #stars2,
 #stars3 {
     margin-left: -300px;
+    border-radius: 50%;
 }
 
 #stars {
@@ -734,36 +735,6 @@ p {
         1938px 899px #fff, 877px 362px #fff, 793px 500px #fff, 918px 1922px #fff, 1448px 1489px #fff, 1862px 1041px #fff,
         1306px 197px #fff, 1064px 521px #fff, 46px 740px #fff, 251px 1404px #fff, 1902px 1395px #fff, 492px 1082px #fff,
         394px 365px #fff, 77px 1588px #fff, 633px 263px #fff;
-}
-
-@-webkit-keyframes shake-icon {
-    0% {
-        transform: rotate(0deg);
-    }
-    30% {
-        transform: rotate(10deg);
-    }
-    60% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(-10deg);
-    }
-}
-
-@keyframes shake-icon {
-    0% {
-        transform: rotate(0deg);
-    }
-    30% {
-        transform: rotate(10deg);
-    }
-    60% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(-10deg);
-    }
 }
 
 @keyframes animStar {
