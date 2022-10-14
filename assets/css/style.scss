@@ -284,6 +284,12 @@ p {
         margin: 0 auto;
     }
 
+    .title-project {
+        @include Font(f32);
+        margin: 32px 0 24px;
+        font-weight: 500;
+    }
+
     .list-project {
         display: flex;
         flex-wrap: wrap;
@@ -293,6 +299,15 @@ p {
             width: 20%;
             display: flex;
             justify-content: center;
+            transition: all 0.5s;
+            @include Responsive(XS) {
+                width: calc(50% - 20px);
+                margin-bottom: 15px;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+            }
 
             a {
                 color: $color-black;
