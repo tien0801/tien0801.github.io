@@ -285,7 +285,34 @@ p {
     }
 
     .list-project {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+
         .item {
+            width: 20%;
+            display: flex;
+            justify-content: center;
+
+            a {
+                color: $color-black;
+            }
+
+            .box-img {
+                height: 100px;
+                margin-bottom: 10px;
+
+                &.bg-1 {
+                    background-color: #1e1d32;
+                    padding: 0 10px;
+                }
+            }
+            .name {
+                display: none;
+                font-size: 20px;
+                text-align: center;
+                text-transform: uppercase;
+            }
         }
     }
 }
