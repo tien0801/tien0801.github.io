@@ -187,6 +187,8 @@ p {
     .info-author {
         @include Responsive(SM) {
             padding: 0 10px;
+            max-width: 580px;
+            margin: 0 auto;
         }
     }
 
@@ -233,7 +235,7 @@ p {
 
     .list-social {
         display: flex;
-        @include Responsive(SM) {
+        @include Responsive(MD) {
             margin-bottom: 40px;
         }
 
