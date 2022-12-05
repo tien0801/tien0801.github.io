@@ -1,0 +1,20 @@
+{
+  "name": "gophuquoc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --output-style compressed -o src/dist/css src/scss --watch",
+    "serve": "browser-sync start --server --files 'src/dist/css/*.css, **/*.html'",
+    "watch:css": "onchange 'src/scss' -- npm run scss", 
+    "start": "npm run serve watch:css"
+  },
+  "author": "myidol",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "node-sass": "^7.0.3",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0"
+  }
+}
