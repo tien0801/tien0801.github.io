@@ -10721,7 +10721,7 @@ body {
    padding: 0;
 }
 .header div [data-bs-spy="scroll"] nav.navbar .navbar-brand .logo {
-   height: 75px;
+   height: 64px;
    transition: all 0.8s;
 }
 .header div [data-bs-spy="scroll"] nav.navbar .navbar-brand .numb-contact span {
