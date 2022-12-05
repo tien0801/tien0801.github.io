@@ -11171,6 +11171,9 @@ section#ticket-sect .card:hover {
 section#download-app img.app-img {
    height: 45px;
 }
+section#download-app .img-introduce img {
+   max-height: 400px;
+}
 footer {
    border-top: 4px solid #2e90fa;
    padding-top: 2.8rem;
