@@ -1,18 +1,67 @@
-
-$primary:#2e90fa;
-$secondary:#84CAFF;
-$success:#ffae26;
-$warning:#fec84b;
-$danger:#EF6820;
+$primary: #2e90fa;
+$secondary: #84caff;
+$success: #ffae26;
+$warning: #fec84b;
+$danger: #ef6820;
 $red: #ff6000;
-$green:#16B364;
-$white:#ffffff;
-$grey-100:#D0D5DD;
-$grey-200:#98A2B3;
-$grey-300:#667085;
-$grey-400:#595959;
-$dark:#191919;
-$black:#000000;
+$green: #16b364;
+$white: #ffffff;
+$grey-100: #d0d5dd;
+$grey-200: #98a2b3;
+$grey-300: #667085;
+$grey-400: #595959;
+$dark: #191919;
+$black: #000000;
 $border-clr: #ced4da;
 
+// Variables in Media queries
+$X48: 480px;
+$XS: 575px;
+$SM: 576px;
+$MD: 768px;
+$LG: 992px;
+$XL: 1200px;
+$XXL: 1400px;
+$X17: 1700px;
+$X1921: 1921px;
 
+// Media queries
+@mixin Responsive($canvas) {
+    @if $canvas == X48 {
+        @media only screen and (max-width: $X48) {
+            @content;
+        }
+    } @else if $canvas == XS {
+        @media only screen and (max-width: $XS) {
+            @content;
+        }
+    } @else if $canvas == SM {
+        @media only screen and (min-width: $SM) {
+            @content;
+        }
+    } @else if $canvas == MD {
+        @media only screen and (min-width: $MD) {
+            @content;
+        }
+    } @else if $canvas == LG {
+        @media only screen and (min-width: $LG) {
+            @content;
+        }
+    } @else if $canvas == XL {
+        @media only screen and (min-width: $XL) {
+            @content;
+        }
+    } @else if $canvas == XXL {
+        @media only screen and (min-width: $XXL) {
+            @content;
+        }
+    } @else if $canvas == X17 {
+        @media only screen and (min-width: $X17) {
+            @content;
+        }
+    } @else if $canvas == X1921 {
+        @media only screen and (min-width: $X1921) {
+            @content;
+        }
+    }
+}
