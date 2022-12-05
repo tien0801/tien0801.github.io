@@ -127,7 +127,7 @@
         </div>
       </div>
       <!-- navbar -->
-      <div data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+      <div data-bs-spy="scroll" data-bs-target=".navbarv" data-bs-offset="50">
         <nav class="navbar navbar-expand-sm sticky-top" id="sticky-top">
           <a class="navbar-brand" href="#">
             <img src="src/images/phuquoc-logo.png" alt="gophuquoc logo" class="logo">
@@ -139,13 +139,13 @@
           <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item px-3">
-                <a class="nav-link" href="#hotel-sect">Khách sạn</a>
+                <a class="nav-link scroll-to-target" href="#hotel-sect">Khách sạn</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="#tour-sect">Tours</a>
+                <a class="nav-link scroll-to-target" href="#tour-sect">Tours</a>
               </li>
               <li class="nav-item px-3">
-                <a class="nav-link" href="#vehicle-sect">Dịch vụ xe</a>
+                <a class="nav-link scroll-to-target" href="#vehicle-sect">Dịch vụ xe</a>
               </li>
             </ul>
             <button type="button" class="btn btn-primary txt-light" data-bs-toggle="modal"
@@ -158,7 +158,7 @@
     </div>
   </header>
 
-  <div class="home-cont">
+  <div class="home-cont" data-bs-spy="scroll" data-bs-target="#navbarScroll">
     <!--s-search box-->
     <div class="position-relative">
       <picture>
@@ -558,7 +558,7 @@
           </div>
         </div>
       </section>
-      <section id="promo-sect" class="pt-sect reveal">
+      <section id="promo-sect" class="pt-sect">
         <h3 class="fw-bold text-center">Combo du lịch</h3>
         <ul class="nav nav-pills d-flex justify-content-center" id="promo-tab" role="tablist">
           <li class="nav-item" role="presentation">
@@ -796,7 +796,7 @@
       </section>
     </div>
     <!--s-tour section-->
-    <section id="tour-sect" class="pt-sect reveal">
+    <section id="tour-sect" class="pt-sect">
       <h3 class="fw-bold text-center">Tour Địa Phương</h3>
       <div class="MultiCarousel" data-items="1,2,3,5,6" data-slide="1" id="MultiCarousel" data-interval="1000">
         <div class="MultiCarousel-inner">
@@ -965,7 +965,7 @@
     <!--e-tour section-->
 
     <!--s-flight section-->
-    <section id="flight-sect" class="pt-sect reveal">
+    <section id="flight-sect" class="pt-sect">
       <div class="wrapper-contain w-90 m-auto">
         <h3 class="fw-bold text-center">Các chuyến bay Phú Quốc</h3>
         <div class="row mb-3">
@@ -1142,7 +1142,7 @@
     <!--e-flight section-->
 
     <!--s-vehicle section-->
-    <section id="vehicle-sect" class="pt-sect reveal">
+    <section id="vehicle-sect" class="pt-sect">
       <div class="wrapper-contain">
         <h3 class="fw-bold text-center">Các phương tiện cho thuê</h3>
         <div class="row mx-auto my-auto justify-content-center">
@@ -1408,7 +1408,7 @@
     <!--e-vehicle section-->
 
     <!--s-flight section-->
-    <section id="ticket-sect" class="pt-sect reveal">
+    <section id="ticket-sect" class="pt-sect">
       <div class="wrapper-contain w-90 m-auto p-0">
         <h3 class="fw-bold text-center">Phòng vé</h3>
         <div class="row mb-3">
@@ -1588,7 +1588,7 @@
     <!--e-flight section-->
 
     <!--s-download app section-->
-    <section id="download-app" class="pt-sect reveal">
+    <section id="download-app" class="pt-sect">
       <div class="wrapper-contain w-90 m-auto">
         <div class="row align-items-center">
           <div class="col-md-8">
@@ -1933,9 +1933,9 @@
   <!--e-Sign Up Traveller-->
   <!--e-modal-->
 
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <script type="text/javascript" src="src/dist/js/bootstrap.bundle.min.js" async></script>
   <script type="text/javascript" src="src/dist/js/customize.js"></script>
-  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <!--<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>-->
 
   <script type="text/javascript">
@@ -2039,10 +2039,30 @@
       }
     });
 
-    /* Heart Icon */
-    $('.icon_heart_line').click(function () {
-      console.log('dsfd.click');
-      $(this).toggleClass('icon_heart_solid');
+    $(document).ready(function () {
+      /* Heart Icon */
+      $('.icon_heart_line').click(function () {
+        console.log('dsfd.click');
+        $(this).toggleClass('icon_heart_solid');
+      })
+      // Scoll to taget
+      $(".scroll-to-target[href^='#']").on("click", function (e) {
+        // e.preventDefault();
+        // e.stopPropagation();
+        var target = this.hash,
+          id_target = $(target);
+        // if (!$(this.hash).hasClass('active')) {
+        // $("html, body").stop().animate({
+        //   scrollTop: id_target.offset().top - 160
+        // }, 1000, function () { })
+
+        // $('html, body').animate({
+        //   scrollTop: id_target.offset().top
+        // }, 500);
+        // return false;
+        // }
+      })
+
     })
   </script>
 </body>
