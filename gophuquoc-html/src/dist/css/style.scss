@@ -1,0 +1,27 @@
+@import "./_variable.scss";
+@import "./common/footer.scss";
+
+// Ticket section
+section#ticket-sect {
+    .card {
+        font-size: 85%;
+    }
+}
+.nav-tabs-main {
+    border: 0;
+    @include Margin(mb24);
+    .nav-item {
+        .nav-link {
+            color: $dark;
+            margin: 0;
+            @include Responsive(MD) {
+                margin-right: 0.5rem;
+                margin-left: 0.5rem;
+            }
+
+            &.active {
+                color: #fff;
+            }
+        }
+    }
+}

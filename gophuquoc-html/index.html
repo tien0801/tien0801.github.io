@@ -18,14 +18,11 @@
   <meta property="og:type" content="website">
   <link rel="shortcut icon" type="image/icon" href="src/images/gophuquoc-fav.ico">
   <!-- Styles -->
-  <!-- Font Roboto Online -->
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="src/dist/css/customize.css">
-
-  <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>-->
+  <link rel="stylesheet" href="src/dist/css/style.css">
 </head>
 
 <body>
@@ -1416,177 +1413,293 @@
     <section id="ticket-sect" class="pt-sect">
       <div class="wrapper-contain w-90 m-auto p-0">
         <h3 class="fw-bold text-center">Phòng vé</h3>
-        <div class="row mb-3">
-          <div class="col col-xs-12">
-            <div class="card mb-3 border-0 rounded-0">
-              <div class="row g-2 align-items-center d-flex">
-                <div class="col-8">
-                  <div class="card-body p-0">
-                    <p class="fw-lighter fst-italic mb-2">Vinwonders</p>
-                    <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Cung điện Hải Vương Rùa Khổng Lồ</h6>
-                    <p class="rating average">
-                      <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
-                    </p>
-                    <div class="d-flex align-items-center mt-2">
-                      <div>
-                        <span class="grey-300-clr">Giá vé từ</span>
-                        <div class="ticket-pri d-inline-block">
-                          <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div> /
-                          <span>vé</span>
+
+        <ul class="nav nav-tabs nav-tabs-main nav-pills d-flex justify-content-center" id="ticketTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#ticket-tab-1"
+              type="button" role="tab" aria-controls="ticket-tab-1" aria-selected="true">
+              <span>Vui chơi giải trí</span>
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#ticket-tab-2" type="button"
+              role="tab" aria-controls="ticket-tab-2" aria-selected="false">
+              <span>Vận chuyển</span>
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content tab-content-main" id="myTabContent">
+          <div class="tab-pane fade show active" id="ticket-tab-1" role="tabpanel" aria-labelledby="home-tab"
+            tabindex="0">
+            <div class="row mb-3">
+              <div class="col col-xs-12">
+                <div class="card mb-3 border-0 rounded-0">
+                  <div class="row g-2 align-items-center d-flex">
+                    <div class="col-8">
+                      <div class="card-body p-0">
+                        <p class="fw-lighter fst-italic mb-2">Vinwonders</p>
+                        <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Cung điện Hải Vương Rùa Khổng Lồ</h6>
+                        <p class="rating average">
+                          <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
+                        </p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div>
+                            <span class="grey-300-clr">Giá vé từ</span>
+                            <div class="ticket-pri d-inline-block">
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              /
+                              <span>vé</span>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <div class="col-4">
+                      <img src="src/images/photos/pt21.jpg" alt="entrance ticket image" class="rounded">
+                    </div>
                   </div>
                 </div>
-                <div class="col-4">
-                  <img src="src/images/photos/pt21.jpg" alt="entrance ticket image" class="rounded">
+              </div>
+              <div class="col col-xs-12">
+                <div class="card mb-3 border-0 rounded-0">
+                  <div class="row g-2 align-items-center d-flex">
+                    <div class="col-8">
+                      <div class="card-body p-0">
+                        <p class="fw-lighter fst-italic mb-2">Vinpearl Safari</p>
+                        <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Tham quan vườn thú hoang dã Safari park</h6>
+                        <p class="rating average">
+                          <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
+                        </p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div>
+                            <span class="grey-300-clr">Giá vé từ</span>
+                            <div class="ticket-pri d-inline-block">
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              /
+                              <span>vé</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <img src="src/images/photos/pt23.jpg" alt="entrance ticket image" class="rounded">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-xs-12">
+                <div class="card mb-3 border-0 rounded-0">
+                  <div class="row g-2 align-items-center d-flex">
+                    <div class="col-8">
+                      <div class="card-body p-0">
+                        <p class="fw-lighter fst-italic mb-2">Grandworld</p>
+                        <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Tham quan sông Venice trên thuyền Gondola</h6>
+                        <p class="rating average">
+                          <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
+                        </p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div>
+                            <span class="grey-300-clr">Giá vé từ</span>
+                            <div class="ticket-pri d-inline-block">
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              /
+                              <span>vé</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <img src="src/images/photos/pt22.jpg" alt="entrance ticket image" class="rounded">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col-xs-12">
+                <div class="card mb-3 border-0 rounded-0">
+                  <div class="row g-2 align-items-center d-flex">
+                    <div class="col-8">
+                      <div class="card-body p-0">
+                        <p class="fw-lighter fst-italic mb-2">Grandworld</p>
+                        <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Thưởng thức màn trình diễn Tinh Hoa Việt Nam
+                        </h6>
+                        <p class="rating average">
+                          <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
+                        </p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div>
+                            <span class="grey-300-clr">Giá vé từ</span>
+                            <div class="ticket-pri d-inline-block">
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              /
+                              <span>vé</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <img src="src/images/photos/pt24.jpg" alt="entrance ticket image" class="rounded">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-xs-12">
+                <div class="card mb-3 border-0 rounded-0">
+                  <div class="row g-2 align-items-center d-flex">
+                    <div class="col-8">
+                      <div class="card-body p-0">
+                        <p class="fw-lighter fst-italic mb-2">Grandworld</p>
+                        <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Tham quan Teddy Bear Museum</h6>
+                        <p class="rating average">
+                          <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
+                        </p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div>
+                            <span class="grey-300-clr">Giá vé từ</span>
+                            <div class="ticket-pri d-inline-block">
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              /
+                              <span>vé</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <img src="src/images/photos/pt25.jpg" alt="entrance ticket image" class="rounded">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-xs-12">
+                <div class="card mb-3 border-0 rounded-0">
+                  <div class="row g-2 align-items-center d-flex">
+                    <div class="col-8">
+                      <div class="card-body p-0">
+                        <p class="fw-lighter fst-italic mb-2">Vinwonders</p>
+                        <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Vô vàn góc sống ảo cho bạn tha hồ thả dáng
+                        </h6>
+                        <p class="rating average">
+                          <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
+                        </p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div>
+                            <span class="grey-300-clr">Giá vé từ</span>
+                            <div class="ticket-pri d-inline-block">
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              /
+                              <span>vé</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <img src="src/images/photos/pt26.jpg" alt="entrance ticket image" class="rounded">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex justify-content-center my-2">
+              <button type="button" class="btn btn-search btn-primary py-1">
+                <span>Khám phá thêm</span>
+                <span class="icon-arrow02 align-middle"></span>
+              </button>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="ticket-tab-2" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div class="row mb-3">
+              <div class="col col-xs-12">
+                <div class="card mb-3 border-0 rounded-0">
+                  <div class="row g-2 align-items-center d-flex">
+                    <div class="col-8">
+                      <div class="card-body p-0">
+                        <p class="fw-lighter fst-italic mb-2">Vinwonders</p>
+                        <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Cung điện Hải Vương Rùa Khổng Lồ</h6>
+                        <p class="rating average">
+                          <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
+                        </p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div>
+                            <span class="grey-300-clr">Giá vé từ</span>
+                            <div class="ticket-pri d-inline-block">
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              /
+                              <span>vé</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <img src="src/images/photos/pt21.jpg" alt="entrance ticket image" class="rounded">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-xs-12">
+                <div class="card mb-3 border-0 rounded-0">
+                  <div class="row g-2 align-items-center d-flex">
+                    <div class="col-8">
+                      <div class="card-body p-0">
+                        <p class="fw-lighter fst-italic mb-2">Vinpearl Safari</p>
+                        <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Tham quan vườn thú hoang dã Safari park</h6>
+                        <p class="rating average">
+                          <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
+                        </p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div>
+                            <span class="grey-300-clr">Giá vé từ</span>
+                            <div class="ticket-pri d-inline-block">
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              /
+                              <span>vé</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <img src="src/images/photos/pt23.jpg" alt="entrance ticket image" class="rounded">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col col-xs-12">
+                <div class="card mb-3 border-0 rounded-0">
+                  <div class="row g-2 align-items-center d-flex">
+                    <div class="col-8">
+                      <div class="card-body p-0">
+                        <p class="fw-lighter fst-italic mb-2">Grandworld</p>
+                        <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Tham quan sông Venice trên thuyền Gondola</h6>
+                        <p class="rating average">
+                          <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
+                        </p>
+                        <div class="d-flex align-items-center mt-2">
+                          <div>
+                            <span class="grey-300-clr">Giá vé từ</span>
+                            <div class="ticket-pri d-inline-block">
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              /
+                              <span>vé</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <img src="src/images/photos/pt22.jpg" alt="entrance ticket image" class="rounded">
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col col-xs-12">
-            <div class="card mb-3 border-0 rounded-0">
-              <div class="row g-2 align-items-center d-flex">
-                <div class="col-8">
-                  <div class="card-body p-0">
-                    <p class="fw-lighter fst-italic mb-2">Vinpearl Safari</p>
-                    <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Tham quan vườn thú hoang dã Safari park</h6>
-                    <p class="rating average">
-                      <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
-                    </p>
-                    <div class="d-flex align-items-center mt-2">
-                      <div>
-                        <span class="grey-300-clr">Giá vé từ</span>
-                        <div class="ticket-pri d-inline-block">
-                          <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div> /
-                          <span>vé</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="src/images/photos/pt23.jpg" alt="entrance ticket image" class="rounded">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col col-xs-12">
-            <div class="card mb-3 border-0 rounded-0">
-              <div class="row g-2 align-items-center d-flex">
-                <div class="col-8">
-                  <div class="card-body p-0">
-                    <p class="fw-lighter fst-italic mb-2">Grandworld</p>
-                    <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Tham quan sông Venice trên thuyền Gondola</h6>
-                    <p class="rating average">
-                      <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
-                    </p>
-                    <div class="d-flex align-items-center mt-2">
-                      <div>
-                        <span class="grey-300-clr">Giá vé từ</span>
-                        <div class="ticket-pri d-inline-block">
-                          <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div> /
-                          <span>vé</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="src/images/photos/pt22.jpg" alt="entrance ticket image" class="rounded">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col col-xs-12">
-            <div class="card mb-3 border-0 rounded-0">
-              <div class="row g-2 align-items-center d-flex">
-                <div class="col-8">
-                  <div class="card-body p-0">
-                    <p class="fw-lighter fst-italic mb-2">Grandworld</p>
-                    <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Thưởng thức màn trình diễn Tinh Hoa Việt Nam</h6>
-                    <p class="rating average">
-                      <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
-                    </p>
-                    <div class="d-flex align-items-center mt-2">
-                      <div>
-                        <span class="grey-300-clr">Giá vé từ</span>
-                        <div class="ticket-pri d-inline-block">
-                          <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div> /
-                          <span>vé</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="src/images/photos/pt24.jpg" alt="entrance ticket image" class="rounded">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col col-xs-12">
-            <div class="card mb-3 border-0 rounded-0">
-              <div class="row g-2 align-items-center d-flex">
-                <div class="col-8">
-                  <div class="card-body p-0">
-                    <p class="fw-lighter fst-italic mb-2">Grandworld</p>
-                    <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Tham quan Teddy Bear Museum</h6>
-                    <p class="rating average">
-                      <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
-                    </p>
-                    <div class="d-flex align-items-center mt-2">
-                      <div>
-                        <span class="grey-300-clr">Giá vé từ</span>
-                        <div class="ticket-pri d-inline-block">
-                          <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div> /
-                          <span>vé</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="src/images/photos/pt25.jpg" alt="entrance ticket image" class="rounded">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col col-xs-12">
-            <div class="card mb-3 border-0 rounded-0">
-              <div class="row g-2 align-items-center d-flex">
-                <div class="col-8">
-                  <div class="card-body p-0">
-                    <p class="fw-lighter fst-italic mb-2">Vinwonders</p>
-                    <h6 class="card-title fw-bold mb-1 txt-ellipsi02">Vô vàn góc sống ảo cho bạn tha hồ thả dáng</h6>
-                    <p class="rating average">
-                      <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span>
-                    </p>
-                    <div class="d-flex align-items-center mt-2">
-                      <div>
-                        <span class="grey-300-clr">Giá vé từ</span>
-                        <div class="ticket-pri d-inline-block">
-                          <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div> /
-                          <span>vé</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-4">
-                  <img src="src/images/photos/pt26.jpg" alt="entrance ticket image" class="rounded">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex justify-content-center my-2">
-          <button type="button" class="btn btn-search btn-primary py-1">
-            <span>Khám phá thêm</span>
-            <span class="icon-arrow02 align-middle"></span>
-          </button>
         </div>
       </div>
     </section>
@@ -1940,7 +2053,6 @@
 
   <script type="text/javascript" src="src/dist/js/jquery-3.6.1.min.js"></script>
   <script type="text/javascript" src="src/dist/js/bootstrap.bundle.min.js" async></script>
-  <script type="text/javascript" src="src/dist/js/customize.js"></script>
   <script type="text/javascript" src="src/dist/js/script.js"></script>
 
 </body>

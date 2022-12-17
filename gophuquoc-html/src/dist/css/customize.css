@@ -11042,8 +11042,7 @@ section#promo-sect .carousel.slide .carousel-indicators button {
    left: 6.5%;
 }
 section#tour-sect,
-section#vehicle-sect,
-section#ticket-sect {
+section#vehicle-sect {
    font-size: 85%;
 }
 section#tour-sect .card,
@@ -11194,47 +11193,7 @@ section#download-app img.app-img {
 section#download-app .img-introduce img {
    max-height: 400px;
 }
-footer {
-   border-top: 4px solid #2e90fa;
-   padding-top: 2.8rem;
-   background-color: #f5faff;
-}
-footer img.logo {
-   height: 75px;
-}
-footer h5,
-footer .h5 {
-   margin-bottom: 2.8rem;
-}
-footer h5::after,
-footer .h5::after {
-   content: "";
-   display: inline-block;
-   position: absolute;
-   left: 0;
-   bottom: -8px;
-   width: 44px;
-   height: 3px;
-}
-footer ul {
-   margin: 0;
-   padding: 0;
-}
-footer ul li {
-   list-style: none;
-}
-footer button {
-   margin-left: 5px;
-   padding: 0.34rem 1.1rem;
-}
-footer .payment-method {
-   margin: 1rem 0;
-   border-top: 1px solid #b9e6fe;
-   padding-top: 1rem;
-}
-footer .payment-method img {
-   height: 35px;
-}
+
 #signup .modal-content .modal-header,
 #signin .modal-content .modal-header,
 #supplier-signin .modal-content .modal-header {
@@ -11457,39 +11416,6 @@ footer .payment-method img {
    }
    #flight-sect .row > * {
       padding: 0 !important;
-   }
-   footer {
-      padding-top: 1.5rem;
-      text-align: center;
-   }
-   footer h5,
-   footer .h5,
-   footer .h5 {
-      display: inline-block;
-      margin-bottom: 0.8rem;
-   }
-   footer img.logo {
-      margin-bottom: 0.8rem !important;
-   }
-   footer .contact-inf {
-      margin-bottom: 1.5rem;
-   }
-   footer ul li .icon-arrow05 {
-      display: none;
-   }
-   footer .contact-frm h5,
-   footer .contact-frm .h5 {
-      margin-bottom: 1.5rem;
-   }
-   footer .payment-method {
-      font-size: smaller;
-   }
-   footer .payment-method .d-flex {
-      display: block !important;
-      margin-bottom: 0.5rem;
-   }
-   footer .payment-method img {
-      height: 28px;
    }
 }
 @media (min-width: 375px) and (max-width: 575px) {
