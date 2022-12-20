@@ -163,7 +163,7 @@ $(document).ready(function () {
             //autoplaySpeed: 2000,
             // nestedItemSelector: 'item-gall',
             lazyLoad: true,
-            margin: 0,
+            margin: 12,
             responsiveClass: true,
             items: 4,
             dots: true,

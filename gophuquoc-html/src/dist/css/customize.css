@@ -11135,17 +11135,7 @@ section#vehicle-sect .vehicle {
    padding: 0;
    margin-top: 0.5rem;
 }
-section#vehicle-sect .vehicle .card {
-   margin: 0 0.35rem;
-   border-radius: 10px;
-   position: relative;
-   z-index: 9;
-}
 
-section#vehicle-sect .vehicle .card:hover {
-   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-   cursor: pointer;
-}
 section#vehicle-sect button[class^="carousel-control-"],
 section#vehicle-sect button[class*=" carousel-control-"] {
    z-index: 9;
