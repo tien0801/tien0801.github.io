@@ -12,17 +12,6 @@ function myFunction() {
     }
 }
 
-/* Heart Icon */
-// document.querySelector('.icon_heart_line').addEventListener('click', function (event) {
-// event.preventDefault();
-// var icon_heart_line = document.querySelector('.icon_heart_line');
-// if (icon_heart_line.classList.contains('icon_heart_solid')) {
-//   icon_heart_line.classList.remove('icon_heart_solid');
-// } else {
-//   icon_heart_line.classList.add('icon_heart_solid');
-// }
-// });
-
 let items = document.querySelectorAll('.vehicle .carousel-item')
 
 items.forEach((el) => {
@@ -158,30 +147,13 @@ $(document).ready(function () {
     }
 });
 
+// JS Update
 $(document).ready(function () {
     /* Heart Icon */
     $('.icon_heart_line').click(function () {
         console.log('dsfd.click');
         $(this).toggleClass('icon_heart_solid');
     })
-    // Scoll to taget
-    $(".scroll-to-target[href^='#']").on("click", function (e) {
-        // e.preventDefault();
-        // e.stopPropagation();
-        var target = this.hash,
-            id_target = $(target);
-        // if (!$(this.hash).hasClass('active')) {
-        // $("html, body").stop().animate({
-        //   scrollTop: id_target.offset().top - 160
-        // }, 1000, function () { })
-
-        // $('html, body').animate({
-        //   scrollTop: id_target.offset().top
-        // }, 500);
-        // return false;
-        // }
-    })
-
 
     if ($('.js-vehicle-slider').length > 0) {
         $('.js-vehicle-slider').owlCarousel({
