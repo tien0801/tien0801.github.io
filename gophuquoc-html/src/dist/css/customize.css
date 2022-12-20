@@ -5547,12 +5547,12 @@ fieldset:disabled .btn {
 }
 .carousel-item {
    position: relative;
-   display: none;
+   /* display: none;
    float: left;
    width: 100%;
    margin-right: -100%;
    backface-visibility: hidden;
-   transition: transform 0.6s ease-in-out;
+   transition: transform 0.6s ease-in-out; */
 }
 @media (prefers-reduced-motion: reduce) {
    .carousel-item {
@@ -10513,7 +10513,7 @@ svg {
    outline: none !important;
 }
 button:active {
-   color: #fff !important;
+   color: #fff;
 }
 .img-cover {
    object-fit: cover;
@@ -11003,12 +11003,7 @@ section#promo-sect .carousel.slide .carousel-indicators button {
    -o-transition: all 500ms ease;
    transition: all 500ms ease;
 }
-.MultiCarousel button[type="button"].carousel-control-next {
-   right: -6.5%;
-}
-.MultiCarousel button[type="button"].carousel-control-prev {
-   left: -6.5%;
-}
+
 .MultiCarousel button[type="button"].over {
    pointer-events: none;
    background: #ccc;

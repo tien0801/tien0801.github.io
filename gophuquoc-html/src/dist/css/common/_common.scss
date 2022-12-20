@@ -1,0 +1,13 @@
+.show-desktop {
+    display: none;
+    @include Responsive(MD) {
+        display: block;
+    }
+}
+
+.show-mobile {
+    display: block;
+    @include Responsive(MD) {
+        display: none;
+    }
+}

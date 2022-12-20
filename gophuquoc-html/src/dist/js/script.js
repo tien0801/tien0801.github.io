@@ -182,4 +182,41 @@ $(document).ready(function () {
         // }
     })
 
+
+    if ($('.js-vehicle-slider').length > 0) {
+        $('.js-vehicle-slider').owlCarousel({
+            loop: true,
+            // autoplay: true,
+            // autoplayTimeout: 4000,
+            //autoplaySpeed: 2000,
+            // nestedItemSelector: 'item-gall',
+            lazyLoad: true,
+            margin: 0,
+            responsiveClass: true,
+            items: 4,
+            dots: true,
+            navText: ["<span class='arrow-l'></span>", "<span class='arrow-r'></span>"],
+            rewindNav: true,
+            nav: true,
+            responsive: {
+                // breakpoint from 0 up
+                0: {
+                    items: 1,
+                },
+                576: {
+                    items: 2,
+                },
+                768: {
+                    items: 2,
+                },
+                992: {
+                    items: 3,
+                },
+                1200: {
+                    items: 4,
+                }
+            }
+        })
+    }
+
 })
