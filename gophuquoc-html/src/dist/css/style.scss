@@ -47,9 +47,31 @@ section#ticket-sect {
 }
 
 // Vehicle Section
+#vehicle-sect {
+    .vehicle {
+        .card {
+            .img-wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+
+                img {
+                    border-radius: 9px 9px 0 0;
+                }
+            }
+        }
+    }
+}
+
 .vehicle-slider {
     .item {
         padding: 12px 0 10px;
+
+        .img-wrapper {
+            .y-box-img {
+                padding-bottom: 69.4%;
+            }
+        }
     }
     .owl-nav {
         button {
@@ -77,6 +99,9 @@ section#ticket-sect {
             }
 
             span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 font-size: 14px;
             }
         }
