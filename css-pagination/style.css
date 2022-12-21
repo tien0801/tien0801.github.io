@@ -1,0 +1,43 @@
+.t-pagination {
+    padding: 20px 0;
+}
+
+.t-pagination ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.t-pagination li {
+    list-style: none;
+}
+
+.t-pagination li > a {
+    position: relative;
+    padding: 6px 12px;
+    line-height: 1.4;
+    color: #333;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-right: 0;
+}
+
+.t-pagination li:last-child > a {
+    border-right: 1px solid #ddd;
+}
+
+.t-pagination li.active > a,
+.t-pagination li.active > a:focus,
+.t-pagination li.active > a:hover {
+    background-color: #e94f39;
+    border-color: #e94f39;
+    color: #fff;
+    z-index: 2;
+}
+
+.t-pagination li > a:focus,
+.t-pagination li > a:hover {
+    background-color: #eee;
+    border-color: #ddd;
+}

@@ -10,50 +10,9 @@
     <link rel="canonical" href="https://yosu.vn/current-page">
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
-    <style>
-    .y-pagination {
-        padding: 20px 0;
-    }
-
-    .y-pagination ul {
-        display: inline-block;
-        margin: 0;
-    }
-
-    .y-pagination li {
-        display: inline;
-        list-style: none;
-    }
-
-    .y-pagination li>a {
-        position: relative;
-        float: left;
-        padding: 6px 12px;
-        margin-left: -1px;
-        line-height: 1.42857143;
-        color: #333;
-        text-decoration: none;
-        background-color: #fff;
-        border: 1px solid #ddd;
-    }
-
-    .y-pagination li.active>a,
-    .y-pagination li.active>a:focus,
-    .y-pagination li.active>a:hover {
-        background-color: #F5DC05;
-        border-color: #F5DC05;
-        color: #fff;
-        z-index: 2;
-    }
-
-    .y-pagination li>a:focus,
-    .y-pagination li>a:hover {
-        background-color: #eee;
-        border-color: #ddd;
-    }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -61,60 +20,109 @@
         <h1>Pagination Css</h1>
         <div class="row">
             <div class="col-md-6">
+                <h3>Scss</h3>
                 <pre>
 <code>
-.y-pagination {
+.t-pagination {
+    padding: 20px 0;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+
+        li {
+            list-style: none;
+
+            &.active>a,
+            &.active>a:focus,
+            &.active>a:hover {
+                background-color: #e94f39;
+                border-color: #e94f39;
+                color: #fff;
+                z-index: 2;
+            }
+
+            &:last-child > a {
+                border-right: 1px solid #ddd;
+            }
+
+            >a {
+                position: relative;
+                padding: 6px 12px;
+                line-height: 1.4;
+                color: #333;
+                text-decoration: none;
+                background-color: #fff;
+                border: 1px solid #ddd;
+                border-right: 0;
+
+                &:focus, &:hover {
+                    background-color: #eee;
+                    border-color: #ddd;
+                }
+            }
+        }
+    }
+}
+</code>
+                </pre>
+
+                <h3>Css</h3>
+                <pre>
+<code>
+.t-pagination {
     padding: 20px 0;
 }
 
-.y-pagination ul {
-    display: inline-block;
+.t-pagination ul {
+    display: flex;
+    justify-content: center;
     margin: 0;
 }
 
-.y-pagination li {
-    display: inline;
+.t-pagination li {
     list-style: none;
 }
 
-.y-pagination li>a {
+.t-pagination li > a {
     position: relative;
-    float: left;
     padding: 6px 12px;
     margin-left: -1px;
-    line-height: 1.42857143;
+    line-height: 1.4;
     color: #333;
     text-decoration: none;
     background-color: #fff;
     border: 1px solid #ddd;
 }
 
-.y-pagination li.active>a,
-.y-pagination li.active>a:focus,
-.y-pagination li.active>a:hover {
-    background-color: #F5DC05;
-    border-color: #F5DC05;
+.t-pagination li.active > a,
+.t-pagination li.active > a:focus,
+.t-pagination li.active > a:hover {
+    background-color: #e94f39;
+    border-color: #e94f39;
     color: #fff;
     z-index: 2;
 }
 
-.y-pagination li>a:focus,
-.y-pagination li>a:hover {
+.t-pagination li > a:focus,
+.t-pagination li > a:hover {
     background-color: #eee;
     border-color: #ddd;
 }
+    
 </code>
                 </pre>
             </div>
             <div class="col-md-6">
                 <div class="text-center">
-                    <div class="y-pagination">
+                    <div class="t-pagination">
                         <ul>
                             <li><a href="#"><i class="fas fa-chevron-left"></i></a></li>
-                            <li><a href="#">1</a></li>
-                            <li class="active"><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
+                            <li><a href="#1">1</a></li>
+                            <li class="active"><a href="#2">2</a></li>
+                            <li><a href="#3">3</a></li>
+                            <li><a href="#4">4</a></li>
                             <li><a href="#"><i class="fas fa-chevron-right"></i></a></li>
                         </ul>
                     </div>
@@ -122,10 +130,13 @@
             </div>
         </div>
 
-        
+
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
