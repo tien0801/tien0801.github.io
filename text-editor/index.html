@@ -1,132 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta name='revisit-after' content='1 days' />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="Content-Language" content="vi">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://yosu.vn/current-page">
-    <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
-    <title>VBT Frontend</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="Content-Language" content="vi">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="../assets/images/Logo-MeoCode.png" type="image/gif">
+	<title>VBT Frontend</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 	<div class="container">
-		<h1>CSS,JS Text editor</h1>
+		<h1>CSS, JS Text Editor</h1>
 		<div class="row">
-			<div class="col-md-6">
-<pre>
+			<div class="col-md-5">
+				<pre>
 <code>
-	.y-text-editor {
-		*{
-			max-width: 100%;
-		}
+.y-text-editor {
+	*{
+		max-width: 100%;
+	}
+
+	h1 {
+		@include font_72;
+	}
+	h2 {
+		@include font_64;
+	}
+	h3 {
+		@include font_48;
+	}
+	h4 {
+		@include font_36;
+	}
+	h5 {
+		@include font_24;
+	}
+	h6 {
+		@include font_18;
+	}
+
+	blockquote {
+		margin: 0 0 1.25em;
+		padding: 0 1.25em 0 1.875em;
+		border-left: 2px solid #111;
+		font-style: italic;
+	}
 	
-		h1 {
-			@include font_72;
-		}
-		h2 {
-			@include font_64;
-		}
-		h3 {
-			@include font_48;
-		}
-		h4 {
-			@include font_36;
-		}
-		h5 {
-			@include font_24;
-		}
-		h6 {
-			@include font_18;
-		}
-	
-		blockquote {
-			margin: 0 0 1.25em;
-			padding: 0 1.25em 0 1.875em;
-			border-left: 2px solid #111;
-			font-style: italic;
-		}
-		
-		p {
-			margin-bottom: 10px;
-		}
-		img {
-			max-width: 100%;
-			height: auto !important;
-		}
-		iframe{
-			max-width: 100%;
-		}
-	
-		.box-iframe {
-			position: relative;
-			height: 0;
-			overflow: hidden;
-			padding-bottom: 26.2%;
-			padding-top: 30%;
-	
-			iframe {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-			}
-		}
-		
-		table{
+	p {
+		margin-bottom: 10px;
+	}
+	img {
+		max-width: 100%;
+		height: auto !important;
+	}
+	iframe{
+		max-width: 100%;
+	}
+
+	.box-iframe {
+		position: relative;
+		height: 0;
+		overflow: hidden;
+		padding-bottom: 26.2%;
+		padding-top: 30%;
+
+		iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
-		}
-		i{
-			font-style: italic;
-		}
-		u{
-			text-decoration: underline;
-		}
-		a{
-			text-decoration: underline;
-		}
-		b,
-		strong{
-			font-weight: bold;
-		}
-		ul{
-			padding-left: 30px;
-			list-style-type: disc;
-		}
-		ul li{
-			display: list-item;
-			list-style-type: disc;
-		}
-		ol{
-			padding-left: 30px;
-			list-style-type: decimal;
-		}
-		ol li{
-			display: list-item;
-			list-style-type: decimal;
-		}
-	
-		blockquote {
-			border-left: 5px solid #000;
+			height: 100%;
 		}
 	}
+	
+	table{
+		width: 100%;
+	}
+
+	i{
+		font-style: italic;
+	}
+
+	u{
+		text-decoration: underline;
+	}
+
+	a{
+		text-decoration: underline;
+	}
+
+	b,
+	strong{
+		font-weight: bold;
+	}
+	ul{
+		padding-left: 30px;
+		list-style-type: disc;
+		
+		li{
+			display: list-item;
+			list-style-type: disc;
+		}
+	}
+	
+	ol{
+		padding-left: 30px;
+		list-style-type: decimal;
+
+		li{
+			display: list-item;
+			list-style-type: decimal;
+		}
+	}
+
+	blockquote {
+		border-left: 5px solid #000;
+	}
+}
 </code>
 </pre>
 
 			</div>
-			<div class="col-md-6">
-<pre>
+			<div class="col-md-7">
+				<h3>JS add div has class "table-responsive"</h3>
+				<pre>
 	<code>
 $(document).ready(function() {
 	if($(".y-text-editor").length > 0) {
-		$(".y-text-editor table").wrap("Add Code here <!-- <div class='table-responsive'></div> -->");
-		$(".y-text-editor iframe").wrap("Add Code here <!-- <div class='box-iframe'></div> -->");
+		$(".y-text-editor table").wrap(" 
+		<b> &#60;div class='table-responsive'&#62; Add Code here &#60;/div&#62;</b><!-- <div class='table-responsive'></div> -->
+		");
+		$(".y-text-editor iframe").wrap("<b>Add Code here</b><!-- <div class='box-iframe'></div> -->");
 	}
 });
 </code>
@@ -141,42 +152,54 @@ $(document).ready(function() {
 				<h4>Tiêu đề H4 </h4>
 				<h5>Tiêu đề H5 </h5>
 				<h6>Tiêu đề H6 </h6>
+				<br>
 
-				<p><strong>Test thẻ strong: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quae eveniet consequuntur minima ad incidunt, delectus fuga explicabo saepe similique odit voluptates maxime repudiandae porro quis impedit vitae neque. Atque?</strong></p>
+				<h5>Test tag strong</h5>
+				<p><strong>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto quae
+						eveniet consequuntur minima ad incidunt, delectus fuga explicabo saepe similique odit voluptates
+						maxime repudiandae porro quis impedit vitae neque. Atque?</strong></p>
+				<br>
+
 				<h5>Test tag image</h5>
 				<p style="text-align: center;">
 					<img src="https://dummyimage.com/1990x400" alt="" width="1900" height="400">
 				</p>
-				
+
 				<p style="text-align: center;">
 					<img src="https://dummyimage.com/500x300" width="500" height="300" alt="">
 				</p>
 
 				<h5>Test tag iframe youtube</h5>
 				<p style="text-align: center;">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/otlfrKv5Huk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/otlfrKv5Huk" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
 				</p>
-				
+
 				<h5>Test color inline</h5>
 				<p style="width: 1920px;">
-					Lorem ipsum dolor sit amet, <span style="color: red;">consectetur</span> adipisicing <span style="color: orange;">elit</span>. Enim, sunt ipsum perspiciatis quae veritatis quidem qui. Cupiditate libero dicta rem nam voluptatum nesciunt, delectus distinctio similique obcaecati explicabo expedita fugit.
+					Lorem ipsum dolor sit amet, <span style="color: red;">consectetur</span> adipisicing <span
+						style="color: orange;">elit</span>. Enim, sunt ipsum perspiciatis quae veritatis quidem qui.
+					Cupiditate libero dicta rem nam voluptatum nesciunt, delectus distinctio similique obcaecati
+					explicabo expedita fugit.
 				</p>
+				<br>
 
 				<h5>Test tag ul</h5>
 				<p>
-					<ul>
-						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-					</ul>
+				<ul>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+				</ul>
 				</p>
 				<h5>Test tag ol</h5>
 				<p>
-					<ol>
-						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-						<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-					</ol>
+				<ol>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+				</ol>
 				</p>
 				<h5>Test tag u i b</h5>
 				<ul>
@@ -184,33 +207,46 @@ $(document).ready(function() {
 					<li><i>Thẻ i</i></li>
 					<li><b>Thẻ b</b></li>
 				</ul>
+				<br>
 
 				<h5>Test nội dung có thẻ a</h5>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus incidunt quidem sed asperiores ipsam, culpa, distinctio eligendi! Deleniti numquam aliquam beatae, culpa in itaque facilis, asperiores tempore amet enim repellendus? <a href="#" title="Xem thêm">Xem thêm</a></p>
-				
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus incidunt quidem sed asperiores
+					ipsam, culpa, distinctio eligendi! Deleniti numquam aliquam beatae, culpa in itaque facilis,
+					asperiores tempore amet enim repellendus? <a href="#" title="Xem thêm">Xem thêm</a></p>
+				<br>
+
 				<h5>Test tag table responsive</h5>
 				<p>
-					<table style="width: 838px;">
-						<tbody>
-							<tr style="background-color: #dbdbdb; height: 34px;">
-								<th style="width: 617px; text-align: center; height: 34px;"><span face="Georgia" style="font-family: Georgia;"><span style="font-size: 16px; font-weight: 400;">TÊN DỊCH VỤ</span></span></th>
-								<th style="width: 205px; text-align: center; height: 34px;"><span face="Georgia" style="font-family: Georgia;"><span style="font-size: 16px; font-weight: 400;">GIÁ GỐC</span></span></th>
-							</tr>
-							<tr style="border-color: #ffbb00; height: 25px;">
-								<td style="width: 588px; height: 25px; padding-left: 30px;">Trẻ hóa da với công nghệ Oxy Jet</td>
-								<td style="width: 205px; text-align: center; height: 25px;">700.000 vnđ</td>
-							</tr>
-							<tr style="border-color: #ffbb00; height: 25px;">
-								<td style="width: 588px; height: 25px; padding-left: 30px;">Trẻ hóa da với công nghệ New E-Light</td>
-								<td style="width: 205px; text-align: center; height: 25px;">800.000 vnđ</td>
-							</tr>
-						</tbody>
-					</table>
+				<table style="width: 838px;">
+					<tbody>
+						<tr style="background-color: #dbdbdb; height: 34px;">
+							<th style="width: 617px; text-align: center; height: 34px;"><span face="Georgia"
+									style="font-family: Georgia;"><span style="font-size: 16px; font-weight: 400;">TÊN
+										DỊCH VỤ</span></span></th>
+							<th style="width: 205px; text-align: center; height: 34px;"><span face="Georgia"
+									style="font-family: Georgia;"><span style="font-size: 16px; font-weight: 400;">GIÁ
+										GỐC</span></span></th>
+						</tr>
+						<tr style="border-color: #ffbb00; height: 25px;">
+							<td style="width: 588px; height: 25px; padding-left: 30px;">Trẻ hóa da với công nghệ Oxy Jet
+							</td>
+							<td style="width: 205px; text-align: center; height: 25px;">700.000 vnđ</td>
+						</tr>
+						<tr style="border-color: #ffbb00; height: 25px;">
+							<td style="width: 588px; height: 25px; padding-left: 30px;">Trẻ hóa da với công nghệ New
+								E-Light</td>
+							<td style="width: 205px; text-align: center; height: 25px;">800.000 vnđ</td>
+						</tr>
+					</tbody>
+				</table>
 				</p>
+				<br>
 
 				<h5>Tag blockquote</h5>
 				<blockquote>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut excepturi eveniet dolorum nulla incidunt quis fugiat, dicta fugit. Quisquam nihil ut debitis consectetur natus ab quam, eaque atque iure quibusdam?
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut excepturi eveniet dolorum nulla
+					incidunt quis fugiat, dicta fugit. Quisquam nihil ut debitis consectetur natus ab quam, eaque atque
+					iure quibusdam?
 				</blockquote>
 				<br>
 
@@ -218,16 +254,20 @@ $(document).ready(function() {
 		</div>
 	</div>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
 
 	<script>
-		$(document).ready(function() {
-			if($(".y-text-editor").length > 0) {
+		$(document).ready(function () {
+			if ($(".y-text-editor").length > 0) {
 				$(".y-text-editor table").wrap("<div class='table-responsive'></div>");
 				$(".y-text-editor iframe").wrap("<div class='box-iframe'></div>");
 			}
 		});
 	</script>
 </body>
+
 </html>
