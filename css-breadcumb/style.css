@@ -1,0 +1,30 @@
+.y-breadcrumb {
+    padding: 10px 0;
+    list-style: none;
+    background-color: #eee;
+    margin-bottom: 30px;
+}
+
+.y-breadcrumb ul {
+    margin-bottom: 0;
+}
+
+.y-breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+.y-breadcrumb li + li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+.y-breadcrumb li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.y-breadcrumb li a:hover {
+    color: #00b140;
+}

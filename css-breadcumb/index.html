@@ -7,60 +7,69 @@
     <meta http-equiv="Content-Language" content="vi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="canonical" href="https://yosu.vn/current-page">
-    <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
+    <link rel="shortcut icon" href="../assets/images/Logo-MeoCode.png" type="image/gif">
     <title>VBT Frontend</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="">
-    <style>
-    .y-breadcrumb {
-        padding: 10px 0;
-        list-style: none;
-        background-color: #eee;
-        margin-bottom: 30px;
-    }
-
-    .y-breadcrumb ul {
-        margin-bottom: 0
-    }
-
-    .y-breadcrumb li {
-        display: inline;
-        font-size: 18px;
-    }
-
-    .y-breadcrumb li+li:before {
-        padding: 8px;
-        color: black;
-        content: "/\00a0";
-    }
-
-    .y-breadcrumb li a {
-        color: #000;
-        text-decoration: none;
-    }
-
-    .y-breadcrumb li a:hover {
-        color: #00B140;
-    }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <h1>Css Breadcumb</h1>
-    </div>
-    <div class="y-breadcrumb">
-        <div class="container">
-            <ul>
-                <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="blog.html">Tin tức</a></li>
-            </ul>
+        <div class="y-breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="blog.html">Tin tức</a></li>
+                    <li><a href="post.html">Bài viết</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <pre>
+<code>
+    .y-breadcrumb {
+        padding: 10px 0;
+        list-style: none;
+        background-color: #eee;
+        margin-bottom: 30px;
+
+        ul {
+            margin-bottom: 0;
+
+            li {
+                display: inline;
+                font-size: 18px;
+        
+                a {
+                    color: #000;
+                    text-decoration: none;
+                &:hover {
+                    color: #00b140;
+                }
+            }
+        }
+    
+        li + li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+    }
+</code>
+        </pre>
+            </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
