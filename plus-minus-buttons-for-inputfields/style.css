@@ -1,0 +1,42 @@
+.t-box-quantity {
+    position: relative;
+    display: flex;
+    border: 1px solid #333;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.t-box-quantity .t-minus,
+.t-box-quantity .t-plus {
+    width: 40px;
+    height: 100%;
+    line-height: 34px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.t-box-quantity .t-minus i,
+.t-box-quantity .t-plus i {
+    font-size: 13px;
+}
+
+.t-box-quantity .t-plus {
+    left: initial;
+    right: 0;
+}
+
+.t-box-quantity .t-input-quantity {
+    width: 140px;
+    padding: 0 40px;
+    text-align: center;
+    box-shadow: none;
+    border: 0;
+}
