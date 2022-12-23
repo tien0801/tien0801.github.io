@@ -1,6 +1,7 @@
 .t-box-quantity {
     position: relative;
     display: flex;
+    flex-wrap: nowrap;
     border: 1px solid #333;
     border-radius: 4px;
     overflow: hidden;
@@ -11,8 +12,6 @@
     width: 40px;
     height: 100%;
     line-height: 34px;
-    position: absolute;
-    top: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,9 +33,9 @@
 }
 
 .t-box-quantity .t-input-quantity {
-    width: 140px;
-    padding: 0 40px;
+    width: calc(100% - (40px * 2));
     text-align: center;
     box-shadow: none;
     border: 0;
+    border-radius: 0;
 }

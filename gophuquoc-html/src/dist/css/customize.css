@@ -10767,14 +10767,6 @@ body {
    max-height: 100%;
 } */
 
-.search-box {
-   margin-bottom: 50px;
-}
-.search-box .wrapper-contain {
-   position: absolute;
-   top: 50%;
-   left: 5%;
-}
 .search-box .wrapper-contain #search-tab {
    margin-left: 1.5rem;
 }
@@ -10791,6 +10783,10 @@ body {
 }
 .search-box .wrapper-contain #search-tab .nav-item .nav-link.active {
    border-bottom: 3px solid #2e90fa;
+}
+.search-box .wrapper-contain #search-tabContent form .row {
+   margin-right: calc(-0.28 * var(--bs-gutter-x));
+   margin-left: calc(-0.28 * var(--bs-gutter-x));
 }
 .search-box .wrapper-contain #search-tabContent form .row > * {
    padding-right: calc(var(--bs-gutter-x) * 0.28);
@@ -10831,7 +10827,7 @@ body {
    transform: rotate(-90deg);
 }
 .search-box .wrapper-contain #search-tabContent form .btn-danger.btn-search {
-   margin-top: 24px;
+   /* margin-top: 24px; */
    padding: 0.51rem 1.1rem;
 }
 button[class^="carousel-control-"],
@@ -11338,9 +11334,7 @@ section#download-app .img-introduce img {
    .search-box .wrapper-contain .tab-content {
       padding: 20px;
    }
-   .search-box .wrapper-contain #search-tabContent form .row [class*="col-md"] {
-      margin-bottom: 20px;
-   }
+ 
    .search-box .wrapper-contain #search-tabContent form .row [class*="col-md"]:last-child {
       margin-bottom: 0;
    }

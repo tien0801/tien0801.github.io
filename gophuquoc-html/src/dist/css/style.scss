@@ -1,6 +1,60 @@
 @import "./_variable.scss";
-@import "./common/common.scss";
+@import "./common/_common.scss";
 @import "./common/footer.scss";
+
+// Search section
+.search-box {
+    position: relative;
+    margin-top: -92px;
+    z-index: 2;
+
+    .wrapper-contain {
+    }
+    .nav {
+        .nav-link {
+            @include Responsive(XS) {
+                padding: 8px 12px;
+            }
+        }
+    }
+    .tab-content {
+        padding: 24px;
+    }
+    #search-tabContent {
+        .input-group {
+            margin-bottom: 24px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        margin-bottom: 0;
+        .wrapper-contain {
+            position: static;
+            margin-top: -43px;
+            .tab-content {
+                padding: 30px 20px;
+            }
+            #search-tabContent {
+                form {
+                    // .row [class*="col-md"],
+                    // .row [class*="col-12"] {
+                    //     margin-bottom: 20px;
+                    // }
+                    // .row [class*="col-md"]:last-child,
+                    // .row [class*="col-12"]:last-child {
+                    //     margin-bottom: 0;
+                    // }
+                    .btn-danger.btn-search {
+                        margin-top: 0;
+                    }
+                }
+            }
+            #search-tab {
+                margin-left: 0;
+            }
+        }
+    }
+}
 
 // Ticket section
 section#ticket-sect {

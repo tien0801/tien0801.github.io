@@ -106,32 +106,7 @@ footer {
             }
         }
     }
-    .search-box {
-        margin-bottom: 0;
-        .wrapper-contain {
-            position: static;
-            margin-top: -43px;
-            .tab-content {
-                padding: 20px;
-            }
-            #search-tabContent {
-                form {
-                    .row [class*="col-md"] {
-                        margin-bottom: 20px;
-                    }
-                    .row [class*="col-md"]:last-child {
-                        margin-bottom: 0;
-                    }
-                    .btn-danger.btn-search {
-                        margin-top: 0;
-                    }
-                }
-            }
-            #search-tab {
-                margin-left: 0;
-            }
-        }
-    }
+
     .MultiCarousel {
         .MultiCarousel-inner {
             .item {

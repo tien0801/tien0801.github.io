@@ -191,4 +191,28 @@ $(document).ready(function () {
         })
     }
 
+    // Set min Datapicker
+    var t_day = new Date();
+    var val_today = t_day.getFullYear() + "-" + (t_day.getMonth() + 1) + "-" + t_day.getDate();
+    $(".datepicker_min_today").attr('min', val_today);
+
+    // Button Plus and Minus
+    if ($('.t-box-quantity').length > 0) {
+        $('.t-box-quantity .t-plus').on('click', function () {
+            var input = $(this).parents('.t-box-quantity').find('.t-input-quantity');
+            var cur = input.val();
+            cur++;
+            input.val(cur);
+        })
+        $('.t-box-quantity .t-minus').on('click', function () {
+            var input = $(this).parents('.t-box-quantity').find('.t-input-quantity');
+            var cur = input.val();
+            if (cur >= 1) {
+                cur--;
+                input.val(cur);
+            } else {
+                //Otherwise do nothing
+            }
+        });
+    }
 })
