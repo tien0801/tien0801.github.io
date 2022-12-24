@@ -5,8 +5,12 @@
 // Search section
 .search-box {
     position: relative;
-    margin-top: -92px;
+    margin-top: -40px;
     z-index: 2;
+
+    @include Responsive(LG) {
+        margin-top: -92px;
+    }
 
     .wrapper-contain {
     }
@@ -30,7 +34,8 @@
         margin-bottom: 0;
         .wrapper-contain {
             position: static;
-            margin-top: -43px;
+            // margin-top: -43px;
+
             .tab-content {
                 padding: 30px 20px;
             }
