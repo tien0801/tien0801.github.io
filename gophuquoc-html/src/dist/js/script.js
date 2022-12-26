@@ -234,18 +234,23 @@ $(document).ready(function () {
         var n_kid = e.parents('.t-input-custom').find('.t-number-kid').children('.t-input-quantity').val();
 
         var text_placeholder = '';
-        console.log(n_people);
-        console.log(t_people);
+        if (t_people && t_children) {
+            text_placeholder = n_people + " người lớn, " + n_children + " trẻ em";
+            console.log('v3');
+        }
 
         if (t_people && t_children && t_room) {
             console.log('v1');
             text_placeholder = n_people + " người lớn, " + n_children + " trẻ em, " + n_room + " phòng";
         }
 
+
         if (t_people && t_children && t_kid) {
             text_placeholder = n_people + " người lớn, " + n_children + " trẻ em, " + n_kid + " trẻ sơ sinh";
             console.log('v2');
         }
+
+
 
         e.parents('.t-input-custom').find('.t-input').attr(
             "placeholder", text_placeholder
@@ -254,7 +259,7 @@ $(document).ready(function () {
 
     // Select Custom
     $('.t-input').click(function (e) {
-        console.log('click select');
+        console.log('Click Select Custom');
         $(this).parent('.t-input-custom').find('.options-custom').toggleClass('open');
         e.stopPropagation();
     })
