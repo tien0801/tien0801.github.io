@@ -244,13 +244,10 @@ $(document).ready(function () {
             text_placeholder = n_people + " người lớn, " + n_children + " trẻ em, " + n_room + " phòng";
         }
 
-
         if (t_people && t_children && t_kid) {
             text_placeholder = n_people + " người lớn, " + n_children + " trẻ em, " + n_kid + " trẻ sơ sinh";
             console.log('v2');
         }
-
-
 
         e.parents('.t-input-custom').find('.t-input').attr(
             "placeholder", text_placeholder
@@ -272,17 +269,28 @@ $(document).ready(function () {
         $('.options-custom').removeClass('open');
     })
 
-    var t_number_people = $('.t-number-people');
-    var t_number_children = $('.t-number-children');
-    var t_number_room = $('.t-number-room');
+    // Search Autocomplete
+    $(".input-autocomplete").keyup(function () {
+        var result_search = $(this).parents('.box-search-autocomplete').children('.result-search-autocomplete');
+        console.log(result_search);
+        result_search.addClass('show');
+        // if (!$(this).val()) {
+        //     result_search.removeClass('show');
+        // } else {
+        //     console.log('Please enter text search');
+        // }
+    });
 
-
-
-    $('.t-number-people').change(function () {
-        console.log('ádfádf');
+    $(".input-autocomplete").mousedown(function () {
+        var result_search = $(this).parents('.box-search-autocomplete').children('.result-search-autocomplete');
+        result_search.addClass('show');
     })
-    // $('.t-input-quantity').on('change', function () {
-    //     console.log('change');
-    // });
+
+    $('.result-search-autocomplete, .box-search-autocomplete').click(function (e) {
+        e.stopPropagation();
+    })
+    $(document).click(function () {
+        $('.result-search-autocomplete').removeClass('show');
+    });
 
 })

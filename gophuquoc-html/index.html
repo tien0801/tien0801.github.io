@@ -209,14 +209,37 @@
               <form class="form-main">
                 <div class="row">
                   <div class="col-lg-4 col-md-12">
-                    <label for="destination" class="form-label">Nơi đến</label>
-                    <div class="input-group" id="destination">
-                      <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-start-0 ps-2"
-                        placeholder="Tìm kiếm theo khách sạn hoặc điểm đến" aria-label=""
-                        aria-describedby="destination">
+                    <label for="" class="form-label">Nơi đến</label>
+                    <div class="box-search-autocomplete">
+                      <div class="input-group">
+                        <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
+                        <input type="text" class="input-autocomplete form-control border-start-0 ps-2"
+                          placeholder="Tìm kiếm theo khách sạn hoặc điểm đến" aria-label="" aria-describedby="">
+                      </div>
+                      <div class="result-search-autocomplete">
+                        <div class="title-result">Hotels </div>
+                        <div class="item-result">
+                          <a href="#"> Vinholiday Fiesta Phú Quốc - Bãi Dài </a>
+                        </div>
+                        <div class="item-result">
+                          <a href="#">Movenpick Resort Waverly Phú Quốc - Bãi Ông Lang </a>
+                        </div>
+                        <div class="item-result">
+                          <a href="#">Vinpearl Resort & Spa Phú Quốc - Bãi Dài </a>
+                        </div>
+
+                        <div class="title-result">Locations </div>
+                        <div class="item-result">
+                          <a href="#">Bãi Dài, xã Gành Dầu, tp.Phú Quốc, tỉnh Kiên Giang </a>
+                        </div>
+                        <div class="item-result">
+                          <a href="#">Bãi Ông Lang, xã Cửa Dương, tp.Phú Quốc, tỉnh Kiên Giang </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
+
+
                   <div class="col-lg-2 col-md-6">
                     <label for="checkin" class="form-label">Nhận phòng</label>
                     <div class="input-group">
@@ -473,11 +496,30 @@
               <form class="form-main">
                 <div class="row">
                   <div class="col-lg-3 col-md-6">
-                    <label for="destination" class="form-label">Nơi bạn muốn ở</label>
-                    <div class="input-group" id="destination">
-                      <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-start-0 ps-2"
-                        placeholder="Nhập điểm đến hoặc tên khách sạn" aria-label="" aria-describedby="destination">
+                    <label for="destination" class="form-label">Nơi đến</label>
+                    <div class="box-search-autocomplete">
+                      <div class="input-group">
+                        <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
+                        <input type="text" class="input-autocomplete form-control border-start-0 ps-2"
+                          placeholder="Tìm kiếm theo tên thành phố" aria-label="" aria-describedby="">
+                      </div>
+                      <div class="result-search-autocomplete">
+                        <div class="title-result">Tours </div>
+                        <div class="item-result">
+                          <a href="#">Tham Quan, Học Tập Văn Hóa Địa Phương </a>
+                        </div>
+                        <div class="item-result">
+                          <a href="#">Movenpick Resort Waverly Phú Quốc - Bãi Ông Lang </a>
+                        </div>
+
+                        <div class="title-result">Locations </div>
+                        <div class="item-result">
+                          <a href="#">Bãi Dài, xã Gành Dầu, tp.Phú Quốc, tỉnh Kiên Giang </a>
+                        </div>
+                        <div class="item-result">
+                          <a href="#"> Kiên Giang </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="col-lg-2 col-md-6">
@@ -2410,7 +2452,7 @@
               <a href="#"><span class="icon-apple fs-3" class="mx-2"></span></a>
             </div>
             <div class="text-center mt-4">
-              Bạn chưa có tài khoản? <a href="#" data-bs-toggle="modal" data-bs-target="#signup">Đăng nhập tại đây</a>
+              Bạn có tài khoản? <a href="#" data-bs-toggle="modal" data-bs-target="#signin">Đăng nhập tại đây</a>
             </div>
           </form>
         </div>

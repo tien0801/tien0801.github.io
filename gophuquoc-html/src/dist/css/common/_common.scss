@@ -188,3 +188,59 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         column-gap: 10px;
     }
 }
+
+// Search Autocomplete
+.box-search-autocomplete {
+    position: relative;
+    // max-width: 420px;
+}
+.result-search-autocomplete {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-radius: 4px !important;
+    border: 1px solid #ced4da;
+    width: 100%;
+    z-index: 3;
+
+    .title-result {
+        background: #f5f5f5;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px;
+        color: #ef6820;
+        font-size: 15px;
+    }
+
+    .item-result {
+        display: flex;
+        margin-bottom: 5px;
+
+        a {
+            color: #111;
+            font-size: 14px;
+            width: 100%;
+            padding: 10px 20px;
+
+            &:hover {
+                background: #eaf6fb;
+            }
+        }
+    }
+}
+.result-search-autocomplete.show {
+    display: block;
+}
+
+.result-search-autocomplete .item-result .name-prod {
+    color: #000;
+    display: -webkit-box;
+    font-size: 14px;
+    height: 21px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
