@@ -201,12 +201,13 @@
               </button>
             </li>
           </ul>
+
           <div class="tab-content white-bg shadow rounded" id="search-tabContent">
             <!-- Tab Content 1 -->
             <div class="tab-pane fade show active" id="search-hotel" role="tabpanel" aria-labelledby="search-hotel-tab"
               tabindex="0">
-              <form>
-                <div class="row justify-content-center">
+              <form class="form-main">
+                <div class="row">
                   <div class="col-lg-4 col-md-12">
                     <label for="destination" class="form-label">Nơi đến</label>
                     <div class="input-group" id="destination">
@@ -232,21 +233,64 @@
                         placeholder="20/10/2022" aria-label="" aria-describedby="checkout">
                     </div>
                   </div>
-                  <div class="col-lg-4 col-md-6">
-                    <div class="row">
-                      <div class="col-xxl-6 col-6 col-sm-6">
-                        <label for="guest-room" class="form-label">Người lớn</label>
-                        <div class="input-group">
-                          <div class="wrapper-box-quantity">
-                            <div class="t-box-quantity">
+
+                  <div class="col-lg-4 col-md-12">
+                    <label for="guest-room" class="form-label"> Khách & Phòng</label>
+                    <div class="input-group t-input-custom">
+                      <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                      <input type="text" class="t-input form-control border-start-0 ps-2"
+                        placeholder="Chọn khách & phòng" readonly aria-label="" aria-describedby="guest-room">
+                      <div class="options-custom">
+                        <div class="row item align-items-center">
+                          <div class="col-6">
+                            <span class="icon icon-user01 fs-6"></span>Người lớn
+                          </div>
+                          <div class="col-6">
+                            <div class="t-box-quantity t-number-people">
                               <a href="javascript:;" class="t-minus">-</a>
                               <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
-                              <input class="t-input-quantity form-control" type="text" value="0" />
+                              <input class="t-input-quantity form-control" readonly type="text" value="0" />
+                              <a href="javascript:;" class="t-plus">+</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row item align-items-center">
+                          <div class="col-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-people icon" viewBox="0 0 16 16">
+                              <path
+                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+                            </svg>Trẻ em
+                          </div>
+                          <div class="col-6">
+                            <div class="t-box-quantity t-number-children">
+                              <a href="javascript:;" class="t-minus">-</a>
+                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <input class="t-input-quantity form-control" readonly type="text" value="0" />
+                              <a href="javascript:;" class="t-plus">+</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row item align-items-center">
+                          <div class="col-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-house icon" viewBox="0 0 16 16">
+                              <path
+                                d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5ZM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5 5 5Z" />
+                            </svg>Phòng
+                          </div>
+                          <div class="col-6">
+                            <div class="t-box-quantity t-number-room">
+                              <a href="javascript:;" class="t-minus">-</a>
+                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
                           </div>
                         </div>
                       </div>
+                    </div>
+                    <!-- <div class="row">
                       <div class="col-xxl-6 col-6 col-sm-6">
                         <label for="guest-room" class="form-label">Trẻ em <small>(2-12)</small></label>
                         <div class="input-group">
@@ -254,14 +298,17 @@
                             <div class="t-box-quantity">
                               <a href="javascript:;" class="t-minus">-</a>
                               <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
-                              <input class="t-input-quantity form-control" type="text" value="0" />
+                              <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
+                </div>
+
+                <div class="row justify-content-center">
                   <div class="col-lg-3 col-md-12">
                     <button type="button" class="btn btn-search btn-danger w-100">
                       <span>Tìm kiếm ngay</span>
@@ -275,9 +322,9 @@
             <!-- Tab Content 2 -->
             <div class="tab-pane fade" id="search-airline" role="tabpanel" aria-labelledby="search-airline-tab"
               tabindex="0">
-              <form>
+              <form class="form-main">
                 <div class="row justify-content-center">
-                  <div class="col-lg-3 col-md-12">
+                  <div class="col-lg-3 col-md-6">
                     <label for="" class="form-label">Đi từ</label>
                     <div class="input-group" id="">
                       <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
@@ -285,7 +332,7 @@
                         placeholder="Tìm kiếm theo khách sạn hoặc điểm đến" aria-label="" aria-describedby="">
                     </div>
                   </div>
-                  <div class="col-lg-3 col-md-12">
+                  <div class="col-lg-3 col-md-6">
                     <label for="" class="form-label">Nơi đến</label>
                     <div class="input-group" id="">
                       <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
@@ -311,7 +358,62 @@
                     </div>
                   </div>
                   <div class="col-xl-6 col-lg-8">
-                    <div class="row">
+                    <label for="guest-room" class="form-label">Số Khách</label>
+                    <div class="input-group t-input-custom">
+                      <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                      <input type="text" class="t-input form-control border-start-0 ps-2"
+                        placeholder="Chọn số lượng khách" readonly aria-label="" aria-describedby="guest-room">
+                      <div class="options-custom">
+                        <div class="row item align-items-center">
+                          <div class="col-6">
+                            <span class="icon icon-user01 fs-6"></span>Người lớn
+                          </div>
+                          <div class="col-6">
+                            <div class="t-box-quantity t-number-people">
+                              <a href="javascript:;" class="t-minus">-</a>
+                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <input class="t-input-quantity form-control" readonly type="text" value="0" />
+                              <a href="javascript:;" class="t-plus">+</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row item align-items-center">
+                          <div class="col-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-people icon" viewBox="0 0 16 16">
+                              <path
+                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+                            </svg>Trẻ em
+                          </div>
+                          <div class="col-6">
+                            <div class="t-box-quantity t-number-children">
+                              <a href="javascript:;" class="t-minus">-</a>
+                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <input class="t-input-quantity form-control" readonly type="text" value="0" />
+                              <a href="javascript:;" class="t-plus">+</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row item align-items-center">
+                          <div class="col-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-people icon" viewBox="0 0 16 16">
+                              <path
+                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+                            </svg>Trẻ Sơ Sinh
+                          </div>
+                          <div class="col-6">
+                            <div class="t-box-quantity t-number-kid">
+                              <a href="javascript:;" class="t-minus">-</a>
+                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <input class="t-input-quantity form-control" readonly type="text" value="0" />
+                              <a href="javascript:;" class="t-plus">+</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="row">
                       <div class="col-xxl-4 col-lg-4 col-sm-6 col-6">
                         <label for="guest-room" class="form-label">Người lớn</label>
                         <div class="input-group">
@@ -319,7 +421,7 @@
                             <div class="t-box-quantity">
                               <a href="javascript:;" class="t-minus">-</a>
                               <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
-                              <input class="t-input-quantity form-control" type="text" value="0" />
+                              <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
                           </div>
@@ -332,7 +434,7 @@
                             <div class="t-box-quantity">
                               <a href="javascript:;" class="t-minus">-</a>
                               <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
-                              <input class="t-input-quantity form-control" type="text" value="0" />
+                              <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
                           </div>
@@ -345,16 +447,16 @@
                             <div class="t-box-quantity">
                               <a href="javascript:;" class="t-minus">-</a>
                               <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
-                              <input class="t-input-quantity form-control" type="text" value="0" />
+                              <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
-
                 </div>
+
                 <div class="row justify-content-center">
                   <div class="col-lg-3 col-md-12">
                     <button type="button" class="btn btn-search btn-danger w-100">
@@ -368,9 +470,9 @@
 
             <!-- Tab Content 3 -->
             <div class="tab-pane fade" id="search-tour" role="tabpanel" aria-labelledby="search-tour-tab" tabindex="0">
-              <form>
+              <form class="form-main">
                 <div class="row">
-                  <div class="col-md-3">
+                  <div class="col-lg-3 col-md-6">
                     <label for="destination" class="form-label">Nơi bạn muốn ở</label>
                     <div class="input-group" id="destination">
                       <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
@@ -378,39 +480,80 @@
                         placeholder="Nhập điểm đến hoặc tên khách sạn" aria-label="" aria-describedby="destination">
                     </div>
                   </div>
-                  <div class="col-md-2">
-                    <label for="checkin" class="form-label">Nhận phòng</label>
+                  <div class="col-lg-2 col-md-6">
+                    <label for="checkin" class="form-label">Loại Tour</label>
                     <div class="input-group">
-                      <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-end-0 border-start-0 ps-2" placeholder="20/10/2022"
-                        aria-label="" aria-describedby="checkin">
-                      <button class="btn btn-calend border-start-0" type="button">
-                        <span class="arrow-l"></span>
-                        <span class="arrow-r"></span>
-                      </button>
+                      <!-- <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span> -->
+                      <select class="form-control" name="" id="">
+                        <option selected disabled>Chọn loại Tour</option>
+                        <option value="">Tour Riêng Tư</option>
+                        <option value="">Tuần Trăng Mật</option>
+                        <option value="">Tour Ảnh Cưới</option>
+                        <option value="">Tour Lửa Trại</option>
+                        <option value="">Riêng Công Ty</option>
+                        <option value="">Cặp Đôi</option>
+                        <option value="">Tour Kết Hợp Bóng Đá</option>
+                        <option value="">Tour Khám Phá</option>
+                        <option value="">Gia Đình</option>
+                        <option value="">Tour Vườn Thú Hoang Dã</option>
+                        <option value="">Tour Nghỉ Dưỡng</option>
+                        <option value="">Lịch Sử / Văn Hóa</option>
+                        <option value="">Tour Biển Đảo</option>
+                        <option value="">Tour Tham Quan</option>
+                      </select>
                     </div>
                   </div>
-                  <div class="col-md-2">
-                    <label for="checkout" class="form-label">Trả phòng</label>
+                  <div class="col-lg-3 col-md-6">
+                    <label for="checkin" class="form-label">Khởi hành</label>
                     <div class="input-group">
                       <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-end-0 border-start-0 ps-2" placeholder="20/10/2022"
-                        aria-label="" aria-describedby="checkout">
-                      <button class="btn btn-calend border-start-0" type="button">
-                        <span class="arrow-l"></span>
-                        <span class="arrow-r"></span>
-                      </button>
+                      <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
+                        placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
                     </div>
                   </div>
-                  <div class="col-md-3">
-                    <label for="guest-room" class="form-label">Khách & Phòng</label>
-                    <div class="input-group" id="guest-room">
+                  <div class="col-lg-4 col-md-6">
+                    <label for="guest-room" class="form-label">Số Khách</label>
+                    <div class="input-group t-input-custom">
                       <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-start-0 ps-2"
-                        placeholder="10 người lớn, 5 trẻ em, 10 phòng" aria-label="" aria-describedby="guest-room">
+                      <input type="text" class="t-input form-control border-start-0 ps-2"
+                        placeholder="Chọn số lượng khách" readonly aria-label="" aria-describedby="guest-room">
+                      <div class="options-custom">
+                        <div class="row item align-items-center">
+                          <div class="col-6">
+                            <span class="icon icon-user01 fs-6"></span>Người lớn
+                          </div>
+                          <div class="col-6">
+                            <div class="t-box-quantity">
+                              <a href="javascript:;" class="t-minus">-</a>
+                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <input class="t-input-quantity form-control" readonly type="text" value="0" />
+                              <a href="javascript:;" class="t-plus">+</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row item align-items-center">
+                          <div class="col-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                              class="bi bi-people icon" viewBox="0 0 16 16">
+                              <path
+                                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z" />
+                            </svg>Trẻ em
+                          </div>
+                          <div class="col-6">
+                            <div class="t-box-quantity">
+                              <a href="javascript:;" class="t-minus">-</a>
+                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <input class="t-input-quantity form-control" readonly type="text" value="0" />
+                              <a href="javascript:;" class="t-plus">+</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="col-md-2">
+                </div>
+                <div class="row justify-content-center">
+                  <div class="col-lg-3 col-md-12">
                     <button type="button" class="btn btn-search btn-danger w-100">
                       <span>Tìm kiếm ngay</span>
                       <span class="icon-arrow02 ms-2 align-middle"></span>
@@ -423,49 +566,99 @@
             <!-- Tab Content 4 -->
             <div class="tab-pane fade" id="search-vehicle" role="tabpanel" aria-labelledby="search-vehicle-tab"
               tabindex="0">
-              <form>
+              <form class="form-main">
                 <div class="row">
-                  <div class="col-md-3">
-                    <label for="destination" class="form-label">Nơi bạn muốn ở</label>
+                  <div class="col-lg-3 col-md-6">
+                    <label for="destination" class="form-label">Điểm đón</label>
                     <div class="input-group" id="destination">
                       <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
                       <input type="text" class="form-control border-start-0 ps-2"
                         placeholder="Nhập điểm đến hoặc tên khách sạn" aria-label="" aria-describedby="destination">
                     </div>
                   </div>
-                  <div class="col-md-2">
-                    <label for="checkin" class="form-label">Nhận phòng</label>
-                    <div class="input-group">
-                      <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-end-0 border-start-0 ps-2" placeholder="20/10/2022"
-                        aria-label="" aria-describedby="checkin">
-                      <button class="btn btn-calend border-start-0" type="button">
-                        <span class="arrow-l"></span>
-                        <span class="arrow-r"></span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="col-md-2">
-                    <label for="checkout" class="form-label">Trả phòng</label>
-                    <div class="input-group">
-                      <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-end-0 border-start-0 ps-2" placeholder="20/10/2022"
-                        aria-label="" aria-describedby="checkout">
-                      <button class="btn btn-calend border-start-0" type="button">
-                        <span class="arrow-l"></span>
-                        <span class="arrow-r"></span>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <label for="guest-room" class="form-label">Khách & Phòng</label>
-                    <div class="input-group" id="guest-room">
-                      <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                  <div class="col-lg-3 col-md-6">
+                    <label for="destination" class="form-label">Điểm đến</label>
+                    <div class="input-group" id="destination">
+                      <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
                       <input type="text" class="form-control border-start-0 ps-2"
-                        placeholder="10 người lớn, 5 trẻ em, 10 phòng" aria-label="" aria-describedby="guest-room">
+                        placeholder="Nhập điểm đến hoặc tên khách sạn" aria-label="" aria-describedby="destination">
                     </div>
                   </div>
-                  <div class="col-md-2">
+
+                  <div class="col-lg-3 col-md-6">
+                    <label for="checkin" class="form-label">Khởi hành</label>
+                    <div class="input-group">
+                      <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
+                      <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
+                        placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6">
+                    <label for="checkin" class="form-label">Thời gian</label>
+                    <div class="input-group">
+                      <select class="form-control" name="" id="">
+                        <option selected disabled>Chọn thời gian</option>
+                        <option value="">7:00</option>
+                        <option value="">8:00</option>
+                        <option value="">9:00</option>
+                        <option value="">10:00</option>
+                        <option value="">11:00</option>
+                        <option value="">12:00</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6">
+                    <label for="checkin" class="form-label">Trở về</label>
+                    <div class="input-group">
+                      <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
+                      <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
+                        placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6">
+                    <label for="checkin" class="form-label">Thời gian</label>
+                    <div class="input-group">
+                      <select class="form-control" name="" id="">
+                        <option selected disabled>Chọn thời gian</option>
+                        <option value="">7:00</option>
+                        <option value="">8:00</option>
+                        <option value="">9:00</option>
+                        <option value="">10:00</option>
+                        <option value="">11:00</option>
+                        <option value="">12:00</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <label for="checkin" class="form-label">Cho thuê xe</label>
+                    <div class="input-group row">
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                          <label class="form-check-label" for="flexRadioDefault1">
+                            Có tài xế
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                          <label class="form-check-label" for="flexRadioDefault2">
+                            Tự lái
+                          </label>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row justify-content-center">
+                  <div class="col-lg-3 col-md-12">
                     <button type="button" class="btn btn-search btn-danger w-100">
                       <span>Tìm kiếm ngay</span>
                       <span class="icon-arrow02 ms-2 align-middle"></span>
@@ -473,6 +666,7 @@
                   </div>
                 </div>
               </form>
+
             </div>
           </div>
         </div>
@@ -1554,7 +1748,8 @@
                   </div>
                   <p class="rating good">
                     <small class="point fw-bold">4.5/5</small> <span class="txt">Rất tốt</span> <span
-                      class="cmt-numb">(15 bình luận)</span>
+                      class="cmt-numb">(15
+                      bình luận)</span>
                   </p>
                   <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                   <div class="d-flex align-items-center">
@@ -1615,7 +1810,8 @@
                   </div>
                   <p class="rating good">
                     <small class="point fw-bold">4.5/5</small> <span class="txt">Rất tốt</span> <span
-                      class="cmt-numb">(15 bình luận)</span>
+                      class="cmt-numb">(15
+                      bình luận)</span>
                   </p>
                   <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                   <div class="d-flex align-items-center">
@@ -1676,7 +1872,8 @@
                   </div>
                   <p class="rating good">
                     <small class="point fw-bold">4.5/5</small> <span class="txt">Rất tốt</span> <span
-                      class="cmt-numb">(15 bình luận)</span>
+                      class="cmt-numb">(15
+                      bình luận)</span>
                   </p>
                   <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                   <div class="d-flex align-items-center">
@@ -1737,7 +1934,8 @@
                   </div>
                   <p class="rating good">
                     <small class="point fw-bold">4.5/5</small> <span class="txt">Rất tốt</span> <span
-                      class="cmt-numb">(15 bình luận)</span>
+                      class="cmt-numb">(15
+                      bình luận)</span>
                   </p>
                   <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                   <div class="d-flex align-items-center">

@@ -203,6 +203,9 @@ $(document).ready(function () {
             var cur = input.val();
             cur++;
             input.val(cur);
+            input.attr("value", cur);
+
+            onChangeNumber($(this));
         })
         $('.t-box-quantity .t-minus').on('click', function () {
             var input = $(this).parents('.t-box-quantity').find('.t-input-quantity');
@@ -210,9 +213,71 @@ $(document).ready(function () {
             if (cur >= 1) {
                 cur--;
                 input.val(cur);
+                input.attr("value", cur);
+
+                onChangeNumber($(this));
             } else {
                 //Otherwise do nothing
             }
         });
     }
+
+    function onChangeNumber(e) {
+        var t_people = e.parents('.t-input-custom').find('.t-box-quantity').hasClass('t-number-people');
+        var t_children = e.parents('.t-input-custom').find('.t-box-quantity').hasClass('t-number-children');
+        var t_room = e.parents('.t-input-custom').find('.t-box-quantity').hasClass('t-number-room');
+        var t_kid = e.parents('.t-input-custom').find('.t-box-quantity').hasClass('t-number-kid');
+
+        var n_people = e.parents('.t-input-custom').find('.t-number-people').children('.t-input-quantity').val();
+        var n_children = e.parents('.t-input-custom').find('.t-number-children').children('.t-input-quantity').val();
+        var n_room = e.parents('.t-input-custom').find('.t-number-room').children('.t-input-quantity').val();
+        var n_kid = e.parents('.t-input-custom').find('.t-number-kid').children('.t-input-quantity').val();
+
+        var text_placeholder = '';
+        console.log(n_people);
+        console.log(t_people);
+
+        if (t_people && t_children && t_room) {
+            console.log('v1');
+            text_placeholder = n_people + " người lớn, " + n_children + " trẻ em, " + n_room + " phòng";
+        }
+
+        if (t_people && t_children && t_kid) {
+            text_placeholder = n_people + " người lớn, " + n_children + " trẻ em, " + n_kid + " trẻ sơ sinh";
+            console.log('v2');
+        }
+
+        e.parents('.t-input-custom').find('.t-input').attr(
+            "placeholder", text_placeholder
+        );
+    }
+
+    // Select Custom
+    $('.t-input').click(function (e) {
+        console.log('click select');
+        $(this).parent('.t-input-custom').find('.options-custom').toggleClass('open');
+        e.stopPropagation();
+    })
+
+    $('.options-custom').click(function (e) {
+        e.stopPropagation();
+    })
+    $(document).click(function () {
+        // e.stopPropagation();
+        $('.options-custom').removeClass('open');
+    })
+
+    var t_number_people = $('.t-number-people');
+    var t_number_children = $('.t-number-children');
+    var t_number_room = $('.t-number-room');
+
+
+
+    $('.t-number-people').change(function () {
+        console.log('ádfádf');
+    })
+    // $('.t-input-quantity').on('change', function () {
+    //     console.log('change');
+    // });
+
 })

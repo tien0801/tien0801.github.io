@@ -132,3 +132,59 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 0;
     padding: 0.375rem 0.5rem !important;
 }
+
+// select custom
+.t-input-custom {
+    .t-input {
+        border-top-right-radius: 0.375rem !important;
+        border-bottom-right-radius: 0.375rem !important;
+    }
+
+    .options-custom {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 4px !important;
+        border: 1px solid #ced4da;
+        box-shadow: rgba(27, 27, 27, 0.2) 0px 1px 3px 0px, rgba(27, 27, 27, 0.1) 0px 4px 8px 0px;
+        // transition: all 0.1s;
+        opacity: 0;
+        visibility: hidden;
+
+        &.open {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .item {
+            .icon {
+                margin-right: 8px;
+                margin-top: -4px;
+
+                width: 18.5px;
+                height: 18.5px;
+                color: #667085;
+            }
+
+            .t-box-quantity {
+                margin-left: auto;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
+
+.form-main {
+    select,
+    .form-check {
+        min-height: 42px;
+    }
+
+    .form-check {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+}
