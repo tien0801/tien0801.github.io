@@ -609,74 +609,11 @@
             <div class="tab-pane fade" id="search-vehicle" role="tabpanel" aria-labelledby="search-vehicle-tab"
               tabindex="0">
               <form class="form-main">
-                <div class="row">
-                  <div class="col-lg-3 col-md-6">
-                    <label for="destination" class="form-label">Điểm đón</label>
-                    <div class="input-group" id="destination">
-                      <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-start-0 ps-2"
-                        placeholder="Nhập điểm đến hoặc tên khách sạn" aria-label="" aria-describedby="destination">
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
-                    <label for="destination" class="form-label">Điểm đến</label>
-                    <div class="input-group" id="destination">
-                      <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-start-0 ps-2"
-                        placeholder="Nhập điểm đến hoặc tên khách sạn" aria-label="" aria-describedby="destination">
-                    </div>
-                  </div>
+                <div class="row justify-content-center">
 
-                  <div class="col-lg-3 col-md-6">
-                    <label for="checkin" class="form-label">Khởi hành</label>
-                    <div class="input-group">
-                      <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                      <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
-                        placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-6">
-                    <label for="checkin" class="form-label">Thời gian</label>
-                    <div class="input-group">
-                      <select class="form-control" name="" id="">
-                        <option selected disabled>Chọn thời gian</option>
-                        <option value="">7:00</option>
-                        <option value="">8:00</option>
-                        <option value="">9:00</option>
-                        <option value="">10:00</option>
-                        <option value="">11:00</option>
-                        <option value="">12:00</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-6">
-                    <label for="checkin" class="form-label">Trở về</label>
-                    <div class="input-group">
-                      <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                      <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
-                        placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3 col-md-6">
-                    <label for="checkin" class="form-label">Thời gian</label>
-                    <div class="input-group">
-                      <select class="form-control" name="" id="">
-                        <option selected disabled>Chọn thời gian</option>
-                        <option value="">7:00</option>
-                        <option value="">8:00</option>
-                        <option value="">9:00</option>
-                        <option value="">10:00</option>
-                        <option value="">11:00</option>
-                        <option value="">12:00</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="col-lg-3 col-md-6">
+                  <div class="col-lg-4 col-md-12 col-sm-6">
                     <label for="checkin" class="form-label">Cho thuê xe</label>
-                    <div class="input-group row">
+                    <div class="input-group input-group-checkbox row">
                       <div class="col-6">
                         <div class="form-check">
                           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -694,9 +631,71 @@
                           </label>
                         </div>
                       </div>
-                      <!-- </div> -->
                     </div>
                   </div>
+
+                  <div class="col-lg-4 col-md-6">
+                    <label for="destination" class="form-label">Điểm đón</label>
+                    <div class="input-group" id="destination">
+                      <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
+                      <input type="text" class="form-control border-start-0 ps-2"
+                        placeholder="Nhập điểm đến hoặc tên khách sạn" aria-label="" aria-describedby="destination">
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-6">
+                    <label for="destination" class="form-label">Điểm đến</label>
+                    <div class="input-group" id="destination">
+                      <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
+                      <input type="text" class="form-control border-start-0 ps-2"
+                        placeholder="Nhập điểm đến hoặc tên khách sạn" aria-label="" aria-describedby="destination">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row justify-content-center">
+                  <div class="col-xl-2 col-lg-3 col-md-6 col-sm-7">
+                    <label for="checkin" class="form-label">Khởi hành</label>
+                    <div class="input-group">
+                      <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
+                      <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
+                        placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
+                    </div>
+                  </div>
+                  <div class="col-xl-1 col-lg-2 col-md-6 col-sm-5">
+                    <label for="checkin" class="form-label">Thời gian</label>
+                    <div class="input-group">
+                      <div class="cs-form">
+                        <input type="time" class="form-control" value="10:05 AM" />
+                      </div>
+                      <!-- <select class="form-control" name="" id="">
+                        <option selected disabled>Chọn thời gian</option>
+                        <option value="">7:00</option>
+                        <option value="">8:00</option>
+                        <option value="">9:00</option>
+                        <option value="">10:00</option>
+                        <option value="">11:00</option>
+                        <option value="">12:00</option>
+                      </select> -->
+                    </div>
+                  </div>
+
+                  <div class="col-xl-2 col-lg-3 col-md-6 col-sm-7">
+                    <label for="checkin" class="form-label">Trở về</label>
+                    <div class="input-group">
+                      <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
+                      <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
+                        placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
+                    </div>
+                  </div>
+                  <div class="col-xl-1 col-lg-2 col-md-6 col-sm-5">
+                    <label for="checkin" class="form-label">Thời gian</label>
+                    <div class="input-group">
+                      <div class="cs-form">
+                        <input type="time" class="form-control" value="10:05 AM" />
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
 
                 <div class="row justify-content-center">

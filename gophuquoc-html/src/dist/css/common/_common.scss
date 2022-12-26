@@ -177,8 +177,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .form-main {
-    select,
-    .form-check {
+    .form-check,
+    .form-control {
         min-height: 42px;
     }
 
@@ -186,6 +186,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         display: flex;
         align-items: center;
         column-gap: 10px;
+    }
+
+    .input-group-checkbox {
+        max-width: 300px;
     }
 }
 
