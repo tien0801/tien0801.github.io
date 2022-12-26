@@ -293,4 +293,13 @@ $(document).ready(function () {
         $('.result-search-autocomplete').removeClass('show');
     });
 
+    $('.result-search-autocomplete .item-result .text').click(function () {
+        var val = $(this).text();
+        console.log(val);
+        $(this).parents('.box-search-autocomplete').find('.input-autocomplete').val(val);
+        $('.result-search-autocomplete').removeClass('show');
+    })
+
+    // End Search Autocomplete
+
 })

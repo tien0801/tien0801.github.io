@@ -218,11 +218,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         display: flex;
         margin-bottom: 5px;
 
-        a {
+        .text {
             color: #111;
             font-size: 14px;
             width: 100%;
             padding: 10px 20px;
+            cursor: pointer;
 
             &:hover {
                 background: #eaf6fb;
