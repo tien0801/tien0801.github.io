@@ -193,18 +193,16 @@ $(document).ready(function () {
 
     // Set min Datapicker
     var t_day = new Date();
-    var val_today = t_day.getFullYear() + "-" + (t_day.getMonth() + 1) + "-" + t_day.getDate();
+    var val_today = t_day.getDate() + "/" + (t_day.getMonth() + 1) + "/" + t_day.getFullYear();
     $(".datepicker_min_today").attr('min', val_today);
+    $(".datepicker_min_today").attr('placeholder', val_today);
 
-    //make all date html5 close on change in chrome
-    function closeDate(dateInput) {
-        $(dateInput).attr('type', 'text');
-        $(dateInput).attr('type', 'date');
-    }
-    $('input[type="date"]').change(function () {
-        closeDate(this);
-    });
-
+    $("#datepicker, #datepicker-2, #datepicker-3, #datepicker-4, #datepicker-5, #datepicker-6, #datepicker-7").datepicker(
+        {
+            minDate: 0,
+            dateFormat: "dd/mm/yy",
+        }
+    );
 
     // Button Plus and Minus
     if ($('.t-box-quantity').length > 0) {

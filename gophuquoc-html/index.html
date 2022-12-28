@@ -20,6 +20,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="src/dist/css/fonts.css">
   <link rel="stylesheet" href="src/dist/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="src/dist/css/jquery-ui.css">
   <link rel="stylesheet" href="src/dist/css/customize.css">
   <link rel="stylesheet" href="src/dist/css/style.css">
 </head>
@@ -245,16 +246,18 @@
                         <label for="checkin" class="form-label">Nhận phòng</label>
                         <div class="input-group">
                           <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                          <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
-                            placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
+                          <input id="datepicker" type="text" min=""
+                            class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
+                            aria-label="" aria-describedby="checkin">
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6">
                         <label for="checkout" class="form-label">Trả phòng</label>
                         <div class="input-group">
                           <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                          <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
-                            placeholder="20/10/2022" aria-label="" aria-describedby="checkout">
+                          <input id="datepicker-2" type="text" min=""
+                            class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
+                            aria-label="" aria-describedby="checkout">
                         </div>
                       </div>
                     </div>
@@ -371,16 +374,18 @@
                         <label for="checkin" class="form-label">Khởi hành</label>
                         <div class="input-group">
                           <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                          <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
-                            placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
+                          <input id="datepicker-3" type="text" min=""
+                            class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
+                            aria-label="" aria-describedby="checkin">
                         </div>
                       </div>
                       <div class="col-xl-6 col-lg-6 col-md-6">
                         <label for="checkout" class="form-label">Trở về</label>
                         <div class="input-group">
                           <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                          <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
-                            placeholder="20/10/2022" aria-label="" aria-describedby="checkout">
+                          <input id="datepicker-4" type="text" min=""
+                            class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
+                            aria-label="" aria-describedby="checkout">
                         </div>
                       </div>
                     </div>
@@ -554,8 +559,9 @@
                     <label for="checkin" class="form-label">Khởi hành</label>
                     <div class="input-group">
                       <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                      <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
-                        placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
+                      <input id="datepicker-5" type="text" min=""
+                        class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
+                        aria-label="" aria-describedby="checkin">
                     </div>
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-6">
@@ -639,8 +645,9 @@
                         <label for="checkin" class="form-label">Khởi hành</label>
                         <div class="input-group">
                           <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                          <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
-                            placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
+                          <input id="datepicker-6" type="text" min=""
+                            class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
+                            aria-label="" aria-describedby="checkin">
                         </div>
                       </div>
                       <div class="col-lg-3 col-md-2">
@@ -655,8 +662,9 @@
                         <label for="checkin" class="form-label">Trở về</label>
                         <div class="input-group">
                           <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                          <input type="date" min="" class="datepicker_min_today form-control border-start-0 ps-2"
-                            placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
+                          <input id="datepicker-7" type="text" min=""
+                            class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
+                            aria-label="" aria-describedby="checkin">
                         </div>
                       </div>
                       <div class="col-lg-3 col-md-2">
@@ -2651,6 +2659,7 @@
   <!--e-modal-->
 
   <script type="text/javascript" src="src/dist/js/jquery-3.6.1.min.js"></script>
+  <script type="text/javascript" src="src/dist/js/jquery-ui.min.js"></script>
   <script type="text/javascript" src="src/dist/js/bootstrap.bundle.min.js" async></script>
   <script type="text/javascript" src="src/dist/js/owl.carousel.min.js"></script>
   <script type="text/javascript" src="src/dist/js/script.js"></script>
