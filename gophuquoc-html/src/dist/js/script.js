@@ -195,6 +195,11 @@ $(document).ready(function () {
     var t_day = new Date();
     var val_today = t_day.getFullYear() + "-" + (t_day.getMonth() + 1) + "-" + t_day.getDate();
     $(".datepicker_min_today").attr('min', val_today);
+    $('.datepicker_min_today').datepicker({
+        format: 'dd/mm/yyyy',
+        todayHighlight: 'TRUE',
+        autoclose: true,
+    })
 
     // Button Plus and Minus
     if ($('.t-box-quantity').length > 0) {
