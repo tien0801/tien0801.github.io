@@ -10820,7 +10820,7 @@ body {
    transform: rotate(-90deg);
 }
 .search-box .wrapper-contain #search-tabContent form .btn-danger.btn-search {
-   margin-top: 22px;
+   /* margin-top: 22px; */
    padding: 0.51rem 1.1rem;
    height: 42px;
 }
