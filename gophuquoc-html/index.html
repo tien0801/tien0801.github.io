@@ -622,27 +622,27 @@
               <form class="form-main">
                 <div class="row justify-content-center">
                   <div class="col-xl-2 col-lg-2 col-md-6">
-                    <label for="destination" class="form-label">Điểm đón</label>
+                    <label for="destination" class="form-label">Điểm nhận</label>
                     <div class="input-group" id="destination">
                       <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-start-0 ps-2"
-                        placeholder="Nhập điểm đến hoặc tên khách sạn" aria-label="" aria-describedby="destination">
+                      <input type="text" class="form-control border-start-0 ps-2" placeholder="Nhập điểm nhận xe"
+                        aria-label="" aria-describedby="destination">
                     </div>
                   </div>
 
                   <div class="col-xl-2 col-lg-2 col-md-6">
-                    <label for="destination" class="form-label">Điểm đến</label>
+                    <label for="destination" class="form-label">Điểm trả</label>
                     <div class="input-group" id="destination">
                       <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-start-0 ps-2"
-                        placeholder="Nhập điểm đến hoặc tên khách sạn" aria-label="" aria-describedby="destination">
+                      <input type="text" class="form-control border-start-0 ps-2" placeholder="Nhập điểm trả xe"
+                        aria-label="" aria-describedby="destination">
                     </div>
                   </div>
 
                   <div class="col-xl-5 col-lg-6">
                     <div class="row justify-content-center">
                       <div class="col-lg-3 col-md-4">
-                        <label for="checkin" class="form-label">Khởi hành</label>
+                        <label for="checkin" class="form-label">Ngày nhận</label>
                         <div class="input-group">
                           <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
                           <input id="datepicker-6" type="text" min=""
@@ -659,7 +659,7 @@
                         </div>
                       </div>
                       <div class="col-lg-3 col-md-4">
-                        <label for="checkin" class="form-label">Trở về</label>
+                        <label for="checkin" class="form-label">Ngày trả</label>
                         <div class="input-group">
                           <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
                           <input id="datepicker-7" type="text" min=""
@@ -680,7 +680,7 @@
                   </div>
 
                   <div class="col-xl-1 col-lg-2 col-md-6">
-                    <label for="checkin" class="form-label">Cho thuê xe</label>
+                    <label for="checkin" class="form-label">Tài xế</label>
                     <div class="input-group">
                       <select name="" class="form-control">
                         <option value="">Có tài xế</option>
@@ -2442,16 +2442,22 @@
               <label for="email" class="form-label">Email</label>
               <input type="email" class="form-control" placeholder="Nhập địa chỉ email">
             </div>
+
             <div class="mb-3 position-relative">
               <label for="password" class="form-label">Mật khẩu</label>
-              <input type="password" autocomplete="on" class="form-control" placeholder="Nhập mật khẩu">
-              <a href="#" class="icon-eye position-absolute"></a>
+              <div class="toggle-input-password">
+                <input type="password" autocomplete="on" class="form-control" placeholder="Nhập mật khẩu">
+                <a href="javascript:;" class="icon-toggle icon-eye position-absolute hide"></a>
+              </div>
             </div>
             <div class="mb-3 position-relative">
               <label for="password" class="form-label">Xác nhận mật khẩu</label>
-              <input type="password" autocomplete="on" class="form-control" placeholder="Xác nhận lại mật khẩu">
-              <a href="#" class="icon-eye position-absolute"></a>
+              <div class="toggle-input-password">
+                <input type="password" autocomplete="on" class="form-control" placeholder="Xác nhận lại mật khẩu">
+                <a href="javascript:;" class="icon-toggle icon-eye position-absolute hide"></a>
+              </div>
             </div>
+
             <button type="submit" class="btn btn-primary w-100 mt-2">Đăng ký tài khoản</button>
             <small class="text-center d-block mt-3">Hoặc đăng ký bằng</small>
             <div class="d-flex align-items-center justify-content-center mt-3">
@@ -2487,13 +2493,17 @@
             </div>
             <div class="mb-3 position-relative">
               <label for="password" class="form-label">Mật khẩu</label>
-              <input type="password" autocomplete="on" class="form-control" placeholder="Nhập mật khẩu">
-              <a href="#" class="icon-eye position-absolute"></a>
+              <div class="toggle-input-password">
+                <input type="password" autocomplete="on" class="form-control" placeholder="Nhập mật khẩu">
+                <a href="javascript:;" class="icon-toggle icon-eye position-absolute hide"></a>
+              </div>
             </div>
             <div class="mb-3 form-check d-flex align-items-center">
               <input type="checkbox" class="form-check-input">
               <label class="form-check-label ms-2 mt-1" for="checkbox">Lưu đăng nhập</label>
-              <div class="ms-auto primary-clr">Quên mật khẩu?</div>
+              <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#forgetpassword"
+                class="ms-auto primary-clr">Quên
+                mật khẩu?</a>
             </div>
             <button type="submit" class="btn btn-primary w-100 mt-2">Đăng nhập</button>
             <small class="text-center d-block mt-3">Hoặc đăng nhập bằng</small>
@@ -2513,9 +2523,32 @@
   </div>
   <!-- e-Traveller Login-->
 
+  <!--s-Traveller Forget Password-->
+  <div class="modal fade" id="forgetpassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="icon-user-smile fs-3"></span>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4 class="modal-title fw-bold"><span>Quên mật khẩu</span></h4>
+          <small class="grey-300-clr">Vui lòng nhập email bạn đã đăng ký để lấy lại mật khẩu</small>
+          <form class="mt-4">
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" placeholder="Nhập địa chỉ email">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mt-2">Lấy lại mật khẩu</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- e-Traveller Forget Password-->
+
   <!--s-Travel Agent Login-->
-  <div class="modal fade" data-bs-toggle="modal" id="supplier-signin" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+  <div class="modal fade" id="supplier-signin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -2528,8 +2561,9 @@
             <div class="nav nav-tabs d-flex justify-content-evenly border-0 mt-3" id="supplier-signin-tab"
               role="tablist">
               <button class="nav-link border-0 text-uppercase active" id="nav-stay-tab" data-bs-toggle="tab"
-                data-bs-target="#nav-stay" type="button" role="tab" aria-controls="nav-stay" aria-selected="true">CUNG
-                CẤP LƯU TRÚ</button>
+                data-bs-target="#nav-stay" type="button" role="tab" aria-controls="nav-stay" aria-selected="true">
+                CUNG CẤP LƯU TRÚ
+              </button>
               <button class="nav-link border-0 text-uppercase" id="nav-service-tab" data-bs-toggle="tab"
                 data-bs-target="#nav-service" type="button" role="tab" aria-controls="nav-service"
                 aria-selected="false">CUNG CẤP DỊCH VỤ</button>

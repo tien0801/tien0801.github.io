@@ -307,7 +307,20 @@ $(document).ready(function () {
         $(this).parents('.box-search-autocomplete').find('.input-autocomplete').val(val);
         $('.result-search-autocomplete').removeClass('show');
     })
-
     // End Search Autocomplete
+
+    // Toggle Input Password 
+    $('.toggle-input-password .icon-toggle').click(function (e) {
+        e.Default
+        var x = $(this).parent().find('input');
+        console.log(x);
+        if (x.attr("type") == "text") {
+            x.attr('type', 'password');
+            $(this).addClass('hide');
+        } else {
+            x.attr('type', 'text');
+            $(this).removeClass('hide');
+        }
+    })
 
 })
