@@ -214,9 +214,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         font-size: 14px;
     }
 
+    .row {
+        align-items: flex-end;
+        row-gap: 20px;
+
+        @include Responsive(MD) {
+            row-gap: 24px;
+        }
+    }
+
     .form-check,
     .form-control {
-        min-height: 42px;
+        min-height: 40px;
+
+        @include Responsive(MD) {
+            row-gap: 24px;
+        }
     }
 
     .form-check {
