@@ -41,10 +41,20 @@
                     display: flex;
                     align-items: center;
 
-                    img {
-                        height: 26px;
-                        @include Responsive(SM) {
-                            // margin-right: -5px;
+                    .box-img {
+                        position: relative;
+                        width: 28px;
+                        height: 24px;
+                        img {
+                            position: absolute;
+                            top: -5px;
+                            left: 0;
+                            right: 0;
+                            width: 100%;
+                            height: auto;
+                            @include Responsive(SM) {
+                                // margin-right: -5px;
+                            }
                         }
                     }
                 }
