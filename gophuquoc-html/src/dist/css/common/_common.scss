@@ -183,6 +183,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
         visibility: hidden;
         z-index: 2;
 
+        @include Responsive(XS) {
+            padding: 12px;
+        }
+
         &.open {
             opacity: 1;
             visibility: visible;
