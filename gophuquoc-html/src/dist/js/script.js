@@ -205,9 +205,9 @@ $(document).ready(function () {
             responsiveClass: true,
             items: 3,
             dots: true,
-            navText: ["<span class='arrow-l'></span>", "<span class='arrow-r'></span>"],
-            rewindNav: true,
-            nav: true,
+            // navText: ["<span class='arrow-l'></span>", "<span class='arrow-r'></span>"],
+            // rewindNav: true,
+            nav: false,
             responsive: {
                 // breakpoint from 0 up
                 0: {
