@@ -155,6 +155,7 @@ $(document).ready(function () {
         $(this).toggleClass('icon_heart_solid');
     })
 
+
     if ($('.js-vehicle-slider').length > 0) {
         $('.js-vehicle-slider').owlCarousel({
             loop: true,
@@ -191,6 +192,42 @@ $(document).ready(function () {
         })
     }
 
+    // Js Transport slider
+    if ($('.js-transport-slider').length > 0) {
+        $('.js-transport-slider').owlCarousel({
+            loop: true,
+            // autoplay: true,
+            // autoplayTimeout: 4000,
+            //autoplaySpeed: 2000,
+            // nestedItemSelector: 'item-gall',
+            lazyLoad: true,
+            margin: 20,
+            responsiveClass: true,
+            items: 3,
+            dots: true,
+            navText: ["<span class='arrow-l'></span>", "<span class='arrow-r'></span>"],
+            rewindNav: true,
+            nav: true,
+            responsive: {
+                // breakpoint from 0 up
+                0: {
+                    items: 1,
+                },
+                576: {
+                    items: 2,
+                },
+                768: {
+                    items: 2,
+                },
+                992: {
+                    items: 3,
+                },
+                1200: {
+                    items: 3,
+                }
+            }
+        })
+    }
     // Set min Datapicker
     var t_day = new Date();
     var val_today = t_day.getDate() + "/" + (t_day.getMonth() + 1) + "/" + t_day.getFullYear();
