@@ -3,6 +3,30 @@
 @import "./common/footer.scss";
 
 // Header
+.noti-sticky {
+    position: relative;
+    background-color: $color_orange;
+    padding: 10px 30px;
+
+    &.hide {
+        display: none;
+    }
+
+    .text {
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .btn-close-sticky {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+}
+
 .top-sect {
     .ms-auto {
         display: flex;

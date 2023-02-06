@@ -149,6 +149,11 @@ $(document).ready(function () {
 
 // JS Update
 $(document).ready(function () {
+    // Noti on top Header
+    $('.btn-close-sticky').click(function () {
+        $(this).parents('.noti-sticky').addClass('hide');
+    })
+
     /* Heart Icon */
     $('.icon_heart_line').click(function () {
         console.log('dsfd.click');
