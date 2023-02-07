@@ -1,32 +1,9 @@
 @import "./_variable.scss";
 @import "./common/_common.scss";
+@import "./common/header.scss";
 @import "./common/footer.scss";
 
 // Header
-.noti-sticky {
-    position: relative;
-    background-color: #f7941f;
-    padding: 10px 30px;
-
-    &.hide {
-        display: none;
-    }
-
-    .text {
-        text-align: center;
-        font-size: 14px;
-        line-height: 1.4;
-    }
-
-    .btn-close-sticky {
-        position: absolute;
-        top: 50%;
-        right: 10px;
-        transform: translateY(-50%);
-        cursor: pointer;
-    }
-}
-
 .top-sect {
     .ms-auto {
         display: flex;
