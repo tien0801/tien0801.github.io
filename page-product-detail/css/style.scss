@@ -66,7 +66,6 @@ $color_green: #23b445;
                         border: 1px solid #fff;
                     }
 
-
                     .img-check {
                         display: block;
                     }
@@ -110,7 +109,7 @@ $color_green: #23b445;
             margin-bottom: 10px;
             width: calc(50% - 5px);
 
-            &:nth-child(2n+2) {
+            &:nth-child(2n + 2) {
                 margin-right: 0;
             }
 
@@ -130,22 +129,24 @@ $color_green: #23b445;
     }
 }
 
-
 /* Rating section */
 .y-box-rating {
     margin-bottom: 5px;
     display: inline-flex;
     align-items: center;
 }
-.rating.without-caption .clear-rating, .rating.without-caption .caption {
+.rating.without-caption .clear-rating,
+.rating.without-caption .caption {
     display: none;
 }
-.rating.without-caption .empty-stars, .rating.without-caption .filled-stars {
+.rating.without-caption .empty-stars,
+.rating.without-caption .filled-stars {
     color: #ffc120;
     text-shadow: none;
     -webkit-text-stroke: inherit;
 }
-.rating.without-caption .rating-stars, .rating.without-caption .rating-container {
+.rating.without-caption .rating-stars,
+.rating.without-caption .rating-container {
     cursor: auto;
     font-size: 10px;
 }
@@ -153,7 +154,7 @@ $color_green: #23b445;
     margin-left: -3px;
 }
 .y-box-rating .rating {
-    display: inline-block
+    display: inline-block;
 }
 .rating-container .rating-input {
     height: 0;
@@ -188,8 +189,6 @@ $color_green: #23b445;
     .rating-medium {
         text-align: center;
 
-        .title-evaluate {}
-
         .score-rating {
             margin: 10px 0 0;
             text-align: center;
@@ -214,8 +213,9 @@ $color_green: #23b445;
         margin-right: auto;
 
         .item-progress {
+            display: flex;
             margin-bottom: 10px;
-            text-align: left;
+            justify-content: space-between;
 
             .rating-num {
                 display: inline-block;
@@ -238,7 +238,6 @@ $color_green: #23b445;
                     @media (max-width: 767px) {
                         height: 8px;
                     }
-
                 }
 
                 .progress-bar {
@@ -290,7 +289,7 @@ $color_green: #23b445;
 
     &.btn-white {
         background-color: #fff;
-        border: 1px solid rgba(0,0,0,.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -442,7 +441,7 @@ $color_green: #23b445;
             .quick-reply {
                 display: none;
                 padding: 10px 0;
-                
+
                 .btn-review {
                     width: max-content;
                     height: 30px;
@@ -462,10 +461,6 @@ $color_green: #23b445;
                 margin-bottom: 10px;
                 display: flex;
                 width: 100%;
-
-                &:after {
-                    @extend .clearfix;
-                }
 
                 &:last-child {
                     margin-bottom: 0;
