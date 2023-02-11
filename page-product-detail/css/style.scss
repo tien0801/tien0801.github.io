@@ -309,7 +309,16 @@ $color_green: #23b445;
         background-color: #f3f3f3;
         padding: 20px;
     }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    label {
+        margin-bottom: 0.5rem;
+    }
 }
+
 .box-comment-rating {
     .item-review-product {
         display: flex;
