@@ -9,43 +9,46 @@
     <link rel="canonical" href="https://yosu.vn/current-page">
     <title>Scroll-to-top</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <style>
-	    .scroll-top-btn {
-	        position: fixed;
-	        bottom: 20px;
-	        right: 20px;
-	        background-color: #3bb4c9;
-	        padding: 10px;
-	        transition: .2s;
-	        color: #fff;
-	        text-decoration: none;
-	        opacity: 0;
-	        visibility: hidden;
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3bb4c9;
+            padding: 10px;
+            transition: .2s;
+            color: #fff;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
             z-index: 99
-	    }
-	    .scroll-top-btn.visible {
-	        opacity: 0.8;
-	        visibility: visible;
-	    }
-	    .scroll-top-btn:hover {
-	        opacity: 1;
-	    }
+        }
+
+        .scroll-top-btn.visible {
+            opacity: 0.8;
+            visibility: visible;
+        }
+
+        .scroll-top-btn:hover {
+            opacity: 1;
+        }
+
         .scroll-top-btn i {
             color: #fff;
         }
-
     </style>
 </head>
 
 <body>
     <div class="container">
-        
-        
+
+
         <div class="row">
             <div class="col-md-6">
                 <h3>Button Smooth Scroll To Top</h3>
-<pre>
+                <pre>
     <code>
 $(document).ready(function() {
     $(".scroll-top-btn").on("click", function() {
@@ -67,7 +70,7 @@ $(document).ready(function() {
             <div class="col-md-6">
                 <h3>Smooth scroll to div</h3>
                 <button class="btn-scroll-to-div">click scroll to div</button>
-<pre>
+                <pre>
     <code>
 $(document).ready(function() {
     $(".btn-scroll-to-div").click(function() {
@@ -84,7 +87,7 @@ $(document).ready(function() {
             <div class="col-md-6">
                 <h3>Smooth scroll to target</h3>
                 <a href="#section-target" class="scroll-to-target">click scroll to target</a>
-<pre>
+                <pre>
     <code>
 $(".scroll-to-target[href^='#']").on("click", function(scroll_to_target) {
     scroll_to_target.preventDefault();
@@ -99,7 +102,7 @@ $(".scroll-to-target[href^='#']").on("click", function(scroll_to_target) {
             </div>
             <div class="col-md-6">
                 <h3>Smooth scroll to target - Load page</h3>
-<pre>
+                <pre>
 <code>
 function scrollElement() {
     let page_url = window.location.href;
@@ -115,59 +118,213 @@ scrollElement();
             </div>
         </div>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam
+            repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat
+            culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa
+            harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere.
         </p>
         <br><br><br><br>
         <br><br><br><br>
         <p>
-        Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae =nda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt
+            id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam
+            culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa!
+            Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias
+            beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit
+            beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae
+            accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint
+            expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus
+            assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita
+            labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda?
+            Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam
+            repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat
+            culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa
+            harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae =nda? Ipsum.Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt
+            id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam
+            culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa!
+            Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias
+            beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit
+            beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae
+            accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint
+            expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus
+            assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita
+            labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda?
+            Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam
+            repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem
+            ipsum dolor sit amet consectetur adipisicing elit.
         </p>
         <br><br><br>
         <br><br><br>
         <br><br><br>
         <div class="div-scroll" style="color: green">
             <h3>scroll to div</h3> <br>
-            Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam
+            repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat
+            culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa
+            harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit.
         </div>
         <p>
             <br><br><br><br>
             <br><br><br><br>
-            <div id="section-target" style="color: red">
-                <h3>scroll to target</h3> <br>
-            Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </div>
-            <br>
-            <p>
-             Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.
-            </p>
+        <div id="section-target" style="color: red">
+            <h3>scroll to target</h3> <br>
+            Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa!
+            Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias
+            beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit
+            beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae
+            accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint
+            expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus
+            assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita
+            labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda?
+            Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam
+            repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat
+            culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa
+            harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit.
+        </div>
+        <br>
+        <p>
+            Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa!
+            Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            fugit beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias
+            beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit
+            beatae sint expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae
+            accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint
+            expedita labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus
+            assumenda? Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita
+            labore nam repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda?
+            Ipsum.Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam
+            repellat culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat
+            culpa harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa
+            harum ullam facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quidem fugit beatae sint expedita labore nam repellat culpa harum ullam
+            facere. Vel sunt id veniam culpa! Alias beatae accusamus assumenda? Ipsum.
+        </p>
         </p>
     </div>
 
     <a href="javascript:;" class="scroll-top-btn">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </a>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
     <script>
         // Scroll To Top
-	    $(document).ready(function() {
-	        $(".scroll-top-btn").on("click", function() {
-	            $('html,body').animate({ scrollTop: 0 }, 'slow');
-	            return false;
-	        });
-	        window.addEventListener('scroll', function() {
-	            if (window.pageYOffset > 300) {
-	                $(".scroll-top-btn").addClass("visible");
-	            } else {
-	                $(".scroll-top-btn").removeClass("visible");
-	            }
-	        });
-	    });
+        $(document).ready(function () {
+            $(".scroll-top-btn").on("click", function () {
+                $('html,body').animate({ scrollTop: 0 }, 'slow');
+                return false;
+            });
+            window.addEventListener('scroll', function () {
+                if (window.pageYOffset > 300) {
+                    $(".scroll-top-btn").addClass("visible");
+                } else {
+                    $(".scroll-top-btn").removeClass("visible");
+                }
+            });
+        });
 
         // Scroll to div
-        $(document).ready(function() {
-            $(".btn-scroll-to-div").click(function() {
+        $(document).ready(function () {
+            $(".btn-scroll-to-div").click(function () {
                 $('html, body').animate({
                     scrollTop: $(".div-scroll").offset().top
                 }, 1000);
@@ -175,14 +332,14 @@ scrollElement();
         });
 
         // Scroll to target
-        $(document).ready(function() {
-            $(".scroll-to-target[href^='#']").on("click", function(e) {
+        $(document).ready(function () {
+            $(".scroll-to-target[href^='#']").on("click", function (e) {
                 e.preventDefault();
                 var a = this.hash,
                     i = $(a);
                 $("html, body").stop().animate({
                     scrollTop: i.offset().top
-                }, 1000, "swing", function() {})
+                }, 1000, "swing", function () { })
             })
         });
 
@@ -191,7 +348,7 @@ scrollElement();
             let page_id = page_url.substring(page_url.lastIndexOf("#") + 1);
             console.log("page id: " + page_id);
             if (window.location.href.indexOf('#') > 0) {
-                $("html, body").animate({scrollTop: $("#" + page_id).offset().top - 90}, 1000);
+                $("html, body").animate({ scrollTop: $("#" + page_id).offset().top - 90 }, 1000);
             }
         }
         scrollElement();
