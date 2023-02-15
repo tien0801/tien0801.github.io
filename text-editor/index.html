@@ -10,8 +10,9 @@
 	<link rel="shortcut icon" href="../assets/images/Logo-MeoCode.png" type="image/gif">
 	<title>VBT Frontend</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="../assets/css/css-common.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -22,7 +23,7 @@
 			<div class="col-md-5">
 				<pre>
 <code>
-.y-text-editor {
+.t-text-editor {
 	*{
 		max-width: 100%;
 	}
@@ -133,11 +134,11 @@
 				<pre>
 	<code>
 $(document).ready(function() {
-	if($(".y-text-editor").length > 0) {
-		$(".y-text-editor table").wrap(" 
+	if($(".t-text-editor").length > 0) {
+		$(".t-text-editor table").wrap(" 
 		<b> &#60;div class='table-responsive'&#62; Add Code here &#60;/div&#62;</b><!-- <div class='table-responsive'></div> -->
 		");
-		$(".y-text-editor iframe").wrap("<b>Add Code here</b><!-- <div class='box-iframe'></div> -->");
+		$(".t-text-editor iframe").wrap("<b>Add Code here</b><!-- <div class='box-iframe'></div> -->");
 	}
 });
 </code>
@@ -145,7 +146,7 @@ $(document).ready(function() {
 			</div>
 		</div>
 		<div class="post-detail">
-			<div class="y-text-editor">
+			<div class="t-text-editor">
 				<h1>Tiêu đề H1</h1>
 				<h2>Tiêu đề H2 </h2>
 				<h3>Tiêu đề H3 </h3>
@@ -262,9 +263,9 @@ $(document).ready(function() {
 
 	<script>
 		$(document).ready(function () {
-			if ($(".y-text-editor").length > 0) {
-				$(".y-text-editor table").wrap("<div class='table-responsive'></div>");
-				$(".y-text-editor iframe").wrap("<div class='box-iframe'></div>");
+			if ($(".t-text-editor").length > 0) {
+				$(".t-text-editor table").wrap("<div class='table-responsive'></div>");
+				$(".t-text-editor iframe").wrap("<div class='box-iframe'></div>");
 			}
 		});
 	</script>
