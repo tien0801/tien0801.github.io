@@ -9,19 +9,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="canonical" href="https://yosu.vn/current-page">
     <title>Slick slider</title>
+    <link rel="shortcut icon" href="../assets/images/Logo-MeoCode.png" type="image/gif">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
+    <link rel="stylesheet" href="../assets/css/css-common.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        body {
-            box-sizing: border-box;
-        }
-        img {
-            width: 100%;
-            height: auto;
-        }
         .home-slider .item {
             margin: 20px;
         }
@@ -29,12 +25,15 @@
         .css-nav-slider {
             margin: 0 -5px;
         }
+
         .css-nav-slider .item {
             margin: 0 5px;
         }
+
         .css-nav-slider .item .img-slider {
             border: 1px solid transparent;
         }
+
         .css-nav-slider .slick-current .img-slider {
             border: 1px solid #ff0000;
         }
@@ -44,6 +43,91 @@
 <body>
     <div class="container">
         <h1><a href="https://kenwheeler.github.io/slick/" target="_blank">Slick slider</a></h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Simple </h3>
+                <pre>
+<code>
+$('.js-slick-home').slick({
+    infinite: false, //Loop
+    autoplay: true,
+    autoplaySpeed: 3000,
+    // centerPadding: '40px',
+    dots: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: '<span class="btn-arrow btn-prev"><i class="fas fa-chevron-left"></i></span>',
+    nextArrow: '<span class="btn-arrow btn-next"><i class="fas fa-chevron-right"></i></span>',
+    // vertical: true,
+    // verticalSwiping: true,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
+
+});
+</code>
+    </pre>
+            </div>
+            <div class="col-md-6">
+                <h3>Multiple Slick Sliders</h3>
+                <pre>
+<code>
+    $('.js-slider-for').each(function (key, item) {
+        var sliderIdName = 'slider' + key;
+        var sliderNavIdName = 'sliderNav' + key;
+
+        this.id = sliderIdName;
+        $('.js-slider-nav')[key].id = sliderNavIdName;
+
+        var sliderId = '#' + sliderIdName;
+        var sliderNavId = '#' + sliderNavIdName;
+
+        $(sliderId).slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            infinite: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            prevArrow: '<span class="btn-arrow btn-prev"><i class="fas fa-chevron-left"></i></span>',
+            nextArrow: '<span class="btn-arrow btn-next"><i class="fas fa-chevron-right"></i></span>',
+            asNavFor: sliderNavId
+        });
+        $(sliderNavId).slick({
+            slidesToShow: 3,
+            asNavFor: sliderId,
+            autoplay: true,
+            dots: false,
+            centerPadding: '60px',
+            arrows: false,
+            infinite: false,
+            focusOnSelect: true
+        });
+    });
+</code>
+                </pre>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-6">
                 <h3>Slider Simple</h3>
@@ -109,10 +193,10 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-md-6">
                 <h3>Slider Vertical</h3>
@@ -136,7 +220,8 @@
                 <h3>Vertical Modal slider</h3>
                 <div class="vertical-slider-box">
                     <div class="text-center" style="margin-bottom: 30px;">
-                        <a class="btn btn-primary" data-toggle="modal" href='#slick-slide-modal'>Xem trên modal Bootstrap</a>
+                        <a class="btn btn-primary" data-toggle="modal" href='#slick-slide-modal'>Xem trên modal
+                            Bootstrap</a>
                     </div>
                     <!-- Slick slider -->
                     <div class="row">
@@ -280,11 +365,14 @@
         </div>
 
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
     <script src="js/slick.min.js"></script>
     <script>
-    
+
     </script>
 
     <!-- Slick slider vertical -->
@@ -326,7 +414,7 @@
                         }
                     }
                 ]
-                
+
             });
 
             //Slier Vertical
