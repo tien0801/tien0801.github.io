@@ -21,6 +21,7 @@
 
         <div class="row">
             <div class="col-md-6">
+                <h3> Datepicker for multiple inputs</h3>
                 <pre>
 <code>
 $(".datepicker").datepicker({
@@ -29,9 +30,37 @@ $(".datepicker").datepicker({
 });
 </code>
                 </pre>
+
+                <h3>Datepicker on Modal Bootstrap</h3>
+                <pre>
+<code>
+$('.datepicker').each(function (key, item) {
+    var dateIdName = 'datepicker_0' + key;
+
+    this.id = dateIdName;
+    $('.datepicker')[key].id = dateIdName;
+
+    var datepickerId = '#' + dateIdName;
+
+    $(datepickerId).datepicker(
+        {
+            minDate: 0,
+            dateFormat: "dd/mm/yy",
+            beforeShow: function (input, inst) {
+                var rect = input.getBoundingClientRect();
+                setTimeout(function () {
+                    inst.dpDiv.css({ top: rect.top + 40, left: rect.left + 0 });
+                }, 0);
+            }
+        }
+    );
+})
+</code>
+                </pre>
             </div>
+
             <div class="col-md-6">
-                <h3> Datepicker for multiple inputs</h3>
+                <h4>Demo</h4>
                 <input type="text" class="datepicker_min_today datepicker">
                 <input type="text" class="datepicker_min_today datepicker">
             </div>
