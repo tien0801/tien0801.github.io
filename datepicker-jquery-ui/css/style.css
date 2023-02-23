@@ -6,3 +6,23 @@
         background-color: red;
         color: #fff;
 }
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+        border: 1px solid transparent;
+        background: #f6f6f6;
+        font-weight: normal;
+        color: #454545;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+        border: 1px solid transparent;
+        background: #ef6820;
+        color: #fff;
+}
