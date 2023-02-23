@@ -1,0 +1,8 @@
+.ui-datepicker td.blue a {
+        background-color: blue;
+        color: #fff;
+}
+.ui-datepicker td.red a {
+        background-color: red;
+        color: #fff;
+}

@@ -12,6 +12,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="../assets/css/css-common.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -21,8 +22,12 @@
 
         <div class="row">
             <div class="col-md-6">
-                <h3> Datepicker for multiple inputs</h3>
-                <pre>
+                <div class="item">
+                    <h3> Datepicker for multiple inputs</h3>
+                    <input type="text" class="datepicker_min_today datepicker">
+                    <input type="text" class="datepicker_min_today datepicker">
+
+                    <pre class="mt-2">
 <code>
 $(".datepicker").datepicker({
     dateFormat: "dd/mm/yy",
@@ -30,9 +35,10 @@ $(".datepicker").datepicker({
 });
 </code>
                 </pre>
-
-                <h3>Datepicker on Modal Bootstrap</h3>
-                <pre>
+                </div>
+                <div class="item">
+                    <h3>Datepicker on Modal Bootstrap</h3>
+                    <pre>
 <code>
 $('.datepicker').each(function (key, item) {
     var dateIdName = 'datepicker_0' + key;
@@ -57,19 +63,18 @@ $('.datepicker').each(function (key, item) {
 })
 </code>
                 </pre>
+                </div>
             </div>
-
+            <!-- Box Right -->
             <div class="col-md-6">
-                <h4>Demo</h4>
-                <input type="text" class="datepicker_min_today datepicker">
-                <input type="text" class="datepicker_min_today datepicker">
-
-                <br> <br>
-                <h3>
-                    How to display events for a day in jquery datepicker
-                    <a target="_blank" href="https://jsfiddle.net/gtxzom8s/3/">link</a>
-                </h3>
-                <pre>
+                <div class="item">
+                    <div id="datepicker-check-rooom"></div>
+                    <br> <br>
+                    <h3>
+                        How to display events for a day in jquery datepicker
+                        <a target="_blank" href="https://jsfiddle.net/gtxzom8s/3/">link</a>
+                    </h3>
+                    <pre>
 <code>
 // Css Datepicker
 .ui-datepicker {
@@ -92,7 +97,7 @@ $('.datepicker').each(function (key, item) {
 </code>
                 </pre>
 
-                <pre>
+                    <pre>
 <code>
 // Datepicker Check Rooom
 var Event = function (text, className) {
@@ -108,6 +113,7 @@ $("#datepicker-check-rooom").datepicker({
     // defaultDate: "02/28/2023",
     // changeMonth: true,
     // changeYear: true,
+    numberOfMonths: 2,
     onSelect: function (date) {
         var events2 = events[new Date(date)];
         alert(events2.text);
@@ -125,6 +131,7 @@ $("#datepicker-check-rooom").datepicker({
 });
 </code>
                 </pre>
+                </div>
             </div>
         </div>
         <br> <br>
@@ -181,6 +188,7 @@ $("#datepicker-check-rooom").datepicker({
                 // defaultDate: "02/28/2023",
                 // changeMonth: true,
                 // changeYear: true,
+                numberOfMonths: 2,
                 onSelect: function (date) {
                     var events2 = events[new Date(date)];
                     alert(events2.text);
