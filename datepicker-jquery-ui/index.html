@@ -63,6 +63,68 @@ $('.datepicker').each(function (key, item) {
                 <h4>Demo</h4>
                 <input type="text" class="datepicker_min_today datepicker">
                 <input type="text" class="datepicker_min_today datepicker">
+
+                <br> <br>
+                <h3>
+                    How to display events for a day in jquery datepicker
+                    <a target="_blank" href="https://jsfiddle.net/gtxzom8s/3/">link</a>
+                </h3>
+                <pre>
+<code>
+// Css Datepicker
+.ui-datepicker {
+    td {
+        &.blue {
+            a {
+                background-color: $color_primary;
+                color: #fff;
+            }
+        }
+
+        &.red {
+            a {
+                background-color: $color_red;
+                color: #fff;
+            }
+        }
+    }
+}
+</code>
+                </pre>
+
+                <pre>
+<code>
+// Datepicker Check Rooom
+var Event = function (text, className) {
+    this.text = text;
+    this.className = className;
+};
+
+var events = {};
+events[new Date("02/24/2023")] = new Event("Có khuyến mãi", "blue");
+events[new Date("02/28/2023")] = new Event("Hết phòng", "red");
+
+$("#datepicker-check-rooom").datepicker({
+    // defaultDate: "02/28/2023",
+    // changeMonth: true,
+    // changeYear: true,
+    onSelect: function (date) {
+        var events2 = events[new Date(date)];
+        alert(events2.text);
+        //list the events in #dateeventDIV
+    },
+    beforeShowDay: function (date) {
+        var event = events[date];
+        if (event) {
+            return [true, event.className, event.text];
+        }
+        else {
+            return [true, '', ''];
+        }
+    }
+});
+</code>
+                </pre>
             </div>
         </div>
         <br> <br>
@@ -102,6 +164,37 @@ $('.datepicker').each(function (key, item) {
             $(".datepicker").datepicker({
                 dateFormat: "dd/mm/yy",
                 minDate: 0,
+            });
+
+
+            // Datepicker Check Rooom
+            var Event = function (text, className) {
+                this.text = text;
+                this.className = className;
+            };
+
+            var events = {};
+            events[new Date("02/24/2023")] = new Event("Có khuyến mãi", "blue");
+            events[new Date("02/28/2023")] = new Event("Hết phòng", "red");
+
+            $("#datepicker-check-rooom").datepicker({
+                // defaultDate: "02/28/2023",
+                // changeMonth: true,
+                // changeYear: true,
+                onSelect: function (date) {
+                    var events2 = events[new Date(date)];
+                    alert(events2.text);
+                    //list the events in #dateeventDIV
+                },
+                beforeShowDay: function (date) {
+                    var event = events[date];
+                    if (event) {
+                        return [true, event.className, event.text];
+                    }
+                    else {
+                        return [true, '', ''];
+                    }
+                }
             });
 
         });
