@@ -72,7 +72,8 @@ $('.datepicker').each(function (key, item) {
                     <br> <br>
                     <h3>
                         How to display events for a day in jquery datepicker
-                        <a target="_blank" href="https://jsfiddle.net/gtxzom8s/3/">link</a>
+                        <a target="_blank" href="https://codepen.io/jakecigar/pen/vWJLZr">Link Source</a>
+                        <a target="_blank" href="https://jsfiddle.net/gtxzom8s/3/">link tham khảo</a>
                     </h3>
                     <pre>
 <code>
@@ -100,35 +101,47 @@ $('.datepicker').each(function (key, item) {
                     <pre>
 <code>
 // Datepicker Check Rooom
-var Event = function (text, className) {
-    this.text = text;
-    this.className = className;
-};
-
-var events = {};
-events[new Date("02/24/2023")] = new Event("Có khuyến mãi", "blue");
-events[new Date("02/28/2023")] = new Event("Hết phòng", "red");
+var events = [
+    {
+        Date: new Date("02/24/2023"),
+        text: "Evento 1",
+        className: 'blue'
+    },
+    {
+        Date: new Date("03/10/2023"),
+        text: "Hết Phòng",
+        className: 'red'
+    },
+    {
+        Date: new Date("03/11/2023"),
+        text: "Hết Phòng",
+        className: 'red'
+    },
+    {
+        Date: new Date("03/12/2023"),
+        text: "Hết Phòng",
+        className: 'red'
+    },
+]
 
 $("#datepicker-check-rooom").datepicker({
     // defaultDate: "02/28/2023",
     // changeMonth: true,
-    // changeYear: true,
+    // changeYear: true, 
     numberOfMonths: 2,
-    onSelect: function (date) {
-        var events2 = events[new Date(date)];
-        alert(events2.text);
-        //list the events in #dateeventDIV
-    },
+
     beforeShowDay: function (date) {
-        var event = events[date];
-        if (event) {
-            return [true, event.className, event.text];
+        var result = [true, "", null];
+        var matching = $.grep(events, function (event) {
+            return event.Date.valueOf() === date.valueOf();
+        });
+        if (matching.length) {
+            result = [true, matching[0].className, matching[0].text];
         }
-        else {
-            return [true, '', ''];
-        }
+        return result;
     }
 });
+
 </code>
                 </pre>
                 </div>
@@ -175,33 +188,44 @@ $("#datepicker-check-rooom").datepicker({
 
 
             // Datepicker Check Rooom
-            var Event = function (text, className) {
-                this.text = text;
-                this.className = className;
-            };
-
-            var events = {};
-            events[new Date("02/24/2023")] = new Event("Có khuyến mãi", "blue");
-            events[new Date("02/28/2023")] = new Event("Hết phòng", "red");
+            var events = [
+                {
+                    Date: new Date("02/24/2023"),
+                    text: "Evento 1",
+                    className: 'blue'
+                },
+                {
+                    Date: new Date("03/10/2023"),
+                    text: "Hết Phòng",
+                    className: 'red'
+                },
+                {
+                    Date: new Date("03/11/2023"),
+                    text: "Hết Phòng",
+                    className: 'red'
+                },
+                {
+                    Date: new Date("03/12/2023"),
+                    text: "Hết Phòng",
+                    className: 'red'
+                },
+            ]
 
             $("#datepicker-check-rooom").datepicker({
                 // defaultDate: "02/28/2023",
                 // changeMonth: true,
-                // changeYear: true,
+                // changeYear: true, 
                 numberOfMonths: 2,
-                onSelect: function (date) {
-                    var events2 = events[new Date(date)];
-                    alert(events2.text);
-                    //list the events in #dateeventDIV
-                },
+
                 beforeShowDay: function (date) {
-                    var event = events[date];
-                    if (event) {
-                        return [true, event.className, event.text];
+                    var result = [true, "", null];
+                    var matching = $.grep(events, function (event) {
+                        return event.Date.valueOf() === date.valueOf();
+                    });
+                    if (matching.length) {
+                        result = [true, matching[0].className, matching[0].text];
                     }
-                    else {
-                        return [true, '', ''];
-                    }
+                    return result;
                 }
             });
 
