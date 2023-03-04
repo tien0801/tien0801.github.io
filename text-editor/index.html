@@ -135,9 +135,7 @@
 	<code>
 $(document).ready(function() {
 	if($(".t-text-editor").length > 0) {
-		$(".t-text-editor table").wrap(" 
-		<b> &#60;div class='table-responsive'&#62; Add Code here &#60;/div&#62;</b><!-- <div class='table-responsive'></div> -->
-		");
+		$(".t-text-editor table").wrap("<b> &#60;div class='table-responsive'&#62; Add Code here &#60;/div&#62;</b><!-- <div class='table-responsive'></div> -->");
 		$(".t-text-editor iframe").wrap("<b>Add Code here</b><!-- <div class='box-iframe'></div> -->");
 	}
 });
