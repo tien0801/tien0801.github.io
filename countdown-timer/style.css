@@ -1,21 +1,21 @@
-.y-box-countdown {
+.t-box-countdown {
 	display: block;
 	width: max-content;
-	margin: 20px 0;
+	margin: 20px auto;
 }
 
-.y-box-countdown .item-countdown {
+.t-box-countdown .item-countdown {
 	display: inline-block;
 	width: auto;
 	text-align: center;
 	margin-right: 15px;
 }
 
-.y-box-countdown .item-countdown:last-child {
+.t-box-countdown .item-countdown:last-child {
 	margin-right: 0;
 }
 
-.y-box-countdown .value-countdown {
+.t-box-countdown .value-countdown {
 	width: 70px;
 	padding: 5px;
 	font-size: 25px;
@@ -24,7 +24,7 @@
 	color: #166c4d;
 }
 
-.y-box-countdown .title-countdown {
+.t-box-countdown .title-countdown {
 	margin-top: 5px;
 }
 
@@ -33,7 +33,7 @@
 }
 
 @media (max-width: 767px) {
-	.y-box-countdown .value-countdown {
+	.t-box-countdown .value-countdown {
 		width: 50px;
 		padding: 5px;
 		font-size: 20px;

@@ -1,0 +1,41 @@
+.t-box-countdown {
+	display: block;
+	width: max-content;
+	margin: 20px auto;
+
+	.item-countdown {
+		display: inline-block;
+		width: auto;
+		text-align: center;
+		margin-right: 15px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.value-countdown {
+		width: 70px;
+		padding: 5px;
+		font-size: 25px;
+		font-weight: bold;
+		border: 1px solid #166c4d;
+		color: #166c4d;
+	}
+
+	.title-countdown {
+		margin-top: 5px;
+	}
+}
+
+.countdow-timer {
+	font-size: 50px;
+}
+
+@media (max-width: 767px) {
+	.t-box-countdown .value-countdown {
+		width: 50px;
+		padding: 5px;
+		font-size: 20px;
+	}
+}

@@ -10,6 +10,7 @@
 	<title>VBT Frontend</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="../assets/css/css-common.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 
@@ -19,9 +20,10 @@
 		<br>
 		<div class="row">
 			<div class="col-md-6">
-				<h3>Countdown Timer Days: <a href="https://www.w3schools.com/howto/howto_js_countdown.asp"
-						target="_blank">Source code</a></h3>
-				<div class="y-box-countdown">
+				<h3>Countdown Timer Days:
+					<a href="https://www.w3schools.com/howto/howto_js_countdown.asp" target="_blank">Source code</a>
+				</h3>
+				<div class="t-box-countdown">
 					<div class="item-countdown">
 						<div class="value-countdown ds-days" id="t-days">00</div>
 						<div class="title-countdown">Days</div>
@@ -41,6 +43,91 @@
 				</div>
 				<!-- Display the countdown timer in an element -->
 				<p id="demo"></p>
+
+				<pre>
+<code>
+// Set the date we're counting down to
+// var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+var countDownDate = new Date("5/25/2024 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function () {
+
+	// Get todays date and time
+	var now = new Date().getTime();
+
+	// Find the distance between now and the count down date
+	var distance = countDownDate - now;
+
+	// Time calculations for days, hours, minutes and seconds
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+	if (days < 10) {
+		days = '0' + days;
+	}
+	if (hours < 10) {
+		hours = '0' + hours;
+	}
+	if (minutes < 10) {
+		minutes = '0' + minutes;
+	}
+	if (seconds < 10) {
+		seconds = '0' + seconds;
+	}
+
+	// Output the result in an element with id="demo"
+	// document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+	document.getElementById("t-days").innerHTML = days;
+	document.getElementById("t-hours").innerHTML = hours;
+	document.getElementById("t-minutes").innerHTML = minutes;
+	document.getElementById("t-seconds").innerHTML = seconds;
+
+	// If the count down is over, write some text 
+	if (distance < 0) {
+		clearInterval(x);
+		document.getElementById("demo").innerHTML = "EXPIRED";
+	}
+}, 100);
+</code>
+				</pre>
+
+				<h3>Css</h3>
+				<pre>
+<code>
+.t-box-countdown {
+	display: block;
+	width: max-content;
+	margin: 20px auto;
+
+	.item-countdown {
+		display: inline-block;
+		width: auto;
+		text-align: center;
+		margin-right: 15px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.value-countdown {
+		width: 70px;
+		padding: 5px;
+		font-size: 25px;
+		font-weight: bold;
+		border: 1px solid #166c4d;
+		color: #166c4d;
+	}
+
+	.title-countdown {
+		margin-top: 5px;
+	}
+}
+</code>
+				</pre>
 			</div>
 			<div class="col-md-6">
 				<h3>Countdown Timer Hours: <a href="https://jsfiddle.net/c6jbntLe/" target="_blank">Source Code</a></h3>
