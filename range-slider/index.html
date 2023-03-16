@@ -6,7 +6,7 @@
     <meta name='revisit-after' content='1 days' />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Content-Language" content="vi">
-    <title>VBT Frontend</title>
+    <title>MeoCode - Frontend</title>
     <link rel="shortcut icon" href="../assets/images/Logo-MeoCode.png" type="image/gif">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css">
@@ -22,6 +22,22 @@
             width: 100%;
             outline: none;
             accent-color: #F55050;
+        }
+
+        .list-amount {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .list-amount input {
+            width: 50%;
+            border: 0;
+            font-size: 0.85rem;
+        }
+
+        .list-amount input:last-child {
+            text-align: right;
         }
     </style>
 </head>
@@ -52,11 +68,11 @@ $(".slide-criteria").on("input change", function () {
 
             <!-- V2 custom -->
             <div class="col-lg-6">
-                <p>
-                    <label for="amount">Price range:</label>
-                    <input type="text" id="amount-1" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                </p>
-                <div id="slider-range-1" data-min="0" data-max="600" data-vmin="100" data-vmax="300"></div>
+                <div class="list-amount">
+                    <input type="text" id="amount-min" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                    <input type="text" id="amount-max" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                </div>
+                <div id="slider-range-1" data-min="0" data-max="3000000" data-vmin="10000" data-vmax="3000000"></div>
 
                 <br><br>
 
@@ -85,6 +101,10 @@ $(".slide-criteria").on("input change", function () {
                 $(this).parent().find('.number').text(val_slide);
             });
 
+            function CurrencyFormat(el) {
+                return el.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+            }
+
             //js slider-range-1
             if ($("#slider-range-1").length) {
                 var min = $("#slider-range-1").data('min');
@@ -98,11 +118,12 @@ $(".slide-criteria").on("input change", function () {
                     max: max,
                     values: [vmin, vmax],
                     slide: function (event, ui) {
-                        $("#amount-1").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                        $("#amount-min").val("vnđ " + CurrencyFormat(ui.values[0]));
+                        $("#amount-max").val("vnđ " + CurrencyFormat(ui.values[1]));
                     }
                 });
-                $("#amount-1").val("$" + $("#slider-range-1").slider("values", 0) +
-                    " - $" + $("#slider-range-1").slider("values", 1));
+                $("#amount-min").val("vnđ " + CurrencyFormat($("#slider-range-1").slider("values", 0)));
+                $("#amount-max").val("vnđ " + CurrencyFormat($("#slider-range-1").slider("values", 1)));
             }
 
         });
@@ -126,9 +147,9 @@ $(".slide-criteria").on("input change", function () {
                         let _html = ``;
                         if (ui.values[0] > 999) {
                             ui.values[0] /= 1000;
-                            unit = "tỉ";
+                            unit = " tỉ";
                         } else {
-                            unit = "triệu";
+                            unit = " triệu";
                         }
                         _html += ui.values[0] + unit + " - ";
 
