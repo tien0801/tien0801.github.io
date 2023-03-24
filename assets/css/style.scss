@@ -1,9 +1,12 @@
 @import "../css/common.scss";
+html {
+    font-size: 16px;
+}
+
 body {
     position: relative;
     font-family: "Roboto";
     background-color: #000;
-    // overflow: hidden;
 }
 
 img {
@@ -299,13 +302,16 @@ p {
     .list-project {
         display: flex;
         flex-wrap: wrap;
-        gap: 16px 20px;
+        gap: 1.2rem 20px;
 
         .item {
-            width: 20%;
+            width: calc(25% - 15px);
             display: flex;
             justify-content: center;
+            padding: 10px;
             transition: all 0.5s;
+            // border: 1px solid #ddd;
+            box-shadow: 0 1px 3px 0 rgba(27, 27, 27, 0.1);
 
             @include Responsive(XS) {
                 width: calc(50% - 20px);
