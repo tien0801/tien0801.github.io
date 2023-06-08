@@ -1,50 +1,87 @@
-// Customize.js
-/* Sticky Menu */
-window.onscroll = function () { myFunction() };
-var header = document.getElementById("sticky-top");
-var sticky = header.offsetTop;
 
-function myFunction() {
-    if (window.pageYOffset > sticky) {
-        header.classList.add("sticky");
-    } else {
-        header.classList.remove("sticky");
-    }
-}
+$(document).ready(function () {
+    // Scroll to Top Button
+    $(".scroll-top-btn").click(function () {
+        $("html, body").scrollTop({ top: 0, behavior: "smooth" });
+        return false;
+    })
 
-let items = document.querySelectorAll('.vehicle .carousel-item')
-
-items.forEach((el) => {
-    const minPerSlide = 4
-    let next = el.nextElementSibling
-    for (var i = 1; i < minPerSlide; i++) {
-        if (!next) {
-            // wrap carousel by using first child
-            next = items[0]
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 300) {
+            $(".scroll-top-btn").addClass("visible");
+        } else {
+            $(".scroll-top-btn").removeClass("visible");
         }
-        let cloneChild = next.cloneNode(true)
-        el.appendChild(cloneChild.children[0])
-        next = next.nextElementSibling
+    });
+
+    // Scroll to Target
+    $(".scroll-to-target[href^='#']").on("click", function (scroll_to_target) {
+        scroll_to_target.preventDefault();
+        var a = this.hash,
+            i = $(a);
+        $("html, body").stop().animate({
+            scrollTop: i.offset().top - 140
+        }, 1000, "swing", function () { })
+        // $("html, body").stop().scrollTop({ top: i.offset().top - 71, behavior: "smooth" });
+    })
+
+
+    if ($(".t-text-editor").length > 0) {
+        $(".t-text-editor table").wrap("<div class='table-responsive'></div>");
+        $(".t-text-editor iframe").wrap("<div class='box-iframe'></div>");
     }
+
 })
 
-function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
+// Customize.js
+$(document).ready(function () {
+    /* Sticky Menu */
+    window.onscroll = function () { myFunction() };
+    var header = document.getElementById("sticky-top");
+    var sticky = header.offsetTop;
 
-    for (var i = 0; i < reveals.length; i++) {
-        var windowHeight = window.innerHeight;
-        var elementTop = reveals[i].getBoundingClientRect().top;
-        var elementVisible = 100;
-
-        if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
         } else {
-            reveals[i].classList.remove("active");
+            header.classList.remove("sticky");
         }
     }
-}
 
-// window.addEventListener("scroll", reveal);
+    let items = document.querySelectorAll('.vehicle .carousel-item')
+
+    items.forEach((el) => {
+        const minPerSlide = 4
+        let next = el.nextElementSibling
+        for (var i = 1; i < minPerSlide; i++) {
+            if (!next) {
+                // wrap carousel by using first child
+                next = items[0]
+            }
+            let cloneChild = next.cloneNode(true)
+            el.appendChild(cloneChild.children[0])
+            next = next.nextElementSibling
+        }
+    })
+
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 100;
+
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            } else {
+                reveals[i].classList.remove("active");
+            }
+        }
+    }
+
+    // window.addEventListener("scroll", reveal);
+})
 
 // New Js
 $(document).ready(function () {
@@ -149,6 +186,12 @@ $(document).ready(function () {
 
 // JS Update
 $(document).ready(function () {
+    // Initialize tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
     // Noti on top Header
     $('.btn-close-sticky').click(function () {
         $(this).parents('.noti-sticky').addClass('hide');
@@ -160,7 +203,7 @@ $(document).ready(function () {
         $(this).toggleClass('icon_heart_solid');
     })
 
-
+    // Slider
     if ($('.js-vehicle-slider').length > 0) {
         $('.js-vehicle-slider').owlCarousel({
             loop: true,
@@ -233,6 +276,7 @@ $(document).ready(function () {
             }
         })
     }
+
     // Set min Datapicker
     var t_day = new Date();
     var val_today = t_day.getDate() + "/" + (t_day.getMonth() + 1) + "/" + t_day.getFullYear();
@@ -366,3 +410,4 @@ $(document).ready(function () {
     })
 
 })
+

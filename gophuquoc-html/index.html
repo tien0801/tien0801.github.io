@@ -41,13 +41,13 @@
   <header class="header">
     <div class="wrapper-contain">
       <!--top section-->
-      <div class="top-sect d-flex">
-        <div class="ms-auto">
+      <div class="top-header">
+        <div class="box-left">
           <!--languages box-->
           <div class="lang-box dropdown me-3">
             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <div class="lang-item">
-                <img src="src/images/flags/flag-vie.png" alt="vietnam language"> <span class="txt">Việt Nam</span>
+                <img src="src/images/flags/flag-vie.png" alt="vietnam language"> <span class="txt">Vietnamese</span>
               </div>
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
@@ -82,7 +82,7 @@
               <li>
                 <button class="dropdown-item" type="button">
                   <div class="lang-item">
-                    <img src="src/images/flags/flag-vie.png" alt="vietnam language"> <span class="txt">Việt Nam</span>
+                    <img src="src/images/flags/flag-vie.png" alt="vietnam language"> <span class="txt">Vietnamese</span>
                   </div>
                 </button>
               </li>
@@ -133,15 +133,16 @@
               </li>
             </ul>
           </div>
-          <div class="box-loggin">
-            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signup">
-              Đăng ký</button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signin">
-              Đăng nhập
-            </button>
-          </div>
+        </div>
+        <div class="box-loggin">
+          <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#signup">
+            Đăng ký</button>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signin">
+            Đăng nhập
+          </button>
         </div>
       </div>
+
       <!-- navbar -->
       <div class="menu-header" data-bs-spy="scroll" data-bs-offset="0">
         <nav class="navbar navbar-expand-sm sticky-top" id="sticky-top">
@@ -235,9 +236,9 @@
                   <div class="col-xl-3 col-lg-3 col-md-12">
                     <label for="" class="form-label">Nơi đến</label>
                     <div class="box-search-autocomplete">
-                      <div class="input-group">
-                        <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
-                        <input type="text" class="input-autocomplete form-control border-start-0 ps-2"
+                      <div class="input-group has-icon">
+                        <span class="input-group-icon icon-location fs-6"></span>
+                        <input type="text" class="input-autocomplete form-control"
                           placeholder="Tìm kiếm theo khách sạn hoặc điểm đến" aria-label="" aria-describedby="">
                       </div>
                       <div class="result-search-autocomplete">
@@ -259,6 +260,12 @@
                         <div class="item-result">
                           <div class="text">Bãi Ông Lang, xã Cửa Dương, tp.Phú Quốc, tỉnh Kiên Giang </div>
                         </div>
+                        <div class="item-result">
+                          <div class="text">Bãi Ông Lang, xã Cửa Dương, tp.Phú Quốc, tỉnh Kiên Giang </div>
+                        </div>
+                        <div class="item-result">
+                          <div class="text">Bãi Ông Lang, xã Cửa Dương, tp.Phú Quốc, tỉnh Kiên Giang </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -267,20 +274,18 @@
                     <div class="row">
                       <div class="col-lg-6 col-md-6">
                         <label for="checkin" class="form-label">Nhận phòng</label>
-                        <div class="input-group">
-                          <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                          <input id="datepicker" type="text" min=""
-                            class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
-                            aria-label="" aria-describedby="checkin">
+                        <div class="input-group has-icon">
+                          <span class="input-group-icon icon-calendar fs-6"></span>
+                          <input id="datepicker" type="text" min="" class="datepicker_min_today form-control"
+                            placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
                         </div>
                       </div>
                       <div class="col-lg-6 col-md-6">
                         <label for="checkout" class="form-label">Trả phòng</label>
-                        <div class="input-group">
-                          <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                          <input id="datepicker-2" type="text" min=""
-                            class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
-                            aria-label="" aria-describedby="checkout">
+                        <div class="input-group has-icon">
+                          <span class="input-group-icon icon-calendar fs-6"></span>
+                          <input id="datepicker-2" type="text" min="" class="datepicker_min_today form-control"
+                            placeholder="20/10/2022" aria-label="" aria-describedby="checkout">
                         </div>
                       </div>
                     </div>
@@ -288,10 +293,10 @@
 
                   <div class="col-xl-3 col-lg-3 col-md-12">
                     <label for="guest-room" class="form-label"> Khách & Phòng</label>
-                    <div class="input-group t-input-custom">
-                      <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="t-input form-control border-start-0 ps-2"
-                        placeholder="Chọn khách & phòng" readonly aria-label="" aria-describedby="guest-room">
+                    <div class="input-group has-icon t-input-custom">
+                      <span class="input-group-icon icon-user01 fs-6"></span>
+                      <input type="text" class="t-input form-control" placeholder="Chọn khách & phòng" readonly
+                        aria-label="" aria-describedby="guest-room">
                       <div class="options-custom">
                         <div class="row item align-items-center">
                           <div class="col-6">
@@ -300,7 +305,7 @@
                           <div class="col-6">
                             <div class="t-box-quantity t-number-people">
                               <a href="javascript:;" class="t-minus">-</a>
-                              <!-- <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span> -->
+                              <!-- <span class="input-group-icon icon-user01 fs-6"></span> -->
                               <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
@@ -317,7 +322,7 @@
                           <div class="col-6">
                             <div class="t-box-quantity t-number-children">
                               <a href="javascript:;" class="t-minus">-</a>
-                              <!-- <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span> -->
+                              <!-- <span class="input-group-icon icon-user01 fs-6"></span> -->
                               <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
@@ -334,7 +339,7 @@
                           <div class="col-6">
                             <div class="t-box-quantity t-number-room">
                               <a href="javascript:;" class="t-minus">-</a>
-                              <!-- <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span> -->
+                              <!-- <span class="input-group-icon icon-user01 fs-6"></span> -->
                               <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
@@ -349,7 +354,7 @@
                           <div class="wrapper-box-quantity">
                             <div class="t-box-quantity">
                               <a href="javascript:;" class="t-minus">-</a>
-                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <span class="input-group-icon icon-user01 fs-6"></span>
                               <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
@@ -376,39 +381,36 @@
                 <div class="row justify-content-center">
                   <div class="col-xl-2 col-lg-2 col-md-6">
                     <label for="" class="form-label">Đi từ</label>
-                    <div class="input-group" id="">
-                      <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-start-0 ps-2"
-                        placeholder="Tìm kiếm theo khách sạn hoặc điểm đến" aria-label="" aria-describedby="">
+                    <div class="input-group has-icon">
+                      <span class="input-group-icon icon-location fs-6"></span>
+                      <input type="text" class="form-control" placeholder="Tìm kiếm theo khách sạn hoặc điểm đến"
+                        aria-label="" aria-describedby="">
                     </div>
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-6">
                     <label for="" class="form-label">Nơi đến</label>
-                    <div class="input-group" id="">
-                      <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-start-0 ps-2"
-                        placeholder="Tìm kiếm theo khách sạn hoặc điểm đến" aria-label=""
-                        aria-describedby="destination">
+                    <div class="input-group has-icon">
+                      <span class="input-group-icon icon-location fs-6"></span>
+                      <input type="text" class="form-control" placeholder="Tìm kiếm theo khách sạn hoặc điểm đến"
+                        aria-label="" aria-describedby="destination">
                     </div>
                   </div>
                   <div class="col-xl-3 col-lg-3">
                     <div class="row">
                       <div class="col-xl-6 col-lg-6 col-md-6">
                         <label for="checkin" class="form-label">Khởi hành</label>
-                        <div class="input-group">
-                          <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                          <input id="datepicker-3" type="text" min=""
-                            class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
-                            aria-label="" aria-describedby="checkin">
+                        <div class="input-group has-icon">
+                          <span class="input-group-icon icon-calendar fs-6"></span>
+                          <input id="datepicker-3" type="text" min="" class="datepicker_min_today form-control"
+                            placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
                         </div>
                       </div>
                       <div class="col-xl-6 col-lg-6 col-md-6">
                         <label for="checkout" class="form-label">Trở về</label>
-                        <div class="input-group">
-                          <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                          <input id="datepicker-4" type="text" min=""
-                            class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
-                            aria-label="" aria-describedby="checkout">
+                        <div class="input-group has-icon">
+                          <span class="input-group-icon icon-calendar fs-6"></span>
+                          <input id="datepicker-4" type="text" min="" class="datepicker_min_today form-control"
+                            placeholder="20/10/2022" aria-label="" aria-describedby="checkout">
                         </div>
                       </div>
                     </div>
@@ -416,10 +418,10 @@
 
                   <div class="col-xl-3 col-lg-3">
                     <label for="guest-room" class="form-label">Số Khách</label>
-                    <div class="input-group t-input-custom">
-                      <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="t-input form-control border-start-0 ps-2"
-                        placeholder="Chọn số lượng khách" readonly aria-label="" aria-describedby="guest-room">
+                    <div class="input-group has-icon t-input-custom">
+                      <span class="input-group-icon icon-user01 fs-6"></span>
+                      <input type="text" class="t-input form-control" placeholder="Chọn số lượng khách" readonly
+                        aria-label="" aria-describedby="guest-room">
                       <div class="options-custom">
                         <div class="row item align-items-center">
                           <div class="col-6">
@@ -428,7 +430,7 @@
                           <div class="col-6">
                             <div class="t-box-quantity t-number-people">
                               <a href="javascript:;" class="t-minus">-</a>
-                              <!-- <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span> -->
+                              <!-- <span class="input-group-icon icon-user01 fs-6"></span> -->
                               <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
@@ -445,7 +447,7 @@
                           <div class="col-6">
                             <div class="t-box-quantity t-number-children">
                               <a href="javascript:;" class="t-minus">-</a>
-                              <!-- <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span> -->
+                              <!-- <span class="input-group-icon icon-user01 fs-6"></span> -->
                               <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
@@ -462,7 +464,7 @@
                           <div class="col-6">
                             <div class="t-box-quantity t-number-kid">
                               <a href="javascript:;" class="t-minus">-</a>
-                              <!-- <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span> -->
+                              <!-- <span class="input-group-icon icon-user01 fs-6"></span> -->
                               <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
@@ -477,7 +479,7 @@
                           <div class="wrapper-box-quantity">
                             <div class="t-box-quantity">
                               <a href="javascript:;" class="t-minus">-</a>
-                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <span class="input-group-icon icon-user01 fs-6"></span>
                               <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
@@ -490,7 +492,7 @@
                           <div class="wrapper-box-quantity">
                             <div class="t-box-quantity">
                               <a href="javascript:;" class="t-minus">-</a>
-                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <span class="input-group-icon icon-user01 fs-6"></span>
                               <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
@@ -503,7 +505,7 @@
                           <div class="wrapper-box-quantity">
                             <div class="t-box-quantity">
                               <a href="javascript:;" class="t-minus">-</a>
-                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <span class="input-group-icon icon-user01 fs-6"></span>
                               <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
@@ -531,9 +533,9 @@
                   <div class="col-xl-3 col-lg-3 col-md-6">
                     <label for="destination" class="form-label">Nơi đến</label>
                     <div class="box-search-autocomplete">
-                      <div class="input-group">
-                        <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
-                        <input type="text" class="input-autocomplete form-control border-start-0 ps-2"
+                      <div class="input-group has-icon">
+                        <span class="input-group-icon icon-location fs-6"></span>
+                        <input type="text" class="input-autocomplete form-control"
                           placeholder="Tìm kiếm theo tên thành phố" aria-label="" aria-describedby="">
                       </div>
                       <div class="result-search-autocomplete">
@@ -558,7 +560,7 @@
                   <div class="col-xl-2 col-lg-2 col-md-6">
                     <label for="checkin" class="form-label">Loại Tour</label>
                     <div class="input-group">
-                      <!-- <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span> -->
+                      <!-- <span class="input-group-icon icon-calendar fs-6"></span> -->
                       <select class="form-control" name="" id="">
                         <option selected disabled>Chọn loại Tour</option>
                         <option value="">Tour Riêng Tư</option>
@@ -580,19 +582,18 @@
                   </div>
                   <div class="col-xl-2 col-lg-2 col-md-6">
                     <label for="checkin" class="form-label">Khởi hành</label>
-                    <div class="input-group">
-                      <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                      <input id="datepicker-5" type="text" min=""
-                        class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
-                        aria-label="" aria-describedby="checkin">
+                    <div class="input-group has-icon">
+                      <span class="input-group-icon icon-calendar fs-6"></span>
+                      <input id="datepicker-5" type="text" min="" class="datepicker_min_today form-control"
+                        placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
                     </div>
                   </div>
                   <div class="col-xl-3 col-lg-3 col-md-6">
                     <label for="guest-room" class="form-label">Số Khách</label>
-                    <div class="input-group t-input-custom">
-                      <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="t-input form-control border-start-0 ps-2"
-                        placeholder="Chọn số lượng khách" readonly aria-label="" aria-describedby="guest-room">
+                    <div class="input-group has-icon t-input-custom">
+                      <span class="input-group-icon icon-user01 fs-6"></span>
+                      <input type="text" class="t-input form-control" placeholder="Chọn số lượng khách" readonly
+                        aria-label="" aria-describedby="guest-room">
                       <div class="options-custom">
                         <div class="row item align-items-center">
                           <div class="col-6">
@@ -601,7 +602,7 @@
                           <div class="col-6">
                             <div class="t-box-quantity t-number-people">
                               <a href="javascript:;" class="t-minus">-</a>
-                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <span class="input-group-icon icon-user01 fs-6"></span>
                               <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
@@ -618,7 +619,7 @@
                           <div class="col-6">
                             <div class="t-box-quantity t-number-children">
                               <a href="javascript:;" class="t-minus">-</a>
-                              <span class="input-group-icon icon-user01 fs-6 border-end-0 pe-0"></span>
+                              <span class="input-group-icon icon-user01 fs-6"></span>
                               <input class="t-input-quantity form-control" readonly type="text" value="0" />
                               <a href="javascript:;" class="t-plus">+</a>
                             </div>
@@ -646,19 +647,19 @@
                 <div class="row justify-content-center">
                   <div class="col-xl-2 col-lg-2 col-md-6">
                     <label for="destination" class="form-label">Điểm nhận</label>
-                    <div class="input-group" id="destination">
-                      <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-start-0 ps-2" placeholder="Nhập điểm nhận xe"
-                        aria-label="" aria-describedby="destination">
+                    <div class="input-group has-icon" id="destination">
+                      <span class="input-group-icon icon-location fs-6"></span>
+                      <input type="text" class="form-control" placeholder="Nhập điểm nhận xe" aria-label=""
+                        aria-describedby="destination">
                     </div>
                   </div>
 
                   <div class="col-xl-2 col-lg-2 col-md-6">
                     <label for="destination" class="form-label">Điểm trả</label>
-                    <div class="input-group" id="destination">
-                      <span class="input-group-icon icon-location fs-6 border-end-0 pe-0"></span>
-                      <input type="text" class="form-control border-start-0 ps-2" placeholder="Nhập điểm trả xe"
-                        aria-label="" aria-describedby="destination">
+                    <div class="input-group has-icon" id="destination">
+                      <span class="input-group-icon icon-location fs-6"></span>
+                      <input type="text" class="form-control" placeholder="Nhập điểm trả xe" aria-label=""
+                        aria-describedby="destination">
                     </div>
                   </div>
 
@@ -666,11 +667,10 @@
                     <div class="row justify-content-center">
                       <div class="col-lg-3 col-md-4">
                         <label for="checkin" class="form-label">Ngày nhận</label>
-                        <div class="input-group">
-                          <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                          <input id="datepicker-6" type="text" min=""
-                            class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
-                            aria-label="" aria-describedby="checkin">
+                        <div class="input-group has-icon">
+                          <span class="input-group-icon icon-calendar fs-6"></span>
+                          <input id="datepicker-6" type="text" min="" class="datepicker_min_today form-control"
+                            placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
                         </div>
                       </div>
                       <div class="col-lg-3 col-md-2">
@@ -683,11 +683,10 @@
                       </div>
                       <div class="col-lg-3 col-md-4">
                         <label for="checkin" class="form-label">Ngày trả</label>
-                        <div class="input-group">
-                          <span class="input-group-icon icon-calendar fs-6 border-end-0 pe-0"></span>
-                          <input id="datepicker-7" type="text" min=""
-                            class="datepicker_min_today form-control border-start-0 ps-2" placeholder="20/10/2022"
-                            aria-label="" aria-describedby="checkin">
+                        <div class="input-group has-icon">
+                          <span class="input-group-icon icon-calendar fs-6"></span>
+                          <input id="datepicker-7" type="text" min="" class="datepicker_min_today form-control"
+                            placeholder="20/10/2022" aria-label="" aria-describedby="checkin">
                         </div>
                       </div>
                       <div class="col-lg-3 col-md-2">
@@ -783,18 +782,18 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="row">
-                    <div class="col">
-                      <a href="#" class="y-box-img">
+                    <div class="col-4">
+                      <a href="combo.html" class="y-box-img">
                         <img src="src/images/photos/pt08.jpg" alt="Promotion Tour">
                       </a>
                     </div>
-                    <div class="col">
-                      <a href="#" class="y-box-img">
+                    <div class="col-4">
+                      <a href="combo.html" class="y-box-img">
                         <img src="src/images/photos/pt09.jpg" alt="Promotion Tour">
                       </a>
                     </div>
-                    <div class="col">
-                      <a href="#" class="y-box-img">
+                    <div class="col-4">
+                      <a href="combo.html" class="y-box-img">
                         <img src="src/images/photos/pt10.jpg" alt="Promotion Tour">
                       </a>
                     </div>
@@ -802,18 +801,18 @@
                 </div>
                 <div class="carousel-item">
                   <div class="row">
-                    <div class="col">
-                      <a href="#" class="y-box-img">
+                    <div class="col-4">
+                      <a href="combo.html" class="y-box-img">
                         <img src="src/images/photos/pt09.jpg" alt="Promotion Tour">
                       </a>
                     </div>
-                    <div class="col">
-                      <a href="#" class="y-box-img">
+                    <div class="col-4">
+                      <a href="combo.html" class="y-box-img">
                         <img src="src/images/photos/pt08.jpg" alt="Promotion Tour">
                       </a>
                     </div>
-                    <div class="col">
-                      <a href="#" class="y-box-img">
+                    <div class="col-4">
+                      <a href="combo.html" class="y-box-img">
                         <img src="src/images/photos/pt10.jpg" alt="Promotion Tour">
                       </a>
                     </div>
@@ -821,18 +820,18 @@
                 </div>
                 <div class="carousel-item">
                   <div class="row">
-                    <div class="col">
-                      <a href="#" class="y-box-img">
+                    <div class="col-4">
+                      <a href="combo.html" class="y-box-img">
                         <img src="src/images/photos/pt08.jpg" alt="Promotion Tour">
                       </a>
                     </div>
-                    <div class="col">
-                      <a href="#" class="y-box-img">
+                    <div class="col-4">
+                      <a href="combo.html" class="y-box-img">
                         <img src="src/images/photos/pt10.jpg" alt="Promotion Tour">
                       </a>
                     </div>
-                    <div class="col">
-                      <a href="#" class="y-box-img">
+                    <div class="col-4">
+                      <a href="combo.html" class="y-box-img">
                         <img src="src/images/photos/pt09.jpg" alt="Promotion Tour">
                       </a>
                     </div>
@@ -864,17 +863,17 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="row">
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt08.jpg" alt="Promotion Ticket">
                       </a>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt09.jpg" alt="Promotion Ticket">
                       </a>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt10.jpg" alt="Promotion Ticket">
                       </a>
@@ -900,17 +899,17 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="row">
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt08.jpg" alt="Promotion Room">
                       </a>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt09.jpg" alt="Promotion Room">
                       </a>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt10.jpg" alt="Promotion Room">
                       </a>
@@ -919,17 +918,17 @@
                 </div>
                 <div class="carousel-item">
                   <div class="row">
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt09.jpg" alt="Promotion Room">
                       </a>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt08.jpg" alt="Promotion Room">
                       </a>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt10.jpg" alt="Promotion Room">
                       </a>
@@ -938,17 +937,17 @@
                 </div>
                 <div class="carousel-item">
                   <div class="row">
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt08.jpg" alt="Promotion Roomt">
                       </a>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt10.jpg" alt="Promotion Room">
                       </a>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt09.jpg" alt="Promotion Room">
                       </a>
@@ -981,17 +980,17 @@
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <div class="row">
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt08.jpg" alt="Promotion Other">
                       </a>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt09.jpg" alt="Promotion Other">
                       </a>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt10.jpg" alt="Promotion Other">
                       </a>
@@ -1000,17 +999,17 @@
                 </div>
                 <div class="carousel-item">
                   <div class="row">
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt09.jpg" alt="Promotion Other">
                       </a>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt08.jpg" alt="Promotion Other">
                       </a>
                     </div>
-                    <div class="col">
+                    <div class="col-4">
                       <a href="#" class="y-box-img">
                         <img src="src/images/photos/pt10.jpg" alt="Promotion Other">
                       </a>
@@ -1058,7 +1057,7 @@
                   <div class="align-items-center d-flex mb-0">
                     <div class="">
                       <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>vnđ</span>
                       </p>
                     </div>
                     <div class="ms-auto fn-inter-medium">
@@ -1068,7 +1067,7 @@
                   </div>
                 </div>
               </div>
-              <a href="#" class="position-absolute-href"></a>
+              <a href="hotel.html" class="position-absolute-href"></a>
             </div>
           </div>
           <div class="col-md-6">
@@ -1086,7 +1085,7 @@
                   <div class="align-items-center d-flex mb-0">
                     <div class="">
                       <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>vnđ</span>
                       </p>
                     </div>
                     <div class="ms-auto fn-inter-medium">
@@ -1096,7 +1095,7 @@
                   </div>
                 </div>
               </div>
-              <a href="#" class="position-absolute-href"></a>
+              <a href="hotel.html" class="position-absolute-href"></a>
             </div>
           </div>
           <div class="col-md-6">
@@ -1114,7 +1113,7 @@
                   <div class="align-items-center d-flex mb-0">
                     <div class="">
                       <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>vnđ</span>
                       </p>
                     </div>
                     <div class="ms-auto fn-inter-medium">
@@ -1124,7 +1123,7 @@
                   </div>
                 </div>
               </div>
-              <a href="#" class="position-absolute-href"></a>
+              <a href="hotel.html" class="position-absolute-href"></a>
             </div>
 
           </div>
@@ -1143,7 +1142,7 @@
                   <div class="align-items-center d-flex mb-0">
                     <div class="">
                       <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>vnđ</span>
                       </p>
                     </div>
                     <div class="ms-auto fn-inter-medium">
@@ -1153,7 +1152,7 @@
                   </div>
                 </div>
               </div>
-              <a href="#" class="position-absolute-href"></a>
+              <a href="hotel.html" class="position-absolute-href"></a>
             </div>
 
           </div>
@@ -1174,7 +1173,7 @@
                   <div class="align-items-center d-flex mb-0">
                     <div class="">
                       <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span></p>
+                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>vnđ</span></p>
                     </div>
                     <div class="ms-auto fn-inter-medium">
                       <span class="">15</span>
@@ -1201,7 +1200,7 @@
                   <div class="align-items-center d-flex mb-0">
                     <div class="">
                       <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span></p>
+                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>vnđ</span></p>
                     </div>
                     <div class="ms-auto fn-inter-medium">
                       <span class="">15</span>
@@ -1235,7 +1234,7 @@
                       <div class="align-items-center d-flex mb-0">
                         <div class="">
                           <small class="align-text-top">Giá chỉ từ</small>
-                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>vnđ</span>
                           </p>
                         </div>
                         <div class="ms-auto fn-inter-medium">
@@ -1263,7 +1262,7 @@
                       <div class="align-items-center d-flex mb-0">
                         <div class="">
                           <small class="align-text-top">Giá chỉ từ</small>
-                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>vnđ</span>
                           </p>
                         </div>
                         <div class="ms-auto fn-inter-medium">
@@ -1293,7 +1292,7 @@
                       <div class="align-items-center d-flex mb-0">
                         <div class="">
                           <small class="align-text-top">Giá chỉ từ</small>
-                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>vnđ</span>
                           </p>
                         </div>
                         <div class="ms-auto fn-inter-medium">
@@ -1322,7 +1321,7 @@
                       <div class="align-items-center d-flex mb-0">
                         <div class="">
                           <small class="align-text-top">Giá chỉ từ</small>
-                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>vnđ</span>
                           </p>
                         </div>
                         <div class="ms-auto fn-inter-medium">
@@ -1353,7 +1352,7 @@
                   <div class="align-items-center d-flex mb-0">
                     <div class="">
                       <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span></p>
+                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>vnđ</span></p>
                     </div>
                     <div class="ms-auto fn-inter-medium">
                       <span class="">15</span>
@@ -1371,22 +1370,29 @@
         <!-- Non apply br tag -->
         <br><br><br>
         <!-- Has 7 items -->
-        <div class="row">
-          <div class="col-md-8">
+        <div class="section-7-item row justify-content-center">
+          <div class="col-lg-8 col-md-12">
             <div class="row">
-              <div class="col-md-4">
+              <div class="col-xl-4 col-md-6">
                 <div class="box-size01">
                   <img src="src/images/photos/pt01.jpg" alt="Resort & Spa" class="img-cover size01">
                   <div class="cont-inf">
                     <div class="d-inline-block">
                       <div class="d-flex mb-2">
                         <h5 class="mb-0 fn-inter-semib">Resort & Spa</h5>
+                        <div class="ms-auto align-items-center d-flex">
+                          <span class="icon-eye fs-4 me-1"></span>
+                          <span>12345</span>
+                        </div>
                       </div>
-                      <div class="align-items-center d-flex mb-0">
-                        <div class="">
-                          <small class="align-text-top">Giá chỉ từ</small>
-                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                      <div class="box-price">
+                        <div class="box-left">
+                          <small class="align-text-top">Giá từ</small>
+                          <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                           </p>
+                        </div>
+                        <div class="box-right">
+                          15 điểm lưu trú
                         </div>
                       </div>
                     </div>
@@ -1394,19 +1400,26 @@
                   <a href="#" class="position-absolute-href"></a>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-xl-4 col-md-6">
                 <div class="box-size01">
                   <img src="src/images/photos/pt02.jpg" alt="villa" class="img-cover">
                   <div class="cont-inf">
                     <div class="d-inline-block">
                       <div class="d-flex mb-2">
                         <h5 class="mb-0 fn-inter-semib">Biệt thự nghỉ dưỡng</h5>
+                        <div class="ms-auto align-items-center d-flex">
+                          <span class="icon-eye fs-4 me-1"></span>
+                          <span>12345</span>
+                        </div>
                       </div>
-                      <div class="align-items-center d-flex mb-0">
-                        <div class="">
-                          <small class="align-text-top">Giá chỉ từ</small>
-                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                      <div class="box-price">
+                        <div class="box-left">
+                          <small class="align-text-top">Giá từ</small>
+                          <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                           </p>
+                        </div>
+                        <div class="box-right">
+                          15 điểm lưu trú
                         </div>
                       </div>
                     </div>
@@ -1414,19 +1427,26 @@
                   <a href="#" class="position-absolute-href"></a>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-xl-4 col-md-6">
                 <div class="box-size01">
                   <img src="src/images/photos/pt02.jpg" alt="villa" class="img-cover">
                   <div class="cont-inf">
                     <div class="d-inline-block">
                       <div class="d-flex mb-2">
-                        <h5 class="mb-0 fn-inter-semib">Biệt thự nghỉ dưỡng</h5>
+                        <h5 class="mb-0 fn-inter-semib">Bungalows</h5>
+                        <div class="ms-auto align-items-center d-flex">
+                          <span class="icon-eye fs-4 me-1"></span>
+                          <span>12345</span>
+                        </div>
                       </div>
-                      <div class="align-items-center d-flex mb-0">
-                        <div class="">
-                          <small class="align-text-top">Giá chỉ từ</small>
-                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                      <div class="box-price">
+                        <div class="box-left">
+                          <small class="align-text-top">Giá từ</small>
+                          <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                           </p>
+                        </div>
+                        <div class="box-right">
+                          15 điểm lưu trú
                         </div>
                       </div>
                     </div>
@@ -1434,21 +1454,27 @@
                   <a href="#" class="position-absolute-href"></a>
                 </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
+
+              <div class="col-xl-4 col-md-6">
                 <div class="box-size01">
                   <img src="src/images/photos/pt03.jpg" alt="Resort" class="img-cover">
                   <div class="cont-inf">
                     <div class="d-inline-block">
                       <div class="d-flex mb-2">
-                        <h5 class="mb-0 fn-inter-semib">Khu nghỉ dưỡng</h5>
+                        <h5 class="mb-0 fn-inter-semib">Lưu Trú Dân Dã</h5>
+                        <div class="ms-auto align-items-center d-flex">
+                          <span class="icon-eye fs-4 me-1"></span>
+                          <span>12345</span>
+                        </div>
                       </div>
-                      <div class="align-items-center d-flex mb-0">
-                        <div class="">
-                          <small class="align-text-top">Giá chỉ từ</small>
-                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                      <div class="box-price">
+                        <div class="box-left">
+                          <small class="align-text-top">Giá từ</small>
+                          <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                           </p>
+                        </div>
+                        <div class="box-right">
+                          15 điểm lưu trú
                         </div>
                       </div>
                     </div>
@@ -1457,19 +1483,26 @@
                 </div>
 
               </div>
-              <div class="col-md-4">
+              <div class="col-xl-4 col-md-6">
                 <div class="box-size01">
                   <img src="src/images/photos/pt04.jpg" alt="Bungalow" class="img-cover">
                   <div class="cont-inf">
                     <div class="d-inline-block">
                       <div class="d-flex mb-2">
-                        <h5 class="mb-0 fn-inter-semib">Bungalows</h5>
+                        <h5 class="mb-0 fn-inter-semib">Khu Nghỉ Dưỡng</h5>
+                        <div class="ms-auto align-items-center d-flex">
+                          <span class="icon-eye fs-4 me-1"></span>
+                          <span>12345</span>
+                        </div>
                       </div>
-                      <div class="align-items-center d-flex mb-0">
-                        <div class="">
-                          <small class="align-text-top">Giá chỉ từ</small>
-                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                      <div class="box-price">
+                        <div class="box-left">
+                          <small class="align-text-top">Giá từ</small>
+                          <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                           </p>
+                        </div>
+                        <div class="box-right">
+                          15 điểm lưu trú
                         </div>
                       </div>
                     </div>
@@ -1478,19 +1511,26 @@
                 </div>
 
               </div>
-              <div class="col-md-4">
+              <div class="col-xl-4 col-md-6">
                 <div class="box-size01">
                   <img src="src/images/photos/pt04.jpg" alt="Bungalow" class="img-cover">
                   <div class="cont-inf">
                     <div class="d-inline-block">
                       <div class="d-flex mb-2">
                         <h5 class="mb-0 fn-inter-semib">Bungalows</h5>
+                        <div class="ms-auto align-items-center d-flex">
+                          <span class="icon-eye fs-4 me-1"></span>
+                          <span>12345</span>
+                        </div>
                       </div>
-                      <div class="align-items-center d-flex mb-0">
-                        <div class="">
-                          <small class="align-text-top">Giá chỉ từ</small>
-                          <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                      <div class="box-price">
+                        <div class="box-left">
+                          <small class="align-text-top">Giá từ</small>
+                          <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                           </p>
+                        </div>
+                        <div class="box-right">
+                          15 điểm lưu trú
                         </div>
                       </div>
                     </div>
@@ -1502,7 +1542,7 @@
             </div>
           </div>
 
-          <div class="col-md-4">
+          <div class="col-lg-4 col-md-6">
             <div class="box-size02">
               <img src="src/images/photos/pt05.jpg" alt="Hotel" class="img-cover">
               <div class="cont-inf">
@@ -1517,7 +1557,7 @@
                   <div class="align-items-center d-flex mb-0">
                     <div class="">
                       <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span></p>
+                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>vnđ</span></p>
                     </div>
                     <div class="ms-auto fn-inter-medium">
                       <span class="">15</span>
@@ -1542,12 +1582,19 @@
                 <div class="d-inline-block">
                   <div class="d-flex mb-2">
                     <h5 class="mb-0 fn-inter-semib">Resort & Spa</h5>
+                    <div class="ms-auto align-items-center d-flex">
+                      <span class="icon-eye fs-4 me-1"></span>
+                      <span>12345</span>
+                    </div>
                   </div>
-                  <div class="align-items-center d-flex mb-0">
-                    <div class="">
-                      <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                  <div class="box-price">
+                    <div class="box-left">
+                      <small class="align-text-top">Giá từ</small>
+                      <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                       </p>
+                    </div>
+                    <div class="box-right">
+                      15 điểm lưu trú
                     </div>
                   </div>
                 </div>
@@ -1562,12 +1609,19 @@
                 <div class="d-inline-block">
                   <div class="d-flex mb-2">
                     <h5 class="mb-0 fn-inter-semib">Biệt thự nghỉ dưỡng</h5>
+                    <div class="ms-auto align-items-center d-flex">
+                      <span class="icon-eye fs-4 me-1"></span>
+                      <span>12345</span>
+                    </div>
                   </div>
-                  <div class="align-items-center d-flex mb-0">
-                    <div class="">
-                      <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                  <div class="box-price">
+                    <div class="box-left">
+                      <small class="align-text-top">Giá từ</small>
+                      <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                       </p>
+                    </div>
+                    <div class="box-right">
+                      15 điểm lưu trú
                     </div>
                   </div>
                 </div>
@@ -1582,12 +1636,19 @@
                 <div class="d-inline-block">
                   <div class="d-flex mb-2">
                     <h5 class="mb-0 fn-inter-semib">Biệt thự nghỉ dưỡng</h5>
+                    <div class="ms-auto align-items-center d-flex">
+                      <span class="icon-eye fs-4 me-1"></span>
+                      <span>12345</span>
+                    </div>
                   </div>
-                  <div class="align-items-center d-flex mb-0">
-                    <div class="">
-                      <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                  <div class="box-price">
+                    <div class="box-left">
+                      <small class="align-text-top">Giá từ</small>
+                      <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                       </p>
+                    </div>
+                    <div class="box-right">
+                      15 điểm lưu trú
                     </div>
                   </div>
                 </div>
@@ -1602,12 +1663,19 @@
                 <div class="d-inline-block">
                   <div class="d-flex mb-2">
                     <h5 class="mb-0 fn-inter-semib">Khu nghỉ dưỡng</h5>
+                    <div class="ms-auto align-items-center d-flex">
+                      <span class="icon-eye fs-4 me-1"></span>
+                      <span>12345</span>
+                    </div>
                   </div>
-                  <div class="align-items-center d-flex mb-0">
-                    <div class="">
-                      <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                  <div class="box-price">
+                    <div class="box-left">
+                      <small class="align-text-top">Giá từ</small>
+                      <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                       </p>
+                    </div>
+                    <div class="box-right">
+                      15 điểm lưu trú
                     </div>
                   </div>
                 </div>
@@ -1623,12 +1691,19 @@
                 <div class="d-inline-block">
                   <div class="d-flex mb-2">
                     <h5 class="mb-0 fn-inter-semib">Bungalows</h5>
+                    <div class="ms-auto align-items-center d-flex">
+                      <span class="icon-eye fs-4 me-1"></span>
+                      <span>12345</span>
+                    </div>
                   </div>
-                  <div class="align-items-center d-flex mb-0">
-                    <div class="">
-                      <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                  <div class="box-price">
+                    <div class="box-left">
+                      <small class="align-text-top">Giá từ</small>
+                      <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                       </p>
+                    </div>
+                    <div class="box-right">
+                      15 điểm lưu trú
                     </div>
                   </div>
                 </div>
@@ -1643,12 +1718,19 @@
                 <div class="d-inline-block">
                   <div class="d-flex mb-2">
                     <h5 class="mb-0 fn-inter-semib">Bungalows</h5>
+                    <div class="ms-auto align-items-center d-flex">
+                      <span class="icon-eye fs-4 me-1"></span>
+                      <span>12345</span>
+                    </div>
                   </div>
-                  <div class="align-items-center d-flex mb-0">
-                    <div class="">
-                      <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                  <div class="box-price">
+                    <div class="box-left">
+                      <small class="align-text-top">Giá từ</small>
+                      <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                       </p>
+                    </div>
+                    <div class="box-right">
+                      15 điểm lưu trú
                     </div>
                   </div>
                 </div>
@@ -1663,12 +1745,19 @@
                 <div class="d-inline-block">
                   <div class="d-flex mb-2">
                     <h5 class="mb-0 fn-inter-semib">Bungalows</h5>
+                    <div class="ms-auto align-items-center d-flex">
+                      <span class="icon-eye fs-4 me-1"></span>
+                      <span>12345</span>
+                    </div>
                   </div>
-                  <div class="align-items-center d-flex mb-0">
-                    <div class="">
-                      <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                  <div class="box-price">
+                    <div class="box-left">
+                      <small class="align-text-top">Giá từ</small>
+                      <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                       </p>
+                    </div>
+                    <div class="box-right">
+                      15 điểm lưu trú
                     </div>
                   </div>
                 </div>
@@ -1684,12 +1773,19 @@
                 <div class="d-inline-block">
                   <div class="d-flex mb-2">
                     <h5 class="mb-0 fn-inter-semib">Bungalows</h5>
+                    <div class="ms-auto align-items-center d-flex">
+                      <span class="icon-eye fs-4 me-1"></span>
+                      <span>12345</span>
+                    </div>
                   </div>
-                  <div class="align-items-center d-flex mb-0">
-                    <div class="">
-                      <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                  <div class="box-price">
+                    <div class="box-left">
+                      <small class="align-text-top">Giá từ</small>
+                      <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                       </p>
+                    </div>
+                    <div class="box-right">
+                      15 điểm lưu trú
                     </div>
                   </div>
                 </div>
@@ -1705,12 +1801,19 @@
                 <div class="d-inline-block">
                   <div class="d-flex mb-2">
                     <h5 class="mb-0 fn-inter-semib">Bungalows</h5>
+                    <div class="ms-auto align-items-center d-flex">
+                      <span class="icon-eye fs-4 me-1"></span>
+                      <span>12345</span>
+                    </div>
                   </div>
-                  <div class="align-items-center d-flex mb-0">
-                    <div class="">
-                      <small class="align-text-top">Giá chỉ từ</small>
-                      <p class="red-clr fs-5 fw-bold ms-1 d-inline-block mb-0"><span>100.000</span><span>đ</span>
+                  <div class="box-price">
+                    <div class="box-left">
+                      <small class="align-text-top">Giá từ</small>
+                      <p class="price red-clr fw-bold d-inline-block mb-0"><span>4,100,000</span><span>vnđ</span>
                       </p>
+                    </div>
+                    <div class="box-right">
+                      15 điểm lưu trú
                     </div>
                   </div>
                 </div>
@@ -1739,6 +1842,10 @@
               <span class="impress-tag green-bg white-clr fw-bold">Phổ biến</span>
               <div class="card-body">
                 <h6 class="card-title fw-bold mb-1 txt-ellipsi01">Một Tuần Vòng Quanh Phú Quốc</h6>
+                <div class="tour-type">
+                  <img src="src/dist/images/icons/category.png" alt="">
+                  Tour nghỉ dưỡng
+                </div>
                 <p class="fst-italic grey-300-clr mb-3">Công ty TNHH Go Island</p>
                 <p class="rating average">
                   <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span> <span
@@ -1760,13 +1867,17 @@
               </div>
               <div class="card-body">
                 <h6 class="card-title fw-bold mb-1 txt-ellipsi01">Khám phá vòng quanh trung tâm</h6>
+                <div class="tour-type">
+                  <img src="src/dist/images/icons/category.png" alt="">
+                  Tour nghỉ dưỡng
+                </div>
                 <p class="fst-italic grey-300-clr mb-3">Công ty TNHH Go Island</p>
                 <p class="rating">
                   <span class="icon-chat fs-6"></span> <span class="cmt-numb">Chưa có đánh giá cho Tour này</span>
                 </p>
                 <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                 <div class="d-flex mb-2">
-                  <div class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>đ</span></div>
+                  <div class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>vnđ</span></div>
                   <small class="d-inline-block discount ms-auto">Giảm 5%</small>
                 </div>
               </div>
@@ -1782,13 +1893,17 @@
               <span class="impress-tag green-bg white-clr fw-bold">Phổ biến</span>
               <div class="card-body">
                 <h6 class="card-title fw-bold mb-1 txt-ellipsi01">Dạo trung tâm dành cho cặp đôi</h6>
+                <div class="tour-type">
+                  <img src="src/dist/images/icons/category.png" alt="">
+                  Tour nghỉ dưỡng
+                </div>
                 <p class="fst-italic grey-300-clr mb-3">Công ty TNHH Go Island</p>
                 <p class="rating good">
                   <small class="point fw-bold">5/5</small> <span class="txt">Rất tốt</span> <span class="cmt-numb">(15
                     bình luận)</span>
                 </p>
-                <p><small class="fw-bold">4 ngày / 3 đêm</small></p>
-                <p class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>đ</span></p>
+                <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                <p class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>vnđ</span></p>
               </div>
             </div>
           </div>
@@ -1801,13 +1916,17 @@
               </div>
               <div class="card-body">
                 <h6 class="card-title fw-bold mb-1 txt-ellipsi01">Thiên đường đảo hoang</h6>
+                <div class="tour-type">
+                  <img src="src/dist/images/icons/category.png" alt="">
+                  Tour nghỉ dưỡng
+                </div>
                 <p class="fst-italic grey-300-clr mb-3">Công ty TNHH Go Island</p>
                 <p class="rating average">
                   <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span> <span
                     class="cmt-numb">(15 bình luận)</span>
                 </p>
-                <p><small class="fw-bold">4 ngày / 3 đêm</small></p>
-                <p class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>đ</span></p>
+                <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                <p class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>vnđ</span></p>
               </div>
             </div>
           </div>
@@ -1821,12 +1940,16 @@
               <span class="impress-tag green-bg white-clr fw-bold">Phổ biến</span>
               <div class="card-body">
                 <h6 class="card-title fw-bold mb-1 txt-ellipsi01">Trải nghiệm chèo thuyền Kayak</h6>
+                <div class="tour-type">
+                  <img src="src/dist/images/icons/category.png" alt="">
+                  Tour nghỉ dưỡng
+                </div>
                 <p class="fst-italic grey-300-clr mb-3">Công ty TNHH Go Island</p>
                 <p class="rating">
                   <span class="icon-chat fs-6"></span> <span class="cmt-numb">Chưa có đánh giá cho Tour này</span>
                 </p>
-                <p><small class="fw-bold">4 ngày / 3 đêm</small></p>
-                <p class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>đ</span></p>
+                <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                <p class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>vnđ</span></p>
               </div>
             </div>
           </div>
@@ -1839,13 +1962,17 @@
               </div>
               <div class="card-body">
                 <h6 class="card-title fw-bold mb-1 txt-ellipsi01">Đi thuyền khám phá các đảo</h6>
+                <div class="tour-type">
+                  <img src="src/dist/images/icons/category.png" alt="">
+                  Tour nghỉ dưỡng
+                </div>
                 <p class="fst-italic grey-300-clr mb-3">Công ty TNHH Go Island</p>
                 <p class="rating good">
                   <small class="point fw-bold">5/5</small> <span class="txt">Rất tốt</span> <span class="cmt-numb">(15
                     bình luận)</span>
                 </p>
-                <p><small class="fw-bold">4 ngày / 3 đêm</small></p>
-                <p class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>đ</span></p>
+                <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                <p class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>vnđ</span></p>
               </div>
             </div>
           </div>
@@ -1859,13 +1986,17 @@
               <span class="impress-tag green-bg white-clr fw-bold">Phổ biến</span>
               <div class="card-body">
                 <h6 class="card-title fw-bold mb-1 txt-ellipsi01">Khám phá vòng quanh trung tâm</h6>
+                <div class="tour-type">
+                  <img src="src/dist/images/icons/category.png" alt="">
+                  Tour nghỉ dưỡng
+                </div>
                 <p class="fst-italic grey-300-clr mb-3">Công ty TNHH Go Island</p>
                 <p class="rating average">
                   <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span> <span
                     class="cmt-numb">(15 bình luận)</span>
                 </p>
-                <p><small class="fw-bold">4 ngày / 3 đêm</small></p>
-                <p class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>đ</span></p>
+                <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                <p class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>vnđ</span></p>
               </div>
             </div>
           </div>
@@ -1878,13 +2009,17 @@
               </div>
               <div class="card-body">
                 <h6 class="card-title fw-bold mb-1 txt-ellipsi01">Một Tuần Vòng Quanh Phú Quốc</h6>
+                <div class="tour-type">
+                  <img src="src/dist/images/icons/category.png" alt="">
+                  Tour nghỉ dưỡng
+                </div>
                 <p class="fst-italic grey-300-clr mb-3">Công ty TNHH Go Island</p>
                 <p class="rating good">
                   <small class="point fw-bold">5/5</small> <span class="txt">Rất tốt</span> <span class="cmt-numb">(15
                     bình luận)</span>
                 </p>
-                <p><small class="fw-bold">4 ngày / 3 đêm</small></p>
-                <p class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>đ</span></p>
+                <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                <p class="red-clr fs-6 fw-bold d-inline-block"><span>100.000</span><span>vnđ</span></p>
               </div>
             </div>
           </div>
@@ -2106,9 +2241,8 @@
                         <small class="point fw-bold">4.5/5</small> <span class="txt">Rất tốt</span> <span
                           class="cmt-numb">(15 bình luận)</span>
                       </p>
-                      <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                       <div class="d-flex align-items-center">
-                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                         <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                             ngay</small> </button>
                       </div>
@@ -2136,9 +2270,8 @@
                         <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span> <span
                           class="cmt-numb">(15 bình luận)</span>
                       </p>
-                      <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                       <div class="d-flex align-items-center">
-                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                         <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                             ngay</small> </button>
                       </div>
@@ -2167,9 +2300,8 @@
                         <small class="point fw-bold">4.5/5</small> <span class="txt">Rất tốt</span> <span
                           class="cmt-numb">(15 bình luận)</span>
                       </p>
-                      <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                       <div class="d-flex align-items-center">
-                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                         <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                             ngay</small> </button>
                       </div>
@@ -2197,9 +2329,8 @@
                         <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span> <span
                           class="cmt-numb">(15 bình luận)</span>
                       </p>
-                      <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                       <div class="d-flex align-items-center">
-                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                         <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                             ngay</small> </button>
                       </div>
@@ -2228,9 +2359,8 @@
                         <small class="point fw-bold">4.5/5</small> <span class="txt">Rất tốt</span> <span
                           class="cmt-numb">(15 bình luận)</span>
                       </p>
-                      <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                       <div class="d-flex align-items-center">
-                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                         <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                             ngay</small> </button>
                       </div>
@@ -2258,9 +2388,8 @@
                         <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span> <span
                           class="cmt-numb">(15 bình luận)</span>
                       </p>
-                      <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                       <div class="d-flex align-items-center">
-                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                         <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                             ngay</small> </button>
                       </div>
@@ -2289,9 +2418,8 @@
                         <small class="point fw-bold">4.5/5</small> <span class="txt">Rất tốt</span> <span
                           class="cmt-numb">(15 bình luận)</span>
                       </p>
-                      <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                       <div class="d-flex align-items-center">
-                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                         <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                             ngay</small> </button>
                       </div>
@@ -2319,9 +2447,8 @@
                         <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span> <span
                           class="cmt-numb">(15 bình luận)</span>
                       </p>
-                      <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
                       <div class="d-flex align-items-center">
-                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                        <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                         <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                             ngay</small> </button>
                       </div>
@@ -2368,9 +2495,9 @@
                       class="cmt-numb">(15
                       bình luận)</span>
                   </p>
-                  <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                  <!-- <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div> -->
                   <div class="d-flex align-items-center">
-                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                     <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                         ngay</small> </button>
                   </div>
@@ -2398,9 +2525,9 @@
                     <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span> <span
                       class="cmt-numb">(15 bình luận)</span>
                   </p>
-                  <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                  <!-- <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div> -->
                   <div class="d-flex align-items-center">
-                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                     <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                         ngay</small> </button>
                   </div>
@@ -2430,9 +2557,9 @@
                       class="cmt-numb">(15
                       bình luận)</span>
                   </p>
-                  <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                  <!-- <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div> -->
                   <div class="d-flex align-items-center">
-                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                     <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                         ngay</small> </button>
                   </div>
@@ -2460,9 +2587,9 @@
                     <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span> <span
                       class="cmt-numb">(15 bình luận)</span>
                   </p>
-                  <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                  <!-- <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div> -->
                   <div class="d-flex align-items-center">
-                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                     <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                         ngay</small> </button>
                   </div>
@@ -2492,9 +2619,9 @@
                       class="cmt-numb">(15
                       bình luận)</span>
                   </p>
-                  <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                  <!-- <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div> -->
                   <div class="d-flex align-items-center">
-                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                     <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                         ngay</small> </button>
                   </div>
@@ -2522,9 +2649,9 @@
                     <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span> <span
                       class="cmt-numb">(15 bình luận)</span>
                   </p>
-                  <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                  <!-- <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div> -->
                   <div class="d-flex align-items-center">
-                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                     <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                         ngay</small> </button>
                   </div>
@@ -2554,9 +2681,9 @@
                       class="cmt-numb">(15
                       bình luận)</span>
                   </p>
-                  <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                  <!-- <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div> -->
                   <div class="d-flex align-items-center">
-                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                     <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                         ngay</small> </button>
                   </div>
@@ -2584,9 +2711,9 @@
                     <small class="point fw-bold">4.5/5</small> <span class="txt">Trung bình</span> <span
                       class="cmt-numb">(15 bình luận)</span>
                   </p>
-                  <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div>
+                  <!-- <div class="night-numb"><small class="fw-bold">4 ngày / 3 đêm</small></div> -->
                   <div class="d-flex align-items-center">
-                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>đ</span></div>
+                    <div class="red-clr fs-6 fw-bold d-inline-block"><span>900.000</span><span>vnđ</span></div>
                     <button type="button" class="btn btn-primary txt-light ms-auto px-2 py-0"><small>Đặt xe
                         ngay</small> </button>
                   </div>
@@ -2635,7 +2762,8 @@
                           <div>
                             <span class="grey-300-clr">Giá vé từ</span>
                             <div class="ticket-pri d-inline-block">
-                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>vnđ</span>
+                              </div>
                               /
                               <span>vé</span>
                             </div>
@@ -2644,7 +2772,9 @@
                       </div>
                     </div>
                     <div class="col-5">
-                      <img src="src/images/photos/pt21.jpg" alt="entrance ticket image" class="rounded">
+                      <div class="img-ticket y-box-img">
+                        <img src="src/images/photos/pt21.jpg" alt="entrance ticket image" class="rounded">
+                      </div>
                     </div>
                     <a href="#" class="position-absolute-href"></a>
                   </div>
@@ -2664,7 +2794,8 @@
                           <div>
                             <span class="grey-300-clr">Giá vé từ</span>
                             <div class="ticket-pri d-inline-block">
-                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>vnđ</span>
+                              </div>
                               /
                               <span>vé</span>
                             </div>
@@ -2673,7 +2804,9 @@
                       </div>
                     </div>
                     <div class="col-5">
-                      <img src="src/images/photos/pt23.jpg" alt="entrance ticket image" class="rounded">
+                      <div class="img-ticket y-box-img">
+                        <img src="src/images/photos/pt23.jpg" alt="entrance ticket image" class="rounded">
+                      </div>
                     </div>
                     <a href="#" class="position-absolute-href"></a>
                   </div>
@@ -2693,7 +2826,8 @@
                           <div>
                             <span class="grey-300-clr">Giá vé từ</span>
                             <div class="ticket-pri d-inline-block">
-                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>vnđ</span>
+                              </div>
                               /
                               <span>vé</span>
                             </div>
@@ -2702,7 +2836,9 @@
                       </div>
                     </div>
                     <div class="col-5">
-                      <img src="src/images/photos/pt22.jpg" alt="entrance ticket image" class="rounded">
+                      <div class="img-ticket y-box-img">
+                        <img src="src/images/photos/pt22.jpg" alt="entrance ticket image" class="rounded">
+                      </div>
                     </div>
                     <a href="#" class="position-absolute-href"></a>
                   </div>
@@ -2725,7 +2861,8 @@
                           <div>
                             <span class="grey-300-clr">Giá vé từ</span>
                             <div class="ticket-pri d-inline-block">
-                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>vnđ</span>
+                              </div>
                               /
                               <span>vé</span>
                             </div>
@@ -2734,7 +2871,9 @@
                       </div>
                     </div>
                     <div class="col-5">
-                      <img src="src/images/photos/pt24.jpg" alt="entrance ticket image" class="rounded">
+                      <div class="img-ticket y-box-img">
+                        <img src="src/images/photos/pt24.jpg" alt="entrance ticket image" class="rounded">
+                      </div>
                     </div>
                     <a href="#" class="position-absolute-href"></a>
                   </div>
@@ -2754,7 +2893,7 @@
                           <div>
                             <span class="grey-300-clr">Giá vé từ</span>
                             <div class="ticket-pri d-inline-block">
-                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>vnđ</span></div>
                               /
                               <span>vé</span>
                             </div>
@@ -2763,7 +2902,9 @@
                       </div>
                     </div>
                     <div class="col-5">
+                      <div class="img-ticket y-box-img">
                       <img src="src/images/photos/pt25.jpg" alt="entrance ticket image" class="rounded">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2783,7 +2924,7 @@
                           <div>
                             <span class="grey-300-clr">Giá vé từ</span>
                             <div class="ticket-pri d-inline-block">
-                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>vnđ</span></div>
                               /
                               <span>vé</span>
                             </div>
@@ -2792,7 +2933,9 @@
                       </div>
                     </div>
                     <div class="col-5">
+                      <div class="img-ticket y-box-img">
                       <img src="src/images/photos/pt26.jpg" alt="entrance ticket image" class="rounded">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2821,7 +2964,7 @@
                           <div>
                             <span class="grey-300-clr">Giá vé từ</span>
                             <div class="ticket-pri d-inline-block">
-                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>vnđ</span></div>
                               /
                               <span>vé</span>
                             </div>
@@ -2830,7 +2973,9 @@
                       </div>
                     </div>
                     <div class="col-5">
+                      <div class="img-ticket y-box-img">
                       <img src="src/images/photos/pt21.jpg" alt="entrance ticket image" class="rounded">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2849,7 +2994,7 @@
                           <div>
                             <span class="grey-300-clr">Giá vé từ</span>
                             <div class="ticket-pri d-inline-block">
-                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>vnđ</span></div>
                               /
                               <span>vé</span>
                             </div>
@@ -2858,7 +3003,9 @@
                       </div>
                     </div>
                     <div class="col-5">
+                      <div class="img-ticket y-box-img">
                       <img src="src/images/photos/pt23.jpg" alt="entrance ticket image" class="rounded">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2877,7 +3024,7 @@
                           <div>
                             <span class="grey-300-clr">Giá vé từ</span>
                             <div class="ticket-pri d-inline-block">
-                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>đ</span></div>
+                              <div class="d-inline-block red-clr fs-6 fw-bold"><span>280.000</span><span>vnđ</span></div>
                               /
                               <span>vé</span>
                             </div>
@@ -2886,7 +3033,9 @@
                       </div>
                     </div>
                     <div class="col-5">
+                      <div class="img-ticket y-box-img">
                       <img src="src/images/photos/pt22.jpg" alt="entrance ticket image" class="rounded">
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -2933,11 +3082,11 @@
     <!--e-download app section-->
   </div>
 
-  <footer class="mt-sect">
+  <footer class="footer">
     <div class="wrapper-contain">
       <div class="row">
-        <div class="col-md-4 contact-inf">
-          <a class="navbar-brand" href="#">
+        <div class="item-footer contact-inf">
+          <a class="navbar-brand" href="index.html">
             <img src="src/images/phuquoc-logo.png" alt="gophuquoc logo" class="logo mb-4">
           </a>
           <div class="numb-contact align-items-center mb-2"><span class="icon-phone-outgoing align-middle fs-5"></span>
@@ -2947,50 +3096,50 @@
             <span>info@gophuquoc.net</span>
           </div>
         </div>
-        <div class="col-md-2 about-inf">
+        <div class="item-footer about-inf">
           <h5 class="position-relative">Về chúng tôi</h5>
-          <ul>
-            <li class="my-3">
+          <ul class="list-link">
+            <li>
               <a href="#">
                 <span class="icon-arrow05 align-middle fs-8"></span> <span class="txt">Hướng dẫn đặt phòng</span>
               </a>
             </li>
-            <li class="my-3">
+            <li>
               <a href="#">
                 <span class="icon-arrow05 align-middle fs-8"></span> <span class="txt">Liên hệ</span>
               </a>
             </li>
           </ul>
         </div>
-        <div class="col-md-2 support-inf">
+        <div class="item-footer support-inf">
           <h5 class="position-relative">Hỗ trợ</h5>
-          <ul>
-            <li class="my-3">
+          <ul class="list-link">
+            <li>
               <a href="#">
                 <span class="icon-arrow05 align-middle fs-8"></span> <span class="txt">Điều khoản sử dụng</span>
               </a>
             </li>
-            <li class="my-3">
+            <li>
               <a href="#">
                 <span class="icon-arrow05 align-middle fs-8"></span> <span class="txt">Bảo mật thông tin</span>
               </a>
             </li>
-            <li class="my-3">
+            <li>
               <a href="#">
                 <span class="icon-arrow05 align-middle fs-8"></span> <span class="txt">Phương thức thanh toán</span>
               </a>
             </li>
           </ul>
         </div>
-        <div class="col-md-4 contact-frm">
+        <div class="item-footer contact-frm">
           <h5 class="position-relative">Bản tin</h5>
           <form>
-            <div class="align-items-center d-flex">
-              <div class="col-md-9 col-xs-8">
+            <div class="box-field">
+              <div class="col-md-9 col-sm-8 col-xs-8">
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                   placeholder="Nhập email của bạn">
               </div>
-              <div class="col-md-3 col-xs-4">
+              <div class="col-md-3 col-sm-4 col-xs-4">
                 <button type="button" class="btn btn-primary w-100">Đăng ký</button>
               </div>
             </div>
@@ -3250,20 +3399,20 @@
                 </div>
                 <div class="mb-2">
                   <label for="service" class="form-label">Dịch vụ cung cấp</label>
-                  <div class="form-check border-bottom pb-3">
-                    <div class="d-inline-block me-5">
+                  <div class="list-service border-bottom pb-3">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="tour-serv">
                       <label class="form-check-label mt-1" for="tour-serv">Tour</label>
                     </div>
-                    <div class="d-inline-block me-5">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="vehicle-serv">
                       <label class="form-check-label mt-1" for="vehicle-serv">Phương tiện</label>
                     </div>
-                    <div class="d-inline-block me-5">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="ticket-serv">
                       <label class="form-check-label mt-1" for="ticket-serv">Vé</label>
                     </div>
-                    <div class="d-inline-block">
+                    <div class="form-check">
                       <input type="checkbox" class="form-check-input" id="other-serv">
                       <label class="form-check-label mt-1" for="other-serv">Các dịch vụ khác</label>
                     </div>
@@ -3287,6 +3436,22 @@
   </div>
   <!--e-Sign Up Traveller-->
   <!--e-modal-->
+
+  <!-- Scroll to top -->
+  <a href="javascript:;" class="scroll-top-btn">
+    <span class="arrow-r"></span>
+  </a>
+
+  <!-- Cookie -->
+  <div class="cookie-fixed">
+    <div class="box-left">
+      This website uses cookies to ensure you get the best experience on our website.
+      <a href="/cookies-policy">Learn more</a>
+    </div>
+    <div class="box-right">
+      <button>Go it!</button>
+    </div>
+  </div>
 
   <script type="text/javascript" src="src/dist/js/jquery-3.6.1.min.js"></script>
   <script type="text/javascript" src="src/dist/js/jquery-ui.min.js"></script>

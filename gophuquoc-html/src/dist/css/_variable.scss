@@ -1,19 +1,37 @@
 $color_primary: #2e90fa;
-$color_orange: #ef6820;
+$color_blue: #0a5fbb;
+$color_blue_dark: #0161a0;
+$color_blue_2: #e6f3ff;
+// $color_orange: #ef6820;
+$color_orange: #ff5e1f;
+$color_yellow: #ffae26;
+$color_star: #ffc120;
+$color_red: #fe302e;
+$color_red_3: #eb2f06;
+$color_red_2: #ef6868;
 $secondary: #84caff;
 $success: #ffae26;
 $warning: #fec84b;
 $danger: #ef6820;
 $red: #ff6000;
-$green: #16b364;
+$color_green: #28a745;
+$color_green_2: #d5efe8;
+// $color_green_3: #008009;
+$color_green_3: #006607;
+
 $white: #ffffff;
-$grey-100: #d0d5dd;
-$grey-200: #98a2b3;
-$grey-300: #667085;
-$grey-400: #595959;
+$color_grey_1: #d0d5dd;
+$color_grey_2: #98a2b3;
+$color_grey_3: #667085;
+$color_grey_4: #595959;
 $dark: #191919;
 $black: #000000;
 $border-clr: #ced4da;
+
+$bg_green: #d2edd5;
+$bg_blue: #e6f3ff;
+$bg_red: #f8d7da;
+$bg_gray: #eaeaea;
 
 // Variables in Media queries
 $X48: 480px;
@@ -25,6 +43,9 @@ $XL: 1200px;
 $XXL: 1400px;
 $X17: 1700px;
 $X19: 1921px;
+
+$IPAD: 991px;
+$MOBILE: 767px;
 
 // Media queries
 @mixin Responsive($canvas) {
@@ -62,6 +83,14 @@ $X19: 1921px;
         }
     } @else if $canvas == X19 {
         @media only screen and (min-width: $X1921) {
+            @content;
+        }
+    } @else if $canvas == IPAD {
+        @media only screen and (max-width: $IPAD) {
+            @content;
+        }
+    } @else if $canvas == MOBILE {
+        @media only screen and (max-width: $MOBILE) {
             @content;
         }
     }

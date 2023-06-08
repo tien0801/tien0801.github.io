@@ -2,11 +2,74 @@ footer {
     border-top: 4px solid $color_primary;
     padding-top: 2.8rem;
     background-color: #f5faff;
+
+    .item-footer {
+        @media (max-width: 1199px) {
+            margin-bottom: 24px;
+        }
+
+        .list-link {
+            li {
+                margin-bottom: 1rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .contact-inf,
+    .contact-frm {
+        width: 100%;
+
+        @include Responsive(MD) {
+            width: 50%;
+        }
+        @include Responsive(XL) {
+            width: 30%;
+        }
+    }
+
+    .about-inf,
+    .support-inf {
+        width: 100%;
+
+        @include Responsive(MD) {
+            width: 50%;
+        }
+        @include Responsive(XL) {
+            width: 20%;
+        }
+    }
+
+    .contact-frm {
+        .box-field {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input.form-control {
+            height: 40px;
+
+            @include Responsive(MOBILE) {
+                height: 38px;
+            }
+        }
+
+        button {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
     img.logo {
         height: 75px;
     }
+
     h5 {
-        margin-bottom: 2.8rem;
+        margin-bottom: 2.5rem;
         &::after {
             content: "";
             display: inline-block;
@@ -44,6 +107,15 @@ footer {
     }
 }
 
+@media (max-width: 1199px) {
+    footer {
+        h5,
+        .h5 {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
 @media (max-width: 767px) {
     .w-90 {
         width: 100% !important;
@@ -56,68 +128,7 @@ footer {
         float: none;
         padding: 0 15px;
     }
-    .header {
-        div [data-bs-spy="scroll"] {
-            nav.navbar {
-                .navbar-brand {
-                    .logo {
-                        height: 60px;
-                    }
-                }
-                &.sticky {
-                    width: 100%;
-                    z-index: 999999;
-                    background-color: #fff;
-                    padding: 5px 1rem;
-                    margin-left: -15px;
-                    .navbar-brand .logo {
-                        height: 50px;
-                    }
-                }
-            }
-            .navbar-collapse {
-                padding: 0 0 20px;
-                text-align: center;
-                ul.navbar-nav {
-                    border-top: 1px solid #e6e6e6;
-                    padding-top: 10px;
-                    margin-top: 5px;
-                }
-            }
-        }
-        .top-sect {
-            .numb-contact {
-                display: none;
-            }
-            .dropdown {
-                button.btn {
-                    padding: 0.1rem 0.8rem 0.1rem 0;
-                    font-size: 15px;
-                    font-weight: lighter;
-                    &::after {
-                        font-size: 0.5rem;
-                        top: 4px;
-                    }
-                }
-            }
-            button.btn {
-                padding: 0.12rem 0.6rem;
-                font-size: 0.9rem;
-            }
-        }
-    }
 
-    .MultiCarousel {
-        .MultiCarousel-inner {
-            .item {
-                .card {
-                    .img-wrapper {
-                        height: 11em;
-                    }
-                }
-            }
-        }
-    }
     section#promo-sect {
         .carousel.slide {
             .row > * {
@@ -166,9 +177,7 @@ footer {
         img.logo {
             margin-bottom: 0.8rem !important;
         }
-        .contact-inf {
-            margin-bottom: 1.5rem;
-        }
+
         ul li .icon-arrow05 {
             display: none;
         }
