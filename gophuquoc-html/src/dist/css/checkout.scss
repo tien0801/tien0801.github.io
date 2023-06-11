@@ -560,6 +560,14 @@
         }
     }
 
+    .box-invoice-company {
+        display: none;
+
+        &.active {
+            display: flex;
+        }
+    }
+
     .section-discount-code {
         max-width: 340px;
         margin-top: 1.6rem;
