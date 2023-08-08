@@ -65,10 +65,16 @@ a {
                 }
             }
             .title {
-                display: block;
+                display: flex;
+                align-items: flex-end;
                 font-size: 0.85rem;
                 margin-top: 7px;
                 font-weight: 300;
+
+                i {
+                    margin-left: 4px;
+                    padding-bottom: 2px;
+                }
             }
         }
 
