@@ -8,17 +8,24 @@
     <meta http-equiv="content-language" content="vi">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>VBT Frontend</title>
-    <link rel="alternate" href="https://padstore.vn/iphone/" hreflang="vi-vn">
-    <link rel="canonical" href="https://padstore.vn/iphone/">
+    <link rel="alternate" href="https://domain_name.vn/iphone/" hreflang="vi-vn">
+    <link rel="canonical" href="https://domain_name.vn/iphone/">
     <link rel="shortcut icon" href="../vubatien.jpg" type="image/gif">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href=""> -->
     <style>
-        pre { margin-top: 20px; }
+        pre {
+            margin-top: 20px;
+        }
+
         .box-item {
             margin-bottom: 30px;
         }
-        .color-main { color: #00b140 }
+
+        .color-main {
+            color: #00b140
+        }
     </style>
 </head>
 
@@ -30,18 +37,24 @@
             <li>
                 <h4>Các thẻ tiêu đề: h1 - h6</h4>
                 <p>+ Thẻ "h1" chỉ cần một thẻ duy nhất ở 1 page</p>
-                <p>+ Các thẻ h2 đến h6 thì các bạn có thể sử dụng nhiều lần, 
-                nhưng nên sử dụng tối đa là <br>
-                - 3 đối với thẻ h2,<br>
-                - 7 đối với thể h3,<br>
-                - 16 đối với thẻ h4.</p>
+                <p>+ Các thẻ h2 đến h6 thì các bạn có thể sử dụng nhiều lần,
+                    nhưng nên sử dụng tối đa là <br>
+                    - 3 đối với thẻ h2,<br>
+                    - 7 đối với thể h3,<br>
+                    - 16 đối với thẻ h4.</p>
                 <h4>Ví dụ về vị trí đặt thẻ h1 - h6</h4>
-                <p>- H1: nếu không có session giới thiệu thì sẽ bọc logo, logo thẻ img có thuộc tính alt chứa từ khóa</p>
+                <p>- H1: nếu không có session giới thiệu thì sẽ bọc logo, logo thẻ img có thuộc tính alt chứa từ khóa
+                </p>
                 <p>- H1: ở các trang con h1 là tiêu đề chính của page, ví dụ &lt;h1&gt; Quần âu nam &lt;/h1&gt;</p>
-                <p>- H2: thường là tiêu đề phụ mô tả cho h1. Ví dụ: &lt;h2&gt; Sản phẩm quần âu dành cho quý ông &lt;/h2&gt; <br>
-                Hoặc là tiêu đề các phần ở sidebar: ví dụ &lt;h2&gt; Bài viết nổi bật &lt;/h2&gt; , &lt;h2&gt; Bài viết mới &lt;/h2&gt;</p>
-                <p>- H3: thường là thẻ tiêu đề của trang danh sách bài viết, danh sách sản phẩm. Ví dụ: &lt;h3&gt; Balo thời trang cao cấp Artic Hunter BL054X &lt;/h3&gt;, &lt;h3&gt; Balo đựng máy ảnh BL055D &lt;/h3&gt; </p>
-                <p>- H4: thường là thẻ tiêu đề các danh mục ở footer Ví dụ: &lt;h4&gt; Về KNLAND &lt;/h4&gt;, &lt;h4&gt; Đăng ký nhận Email &lt;/h4&gt; </p>
+                <p>- H2: thường là tiêu đề phụ mô tả cho h1. Ví dụ: &lt;h2&gt; Sản phẩm quần âu dành cho quý ông
+                    &lt;/h2&gt; <br>
+                    Hoặc là tiêu đề các phần ở sidebar: ví dụ &lt;h2&gt; Bài viết nổi bật &lt;/h2&gt; , &lt;h2&gt; Bài
+                    viết mới &lt;/h2&gt;</p>
+                <p>- H3: thường là thẻ tiêu đề của trang danh sách bài viết, danh sách sản phẩm. Ví dụ: &lt;h3&gt; Balo
+                    thời trang cao cấp Artic Hunter BL054X &lt;/h3&gt;, &lt;h3&gt; Balo đựng máy ảnh BL055D &lt;/h3&gt;
+                </p>
+                <p>- H4: thường là thẻ tiêu đề các danh mục ở footer Ví dụ: &lt;h4&gt; Về KNLAND &lt;/h4&gt;, &lt;h4&gt;
+                    Đăng ký nhận Email &lt;/h4&gt; </p>
                 <p>- H5, H6: ít sử dụng, sử dụng linh động tùy ý</p>
             </li>
             <li>
@@ -60,69 +73,81 @@
 
         <h3>Tag Meta SEO: (<a href="https://www.link-assistant.com/news/html-tags-for-seo.html">Tham khảo</a>)</h3>
 
-<pre><code>
+        <pre><code>
 &lt;html lang="vi">
+</code></pre>
+        <p>Khai báo ngôn ngữ cho website</p>
+        <br>
+
+        <h4>Tag in &lt;head></h4>
+        <pre><code>
 &lt;meta name='revisit-after' content='1 days' />
 &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </code></pre>
-<p>
-`Thêm 3 thẻ này` Nếu bị trùng or website đã có thì không bổ sung
-`Lưu ý` Thẻ  meta http-equiv="Content-Language" content="vi"> đối với website nào mà 2 ngôn ngữ thì khi chuyển qua ngôn ngữ tiếng anh, chổ content sẽ là en
-meta http-equiv="Content-Language" content="en">
-</p>
+        <p>
+            `Thêm 3 thẻ này` Nếu bị trùng or website đã có thì không bổ sung
+            `Lưu ý` Thẻ meta http-equiv="Content-Language" content="vi"> đối với website nào mà 2 ngôn ngữ thì khi
+            chuyển qua ngôn ngữ tiếng anh, chổ content sẽ là en
+            meta http-equiv="Content-Language" content="en">
+        </p>
 
-<pre><code>
+        <pre><code>
 &lt;title>Your Fantastic Title&lt;/title&gt;
 &lt;meta name="description" content="Your gorgeous description">
 </code></pre>
-<p>Title: keep it under 70 characters long</p>
-<p>Description: 160 ~ 300 characters</p>
+        <p>Title: keep it under 70 characters long</p>
+        <p>Description: 160 ~ 300 characters</p>
 
-<pre><code>
-&lt;link rel="alternate" href="https://padstore.vn/iphone/" hreflang="vi-vn">
+        <pre><code>
+&lt;link rel="alternate" href="https://domain_name.vn/iphone/" hreflang="vi-vn">
 </code></pre>
-<p>"Thẻ hreflang là một thẻ siêu dữ liệu khai báo trên đầu của website giúp các công cụ tìm kiếm trích xuất dữ liệu theo đúng ngôn ngữ mà website đang viết"</p>
+        <p>"Thẻ hreflang là một thẻ siêu dữ liệu khai báo trên đầu của website giúp các công cụ tìm kiếm trích xuất dữ
+            liệu theo đúng ngôn ngữ mà website đang viết"</p>
 
-<h3>Canonical tag:</h3>
-<pre><code>
-&lt;link rel="canonical" href="https://thuexengay.com/thu-vien-anh">
+        <h3>Canonical tag:</h3>
+        <pre><code>
+&lt;link rel="canonical" href="https://domain_name.com/thu-vien-anh">
 </code></pre>
-<p>`Đang ở trang nào thì link sẽ là link ở vị trí trên sẽ là link của trang đó, vd đang ở trang thư viện thì sẽ là link: https://thuexengay.com/thu-vien-anh`</p>
+        <p>`Đang ở trang nào thì link sẽ là link ở vị trí trên sẽ là link của trang đó, vd đang ở trang thư viện thì sẽ
+            là link: https://domain_name.com/thu-vien-anh`</p>
 
-        
+
         <br>
         <div class="box-item">
             <h3>Open Graph tags - SEO Facebook: </h3>
-<pre><code>
+            <pre><code>
 &lt;meta property="fb:app_id" content="467308673824165">
 
-&lt;meta property="og:title" content="iCanfield Group">
+&lt;meta property="og:title" content="Name_website">
 &lt;meta property="og:type" content="website">
-&lt;meta property="og:url" content="https://www.icanfield.vn/vi/">
-&lt;meta property="og:image" content="https://www.icanfield.vn/uploads/icanfield_study_v2_03_1571976035_640.jpg">
-&lt;meta property="og:description" content="Tập đoàn iCanfield hoạt động trong lĩnh vực Tư vấn đầu tư.(the limit of 200 characters)">
+&lt;meta property="og:url" content="https://www.domain_name.vn/vi/">
+&lt;meta property="og:image" content="https://www.domain_name.vn/uploads/image_1.jpg">
+&lt;meta property="og:description" content="Lorem ipsum dolor sit amet consectetur adipisicing elit.(the limit of 200 characters)">
 </code></pre>
         </div>
 
         <div class="box-item">
             <h3>Robots tag - Noindex 404: </h3>
-<pre><code>
+            <pre><code>
 &lt;meta name="googlebot" content="noindex">
 </code></pre>
         </div>
 
         <div class="box-item">
             <h3>Nofollow Tag a: link social, email, tel: </h3>
-<pre><code>            
+            <pre><code>            
 &lt;a href="#" <strong class="color-main">rel="nofollow"</strong> title='facebook' target="_blank"> Content tag &lt;/a&gt;
 </code></pre>
         </div>
 
         <br><br>
     </div><!-- end container -->
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
