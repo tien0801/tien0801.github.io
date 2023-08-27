@@ -30,7 +30,8 @@
 
     <style>
         .js-slider-stage .owl-stage {
-            left: -100px
+            /* left: -100px; */
+            padding-left: 0 !important;
         }
     </style>
 
@@ -81,6 +82,14 @@ if($('.js-home-slider').length >0) {
 </pre>
         </div>
         <div class="col-md-7">
+            <pre>
+<code>
+&#60;div class="home-slider js-home-slider owl-carousel">
+    &#60;div class="item">
+    &#60;/div>
+&#60;/div>
+</code>
+</pre>
             <div class="home-slider js-home-slider owl-carousel">
                 <div class="item">
                     <a class="item-slider" href="#">
@@ -171,6 +180,9 @@ if($('.js-home-slider').length >0) {
     <!-- Slider stagePadding -->
     <div class="container padding-section">
         <h4 class="text-center">Slider stagePadding</h4>
+        <h5>CSS: .js-slider-stage .owl-stage {
+            padding-left: 0 !important;
+            }</h5>
         <div class="js-slider-stage owl-carousel owl-theme">
             <div class="item">
                 <a class="item-slider" href="#">

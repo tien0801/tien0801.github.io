@@ -69,7 +69,7 @@ $(document).ready(function () {
 
     if ($('.js-slider-stage').length > 0) {
         $('.js-slider-stage').owlCarousel({
-            loop: false,
+            loop: true,
             // autoplay: true,
             // autoplayTimeout: 4000,
             // nestedItemSelector: 'item-gall',
