@@ -1,30 +1,34 @@
-.y-breadcrumb {
+.t-breadcrumb {
     padding: 10px 0;
     list-style: none;
     background-color: #eee;
     margin-bottom: 30px;
 }
 
-.y-breadcrumb ul {
+.t-breadcrumb ul {
     margin-bottom: 0;
 }
 
-.y-breadcrumb li {
+.t-breadcrumb li {
     display: inline;
     font-size: 18px;
 }
 
-.y-breadcrumb li + li:before {
+.t-breadcrumb li.active a {
+    color: red;
+}
+
+.t-breadcrumb li + li:before {
     padding: 8px;
     color: black;
     content: "/\00a0";
 }
 
-.y-breadcrumb li a {
+.t-breadcrumb li a {
     color: #000;
     text-decoration: none;
 }
 
-.y-breadcrumb li a:hover {
+.t-breadcrumb li a:hover {
     color: #00b140;
 }

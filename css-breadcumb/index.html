@@ -19,49 +19,59 @@
 <body>
     <div class="container">
         <h1>Css Breadcumb</h1>
-        <div class="y-breadcrumb">
+        <div class="t-breadcrumb">
             <div class="container">
                 <ul>
-                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="active"><a href="index.html">Trang chủ</a></li>
                     <li><a href="blog.html">Tin tức</a></li>
                     <li><a href="post.html">Bài viết</a></li>
                 </ul>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-5">
+                <h4>Class: t-breadcrumb/ul/li/a</h4>
+            </div>
+            <div class="col-md-7">
                 <pre>
 <code>
-    .y-breadcrumb {
-        padding: 10px 0;
-        list-style: none;
-        background-color: #eee;
-        margin-bottom: 30px;
+.t-breadcrumb {
+    padding: 10px 0;
+    list-style: none;
+    background-color: #eee;
+    margin-bottom: 30px;
 
-        ul {
-            margin-bottom: 0;
+    ul {
+        margin-bottom: 0;
 
-            li {
-                display: inline;
-                font-size: 18px;
-        
+        li {
+            display: inline;
+            font-size: 18px;
+
+            &.active {
                 a {
-                    color: #000;
-                    text-decoration: none;
+                    color: red;
+                }
+            }
+    
+            a {
+                color: #000;
+                text-decoration: none;
+                
                 &:hover {
                     color: #00b140;
                 }
             }
         }
-    
-        li + li:before {
-            padding: 8px;
-            color: black;
-            content: "/\00a0";
-        }
     }
-</code>
-        </pre>
+
+    li + li:before {
+        padding: 8px;
+        color: black;
+        content: "/\00a0";
+    }
+}
+</code></pre>
             </div>
         </div>
     </div>
