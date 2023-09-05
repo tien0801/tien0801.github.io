@@ -30,14 +30,14 @@
   height: auto !important;
 }
 
-.y-box-zoom {
+.t-box-zoom {
   transition: all 1s;
   width: 100%;
   height: 100%;
   position: absolute;
 }
 
-.y-box-zoom:hover {
+.t-box-zoom:hover {
   transform: scale(1.2);
 }
 

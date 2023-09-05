@@ -12,18 +12,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
         integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.scss">
 
     <style>
-        .y-header-mobile {
-            max-width: 767px;
-        }
-
         body {
             padding: 0;
             font-size: 15px;
             font-family: 'Roboto', sans-serif;
             transition: .4s;
-            max-width: 767px;
             margin: 0 auto;
         }
 
@@ -77,15 +73,17 @@
 <body>
     <!-- Header Mobile -->
     <div class="y-header-mobile">
-        <a class="btn-menu-mobile" href="javascript:;">
-            <span></span>
-            <span></span>
-            <span></span>
-        </a>
-        <div class="y-logo-mobile">
-            <a class="box-img-flex" href="index.html">
-                <img src="images/logo.png" class="" alt="">
+        <div class="container">
+            <a class="btn-menu-mobile" href="javascript:;">
+                <span></span>
+                <span></span>
+                <span></span>
             </a>
+            <div class="y-logo-mobile">
+                <a class="box-img-flex" href="index.html">
+                    <img src="images/logo.png" class="" alt="">
+                </a>
+            </div>
         </div>
     </div>
 
@@ -180,11 +178,20 @@
 
     <!-- Content page -->
     <div class="page-content" style="padding-left: 15px; padding-right: 15px; text-align: justify">
-        <h3>Class using:</h3>
-        <h5>
-            .btn-menu-mobile
-        </h5>
-        <pre>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Class using:</h3>
+                    <pre>
+<code>
+&#60;a class="btn-menu-mobile" href="javascript:;">
+    &#60;span>&#60;/span>
+    &#60;span>&#60;/span>
+    &#60;span>&#60;/span>
+&#60;/a>
+</code></pre>
+
+                    <pre>
 <code>
 &#60;div class="t-mobile-menu">
     &#60;div class="m-menu__title">
@@ -204,11 +211,20 @@
         &#60;/li>
     &#60;/ul>
 &#60;/div>
-</code>
-        </pre>
+</code></pre>
+                </div>
+                <div class="col-md-6">
+                    <h3>SCSS:</h3>
+                    <pre>
+<code>
 
-        <h3>JS using: </h3>
-        <pre>
+</code>
+</pre>
+                </div>
+            </div>
+
+            <h3>JS using: </h3>
+            <pre>
 <code>
     $(document).ready(function () {
         function closeMenu() {
@@ -239,135 +255,135 @@
     });
 </code>
         </pre>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
 
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
-        exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
-        assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
+            exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
+            assumenda fugiat?
+        </div>
     </div>
-
 
 
     <!-- JS Main -->

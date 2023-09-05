@@ -95,7 +95,6 @@ p {
     padding-bottom: 100%;
     overflow: hidden;
 }
-
 .t-box-img .link {
     position: absolute;
     top: 0;
@@ -104,7 +103,6 @@ p {
     height: 100%;
     opacity: 0;
 }
-
 .t-box-img img {
     position: absolute;
     top: 50%;
@@ -123,74 +121,31 @@ p {
     width: 100%;
     height: 100%;
     position: absolute;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
-.y-box-zoom:hover {
-    transform: scale(1.1);
-}
-
-.t-box-img .link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-}
-
-// Fix box img Flex
+// Box img Flex
 .box-img-flex {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+
+    img {
+        width: auto !important;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 
 .box-img-flex.y-img-left {
     justify-content: flex-start;
 }
 
-.box-img-flex img {
-    width: auto !important;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-}
-// ./Fix box img Flex
-
-.box-2-img {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-between;
-    .box-img {
-        width: calc(50% - 8px);
-        margin-bottom: 16px;
-        @include Responsive(SM) {
-            width: 100%;
-            margin-bottom: 12px;
-        }
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-.box-4-img {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: space-between;
-    img {
-        width: calc(25% - 8px);
-        margin-bottom: 16px;
-
-        @include Responsive(SM) {
-            width: calc(50% - 8px);
-            margin-bottom: 12px;
-        }
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
+// ./Box img Flex
 
 // Text editor
 .y-text-editor {
