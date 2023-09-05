@@ -9,7 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
         rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 
     <style>
@@ -33,9 +34,11 @@
             justify-content: center;
             overflow: hidden;
         }
+
         .box-img-flex.y-img-left {
             justify-content: flex-start;
         }
+
         .box-img-flex img {
             width: auto !important;
             height: auto;
@@ -47,9 +50,11 @@
             margin: 0 auto;
             width: max-content;
         }
+
         .y-logo-mobile .box-img-flex {
             height: 42px;
         }
+
         .page-content {
             margin-top: 58px;
             background-color: #f5f5f5;
@@ -61,14 +66,11 @@
             top: 0;
             width: 100%;
             background-color: grey;
-            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
             padding: 7px 15px;
             box-sizing: border-box;
             z-index: 777;
         }
-
-        
-
     </style>
 </head>
 
@@ -87,7 +89,7 @@
         </div>
     </div>
 
-    <div class="y-mobile-menu">
+    <div class="t-mobile-menu">
         <div class="m-menu__title">
             <div class="title">Menu</div>
             <a href="javascript:;" class="m-menu-close">+</a>
@@ -180,17 +182,37 @@
     <div class="page-content" style="padding-left: 15px; padding-right: 15px; text-align: justify">
         <h3>Class using:</h3>
         <h5>
-            .btn-menu-mobile 
-            <br>
-            .y-mobile-menu
+            .btn-menu-mobile
         </h5>
+        <pre>
+<code>
+&#60;div class="t-mobile-menu">
+    &#60;div class="m-menu__title">
+        &#60;div class="title">Menu&#60;/div>
+        &#60;a href="javascript:;" class="m-menu-close">+&#60;/a>
+    &#60;/div>
+    &#60;ul>
+        &#60;li class="has-submenu">
+            &#60;a href="#sub1">Tin tức&#60;/a>
+                &#60;span class="btn-toggle-sub">&#60;/span>
+                &#60;ul class="sub-menu">
+                    &#60;li class="has-submenu">
+                        &#60;a href="#">Tin tức 1&#60;/a>
+                    &#60;/li>
+                &#60;/ul>
+            &#60;/a>
+        &#60;/li>
+    &#60;/ul>
+&#60;/div>
+</code>
+        </pre>
 
         <h3>JS using: </h3>
         <pre>
 <code>
     $(document).ready(function () {
         function closeMenu() {
-            $('.y-mobile-menu').removeClass('show');
+            $('.t-mobile-menu').removeClass('show');
             $('.overlay-menu').removeClass('active');
         }
         $(".has-submenu > .btn-toggle-sub").on("click", function(e){
@@ -208,7 +230,7 @@
         })
         $('.btn-menu-mobile').on("click", function(){
             $('.overlay-menu').toggleClass("active");
-            $(".y-mobile-menu").toggleClass("show");
+            $(".t-mobile-menu").toggleClass("show");
             return false;
         })
         $('.overlay-menu, .m-menu-close').on("click", function(){
@@ -337,7 +359,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
         exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
         assumenda fugiat?
-        
+
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta laborum molestiae id dicta minus doloribus
         exercitationem, sequi magnam illo maiores cumque, nostrum doloremque hic maxime aperiam distinctio est
         assumenda fugiat?
@@ -346,23 +368,25 @@
         assumenda fugiat?
     </div>
 
-    
+
 
     <!-- JS Main -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <script>
         $(document).ready(function () {
             // JS Menu mobile
             function closeMenu() {
-                $('.y-mobile-menu').removeClass('show');
+                $('.t-mobile-menu').removeClass('show');
                 $('.overlay-menu').removeClass('active');
             }
-            $(".has-submenu > .btn-toggle-sub").on("click", function(e){
+            $(".has-submenu > .btn-toggle-sub").on("click", function (e) {
                 var parentli = $(this).closest('li');
-                if(parentli.hasClass('opened')) {
+                if (parentli.hasClass('opened')) {
                     parentli.removeClass('opened');
                     parentli.find('> ul.sub-menu').slideUp(400);
                 } else {
@@ -373,12 +397,12 @@
                 parentli.siblings('li').find('.has-submenu.opened').removeClass('opened');
                 parentli.siblings('li').find('ul:visible').slideUp();
             })
-            $('.btn-menu-mobile').on("click", function(){
+            $('.btn-menu-mobile').on("click", function () {
                 $('.overlay-menu').toggleClass("active");
-                $(".y-mobile-menu").toggleClass("show");
+                $(".t-mobile-menu").toggleClass("show");
                 return false;
             })
-            $('.overlay-menu, .m-menu-close').on("click", function(){
+            $('.overlay-menu, .m-menu-close').on("click", function () {
                 closeMenu();
             })
         });
