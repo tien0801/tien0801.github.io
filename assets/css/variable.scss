@@ -91,6 +91,7 @@ $f43: 43px;
 $f50: 50px;
 $f60: 60px;
 $f64: 64px;
+$f72: 72px;
 $f80: 80px;
 
 @mixin Font($fonts) {
@@ -326,6 +327,29 @@ $f80: 80px;
         @include Responsive(XS) {
             font-size: 24px;
         }
+    } @else if $fonts == f72 {
+        font-size: 72px;
+        @include Responsive(X17) {
+            font-size: 68px;
+        }
+        @include Responsive(X15) {
+            font-size: 60px;
+        }
+        @include Responsive(X13) {
+            font-size: 56px;
+        }
+        @include Responsive(LG) {
+            font-size: 50px;
+        }
+        @include Responsive(MD) {
+            font-size: 41px;
+        }
+        @include Responsive(SM) {
+            font-size: 32px;
+        }
+        @include Responsive(XS) {
+            font-size: 30px;
+        }
     } @else if $fonts == f80 {
         font-size: 80px;
         @include Responsive(X17) {
@@ -349,6 +373,166 @@ $f80: 80px;
         @include Responsive(XS) {
             font-size: 30px;
         }
+    }
+}
+
+@mixin font_18 {
+    font-size: 24px;
+
+    @include Responsive(SM) {
+        font-size: 16px;
+    }
+}
+
+@mixin font_22 {
+    font-size: 22px;
+
+    @include Responsive(XS) {
+        font-size: 18px;
+    }
+    @include Responsive(XL) {
+        font-size: 20px;
+    }
+    @include Responsive(XXL) {
+        font-size: 22px;
+    }
+}
+
+@mixin font_24 {
+    font-size: 24px;
+
+    @include Responsive(XS) {
+        font-size: 20px;
+    }
+    @include Responsive(SM) {
+        font-size: 20px;
+    }
+    @include Responsive(XL) {
+        font-size: 22px;
+    }
+    @include Responsive(XXL) {
+        font-size: 24px;
+    }
+}
+
+@mixin font_34 {
+    font-size: 34px;
+
+    @include Responsive(XS) {
+        font-size: 24px;
+    }
+    @include Responsive(SM) {
+        font-size: 26px;
+    }
+    @include Responsive(LG) {
+        font-size: 28px;
+    }
+    @include Responsive(XL) {
+        font-size: 32px;
+    }
+    @include Responsive(XXL) {
+        font-size: 34px;
+    }
+}
+
+@mixin font_36 {
+    font-size: 36px;
+
+    @include Responsive(XS) {
+        font-size: 26px;
+    }
+    @include Responsive(SM) {
+        font-size: 28px;
+    }
+    @include Responsive(LG) {
+        font-size: 30px;
+    }
+    @include Responsive(XL) {
+        font-size: 34px;
+    }
+    @include Responsive(XXL) {
+        font-size: 36px;
+    }
+}
+
+@mixin font_48 {
+    font-size: 48px;
+
+    @include Responsive(XL) {
+        font-size: 36px;
+    }
+    @include Responsive(XXL) {
+        font-size: 30px;
+    }
+    @include Responsive(LG) {
+        font-size: 26;
+    }
+    @include Responsive(SM) {
+        font-size: 24px;
+    }
+}
+
+@mixin font_60 {
+    font-size: 60px;
+
+    @include Responsive(XS) {
+        font-size: 40px;
+    }
+    @include Responsive(SM) {
+        font-size: 42px;
+    }
+    @include Responsive(MD) {
+        font-size: 45px;
+    }
+    @include Responsive(LG) {
+        font-size: 48px;
+    }
+    @include Responsive(XL) {
+        font-size: 50px;
+    }
+    @include Responsive(XXL) {
+        font-size: 55px;
+    }
+    @include Responsive(X17) {
+        font-size: 60px;
+    }
+}
+
+@mixin font_64 {
+    font-size: 64px;
+
+    @include Responsive(XL) {
+        font-size: 50px;
+    }
+    @include Responsive(XXL) {
+        font-size: 44px;
+    }
+
+    @include Responsive(LG) {
+        font-size: 40px;
+    }
+    @include Responsive(MD) {
+        font-size: 32px;
+    }
+    @include Responsive(SM) {
+        font-size: 24px;
+    }
+}
+
+@mixin font_72 {
+    font-size: 72px;
+
+    @include Responsive(XL) {
+        font-size: 48px;
+    }
+    @include Responsive(XXL) {
+        font-size: 40px;
+    }
+    @include Responsive(LG) {
+        font-size: 36px;
+    }
+    @include Responsive(SM) {
+        font-size: 24px;
     }
 }
 
