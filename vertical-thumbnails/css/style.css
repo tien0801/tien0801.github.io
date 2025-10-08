@@ -1,23 +1,85 @@
-.roland-garros-babolat>div {
-    /*display: table-cell;
+.roland-garros-babolat > div {
+  /*display: table-cell;
     vertical-align: top;*/
 }
 
 .roland-garros-babolat .selectors {
+  width: 70px;
+  padding-right: 1px;
+  float: left;
+}
+a[data-zoom-id],
+.mz-thumb,
+.mz-thumb:focus {
+  display: inline-block;
+  line-height: 0;
+  outline: none;
+}
+.roland-garros-babolat .selectors > a {
+  margin-bottom: 10px;
+}
+a[data-zoom-id] img,
+.mz-thumb img {
+  border: 0;
+  box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+// Styles
+.roland-garros-babolat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.roland-garros-babolat .selectors {
+  padding-right: 30px;
+  width: 99.5px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 767px) {
+  .roland-garros-babolat .selectors {
+    padding-right: 20px;
     width: 70px;
-    padding-right: 1px;
-    float: left;
+  }
 }
-a[data-zoom-id], .mz-thumb, .mz-thumb:focus {
-    display: inline-block;
-    line-height: 0;
-    outline: none;
+.roland-garros-babolat .selectors .mz-thumb {
+  position: relative;
+  opacity: 0.5;
 }
-.roland-garros-babolat .selectors>a {
-    margin-bottom: 10px;
+.roland-garros-babolat .selectors .mz-thumb.mz-thumb-selected {
+  opacity: 1;
 }
-a[data-zoom-id] img, .mz-thumb img {
-    border: 0;
-    box-shadow: 0 0 1px 0px rgba(0,0,0,0.3);
-    box-sizing: border-box;
+.roland-garros-babolat .selectors .mz-thumb img {
+  max-width: 100%;
+}
+.roland-garros-babolat .selectors .mz-thumb-selected img {
+  -webkit-filter: none;
+  filter: none;
+}
+.roland-garros-babolat .selectors a {
+  width: 90px;
+  margin-bottom: 20px;
+}
+.roland-garros-babolat .babolat-preview {
+  overflow: hidden;
+}
+.roland-garros-babolat a[data-zoom-id] img,
+.roland-garros-babolat .mz-thumb img {
+  border: 0;
+  -webkit-box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-filter: blur(100);
+  filter: blur(100);
 }
