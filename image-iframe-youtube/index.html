@@ -161,6 +161,28 @@ $("#gameplayModal").on("hide.bs.modal", function(e) {
     $("#video").attr("src", $videoSrc);
 });
 </code></pre>
+
+            <br>
+            <h3>
+                CSS box image iframe
+            </h3>
+            <pre><code>
+.box-img-video {
+        position: relative;
+        
+        .icon-play {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            color: #fff;
+            pointer-events: none;
+        }
+    }
+</code>
+    </pre>
         </section>
     </div>
 
