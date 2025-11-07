@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="">
+	<style>
+		html,
+		body {
+			-webkit-overflow-scrolling: touch !important;
+			overflow: auto !important;
+		}
+
+		@media (max-width: 767px) {
+			body.modal-open {
+				position: fixed;
+				left: 0;
+				right: 0;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1 class="text-center">Sử dụng đơn vị viewport trên mobile <a target="_blank"
+				href="https://topdev.vn/blog/thu-thuat-su-dung-don-vi-viewport-tren-mobile/">Source</a></h1>
+		<h3>1vh = 1% độ cao khởi tạo của khu vực trình duyệt dùng để hiển thị trang web.</h3>
+		<img src="https://i2.wp.com/css-tricks.com/wp-content/uploads/2018/07/viewport-units-mobile-crop.jpg?ssl=1"
+			alt="">
+
+		<div>
+
+			<p>dùng đến javascript túm lấy độ cao window.innerHeight, lưu giá trị đó lại thành một biến CSS và sử dụng
+				nó
+				thay cho đơn vị vh</p>
+			<pre>
+	.my-element {
+		height: 100vh; /* fallback khi trình duyệt không hỗ trợ biến css */
+		height: calc(var(--vh, 1vh) * 100);
+	}
+</pre>
+
+			<p>Chúng ta sẽ túm lấy và định nghĩa --vh bằng javascript</p>
+			<pre>
+	// Trước tiên lấy viewport height và chuyển thành giá trị 1%
+	let vh = window.innerHeight * 0.01;
+	// Đặt biến css
+	document.documentElement.style.setProperty('--vh', `${vh}px`);
+</pre>
+
+			<p> Còn một vấn đề nhỏ còn lại cần phải xử lý là cập nhập lại giá trị này khi trình duyệt thay đổi kích
+				thước (xoay trái, xoay phải, xoay ngang, xoay dọc)
+			</p>
+			<pre>
+	// chạy lại khi window resize
+	window.addEventListener('resize', () => {
+		// làm tương tự 2 bước đã làm
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
+	});
+</pre>
+		</div>
+
+	</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+		integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+
+	<script>
+
+
+	</script>
+</body>
+
+</html>
